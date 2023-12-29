@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The token for phone number verification that is obtained by the JavaScript SDK.
+        /// </summary>
         [NameInMap("SpToken")]
         [Validation(Required=false)]
         public string SpToken { get; set; }

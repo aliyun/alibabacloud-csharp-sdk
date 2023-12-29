@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class VerifyMobileRequest : TeaModel {
+        /// <summary>
+        /// The token obtained by the SDK for your app.
+        /// </summary>
         [NameInMap("AccessCode")]
         [Validation(Required=false)]
         public string AccessCode { get; set; }
 
+        /// <summary>
+        /// The external ID.
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetMobileRequest : TeaModel {
+        /// <summary>
+        /// The logon token obtained by the SDK for your app.
+        /// </summary>
         [NameInMap("AccessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// The external ID.
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }

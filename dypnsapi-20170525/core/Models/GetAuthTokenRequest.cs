@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthTokenRequest : TeaModel {
+        /// <summary>
+        /// The requested domain name.
+        /// </summary>
         [NameInMap("Origin")]
         [Validation(Required=false)]
         public string Origin { get; set; }
@@ -25,6 +28,13 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SceneCode")]
+        [Validation(Required=false)]
+        public string SceneCode { get; set; }
+
+        /// <summary>
+        /// The URL of the requested web page.
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

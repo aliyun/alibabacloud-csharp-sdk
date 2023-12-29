@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class DeleteVerifySchemeRequest : TeaModel {
-        /// <summary>
-        /// The user ID.
-        /// </summary>
-        [NameInMap("CustomerId")]
-        [Validation(Required=false)]
-        public long? CustomerId { get; set; }
-
+    public class JyQueryAppInfoBySceneCodeRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -28,12 +21,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The service code.
-        /// </summary>
-        [NameInMap("SchemeCode")]
+        [NameInMap("SceneCode")]
         [Validation(Required=false)]
-        public string SchemeCode { get; set; }
+        public string SceneCode { get; set; }
 
     }
 
