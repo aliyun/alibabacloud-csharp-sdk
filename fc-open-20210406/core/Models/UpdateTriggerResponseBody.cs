@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("targetArn")]
+        [Validation(Required=false)]
+        public string TargetArn { get; set; }
+
         /// <summary>
         /// The configurations of the trigger. The configurations vary based on the trigger type.
         /// </summary>

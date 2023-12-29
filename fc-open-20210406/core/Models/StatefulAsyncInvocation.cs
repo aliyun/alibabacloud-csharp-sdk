@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string DestinationStatus { get; set; }
 
+        [NameInMap("durationMs")]
+        [Validation(Required=false)]
+        public long? DurationMs { get; set; }
+
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("returnPayload")]
+        [Validation(Required=false)]
+        public string ReturnPayload { get; set; }
 
         [NameInMap("serviceName")]
         [Validation(Required=false)]

@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
+        [NameInMap("resolvePolicy")]
+        [Validation(Required=false)]
+        public string ResolvePolicy { get; set; }
+
+        [NameInMap("routePolicy")]
+        [Validation(Required=false)]
+        public RoutePolicy RoutePolicy { get; set; }
+
         /// <summary>
         /// The ID of the version to which the alias points.
         /// </summary>

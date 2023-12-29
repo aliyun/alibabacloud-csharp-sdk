@@ -1,3 +1,6 @@
+2023-12-29 Version: 2.0.12
+- Generated csharp 2021-04-06 for FC-Open.
+
 2023-12-27 Version: 2.0.11
 - Generated csharp 2021-04-06 for FC-Open.
 
