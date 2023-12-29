@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("Province")]
+        [Validation(Required=false)]
+        public string Province { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
