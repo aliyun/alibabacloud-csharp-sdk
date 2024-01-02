@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<string> RuleList { get; set; }
 
+            [NameInMap("RuleVersion")]
+            [Validation(Required=false)]
+            public string RuleVersion { get; set; }
+
         }
 
         /// <summary>

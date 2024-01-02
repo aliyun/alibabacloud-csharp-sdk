@@ -17122,6 +17122,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RuleNameList"] = request.RuleNameList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleVersion))
+            {
+                query["RuleVersion"] = request.RuleVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17164,6 +17168,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
             {
                 query["RuleNameList"] = request.RuleNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleVersion))
+            {
+                query["RuleVersion"] = request.RuleVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
