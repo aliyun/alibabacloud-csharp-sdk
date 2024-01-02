@@ -1,3 +1,6 @@
+2024-01-02 Version: 1.5.0
+- Generated csharp 2018-01-11 for rtc.
+
 2023-12-28 Version: 1.4.0
 - Generated csharp 2018-01-11 for rtc.
 
