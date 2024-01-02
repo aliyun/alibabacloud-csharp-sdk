@@ -41,6 +41,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationSourceType { get; set; }
 
             /// <summary>
+            /// 应用模板ID
+            /// </summary>
+            [NameInMap("ApplicationTemplateId")]
+            [Validation(Required=false)]
+            public string ApplicationTemplateId { get; set; }
+
+            /// <summary>
             /// The client ID of the application.
             /// </summary>
             [NameInMap("ClientId")]

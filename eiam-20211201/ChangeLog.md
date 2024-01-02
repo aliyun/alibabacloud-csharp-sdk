@@ -1,3 +1,6 @@
+2024-01-02 Version: 1.3.2
+- Generated csharp 2021-12-01 for Eiam.
+
 2023-12-21 Version: 1.3.1
 - Generated csharp 2021-12-01 for Eiam.
 
