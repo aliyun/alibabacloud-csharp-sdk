@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

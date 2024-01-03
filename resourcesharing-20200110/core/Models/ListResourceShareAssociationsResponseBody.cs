@@ -30,6 +30,32 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public List<ListResourceShareAssociationsResponseBodyResourceShareAssociations> ResourceShareAssociations { get; set; }
         public class ListResourceShareAssociationsResponseBodyResourceShareAssociations : TeaModel {
+            [NameInMap("AssociationFailedDetails")]
+            [Validation(Required=false)]
+            public List<ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails> AssociationFailedDetails { get; set; }
+            public class ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails : TeaModel {
+                [NameInMap("AssociateType")]
+                [Validation(Required=false)]
+                public string AssociateType { get; set; }
+
+                [NameInMap("EntityId")]
+                [Validation(Required=false)]
+                public string EntityId { get; set; }
+
+                [NameInMap("EntityType")]
+                [Validation(Required=false)]
+                public string EntityType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StatusMessage")]
+                [Validation(Required=false)]
+                public string StatusMessage { get; set; }
+
+            }
+
             /// <summary>
             /// The association status. Valid values:
             /// 
@@ -115,6 +141,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [NameInMap("ResourceShareName")]
             [Validation(Required=false)]
             public string ResourceShareName { get; set; }
+
+            [NameInMap("TargetProperty")]
+            [Validation(Required=false)]
+            public string TargetProperty { get; set; }
 
             /// <summary>
             /// The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:

@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
+            [NameInMap("TargetProperty")]
+            [Validation(Required=false)]
+            public string TargetProperty { get; set; }
+
             /// <summary>
             /// The time when the association of the principal was updated.
             /// </summary>

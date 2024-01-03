@@ -1,3 +1,6 @@
+2024-01-03 Version: 2.1.2
+- Generated csharp 2020-01-10 for ResourceSharing.
+
 2023-12-25 Version: 2.1.1
 - Generated csharp 2020-01-10 for ResourceSharing.
 

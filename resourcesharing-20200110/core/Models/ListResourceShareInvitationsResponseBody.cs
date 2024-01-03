@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceShareInvitationsResponseBody : TeaModel {
         /// <summary>
-        /// The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the resource sharing invitations.
+        /// The information about the resource sharing invitations.
         /// </summary>
         [NameInMap("ResourceShareInvitations")]
         [Validation(Required=false)]
@@ -37,26 +37,55 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The information about the failure.
+            /// </summary>
             [NameInMap("InvitationFailedDetails")]
             [Validation(Required=false)]
             public List<ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails> InvitationFailedDetails { get; set; }
             public class ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails : TeaModel {
+                /// <summary>
+                /// The type of the sharing operation. Valid values:
+                /// 
+                /// *   Associate
+                /// *   Disassociate
+                /// </summary>
                 [NameInMap("AssociateType")]
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
+                /// <summary>
+                /// The ID of the shared resource.
+                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
+                /// <summary>
+                /// The type of the shared resource.
+                /// 
+                /// For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                /// <summary>
+                /// The failure status. Valid values:
+                /// 
+                /// *   Unavailable: The resource cannot be shared.
+                /// *   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.
+                /// *   ZonalResourceInaccessible: The resource is unavailable in this region.
+                /// *   UnsupportedOperation: The operation is not allowed because another association exists.
+                /// *   InternalError: An internal error occurred during the check.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The failure cause.
+                /// </summary>
                 [NameInMap("StatusMessage")]
                 [Validation(Required=false)]
                 public string StatusMessage { get; set; }
@@ -101,11 +130,12 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// <summary>
             /// The status of the invitation. Valid values:
             /// 
-            /// *   Pending: The invitation is waiting for confirmation.
-            /// *   Accepted: The invitation is accepted.
-            /// *   Cancelled: The invitation is canceled.
-            /// *   Rejected: The invitation is rejected.
-            /// *   Expired: The invitation has expired.
+            /// *   Pending
+            /// *   Accepted
+            /// *   Cancelled
+            /// *   Rejected
+            /// *   Expired
+            /// *   AcceptFailed
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

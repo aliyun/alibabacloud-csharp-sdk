@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string ResourceShareName { get; set; }
 
+            [NameInMap("TargetProperty")]
+            [Validation(Required=false)]
+            public string TargetProperty { get; set; }
+
             /// <summary>
             /// The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:
             /// 
