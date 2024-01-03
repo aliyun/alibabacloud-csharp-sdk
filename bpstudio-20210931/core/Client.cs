@@ -993,6 +993,54 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             return await ListApplicationWithOptionsAsync(request, runtime);
         }
 
+        public ListFoCreatedAppsResponse ListFoCreatedAppsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFoCreatedApps",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFoCreatedAppsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListFoCreatedAppsResponse> ListFoCreatedAppsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFoCreatedApps",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFoCreatedAppsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListFoCreatedAppsResponse ListFoCreatedApps()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFoCreatedAppsWithOptions(runtime);
+        }
+
+        public async Task<ListFoCreatedAppsResponse> ListFoCreatedAppsAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFoCreatedAppsWithOptionsAsync(runtime);
+        }
+
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
