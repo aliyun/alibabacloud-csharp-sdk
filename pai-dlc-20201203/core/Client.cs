@@ -870,6 +870,84 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await GetJobMetricsWithOptionsAsync(JobId, request, headers, runtime);
         }
 
+        public GetJobSanityCheckResultResponse GetJobSanityCheckResultWithOptions(string JobId, GetJobSanityCheckResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanityCheckNumber))
+            {
+                query["SanityCheckNumber"] = request.SanityCheckNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanityCheckPhase))
+            {
+                query["SanityCheckPhase"] = request.SanityCheckPhase;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobSanityCheckResult",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/sanitycheckresult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobSanityCheckResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetJobSanityCheckResultResponse> GetJobSanityCheckResultWithOptionsAsync(string JobId, GetJobSanityCheckResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanityCheckNumber))
+            {
+                query["SanityCheckNumber"] = request.SanityCheckNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanityCheckPhase))
+            {
+                query["SanityCheckPhase"] = request.SanityCheckPhase;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobSanityCheckResult",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/sanitycheckresult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobSanityCheckResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetJobSanityCheckResultResponse GetJobSanityCheckResult(string JobId, GetJobSanityCheckResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetJobSanityCheckResultWithOptions(JobId, request, headers, runtime);
+        }
+
+        public async Task<GetJobSanityCheckResultResponse> GetJobSanityCheckResultAsync(string JobId, GetJobSanityCheckResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetJobSanityCheckResultWithOptionsAsync(JobId, request, headers, runtime);
+        }
+
         public GetPodEventsResponse GetPodEventsWithOptions(string JobId, string PodId, GetPodEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1486,6 +1564,76 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListEcsSpecsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListJobSanityCheckResultsResponse ListJobSanityCheckResultsWithOptions(string JobId, ListJobSanityCheckResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobSanityCheckResults",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/sanitycheckresults",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobSanityCheckResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListJobSanityCheckResultsResponse> ListJobSanityCheckResultsWithOptionsAsync(string JobId, ListJobSanityCheckResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobSanityCheckResults",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/sanitycheckresults",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobSanityCheckResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListJobSanityCheckResultsResponse ListJobSanityCheckResults(string JobId, ListJobSanityCheckResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListJobSanityCheckResultsWithOptions(JobId, request, headers, runtime);
+        }
+
+        public async Task<ListJobSanityCheckResultsResponse> ListJobSanityCheckResultsAsync(string JobId, ListJobSanityCheckResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListJobSanityCheckResultsWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         public ListJobsResponse ListJobsWithOptions(ListJobsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
