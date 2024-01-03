@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? DbaUid { get; set; }
 
+        /// <summary>
+        /// The ID of the user who assumes the DBA role of the database instance. If the user ID is a non-numeric value such as a role or an account, you can use this parameter to replace DbaUid.
+        /// </summary>
         [NameInMap("DbaUidByString")]
         [Validation(Required=false)]
         public string DbaUidByString { get; set; }
