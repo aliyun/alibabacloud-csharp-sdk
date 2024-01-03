@@ -1,3 +1,6 @@
+2024-01-03 Version: 4.6.0
+- Generated csharp 2021-06-25 for devops.
+
 2023-12-06 Version: 4.5.0
 - Generated csharp 2021-06-25 for devops.
 
