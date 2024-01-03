@@ -4289,6 +4289,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["BackupId"] = request.BackupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupJobId))
+            {
+                query["BackupJobId"] = request.BackupJobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -4367,6 +4371,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
             {
                 query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupJobId))
+            {
+                query["BackupJobId"] = request.BackupJobId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {

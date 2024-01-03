@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? BackupId { get; set; }
 
+        [NameInMap("BackupJobId")]
+        [Validation(Required=false)]
+        public int? BackupJobId { get; set; }
+
         /// <summary>
         /// The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
         /// </summary>
