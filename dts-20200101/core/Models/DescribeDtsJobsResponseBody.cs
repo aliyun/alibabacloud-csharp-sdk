@@ -559,6 +559,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string JobType { get; set; }
 
+            [NameInMap("MaxDu")]
+            [Validation(Required=false)]
+            public double? MaxDu { get; set; }
+
             /// <summary>
             /// The memory that has been used. Unit: MB.
             /// </summary>
@@ -664,6 +668,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public bool? StructureInitialization { get; set; }
 
             }
+
+            [NameInMap("MinDu")]
+            [Validation(Required=false)]
+            public double? MinDu { get; set; }
 
             /// <summary>
             /// The source of the task. Valid values:
@@ -1293,6 +1301,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
                 }
 
+                [NameInMap("MaxDu")]
+                [Validation(Required=false)]
+                public double? MaxDu { get; set; }
+
                 /// <summary>
                 /// The memory that has been used. Unit: MB.
                 /// </summary>
@@ -1344,6 +1356,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     public bool? StructureInitialization { get; set; }
 
                 }
+
+                [NameInMap("MinDu")]
+                [Validation(Required=false)]
+                public double? MinDu { get; set; }
 
                 /// <summary>
                 /// The billing method of the DTS instance. Valid values:

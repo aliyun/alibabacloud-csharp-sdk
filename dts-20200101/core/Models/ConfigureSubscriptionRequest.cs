@@ -110,6 +110,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ErrorPhone { get; set; }
 
+        [NameInMap("MaxDu")]
+        [Validation(Required=false)]
+        public double? MaxDu { get; set; }
+
+        [NameInMap("MinDu")]
+        [Validation(Required=false)]
+        public double? MinDu { get; set; }
+
         /// <summary>
         /// The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](~~141033~~).
         /// </summary>

@@ -411,6 +411,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string LastUpdateTime { get; set; }
 
+        [NameInMap("MaxDu")]
+        [Validation(Required=false)]
+        public double? MaxDu { get; set; }
+
         /// <summary>
         /// The type of the destination instance.
         /// </summary>
@@ -450,6 +454,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? StructureInitialization { get; set; }
 
         }
+
+        [NameInMap("MinDu")]
+        [Validation(Required=false)]
+        public double? MinDu { get; set; }
 
         /// <summary>
         /// The error message returned if the task failed.
@@ -868,6 +876,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string JobType { get; set; }
 
+            [NameInMap("MaxDu")]
+            [Validation(Required=false)]
+            public double? MaxDu { get; set; }
+
             [NameInMap("MigrationMode")]
             [Validation(Required=false)]
             public DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode MigrationMode { get; set; }
@@ -889,6 +901,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public bool? StructureInitialization { get; set; }
 
             }
+
+            [NameInMap("MinDu")]
+            [Validation(Required=false)]
+            public double? MinDu { get; set; }
 
             [NameInMap("OriginType")]
             [Validation(Required=false)]
@@ -1229,6 +1245,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public string JobType { get; set; }
 
+                [NameInMap("MaxDu")]
+                [Validation(Required=false)]
+                public double? MaxDu { get; set; }
+
                 [NameInMap("MigrationMode")]
                 [Validation(Required=false)]
                 public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode MigrationMode { get; set; }
@@ -1250,6 +1270,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     public bool? StructureInitialization { get; set; }
 
                 }
+
+                [NameInMap("MinDu")]
+                [Validation(Required=false)]
+                public double? MinDu { get; set; }
 
                 [NameInMap("OriginType")]
                 [Validation(Required=false)]
@@ -1986,6 +2010,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string JobType { get; set; }
 
+            [NameInMap("MaxDu")]
+            [Validation(Required=false)]
+            public double? MaxDu { get; set; }
+
             [NameInMap("MigrationMode")]
             [Validation(Required=false)]
             public DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode MigrationMode { get; set; }
@@ -2007,6 +2035,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public bool? StructureInitialization { get; set; }
 
             }
+
+            [NameInMap("MinDu")]
+            [Validation(Required=false)]
+            public double? MinDu { get; set; }
 
             [NameInMap("OriginType")]
             [Validation(Required=false)]

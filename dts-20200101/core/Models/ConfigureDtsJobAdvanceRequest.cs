@@ -310,6 +310,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string JobType { get; set; }
 
+        [NameInMap("MaxDu")]
+        [Validation(Required=false)]
+        public double? MaxDu { get; set; }
+
+        [NameInMap("MinDu")]
+        [Validation(Required=false)]
+        public double? MinDu { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }

@@ -230,6 +230,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["JobType"] = request.JobType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -469,6 +477,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -1123,6 +1139,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["ErrorPhone"] = request.ErrorPhone;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1269,6 +1293,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPhone))
             {
                 query["ErrorPhone"] = request.ErrorPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2709,6 +2741,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -2819,6 +2859,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {

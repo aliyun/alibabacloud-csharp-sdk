@@ -125,6 +125,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("MaxDu")]
+        [Validation(Required=false)]
+        public double? MaxDu { get; set; }
+
+        [NameInMap("MinDu")]
+        [Validation(Required=false)]
+        public double? MinDu { get; set; }
+
         /// <summary>
         /// The billing method. Valid values:
         /// 
