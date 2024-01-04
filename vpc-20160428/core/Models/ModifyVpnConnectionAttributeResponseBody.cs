@@ -232,9 +232,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group to which the IPsec-VPN connection belongs.
         /// 
-        /// The IPsec-VPN connection has the same resource group as its associated VPN gateway instance. 
-        /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// The IPsec-VPN connection and the VPN gateway associated with the IPsec-VPN connection belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -399,7 +397,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The IKE negotiation mode.
                     /// 
-                    /// *   **main**: This mode offers higher security during negotiations.
+                    /// *   **main:** This mode offers higher security during negotiations.
                     /// *   **aggressive**: This mode is faster and has a higher success rate.
                     /// </summary>
                     [NameInMap("IkeMode")]

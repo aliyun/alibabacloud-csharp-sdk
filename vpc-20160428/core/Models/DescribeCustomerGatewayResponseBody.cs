@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group to which the customer gateway belongs.
         /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeCustomerGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeCustomerGatewayResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of tag N.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

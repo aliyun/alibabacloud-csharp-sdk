@@ -1,3 +1,6 @@
+2024-01-04 Version: 6.3.0
+- Generated csharp 2016-04-28 for Vpc.
+
 2023-12-29 Version: 6.2.2
 - Generated csharp 2016-04-28 for Vpc.
 

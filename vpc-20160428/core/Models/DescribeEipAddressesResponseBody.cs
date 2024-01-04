@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BandwidthPackageId { get; set; }
 
                 /// <summary>
-                /// The bandwidth type. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
+                /// The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
                 /// </summary>
                 [NameInMap("BandwidthPackageType")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BizType { get; set; }
 
                 /// <summary>
-                /// The service status of the EIP. Valid values:
+                /// The service state of the EIP. Valid values:
                 /// 
                 /// *   **Normal**
                 /// *   **FinancialLocked**
@@ -146,8 +146,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The line type. Valid values:
                 /// 
-                /// *   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.
-                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
+                /// *   **BGP**: BGP (Multi-ISP). The BGP (Multi-ISP) line is supported in all regions.
+                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
                 /// 
                 /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
                 /// 
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InternetChargeType { get; set; }
 
                 /// <summary>
-                /// The IP address of the EIP.
+                /// The EIP.
                 /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
@@ -213,10 +213,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// The association mode. Valid values:
-                /// 
-                /// *   **NAT**: NAT mode
-                /// *   **MULTI_BINDED**: multi-EIP-to-ENI mode
-                /// *   **BINDED**: cut-through mode
+                /// - **NAT**: NAT mode
+                /// - **MULTI_BINDED**: multi-EIP-to-ENI mode
+                /// - **BINDED**: cut-through mode
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
@@ -351,7 +350,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The IDs of contiguous EIPs.
+                /// The ID of the contiguous EIP group.
                 /// 
                 /// This value is returned only when you query contiguous EIPs.
                 /// </summary>
@@ -362,8 +361,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether the resource is created by the service account. Valid values:
                 /// 
-                /// *   **0**: no
-                /// *   **1**: yes
+                /// *   **0**
+                /// *   **1**
                 /// </summary>
                 [NameInMap("ServiceManaged")]
                 [Validation(Required=false)]
