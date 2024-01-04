@@ -17,8 +17,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The transcoding jobs.
-        /// > This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
+        /// The information about the transcoding job.
+        /// 
+        /// >  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
         /// </summary>
         [NameInMap("TranscodeJobs")]
         [Validation(Required=false)]
@@ -29,7 +30,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob> TranscodeJob { get; set; }
             public class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob : TeaModel {
                 /// <summary>
-                /// The ID of the job.
+                /// The ID of the transcoding job.
+                /// 
+                /// >  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the transcoding job that was submitted.
+        /// The ID of the transcoding task that was submitted.
         /// </summary>
         [NameInMap("TranscodeTaskId")]
         [Validation(Required=false)]

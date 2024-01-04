@@ -17,9 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<string> CanceledJobs { get; set; }
 
         /// <summary>
-        /// The job IDs or upload URLs that do not exist.
-        /// 
-        /// If you set the request parameter JobIds, the job IDs that do not exist are returned. If you set the request parameter UploadUrls, the upload URLs that do not exist are returned.
+        /// The jobs that do not exist.
         /// </summary>
         [NameInMap("NonExists")]
         [Validation(Required=false)]

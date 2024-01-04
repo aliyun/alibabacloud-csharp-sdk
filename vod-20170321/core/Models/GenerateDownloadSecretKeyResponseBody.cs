@@ -8,10 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class SubmitWorkflowJobResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class GenerateDownloadSecretKeyResponseBody : TeaModel {
+        [NameInMap("AppEncryptKey")]
+        [Validation(Required=false)]
+        public string AppEncryptKey { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

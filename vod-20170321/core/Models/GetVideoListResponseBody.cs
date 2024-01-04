@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? Total { get; set; }
 
         /// <summary>
-        /// The period of time in which the object remains in the restored state.
+        /// The information about the audio or video files. Information about a maximum of 5,000 audio or video files can be returned.
         /// </summary>
         [NameInMap("VideoList")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The category ID of the media file.
+                /// The category ID of the audio or video file.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
@@ -56,53 +56,53 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// The thumbnail URL of the media file.
+                /// The thumbnail URL of the audio or video file.
                 /// </summary>
                 [NameInMap("CoverURL")]
                 [Validation(Required=false)]
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the media file.
+                /// The description of the audio or video file.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The duration of the media file. Unit: seconds.
+                /// The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
 
                 /// <summary>
-                /// The period of time in which the object remains in the restored state.
+                /// The period of time in which the audio or video file remains in the restored state.
                 /// </summary>
                 [NameInMap("RestoreExpiration")]
                 [Validation(Required=false)]
                 public string RestoreExpiration { get; set; }
 
                 /// <summary>
-                /// The restoration status of the media file. Valid values:
+                /// The restoration status of the audio or video file. Valid values:
                 /// 
-                /// - **Processing**
-                /// - **Success**
-                /// - **Failed**
+                /// *   **Processing**
+                /// *   **Success**
+                /// *   **Failed**
                 /// </summary>
                 [NameInMap("RestoreStatus")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The video snapshot URLs.
+                /// The URL array of video snapshots.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The status of the video. Valid values:
+                /// The status of the audio or video file. Valid values:
                 /// 
                 /// *   **Uploading**: The video is being uploaded.
                 /// *   **UploadFail**: The video failed to be uploaded.
-                /// *   **UploadSucc**: The video has been uploaded.
+                /// *   **UploadSucc**: The video is uploaded.
                 /// *   **Transcoding**: The video is being transcoded.
                 /// *   **TranscodeFail**: The video failed to be transcoded.
                 /// *   **checking**: The video is being reviewed.
@@ -148,44 +148,45 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The storage class of the media file. Valid values:
+                /// The storage class of the audio or video file. Valid values:
                 /// 
-                /// - **Standard**: All media resources are stored as Standard objects.
-                /// - **IA**: All media resources are stored as IA objects.
-                /// - **Archive**: All media resources are stored as Archive objects.
-                /// - **ColdArchive**: All media resources are stored as Cold Archive objects.
-                /// - **SourceIA**: Only the source files are IA objects.
-                /// - **SourceArchive**: Only the source files are Archive objects.
-                /// - **SourceColdArchive**: Only the source files are Cold Archive objects.
-                /// - **Changing**: The storage class is being modified.
+                /// *   **Standard**: All media resources are stored as Standard objects.
+                /// *   **IA**: All media resources are stored as IA objects.
+                /// *   **Archive**: All media resources are stored as Archive objects.
+                /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
+                /// *   **SourceIA**: Only the source files are IA objects.
+                /// *   **SourceArchive**: Only the source files are Archive objects.
+                /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
+                /// *   **Changing**: The storage class of the audio or video file is being changed.
+                /// *   **SourceChanging**: The storage class of the source file is being changed.
                 /// </summary>
                 [NameInMap("StorageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// The storage address of the media file.
+                /// The storage address of the audio or video file.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// The tags of the media file. Multiple tags are separated by commas (,).
+                /// The tags of the audio or video file. Multiple tags are separated by commas (,).
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The title of the media file.
+                /// The title of the audio or video file.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// The ID of the media file.
+                /// The ID of the audio or video file.
                 /// </summary>
                 [NameInMap("VideoId")]
                 [Validation(Required=false)]

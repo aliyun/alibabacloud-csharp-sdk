@@ -166,7 +166,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// *   **SourceIA**: Only the source files are IA objects.
             /// *   **SourceArchive**: Only the source files are Archive objects.
             /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-            /// *   **Changing**: The storage class is being modified.
+            /// *   **Changing**: The storage class of the audio or video file is being changed.
+            /// *   **SourceChanging**: The storage class of the source file is being changed.
             /// </summary>
             [NameInMap("StorageClass")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the task.
+        /// The ID of the job.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The ID of the video.
+        /// The ID of the media file.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

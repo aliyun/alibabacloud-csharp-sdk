@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The output layout of the sound channels. Valid values:
                 /// 
-                /// *   **mono**: mono sound channel
-                /// *   **stereo**: two sound channels
+                /// *   **mono**
+                /// *   **stereo**
                 /// </summary>
                 [NameInMap("ChannelLayout")]
                 [Validation(Required=false)]
@@ -48,28 +48,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Channels { get; set; }
 
                 /// <summary>
-                /// The full name of the codec format.
+                /// The full name of the encoding format.
                 /// </summary>
                 [NameInMap("CodecLongName")]
                 [Validation(Required=false)]
                 public string CodecLongName { get; set; }
 
                 /// <summary>
-                /// The short name of the codec format.
+                /// The short name of the encoding format.
                 /// </summary>
                 [NameInMap("CodecName")]
                 [Validation(Required=false)]
                 public string CodecName { get; set; }
 
                 /// <summary>
-                /// The tag of the codec format.
+                /// The tag of the encoding format.
                 /// </summary>
                 [NameInMap("CodecTag")]
                 [Validation(Required=false)]
                 public string CodecTag { get; set; }
 
                 /// <summary>
-                /// The tag string of the codec format.
+                /// The tag string of the encoding format.
                 /// </summary>
                 [NameInMap("CodecTagString")]
                 [Validation(Required=false)]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CodecTimeBase { get; set; }
 
                 /// <summary>
-                /// The duration of the audio stream.
+                /// The duration of the audio file.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// The sequence number of the audio stream, which specifies the position of the audio stream in all audio streams.
+                /// The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.
                 /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
@@ -118,21 +118,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string SampleFmt { get; set; }
 
                 /// <summary>
-                /// The sample rate.
+                /// The sampling rate of the audio stream.
                 /// </summary>
                 [NameInMap("SampleRate")]
                 [Validation(Required=false)]
                 public string SampleRate { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The time base.
+                /// The time base of the audio stream.
                 /// </summary>
                 [NameInMap("Timebase")]
                 [Validation(Required=false)]
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The storage class of the audio or video file. Valid values:
+            /// The storage class of the audio file. Valid values:
             /// 
             /// *   **Standard**: All media resources are stored as Standard objects.
             /// *   **IA**: All media resources are stored as IA objects.
@@ -248,7 +248,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// *   **SourceIA**: Only the source files are IA objects.
             /// *   **SourceArchive**: Only the source files are Archive objects.
             /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-            /// *   **Changing**: The storage class is being modified.
+            /// *   **Changing**: The storage class of the audio file is being changed.
+            /// *   **SourceChanging**: The storage class of the source file is being changed.
             /// </summary>
             [NameInMap("StorageClass")]
             [Validation(Required=false)]
@@ -276,35 +277,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AvgFPS { get; set; }
 
                 /// <summary>
-                /// The bitrate of the file. Unit: Kbit/s.
+                /// The bitrate. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("Bitrate")]
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The full name of the codec format.
+                /// The full name of the encoding format.
                 /// </summary>
                 [NameInMap("CodecLongName")]
                 [Validation(Required=false)]
                 public string CodecLongName { get; set; }
 
                 /// <summary>
-                /// The short name of the codec format.
+                /// The short name of the encoding format.
                 /// </summary>
                 [NameInMap("CodecName")]
                 [Validation(Required=false)]
                 public string CodecName { get; set; }
 
                 /// <summary>
-                /// The tag of the codec format.
+                /// The tag of the encoding format.
                 /// </summary>
                 [NameInMap("CodecTag")]
                 [Validation(Required=false)]
                 public string CodecTag { get; set; }
 
                 /// <summary>
-                /// The tag string of the codec format.
+                /// The tag string of the encoding format.
                 /// </summary>
                 [NameInMap("CodecTagString")]
                 [Validation(Required=false)]
@@ -318,49 +319,49 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CodecTimeBase { get; set; }
 
                 /// <summary>
-                /// The display aspect ratio.
+                /// The display aspect ratio (DAR) of the video stream.
                 /// </summary>
                 [NameInMap("Dar")]
                 [Validation(Required=false)]
                 public string Dar { get; set; }
 
                 /// <summary>
-                /// The duration of the video stream.
+                /// The duration of the audio file.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// The target frame rate.
+                /// The frame rate of the output file.
                 /// </summary>
                 [NameInMap("Fps")]
                 [Validation(Required=false)]
                 public string Fps { get; set; }
 
                 /// <summary>
-                /// The HDR type.
+                /// The HDR type of the video stream.
                 /// </summary>
                 [NameInMap("HDRType")]
                 [Validation(Required=false)]
                 public string HDRType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the video stream contains bidirectional frames (B-frames).
+                /// Indicates whether the video stream contains B-frames.
                 /// </summary>
                 [NameInMap("HasBFrames")]
                 [Validation(Required=false)]
                 public string HasBFrames { get; set; }
 
                 /// <summary>
-                /// The height of the video resolution.
+                /// The height of the video stream.
                 /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public string Height { get; set; }
 
                 /// <summary>
-                /// The sequence number of the video stream, which indicates the position of the video stream in all video streams.
+                /// The sequence number of the video stream. The value indicates the position of the video stream in all video streams.
                 /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
@@ -402,35 +403,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Profile { get; set; }
 
                 /// <summary>
-                /// The rotation angle of the video. Valid values: **\[0, 360)**.
+                /// The rotation angle of the video. Valid values: **\[0,360)**.
                 /// </summary>
                 [NameInMap("Rotate")]
                 [Validation(Required=false)]
                 public string Rotate { get; set; }
 
                 /// <summary>
-                /// The sample aspect ratio.
+                /// The sample aspect ratio (SAR) of the video stream.
                 /// </summary>
                 [NameInMap("Sar")]
                 [Validation(Required=false)]
                 public string Sar { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The time base.
+                /// The time base of the audio stream.
                 /// </summary>
                 [NameInMap("Timebase")]
                 [Validation(Required=false)]
                 public string Timebase { get; set; }
 
                 /// <summary>
-                /// The width of the video resolution.
+                /// The width of the video in pixels.
                 /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]
