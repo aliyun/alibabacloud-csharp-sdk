@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the instance.
+        /// The details of the instance.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
                 /// 
-                /// >  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see Introduction to Babelfish.[](~~428613~~)
+                /// >  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
                 /// </summary>
                 [NameInMap("BabelfishConfig")]
                 [Validation(Required=false)]
@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// This parameter is invalid. You do not need to specify this parameter.
+                /// An invalid parameter. You can ignore this parameter.
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
                 public string BpeEnabled { get; set; }
 
                 /// <summary>
-                /// This parameter is invalid. You do not need to specify this parameter.
+                /// An invalid parameter. You can ignore this parameter.
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// The RDS edition of the instance. Valid values:
+                /// The RDS edition. Valid values:
                 /// 
                 /// *   **Basic**: RDS Basic Edition
                 /// *   **HighAvailability**: RDS High-availability Edition
@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("ColdDataEnabled")]
+                [Validation(Required=false)]
+                public bool? ColdDataEnabled { get; set; }
 
                 /// <summary>
                 /// The character set collation of the instance.
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ConnectionMode { get; set; }
 
                 /// <summary>
-                /// The internal endpoint of the instance.
+                /// The internal endpoint.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -144,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **1**: shared proxy
                 /// *   **2**: dedicated proxy
                 /// 
-                /// >  We recommend that you use the ProxyType parameter instead of this parameter.
+                /// >  We recommend that you use the **ProxyType** parameter instead of this parameter.
                 /// </summary>
                 [NameInMap("ConsoleVersion")]
                 [Validation(Required=false)]
@@ -158,7 +162,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The minor engine version of the instance.
+                /// The minor engine version.
                 /// </summary>
                 [NameInMap("CurrentKernelVersion")]
                 [Validation(Required=false)]
@@ -176,31 +180,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode> DBClusterNode { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode : TeaModel {
                         /// <summary>
-                        /// The specification of the node.
+                        /// The node specification.
                         /// </summary>
                         [NameInMap("ClassCode")]
                         [Validation(Required=false)]
                         public string ClassCode { get; set; }
 
                         /// <summary>
-                        /// Node specification type. Value range:
+                        /// The node type. Valid values:
                         /// 
-                        /// - d: Exclusive specifications
-                        /// - x: General specifications
+                        /// *   d: dedicated node type
+                        /// *   x: general-purpose node type
                         /// </summary>
                         [NameInMap("ClassType")]
                         [Validation(Required=false)]
                         public string ClassType { get; set; }
 
                         /// <summary>
-                        /// The number of vCPUs that you want to allocate to the elastic container instance. Unit: cores.
+                        /// The number of CPU cores of the node.
                         /// </summary>
                         [NameInMap("Cpu")]
                         [Validation(Required=false)]
                         public string Cpu { get; set; }
 
                         /// <summary>
-                        /// The memory size that you applied for each instance. Unit: MB.
+                        /// The memory capacity of the node. Unit: MB.
                         /// </summary>
                         [NameInMap("Memory")]
                         [Validation(Required=false)]
@@ -223,8 +227,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         /// <summary>
                         /// The role of the node. Valid values:
                         /// 
-                        /// *   **primary**: primary node
-                        /// *   **secondary**: secondary node
+                        /// *   **primary**
+                        /// *   **secondary**
                         /// </summary>
                         [NameInMap("NodeRole")]
                         [Validation(Required=false)]
@@ -238,12 +242,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string NodeZoneId { get; set; }
 
                         /// <summary>
-                        /// The status of the migration task. Valid values:
-                        /// - active
-                        /// - creating
-                        /// - deleting
-                        /// - classchanging
-                        /// - restarting
+                        /// The node status. Valid values:
+                        /// 
+                        /// *   active
+                        /// *   creating
+                        /// *   deleting
+                        /// *   classchanging
+                        /// *   restarting
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -268,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// The instance family to which the instance belongs. Valid values:
+                /// The instance family. Valid values:
                 /// 
                 /// *   **s**: shared instance family
                 /// *   **x**: general-purpose instance family
@@ -280,7 +285,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceClassType { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// The instance description.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
@@ -310,8 +315,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The type of the network over which the instance is connected. Valid values:
                 /// 
-                /// *   **Internet**: Internet
-                /// *   **Intranet**: internal network
+                /// *   **Internet**
+                /// *   **Intranet**
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
@@ -337,13 +342,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **local_ssd** and **ephemeral_ssd**: local SSD
                 /// *   **cloud_ssd**: standard SSD
                 /// *   **cloud_essd**: enhanced SSD (ESSD)
+                /// *   **general_essd**: general ESSD
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
                 [Validation(Required=false)]
                 public string DBInstanceStorageType { get; set; }
 
                 /// <summary>
-                /// The type of the instance. Valid values:
+                /// The instance type. Valid values:
                 /// 
                 /// *   **Primary**: primary instance
                 /// *   **Readonly**: read-only instance
@@ -362,7 +368,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DBMaxQuantity { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster.
+                /// The dedicated cluster ID.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
@@ -407,14 +413,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// The extended information of the instance.
+                /// The extended information.
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
                 public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
                     /// <summary>
-                    /// The IDs of the instances.
+                    /// The instance IDs.
                     /// </summary>
                     [NameInMap("DBInstanceIds")]
                     [Validation(Required=false)]
@@ -443,14 +449,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string GuardDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The type of the IP address. Only **IPv4** addresses are supported.
+                /// The IP address type. Only **IPv4** addresses are supported.
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
                 /// <summary>
-                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+                /// The ID of the instance from which incremental data comes. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
                 /// </summary>
                 [NameInMap("IncrementSourceDBInstanceId")]
                 [Validation(Required=false)]
@@ -475,6 +481,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("InstructionSetArch")]
                 [Validation(Required=false)]
                 public string InstructionSetArch { get; set; }
+
+                [NameInMap("IoAccelerationEnabled")]
+                [Validation(Required=false)]
+                public string IoAccelerationEnabled { get; set; }
 
                 /// <summary>
                 /// The latest minor engine version that is supported by the instance.
@@ -512,7 +522,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string MaintainTime { get; set; }
 
                 /// <summary>
-                /// The ID of the primary instance.
+                /// The primary instance ID.
                 /// 
                 /// >  If this parameter is not returned, the instance is the primary instance.
                 /// </summary>
@@ -597,7 +607,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId> ReadOnlyDBInstanceId { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId : TeaModel {
                         /// <summary>
-                        /// The ID of the read-only instance.
+                        /// The read-only instance ID.
                         /// </summary>
                         [NameInMap("DBInstanceId")]
                         [Validation(Required=false)]
@@ -636,7 +646,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// The whitelist mode of the instance. Valid values:
+                /// The whitelist mode. Valid values:
                 /// 
                 /// *   **normal**: standard whitelist mode
                 /// *   **safety**: enhanced whitelist mode
@@ -679,7 +689,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public double? ScaleMin { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the forced scaling feature is enabled for the serverless instance.
+                    /// Indicates whether the forced scaling feature is enabled for the serverless instance. Valid values:
                     /// 
                     /// *   **true**
                     /// *   **false** (default)
@@ -715,7 +725,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
+                /// Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account. Valid values:
                 /// 
                 /// *   **Enable**
                 /// *   **Disabled**
@@ -732,7 +742,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TempDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The time zone of the instance.
+                /// The time zone.
                 /// </summary>
                 [NameInMap("TimeZone")]
                 [Validation(Required=false)]
@@ -749,7 +759,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
                 /// 
                 /// *   **1**: The instance is normal.
-                /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.
+                /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
                 /// </summary>
                 [NameInMap("TipsLevel")]
                 [Validation(Required=false)]
@@ -770,7 +780,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The virtual private cloud (VPC) ID of the instance.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

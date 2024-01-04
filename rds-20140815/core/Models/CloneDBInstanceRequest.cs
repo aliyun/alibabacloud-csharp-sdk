@@ -153,6 +153,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
+        [NameInMap("IoAccelerationEnabled")]
+        [Validation(Required=false)]
+        public string IoAccelerationEnabled { get; set; }
+
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 

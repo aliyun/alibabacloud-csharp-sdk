@@ -48,28 +48,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("ColdDataEnabled")]
+        [Validation(Required=false)]
+        public bool? ColdDataEnabled { get; set; }
+
         /// <summary>
-        /// The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableClasses](~~610393~~) operation to query the instance types that are supported by an instance.
+        /// The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.
         /// 
-        /// - You must specify at least one of DBInstanceClass and **DBInstanceStorage**.
-        /// - You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current instance type of the instance.
+        /// > *   You must specify at least one of DBInstanceClass and **DBInstanceStorage**.
+        /// > *   You can call the DescribeDBInstanceAttribute operation to query the current instance type of the instance.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableClasses](~~610393~~) operation to query the storage capacity range that is supported by the new instance type.
+        /// The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is that is supported by the new instance type.
         /// 
-        /// *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
-        /// *   You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current storage capacity of the instance.
+        /// > *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.
+        /// > *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The time when you want the change to take effect. Valid values:
         /// 
         /// *   **Immediate**: This is the default value.
-        /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
+        /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -144,6 +148,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
+
+        [NameInMap("IoAccelerationEnabled")]
+        [Validation(Required=false)]
+        public string IoAccelerationEnabled { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

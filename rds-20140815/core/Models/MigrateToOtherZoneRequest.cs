@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        [NameInMap("IoAccelerationEnabled")]
+        [Validation(Required=false)]
+        public string IoAccelerationEnabled { get; set; }
+
         /// <summary>
         /// Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:
         /// 

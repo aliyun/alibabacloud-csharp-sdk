@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of instances and their cross-region backup settings.
+        /// The cross-region backup settings.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BackupEnabledTime { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the cross-region data backup file is stored.
+                /// The ID of the destination region within which the cross-region backup file is stored.
                 /// </summary>
                 [NameInMap("CrossBackupRegion")]
                 [Validation(Required=false)]
@@ -52,23 +52,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CrossBackupType { get; set; }
 
                 /// <summary>
-                /// The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+                /// The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
                 /// 
-                /// > The value cannot start with http:// or https://.
+                /// >  The value cannot start with http:// or https://.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance states](~~26315~~).
+                /// The instance status. For more information, see [Instance statuses](~~26315~~).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// The database engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LogBackupEnabled { get; set; }
 
                 /// <summary>
-                /// The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the cross-region log backup feature was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("LogBackupEnabledTime")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ItemsNumbers { get; set; }
 
         /// <summary>
-        /// The page number of the returned page. Valid values: any non-zero positive integer.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -153,28 +153,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Default value: 30.
+        /// The number of entries per page. Default value: 30.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecords")]
         [Validation(Required=false)]

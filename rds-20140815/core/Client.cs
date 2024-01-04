@@ -2326,6 +2326,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InstanceNetworkType"] = request.InstanceNetworkType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -2487,6 +2491,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
             {
                 query["InstanceNetworkType"] = request.InstanceNetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -3994,6 +4002,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColdDataEnabled))
+            {
+                query["ColdDataEnabled"] = request.ColdDataEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionMode))
             {
                 query["ConnectionMode"] = request.ConnectionMode;
@@ -4065,6 +4077,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
             {
                 query["InstanceNetworkType"] = request.InstanceNetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -4256,6 +4272,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColdDataEnabled))
+            {
+                query["ColdDataEnabled"] = request.ColdDataEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionMode))
             {
                 query["ConnectionMode"] = request.ConnectionMode;
@@ -4327,6 +4347,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
             {
                 query["InstanceNetworkType"] = request.InstanceNetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -7874,6 +7898,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InstructionSetArch"] = request.InstructionSetArch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -8047,6 +8075,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstructionSetArch))
             {
                 query["InstructionSetArch"] = request.InstructionSetArch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -14944,10 +14976,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
-          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           *
           * @param request DescribeCrossRegionBackupDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15005,10 +15042,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
-          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           *
           * @param request DescribeCrossRegionBackupDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15066,10 +15108,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
-          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           *
           * @param request DescribeCrossRegionBackupDBInstanceRequest
           * @return DescribeCrossRegionBackupDBInstanceResponse
@@ -15081,10 +15128,15 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * Before you call this operation, make sure that the instance runs one of the following database engines:
-          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * ### [](#)References
+          * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+          * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           *
           * @param request DescribeCrossRegionBackupDBInstanceRequest
           * @return DescribeCrossRegionBackupDBInstanceResponse
@@ -15101,6 +15153,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -15191,6 +15244,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -15281,6 +15335,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -15301,6 +15356,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   PostgreSQL
           * *   SQL Server
           * ### [](#)References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
           * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -31244,15 +31300,14 @@ namespace AlibabaCloud.SDK.Rds20140815
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
           * ### [](#)Precautions
           * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, make sure that the following requirements are met:
+          * *   Before you call this operation, **make sure that the following conditions are met**:
           *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The source and destination instances must be created by using the same user.
           *     *   The instance is in the Running state.
           *     *   The source and destination databases must be in the Running state.
           *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > 
-          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * *   You can migrate the data of multiple databases at a time.
+          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * > *   You can migrate the data of multiple databases at a time.
           *
           * @param request ImportDatabaseBetweenInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31316,15 +31371,14 @@ namespace AlibabaCloud.SDK.Rds20140815
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
           * ### [](#)Precautions
           * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, make sure that the following requirements are met:
+          * *   Before you call this operation, **make sure that the following conditions are met**:
           *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The source and destination instances must be created by using the same user.
           *     *   The instance is in the Running state.
           *     *   The source and destination databases must be in the Running state.
           *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > 
-          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * *   You can migrate the data of multiple databases at a time.
+          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * > *   You can migrate the data of multiple databases at a time.
           *
           * @param request ImportDatabaseBetweenInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -31388,15 +31442,14 @@ namespace AlibabaCloud.SDK.Rds20140815
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
           * ### [](#)Precautions
           * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, make sure that the following requirements are met:
+          * *   Before you call this operation, **make sure that the following conditions are met**:
           *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The source and destination instances must be created by using the same user.
           *     *   The instance is in the Running state.
           *     *   The source and destination databases must be in the Running state.
           *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > 
-          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * *   You can migrate the data of multiple databases at a time.
+          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * > *   You can migrate the data of multiple databases at a time.
           *
           * @param request ImportDatabaseBetweenInstancesRequest
           * @return ImportDatabaseBetweenInstancesResponse
@@ -31414,15 +31467,14 @@ namespace AlibabaCloud.SDK.Rds20140815
           * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
           * ### [](#)Precautions
           * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, make sure that the following requirements are met:
+          * *   Before you call this operation, **make sure that the following conditions are met**:
           *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user credentials.
+          *     *   The source and destination instances must be created by using the same user.
           *     *   The instance is in the Running state.
           *     *   The source and destination databases must be in the Running state.
           *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > 
-          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * *   You can migrate the data of multiple databases at a time.
+          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * > *   You can migrate the data of multiple databases at a time.
           *
           * @param request ImportDatabaseBetweenInstancesRequest
           * @return ImportDatabaseBetweenInstancesResponse
@@ -32812,6 +32864,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["EffectiveTime"] = request.EffectiveTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsModifySpec))
             {
                 query["IsModifySpec"] = request.IsModifySpec;
@@ -32913,6 +32969,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 query["EffectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsModifySpec))
             {
@@ -37438,6 +37498,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["Category"] = request.Category;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColdDataEnabled))
+            {
+                query["ColdDataEnabled"] = request.ColdDataEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
@@ -37469,6 +37533,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -37576,6 +37644,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["Category"] = request.Category;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColdDataEnabled))
+            {
+                query["ColdDataEnabled"] = request.ColdDataEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
@@ -37607,6 +37679,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
+            {
+                query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBProxyVpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the proxy instance.
+                /// The proxy instance ID.
                 /// </summary>
                 [NameInMap("DBProxyVpcInstanceId")]
                 [Validation(Required=false)]
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DbProxyEndpointAliases { get; set; }
 
                 /// <summary>
-                /// The ID of the proxy terminal.
+                /// The proxy terminal ID.
                 /// </summary>
                 [NameInMap("DbProxyEndpointName")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointName { get; set; }
 
                 /// <summary>
-                /// The type of the proxy terminal.
+                /// The proxy terminal type. Valid values:
                 /// 
                 /// *   Custom: custom proxy terminal
                 /// *   RWSplit: default proxy terminal
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DbProxyEndpointType { get; set; }
 
                 /// <summary>
-                /// The read and write attributes of the proxy terminal.
+                /// The read and write attributes of the proxy terminal. Valid values:
                 /// 
                 /// *   ReadOnly: The proxy terminal supports only read requests.
                 /// *   ReadWrite: The proxy terminal supports read and write requests.

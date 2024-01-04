@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance type of the read-only instance. For more information, see [Read-only ApsaraDB RDS instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
+        /// The instance type of the read-only instance. For more information, see [Read-only instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.
+        /// The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the read-only instance. For more information, see the **Storage space** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5 GB. Unit: GB.
+        /// The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5. Unit: GB.
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -172,6 +172,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstructionSetArch { get; set; }
 
+        [NameInMap("IoAccelerationEnabled")]
+        [Validation(Required=false)]
+        public string IoAccelerationEnabled { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -217,7 +221,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -289,7 +293,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+        /// The zone ID. You can call the DescribeRegions operation to query the zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

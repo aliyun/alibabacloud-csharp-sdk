@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The RDS edition of the instance. Valid values:
                 /// 
-                /// *   **Basic**: RDS Basic Edition
-                /// *   **HighAvailability**: RDS High-availability Edition
-                /// *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
+                /// *   **Basic**: RDS Basic Edition.
+                /// *   **HighAvailability**: RDS High-availability Edition.
+                /// *   **Finance**: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -144,9 +144,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The storage type. Valid values:
                 /// 
-                /// *   **local_ssd**: local SSD. This is the recommended storage type.
+                /// *   **local_ssd**: local SSDs. This is the recommended storage type.
                 /// *   **cloud_ssd**: standard SSD.
-                /// *   **cloud_essd**: enhanced SSD (ESSD)
+                /// *   **cloud_essd**: enhanced SSD (ESSD).
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
                 [Validation(Required=false)]
@@ -160,21 +160,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// The database engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the instance. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
+                /// The instance ID. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public int? InstanceId { get; set; }
 
                 /// <summary>
-                /// An array that consists of the regions to which the cross-region data backup file can be restored.
+                /// The regions to which the cross-region data backup file can be restored.
                 /// </summary>
                 [NameInMap("RestoreRegions")]
                 [Validation(Required=false)]

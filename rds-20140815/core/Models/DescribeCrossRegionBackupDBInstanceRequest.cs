@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).
+        /// The instance ID. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

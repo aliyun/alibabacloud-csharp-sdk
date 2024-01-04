@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                [NameInMap("ColdDataEnabled")]
+                [Validation(Required=false)]
+                public bool? ColdDataEnabled { get; set; }
+
                 /// <summary>
                 /// The connection mode of the instance. Valid values:
                 /// 
@@ -274,6 +278,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
+
+                [NameInMap("IoAccelerationEnabled")]
+                [Validation(Required=false)]
+                public string IoAccelerationEnabled { get; set; }
 
                 /// <summary>
                 /// The lock mode of the instance. Valid values:
