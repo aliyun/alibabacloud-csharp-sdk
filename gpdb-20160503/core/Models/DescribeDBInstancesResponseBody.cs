@@ -179,6 +179,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
+                [NameInMap("ProdType")]
+                [Validation(Required=false)]
+                public string ProdType { get; set; }
+
                 /// <summary>
                 /// The region ID.
                 /// </summary>

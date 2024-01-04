@@ -370,6 +370,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                [NameInMap("ProdType")]
+                [Validation(Required=false)]
+                public string ProdType { get; set; }
+
                 /// <summary>
                 /// An invalid parameter. It is no longer returned when you call this operation.
                 /// </summary>

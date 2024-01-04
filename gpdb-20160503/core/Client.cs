@@ -691,6 +691,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProdType))
+            {
+                query["ProdType"] = request.ProdType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -879,6 +883,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProdType))
+            {
+                query["ProdType"] = request.ProdType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
