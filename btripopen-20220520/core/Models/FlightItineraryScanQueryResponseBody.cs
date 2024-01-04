@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string AgentCode { get; set; }
 
+                [NameInMap("apply_id")]
+                [Validation(Required=false)]
+                public string ApplyId { get; set; }
+
                 [NameInMap("bill_date")]
                 [Validation(Required=false)]
                 public string BillDate { get; set; }

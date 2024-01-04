@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            [NameInMap("user_name_en")]
+            [Validation(Required=false)]
+            public string UserNameEn { get; set; }
+
         }
 
         [NameInMap("external_traveler_standard")]

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<TrainTicketScanQueryResponseBodyModuleItems> Items { get; set; }
             public class TrainTicketScanQueryResponseBodyModuleItems : TeaModel {
+                [NameInMap("apply_id")]
+                [Validation(Required=false)]
+                public string ApplyId { get; set; }
+
                 [NameInMap("arr_station")]
                 [Validation(Required=false)]
                 public string ArrStation { get; set; }
