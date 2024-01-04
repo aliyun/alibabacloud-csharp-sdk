@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetTimingSyntheticTaskRequest : TeaModel {
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the synthetic monitoring task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

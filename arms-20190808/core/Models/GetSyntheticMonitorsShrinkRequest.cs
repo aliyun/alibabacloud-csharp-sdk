@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetSyntheticMonitorsShrinkRequest : TeaModel {
+        /// <summary>
+        /// The query conditions.
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
