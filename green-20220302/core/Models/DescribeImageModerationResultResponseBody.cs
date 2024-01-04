@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
     public class DescribeImageModerationResultResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]

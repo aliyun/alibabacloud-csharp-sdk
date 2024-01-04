@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public VideoModerationResultResponseBodyDataAudioResult AudioResult { get; set; }
             public class VideoModerationResultResponseBodyDataAudioResult : TeaModel {
+                [NameInMap("AudioSummarys")]
+                [Validation(Required=false)]
+                public List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> AudioSummarys { get; set; }
+                public class VideoModerationResultResponseBodyDataAudioResultAudioSummarys : TeaModel {
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+
+                    [NameInMap("LabelSum")]
+                    [Validation(Required=false)]
+                    public int? LabelSum { get; set; }
+
+                }
+
                 [NameInMap("SliceDetails")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
@@ -85,6 +99,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public int? FrameNum { get; set; }
 
+                [NameInMap("FrameSummarys")]
+                [Validation(Required=false)]
+                public List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> FrameSummarys { get; set; }
+                public class VideoModerationResultResponseBodyDataFrameResultFrameSummarys : TeaModel {
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+
+                    [NameInMap("LabelSum")]
+                    [Validation(Required=false)]
+                    public int? LabelSum { get; set; }
+
+                }
+
                 [NameInMap("Frames")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataFrameResultFrames> Frames { get; set; }
@@ -120,6 +148,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [NameInMap("TempUrl")]
                     [Validation(Required=false)]
                     public string TempUrl { get; set; }
+
+                    [NameInMap("Timestamp")]
+                    [Validation(Required=false)]
+                    public long? Timestamp { get; set; }
 
                 }
 
