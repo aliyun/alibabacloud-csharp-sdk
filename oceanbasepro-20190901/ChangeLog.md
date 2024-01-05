@@ -1,3 +1,6 @@
+2024-01-05 Version: 2.1.0
+- Generated csharp 2019-09-01 for OceanBasePro.
+
 2024-01-02 Version: 2.0.1
 - Generated csharp 2019-09-01 for OceanBasePro.
 
