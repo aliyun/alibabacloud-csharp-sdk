@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// Indicates whether the application template is created. Valid values:
             /// 
-            /// *   **true**: The application template is created.
-            /// *   **false**: The application fails to be created.
+            /// *   **True**
+            /// *   **False**
             /// </summary>
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

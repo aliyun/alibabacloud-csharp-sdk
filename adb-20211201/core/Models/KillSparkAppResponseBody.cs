@@ -17,41 +17,47 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public KillSparkAppResponseBodyData Data { get; set; }
         public class KillSparkAppResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Spark application.
+            /// The Spark application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The name of the Spark application.
+            /// The name of the application.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The database ID.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// The error message returned if the request failed.
+            /// The error message returned.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The state of the Spark application. Valid values:
+            /// The execution state of the Spark application. Valid values:
             /// 
-            /// *   **waiting**
-            /// *   **running**
-            /// *   **finished**
-            /// *   **failed**
-            /// *   **closed**
+            /// *   **SUBMITTED**
+            /// *   **STARTING**
+            /// *   **RUNNING**
+            /// *   **FAILING**
+            /// *   **FAILED**
+            /// *   **KILLING**
+            /// *   **KILLED**
+            /// *   **SUCCEEDING**
+            /// *   **COMPLETED**
+            /// *   **FATAL**
+            /// *   **UNKNOWN**
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

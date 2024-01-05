@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkConfigLogPathResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The queried Spark log configuration.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkConfigLogPathResponseBodyData Data { get; set; }
         public class GetSparkConfigLogPathResponseBodyData : TeaModel {
             /// <summary>
-            /// The recommended default log path.
+            /// The default log path.
             /// </summary>
             [NameInMap("DefaultLogPath")]
             [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsLogPathExists { get; set; }
 
             /// <summary>
-            /// The time when the configuration was last modified.
+            /// The last modification time.
             /// </summary>
             [NameInMap("ModifiedTimestamp")]
             [Validation(Required=false)]
             public string ModifiedTimestamp { get; set; }
 
             /// <summary>
-            /// The modifier ID.
+            /// The account ID of the modifier.
             /// </summary>
             [NameInMap("ModifiedUid")]
             [Validation(Required=false)]
             public string ModifiedUid { get; set; }
 
             /// <summary>
-            /// The log path.
+            /// The recorded log path.
             /// </summary>
             [NameInMap("RecordedLogPath")]
             [Validation(Required=false)]

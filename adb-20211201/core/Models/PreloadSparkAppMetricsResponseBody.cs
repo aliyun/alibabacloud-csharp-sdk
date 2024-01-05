@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AttemptId { get; set; }
 
             /// <summary>
-            /// The path of the event log.
+            /// The event log path.
             /// </summary>
             [NameInMap("EventLogPath")]
             [Validation(Required=false)]
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public PreloadSparkAppMetricsResponseBodyDataScanMetrics ScanMetrics { get; set; }
             public class PreloadSparkAppMetricsResponseBodyDataScanMetrics : TeaModel {
                 /// <summary>
-                /// The number of scanned rows.
+                /// The number of rows scanned.
                 /// </summary>
                 [NameInMap("OutputRowsCount")]
                 [Validation(Required=false)]
                 public long? OutputRowsCount { get; set; }
 
                 /// <summary>
-                /// The number of scanned bytes.
+                /// The size of the scanned data. Unit: bytes.
                 /// </summary>
                 [NameInMap("TotalReadFileSizeInByte")]
                 [Validation(Required=false)]

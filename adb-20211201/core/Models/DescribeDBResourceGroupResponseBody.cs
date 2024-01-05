@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The queried resource groups.
+        /// The queried resource group.
         /// </summary>
         [NameInMap("GroupsInfo")]
         [Validation(Required=false)]
         public List<DescribeDBResourceGroupResponseBodyGroupsInfo> GroupsInfo { get; set; }
         public class DescribeDBResourceGroupResponseBodyGroupsInfo : TeaModel {
+            /// <summary>
+            /// A reserved parameter.
+            /// </summary>
             [NameInMap("ClusterMode")]
             [Validation(Required=false)]
             public string ClusterMode { get; set; }
 
+            /// <summary>
+            /// A reserved parameter.
+            /// </summary>
             [NameInMap("ClusterSizeResource")]
             [Validation(Required=false)]
             public string ClusterSizeResource { get; set; }
@@ -32,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The amount of minimum elastic computing resources. Unit: ACU.
+            /// The minimum amount of elastic computing resources. Unit: ACUs.
             /// </summary>
             [NameInMap("ElasticMinComputeResource")]
             [Validation(Required=false)]
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// *   **Interactive**
             /// *   **Job**
             /// 
-            /// > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+            /// >  For more information about resource groups, see [Resource groups](~~428610~~).
             /// </summary>
             [NameInMap("GroupType")]
             [Validation(Required=false)]
@@ -64,28 +70,37 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string GroupUsers { get; set; }
 
+            /// <summary>
+            /// A reserved parameter.
+            /// </summary>
             [NameInMap("MaxClusterCount")]
             [Validation(Required=false)]
             public int? MaxClusterCount { get; set; }
 
             /// <summary>
-            /// The maximum amount of reserved computing resources. Unit: ACU.
+            /// The maximum amount of reserved computing resources. Unit: ACUs.
             /// </summary>
             [NameInMap("MaxComputeResource")]
             [Validation(Required=false)]
             public string MaxComputeResource { get; set; }
 
+            /// <summary>
+            /// A reserved parameter.
+            /// </summary>
             [NameInMap("MinClusterCount")]
             [Validation(Required=false)]
             public int? MinClusterCount { get; set; }
 
             /// <summary>
-            /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
+            /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
             /// </summary>
             [NameInMap("MinComputeResource")]
             [Validation(Required=false)]
             public string MinComputeResource { get; set; }
 
+            /// <summary>
+            /// A reserved parameter.
+            /// </summary>
             [NameInMap("RunningClusterCount")]
             [Validation(Required=false)]
             public int? RunningClusterCount { get; set; }
@@ -93,9 +108,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The state of the resource group. Valid values:
             /// 
-            /// *   **creating**
-            /// *   **ok**
-            /// *   **pendingdelete**
+            /// *   **creating**: The resource group is being created.
+            /// *   **ok**: The resource group is created.
+            /// *   **pendingdelete**: The resource group is pending to be deleted.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

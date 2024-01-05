@@ -122,11 +122,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The time when the cluster expired. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
                 /// 
-                /// > 
-                /// 
-                /// *   The expiration time is returned for a subscription cluster.
-                /// 
-                /// *   An empty string is returned for a pay-as-you-go cluster.
+                /// > - The expiration time is returned for a subscription cluster.
+                /// > - Anempty string is returned for a pay-as-you-go cluster.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -138,11 +135,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
-                /// > 
-                /// 
-                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew expired clusters. For more information, see [Renewal policy](~~135246~~).
-                /// 
-                /// *   This parameter is not returned for pay-as-you-go clusters.
+                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew expired clusters. For more information, see [Renewal policy](~~135246~~).
+                /// > - This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppWebUiAddressResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkAppWebUiAddressResponseBodyData Data { get; set; }
         public class GetSparkAppWebUiAddressResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Spark application.
+            /// The Spark application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The ID of the Database.
+            /// The database ID.
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+            /// The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("ExpirationTimeInMillis")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("ClusterMode")]
         [Validation(Required=false)]
         public string ClusterMode { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("ClusterSizeResource")]
         [Validation(Required=false)]
         public string ClusterSizeResource { get; set; }
@@ -45,6 +51,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("MaxClusterCount")]
         [Validation(Required=false)]
         public int? MaxClusterCount { get; set; }
@@ -59,20 +68,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        /// <summary>
+        /// A reserved parameter.
+        /// </summary>
         [NameInMap("MinClusterCount")]
         [Validation(Required=false)]
         public int? MinClusterCount { get; set; }
 
         /// <summary>
-        /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
+        /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
         /// 
-        /// *   If GroupType is set to Interactive, set the value to 16ACU.
+        /// *   If the GroupType parameter is set to Interactive, set the value to 16ACU.
         /// *   If GroupType is set to Job, set the value to 0ACU.
         /// </summary>
         [NameInMap("MinComputeResource")]
         [Validation(Required=false)]
         public string MinComputeResource { get; set; }
 
+        /// <summary>
+        /// The region ID of the cluster.
+        /// 
+        /// >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

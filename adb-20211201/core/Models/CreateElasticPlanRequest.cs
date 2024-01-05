@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateElasticPlanRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable **Proportional Default Scaling for EIUs**.
+        /// Specifies whether to enable **Default Proportional Scaling for EIUs**. Valid values:
         /// 
-        /// Valid values:
+        /// *   true. In this case, storage resources are scaled along with computing resources, and the TargetSize and CronExpression parameters are not supported.
+        /// *   false
         /// 
-        /// *   true: enables Proportional Default Scaling for EIUs. If you enable Proportional Default Scaling, storage resources are scaled along with computing resources, and the TargetSize and CronExpression parameters are not supported.
+        /// > 
         /// 
-        /// *   false: does not enable Proportional Default Scaling for EIUs.
+        /// *   This parameter must be specified when Type is set to WORKER. This parameter is not required when Type is set to EXECUTOR.
         /// 
-        /// > *   This parameter is required if the Type parameter is set to WORKER. This parameter is not required if the Type parameter is set to EXECUTOR.
-        /// > *   You can enable Proportional Default Scaling for EIUs for only a single scaling plan of a cluster.
+        /// *   You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster.
         /// </summary>
         [NameInMap("AutoScale")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -44,26 +44,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the scaling plan.
         /// 
-        /// >  The name must be 2 to 30 characters in length, and can contain letters, digits, and underscores (\_). It must start with a letter.
+        /// >  The name must be 2 to 30 characters in length and can contain letters, digits, and underscores (\_). The name must start with a letter.
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
         public string ElasticPlanName { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately enable the scaling plan after the scaling plan is created.
+        /// Specifies whether to immediately enable the scaling plan after the plan is created. Valid values:
         /// 
-        /// Valid values:
-        /// 
-        /// *   true: immediately enables the scaling plan.
-        /// *   false: does not immediately enable the scaling plan.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// The time to end the scaling plan.
+        /// The end time of the scaling plan.
         /// 
         /// >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
@@ -74,15 +72,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// > *   This parameter is required if you want to create a scaling plan that uses interactive resource groups. This parameter is not required if you want to create a scaling plan that uses elastic I/O units (EIUs).
-        /// > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+        /// > 
+        /// 
+        /// *   If you want to create a scaling plan that uses interactive resource groups, you must specify this parameter. If you want to create a scaling plan that uses elastic I/O units (EIUs), you do not need to specify this parameter.
+        /// 
+        /// *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name for a cluster.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// The time to start the scaling plan.
+        /// The start time of the scaling plan.
         /// 
         /// >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
@@ -91,22 +92,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The amount of elastic resources after scaling.
+        /// The desired specifications of elastic resources after scaling.
         /// 
-        /// > *   This parameter is not required only if the resource group uses **EIUs** and **Proportional Default Scaling for EIUs** is enabled.
-        /// > *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
+        /// > 
+        /// 
+        /// *   If the scaling plan uses **EIUs** and **Default Proportional Scaling for EIUs** is enabled, you do not need to specify this parameter. In other cases, you must specify this parameter.
+        /// 
+        /// *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
         /// </summary>
         [NameInMap("TargetSize")]
         [Validation(Required=false)]
         public string TargetSize { get; set; }
 
         /// <summary>
-        /// The type of the scaling plan.
+        /// The type of the scaling plan. Valid values:
         /// 
-        /// Valid values:
-        /// 
-        /// *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-        /// *   WORKER: EIUs.
+        /// *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
+        /// *   WORKER: the EIU type.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

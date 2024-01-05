@@ -2844,6 +2844,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeApsResourceGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+          *
+          * @param request DescribeAuditLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditLogRecordsResponse
+         */
         public DescribeAuditLogRecordsResponse DescribeAuditLogRecordsWithOptions(DescribeAuditLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2943,6 +2950,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAuditLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+          *
+          * @param request DescribeAuditLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAuditLogRecordsResponse
+         */
         public async Task<DescribeAuditLogRecordsResponse> DescribeAuditLogRecordsWithOptionsAsync(DescribeAuditLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3042,12 +3056,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAuditLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+          *
+          * @param request DescribeAuditLogRecordsRequest
+          * @return DescribeAuditLogRecordsResponse
+         */
         public DescribeAuditLogRecordsResponse DescribeAuditLogRecords(DescribeAuditLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAuditLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+          *
+          * @param request DescribeAuditLogRecordsRequest
+          * @return DescribeAuditLogRecordsResponse
+         */
         public async Task<DescribeAuditLogRecordsResponse> DescribeAuditLogRecordsAsync(DescribeAuditLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7741,7 +7767,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~456205~~) operation.
+          * ### [](#)Usage notes
+          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
           *
           * @param request GetSparkTemplateFolderTreeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7775,7 +7802,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~456205~~) operation.
+          * ### [](#)Usage notes
+          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
           *
           * @param request GetSparkTemplateFolderTreeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7809,7 +7837,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~456205~~) operation.
+          * ### [](#)Usage notes
+          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
           *
           * @param request GetSparkTemplateFolderTreeRequest
           * @return GetSparkTemplateFolderTreeResponse
@@ -7821,7 +7850,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~456205~~) operation.
+          * ### [](#)Usage notes
+          * You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
           *
           * @param request GetSparkTemplateFolderTreeRequest
           * @return GetSparkTemplateFolderTreeResponse

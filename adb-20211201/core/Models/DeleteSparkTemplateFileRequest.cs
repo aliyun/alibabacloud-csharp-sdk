@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the template file to be deleted.
         /// 
-        /// >  You can call the [GetSparkTemplateFullTree](~~456205#doc-api-adb-GetSparkTemplateFullTree~~) operation to query the IDs of all existing template files.
+        /// >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query all template file IDs.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSparkTemplateRequest : TeaModel {
         /// <summary>
-        /// The type of the application. Valid values:
+        /// The application type. Valid values:
         /// 
-        /// *   **SQL**: SQL application
-        /// *   **STREAMING**: streaming application
-        /// *   **BATCH**: batch application
+        /// *   **SQL**
+        /// *   **STREAMING**
+        /// *   **BATCH**
         /// 
-        /// >  This parameter is not required if the application template is of the folder type.
+        /// >  You do not need to specify this parameter when Type is set to folder.
         /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The ID of the directory to which the application template belongs.
+        /// 
+        /// >  You can call the [GetSparkTemplateFolderTree](~~456218~~) operation to query the directory ID.
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
@@ -46,8 +48,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The type of the application template. Valid values:
         /// 
-        /// *   **folder**: directory
-        /// *   **file**: application
+        /// *   **folder**: directory.
+        /// *   **file**: application.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

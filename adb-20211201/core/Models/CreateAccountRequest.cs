@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The description of the database account.
+        /// The description of the account.
         /// 
         /// *   The description cannot start with `http://` or `https://`.
         /// *   The description can be up to 256 characters in length.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanJobsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the scaling plan jobs.
+        /// The queried scaling plan jobs.
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The amount of elastic resources.
             /// 
-            /// > *   If the Type parameter is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
-            /// > *   If the Type parameter is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
+            /// > 
+            /// 
+            /// *   If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
+            /// *   If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
             /// </summary>
             [NameInMap("ElasticAcu")]
             [Validation(Required=false)]
@@ -34,19 +36,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ElasticPlanName { get; set; }
 
             /// <summary>
-            /// The time when the scaling plan job was complete.
+            /// The end time of the scaling plan job.
             /// 
-            /// >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+            /// >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The number of instances.
+            /// The number of compute nodes or storage replica sets.
             /// 
-            /// > *   If the Type parameter is set to EXECUTOR, InstanceSize indicates the number of compute nodes.
-            /// > *   If the Type parameter is set to EXECUTOR, InstanceSize indicates the number of replica sets at the storage layer in the cluster.
+            /// > 
+            /// 
+            /// *   If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.
+            /// *   If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.
             /// </summary>
             [NameInMap("InstanceSize")]
             [Validation(Required=false)]
@@ -55,8 +59,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The amount of reserved resources.
             /// 
-            /// > *   If the Type parameter is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
-            /// > *   If the Type parameter is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
+            /// > 
+            /// 
+            /// *   If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
+            /// *   If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
             /// </summary>
             [NameInMap("ReserveAcu")]
             [Validation(Required=false)]
@@ -70,29 +76,27 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// The time when the scaling plan job was enabled.
+            /// The start time of the scaling plan job.
             /// 
-            /// >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+            /// >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The state of the scaling plan job.
+            /// The state of the scaling plan job. Valid values:
             /// 
-            /// Valid values:
-            /// 
-            /// *   RUNNING: The job is running.
-            /// *   SUCCESSFUL: The job is successfully run.
-            /// *   FAILED: The job fails.
+            /// *   RUNNING
+            /// *   SUCCESSFUL
+            /// *   FAILED
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The amount of elastic resources after scaling.
+            /// The desired specifications of elastic resources after scaling.
             /// </summary>
             [NameInMap("TargetSize")]
             [Validation(Required=false)]
@@ -101,20 +105,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The total amount of resources.
             /// 
-            /// > *   If the Type parameter is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
-            /// > *   If the Type parameter is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
+            /// > 
+            /// 
+            /// *   If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
+            /// *   If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
             /// </summary>
             [NameInMap("TotalAcu")]
             [Validation(Required=false)]
             public string TotalAcu { get; set; }
 
             /// <summary>
-            /// The type of the scaling plan job.
+            /// The type of the scaling plan job. Valid values:
             /// 
-            /// Valid values:
-            /// 
-            /// *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-            /// *   WORKER: EIUs.
+            /// *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
+            /// *   WORKER: the EIU type.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -123,21 +127,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of scaling plan jobs returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

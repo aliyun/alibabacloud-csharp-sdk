@@ -10,32 +10,32 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkTemplateFileContentResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkTemplateFileContentResponseBodyData Data { get; set; }
         public class GetSparkTemplateFileContentResponseBodyData : TeaModel {
             /// <summary>
-            /// The type of the application. Valid values:
+            /// The application type. Valid values:
             /// 
-            /// *   **SQL**: SQL application
-            /// *   **STREAMING**: streaming application
-            /// *   **BATCH**: batch application
+            /// *   **SQL**
+            /// *   **STREAMING**
+            /// *   **BATCH**
             /// </summary>
             [NameInMap("AppType")]
             [Validation(Required=false)]
             public string AppType { get; set; }
 
             /// <summary>
-            /// The content of the template.
+            /// The content of the application template.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The ID of the application template.
+            /// The application template ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// The type of the file. Valid values:
+            /// The file type. Valid values:
             /// 
             /// *   **folder**
             /// *   **file**
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppStateResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkAppStateResponseBodyData Data { get; set; }
         public class GetSparkAppStateResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// The Spark application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// The ID of the Database.
+            /// The database ID.
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// The alert message returned for the operation, such as task execution failure or insufficient resources. Null is returned if no alert occurs.
+            /// The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The execution state of the application. Valid values:
             /// 
-            /// *   **SUBMITTED**: The application is submitted.
-            /// *   **STARTING**: The application task is starting.
-            /// *   **RUNNING**: The application task is being executed.
-            /// *   **FAILING**: The application task failed, and the environment is being cleared.
-            /// *   **FAILED**: The application task failed.
-            /// *   **KILLING**: The application task is terminated, and the environment is being cleared.
-            /// *   **KILLED**: The application task is terminated.
-            /// *   **SUCCEEDING**: The application task is completed, and the environment is being cleared.
-            /// *   **COMPLETED**: The application task is completed.
-            /// *   **FATAL**: An unexpected failure occurred.
-            /// *   **UNKNOWN**: An unknown error occurred.
+            /// *   **SUBMITTED**
+            /// *   **STARTING**
+            /// *   **RUNNING**
+            /// *   **FAILING**
+            /// *   **FAILED**
+            /// *   **KILLING**
+            /// *   **KILLED**
+            /// *   **SUCCEEDING**
+            /// *   **COMPLETED**
+            /// *   **FATAL**
+            /// *   **UNKNOWN**
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

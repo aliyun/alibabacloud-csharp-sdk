@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`. Parameters:
+        /// The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
         /// 
         /// *   `Field` specifies the field by which to sort the query results. Valid values:
         /// 
@@ -101,11 +101,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
         /// 
-        /// > 
-        /// 
-        /// *   Only data within the last 14 days can be queried.
-        /// 
-        /// *   The maximum time range that can be specified is 24 hours.
+        /// > *   Only data within the last 14 days can be queried.
+        /// > * The maximum time range that can be specified is 24 hours.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the application template.
+        /// The application template ID.
         /// 
-        /// >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the template ID.
+        /// >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

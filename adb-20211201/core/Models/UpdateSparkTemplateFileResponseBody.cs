@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// Indicates whether the application template is updated.
             /// 
-            /// *   **true**: The application template is updated.
-            /// *   **false**: The application template fails to be updated.
+            /// *   **True**
+            /// *   **False**
             /// </summary>
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

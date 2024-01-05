@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlSchemasResponseBody : TeaModel {
         /// <summary>
-        /// The message returned for the operation. Valid values:
+        /// The returned message.
         /// 
-        /// *   **Success** is returned if the operation is successful.
-        /// *   An error message is returned if the operation fails.
+        /// *   If the request was successful, a **success** message is returned.
+        /// *   If the request failed, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The names of databases.
+        /// The queried databases.
         /// </summary>
         [NameInMap("Schemas")]
         [Validation(Required=false)]
         public List<string> Schemas { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The operation is successful.
-        /// *   **false**: The operation fails.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

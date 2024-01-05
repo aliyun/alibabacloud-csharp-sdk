@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// Indicates whether the template file is deleted. Valid values:
             /// 
-            /// *   **true**: The template file is deleted.
-            /// *   **false**: The template file fails to be deleted.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

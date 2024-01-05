@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The queried AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// The queried AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster information.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources serve compute operations. The amount of computing resources is proportional to the query speed of the cluster. You can scale computing resources based on your needs.
+                /// The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
@@ -82,22 +82,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The state of the cluster. Valid values:
                 /// 
-                /// *   **Preparing**: The cluster is being prepared.
-                /// *   **Creating**: The cluster is being created.
-                /// *   **Running**: The cluster is running.
-                /// *   **Deleting**: The cluster is being deleted.
-                /// *   **Restoring**: The cluster is being restored from a backup.
-                /// *   **ClassChanging**: The cluster specifications are being changed.
-                /// *   **NetAddressCreating**: A network connection is being created.
-                /// *   **NetAddressDeleting**: A network connection is being deleted.
-                /// *   **NetAddressModifying**: A network connection is being modified.
+                /// *   **Preparing**
+                /// *   **Creating**
+                /// *   **Running**
+                /// *   **Deleting**
+                /// *   **Restoring**
+                /// *   **ClassChanging**
+                /// *   **NetAddressCreating**
+                /// *   **NetAddressDeleting**
+                /// *   **NetAddressModifying**
                 /// </summary>
                 [NameInMap("DBClusterStatus")]
                 [Validation(Required=false)]
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The type of the cluster. By default, **Common** is returned, which indicates a common cluster.
+                /// The cluster type. By default, **Common** is returned, which indicates a common cluster.
                 /// </summary>
                 [NameInMap("DBClusterType")]
                 [Validation(Required=false)]
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The time when the cluster expires.
+                /// The expiration time of the cluster.
                 /// 
-                /// *   The expiration time is returned for a subscription cluster.
-                /// *   An empty string is returned for a pay-as-you-go cluster.
+                /// *   If the billing method of the cluster is subscription, the actual expiration time is returned.
+                /// *   If the billing method of the cluster is pay-as-you-go, null is returned.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// 
                 /// *   **Unlock**: The cluster is not locked.
                 /// *   **ManualLock**: The cluster is manually locked.
-                /// *   **LockByExpiration**: The cluster is automatically locked after the cluster expires.
+                /// *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The reason why the cluster is locked.
                 /// 
-                /// > This parameter is returned only when the cluster was locked. The value is **instance_expire**.
+                /// >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The maintenance window of the cluster. The time is displayed in the `HH:mmZ-HH:mmZ` format in UTC.
                 /// 
-                /// > For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
+                /// >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
@@ -211,21 +211,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The amount of remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources serve read and write requests. The amount of storage resources is proportional to the read and write performance of the cluster.
+                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]
@@ -238,10 +238,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string StorageResourceTotal { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("SupportedFeatures")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SupportedFeatures { get; set; }
 
+                /// <summary>
+                /// The tags that are added to the cluster.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags Tags { get; set; }
@@ -250,10 +256,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag> Tag { get; set; }
                     public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// 
+                        /// >  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

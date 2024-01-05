@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The template data to be updated.
         /// 
-        /// >  If you do not specify this parameter, the application template is not updated. For more information about how to configure an application template, see [Configure a Spark application](~~452402~~).
+        /// >  If you do not specify this parameter, the application template is not updated. For information about how to configure a Spark application template, see [Configure a Spark application](~~452402~~).
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the application template.
+        /// The application template ID.
         /// 
-        /// >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the template ID.
+        /// >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
