@@ -64,10 +64,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
-        [NameInMap("StorageSize")]
-        [Validation(Required=false)]
-        public string StorageSize { get; set; }
-
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public int? UsedTime { get; set; }

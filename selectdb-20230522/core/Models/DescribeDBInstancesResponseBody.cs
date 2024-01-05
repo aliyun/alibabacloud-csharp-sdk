@@ -25,64 +25,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public int? ClusterCount { get; set; }
 
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("DBClusterList")]
-            [Validation(Required=false)]
-            public List<DescribeDBInstancesResponseBodyItemsDBClusterList> DBClusterList { get; set; }
-            public class DescribeDBInstancesResponseBodyItemsDBClusterList : TeaModel {
-                [NameInMap("CacheStorageSizeGiB")]
-                [Validation(Required=false)]
-                public long? CacheStorageSizeGiB { get; set; }
-
-                [NameInMap("CacheStorageType")]
-                [Validation(Required=false)]
-                public string CacheStorageType { get; set; }
-
-                [NameInMap("CpuCores")]
-                [Validation(Required=false)]
-                public long? CpuCores { get; set; }
-
-                [NameInMap("CreatedTime")]
-                [Validation(Required=false)]
-                public string CreatedTime { get; set; }
-
-                [NameInMap("DBInstanceId")]
-                [Validation(Required=false)]
-                public string DBInstanceId { get; set; }
-
-                [NameInMap("DbClusterClass")]
-                [Validation(Required=false)]
-                public string DbClusterClass { get; set; }
-
-                [NameInMap("DbClusterId")]
-                [Validation(Required=false)]
-                public string DbClusterId { get; set; }
-
-                [NameInMap("DbClusterName")]
-                [Validation(Required=false)]
-                public string DbClusterName { get; set; }
-
-                [NameInMap("Memory")]
-                [Validation(Required=false)]
-                public long? Memory { get; set; }
-
-                [NameInMap("PerformanceLevel")]
-                [Validation(Required=false)]
-                public string PerformanceLevel { get; set; }
-
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-
-                [NameInMap("objectStoreSizeGiB")]
-                [Validation(Required=false)]
-                public long? ObjectStoreSizeGiB { get; set; }
-
-            }
-
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
@@ -110,10 +52,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
-
-            [NameInMap("InstanceClass")]
-            [Validation(Required=false)]
-            public string InstanceClass { get; set; }
 
             [NameInMap("InstanceUsedType")]
             [Validation(Required=false)]

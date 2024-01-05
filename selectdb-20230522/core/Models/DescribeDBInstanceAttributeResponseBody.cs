@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string CacheStorageSizeGB { get; set; }
 
-            [NameInMap("CacheStorageSizeGiB")]
-            [Validation(Required=false)]
-            public long? CacheStorageSizeGiB { get; set; }
-
             [NameInMap("CacheStorageType")]
             [Validation(Required=false)]
             public string CacheStorageType { get; set; }
@@ -68,10 +64,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public long? Memory { get; set; }
-
-            [NameInMap("ObjectStoreSizeGiB")]
-            [Validation(Required=false)]
-            public long? ObjectStoreSizeGiB { get; set; }
 
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]

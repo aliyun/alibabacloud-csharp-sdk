@@ -191,10 +191,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["SecurityIPList"] = request.SecurityIPList;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -285,10 +281,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
                 query["SecurityIPList"] = request.SecurityIPList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -451,10 +443,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -539,10 +527,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -653,10 +637,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["SecurityIPList"] = request.SecurityIPList;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -749,10 +729,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
                 query["SecurityIPList"] = request.SecurityIPList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
-            {
-                query["StorageSize"] = request.StorageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
