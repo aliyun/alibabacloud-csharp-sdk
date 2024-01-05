@@ -2821,6 +2821,136 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeActiveSQLRecordsResponse DescribeActiveSQLRecordsWithOptions(DescribeActiveSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeActiveSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeActiveSQLRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeActiveSQLRecordsResponse> DescribeActiveSQLRecordsWithOptionsAsync(DescribeActiveSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeActiveSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeActiveSQLRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeActiveSQLRecordsResponse DescribeActiveSQLRecords(DescribeActiveSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeActiveSQLRecordsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeActiveSQLRecordsResponse> DescribeActiveSQLRecordsAsync(DescribeActiveSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeActiveSQLRecordsWithOptionsAsync(request, runtime);
+        }
+
         /**
           * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
           *
