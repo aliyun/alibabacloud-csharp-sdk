@@ -1,3 +1,6 @@
+2024-01-05 Version: 1.1.1
+- Generated csharp 2023-03-13 for xrEngine.
+
 2024-01-04 Version: 1.1.0
 - Generated csharp 2023-03-13 for xrEngine.
 
