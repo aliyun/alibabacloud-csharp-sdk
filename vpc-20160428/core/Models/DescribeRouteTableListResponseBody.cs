@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("RoutePropagationEnable")]
+                [Validation(Required=false)]
+                public bool? RoutePropagationEnable { get; set; }
+
                 /// <summary>
                 /// The ID of the route table.
                 /// </summary>

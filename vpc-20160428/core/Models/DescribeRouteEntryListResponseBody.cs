@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("Origin")]
+                [Validation(Required=false)]
+                public string Origin { get; set; }
+
                 /// <summary>
                 /// The ID of the route.
                 /// </summary>

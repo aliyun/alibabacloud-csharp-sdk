@@ -21,10 +21,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway> Ipv6Gateway { get; set; }
             public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway : TeaModel {
                 /// <summary>
-                /// The state of the IPv6 gateway. Valid values:
+                /// The status of the IPv6 gateway. Valid values:
                 /// 
-                /// *   **Normal**: The IPv6 gateway runs as expected.
-                /// *   **FinancialLocked:** The IPv6 gateway is locked due to overdue payments.
+                /// *   **Normal**
+                /// *   **FinancialLocked**
+                /// *   **SecurityLocked**
                 /// </summary>
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -91,8 +92,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the IPv6 gateway. Valid values:
                 /// 
-                /// *   **Pending**: The IPv6 gateway is being configured.
-                /// *   **Available**: The IPv6 gateway is available.
+                /// *   **Pending**
+                /// *   **Available**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

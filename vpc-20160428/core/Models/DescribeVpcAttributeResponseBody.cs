@@ -49,6 +49,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("AssociatedPropagationSources")]
+        [Validation(Required=false)]
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSources AssociatedPropagationSources { get; set; }
+        public class DescribeVpcAttributeResponseBodyAssociatedPropagationSources : TeaModel {
+            [NameInMap("AssociatedPropagationSources")]
+            [Validation(Required=false)]
+            public List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> AssociatedPropagationSources { get; set; }
+            public class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources : TeaModel {
+                [NameInMap("RoutePropagated")]
+                [Validation(Required=false)]
+                public bool? RoutePropagated { get; set; }
+
+                [NameInMap("SourceInstanceId")]
+                [Validation(Required=false)]
+                public string SourceInstanceId { get; set; }
+
+                [NameInMap("SourceOwnerId")]
+                [Validation(Required=false)]
+                public long? SourceOwnerId { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// The IPv4 CIDR block of the VPC.
         /// </summary>
