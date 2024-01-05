@@ -1,6 +1,9 @@
 2024-01-05 Version: 1.5.0
 - Generated csharp 2016-05-03 for gpdb.
 
+2024-01-05 Version: 1.5.0
+- Generated csharp 2016-05-03 for gpdb.
+
 2024-01-04 Version: 1.4.4
 - Generated csharp 2016-05-03 for gpdb.
 
