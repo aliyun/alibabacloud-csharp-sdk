@@ -45,6 +45,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<DescribeVaultsResponseBodyVaultsVault> Vault { get; set; }
             public class DescribeVaultsResponseBodyVaultsVault : TeaModel {
+                [NameInMap("ArchiveBytesDone")]
+                [Validation(Required=false)]
+                public long? ArchiveBytesDone { get; set; }
+
+                [NameInMap("ArchiveStorageSize")]
+                [Validation(Required=false)]
+                public long? ArchiveStorageSize { get; set; }
+
+                [NameInMap("BackupPlanStatistics")]
+                [Validation(Required=false)]
                 public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics BackupPlanStatistics { get; set; }
                 public class DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics : TeaModel {
                     [NameInMap("CommonNas")]
@@ -100,22 +110,73 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public int? SqlServer { get; set; }
 
                 }
+
+                [NameInMap("BucketName")]
+                [Validation(Required=false)]
                 public string BucketName { get; set; }
+
+                [NameInMap("BytesDone")]
+                [Validation(Required=false)]
                 public long? BytesDone { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("ChargedStorageSize")]
+                [Validation(Required=false)]
                 public long? ChargedStorageSize { get; set; }
+
+                [NameInMap("CompressionAlgorithm")]
+                [Validation(Required=false)]
                 public string CompressionAlgorithm { get; set; }
+
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
+
+                [NameInMap("Dedup")]
+                [Validation(Required=false)]
                 public bool? Dedup { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("EncryptType")]
+                [Validation(Required=false)]
                 public string EncryptType { get; set; }
+
+                [NameInMap("IndexAvailable")]
+                [Validation(Required=false)]
                 public bool? IndexAvailable { get; set; }
+
+                [NameInMap("IndexLevel")]
+                [Validation(Required=false)]
                 public string IndexLevel { get; set; }
+
+                [NameInMap("IndexUpdateTime")]
+                [Validation(Required=false)]
                 public long? IndexUpdateTime { get; set; }
+
+                [NameInMap("KmsKeyId")]
+                [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
+
+                [NameInMap("LatestReplicationTime")]
+                [Validation(Required=false)]
                 public long? LatestReplicationTime { get; set; }
+
+                [NameInMap("RedundancyType")]
+                [Validation(Required=false)]
                 public string RedundancyType { get; set; }
+
+                [NameInMap("Replication")]
+                [Validation(Required=false)]
                 public bool? Replication { get; set; }
+
+                [NameInMap("ReplicationProgress")]
+                [Validation(Required=false)]
                 public DescribeVaultsResponseBodyVaultsVaultReplicationProgress ReplicationProgress { get; set; }
                 public class DescribeVaultsResponseBodyVaultsVaultReplicationProgress : TeaModel {
                     [NameInMap("HistoricalReplicationProgress")]
@@ -127,12 +188,37 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? NewReplicationProgress { get; set; }
 
                 }
+
+                [NameInMap("ReplicationSourceRegionId")]
+                [Validation(Required=false)]
                 public string ReplicationSourceRegionId { get; set; }
+
+                [NameInMap("ReplicationSourceVault")]
+                [Validation(Required=false)]
+                public bool? ReplicationSourceVault { get; set; }
+
+                [NameInMap("ReplicationSourceVaultId")]
+                [Validation(Required=false)]
                 public string ReplicationSourceVaultId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("Retention")]
+                [Validation(Required=false)]
                 public long? Retention { get; set; }
+
+                [NameInMap("SearchEnabled")]
+                [Validation(Required=false)]
                 public bool? SearchEnabled { get; set; }
+
+                [NameInMap("SnapshotCount")]
+                [Validation(Required=false)]
                 public long? SnapshotCount { get; set; }
+
+                [NameInMap("SourceTypes")]
+                [Validation(Required=false)]
                 public DescribeVaultsResponseBodyVaultsVaultSourceTypes SourceTypes { get; set; }
                 public class DescribeVaultsResponseBodyVaultsVaultSourceTypes : TeaModel {
                     [NameInMap("SourceType")]
@@ -140,8 +226,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public List<string> SourceType { get; set; }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StorageSize")]
+                [Validation(Required=false)]
                 public long? StorageSize { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
                 public DescribeVaultsResponseBodyVaultsVaultTags Tags { get; set; }
                 public class DescribeVaultsResponseBodyVaultsVaultTags : TeaModel {
                     [NameInMap("Tag")]
@@ -159,6 +254,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     }
 
                 }
+
+                [NameInMap("TrialInfo")]
+                [Validation(Required=false)]
                 public DescribeVaultsResponseBodyVaultsVaultTrialInfo TrialInfo { get; set; }
                 public class DescribeVaultsResponseBodyVaultsVaultTrialInfo : TeaModel {
                     [NameInMap("KeepAfterTrialExpiration")]
@@ -178,16 +276,42 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? TrialVaultReleaseTime { get; set; }
 
                 }
+
+                [NameInMap("UpdatedTime")]
+                [Validation(Required=false)]
                 public long? UpdatedTime { get; set; }
+
+                [NameInMap("VaultId")]
+                [Validation(Required=false)]
                 public string VaultId { get; set; }
+
+                [NameInMap("VaultName")]
+                [Validation(Required=false)]
                 public string VaultName { get; set; }
+
+                [NameInMap("VaultRegionId")]
+                [Validation(Required=false)]
                 public string VaultRegionId { get; set; }
+
+                [NameInMap("VaultStatusMessage")]
+                [Validation(Required=false)]
                 public string VaultStatusMessage { get; set; }
+
+                [NameInMap("VaultStorageClass")]
+                [Validation(Required=false)]
                 public string VaultStorageClass { get; set; }
+
+                [NameInMap("VaultType")]
+                [Validation(Required=false)]
                 public string VaultType { get; set; }
+
+                [NameInMap("WormEnabled")]
+                [Validation(Required=false)]
                 public bool? WormEnabled { get; set; }
+
             }
-        };
+
+        }
 
     }
 

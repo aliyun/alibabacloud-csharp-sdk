@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteBackupClientRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backup client.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }

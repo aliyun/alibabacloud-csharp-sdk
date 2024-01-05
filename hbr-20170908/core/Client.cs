@@ -171,6 +171,104 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await AddContainerClusterWithOptionsAsync(request, runtime);
         }
 
+        public AttachNasFileSystemResponse AttachNasFileSystemWithOptions(AttachNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
+            {
+                query["CreateTime"] = request.CreateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachNasFileSystem",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachNasFileSystemResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AttachNasFileSystemResponse> AttachNasFileSystemWithOptionsAsync(AttachNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
+            {
+                query["CreateTime"] = request.CreateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachNasFileSystem",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachNasFileSystemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AttachNasFileSystemResponse AttachNasFileSystem(AttachNasFileSystemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachNasFileSystemWithOptions(request, runtime);
+        }
+
+        public async Task<AttachNasFileSystemResponse> AttachNasFileSystemAsync(AttachNasFileSystemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachNasFileSystemWithOptionsAsync(request, runtime);
+        }
+
         public CancelBackupJobResponse CancelBackupJobWithOptions(CancelBackupJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -319,6 +417,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await CancelRestoreJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
+          * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
+          * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
+          *
+          * @param request ChangeResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeResourceGroupResponse
+         */
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -354,6 +461,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
+          * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
+          * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
+          *
+          * @param request ChangeResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeResourceGroupResponse
+         */
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -389,16 +505,114 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
+          * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
+          * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
+          *
+          * @param request ChangeResourceGroupRequest
+          * @return ChangeResourceGroupResponse
+         */
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
+        /**
+          * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
+          * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
+          * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
+          *
+          * @param request ChangeResourceGroupRequest
+          * @return ChangeResourceGroupResponse
+         */
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        public CheckRoleResponse CheckRoleWithOptions(CheckRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRoleType))
+            {
+                query["CheckRoleType"] = request.CheckRoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckRole",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CheckRoleResponse> CheckRoleWithOptionsAsync(CheckRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRoleType))
+            {
+                query["CheckRoleType"] = request.CheckRoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckRole",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CheckRoleResponse CheckRole(CheckRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckRoleWithOptions(request, runtime);
+        }
+
+        public async Task<CheckRoleResponse> CheckRoleAsync(CheckRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckRoleWithOptionsAsync(request, runtime);
         }
 
         public CreateBackupJobResponse CreateBackupJobWithOptions(CreateBackupJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -444,6 +658,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatedByAck))
             {
                 query["InitiatedByAck"] = request.InitiatedByAck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
@@ -532,6 +750,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["InitiatedByAck"] = request.InitiatedByAck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
                 query["JobName"] = request.JobName;
@@ -587,18 +809,32 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await CreateBackupJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup schedule.
+          * *   You can specify only one interval as a backup cycle in a backup schedule.
+          * *   Each backup schedule allows you to back up data to only one backup vault.
+          *
+          * @param tmpReq CreateBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupPlanResponse
+         */
         public CreateBackupPlanResponse CreateBackupPlanWithOptions(CreateBackupPlanRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateBackupPlanShrinkRequest request = new CreateBackupPlanShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestDataSourceDetail))
+            {
+                request.DestDataSourceDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestDataSourceDetail, "DestDataSourceDetail", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Detail))
             {
                 request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
@@ -608,6 +844,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
             {
                 query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeListPath))
+            {
+                query["ChangeListPath"] = request.ChangeListPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
@@ -625,6 +865,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceDetailShrink))
+            {
+                query["DestDataSourceDetail"] = request.DestDataSourceDetailShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceId))
+            {
+                query["DestDataSourceId"] = request.DestDataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSourceType))
+            {
+                query["DestSourceType"] = request.DestSourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
             {
                 query["Detail"] = request.DetailShrink;
@@ -632,6 +884,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepLatestSnapshots))
+            {
+                query["KeepLatestSnapshots"] = request.KeepLatestSnapshots;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {
@@ -718,18 +974,32 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup schedule.
+          * *   You can specify only one interval as a backup cycle in a backup schedule.
+          * *   Each backup schedule allows you to back up data to only one backup vault.
+          *
+          * @param tmpReq CreateBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupPlanResponse
+         */
         public async Task<CreateBackupPlanResponse> CreateBackupPlanWithOptionsAsync(CreateBackupPlanRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateBackupPlanShrinkRequest request = new CreateBackupPlanShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestDataSourceDetail))
+            {
+                request.DestDataSourceDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestDataSourceDetail, "DestDataSourceDetail", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Detail))
             {
                 request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
@@ -739,6 +1009,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
             {
                 query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeListPath))
+            {
+                query["ChangeListPath"] = request.ChangeListPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
@@ -756,6 +1030,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceDetailShrink))
+            {
+                query["DestDataSourceDetail"] = request.DestDataSourceDetailShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceId))
+            {
+                query["DestDataSourceId"] = request.DestDataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSourceType))
+            {
+                query["DestSourceType"] = request.DestSourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
             {
                 query["Detail"] = request.DetailShrink;
@@ -763,6 +1049,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepLatestSnapshots))
+            {
+                query["KeepLatestSnapshots"] = request.KeepLatestSnapshots;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {
@@ -849,18 +1139,43 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup schedule.
+          * *   You can specify only one interval as a backup cycle in a backup schedule.
+          * *   Each backup schedule allows you to back up data to only one backup vault.
+          *
+          * @param request CreateBackupPlanRequest
+          * @return CreateBackupPlanResponse
+         */
         public CreateBackupPlanResponse CreateBackupPlan(CreateBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup schedule.
+          * *   You can specify only one interval as a backup cycle in a backup schedule.
+          * *   Each backup schedule allows you to back up data to only one backup vault.
+          *
+          * @param request CreateBackupPlanRequest
+          * @return CreateBackupPlanResponse
+         */
         public async Task<CreateBackupPlanResponse> CreateBackupPlanAsync(CreateBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
+          *
+          * @param request CreateClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClientsResponse
+         */
         public CreateClientsResponse CreateClientsWithOptions(CreateClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -904,6 +1219,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
+          *
+          * @param request CreateClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClientsResponse
+         */
         public async Task<CreateClientsResponse> CreateClientsWithOptionsAsync(CreateClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -947,18 +1269,40 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
+          *
+          * @param request CreateClientsRequest
+          * @return CreateClientsResponse
+         */
         public CreateClientsResponse CreateClients(CreateClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateClientsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
+          *
+          * @param request CreateClientsRequest
+          * @return CreateClientsResponse
+         */
         public async Task<CreateClientsResponse> CreateClientsAsync(CreateClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateClientsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request CreateHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaBackupPlanResponse
+         */
         public CreateHanaBackupPlanResponse CreateHanaBackupPlanWithOptions(CreateHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1014,6 +1358,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request CreateHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaBackupPlanResponse
+         */
         public async Task<CreateHanaBackupPlanResponse> CreateHanaBackupPlanWithOptionsAsync(CreateHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1069,18 +1423,43 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request CreateHanaBackupPlanRequest
+          * @return CreateHanaBackupPlanResponse
+         */
         public CreateHanaBackupPlanResponse CreateHanaBackupPlan(CreateHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHanaBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request CreateHanaBackupPlanRequest
+          * @return CreateHanaBackupPlanResponse
+         */
         public async Task<CreateHanaBackupPlanResponse> CreateHanaBackupPlanAsync(CreateHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHanaBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
+          *
+          * @param request CreateHanaInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaInstanceResponse
+         */
         public CreateHanaInstanceResponse CreateHanaInstanceWithOptions(CreateHanaInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1152,6 +1531,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
+          *
+          * @param request CreateHanaInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaInstanceResponse
+         */
         public async Task<CreateHanaInstanceResponse> CreateHanaInstanceWithOptionsAsync(CreateHanaInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1223,18 +1609,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
+          *
+          * @param request CreateHanaInstanceRequest
+          * @return CreateHanaInstanceResponse
+         */
         public CreateHanaInstanceResponse CreateHanaInstance(CreateHanaInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHanaInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
+          *
+          * @param request CreateHanaInstanceRequest
+          * @return CreateHanaInstanceResponse
+         */
         public async Task<CreateHanaInstanceResponse> CreateHanaInstanceAsync(CreateHanaInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHanaInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
+          *
+          * @param request CreateHanaRestoreRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaRestoreResponse
+         */
         public CreateHanaRestoreResponse CreateHanaRestoreWithOptions(CreateHanaRestoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1267,6 +1672,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["LogPosition"] = request.LogPosition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterClientId))
+            {
+                query["MasterClientId"] = request.MasterClientId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
             {
                 query["Mode"] = request.Mode;
@@ -1299,6 +1708,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["UseDelta"] = request.UseDelta;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
             {
                 query["VolumeId"] = request.VolumeId;
@@ -1322,6 +1735,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaRestoreResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
+          *
+          * @param request CreateHanaRestoreRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateHanaRestoreResponse
+         */
         public async Task<CreateHanaRestoreResponse> CreateHanaRestoreWithOptionsAsync(CreateHanaRestoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1354,6 +1774,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["LogPosition"] = request.LogPosition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterClientId))
+            {
+                query["MasterClientId"] = request.MasterClientId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
             {
                 query["Mode"] = request.Mode;
@@ -1386,6 +1810,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["UseDelta"] = request.UseDelta;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeId))
             {
                 query["VolumeId"] = request.VolumeId;
@@ -1409,18 +1837,289 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateHanaRestoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
+          *
+          * @param request CreateHanaRestoreRequest
+          * @return CreateHanaRestoreResponse
+         */
         public CreateHanaRestoreResponse CreateHanaRestore(CreateHanaRestoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHanaRestoreWithOptions(request, runtime);
         }
 
+        /**
+          * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
+          *
+          * @param request CreateHanaRestoreRequest
+          * @return CreateHanaRestoreResponse
+         */
         public async Task<CreateHanaRestoreResponse> CreateHanaRestoreAsync(CreateHanaRestoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHanaRestoreWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can bind data sources to only one policy in each request.
+          * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
+          *
+          * @param tmpReq CreatePolicyBindingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyBindingsResponse
+         */
+        public CreatePolicyBindingsResponse CreatePolicyBindingsWithOptions(CreatePolicyBindingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyBindingsShrinkRequest request = new CreatePolicyBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyBindingList))
+            {
+                request.PolicyBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyBindingList, "PolicyBindingList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBindingListShrink))
+            {
+                query["PolicyBindingList"] = request.PolicyBindingListShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolicyBindings",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolicyBindingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * *   You can bind data sources to only one policy in each request.
+          * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
+          *
+          * @param tmpReq CreatePolicyBindingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyBindingsResponse
+         */
+        public async Task<CreatePolicyBindingsResponse> CreatePolicyBindingsWithOptionsAsync(CreatePolicyBindingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyBindingsShrinkRequest request = new CreatePolicyBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyBindingList))
+            {
+                request.PolicyBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyBindingList, "PolicyBindingList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBindingListShrink))
+            {
+                query["PolicyBindingList"] = request.PolicyBindingListShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolicyBindings",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolicyBindingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * *   You can bind data sources to only one policy in each request.
+          * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
+          *
+          * @param request CreatePolicyBindingsRequest
+          * @return CreatePolicyBindingsResponse
+         */
+        public CreatePolicyBindingsResponse CreatePolicyBindings(CreatePolicyBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePolicyBindingsWithOptions(request, runtime);
+        }
+
+        /**
+          * *   You can bind data sources to only one policy in each request.
+          * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
+          *
+          * @param request CreatePolicyBindingsRequest
+          * @return CreatePolicyBindingsResponse
+         */
+        public async Task<CreatePolicyBindingsResponse> CreatePolicyBindingsAsync(CreatePolicyBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePolicyBindingsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
+          * *   You can specify only one interval as a backup cycle in a backup policy.
+          * *   Each backup policy allows you to back up data to only one backup vault.
+          *
+          * @param tmpReq CreatePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyV2Response
+         */
+        public CreatePolicyV2Response CreatePolicyV2WithOptions(CreatePolicyV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyV2ShrinkRequest request = new CreatePolicyV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                body["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolicyV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
+          * *   You can specify only one interval as a backup cycle in a backup policy.
+          * *   Each backup policy allows you to back up data to only one backup vault.
+          *
+          * @param tmpReq CreatePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyV2Response
+         */
+        public async Task<CreatePolicyV2Response> CreatePolicyV2WithOptionsAsync(CreatePolicyV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyV2ShrinkRequest request = new CreatePolicyV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                body["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolicyV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
+          * *   You can specify only one interval as a backup cycle in a backup policy.
+          * *   Each backup policy allows you to back up data to only one backup vault.
+          *
+          * @param request CreatePolicyV2Request
+          * @return CreatePolicyV2Response
+         */
+        public CreatePolicyV2Response CreatePolicyV2(CreatePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePolicyV2WithOptions(request, runtime);
+        }
+
+        /**
+          * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
+          * *   You can specify only one interval as a backup cycle in a backup policy.
+          * *   Each backup policy allows you to back up data to only one backup vault.
+          *
+          * @param request CreatePolicyV2Request
+          * @return CreatePolicyV2Response
+         */
+        public async Task<CreatePolicyV2Response> CreatePolicyV2Async(CreatePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePolicyV2WithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
+          *
+          * @param request CreateReplicationVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReplicationVaultResponse
+         */
         public CreateReplicationVaultResponse CreateReplicationVaultWithOptions(CreateReplicationVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1472,6 +2171,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateReplicationVaultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
+          *
+          * @param request CreateReplicationVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReplicationVaultResponse
+         */
         public async Task<CreateReplicationVaultResponse> CreateReplicationVaultWithOptionsAsync(CreateReplicationVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1523,26 +2229,50 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateReplicationVaultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
+          *
+          * @param request CreateReplicationVaultRequest
+          * @return CreateReplicationVaultResponse
+         */
         public CreateReplicationVaultResponse CreateReplicationVault(CreateReplicationVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateReplicationVaultWithOptions(request, runtime);
         }
 
+        /**
+          * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
+          *
+          * @param request CreateReplicationVaultRequest
+          * @return CreateReplicationVaultResponse
+         */
         public async Task<CreateReplicationVaultResponse> CreateReplicationVaultAsync(CreateReplicationVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateReplicationVaultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You must create a restore job based on the specified backup snapshot and restore destination.
+          * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
+          *
+          * @param tmpReq CreateRestoreJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRestoreJobResponse
+         */
         public CreateRestoreJobResponse CreateRestoreJobWithOptions(CreateRestoreJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateRestoreJobShrinkRequest request = new CreateRestoreJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FailbackDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.FailbackDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FailbackDetail, "FailbackDetail", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
+            {
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UdmDetail))
             {
@@ -1561,9 +2291,17 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailbackDetailShrink))
+            {
+                query["FailbackDetail"] = request.FailbackDetailShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatedByAck))
             {
                 query["InitiatedByAck"] = request.InitiatedByAck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
@@ -1620,6 +2358,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UdmDetailShrink))
             {
                 query["UdmDetail"] = request.UdmDetailShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UdmRegionId))
+            {
+                query["UdmRegionId"] = request.UdmRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
             {
@@ -1666,14 +2408,26 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateRestoreJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You must create a restore job based on the specified backup snapshot and restore destination.
+          * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
+          *
+          * @param tmpReq CreateRestoreJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateRestoreJobResponse
+         */
         public async Task<CreateRestoreJobResponse> CreateRestoreJobWithOptionsAsync(CreateRestoreJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateRestoreJobShrinkRequest request = new CreateRestoreJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FailbackDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.FailbackDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FailbackDetail, "FailbackDetail", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
+            {
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UdmDetail))
             {
@@ -1692,9 +2446,17 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailbackDetailShrink))
+            {
+                query["FailbackDetail"] = request.FailbackDetailShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatedByAck))
             {
                 query["InitiatedByAck"] = request.InitiatedByAck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
@@ -1752,6 +2514,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["UdmDetail"] = request.UdmDetailShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UdmRegionId))
+            {
+                query["UdmRegionId"] = request.UdmRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
             {
                 query["VaultId"] = request.VaultId;
@@ -1797,30 +2563,144 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateRestoreJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You must create a restore job based on the specified backup snapshot and restore destination.
+          * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
+          *
+          * @param request CreateRestoreJobRequest
+          * @return CreateRestoreJobResponse
+         */
         public CreateRestoreJobResponse CreateRestoreJob(CreateRestoreJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRestoreJobWithOptions(request, runtime);
         }
 
+        /**
+          * *   You must create a restore job based on the specified backup snapshot and restore destination.
+          * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
+          *
+          * @param request CreateRestoreJobRequest
+          * @return CreateRestoreJobResponse
+         */
         public async Task<CreateRestoreJobResponse> CreateRestoreJobAsync(CreateRestoreJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRestoreJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
+          * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
+          * 3.  The system periodically deletes files that are uploaded to OSS.
+          *
+          * @param request CreateTempFileUploadUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTempFileUploadUrlResponse
+         */
+        public CreateTempFileUploadUrlResponse CreateTempFileUploadUrlWithOptions(CreateTempFileUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTempFileUploadUrl",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTempFileUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
+          * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
+          * 3.  The system periodically deletes files that are uploaded to OSS.
+          *
+          * @param request CreateTempFileUploadUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTempFileUploadUrlResponse
+         */
+        public async Task<CreateTempFileUploadUrlResponse> CreateTempFileUploadUrlWithOptionsAsync(CreateTempFileUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTempFileUploadUrl",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTempFileUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
+          * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
+          * 3.  The system periodically deletes files that are uploaded to OSS.
+          *
+          * @param request CreateTempFileUploadUrlRequest
+          * @return CreateTempFileUploadUrlResponse
+         */
+        public CreateTempFileUploadUrlResponse CreateTempFileUploadUrl(CreateTempFileUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTempFileUploadUrlWithOptions(request, runtime);
+        }
+
+        /**
+          * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
+          * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
+          * 3.  The system periodically deletes files that are uploaded to OSS.
+          *
+          * @param request CreateTempFileUploadUrlRequest
+          * @return CreateTempFileUploadUrlResponse
+         */
+        public async Task<CreateTempFileUploadUrlResponse> CreateTempFileUploadUrlAsync(CreateTempFileUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTempFileUploadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   Each Alibaba Cloud account can create up to 100 backup vaults.
+          * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+          *
+          * @param request CreateVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVaultResponse
+         */
         public CreateVaultResponse CreateVaultWithOptions(CreateVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
-            {
-                query["BucketName"] = request.BucketName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionAlgorithm))
-            {
-                query["CompressionAlgorithm"] = request.CompressionAlgorithm;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1829,25 +2709,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["EncryptType"] = request.EncryptType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
-            {
-                query["Endpoint"] = request.Endpoint;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
                 query["KmsKeyId"] = request.KmsKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedundancyType))
-            {
-                query["RedundancyType"] = request.RedundancyType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultAccessKeyId))
-            {
-                query["VaultAccessKeyId"] = request.VaultAccessKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultAccessKeySecret))
-            {
-                query["VaultAccessKeySecret"] = request.VaultAccessKeySecret;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
@@ -1884,18 +2748,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateVaultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Each Alibaba Cloud account can create up to 100 backup vaults.
+          * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+          *
+          * @param request CreateVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVaultResponse
+         */
         public async Task<CreateVaultResponse> CreateVaultWithOptionsAsync(CreateVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
-            {
-                query["BucketName"] = request.BucketName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionAlgorithm))
-            {
-                query["CompressionAlgorithm"] = request.CompressionAlgorithm;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1904,25 +2768,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["EncryptType"] = request.EncryptType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
-            {
-                query["Endpoint"] = request.Endpoint;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
                 query["KmsKeyId"] = request.KmsKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedundancyType))
-            {
-                query["RedundancyType"] = request.RedundancyType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultAccessKeyId))
-            {
-                query["VaultAccessKeyId"] = request.VaultAccessKeyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultAccessKeySecret))
-            {
-                query["VaultAccessKeySecret"] = request.VaultAccessKeySecret;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
@@ -1959,18 +2807,43 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateVaultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Each Alibaba Cloud account can create up to 100 backup vaults.
+          * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+          *
+          * @param request CreateVaultRequest
+          * @return CreateVaultResponse
+         */
         public CreateVaultResponse CreateVault(CreateVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVaultWithOptions(request, runtime);
         }
 
+        /**
+          * *   Each Alibaba Cloud account can create up to 100 backup vaults.
+          * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+          *
+          * @param request CreateVaultRequest
+          * @return CreateVaultResponse
+         */
         public async Task<CreateVaultResponse> CreateVaultAsync(CreateVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVaultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
+          * *   This operation deletes the resources that are related to the backup client. The following resources are included:
+          *     *   Backup plans
+          *     *   Backup jobs
+          *     *   Backup files
+          *
+          * @param request DeleteBackupClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupClientResponse
+         */
         public DeleteBackupClientResponse DeleteBackupClientWithOptions(DeleteBackupClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1998,6 +2871,17 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupClientResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
+          * *   This operation deletes the resources that are related to the backup client. The following resources are included:
+          *     *   Backup plans
+          *     *   Backup jobs
+          *     *   Backup files
+          *
+          * @param request DeleteBackupClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupClientResponse
+         */
         public async Task<DeleteBackupClientResponse> DeleteBackupClientWithOptionsAsync(DeleteBackupClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2025,18 +2909,45 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupClientResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
+          * *   This operation deletes the resources that are related to the backup client. The following resources are included:
+          *     *   Backup plans
+          *     *   Backup jobs
+          *     *   Backup files
+          *
+          * @param request DeleteBackupClientRequest
+          * @return DeleteBackupClientResponse
+         */
         public DeleteBackupClientResponse DeleteBackupClient(DeleteBackupClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupClientWithOptions(request, runtime);
         }
 
+        /**
+          * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
+          * *   This operation deletes the resources that are related to the backup client. The following resources are included:
+          *     *   Backup plans
+          *     *   Backup jobs
+          *     *   Backup files
+          *
+          * @param request DeleteBackupClientRequest
+          * @return DeleteBackupClientResponse
+         */
         public async Task<DeleteBackupClientResponse> DeleteBackupClientAsync(DeleteBackupClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBackupClientWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
+          *
+          * @param tmpReq DeleteBackupClientResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupClientResourceResponse
+         */
         public DeleteBackupClientResourceResponse DeleteBackupClientResourceWithOptions(DeleteBackupClientResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2070,6 +2981,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupClientResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
+          *
+          * @param tmpReq DeleteBackupClientResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupClientResourceResponse
+         */
         public async Task<DeleteBackupClientResourceResponse> DeleteBackupClientResourceWithOptionsAsync(DeleteBackupClientResourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2103,18 +3021,38 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupClientResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
+          *
+          * @param request DeleteBackupClientResourceRequest
+          * @return DeleteBackupClientResourceResponse
+         */
         public DeleteBackupClientResourceResponse DeleteBackupClientResource(DeleteBackupClientResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupClientResourceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
+          *
+          * @param request DeleteBackupClientResourceRequest
+          * @return DeleteBackupClientResourceResponse
+         */
         public async Task<DeleteBackupClientResourceResponse> DeleteBackupClientResourceAsync(DeleteBackupClientResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBackupClientResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If you delete a backup plan, the backup jobs are also deleted.
+          * *   If you delete a backup plan, the created snapshot files are not deleted.
+          *
+          * @param request DeleteBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupPlanResponse
+         */
         public DeleteBackupPlanResponse DeleteBackupPlanWithOptions(DeleteBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2150,6 +3088,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If you delete a backup plan, the backup jobs are also deleted.
+          * *   If you delete a backup plan, the created snapshot files are not deleted.
+          *
+          * @param request DeleteBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupPlanResponse
+         */
         public async Task<DeleteBackupPlanResponse> DeleteBackupPlanWithOptionsAsync(DeleteBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2185,16 +3131,112 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If you delete a backup plan, the backup jobs are also deleted.
+          * *   If you delete a backup plan, the created snapshot files are not deleted.
+          *
+          * @param request DeleteBackupPlanRequest
+          * @return DeleteBackupPlanResponse
+         */
         public DeleteBackupPlanResponse DeleteBackupPlan(DeleteBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * *   If you delete a backup plan, the backup jobs are also deleted.
+          * *   If you delete a backup plan, the created snapshot files are not deleted.
+          *
+          * @param request DeleteBackupPlanRequest
+          * @return DeleteBackupPlanResponse
+         */
         public async Task<DeleteBackupPlanResponse> DeleteBackupPlanAsync(DeleteBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBackupPlanWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteClientResponse DeleteClientWithOptions(DeleteClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteClient",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteClientResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteClientResponse> DeleteClientWithOptionsAsync(DeleteClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteClient",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteClientResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteClientResponse DeleteClient(DeleteClientRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteClientWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteClientResponse> DeleteClientAsync(DeleteClientRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteClientWithOptionsAsync(request, runtime);
         }
 
         public DeleteHanaBackupPlanResponse DeleteHanaBackupPlanWithOptions(DeleteHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2287,6 +3329,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DeleteHanaBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
+          *
+          * @param request DeleteHanaInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteHanaInstanceResponse
+         */
         public DeleteHanaInstanceResponse DeleteHanaInstanceWithOptions(DeleteHanaInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2326,6 +3375,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteHanaInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
+          *
+          * @param request DeleteHanaInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteHanaInstanceResponse
+         */
         public async Task<DeleteHanaInstanceResponse> DeleteHanaInstanceWithOptionsAsync(DeleteHanaInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2365,18 +3421,227 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteHanaInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
+          *
+          * @param request DeleteHanaInstanceRequest
+          * @return DeleteHanaInstanceResponse
+         */
         public DeleteHanaInstanceResponse DeleteHanaInstance(DeleteHanaInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHanaInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
+          *
+          * @param request DeleteHanaInstanceRequest
+          * @return DeleteHanaInstanceResponse
+         */
         public async Task<DeleteHanaInstanceResponse> DeleteHanaInstanceAsync(DeleteHanaInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHanaInstanceWithOptionsAsync(request, runtime);
         }
 
+        public DeletePolicyBindingResponse DeletePolicyBindingWithOptions(DeletePolicyBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeletePolicyBindingShrinkRequest request = new DeletePolicyBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolicyBinding",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolicyBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeletePolicyBindingResponse> DeletePolicyBindingWithOptionsAsync(DeletePolicyBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeletePolicyBindingShrinkRequest request = new DeletePolicyBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolicyBinding",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolicyBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeletePolicyBindingResponse DeletePolicyBinding(DeletePolicyBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolicyBindingWithOptions(request, runtime);
+        }
+
+        public async Task<DeletePolicyBindingResponse> DeletePolicyBindingAsync(DeletePolicyBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolicyBindingWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
+          *
+          * @param request DeletePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeletePolicyV2Response
+         */
+        public DeletePolicyV2Response DeletePolicyV2WithOptions(DeletePolicyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolicyV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
+          *
+          * @param request DeletePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeletePolicyV2Response
+         */
+        public async Task<DeletePolicyV2Response> DeletePolicyV2WithOptionsAsync(DeletePolicyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolicyV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
+          *
+          * @param request DeletePolicyV2Request
+          * @return DeletePolicyV2Response
+         */
+        public DeletePolicyV2Response DeletePolicyV2(DeletePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolicyV2WithOptions(request, runtime);
+        }
+
+        /**
+          * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
+          *
+          * @param request DeletePolicyV2Request
+          * @return DeletePolicyV2Response
+         */
+        public async Task<DeletePolicyV2Response> DeletePolicyV2Async(DeletePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolicyV2WithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
+          *
+          * @param request DeleteSnapshotRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSnapshotResponse
+         */
         public DeleteSnapshotResponse DeleteSnapshotWithOptions(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2428,6 +3693,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
+          *
+          * @param request DeleteSnapshotRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSnapshotResponse
+         */
         public async Task<DeleteSnapshotResponse> DeleteSnapshotWithOptionsAsync(DeleteSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2479,18 +3751,38 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
+          *
+          * @param request DeleteSnapshotRequest
+          * @return DeleteSnapshotResponse
+         */
         public DeleteSnapshotResponse DeleteSnapshot(DeleteSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSnapshotWithOptions(request, runtime);
         }
 
+        /**
+          * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
+          *
+          * @param request DeleteSnapshotRequest
+          * @return DeleteSnapshotResponse
+         */
         public async Task<DeleteSnapshotResponse> DeleteSnapshotAsync(DeleteSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSnapshotWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
+          * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
+          *
+          * @param request DeleteVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVaultResponse
+         */
         public DeleteVaultResponse DeleteVaultWithOptions(DeleteVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2526,6 +3818,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteVaultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
+          * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
+          *
+          * @param request DeleteVaultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVaultResponse
+         */
         public async Task<DeleteVaultResponse> DeleteVaultWithOptionsAsync(DeleteVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2561,12 +3861,26 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteVaultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
+          * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
+          *
+          * @param request DeleteVaultRequest
+          * @return DeleteVaultResponse
+         */
         public DeleteVaultResponse DeleteVault(DeleteVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVaultWithOptions(request, runtime);
         }
 
+        /**
+          * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
+          * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
+          *
+          * @param request DeleteVaultRequest
+          * @return DeleteVaultResponse
+         */
         public async Task<DeleteVaultResponse> DeleteVaultAsync(DeleteVaultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2590,6 +3904,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -2649,6 +3979,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -2891,6 +4237,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeBackupPlansWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
+          *
+          * @param request DescribeClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClientsResponse
+         */
         public DescribeClientsResponse DescribeClientsWithOptions(DescribeClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2946,6 +4299,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
+          *
+          * @param request DescribeClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClientsResponse
+         */
         public async Task<DescribeClientsResponse> DescribeClientsWithOptionsAsync(DescribeClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3001,18 +4361,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
+          *
+          * @param request DescribeClientsRequest
+          * @return DescribeClientsResponse
+         */
         public DescribeClientsResponse DescribeClients(DescribeClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClientsWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
+          *
+          * @param request DescribeClientsRequest
+          * @return DescribeClientsResponse
+         */
         public async Task<DescribeClientsResponse> DescribeClientsAsync(DescribeClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClientsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
+          *
+          * @param request DescribeContainerClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeContainerClusterResponse
+         */
         public DescribeContainerClusterResponse DescribeContainerClusterWithOptions(DescribeContainerClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3020,6 +4399,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                query["Identifier"] = request.Identifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -3048,6 +4431,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeContainerClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
+          *
+          * @param request DescribeContainerClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeContainerClusterResponse
+         */
         public async Task<DescribeContainerClusterResponse> DescribeContainerClusterWithOptionsAsync(DescribeContainerClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3055,6 +4445,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                query["Identifier"] = request.Identifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -3083,16 +4477,102 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeContainerClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
+          *
+          * @param request DescribeContainerClusterRequest
+          * @return DescribeContainerClusterResponse
+         */
         public DescribeContainerClusterResponse DescribeContainerCluster(DescribeContainerClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeContainerClusterWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
+          *
+          * @param request DescribeContainerClusterRequest
+          * @return DescribeContainerClusterResponse
+         */
         public async Task<DescribeContainerClusterResponse> DescribeContainerClusterAsync(DescribeContainerClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeContainerClusterWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeCrossAccountsResponse DescribeCrossAccountsWithOptions(DescribeCrossAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCrossAccounts",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCrossAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCrossAccountsResponse> DescribeCrossAccountsWithOptionsAsync(DescribeCrossAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCrossAccounts",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCrossAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeCrossAccountsResponse DescribeCrossAccounts(DescribeCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCrossAccountsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeCrossAccountsResponse> DescribeCrossAccountsAsync(DescribeCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCrossAccountsWithOptionsAsync(request, runtime);
         }
 
         public DescribeHanaBackupPlansResponse DescribeHanaBackupPlansWithOptions(DescribeHanaBackupPlansRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3201,6 +4681,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeHanaBackupPlansWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
+          *
+          * @param request DescribeHanaBackupSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaBackupSettingResponse
+         */
         public DescribeHanaBackupSettingResponse DescribeHanaBackupSettingWithOptions(DescribeHanaBackupSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3236,6 +4723,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaBackupSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
+          *
+          * @param request DescribeHanaBackupSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaBackupSettingResponse
+         */
         public async Task<DescribeHanaBackupSettingResponse> DescribeHanaBackupSettingWithOptionsAsync(DescribeHanaBackupSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3271,18 +4765,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaBackupSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
+          *
+          * @param request DescribeHanaBackupSettingRequest
+          * @return DescribeHanaBackupSettingResponse
+         */
         public DescribeHanaBackupSettingResponse DescribeHanaBackupSetting(DescribeHanaBackupSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHanaBackupSettingWithOptions(request, runtime);
         }
 
+        /**
+          * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
+          *
+          * @param request DescribeHanaBackupSettingRequest
+          * @return DescribeHanaBackupSettingResponse
+         */
         public async Task<DescribeHanaBackupSettingResponse> DescribeHanaBackupSettingAsync(DescribeHanaBackupSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHanaBackupSettingWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
+          *
+          * @param request DescribeHanaBackupsAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaBackupsAsyncResponse
+         */
         public DescribeHanaBackupsAsyncResponse DescribeHanaBackupsAsyncWithOptions(DescribeHanaBackupsAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3374,6 +4887,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaBackupsAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
+          *
+          * @param request DescribeHanaBackupsAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaBackupsAsyncResponse
+         */
         public async Task<DescribeHanaBackupsAsyncResponse> DescribeHanaBackupsAsyncWithOptionsAsync(DescribeHanaBackupsAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3465,18 +4985,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaBackupsAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
+          *
+          * @param request DescribeHanaBackupsAsyncRequest
+          * @return DescribeHanaBackupsAsyncResponse
+         */
         public DescribeHanaBackupsAsyncResponse DescribeHanaBackupsAsync(DescribeHanaBackupsAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHanaBackupsAsyncWithOptions(request, runtime);
         }
 
+        /**
+          * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
+          *
+          * @param request DescribeHanaBackupsAsyncRequest
+          * @return DescribeHanaBackupsAsyncResponse
+         */
         public async Task<DescribeHanaBackupsAsyncResponse> DescribeHanaBackupsAsyncAsync(DescribeHanaBackupsAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHanaBackupsAsyncWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
+          *
+          * @param request DescribeHanaDatabasesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaDatabasesResponse
+         */
         public DescribeHanaDatabasesResponse DescribeHanaDatabasesWithOptions(DescribeHanaDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3520,6 +5059,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
+          *
+          * @param request DescribeHanaDatabasesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaDatabasesResponse
+         */
         public async Task<DescribeHanaDatabasesResponse> DescribeHanaDatabasesWithOptionsAsync(DescribeHanaDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3563,12 +5109,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
+          *
+          * @param request DescribeHanaDatabasesRequest
+          * @return DescribeHanaDatabasesResponse
+         */
         public DescribeHanaDatabasesResponse DescribeHanaDatabases(DescribeHanaDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHanaDatabasesWithOptions(request, runtime);
         }
 
+        /**
+          * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
+          *
+          * @param request DescribeHanaDatabasesRequest
+          * @return DescribeHanaDatabasesResponse
+         */
         public async Task<DescribeHanaDatabasesResponse> DescribeHanaDatabasesAsync(DescribeHanaDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3815,6 +5373,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeHanaRestoresWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request DescribeHanaRetentionSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaRetentionSettingResponse
+         */
         public DescribeHanaRetentionSettingResponse DescribeHanaRetentionSettingWithOptions(DescribeHanaRetentionSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3850,6 +5416,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaRetentionSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request DescribeHanaRetentionSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHanaRetentionSettingResponse
+         */
         public async Task<DescribeHanaRetentionSettingResponse> DescribeHanaRetentionSettingWithOptionsAsync(DescribeHanaRetentionSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3885,12 +5459,26 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeHanaRetentionSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request DescribeHanaRetentionSettingRequest
+          * @return DescribeHanaRetentionSettingResponse
+         */
         public DescribeHanaRetentionSettingResponse DescribeHanaRetentionSetting(DescribeHanaRetentionSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHanaRetentionSettingWithOptions(request, runtime);
         }
 
+        /**
+          * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request DescribeHanaRetentionSettingRequest
+          * @return DescribeHanaRetentionSettingResponse
+         */
         public async Task<DescribeHanaRetentionSettingResponse> DescribeHanaRetentionSettingAsync(DescribeHanaRetentionSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4041,6 +5629,210 @@ namespace AlibabaCloud.SDK.Hbr20170908
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOtsTableSnapshotsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribePoliciesV2Response DescribePoliciesV2WithOptions(DescribePoliciesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePoliciesV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePoliciesV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribePoliciesV2Response> DescribePoliciesV2WithOptionsAsync(DescribePoliciesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePoliciesV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePoliciesV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribePoliciesV2Response DescribePoliciesV2(DescribePoliciesV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePoliciesV2WithOptions(request, runtime);
+        }
+
+        public async Task<DescribePoliciesV2Response> DescribePoliciesV2Async(DescribePoliciesV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePoliciesV2WithOptionsAsync(request, runtime);
+        }
+
+        public DescribePolicyBindingsResponse DescribePolicyBindingsWithOptions(DescribePolicyBindingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribePolicyBindingsShrinkRequest request = new DescribePolicyBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolicyBindings",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolicyBindingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribePolicyBindingsResponse> DescribePolicyBindingsWithOptionsAsync(DescribePolicyBindingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribePolicyBindingsShrinkRequest request = new DescribePolicyBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolicyBindings",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolicyBindingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribePolicyBindingsResponse DescribePolicyBindings(DescribePolicyBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolicyBindingsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribePolicyBindingsResponse> DescribePolicyBindingsAsync(DescribePolicyBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolicyBindingsWithOptionsAsync(request, runtime);
         }
 
         public DescribeRecoverableOtsInstancesResponse DescribeRecoverableOtsInstancesWithOptions(DescribeRecoverableOtsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4701,6 +6493,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeVaultsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If the request is successful, the mount target is deleted.
+          * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
+          *
+          * @param request DetachNasFileSystemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DetachNasFileSystemResponse
+         */
         public DetachNasFileSystemResponse DetachNasFileSystemWithOptions(DetachNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4744,6 +6544,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DetachNasFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If the request is successful, the mount target is deleted.
+          * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
+          *
+          * @param request DetachNasFileSystemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DetachNasFileSystemResponse
+         */
         public async Task<DetachNasFileSystemResponse> DetachNasFileSystemWithOptionsAsync(DetachNasFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4787,18 +6595,39 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DetachNasFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If the request is successful, the mount target is deleted.
+          * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
+          *
+          * @param request DetachNasFileSystemRequest
+          * @return DetachNasFileSystemResponse
+         */
         public DetachNasFileSystemResponse DetachNasFileSystem(DetachNasFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachNasFileSystemWithOptions(request, runtime);
         }
 
+        /**
+          * *   If the request is successful, the mount target is deleted.
+          * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
+          *
+          * @param request DetachNasFileSystemRequest
+          * @return DetachNasFileSystemResponse
+         */
         public async Task<DetachNasFileSystemResponse> DetachNasFileSystemAsync(DetachNasFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachNasFileSystemWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
+          *
+          * @param request DisableBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableBackupPlanResponse
+         */
         public DisableBackupPlanResponse DisableBackupPlanWithOptions(DisableBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4834,6 +6663,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DisableBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
+          *
+          * @param request DisableBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableBackupPlanResponse
+         */
         public async Task<DisableBackupPlanResponse> DisableBackupPlanWithOptionsAsync(DisableBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4869,18 +6705,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DisableBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
+          *
+          * @param request DisableBackupPlanRequest
+          * @return DisableBackupPlanResponse
+         */
         public DisableBackupPlanResponse DisableBackupPlan(DisableBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
+          *
+          * @param request DisableBackupPlanRequest
+          * @return DisableBackupPlanResponse
+         */
         public async Task<DisableBackupPlanResponse> DisableBackupPlanAsync(DisableBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To enable the backup plan again, call the EnableHanaBackupPlan operation.
+          *
+          * @param request DisableHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableHanaBackupPlanResponse
+         */
         public DisableHanaBackupPlanResponse DisableHanaBackupPlanWithOptions(DisableHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4920,6 +6775,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DisableHanaBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To enable the backup plan again, call the EnableHanaBackupPlan operation.
+          *
+          * @param request DisableHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableHanaBackupPlanResponse
+         */
         public async Task<DisableHanaBackupPlanResponse> DisableHanaBackupPlanWithOptionsAsync(DisableHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4959,18 +6821,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DisableHanaBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To enable the backup plan again, call the EnableHanaBackupPlan operation.
+          *
+          * @param request DisableHanaBackupPlanRequest
+          * @return DisableHanaBackupPlanResponse
+         */
         public DisableHanaBackupPlanResponse DisableHanaBackupPlan(DisableHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableHanaBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * To enable the backup plan again, call the EnableHanaBackupPlan operation.
+          *
+          * @param request DisableHanaBackupPlanRequest
+          * @return DisableHanaBackupPlanResponse
+         */
         public async Task<DisableHanaBackupPlanResponse> DisableHanaBackupPlanAsync(DisableHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableHanaBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
+          *
+          * @param request EnableBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableBackupPlanResponse
+         */
         public EnableBackupPlanResponse EnableBackupPlanWithOptions(EnableBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5006,6 +6887,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<EnableBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
+          *
+          * @param request EnableBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableBackupPlanResponse
+         */
         public async Task<EnableBackupPlanResponse> EnableBackupPlanWithOptionsAsync(EnableBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5041,18 +6929,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<EnableBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
+          *
+          * @param request EnableBackupPlanRequest
+          * @return EnableBackupPlanResponse
+         */
         public EnableBackupPlanResponse EnableBackupPlan(EnableBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
+          *
+          * @param request EnableBackupPlanRequest
+          * @return EnableBackupPlanResponse
+         */
         public async Task<EnableBackupPlanResponse> EnableBackupPlanAsync(EnableBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To disable the backup plan again, call the DisableHanaBackupPlan operation.
+          *
+          * @param request EnableHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableHanaBackupPlanResponse
+         */
         public EnableHanaBackupPlanResponse EnableHanaBackupPlanWithOptions(EnableHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5092,6 +6999,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<EnableHanaBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To disable the backup plan again, call the DisableHanaBackupPlan operation.
+          *
+          * @param request EnableHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableHanaBackupPlanResponse
+         */
         public async Task<EnableHanaBackupPlanResponse> EnableHanaBackupPlanWithOptionsAsync(EnableHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5131,12 +7045,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<EnableHanaBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To disable the backup plan again, call the DisableHanaBackupPlan operation.
+          *
+          * @param request EnableHanaBackupPlanRequest
+          * @return EnableHanaBackupPlanResponse
+         */
         public EnableHanaBackupPlanResponse EnableHanaBackupPlan(EnableHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableHanaBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * To disable the backup plan again, call the DisableHanaBackupPlan operation.
+          *
+          * @param request EnableHanaBackupPlanRequest
+          * @return EnableHanaBackupPlanResponse
+         */
         public async Task<EnableHanaBackupPlanResponse> EnableHanaBackupPlanAsync(EnableHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5233,6 +7159,100 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await ExecuteBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        public ExecutePolicyV2Response ExecutePolicyV2WithOptions(ExecutePolicyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecutePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecutePolicyV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ExecutePolicyV2Response> ExecutePolicyV2WithOptionsAsync(ExecutePolicyV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecutePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecutePolicyV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ExecutePolicyV2Response ExecutePolicyV2(ExecutePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecutePolicyV2WithOptions(request, runtime);
+        }
+
+        public async Task<ExecutePolicyV2Response> ExecutePolicyV2Async(ExecutePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecutePolicyV2WithOptionsAsync(request, runtime);
+        }
+
         public GenerateRamPolicyResponse GenerateRamPolicyWithOptions(GenerateRamPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5323,6 +7343,81 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await GenerateRamPolicyWithOptionsAsync(request, runtime);
         }
 
+        public GetTempFileDownloadLinkResponse GetTempFileDownloadLinkWithOptions(GetTempFileDownloadLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TempFileKey))
+            {
+                query["TempFileKey"] = request.TempFileKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTempFileDownloadLink",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTempFileDownloadLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetTempFileDownloadLinkResponse> GetTempFileDownloadLinkWithOptionsAsync(GetTempFileDownloadLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TempFileKey))
+            {
+                query["TempFileKey"] = request.TempFileKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTempFileDownloadLink",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTempFileDownloadLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetTempFileDownloadLinkResponse GetTempFileDownloadLink(GetTempFileDownloadLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTempFileDownloadLinkWithOptions(request, runtime);
+        }
+
+        public async Task<GetTempFileDownloadLinkResponse> GetTempFileDownloadLinkAsync(GetTempFileDownloadLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTempFileDownloadLinkWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
+          * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param tmpReq InstallBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallBackupClientsResponse
+         */
         public InstallBackupClientsResponse InstallBackupClientsWithOptions(InstallBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5333,6 +7428,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
@@ -5356,6 +7463,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<InstallBackupClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
+          * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param tmpReq InstallBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallBackupClientsResponse
+         */
         public async Task<InstallBackupClientsResponse> InstallBackupClientsWithOptionsAsync(InstallBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5366,6 +7482,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
@@ -5389,16 +7517,80 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<InstallBackupClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
+          * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param request InstallBackupClientsRequest
+          * @return InstallBackupClientsResponse
+         */
         public InstallBackupClientsResponse InstallBackupClients(InstallBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallBackupClientsWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
+          * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param request InstallBackupClientsRequest
+          * @return InstallBackupClientsResponse
+         */
         public async Task<InstallBackupClientsResponse> InstallBackupClientsAsync(InstallBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallBackupClientsWithOptionsAsync(request, runtime);
+        }
+
+        public OpenHbrServiceResponse OpenHbrServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenHbrService",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenHbrServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<OpenHbrServiceResponse> OpenHbrServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenHbrService",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenHbrServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public OpenHbrServiceResponse OpenHbrService()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenHbrServiceWithOptions(runtime);
+        }
+
+        public async Task<OpenHbrServiceResponse> OpenHbrServiceAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenHbrServiceWithOptionsAsync(runtime);
         }
 
         public SearchHistoricalSnapshotsResponse SearchHistoricalSnapshotsWithOptions(SearchHistoricalSnapshotsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5419,9 +7611,17 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryShrink))
             {
                 query["Query"] = request.QueryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
@@ -5464,9 +7664,17 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryShrink))
             {
                 query["Query"] = request.QueryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
@@ -5503,6 +7711,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await SearchHistoricalSnapshotsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To stop the database again, call the StopHanaDatabaseAsync operation.
+          *
+          * @param request StartHanaDatabaseAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartHanaDatabaseAsyncResponse
+         */
         public StartHanaDatabaseAsyncResponse StartHanaDatabaseAsyncWithOptions(StartHanaDatabaseAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5538,6 +7753,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<StartHanaDatabaseAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To stop the database again, call the StopHanaDatabaseAsync operation.
+          *
+          * @param request StartHanaDatabaseAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartHanaDatabaseAsyncResponse
+         */
         public async Task<StartHanaDatabaseAsyncResponse> StartHanaDatabaseAsyncWithOptionsAsync(StartHanaDatabaseAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5573,18 +7795,37 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<StartHanaDatabaseAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To stop the database again, call the StopHanaDatabaseAsync operation.
+          *
+          * @param request StartHanaDatabaseAsyncRequest
+          * @return StartHanaDatabaseAsyncResponse
+         */
         public StartHanaDatabaseAsyncResponse StartHanaDatabaseAsync(StartHanaDatabaseAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartHanaDatabaseAsyncWithOptions(request, runtime);
         }
 
+        /**
+          * To stop the database again, call the StopHanaDatabaseAsync operation.
+          *
+          * @param request StartHanaDatabaseAsyncRequest
+          * @return StartHanaDatabaseAsyncResponse
+         */
         public async Task<StartHanaDatabaseAsyncResponse> StartHanaDatabaseAsyncAsync(StartHanaDatabaseAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartHanaDatabaseAsyncWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To start the database again, call the StartHanaDatabaseAsync operation.
+          *
+          * @param request StopHanaDatabaseAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopHanaDatabaseAsyncResponse
+         */
         public StopHanaDatabaseAsyncResponse StopHanaDatabaseAsyncWithOptions(StopHanaDatabaseAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5620,6 +7861,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<StopHanaDatabaseAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To start the database again, call the StartHanaDatabaseAsync operation.
+          *
+          * @param request StopHanaDatabaseAsyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopHanaDatabaseAsyncResponse
+         */
         public async Task<StopHanaDatabaseAsyncResponse> StopHanaDatabaseAsyncWithOptionsAsync(StopHanaDatabaseAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5655,18 +7903,39 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<StopHanaDatabaseAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To start the database again, call the StartHanaDatabaseAsync operation.
+          *
+          * @param request StopHanaDatabaseAsyncRequest
+          * @return StopHanaDatabaseAsyncResponse
+         */
         public StopHanaDatabaseAsyncResponse StopHanaDatabaseAsync(StopHanaDatabaseAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopHanaDatabaseAsyncWithOptions(request, runtime);
         }
 
+        /**
+          * To start the database again, call the StartHanaDatabaseAsync operation.
+          *
+          * @param request StopHanaDatabaseAsyncRequest
+          * @return StopHanaDatabaseAsyncResponse
+         */
         public async Task<StopHanaDatabaseAsyncResponse> StopHanaDatabaseAsyncAsync(StopHanaDatabaseAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopHanaDatabaseAsyncWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param tmpReq UninstallBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UninstallBackupClientsResponse
+         */
         public UninstallBackupClientsResponse UninstallBackupClientsWithOptions(UninstallBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5684,6 +7953,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIdsShrink))
             {
                 query["ClientIds"] = request.ClientIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -5708,6 +7989,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UninstallBackupClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param tmpReq UninstallBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UninstallBackupClientsResponse
+         */
         public async Task<UninstallBackupClientsResponse> UninstallBackupClientsWithOptionsAsync(UninstallBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5725,6 +8015,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIdsShrink))
             {
                 query["ClientIds"] = request.ClientIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -5749,18 +8051,41 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UninstallBackupClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param request UninstallBackupClientsRequest
+          * @return UninstallBackupClientsResponse
+         */
         public UninstallBackupClientsResponse UninstallBackupClients(UninstallBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UninstallBackupClientsWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
+          *
+          * @param request UninstallBackupClientsRequest
+          * @return UninstallBackupClientsResponse
+         */
         public async Task<UninstallBackupClientsResponse> UninstallBackupClientsAsync(UninstallBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UninstallBackupClientsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
+          *
+          * @param request UninstallClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UninstallClientResponse
+         */
         public UninstallClientResponse UninstallClientWithOptions(UninstallClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5796,6 +8121,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UninstallClientResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
+          *
+          * @param request UninstallClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UninstallClientResponse
+         */
         public async Task<UninstallClientResponse> UninstallClientWithOptionsAsync(UninstallClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5831,12 +8163,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UninstallClientResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
+          *
+          * @param request UninstallClientRequest
+          * @return UninstallClientResponse
+         */
         public UninstallClientResponse UninstallClient(UninstallClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UninstallClientWithOptions(request, runtime);
         }
 
+        /**
+          * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
+          *
+          * @param request UninstallClientRequest
+          * @return UninstallClientResponse
+         */
         public async Task<UninstallClientResponse> UninstallClientAsync(UninstallClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5852,14 +8196,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeListPath))
+            {
+                query["ChangeListPath"] = request.ChangeListPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
             {
                 query["Detail"] = request.DetailShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepLatestSnapshots))
+            {
+                query["KeepLatestSnapshots"] = request.KeepLatestSnapshots;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
             {
@@ -5951,14 +8303,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtsDetail))
             {
-                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail.ToMap(), "OtsDetail", "json");
+                request.OtsDetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtsDetail, "OtsDetail", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeListPath))
+            {
+                query["ChangeListPath"] = request.ChangeListPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
             {
                 query["Detail"] = request.DetailShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepLatestSnapshots))
+            {
+                query["KeepLatestSnapshots"] = request.KeepLatestSnapshots;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
             {
@@ -6053,10 +8413,21 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await UpdateBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the configurations of both the old and new HBR clients.
+          *
+          * @param request UpdateClientSettingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateClientSettingsResponse
+         */
         public UpdateClientSettingsResponse UpdateClientSettingsWithOptions(UpdateClientSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertOnPartialComplete))
+            {
+                query["AlertOnPartialComplete"] = request.AlertOnPartialComplete;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -6072,6 +8443,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuCore))
             {
                 query["MaxCpuCore"] = request.MaxCpuCore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMemory))
+            {
+                query["MaxMemory"] = request.MaxMemory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWorker))
             {
@@ -6124,10 +8499,21 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateClientSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the configurations of both the old and new HBR clients.
+          *
+          * @param request UpdateClientSettingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateClientSettingsResponse
+         */
         public async Task<UpdateClientSettingsResponse> UpdateClientSettingsWithOptionsAsync(UpdateClientSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertOnPartialComplete))
+            {
+                query["AlertOnPartialComplete"] = request.AlertOnPartialComplete;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -6143,6 +8529,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuCore))
             {
                 query["MaxCpuCore"] = request.MaxCpuCore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMemory))
+            {
+                query["MaxMemory"] = request.MaxMemory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWorker))
             {
@@ -6195,18 +8585,138 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateClientSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to update the configurations of both the old and new HBR clients.
+          *
+          * @param request UpdateClientSettingsRequest
+          * @return UpdateClientSettingsResponse
+         */
         public UpdateClientSettingsResponse UpdateClientSettings(UpdateClientSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateClientSettingsWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to update the configurations of both the old and new HBR clients.
+          *
+          * @param request UpdateClientSettingsRequest
+          * @return UpdateClientSettingsResponse
+         */
         public async Task<UpdateClientSettingsResponse> UpdateClientSettingsAsync(UpdateClientSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateClientSettingsWithOptionsAsync(request, runtime);
         }
 
+        public UpdateContainerClusterResponse UpdateContainerClusterWithOptions(UpdateContainerClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewToken))
+            {
+                query["RenewToken"] = request.RenewToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContainerCluster",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContainerClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateContainerClusterResponse> UpdateContainerClusterWithOptionsAsync(UpdateContainerClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewToken))
+            {
+                query["RenewToken"] = request.RenewToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContainerCluster",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContainerClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateContainerClusterResponse UpdateContainerCluster(UpdateContainerClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContainerClusterWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateContainerClusterResponse> UpdateContainerClusterAsync(UpdateContainerClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContainerClusterWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request UpdateHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaBackupPlanResponse
+         */
         public UpdateHanaBackupPlanResponse UpdateHanaBackupPlanWithOptions(UpdateHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6258,6 +8768,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request UpdateHanaBackupPlanRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaBackupPlanResponse
+         */
         public async Task<UpdateHanaBackupPlanResponse> UpdateHanaBackupPlanWithOptionsAsync(UpdateHanaBackupPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6309,18 +8829,43 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request UpdateHanaBackupPlanRequest
+          * @return UpdateHanaBackupPlanResponse
+         */
         public UpdateHanaBackupPlanResponse UpdateHanaBackupPlan(UpdateHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateHanaBackupPlanWithOptions(request, runtime);
         }
 
+        /**
+          * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
+          * *   You can specify only one type of data source in a backup plan.
+          * *   You can specify only one interval as a backup cycle in a backup plan.
+          * *   Each backup plan allows you to back up data to only one backup vault.
+          *
+          * @param request UpdateHanaBackupPlanRequest
+          * @return UpdateHanaBackupPlanResponse
+         */
         public async Task<UpdateHanaBackupPlanResponse> UpdateHanaBackupPlanAsync(UpdateHanaBackupPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateHanaBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
+          *
+          * @param request UpdateHanaBackupSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaBackupSettingResponse
+         */
         public UpdateHanaBackupSettingResponse UpdateHanaBackupSettingWithOptions(UpdateHanaBackupSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6384,6 +8929,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaBackupSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
+          *
+          * @param request UpdateHanaBackupSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaBackupSettingResponse
+         */
         public async Task<UpdateHanaBackupSettingResponse> UpdateHanaBackupSettingWithOptionsAsync(UpdateHanaBackupSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6447,12 +8999,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaBackupSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
+          *
+          * @param request UpdateHanaBackupSettingRequest
+          * @return UpdateHanaBackupSettingResponse
+         */
         public UpdateHanaBackupSettingResponse UpdateHanaBackupSetting(UpdateHanaBackupSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateHanaBackupSettingWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
+          *
+          * @param request UpdateHanaBackupSettingRequest
+          * @return UpdateHanaBackupSettingResponse
+         */
         public async Task<UpdateHanaBackupSettingResponse> UpdateHanaBackupSettingAsync(UpdateHanaBackupSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6605,6 +9169,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await UpdateHanaInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request UpdateHanaRetentionSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaRetentionSettingResponse
+         */
         public UpdateHanaRetentionSettingResponse UpdateHanaRetentionSettingWithOptions(UpdateHanaRetentionSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6652,6 +9224,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaRetentionSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request UpdateHanaRetentionSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateHanaRetentionSettingResponse
+         */
         public async Task<UpdateHanaRetentionSettingResponse> UpdateHanaRetentionSettingWithOptionsAsync(UpdateHanaRetentionSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6699,16 +9279,280 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateHanaRetentionSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request UpdateHanaRetentionSettingRequest
+          * @return UpdateHanaRetentionSettingResponse
+         */
         public UpdateHanaRetentionSettingResponse UpdateHanaRetentionSetting(UpdateHanaRetentionSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateHanaRetentionSettingWithOptions(request, runtime);
         }
 
+        /**
+          * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
+          * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
+          *
+          * @param request UpdateHanaRetentionSettingRequest
+          * @return UpdateHanaRetentionSettingResponse
+         */
         public async Task<UpdateHanaRetentionSettingResponse> UpdateHanaRetentionSettingAsync(UpdateHanaRetentionSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateHanaRetentionSettingWithOptionsAsync(request, runtime);
+        }
+
+        public UpdatePolicyBindingResponse UpdatePolicyBindingWithOptions(UpdatePolicyBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolicyBindingShrinkRequest request = new UpdatePolicyBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedOptions))
+            {
+                request.AdvancedOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedOptions, "AdvancedOptions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedOptionsShrink))
+            {
+                query["AdvancedOptions"] = request.AdvancedOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disabled))
+            {
+                query["Disabled"] = request.Disabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBindingDescription))
+            {
+                query["PolicyBindingDescription"] = request.PolicyBindingDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolicyBinding",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolicyBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdatePolicyBindingResponse> UpdatePolicyBindingWithOptionsAsync(UpdatePolicyBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolicyBindingShrinkRequest request = new UpdatePolicyBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedOptions))
+            {
+                request.AdvancedOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedOptions, "AdvancedOptions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedOptionsShrink))
+            {
+                query["AdvancedOptions"] = request.AdvancedOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disabled))
+            {
+                query["Disabled"] = request.Disabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBindingDescription))
+            {
+                query["PolicyBindingDescription"] = request.PolicyBindingDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolicyBinding",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolicyBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdatePolicyBindingResponse UpdatePolicyBinding(UpdatePolicyBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePolicyBindingWithOptions(request, runtime);
+        }
+
+        public async Task<UpdatePolicyBindingResponse> UpdatePolicyBindingAsync(UpdatePolicyBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePolicyBindingWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
+          *
+          * @param tmpReq UpdatePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdatePolicyV2Response
+         */
+        public UpdatePolicyV2Response UpdatePolicyV2WithOptions(UpdatePolicyV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolicyV2ShrinkRequest request = new UpdatePolicyV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                body["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolicyV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
+          *
+          * @param tmpReq UpdatePolicyV2Request
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdatePolicyV2Response
+         */
+        public async Task<UpdatePolicyV2Response> UpdatePolicyV2WithOptionsAsync(UpdatePolicyV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolicyV2ShrinkRequest request = new UpdatePolicyV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                body["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolicyV2",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolicyV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
+          *
+          * @param request UpdatePolicyV2Request
+          * @return UpdatePolicyV2Response
+         */
+        public UpdatePolicyV2Response UpdatePolicyV2(UpdatePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePolicyV2WithOptions(request, runtime);
+        }
+
+        /**
+          * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
+          *
+          * @param request UpdatePolicyV2Request
+          * @return UpdatePolicyV2Response
+         */
+        public async Task<UpdatePolicyV2Response> UpdatePolicyV2Async(UpdatePolicyV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePolicyV2WithOptionsAsync(request, runtime);
         }
 
         public UpdateVaultResponse UpdateVaultWithOptions(UpdateVaultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6801,6 +9645,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await UpdateVaultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes.
+          *
+          * @param tmpReq UpgradeBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeBackupClientsResponse
+         */
         public UpgradeBackupClientsResponse UpgradeBackupClientsWithOptions(UpgradeBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6818,6 +9671,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIdsShrink))
             {
                 query["ClientIds"] = request.ClientIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -6842,6 +9707,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpgradeBackupClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes.
+          *
+          * @param tmpReq UpgradeBackupClientsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeBackupClientsResponse
+         */
         public async Task<UpgradeBackupClientsResponse> UpgradeBackupClientsWithOptionsAsync(UpgradeBackupClientsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6859,6 +9733,18 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIdsShrink))
             {
                 query["ClientIds"] = request.ClientIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -6883,18 +9769,41 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpgradeBackupClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes.
+          *
+          * @param request UpgradeBackupClientsRequest
+          * @return UpgradeBackupClientsResponse
+         */
         public UpgradeBackupClientsResponse UpgradeBackupClients(UpgradeBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeBackupClientsWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
+          * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
+          * *   The timeout period of an asynchronous job is 15 minutes.
+          *
+          * @param request UpgradeBackupClientsRequest
+          * @return UpgradeBackupClientsResponse
+         */
         public async Task<UpgradeBackupClientsResponse> UpgradeBackupClientsAsync(UpgradeBackupClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeBackupClientsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
+          *
+          * @param request UpgradeClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeClientResponse
+         */
         public UpgradeClientResponse UpgradeClientWithOptions(UpgradeClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6930,6 +9839,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpgradeClientResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
+          *
+          * @param request UpgradeClientRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeClientResponse
+         */
         public async Task<UpgradeClientResponse> UpgradeClientWithOptionsAsync(UpgradeClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6965,12 +9881,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpgradeClientResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
+          *
+          * @param request UpgradeClientRequest
+          * @return UpgradeClientResponse
+         */
         public UpgradeClientResponse UpgradeClient(UpgradeClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeClientWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
+          *
+          * @param request UpgradeClientRequest
+          * @return UpgradeClientResponse
+         */
         public async Task<UpgradeClientResponse> UpgradeClientAsync(UpgradeClientRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
