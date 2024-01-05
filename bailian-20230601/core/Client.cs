@@ -1583,6 +1583,64 @@ namespace AlibabaCloud.SDK.Bailian20230601
             return await GetPromptWithOptionsAsync(request, runtime);
         }
 
+        public GetText2ImageJobResponse GetText2ImageJobWithOptions(GetText2ImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetText2ImageJob",
+                Version = "2023-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetText2ImageJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetText2ImageJobResponse> GetText2ImageJobWithOptionsAsync(GetText2ImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetText2ImageJob",
+                Version = "2023-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetText2ImageJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetText2ImageJobResponse GetText2ImageJob(GetText2ImageJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetText2ImageJobWithOptions(request, runtime);
+        }
+
+        public async Task<GetText2ImageJobResponse> GetText2ImageJobAsync(GetText2ImageJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetText2ImageJobWithOptionsAsync(request, runtime);
+        }
+
         public ImportEnterpriseDocumentResponse ImportEnterpriseDocumentWithOptions(ImportEnterpriseDocumentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2471,6 +2529,128 @@ namespace AlibabaCloud.SDK.Bailian20230601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchEnterpriseDataWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitText2ImageJobResponse SubmitText2ImageJobWithOptions(SubmitText2ImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.N))
+            {
+                query["N"] = request.N;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NegativePrompt))
+            {
+                query["NegativePrompt"] = request.NegativePrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seed))
+            {
+                query["Seed"] = request.Seed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                query["Style"] = request.Style;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitText2ImageJob",
+                Version = "2023-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitText2ImageJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitText2ImageJobResponse> SubmitText2ImageJobWithOptionsAsync(SubmitText2ImageJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.N))
+            {
+                query["N"] = request.N;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NegativePrompt))
+            {
+                query["NegativePrompt"] = request.NegativePrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seed))
+            {
+                query["Seed"] = request.Seed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
+            {
+                query["Style"] = request.Style;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitText2ImageJob",
+                Version = "2023-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitText2ImageJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitText2ImageJobResponse SubmitText2ImageJob(SubmitText2ImageJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitText2ImageJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitText2ImageJobResponse> SubmitText2ImageJobAsync(SubmitText2ImageJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitText2ImageJobWithOptionsAsync(request, runtime);
         }
 
         public UpdateEnterpriseDataInfoResponse UpdateEnterpriseDataInfoWithOptions(UpdateEnterpriseDataInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
