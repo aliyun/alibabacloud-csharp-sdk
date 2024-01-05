@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
         [Validation(Required=false)]
         public UpdatePublicTemplateResponseBodyTemplate Template { get; set; }
         public class UpdatePublicTemplateResponseBodyTemplate : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }

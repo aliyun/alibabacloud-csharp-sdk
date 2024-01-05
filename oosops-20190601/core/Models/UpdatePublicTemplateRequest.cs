@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class UpdatePublicTemplateRequest : TeaModel {
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
