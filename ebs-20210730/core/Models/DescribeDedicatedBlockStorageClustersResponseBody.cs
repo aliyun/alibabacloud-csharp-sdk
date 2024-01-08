@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters> DedicatedBlockStorageClusters { get; set; }
         public class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters : TeaModel {
+            /// <summary>
+            /// The unique ID (UID) of the Alibaba Cloud account.
+            /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public string AliUid { get; set; }
@@ -148,6 +151,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The dedicated block storage cluster enable thin provison.
+            /// </summary>
             [NameInMap("EnableThinProvision")]
             [Validation(Required=false)]
             public bool? EnableThinProvision { get; set; }
@@ -187,6 +193,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// Oversold ratio of cluster space capacity for creating disk.
+            /// </summary>
             [NameInMap("SizeOverSoldRatio")]
             [Validation(Required=false)]
             public double? SizeOverSoldRatio { get; set; }
@@ -203,6 +212,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// StorageDomain.
+            /// </summary>
             [NameInMap("StorageDomain")]
             [Validation(Required=false)]
             public string StorageDomain { get; set; }

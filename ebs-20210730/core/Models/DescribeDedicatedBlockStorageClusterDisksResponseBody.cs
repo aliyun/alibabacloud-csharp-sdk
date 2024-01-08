@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 [Validation(Required=false)]
                 public string BdfId { get; set; }
 
+                /// <summary>
+                /// Whether the ESSD AutoPL disk is enabled burst IOPS / BPS. This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
+                /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
@@ -198,6 +201,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 [Validation(Required=false)]
                 public bool? Portable { get; set; }
 
+                /// <summary>
+                /// The provisioned read/write IOPS of the ESSD AutoPL disk. 
+                /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+                /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]
                 public long? ProvisionedIops { get; set; }
@@ -283,6 +290,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
                 }
 
+                /// <summary>
+                /// The maximum number of BPS.
+                /// </summary>
                 [NameInMap("Throughput")]
                 [Validation(Required=false)]
                 public long? Throughput { get; set; }

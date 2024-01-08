@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateEnterpriseSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// snapshot policy instance id
+        /// The id of a policy.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

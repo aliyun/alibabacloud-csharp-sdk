@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DeleteEnterpriseSnapshotPolicyResponseBody : TeaModel {
+    public class UpdateSolutionInstanceAttributeResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>

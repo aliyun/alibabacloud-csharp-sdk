@@ -1,3 +1,6 @@
+2024-01-08 Version: 1.6.0
+- Generated csharp 2021-07-30 for ebs.
+
 2023-12-28 Version: 1.5.0
 - Generated csharp 2021-07-30 for ebs.
 

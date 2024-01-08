@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public long? Capacity { get; set; }
 
+        /// <summary>
+        /// This parameter is no longer used.
+        /// </summary>
         [NameInMap("DbscId")]
         [Validation(Required=false)]
         [Obsolete]
@@ -37,10 +40,19 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DbscName { get; set; }
 
+        /// <summary>
+        /// The specific number of PeriodUnit.
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// The unit of the subscription duration for the dedicated block storage cluster,
+        /// Valid values:
+        /// 
+        /// *   **Month**
+        /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
@@ -52,18 +64,36 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which to assign the dedicated block storage cluster.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The resource tags. You can specify up to 20 tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDedicatedBlockStorageClusterRequestTag> Tag { get; set; }
         public class CreateDedicatedBlockStorageClusterRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N used for exact search of EBS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+            /// 
+            /// The `Tag.N` parameter pair (Tag.N.Key and Tag.N.Value) is used for exact search of EBS resources that have specified tags added. Each tag is a key-value pair.
+            /// 
+            /// *   If you specify only `Tag.N.Key`, all EBS resources whose tags contain the specified tag key are returned.
+            /// *   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error is returned.
+            /// *   If you specify multiple tag key-value pairs at the same time, only EBS resources that match all tag key-value pairs are returned.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
