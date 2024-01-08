@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? SummarizationEnabled { get; set; }
 
+            [NameInMap("TextPolishEnabled")]
+            [Validation(Required=false)]
+            public bool? TextPolishEnabled { get; set; }
+
             [NameInMap("Transcoding")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranscoding Transcoding { get; set; }
