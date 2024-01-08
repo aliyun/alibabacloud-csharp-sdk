@@ -37,10 +37,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public List<ListResourcesResponseBodyDataResources> Resources { get; set; }
             public class ListResourcesResponseBodyDataResources : TeaModel {
+                /// <summary>
+                /// The remarks.
+                /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
+                /// <summary>
+                /// The Base64-encoded 128-bit MD5 hash value of the HTTP request body.
+                /// </summary>
                 [NameInMap("contentMD5")]
                 [Validation(Required=false)]
                 public string ContentMD5 { get; set; }
@@ -52,14 +58,23 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public long? CreationTime { get; set; }
 
+                /// <summary>
+                /// The display name.
+                /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
+                /// <summary>
+                /// The time when the resource was modified.
+                /// </summary>
                 [NameInMap("lastModifiedTime")]
                 [Validation(Required=false)]
                 public long? LastModifiedTime { get; set; }
 
+                /// <summary>
+                /// The user who updated the resource.
+                /// </summary>
                 [NameInMap("lastUpdator")]
                 [Validation(Required=false)]
                 public string LastUpdator { get; set; }
@@ -79,18 +94,63 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The schema of the resource.
+                /// The schema to which the resource belongs.
                 /// </summary>
                 [NameInMap("schema")]
                 [Validation(Required=false)]
                 public string Schema { get; set; }
 
+                /// <summary>
+                /// The size of the resource.
+                /// </summary>
                 [NameInMap("size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   file
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   py
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   jar
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   volumefile
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   table
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]

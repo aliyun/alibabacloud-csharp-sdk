@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetProjectRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to use additional information.
+        /// </summary>
         [NameInMap("verbose")]
         [Validation(Required=false)]
         public bool? Verbose { get; set; }

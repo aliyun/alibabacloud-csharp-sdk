@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string CostStorage { get; set; }
 
             /// <summary>
+            /// Create time
+            /// </summary>
+            [NameInMap("createdTime")]
+            [Validation(Required=false)]
+            public long? CreatedTime { get; set; }
+
+            /// <summary>
             /// The default computing quota.
             /// </summary>
             [NameInMap("defaultQuota")]
@@ -95,6 +102,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? AllowFullScan { get; set; }
 
+                /// <summary>
+                /// This operation does not return a value for this parameter.
+                /// </summary>
                 [NameInMap("elderTunnelQuota")]
                 [Validation(Required=false)]
                 public string ElderTunnelQuota { get; set; }
@@ -171,6 +181,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public long? ProjectBackupSize { get; set; }
 
+                    /// <summary>
+                    /// The total storage.
+                    /// </summary>
                     [NameInMap("projectTotalSize")]
                     [Validation(Required=false)]
                     public long? ProjectTotalSize { get; set; }
@@ -252,6 +265,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TypeSystem { get; set; }
 
             }
+
+            /// <summary>
+            /// RegionID
+            /// </summary>
+            [NameInMap("regionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
             /// <summary>
             /// The tag.
@@ -357,10 +377,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The Super_Administrator role.
+            /// </summary>
             [NameInMap("superAdmins")]
             [Validation(Required=false)]
             public List<string> SuperAdmins { get; set; }
 
+            /// <summary>
+            /// Indicates whether the current project supports the three-layer model of MaxCompute.
+            /// </summary>
             [NameInMap("threeTierModel")]
             [Validation(Required=false)]
             public bool? ThreeTierModel { get; set; }
@@ -374,10 +400,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }

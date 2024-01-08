@@ -10,7 +10,25 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
-        /// The flag to choose whether list the specific catalog - system_catalog.
+        /// Specifies whether to list a project named SystemCatalog.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("listSystemCatalog")]
         [Validation(Required=false)]
@@ -66,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SaleTags { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The tenant ID.
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

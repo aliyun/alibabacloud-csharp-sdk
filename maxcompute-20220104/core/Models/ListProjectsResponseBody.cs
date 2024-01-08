@@ -45,21 +45,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public List<ListProjectsResponseBodyDataProjects> Projects { get; set; }
             public class ListProjectsResponseBodyDataProjects : TeaModel {
                 /// <summary>
-                /// The tag.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListProjectsResponseBodyDataProjectsTags> Tags { get; set; }
                 public class ListProjectsResponseBodyDataProjectsTags : TeaModel {
                     /// <summary>
-                    /// The key of the tag.
+                    /// The tag key.
                     /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// The value of the tag.
+                    /// The tag value.
                     /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
@@ -80,6 +80,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("costStorage")]
                 [Validation(Required=false)]
                 public string CostStorage { get; set; }
+
+                /// <summary>
+                /// Create time
+                /// </summary>
+                [NameInMap("createdTime")]
+                [Validation(Required=false)]
+                public long? CreatedTime { get; set; }
 
                 /// <summary>
                 /// The default computing quota.
@@ -112,7 +119,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// The name of the MaxCompute project.
+                /// The name of the project.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -140,7 +147,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? AllowFullScan { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
+                    /// Indicates whether the DECIMAL data type in the MaxCompute V2.0 data type edition is enabled.
                     /// </summary>
                     [NameInMap("enableDecimal2")]
                     [Validation(Required=false)]
@@ -184,7 +191,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// The number of days for which backup data can be retained.
+                    /// The maximum number of days for which backup data can be retained.
                     /// </summary>
                     [NameInMap("retentionDays")]
                     [Validation(Required=false)]
@@ -198,7 +205,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string SqlMeteringMax { get; set; }
 
                     /// <summary>
-                    /// The lifecycle of tables in the project.
+                    /// The lifecycle of a table in the project.
                     /// </summary>
                     [NameInMap("tableLifecycle")]
                     [Validation(Required=false)]
@@ -221,7 +228,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// The time zone of the project.
+                    /// The time zone of the instance.
                     /// </summary>
                     [NameInMap("timezone")]
                     [Validation(Required=false)]
@@ -242,6 +249,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string TypeSystem { get; set; }
 
                 }
+
+                /// <summary>
+                /// Region Id
+                /// </summary>
+                [NameInMap("regionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
                 /// <summary>
                 /// The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
@@ -341,14 +355,32 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
+                /// The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read-only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Indicates whether the current project support the three-tier model
+                /// Indicates whether the current project supports the MaxCompute three-layer model.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   true
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   false
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("threeTierModel")]
                 [Validation(Required=false)]
@@ -366,7 +398,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
