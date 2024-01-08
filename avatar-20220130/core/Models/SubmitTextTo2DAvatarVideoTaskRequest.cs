@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public int? PitchRate { get; set; }
 
+            [NameInMap("SampleRate")]
+            [Validation(Required=false)]
+            public int? SampleRate { get; set; }
+
             [NameInMap("SpeechRate")]
             [Validation(Required=false)]
             public int? SpeechRate { get; set; }
@@ -119,6 +123,32 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [NameInMap("SubtitleEmbedded")]
             [Validation(Required=false)]
             public bool? SubtitleEmbedded { get; set; }
+
+            [NameInMap("SubtitleStyle")]
+            [Validation(Required=false)]
+            public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle SubtitleStyle { get; set; }
+            public class SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle : TeaModel {
+                [NameInMap("Color")]
+                [Validation(Required=false)]
+                public string Color { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("OutlineColor")]
+                [Validation(Required=false)]
+                public string OutlineColor { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public int? Size { get; set; }
+
+                [NameInMap("Y")]
+                [Validation(Required=false)]
+                public int? Y { get; set; }
+
+            }
 
         }
 

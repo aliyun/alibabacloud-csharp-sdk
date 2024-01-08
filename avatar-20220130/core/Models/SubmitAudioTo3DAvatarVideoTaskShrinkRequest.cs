@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public string AppShrink { get; set; }
 
+        [NameInMap("AudioInfo")]
+        [Validation(Required=false)]
+        public string AudioInfoShrink { get; set; }
+
         [NameInMap("AvatarInfo")]
         [Validation(Required=false)]
         public string AvatarInfoShrink { get; set; }

@@ -19,6 +19,16 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
         }
 
+        [NameInMap("AudioInfo")]
+        [Validation(Required=false)]
+        public SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo AudioInfo { get; set; }
+        public class SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo : TeaModel {
+            [NameInMap("SampleRate")]
+            [Validation(Required=false)]
+            public int? SampleRate { get; set; }
+
+        }
+
         [NameInMap("AvatarInfo")]
         [Validation(Required=false)]
         public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo AvatarInfo { get; set; }
