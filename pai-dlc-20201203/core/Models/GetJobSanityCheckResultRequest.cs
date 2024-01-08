@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SanityCheckPhase { get; set; }
 
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
     }
 
 }

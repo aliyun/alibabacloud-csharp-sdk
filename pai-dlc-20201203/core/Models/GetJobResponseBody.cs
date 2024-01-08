@@ -249,6 +249,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SubStatus { get; set; }
 
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
         [NameInMap("ThirdpartyLibDir")]
         [Validation(Required=false)]
         public string ThirdpartyLibDir { get; set; }

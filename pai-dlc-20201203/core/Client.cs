@@ -882,6 +882,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["SanityCheckPhase"] = request.SanityCheckPhase;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -913,6 +917,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanityCheckPhase))
             {
                 query["SanityCheckPhase"] = request.SanityCheckPhase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
