@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
-        [NameInMap("DeviceName")]
+    public class BatchQueryVisionDeviceInfoRequest : TeaModel {
+        [NameInMap("DeviceNameList")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
+        public List<string> DeviceNameList { get; set; }
 
-        [NameInMap("IotId")]
+        [NameInMap("IotIdList")]
         [Validation(Required=false)]
-        public string IotId { get; set; }
+        public List<string> IotIdList { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("Scheme")]
-        [Validation(Required=false)]
-        public string Scheme { get; set; }
 
     }
 

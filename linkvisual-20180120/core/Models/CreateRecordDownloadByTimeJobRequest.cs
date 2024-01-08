@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
+    public class CreateRecordDownloadByTimeJobRequest : TeaModel {
+        [NameInMap("BeginTime")]
+        [Validation(Required=false)]
+        public int? BeginTime { get; set; }
+
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public int? EndTime { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
@@ -25,9 +33,13 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("Scheme")]
+        [NameInMap("RecordType")]
         [Validation(Required=false)]
-        public string Scheme { get; set; }
+        public int? RecordType { get; set; }
+
+        [NameInMap("StreamType")]
+        [Validation(Required=false)]
+        public int? StreamType { get; set; }
 
     }
 

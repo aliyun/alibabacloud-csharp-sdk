@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
+    public class QueryVisionDeviceInfoRequest : TeaModel {
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("Scheme")]
-        [Validation(Required=false)]
-        public string Scheme { get; set; }
 
     }
 

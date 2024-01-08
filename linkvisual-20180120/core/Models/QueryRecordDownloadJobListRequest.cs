@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
+    public class QueryRecordDownloadJobListRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("Scheme")]
-        [Validation(Required=false)]
-        public string Scheme { get; set; }
 
     }
 

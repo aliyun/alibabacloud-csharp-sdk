@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
+    public class DeleteRtmpKeyRequest : TeaModel {
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("Scheme")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string Scheme { get; set; }
+        public int? Type { get; set; }
 
     }
 

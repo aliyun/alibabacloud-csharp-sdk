@@ -8,64 +8,72 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryRecordResponseBody : TeaModel {
+    public class QueryRecordDownloadJobListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public QueryRecordResponseBodyData Data { get; set; }
-        public class QueryRecordResponseBodyData : TeaModel {
-            [NameInMap("List")]
+        public QueryRecordDownloadJobListResponseBodyData Data { get; set; }
+        public class QueryRecordDownloadJobListResponseBodyData : TeaModel {
+            [NameInMap("JobList")]
             [Validation(Required=false)]
-            public List<QueryRecordResponseBodyDataList> List { get; set; }
-            public class QueryRecordResponseBodyDataList : TeaModel {
+            public List<QueryRecordDownloadJobListResponseBodyDataJobList> JobList { get; set; }
+            public class QueryRecordDownloadJobListResponseBodyDataJobList : TeaModel {
                 [NameInMap("BeginTime")]
                 [Validation(Required=false)]
-                public string BeginTime { get; set; }
+                public int? BeginTime { get; set; }
 
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
-                public string EndTime { get; set; }
-
-                [NameInMap("EventType")]
-                [Validation(Required=false)]
-                public int? EventType { get; set; }
+                public int? EndTime { get; set; }
 
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                [NameInMap("FileSize")]
+                [NameInMap("IotId")]
                 [Validation(Required=false)]
-                public int? FileSize { get; set; }
+                public string IotId { get; set; }
+
+                [NameInMap("JobErrorCode")]
+                [Validation(Required=false)]
+                public int? JobErrorCode { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public int? Progress { get; set; }
 
                 [NameInMap("RecordType")]
                 [Validation(Required=false)]
                 public int? RecordType { get; set; }
 
-                [NameInMap("SnapshotUrl")]
+                [NameInMap("Status")]
                 [Validation(Required=false)]
-                public string SnapshotUrl { get; set; }
+                public int? Status { get; set; }
 
                 [NameInMap("StreamType")]
                 [Validation(Required=false)]
                 public int? StreamType { get; set; }
 
-                [NameInMap("VideoFrameNumber")]
+                [NameInMap("Type")]
                 [Validation(Required=false)]
-                public int? VideoFrameNumber { get; set; }
+                public int? Type { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
 
             }
 
-            [NameInMap("Page")]
+            [NameInMap("Total")]
             [Validation(Required=false)]
-            public int? Page { get; set; }
-
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
+            public int? Total { get; set; }
 
         }
 

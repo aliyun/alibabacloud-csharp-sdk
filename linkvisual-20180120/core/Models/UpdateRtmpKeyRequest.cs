@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class QueryVoiceIntercomRequest : TeaModel {
+    public class UpdateRtmpKeyRequest : TeaModel {
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
@@ -25,9 +25,21 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("Scheme")]
+        [NameInMap("PullAuthKey")]
         [Validation(Required=false)]
-        public string Scheme { get; set; }
+        public string PullAuthKey { get; set; }
+
+        [NameInMap("PullKeyExpireTime")]
+        [Validation(Required=false)]
+        public int? PullKeyExpireTime { get; set; }
+
+        [NameInMap("PushAuthKey")]
+        [Validation(Required=false)]
+        public string PushAuthKey { get; set; }
+
+        [NameInMap("PushKeyExpireTime")]
+        [Validation(Required=false)]
+        public int? PushKeyExpireTime { get; set; }
 
     }
 
