@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string IdCardConfigShrink { get; set; }
 
+        [NameInMap("InternationalBusinessLicenseConfig")]
+        [Validation(Required=false)]
+        public string InternationalBusinessLicenseConfigShrink { get; set; }
+
         [NameInMap("InternationalIdCardConfig")]
         [Validation(Required=false)]
         public string InternationalIdCardConfigShrink { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
+
+        [NameInMap("TableConfig")]
+        [Validation(Required=false)]
+        public string TableConfigShrink { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]

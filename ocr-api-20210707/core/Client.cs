@@ -254,6 +254,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 request.IdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdCardConfig, "IdCardConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalBusinessLicenseConfig))
+            {
+                request.InternationalBusinessLicenseConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalBusinessLicenseConfig, "InternationalBusinessLicenseConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalIdCardConfig))
             {
                 request.InternationalIdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalIdCardConfig, "InternationalIdCardConfig", "json");
@@ -261,6 +265,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiLanConfig))
             {
                 request.MultiLanConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiLanConfig, "MultiLanConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableConfig))
+            {
+                request.TableConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableConfig, "TableConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedConfigShrink))
@@ -270,6 +278,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardConfigShrink))
             {
                 query["IdCardConfig"] = request.IdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalBusinessLicenseConfigShrink))
+            {
+                query["InternationalBusinessLicenseConfig"] = request.InternationalBusinessLicenseConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalIdCardConfigShrink))
             {
@@ -310,6 +322,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableConfigShrink))
+            {
+                query["TableConfig"] = request.TableConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -353,6 +369,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 request.IdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdCardConfig, "IdCardConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalBusinessLicenseConfig))
+            {
+                request.InternationalBusinessLicenseConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalBusinessLicenseConfig, "InternationalBusinessLicenseConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InternationalIdCardConfig))
             {
                 request.InternationalIdCardConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InternationalIdCardConfig, "InternationalIdCardConfig", "json");
@@ -360,6 +380,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiLanConfig))
             {
                 request.MultiLanConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiLanConfig, "MultiLanConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableConfig))
+            {
+                request.TableConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableConfig, "TableConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedConfigShrink))
@@ -369,6 +393,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardConfigShrink))
             {
                 query["IdCardConfig"] = request.IdCardConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalBusinessLicenseConfigShrink))
+            {
+                query["InternationalBusinessLicenseConfig"] = request.InternationalBusinessLicenseConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternationalIdCardConfigShrink))
             {
@@ -409,6 +437,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableConfigShrink))
+            {
+                query["TableConfig"] = request.TableConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {

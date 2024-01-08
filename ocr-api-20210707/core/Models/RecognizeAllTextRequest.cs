@@ -57,6 +57,16 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 
         }
 
+        [NameInMap("InternationalBusinessLicenseConfig")]
+        [Validation(Required=false)]
+        public RecognizeAllTextRequestInternationalBusinessLicenseConfig InternationalBusinessLicenseConfig { get; set; }
+        public class RecognizeAllTextRequestInternationalBusinessLicenseConfig : TeaModel {
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
+
+        }
+
         [NameInMap("InternationalIdCardConfig")]
         [Validation(Required=false)]
         public RecognizeAllTextRequestInternationalIdCardConfig InternationalIdCardConfig { get; set; }
@@ -108,6 +118,28 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
+
+        [NameInMap("TableConfig")]
+        [Validation(Required=false)]
+        public RecognizeAllTextRequestTableConfig TableConfig { get; set; }
+        public class RecognizeAllTextRequestTableConfig : TeaModel {
+            [NameInMap("IsHandWritingTable")]
+            [Validation(Required=false)]
+            public bool? IsHandWritingTable { get; set; }
+
+            [NameInMap("IsLineLessTable")]
+            [Validation(Required=false)]
+            public bool? IsLineLessTable { get; set; }
+
+            [NameInMap("OutputTableExcel")]
+            [Validation(Required=false)]
+            public bool? OutputTableExcel { get; set; }
+
+            [NameInMap("OutputTableHtml")]
+            [Validation(Required=false)]
+            public bool? OutputTableHtml { get; set; }
+
+        }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
