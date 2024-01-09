@@ -214,6 +214,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStrategy))
+            {
+                query["ImageStrategy"] = request.ImageStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
+            {
+                query["RevealMarkdown"] = request.RevealMarkdown;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -240,6 +248,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStrategy))
+            {
+                query["ImageStrategy"] = request.ImageStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
+            {
+                query["RevealMarkdown"] = request.RevealMarkdown;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1664,6 +1680,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStrategy))
+            {
+                query["ImageStrategy"] = request.ImageStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
+            {
+                query["RevealMarkdown"] = request.RevealMarkdown;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1698,6 +1722,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStrategy))
+            {
+                query["ImageStrategy"] = request.ImageStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevealMarkdown))
+            {
+                query["RevealMarkdown"] = request.RevealMarkdown;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

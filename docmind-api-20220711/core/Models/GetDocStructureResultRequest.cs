@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("ImageStrategy")]
+        [Validation(Required=false)]
+        public string ImageStrategy { get; set; }
+
+        [NameInMap("RevealMarkdown")]
+        [Validation(Required=false)]
+        public bool? RevealMarkdown { get; set; }
+
     }
 
 }
