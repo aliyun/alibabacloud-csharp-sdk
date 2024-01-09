@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("CloudDisks")]
+        [Validation(Required=false)]
+        public List<UpdateInstanceRequestCloudDisks> CloudDisks { get; set; }
+        public class UpdateInstanceRequestCloudDisks : TeaModel {
+            [NameInMap("Capacity")]
+            [Validation(Required=false)]
+            public string Capacity { get; set; }
+
+            [NameInMap("SubType")]
+            [Validation(Required=false)]
+            public string SubType { get; set; }
+
+        }
+
         [NameInMap("Datasets")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestDatasets> Datasets { get; set; }
@@ -34,6 +48,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("DisassociateDriver")]
         [Validation(Required=false)]
         public bool? DisassociateDriver { get; set; }
+
+        [NameInMap("DisassociateForwardInfos")]
+        [Validation(Required=false)]
+        public bool? DisassociateForwardInfos { get; set; }
 
         [NameInMap("DisassociateVpc")]
         [Validation(Required=false)]

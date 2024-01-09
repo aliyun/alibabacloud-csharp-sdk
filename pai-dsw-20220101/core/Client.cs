@@ -1939,6 +1939,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
+            {
+                body["CloudDisks"] = request.CloudDisks;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
                 body["Datasets"] = request.Datasets;
@@ -1950,6 +1954,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateDriver))
             {
                 body["DisassociateDriver"] = request.DisassociateDriver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateForwardInfos))
+            {
+                body["DisassociateForwardInfos"] = request.DisassociateForwardInfos;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateVpc))
             {
@@ -2023,6 +2031,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
+            {
+                body["CloudDisks"] = request.CloudDisks;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasets))
             {
                 body["Datasets"] = request.Datasets;
@@ -2034,6 +2046,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateDriver))
             {
                 body["DisassociateDriver"] = request.DisassociateDriver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateForwardInfos))
+            {
+                body["DisassociateForwardInfos"] = request.DisassociateForwardInfos;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisassociateVpc))
             {
