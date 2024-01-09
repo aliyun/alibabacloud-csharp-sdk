@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// The ID of the task.
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

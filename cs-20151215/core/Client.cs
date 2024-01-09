@@ -855,6 +855,20 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateAutoscalingConfigWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+          * *   [Create an ACK managed cluster](~~90776~~)
+          * *   [Create an ACK dedicated cluster](~~197620~~)
+          * *   [Create an ACK Serverless cluster](~~144246~~)
+          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          *
+          * @param request CreateClusterRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1239,6 +1253,20 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+          * *   [Create an ACK managed cluster](~~90776~~)
+          * *   [Create an ACK dedicated cluster](~~197620~~)
+          * *   [Create an ACK Serverless cluster](~~144246~~)
+          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          *
+          * @param request CreateClusterRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1623,6 +1651,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+          * *   [Create an ACK managed cluster](~~90776~~)
+          * *   [Create an ACK dedicated cluster](~~197620~~)
+          * *   [Create an ACK Serverless cluster](~~144246~~)
+          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1630,6 +1670,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateClusterWithOptions(request, headers, runtime);
         }
 
+        /**
+          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+          * *   [Create an ACK managed cluster](~~90776~~)
+          * *   [Create an ACK dedicated cluster](~~197620~~)
+          * *   [Create an ACK Serverless cluster](~~144246~~)
+          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4221,6 +4273,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterTasksWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+          * **
+          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+          *
+          * @param request DescribeClusterUserKubeconfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterUserKubeconfigResponse
+         */
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfigWithOptions(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4253,6 +4314,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterUserKubeconfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **
+          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+          *
+          * @param request DescribeClusterUserKubeconfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterUserKubeconfigResponse
+         */
         public async Task<DescribeClusterUserKubeconfigResponse> DescribeClusterUserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4285,6 +4355,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterUserKubeconfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **
+          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+          *
+          * @param request DescribeClusterUserKubeconfigRequest
+          * @return DescribeClusterUserKubeconfigResponse
+         */
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfig(string ClusterId, DescribeClusterUserKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4292,6 +4369,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterUserKubeconfigWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+          * **
+          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+          *
+          * @param request DescribeClusterUserKubeconfigRequest
+          * @return DescribeClusterUserKubeconfigResponse
+         */
         public async Task<DescribeClusterUserKubeconfigResponse> DescribeClusterUserKubeconfigAsync(string ClusterId, DescribeClusterUserKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7974,7 +8058,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
           *
           * @param request ModifyNodePoolNodeConfigRequest
           * @param headers map
@@ -8014,7 +8098,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
           *
           * @param request ModifyNodePoolNodeConfigRequest
           * @param headers map
@@ -8054,7 +8138,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
           *
           * @param request ModifyNodePoolNodeConfigRequest
           * @return ModifyNodePoolNodeConfigResponse
@@ -8067,7 +8151,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
           *
           * @param request ModifyNodePoolNodeConfigRequest
           * @return ModifyNodePoolNodeConfigResponse

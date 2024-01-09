@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DockerVersion { get; set; }
 
             /// <summary>
-            /// The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.
+            /// The ID of the Server Load Balancer (SLB) instance that is used by the Ingress of the cluster.
             /// 
             /// The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.
             /// </summary>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
             /// 
-            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can call a specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
             /// </summary>
             [NameInMap("init_version")]
             [Validation(Required=false)]
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MetaData { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// 
-            /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+            /// The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `classic`: classic network
             /// *   `vpc`: virtual private cloud (VPC)
             /// *   `overlay`: overlay network
-            /// *   `calico`: network powered by Calico
+            /// *   `calico`: network powered by Calico.
             /// </summary>
             [NameInMap("network_mode")]
             [Validation(Required=false)]
@@ -156,15 +156,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The cluster identifier. Valid values:
             /// 
-            /// *   `Edge`: ACK Edge cluster
-            /// *   `Default`: non-ACK Edge cluster
+            /// *   `Edge`: The cluster is an ACK Edge cluster.
+            /// *   `Default`: The cluster is not an ACK Edge cluster.
             /// </summary>
             [NameInMap("profile")]
             [Validation(Required=false)]
             public string Profile { get; set; }
 
             /// <summary>
-            /// The region ID of the associated cluster.
+            /// The region ID of the cluster.
             /// </summary>
             [NameInMap("region_id")]
             [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the security group to which the cluster belongs.
+            /// The ID of the security group to which the instances of the cluster belong.
             /// </summary>
             [NameInMap("security_group_id")]
             [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SubnetCidr { get; set; }
 
             /// <summary>
-            /// The labels of the cluster.
+            /// The resource labels of the cluster.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+            /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.
             /// </summary>
             [NameInMap("worker_ram_role_name")]
             [Validation(Required=false)]

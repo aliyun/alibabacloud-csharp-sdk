@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterChecksRequest : TeaModel {
+        /// <summary>
+        /// The check method.
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

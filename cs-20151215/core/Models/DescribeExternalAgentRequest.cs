@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeExternalAgentRequest : TeaModel {
         /// <summary>
-        /// The agent mode.
+        /// The permission mode of the agent. Valid values:
+        /// 
+        /// admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.
         /// </summary>
         [NameInMap("AgentMode")]
         [Validation(Required=false)]

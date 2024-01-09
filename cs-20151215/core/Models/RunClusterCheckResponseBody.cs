@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RunClusterCheckResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the cluster check task.
+        /// </summary>
         [NameInMap("check_id")]
         [Validation(Required=false)]
         public string CheckId { get; set; }

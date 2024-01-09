@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterResourcesResponseBody> Body { get; set; }
         public class DescribeClusterResourcesResponseBody : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// </summary>
             [NameInMap("instance_id")]
             [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceInfo { get; set; }
 
             /// <summary>
-            /// The type of resource.
+            /// The resource type.
             /// </summary>
             [NameInMap("resource_type")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the resource. Valid values:
+            /// The resource status. Valid values:
             /// 
             /// *   `CREATE_COMPLETE`: The resource is created.
             /// *   `CREATE_FAILED`: The resource failed to be created.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodePoolsResponseBody : TeaModel {
         /// <summary>
-        /// The list of the returned node pools.
+        /// A list of node pools.
         /// </summary>
         [NameInMap("nodepools")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling AutoScaling { get; set; }
             public class DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling : TeaModel {
                 /// <summary>
-                /// The maximum bandwidth of the elastic IP address (EIP).
+                /// The maximum bandwidth of the EIP.
                 /// </summary>
                 [NameInMap("eip_bandwidth")]
                 [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// The metering method of the EIP. Valid values:
                 /// 
                 /// *   `PayByBandwidth`: pay-by-bandwidth.
-                /// *   `PayByTraffic`: pay-by-data-transfer.
+                /// *   `PayByTraffic`: pay-by-traffic.
                 /// </summary>
                 [NameInMap("eip_internet_charge_type")]
                 [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? MaxInstances { get; set; }
 
                 /// <summary>
-                /// The minimum number of ECS instances that must be kept in the node pool.
+                /// The minimum number of ECS instances that must be retained in the node pool.
                 /// </summary>
                 [NameInMap("min_instances")]
                 [Validation(Required=false)]
                 public long? MinInstances { get; set; }
 
                 /// <summary>
-                /// The instance types that can be used for the auto scaling of the node pool. Valid values:
+                /// The instance types that can be used for the auto scaling of a node pool. Valid values:
                 /// 
                 /// *   `cpu`: regular instance.
                 /// *   `gpu`: GPU-accelerated instance.
@@ -89,6 +89,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
+            /// This parameter is deprecated.
+            /// 
             /// The network configuration of the edge node pool. This parameter takes effect only for edge node pools.
             /// </summary>
             [NameInMap("interconnect_config")]
@@ -96,13 +98,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig InterconnectConfig { get; set; }
             public class DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig : TeaModel {
                 /// <summary>
-                /// The bandwidth of the enhanced edge node pool. Unit: M.
+                /// This parameter is deprecated.
+                /// 
+                /// The bandwidth of the enhanced edge node pool. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("bandwidth")]
                 [Validation(Required=false)]
                 public long? Bandwidth { get; set; }
 
                 /// <summary>
+                /// This parameter is deprecated.
+                /// 
                 /// The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.
                 /// </summary>
                 [NameInMap("ccn_id")]
@@ -110,13 +116,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string CcnId { get; set; }
 
                 /// <summary>
-                /// The region to which the CCN instance that is associated with the enhanced edge node pool belongs.
+                /// This parameter is deprecated.
+                /// 
+                /// The region to which the CCN instance that is with the enhanced edge node pool belongs.
                 /// </summary>
                 [NameInMap("ccn_region_id")]
                 [Validation(Required=false)]
                 public string CcnRegionId { get; set; }
 
                 /// <summary>
+                /// This parameter is deprecated.
+                /// 
                 /// The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.
                 /// </summary>
                 [NameInMap("cen_id")]
@@ -124,6 +134,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string CenId { get; set; }
 
                 /// <summary>
+                /// This parameter is deprecated.
+                /// 
                 /// The subscription duration of the enhanced edge node pool. The duration is measured in months.
                 /// </summary>
                 [NameInMap("improved_period")]
@@ -133,14 +145,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The network type of the edge node pool. Valid values: basic and enhanced. This parameter takes effect only for edge node pools.
+            /// The network type of the edge node pool. basic: basic edge node pools. dedicated: dedicated edge node pools. This parameter takes effect only for edge node pools.
             /// </summary>
             [NameInMap("interconnect_mode")]
             [Validation(Required=false)]
             public string InterconnectMode { get; set; }
 
             /// <summary>
-            /// The configuration of the cluster where the node pool is deployed.
+            /// The configurations of the cluster where the node pool is deployed.
             /// </summary>
             [NameInMap("kubernetes_config")]
             [Validation(Required=false)]
@@ -157,9 +169,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? CmsEnabled { get; set; }
 
                 /// <summary>
-                /// The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+                /// The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
                 /// 
-                /// *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
+                /// *   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
                 /// *   `none`: indicates that the default CPU affinity is used.
                 /// </summary>
                 [NameInMap("cpu_policy")]
@@ -169,8 +181,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:
                 /// 
-                /// *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
-                /// *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+                /// *   Each label is a case-sensitive key-value pair. You can add at most 20 labels.
+                /// *   The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
                 /// </summary>
                 [NameInMap("labels")]
                 [Validation(Required=false)]
@@ -203,18 +215,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RuntimeVersion { get; set; }
 
                 /// <summary>
-                /// The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+                /// The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
                 /// </summary>
                 [NameInMap("taints")]
                 [Validation(Required=false)]
                 public List<Taint> Taints { get; set; }
 
+                /// <summary>
+                /// 扩容后的节点是否可调度。
+                /// </summary>
                 [NameInMap("unschedulable")]
                 [Validation(Required=false)]
                 public bool? Unschedulable { get; set; }
 
                 /// <summary>
-                /// The user data of the node pool. For more information, see [Generate user data](~~49121~~).
+                /// The user data of the node pool. For more information, see [Generate user-defined data](~~49121~~).
                 /// </summary>
                 [NameInMap("user_data")]
                 [Validation(Required=false)]
@@ -223,7 +238,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The configuration of the managed node pool feature. The configuration takes effect only for ACK Pro managed clusters.
+            /// The configurations of managed node pools. Managed node pools are available only in professional managed Kubernetes clusters.
             /// </summary>
             [NameInMap("management")]
             [Validation(Required=false)]
@@ -319,7 +334,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// The configuration of auto update. The configuration takes effect only when `enable=true` is specified.
+                /// The configuration of auto update. The configuration take effects only when `enable=true` is specified.
                 /// </summary>
                 [NameInMap("upgrade_config")]
                 [Validation(Required=false)]
@@ -336,7 +351,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public bool? AutoUpgrade { get; set; }
 
                     /// <summary>
-                    /// The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.
+                    /// The maximum number of nodes that can be in the unschedulable state. Valid values: 1 to 1000.
                     /// 
                     /// Default value: 1.
                     /// </summary>
@@ -352,9 +367,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public long? Surge { get; set; }
 
                     /// <summary>
-                    /// The percentage of additional nodes to the nodes in the node pool. You must set this parameter or `surge`.
+                    /// The percentage of temporary nodes to the nodes in the node pool. You must set this parameter or `surge`.
                     /// 
-                    /// The number of additional nodes = The percentage of additional nodes × The number of nodes in the node pool. For example, the percentage of additional nodes is set to 50% and the number of nodes in the node pool is six. The number of additional nodes will be three.
+                    /// The number of extra nodes = The percentage of extra nodes × The number of nodes in the node pool. For example, the percentage of extra nodes is set to 50% and the number of nodes in the node pool is six. The number of extra nodes will be three.
                     /// </summary>
                     [NameInMap("surge_percentage")]
                     [Validation(Required=false)]
@@ -372,14 +387,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxNodes { get; set; }
 
             /// <summary>
-            /// 节点配置。
+            /// The configurations of nodes.
             /// </summary>
             [NameInMap("node_config")]
             [Validation(Required=false)]
             public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig NodeConfig { get; set; }
             public class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig : TeaModel {
                 /// <summary>
-                /// Kubelet参数配置。
+                /// The kubelet configuration.
                 /// </summary>
                 [NameInMap("kubelet_configuration")]
                 [Validation(Required=false)]
@@ -402,7 +417,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Created { get; set; }
 
                 /// <summary>
-                /// Indicates whether the node pool is a default node pool. An ACK cluster usually has only one default node pool. Valid values:
+                /// Indicates whether the node pool is a default node pool. A Container Service for Kubernetes (ACK) cluster usually has only one default node pool. Valid values:
                 /// 
                 /// *   `true`: The node pool is a default node pool.
                 /// *   `false`: The node pool is not a default node pool.
@@ -414,7 +429,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The name of the node pool.
                 /// 
-                /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
+                /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -435,7 +450,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The ID of the resource group to which the node pool belongs.
                 /// </summary>
                 [NameInMap("resource_group_id")]
                 [Validation(Required=false)]
@@ -444,7 +459,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The type of node pool. Valid values:
                 /// 
-                /// *   `edge`: edge node pool.
+                /// *   `edge`: edge node pool
                 /// *   `ess`: node pool in the cloud.
                 /// </summary>
                 [NameInMap("type")]
@@ -486,6 +501,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public long? AutoRenewPeriod { get; set; }
 
+                /// <summary>
+                /// 是否开启CIS加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启CIS加固。
+                /// </summary>
                 [NameInMap("cis_enabled")]
                 [Validation(Required=false)]
                 public bool? CisEnabled { get; set; }
@@ -515,7 +533,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string DeploymentsetId { get; set; }
 
                 /// <summary>
-                /// The expected number of nodes in the node pool.
+                /// You can now specify the desired number of nodes for a node pool.
                 /// </summary>
                 [NameInMap("desired_size")]
                 [Validation(Required=false)]
@@ -528,12 +546,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
+                /// <summary>
+                /// 操作系统镜像类型。
+                /// </summary>
                 [NameInMap("image_type")]
                 [Validation(Required=false)]
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// The billing method of the nodes in the node pool. Valid values:
+                /// The billing method of the nodes in a node pool. Valid values:
                 /// 
                 /// *   `PrePaid`: the subscription billing method.
                 /// *   `PostPaid`: the pay-as-you-go billing method.
@@ -543,7 +564,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the actual instance stock.
+                /// A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The actual instance types used to create nodes are subject to inventory availability.
                 /// </summary>
                 [NameInMap("instance_types")]
                 [Validation(Required=false)]
@@ -572,6 +593,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string KeyPair { get; set; }
 
+                /// <summary>
+                /// 弹出的ECS实例是否使用以非root用户登陆。
+                /// </summary>
                 [NameInMap("login_as_non_root")]
                 [Validation(Required=false)]
                 public bool? LoginAsNonRoot { get; set; }
@@ -594,7 +618,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// 
                 ///     **
                 /// 
-                ///     **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.
+                ///     **Note** `COST_OPTIMIZED` takes effect only when multiple instance types or preemptible instances are specified in the auto scaling conflagrations.
                 /// 
                 /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
                 /// </summary>
@@ -628,7 +652,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The billing cycle of the nodes. This parameter takes effect only when `instance_charge_type` is set to `PrePaid`.
                 /// 
-                /// Valid value: `Month`.
+                /// Valid value: `Month`
                 /// </summary>
                 [NameInMap("period_unit")]
                 [Validation(Required=false)]
@@ -654,7 +678,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions : TeaModel {
                     /// <summary>
-                    /// The ID of the private node pool. The ID of a private node pool is the same as the ID of the elasticity assurance or capacity reservation for which the private node pool is generated.
+                    /// The private pool ID. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.
                     /// </summary>
                     [NameInMap("id")]
                     [Validation(Required=false)]
@@ -663,9 +687,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     /// <summary>
                     /// The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
                     /// 
-                    /// *   `Open`: open private pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.
-                    /// *   `Target`: specific private pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.
-                    /// *   `None`: no private node pool is used. The resources of private node pools are not used to launch the instances.
+                    /// *   `Open`: open private node pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.
+                    /// *   `Target`: specific private pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be started.
+                    /// *   `None`: no private node pool is used. The resources of private node pools are not used to lancuh instances.
                     /// </summary>
                     [NameInMap("match_criteria")]
                     [Validation(Required=false)]
@@ -674,14 +698,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+                /// The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes that are created on Elastic Compute Service (ECS) instances.
                 /// </summary>
                 [NameInMap("ram_policy")]
                 [Validation(Required=false)]
                 public string RamPolicy { get; set; }
 
                 /// <summary>
-                /// After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
+                /// After you specify a list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelists of the ApsaraDB RDS instances.
                 /// </summary>
                 [NameInMap("rds_instances")]
                 [Validation(Required=false)]
@@ -698,7 +722,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// The scaling mode of the scaling group. Valid values:
                 /// 
                 /// *   `release`: the standard mode. ECS instances are created and released based on resource usage.
-                /// *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.
+                /// *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances attached with local disks.
                 /// </summary>
                 [NameInMap("scaling_policy")]
                 [Validation(Required=false)]
@@ -718,6 +742,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public List<string> SecurityGroupIds { get; set; }
 
+                /// <summary>
+                /// 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。
+                /// </summary>
                 [NameInMap("soc_enabled")]
                 [Validation(Required=false)]
                 public bool? SocEnabled { get; set; }
@@ -730,7 +757,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? SpotInstancePools { get; set; }
 
                 /// <summary>
-                /// Indicates whether preemptible instances are supplemented when the number of preemptible instances drops below the specified minimum number. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values: Valid values:
+                /// Indicates whether preemptible instances are supplemented when the number of preemptible instances drops below the specified minimum number. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:
                 /// 
                 /// *   `true`: Supplementation of preemptible instances is enabled.
                 /// *   `false`: Supplementation of preemptible instances is disabled.
@@ -777,10 +804,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
 
+                /// <summary>
+                /// 节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。
+                /// </summary>
                 [NameInMap("system_disk_bursting_enabled")]
                 [Validation(Required=false)]
                 public bool? SystemDiskBurstingEnabled { get; set; }
 
+                /// <summary>
+                /// 系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值范围：cloud：普通云盘。cloud_efficiency：高效云盘。cloud_ssd：SSD云盘。cloud_essd：ESSD云盘。
+                /// </summary>
                 [NameInMap("system_disk_categories")]
                 [Validation(Required=false)]
                 public List<string> SystemDiskCategories { get; set; }
@@ -795,14 +828,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string SystemDiskCategory { get; set; }
 
+                /// <summary>
+                /// 系统盘采用的加密算法。取值范围：aes-256。
+                /// </summary>
                 [NameInMap("system_disk_encrypt_algorithm")]
                 [Validation(Required=false)]
                 public string SystemDiskEncryptAlgorithm { get; set; }
 
+                /// <summary>
+                /// 是否加密系统盘。取值范围：true：加密。false：不加密。
+                /// </summary>
                 [NameInMap("system_disk_encrypted")]
                 [Validation(Required=false)]
                 public bool? SystemDiskEncrypted { get; set; }
 
+                /// <summary>
+                /// 系统盘使用的KMS密钥ID。
+                /// </summary>
                 [NameInMap("system_disk_kms_key_id")]
                 [Validation(Required=false)]
                 public string SystemDiskKmsKeyId { get; set; }
@@ -814,6 +856,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string SystemDiskPerformanceLevel { get; set; }
 
+                /// <summary>
+                /// 节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。
+                /// </summary>
                 [NameInMap("system_disk_provisioned_iops")]
                 [Validation(Required=false)]
                 public long? SystemDiskProvisionedIops { get; set; }
@@ -821,7 +866,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The system disk size of a node. Unit: GiB.
                 /// 
-                /// Valid values: 20 to 500.
+                /// Valid values: 20 to 500
                 /// </summary>
                 [NameInMap("system_disk_size")]
                 [Validation(Required=false)]
@@ -830,16 +875,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// The labels that you want to add to the ECS instances.
                 /// 
-                /// A key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
+                /// The key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public List<Tag> Tags { get; set; }
 
                 /// <summary>
-                /// The IDs of vSwitches. You can specify 1 to 20 vSwitches.
+                /// The vSwitch IDs. You can specify 1 to 20 vSwitches.
                 /// 
-                /// > We recommend that you select vSwitches in different zones to ensure high availability.
+                /// >  To ensure high availability, we recommend that you select vSwitches in different zones.
                 /// </summary>
                 [NameInMap("vswitch_ids")]
                 [Validation(Required=false)]
@@ -919,7 +964,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// The configuration of confidential computing.
+            /// The configurations of confidential computing.
             /// </summary>
             [NameInMap("tee_config")]
             [Validation(Required=false)]

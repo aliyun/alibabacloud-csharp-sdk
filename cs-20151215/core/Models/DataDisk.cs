@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Device { get; set; }
 
+        [NameInMap("disk_name")]
+        [Validation(Required=false)]
+        public string DiskName { get; set; }
+
         [NameInMap("encrypted")]
         [Validation(Required=false)]
         public string Encrypted { get; set; }
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("mount_target")]
         [Validation(Required=false)]
         public string MountTarget { get; set; }
-
-        [NameInMap("name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
         [NameInMap("performance_level")]
         [Validation(Required=false)]

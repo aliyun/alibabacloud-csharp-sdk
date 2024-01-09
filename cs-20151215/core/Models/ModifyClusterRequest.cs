@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterRequest : TeaModel {
         /// <summary>
-        /// 注册集群 API Server SLB 访问控制列表。
+        /// The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
@@ -33,6 +33,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ApiServerEipId { get; set; }
 
+        /// <summary>
+        /// The cluster name.
+        /// 
+        /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+        /// </summary>
         [NameInMap("cluster_name")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
@@ -104,14 +109,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// 系统事件存储配置。
+        /// </summary>
         [NameInMap("system_events_logging")]
         [Validation(Required=false)]
         public ModifyClusterRequestSystemEventsLogging SystemEventsLogging { get; set; }
         public class ModifyClusterRequestSystemEventsLogging : TeaModel {
+            /// <summary>
+            /// 是否开启系统事件存储。
+            /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// 系统事件存储的LogProject名称。
+            /// </summary>
             [NameInMap("logging_project")]
             [Validation(Required=false)]
             public string LoggingProject { get; set; }
