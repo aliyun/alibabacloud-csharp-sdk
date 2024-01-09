@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
 {
     public class ActualDeductResourceResult : TeaModel {
+        [NameInMap("errorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
-
-        [NameInMap("errorcode")]
-        [Validation(Required=false)]
-        public string Errorcode { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]
