@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? Dimension { get; set; }
 
+        [NameInMap("ExternalStorage")]
+        [Validation(Required=false)]
+        public int? ExternalStorage { get; set; }
+
         [NameInMap("FullTextRetrievalFields")]
         [Validation(Required=false)]
         public string FullTextRetrievalFields { get; set; }
