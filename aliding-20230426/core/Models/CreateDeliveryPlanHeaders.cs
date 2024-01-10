@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateDeliveryPlanHeadersAccountContext AccountContext { get; set; }
         public class CreateDeliveryPlanHeadersAccountContext : TeaModel {
-            [NameInMap("accountId")]
+            [NameInMap("userToken")]
             [Validation(Required=false)]
-            public string AccountId { get; set; }
+            public string UserToken { get; set; }
 
         }
 
