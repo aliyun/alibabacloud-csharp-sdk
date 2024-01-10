@@ -82,20 +82,6 @@ namespace AlibabaCloud.SDK.Mts20210728
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public QueryCopyrightResponse QueryCopyright(QueryCopyrightRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryCopyrightWithOptions(request, headers, runtime);
-        }
-
-        public async Task<QueryCopyrightResponse> QueryCopyrightAsync(QueryCopyrightRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryCopyrightWithOptionsAsync(request, headers, runtime);
-        }
-
         public QueryCopyrightResponse QueryCopyrightWithOptions(QueryCopyrightRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -192,18 +178,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryCopyrightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryCopyrightExtractResponse QueryCopyrightExtract(QueryCopyrightExtractRequest request)
+        public QueryCopyrightResponse QueryCopyright(QueryCopyrightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryCopyrightExtractWithOptions(request, headers, runtime);
+            return QueryCopyrightWithOptions(request, headers, runtime);
         }
 
-        public async Task<QueryCopyrightExtractResponse> QueryCopyrightExtractAsync(QueryCopyrightExtractRequest request)
+        public async Task<QueryCopyrightResponse> QueryCopyrightAsync(QueryCopyrightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryCopyrightExtractWithOptionsAsync(request, headers, runtime);
+            return await QueryCopyrightWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryCopyrightExtractResponse QueryCopyrightExtractWithOptions(QueryCopyrightExtractRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -262,18 +248,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryCopyrightExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryTraceAbResponse QueryTraceAb(QueryTraceAbRequest request)
+        public QueryCopyrightExtractResponse QueryCopyrightExtract(QueryCopyrightExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryTraceAbWithOptions(request, headers, runtime);
+            return QueryCopyrightExtractWithOptions(request, headers, runtime);
         }
 
-        public async Task<QueryTraceAbResponse> QueryTraceAbAsync(QueryTraceAbRequest request)
+        public async Task<QueryCopyrightExtractResponse> QueryCopyrightExtractAsync(QueryCopyrightExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryTraceAbWithOptionsAsync(request, headers, runtime);
+            return await QueryCopyrightExtractWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryTraceAbResponse QueryTraceAbWithOptions(QueryTraceAbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -340,18 +326,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryTraceAbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryTraceExtractResponse QueryTraceExtract(QueryTraceExtractRequest request)
+        public QueryTraceAbResponse QueryTraceAb(QueryTraceAbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryTraceExtractWithOptions(request, headers, runtime);
+            return QueryTraceAbWithOptions(request, headers, runtime);
         }
 
-        public async Task<QueryTraceExtractResponse> QueryTraceExtractAsync(QueryTraceExtractRequest request)
+        public async Task<QueryTraceAbResponse> QueryTraceAbAsync(QueryTraceAbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryTraceExtractWithOptionsAsync(request, headers, runtime);
+            return await QueryTraceAbWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryTraceExtractResponse QueryTraceExtractWithOptions(QueryTraceExtractRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -410,18 +396,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryTraceExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public QueryTraceMuResponse QueryTraceMu(QueryTraceMuRequest request)
+        public QueryTraceExtractResponse QueryTraceExtract(QueryTraceExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return QueryTraceMuWithOptions(request, headers, runtime);
+            return QueryTraceExtractWithOptions(request, headers, runtime);
         }
 
-        public async Task<QueryTraceMuResponse> QueryTraceMuAsync(QueryTraceMuRequest request)
+        public async Task<QueryTraceExtractResponse> QueryTraceExtractAsync(QueryTraceExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await QueryTraceMuWithOptionsAsync(request, headers, runtime);
+            return await QueryTraceExtractWithOptionsAsync(request, headers, runtime);
         }
 
         public QueryTraceMuResponse QueryTraceMuWithOptions(QueryTraceMuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -528,18 +514,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<QueryTraceMuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitCopyrightExtractResponse SubmitCopyrightExtract(SubmitCopyrightExtractRequest request)
+        public QueryTraceMuResponse QueryTraceMu(QueryTraceMuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitCopyrightExtractWithOptions(request, headers, runtime);
+            return QueryTraceMuWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitCopyrightExtractResponse> SubmitCopyrightExtractAsync(SubmitCopyrightExtractRequest request)
+        public async Task<QueryTraceMuResponse> QueryTraceMuAsync(QueryTraceMuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitCopyrightExtractWithOptionsAsync(request, headers, runtime);
+            return await QueryTraceMuWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitCopyrightExtractResponse SubmitCopyrightExtractWithOptions(SubmitCopyrightExtractRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -553,6 +539,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
@@ -594,6 +584,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Input"] = request.Input;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 body["Url"] = request.Url;
@@ -622,18 +616,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<SubmitCopyrightExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitCopyrightJobResponse SubmitCopyrightJob(SubmitCopyrightJobRequest request)
+        public SubmitCopyrightExtractResponse SubmitCopyrightExtract(SubmitCopyrightExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitCopyrightJobWithOptions(request, headers, runtime);
+            return SubmitCopyrightExtractWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobAsync(SubmitCopyrightJobRequest request)
+        public async Task<SubmitCopyrightExtractResponse> SubmitCopyrightExtractAsync(SubmitCopyrightExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitCopyrightJobWithOptionsAsync(request, headers, runtime);
+            return await SubmitCopyrightExtractWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitCopyrightJobResponse SubmitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -780,18 +774,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<SubmitCopyrightJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitImageCopyrightResponse SubmitImageCopyright(SubmitImageCopyrightRequest request)
+        public SubmitCopyrightJobResponse SubmitCopyrightJob(SubmitCopyrightJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitImageCopyrightWithOptions(request, headers, runtime);
+            return SubmitCopyrightJobWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitImageCopyrightResponse> SubmitImageCopyrightAsync(SubmitImageCopyrightRequest request)
+        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobAsync(SubmitCopyrightJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitImageCopyrightWithOptionsAsync(request, headers, runtime);
+            return await SubmitCopyrightJobWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitImageCopyrightResponse SubmitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -874,18 +868,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<SubmitImageCopyrightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitTraceAbResponse SubmitTraceAb(SubmitTraceAbRequest request)
+        public SubmitImageCopyrightResponse SubmitImageCopyright(SubmitImageCopyrightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitTraceAbWithOptions(request, headers, runtime);
+            return SubmitImageCopyrightWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitTraceAbResponse> SubmitTraceAbAsync(SubmitTraceAbRequest request)
+        public async Task<SubmitImageCopyrightResponse> SubmitImageCopyrightAsync(SubmitImageCopyrightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitTraceAbWithOptionsAsync(request, headers, runtime);
+            return await SubmitImageCopyrightWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitTraceAbResponse SubmitTraceAbWithOptions(SubmitTraceAbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1008,18 +1002,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<SubmitTraceAbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitTraceExtractResponse SubmitTraceExtract(SubmitTraceExtractRequest request)
+        public SubmitTraceAbResponse SubmitTraceAb(SubmitTraceAbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitTraceExtractWithOptions(request, headers, runtime);
+            return SubmitTraceAbWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitTraceExtractResponse> SubmitTraceExtractAsync(SubmitTraceExtractRequest request)
+        public async Task<SubmitTraceAbResponse> SubmitTraceAbAsync(SubmitTraceAbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitTraceExtractWithOptionsAsync(request, headers, runtime);
+            return await SubmitTraceAbWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitTraceExtractResponse SubmitTraceExtractWithOptions(SubmitTraceExtractRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1033,6 +1027,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
@@ -1074,6 +1072,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Input"] = request.Input;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 body["Url"] = request.Url;
@@ -1102,18 +1104,18 @@ namespace AlibabaCloud.SDK.Mts20210728
             return TeaModel.ToObject<SubmitTraceExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SubmitTracemuResponse SubmitTracemu(SubmitTracemuRequest request)
+        public SubmitTraceExtractResponse SubmitTraceExtract(SubmitTraceExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SubmitTracemuWithOptions(request, headers, runtime);
+            return SubmitTraceExtractWithOptions(request, headers, runtime);
         }
 
-        public async Task<SubmitTracemuResponse> SubmitTracemuAsync(SubmitTracemuRequest request)
+        public async Task<SubmitTraceExtractResponse> SubmitTraceExtractAsync(SubmitTraceExtractRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SubmitTracemuWithOptionsAsync(request, headers, runtime);
+            return await SubmitTraceExtractWithOptionsAsync(request, headers, runtime);
         }
 
         public SubmitTracemuResponse SubmitTracemuWithOptions(SubmitTracemuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1131,6 +1133,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
             {
                 body["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
             {
@@ -1172,6 +1178,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Output"] = request.Output;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["Params"] = request.Params;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
             {
                 body["Trace"] = request.Trace;
@@ -1194,6 +1204,20 @@ namespace AlibabaCloud.SDK.Mts20210728
                 BodyType = "json",
             };
             return TeaModel.ToObject<SubmitTracemuResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitTracemuResponse SubmitTracemu(SubmitTracemuRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitTracemuWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SubmitTracemuResponse> SubmitTracemuAsync(SubmitTracemuRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitTracemuWithOptionsAsync(request, headers, runtime);
         }
 
     }
