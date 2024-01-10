@@ -52,6 +52,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The role of the instance. Valid values:
+        /// 
+        /// 1. db:  a shard node.
+        /// 
+        /// 1. cs:  a Configserver node.
+        /// 
+        /// 1. mongos:  a mongos node.
+        /// 
+        /// 1. normal: a replica set node.
+        /// 
+        /// 1. physical: a standalone node.
+        /// 
+        /// default: normal
+        /// </summary>
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
+
     }
 
 }
