@@ -45,13 +45,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The duplicated string.
-            /// </summary>
-            [NameInMap("DedupString")]
-            [Validation(Required=false)]
-            public string DedupString { get; set; }
-
-            /// <summary>
             /// The description.
             /// </summary>
             [NameInMap("Description")]
@@ -59,7 +52,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The user who modified the O\&M item.
+            /// The user who last modified the O\&M item.
             /// </summary>
             [NameInMap("LastModifiedBy")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateOpsItemResponseBody : TeaModel {
         /// <summary>
-        /// The O\&M item.
+        /// The information about the O\&M item.
         /// </summary>
         [NameInMap("OpsItem")]
         [Validation(Required=false)]
         public UpdateOpsItemResponseBodyOpsItem OpsItem { get; set; }
         public class UpdateOpsItemResponseBodyOpsItem : TeaModel {
             /// <summary>
-            /// The information about the properties of the O\&M item.
+            /// The attributes of the O\&M item.
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Severity { get; set; }
 
             /// <summary>
-            /// The list of solutions.
+            /// The solutions.
             /// </summary>
             [NameInMap("Solutions")]
             [Validation(Required=false)]

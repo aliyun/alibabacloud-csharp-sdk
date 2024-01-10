@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
+        /// </summary>
+        [NameInMap("TemplateContent")]
+        [Validation(Required=false)]
+        public string TemplateContent { get; set; }
+
+        /// <summary>
         /// The name of the template.
         /// </summary>
         [NameInMap("TemplateName")]

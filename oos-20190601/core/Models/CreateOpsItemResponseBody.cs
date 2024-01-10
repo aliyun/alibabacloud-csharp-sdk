@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateOpsItemResponseBody : TeaModel {
         /// <summary>
-        /// The O\&M item.
+        /// The information about the O\&M item.
         /// </summary>
         [NameInMap("OpsItem")]
         [Validation(Required=false)]
         public CreateOpsItemResponseBodyOpsItem OpsItem { get; set; }
         public class CreateOpsItemResponseBodyOpsItem : TeaModel {
             /// <summary>
-            /// The information about the properties of the O\&M item.
+            /// The attributes of the O\&M item.
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public string Attributes { get; set; }
 
             /// <summary>
-            /// The category.
+            /// The category of the O\&M item.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The user who created the OpsItem.
+            /// The user who created the O\&M item.
             /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// The description.
+            /// The description of the O\&M item.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The user who modified the O\&M item.
+            /// The user who last modified the O\&M item.
             /// </summary>
             [NameInMap("LastModifiedBy")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string OpsItemId { get; set; }
 
             /// <summary>
-            /// The priority.
+            /// The priority of the O\&M item.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -80,42 +80,42 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ARN of the associated resource.
+            /// The ARNs of the associated resources.
             /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public string Resources { get; set; }
 
             /// <summary>
-            /// The severity level.
+            /// The severity level of the O\&M item.
             /// </summary>
             [NameInMap("Severity")]
             [Validation(Required=false)]
             public string Severity { get; set; }
 
             /// <summary>
-            /// The solution.
+            /// The solutions.
             /// </summary>
             [NameInMap("Solutions")]
             [Validation(Required=false)]
             public string Solutions { get; set; }
 
             /// <summary>
-            /// The source business.
+            /// The source business of the O\&M item.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The status.
+            /// The state of the O\&M item.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// The tags of the O\&M item.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

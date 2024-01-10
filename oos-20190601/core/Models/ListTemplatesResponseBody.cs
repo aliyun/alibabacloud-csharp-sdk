@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// The constraints of template
+            /// </summary>
+            [NameInMap("Constraints")]
+            [Validation(Required=false)]
+            public string Constraints { get; set; }
+
+            /// <summary>
             /// The user who created the template.
             /// </summary>
             [NameInMap("CreatedBy")]
@@ -80,6 +87,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Hash { get; set; }
 
             /// <summary>
+            /// The template is favorite or not.
+            /// </summary>
+            [NameInMap("IsFavorite")]
+            [Validation(Required=false)]
+            public bool? IsFavorite { get; set; }
+
+            /// <summary>
             /// The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.
             /// 
             /// **Notes** This parameter is valid only if the value of the **ShareType** parameter is set to **Public**.
@@ -87,6 +101,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("Popularity")]
             [Validation(Required=false)]
             public int? Popularity { get; set; }
+
+            /// <summary>
+            /// The publisher of template.
+            /// </summary>
+            [NameInMap("Publisher")]
+            [Validation(Required=false)]
+            public string Publisher { get; set; }
 
             /// <summary>
             /// The ID of the resource group.

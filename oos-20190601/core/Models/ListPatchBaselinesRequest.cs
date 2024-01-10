@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

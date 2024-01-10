@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string OperationSystem { get; set; }
 
             /// <summary>
-            /// The resource group ID.
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// The patch source configurations.
+            /// The configurations of patch sources.
             /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<string> Sources { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// The tags of the patch baseline.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

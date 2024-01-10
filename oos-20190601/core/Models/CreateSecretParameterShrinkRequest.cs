@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// The data type of the parameter. Set the value to Secret.
+        /// The type of the parameter. Set the value to Secret.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// The list of solutions.
+        /// The solutions.
         /// </summary>
         [NameInMap("Solutions")]
         [Validation(Required=false)]

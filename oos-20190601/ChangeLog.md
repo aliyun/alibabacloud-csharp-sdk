@@ -1,3 +1,6 @@
+2024-01-10 Version: 3.0.0
+- Generated csharp 2019-06-01 for oos.
+
 2023-10-12 Version: 2.0.1
 - Generated csharp 2019-06-01 for oos.
 

@@ -30,6 +30,15 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to retain resources created by application manager when deleting the application. Valid values:
+        /// - true
+        /// - false
+        /// </summary>
+        [NameInMap("RetainResource")]
+        [Validation(Required=false)]
+        public bool? RetainResource { get; set; }
+
     }
 
 }

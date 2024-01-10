@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// The data type of the parameter. Set the value to Secret.
+        /// The type of the parameter. Set the value to Secret.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

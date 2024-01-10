@@ -16,24 +16,65 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
+            /// <summary>
+            /// The configurations of application alerts.
+            /// </summary>
             [NameInMap("AlarmConfig")]
             [Validation(Required=false)]
             public GetApplicationResponseBodyApplicationAlarmConfig AlarmConfig { get; set; }
             public class GetApplicationResponseBodyApplicationAlarmConfig : TeaModel {
+                /// <summary>
+                /// The alert contact list.
+                /// </summary>
                 [NameInMap("ContactGroups")]
                 [Validation(Required=false)]
                 public List<string> ContactGroups { get; set; }
 
+                /// <summary>
+                /// The health check URL of the application.
+                /// </summary>
                 [NameInMap("HealthCheckUrl")]
                 [Validation(Required=false)]
                 public string HealthCheckUrl { get; set; }
 
+                /// <summary>
+                /// The ID of the alert template.
+                /// </summary>
                 [NameInMap("TemplateIds")]
                 [Validation(Required=false)]
                 public List<string> TemplateIds { get; set; }
 
             }
 
+            /// <summary>
+            /// The type of the application.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   ComputeNest
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Custom
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   DingTalk
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("ApplicationType")]
             [Validation(Required=false)]
             public string ApplicationType { get; set; }
@@ -66,6 +107,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// The ID of the service.
+            /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
