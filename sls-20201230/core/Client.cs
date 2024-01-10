@@ -1979,6 +1979,62 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateSavedSearchWithOptionsAsync(project, request, headers, runtime);
         }
 
+        public CreateTicketResponse CreateTicketWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/tickets",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicketResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateTicketResponse> CreateTicketWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/tickets",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicketResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateTicketResponse CreateTicket()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTicketWithOptions(headers, runtime);
+        }
+
+        public async Task<CreateTicketResponse> CreateTicketAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTicketWithOptionsAsync(headers, runtime);
+        }
+
         public DeleteAnnotationDataResponse DeleteAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
