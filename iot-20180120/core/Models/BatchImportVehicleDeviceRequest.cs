@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public string DeviceName { get; set; }
 
+            [NameInMap("DeviceSecret")]
+            [Validation(Required=false)]
+            public string DeviceSecret { get; set; }
+
             [NameInMap("Manufacturer")]
             [Validation(Required=false)]
             public string Manufacturer { get; set; }

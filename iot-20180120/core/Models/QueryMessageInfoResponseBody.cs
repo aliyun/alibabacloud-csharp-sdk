@@ -29,9 +29,31 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public string MessageContent { get; set; }
 
+            [NameInMap("MqttProperties")]
+            [Validation(Required=false)]
+            public List<QueryMessageInfoResponseBodyMessageMqttProperties> MqttProperties { get; set; }
+            public class QueryMessageInfoResponseBodyMessageMqttProperties : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TopicFullName")]
             [Validation(Required=false)]
             public string TopicFullName { get; set; }
+
+            [NameInMap("TransformedMessageContent")]
+            [Validation(Required=false)]
+            public string TransformedMessageContent { get; set; }
+
+            [NameInMap("TransformedTopicFullName")]
+            [Validation(Required=false)]
+            public string TransformedTopicFullName { get; set; }
 
             [NameInMap("UniMsgId")]
             [Validation(Required=false)]

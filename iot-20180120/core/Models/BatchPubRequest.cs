@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchPubRequest : TeaModel {
+        [NameInMap("ContentType")]
+        [Validation(Required=false)]
+        public string ContentType { get; set; }
+
+        [NameInMap("CorrelationData")]
+        [Validation(Required=false)]
+        public string CorrelationData { get; set; }
+
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public List<string> DeviceName { get; set; }
@@ -34,6 +42,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string MessageContent { get; set; }
 
+        [NameInMap("MessageExpiryInterval")]
+        [Validation(Required=false)]
+        public long? MessageExpiryInterval { get; set; }
+
+        [NameInMap("PayloadFormatIndicator")]
+        [Validation(Required=false)]
+        public int? PayloadFormatIndicator { get; set; }
+
         /// <summary>
         /// The **ProductKey** of the product to which the device belongs.
         /// </summary>
@@ -55,6 +71,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public int? Qos { get; set; }
 
+        [NameInMap("ResponseTopicTemplateName")]
+        [Validation(Required=false)]
+        public string ResponseTopicTemplateName { get; set; }
+
+        [NameInMap("Retained")]
+        [Validation(Required=false)]
+        public bool? Retained { get; set; }
+
         /// <summary>
         /// The suffix of the custom topic.
         /// 
@@ -71,6 +95,24 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TopicShortName")]
         [Validation(Required=false)]
         public string TopicShortName { get; set; }
+
+        [NameInMap("TopicTemplateName")]
+        [Validation(Required=false)]
+        public string TopicTemplateName { get; set; }
+
+        [NameInMap("UserProp")]
+        [Validation(Required=false)]
+        public List<BatchPubRequestUserProp> UserProp { get; set; }
+        public class BatchPubRequestUserProp : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

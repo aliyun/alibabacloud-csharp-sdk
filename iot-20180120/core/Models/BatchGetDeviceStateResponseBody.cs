@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
+                public long? Timestamp { get; set; }
+
             }
 
         }

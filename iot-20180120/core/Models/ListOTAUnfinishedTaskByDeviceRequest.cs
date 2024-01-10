@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
+        [NameInMap("TaskStatusList")]
+        [Validation(Required=false)]
+        public List<string> TaskStatusList { get; set; }
+
     }
 
 }
