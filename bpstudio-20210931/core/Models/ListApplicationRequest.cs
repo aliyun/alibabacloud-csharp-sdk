@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class ListApplicationRequest : TeaModel {
+        /// <summary>
+        /// Keywords in the app name
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
@@ -27,10 +30,16 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         [Validation(Required=false)]
         public int? NextToken { get; set; }
 
+        /// <summary>
+        /// 1 update time,<br>2 creation time
+        /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public long? OrderType { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
