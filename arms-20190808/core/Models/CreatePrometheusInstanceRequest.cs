@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// - ecs: Prometheus for ECS
         /// - global-view: Global Aggregation Instance
         /// - aliyun-cs: Prometheus Instance for Container Service
+        /// - cloud-product：Prometheus for cloud monitor
+        /// - cloud-monitor：Prometheus for enterprise cloud monitor
+        /// - flink: Prometheus for FLink
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]

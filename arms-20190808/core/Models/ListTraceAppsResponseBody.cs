@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The list of Application Monitoring tasks.
+        /// The queried application monitoring tasks.
         /// </summary>
         [NameInMap("TraceApps")]
         [Validation(Required=false)]
@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// The cluster ID.
+            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -78,16 +81,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The labels of the application.
+            /// The tags of the application.
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
+            /// <summary>
+            /// The language.
+            /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            /// <summary>
+            /// The namespace.
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
@@ -124,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? Show { get; set; }
 
             /// <summary>
-            /// The application source.
+            /// The source of the application.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -177,10 +186,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// The type of the workload.
+            /// </summary>
             [NameInMap("WorkloadKind")]
             [Validation(Required=false)]
             public string WorkloadKind { get; set; }
 
+            /// <summary>
+            /// The name of the workload.
+            /// </summary>
             [NameInMap("WorkloadName")]
             [Validation(Required=false)]
             public string WorkloadName { get; set; }

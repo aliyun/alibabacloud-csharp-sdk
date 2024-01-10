@@ -182,13 +182,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Frequency { get; set; }
 
         /// <summary>
-        /// The detection point type. 1: PC. 2: mobile device.
-        /// </summary>
-        [NameInMap("MonitorCategory")]
-        [Validation(Required=false)]
-        public int? MonitorCategory { get; set; }
-
-        /// <summary>
         /// The monitoring configurations.
         /// </summary>
         [NameInMap("MonitorConf")]
@@ -885,15 +878,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
-
-        /// <summary>
-        /// The type of the task. Valid values:
-        /// 
-        /// 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.
-        /// </summary>
-        [NameInMap("TaskType")]
-        [Validation(Required=false)]
-        public int? TaskType { get; set; }
 
     }
 

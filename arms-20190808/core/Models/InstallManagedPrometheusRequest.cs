@@ -24,7 +24,41 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The type of the monitoring object. Valid values: ask and ecs.
+        /// The cluster type.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ecs
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   one
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ask
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   pro
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]

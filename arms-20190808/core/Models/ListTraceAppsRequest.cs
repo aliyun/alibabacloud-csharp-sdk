@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListTraceAppsRequest : TeaModel {
+        /// <summary>
+        /// The type of the application that is associated with the alert rule. Valid values:
+        /// 
+        /// *   `TRACE`: Application Monitoring
+        /// *   `EBPF`: Application Monitoring eBPF Edition
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }

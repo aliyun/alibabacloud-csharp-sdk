@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
+        /// For Cloud type environments, the current field value is RegionId.
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// The subtype of the environment. Valid values:
         /// 
         /// *   CS: Container Service for Kubernetes (ACK)
-        /// *   ECS: ECS
+        /// *   ECS: Elastic Compute Service (ECS)
         /// *   Cloud: cloud service
         /// </summary>
         [NameInMap("EnvironmentSubType")]

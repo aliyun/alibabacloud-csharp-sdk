@@ -1570,6 +1570,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to check whether ARMS is available for commercial use in a region.
+          *
+          * @param request CheckCommercialStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCommercialStatusResponse
+         */
         public CheckCommercialStatusResponse CheckCommercialStatusWithOptions(CheckCommercialStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1593,6 +1600,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<CheckCommercialStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to check whether ARMS is available for commercial use in a region.
+          *
+          * @param request CheckCommercialStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCommercialStatusResponse
+         */
         public async Task<CheckCommercialStatusResponse> CheckCommercialStatusWithOptionsAsync(CheckCommercialStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1616,12 +1630,24 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<CheckCommercialStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to check whether ARMS is available for commercial use in a region.
+          *
+          * @param request CheckCommercialStatusRequest
+          * @return CheckCommercialStatusResponse
+         */
         public CheckCommercialStatusResponse CheckCommercialStatus(CheckCommercialStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCommercialStatusWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to check whether ARMS is available for commercial use in a region.
+          *
+          * @param request CheckCommercialStatusRequest
+          * @return CheckCommercialStatusResponse
+         */
         public async Task<CheckCommercialStatusResponse> CheckCommercialStatusAsync(CheckCommercialStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21254,10 +21280,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["Frequency"] = request.Frequency;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorCategory))
-            {
-                query["MonitorCategory"] = request.MonitorCategory;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorConfShrink))
             {
                 query["MonitorConf"] = request.MonitorConfShrink;
@@ -21285,10 +21307,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21355,10 +21373,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["Frequency"] = request.Frequency;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorCategory))
-            {
-                query["MonitorCategory"] = request.MonitorCategory;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorConfShrink))
             {
                 query["MonitorConf"] = request.MonitorConfShrink;
@@ -21386,10 +21400,6 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
