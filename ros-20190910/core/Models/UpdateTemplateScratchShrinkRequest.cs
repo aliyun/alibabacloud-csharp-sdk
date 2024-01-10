@@ -40,16 +40,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The policy based on which the logical ID is generated. Valid values:
         /// 
-        /// *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
+        /// *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
         /// *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
         /// *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
+        /// 
+        /// >  If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.
         /// </summary>
         [NameInMap("LogicalIdStrategy")]
         [Validation(Required=false)]
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The preference parameters of the scenario.
+        /// The parameters that you want to configure for the scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
@@ -64,6 +66,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -77,6 +82,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source resources.
+        /// 
+        /// If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.
+        /// 
+        /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]

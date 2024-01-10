@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -90,8 +93,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The type of the scenario. Valid values:
         /// 
-        /// *   ResourceImport: resource management
         /// *   ArchitectureReplication: resource replication
+        /// *   ArchitectureDetection: resource detection
+        /// *   ResourceImport: resource management
+        /// *   ResourceMigration: resource migration
         /// </summary>
         [NameInMap("TemplateScratchType")]
         [Validation(Required=false)]

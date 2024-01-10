@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public DeleteStackInstancesRequestDeploymentTargets DeploymentTargets { get; set; }
         public class DeleteStackInstancesRequestDeploymentTargets : TeaModel {
+            [NameInMap("AccountIds")]
+            [Validation(Required=false)]
+            public List<string> AccountIds { get; set; }
+
             /// <summary>
             /// The IDs of the folders in the resource directory. You can add up to five folder IDs.
             /// 

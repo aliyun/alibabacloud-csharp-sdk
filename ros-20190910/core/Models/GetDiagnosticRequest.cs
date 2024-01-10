@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetDiagnosticRequest : TeaModel {
+        /// <summary>
+        /// The ID of the diagnostic report.
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetFeatureDetailsResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the drift detection feature.
+        /// </summary>
         [NameInMap("DriftDetection")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyDriftDetection DriftDetection { get; set; }
         public class GetFeatureDetailsResponseBodyDriftDetection : TeaModel {
+            /// <summary>
+            /// The resource types that are supported by the drift detection feature.
+            /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<string> SupportedResourceTypes { get; set; }
@@ -41,28 +47,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes : TeaModel {
                 /// <summary>
-                /// The resource type that can be cleaned up.
+                /// The resource type that supports the resource cleaner feature.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
+                /// The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.
                 /// </summary>
                 [NameInMap("SideEffects")]
                 [Validation(Required=false)]
                 public List<string> SideEffects { get; set; }
 
                 /// <summary>
-                /// The filters that are used to filter resources. Valid values:
-                /// 
-                /// *   RegionId: the ID of the region.
-                /// *   ResourceId: the ID of the resource.
-                /// *   ResourceName: the name of the resource.
-                /// *   Tags: the tags of the resource.
-                /// *   ResourceGroupId: the ID of the resource group.
-                /// *   DeletionProtection: the deletion protection feature.
+                /// The names of the filters that are supported by the resource type.
                 /// </summary>
                 [NameInMap("SupportedFilters")]
                 [Validation(Required=false)]
@@ -72,18 +71,30 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// Details of the resource import feature.
+        /// </summary>
         [NameInMap("ResourceImport")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyResourceImport ResourceImport { get; set; }
         public class GetFeatureDetailsResponseBodyResourceImport : TeaModel {
+            /// <summary>
+            /// The resource types that are supported by the resource import feature.
+            /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
             public List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> SupportedResourceTypes { get; set; }
             public class GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes : TeaModel {
+                /// <summary>
+                /// The resource identifiers.
+                /// </summary>
                 [NameInMap("ResourceIdentifiers")]
                 [Validation(Required=false)]
                 public List<string> ResourceIdentifiers { get; set; }
 
+                /// <summary>
+                /// The resource type.
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -132,7 +143,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public GetFeatureDetailsResponseBodyTemplateScratch TemplateScratch { get; set; }
         public class GetFeatureDetailsResponseBodyTemplateScratch : TeaModel {
             /// <summary>
-            /// The resource types that support the scenario feature.
+            /// The resource types that are supported by the scenario feature.
             /// </summary>
             [NameInMap("SupportedResourceTypes")]
             [Validation(Required=false)]
@@ -146,45 +157,48 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by resource group. Valid values:
+                /// Indicates whether the resource scope can be specified by source resource group. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SourceResourceGroupSupported")]
                 [Validation(Required=false)]
                 public bool? SourceResourceGroupSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:
+                /// Indicates whether the resource scope can be specified by source resource. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SourceResourcesSupported")]
                 [Validation(Required=false)]
                 public bool? SourceResourcesSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by resource. Valid values:
+                /// Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SourceSupported")]
                 [Validation(Required=false)]
                 public bool? SourceSupported { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource scope can be specified by tag. Valid values:
+                /// Indicates whether the resource scope can be specified by source tag. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SourceTagSupported")]
                 [Validation(Required=false)]
                 public bool? SourceTagSupported { get; set; }
 
+                /// <summary>
+                /// The scenario types that are supported.
+                /// </summary>
                 [NameInMap("SupportedTemplateScratchTypes")]
                 [Validation(Required=false)]
                 public List<string> SupportedTemplateScratchTypes { get; set; }
@@ -275,7 +289,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                     public string ProviderName { get; set; }
 
                     /// <summary>
-                    /// The versions of the provider.
+                    /// The provider versions.
                     /// </summary>
                     [NameInMap("SupportedVersions")]
                     [Validation(Required=false)]
@@ -298,7 +312,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Transform { get; set; }
 
                 /// <summary>
-                /// The versions to which Terraform can be updated in ROS.
+                /// The Terraform versions that can be updated in ROS.
                 /// </summary>
                 [NameInMap("UpdateAllowedTransforms")]
                 [Validation(Required=false)]

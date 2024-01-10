@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteDiagnosticRequest : TeaModel {
+        /// <summary>
+        /// The report ID. You can troubleshoot issues based on the report.
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }

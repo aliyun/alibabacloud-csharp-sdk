@@ -21,13 +21,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The data display option. Valid values:
         /// 
-        /// *   Source: displays only the data of source nodes.
-        /// *   Provisions: displays only the data of new nodes.
-        /// *   All: displays the data of all nodes.
+        /// *   Sources: displays only the data of source nodes. This setting takes effect only when TemplateScratchType is set to ArchitectureDetection.
+        /// *   Source: displays only the data of the source node. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.
+        /// *   Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.
+        /// *   All: displays all data.
         /// 
         /// For more information about source nodes and new nodes, see [Overview](~~352074~~).
         /// 
-        /// > If you do not specify this parameter, the node data is not displayed.
+        /// >  If you do not specify this parameter, the node data is not displayed.
         /// </summary>
         [NameInMap("ShowDataOption")]
         [Validation(Required=false)]

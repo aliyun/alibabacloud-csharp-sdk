@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The stacks.
+        /// Details of the stacks.
         /// </summary>
         [NameInMap("Stacks")]
         [Validation(Required=false)]
@@ -48,6 +48,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// Indicates whether deletion protection is enabled for the stack. Valid values:
+            /// 
+            /// *   Enabled: Deletion protection is enabled for the stack.
+            /// *   Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the [DeleteStack](~~610812~~) operation.
+            /// 
+            /// >  Deletion protection of a nested stack is the same as that of its root stack.
+            /// </summary>
             [NameInMap("DeletionProtection")]
             [Validation(Required=false)]
             public string DeletionProtection { get; set; }
@@ -70,9 +78,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string DriftDetectionTime { get; set; }
 
             /// <summary>
-            /// The supplementary information that is returned when an error occurs on a stack operation.
+            /// The supplementary information that is returned if an error occurs on a stack operation.
             /// 
-            /// > This parameter is returned only if an error occurs on a stack operation. The system returns at least one sub-property. For example, an error occurred when an API operation of another Alibaba Cloud service was called.
+            /// >  This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.
             /// </summary>
             [NameInMap("OperationInfo")]
             [Validation(Required=false)]
@@ -188,7 +196,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The stack type. Valid values:
             /// 
-            /// *   ROS: Resource Orchestration Service (ROS) stack. The stack is created by using a ROS template.
+            /// *   ROS: ROS stack. The stack is created by using a ROS template.
             /// *   Terraform: Terraform stack. The stack is created by using a Terraform template.
             /// </summary>
             [NameInMap("StackType")]
@@ -217,14 +225,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<ListStacksResponseBodyStacksTags> Tags { get; set; }
             public class ListStacksResponseBodyStacksTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key of the stack.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value of the stack.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -233,7 +241,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The timeout period that is allowed to create the stack. Unit: minutes.
+            /// The timeout period for creating the stack. Unit: minutes.
             /// </summary>
             [NameInMap("TimeoutInMinutes")]
             [Validation(Required=false)]

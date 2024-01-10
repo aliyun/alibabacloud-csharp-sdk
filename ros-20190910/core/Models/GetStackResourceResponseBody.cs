@@ -117,10 +117,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The ID of the stack.
+        /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        /// <summary>
+        /// The name of the stack.
+        /// </summary>
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public string StackName { get; set; }

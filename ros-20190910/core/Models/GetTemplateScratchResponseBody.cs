@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The scenario.
+        /// The resource scenario.
         /// </summary>
         [NameInMap("TemplateScratch")]
         [Validation(Required=false)]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> PreferenceParameters { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The key of the parameter.
+                /// The parameter name.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The value of the parameter.
+                /// The parameter value.
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -82,6 +82,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -117,14 +120,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> SourceResources { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceResources : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -199,7 +202,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the stack.
+                /// The stack ID.
                 /// </summary>
                 [NameInMap("StackId")]
                 [Validation(Required=false)]

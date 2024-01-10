@@ -231,6 +231,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// The ID of the order. This parameter is returned only if you set the ChargeType parameter to PrePaid.
+        /// </summary>
         [NameInMap("OrderIds")]
         [Validation(Required=false)]
         public List<string> OrderIds { get; set; }
