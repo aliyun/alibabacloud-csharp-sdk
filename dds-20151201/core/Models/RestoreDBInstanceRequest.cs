@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? BackupId { get; set; }
 
         /// <summary>
-        /// The ID of an instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

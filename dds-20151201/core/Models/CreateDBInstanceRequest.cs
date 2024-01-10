@@ -190,7 +190,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string HiddenZoneId { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Set the value to VPC.
+        /// The network type of the instance. Valid value:
+        /// 
+        /// **VPC**: Virtual Private Cloud (VPC)
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]

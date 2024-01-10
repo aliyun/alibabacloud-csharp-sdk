@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Whether to display DAS whitelist information.
+        /// </summary>
         [NameInMap("ShowHDMIps")]
         [Validation(Required=false)]
         public bool? ShowHDMIps { get; set; }

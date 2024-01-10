@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// The major engine version of the instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -59,6 +59,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The number of nodes, only applicable to replica sets.
+        /// </summary>
+        [NameInMap("ReplicationFactor")]
+        [Validation(Required=false)]
+        public string ReplicationFactor { get; set; }
+
+        /// <summary>
         /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
@@ -76,13 +83,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage type of the instance. Valid values:
         /// 
-        /// - **local_ssd**: local SSD 
-        /// - **cloud_essd1**: PL1 enhanced SSD (ESSD) 
-        /// - **cloud_essd2**: PL2 ESSD 
-        /// - **cloud_essd3**: PL3 ESSD 
-        /// - **cloud_auto**: ESSD AutoPL 
+        /// *   local_ssd: local SSD
+        /// *   cloud_essd1: PL1 enhanced SSD (ESSD)
+        /// *   cloud_essd2: PL2 ESSD
+        /// *   cloud_essd3: PL3 ESSD
+        /// *   cloud_auto: ESSD AutoPL disk
         /// 
-        /// By default, this parameter is empty, which indicates that all types of storage resources are queried.
+        /// This parameter is empty by default, which indicates all types of storage resources are queried.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

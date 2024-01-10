@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskTypeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return all O\&M tasks. Valid values:
+        /// Specifies whether to return historical O\&M tasks. Valid values:
         /// 
-        /// *   **0**: returns only pending tasks.
-        /// *   **1**: returns all tasks.
-        /// 
-        /// Default value: **0**.
+        /// *   **0** (default): The system returns only pending O\&M tasks.
+        /// *   **1**: The system returns historical O\&M tasks.
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -30,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID. You can call the [DescribeSecurityGroupConfiguration](~~146130~~) operation to query the resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

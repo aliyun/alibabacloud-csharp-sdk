@@ -87,8 +87,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values:
+        /// The database engine version of the instance.
         /// 
+        /// *   **6.0**
         /// *   **5.0**
         /// *   **4.4**
         /// *   **4.2**

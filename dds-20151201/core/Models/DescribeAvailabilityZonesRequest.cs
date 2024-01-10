@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailabilityZonesRequest : TeaModel {
         /// <summary>
-        /// The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
+        /// The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:
         /// 
-        /// *   **zh**: Chinese.
+        /// *   **zh** (default): Chinese
         /// *   **en**: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The database engine type of the instance. Valid values:
+        /// The architecture of the instance. Valid values:
         /// 
         /// *   **normal**: replica set instance
         /// *   **sharding**: sharded cluster instance
@@ -44,23 +44,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.
+        /// The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.
         /// </summary>
         [NameInMap("ExcludeSecondaryZoneId")]
         [Validation(Required=false)]
         public string ExcludeSecondaryZoneId { get; set; }
 
         /// <summary>
-        /// The ID of the zone that you want to exclude from the query results.
+        /// The zone ID that is excluded from the query results.
         /// </summary>
         [NameInMap("ExcludeZoneId")]
         [Validation(Required=false)]
         public string ExcludeZoneId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Default value: PrePaid. Valid values:
+        /// The billing method. Valid values:
         /// 
-        /// *   **PrePaid**: subscription
+        /// *   **PrePaid** (default): subscription
         /// *   **PostPaid**: pay-as-you-go
         /// </summary>
         [NameInMap("InstanceChargeType")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The edition of the ApsaraDB for MongoDB instance. The instance can be of a high-availability edition or beta edition.
+        /// The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.
         /// </summary>
         [NameInMap("MongoType")]
         [Validation(Required=false)]
@@ -90,6 +90,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// 节点数，只适用于副本集。
+        /// </summary>
+        [NameInMap("ReplicationFactor")]
+        [Validation(Required=false)]
+        public string ReplicationFactor { get; set; }
+
+        /// <summary>
         /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
         /// </summary>
         [NameInMap("ResourceGroupId")]
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zones to be displayed. The values include the zones in which you can create an instance that uses cloud disks, the zones in which you can create an instance that uses local disks, and the zones in which you can create an instance that uses cloud disks and local disks.
+        /// The storage type of the instance. cloud: The system displays only zones in which cloud disk-based instances can be deployed. local: The system displays only zones in which local disk-based instances can be deployed. default or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.
         /// </summary>
         [NameInMap("StorageSupport")]
         [Validation(Required=false)]
@@ -114,13 +121,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage type of the instance. Valid values:
         /// 
-        /// *   **cloud_essd1**: PL1.enhanced SSD (ESSD)
-        /// *   **cloud_essd2**: PL2 ESSD.
-        /// *   **cloud_essd3**: PL3 ESSD.
-        /// *   **local_ssd**: local SSD.
+        /// *   **cloud_essd1**: PL1 enhanced SSD (ESSD)
+        /// *   **cloud_essd2**: PL2 ESSD
+        /// *   **cloud_essd3**: PL3 ESSD
+        /// *   **local_ssd**: Local SSD
         /// 
-        /// > *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-        /// > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+        /// > 
+        /// 
+        /// *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+        /// 
+        /// *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

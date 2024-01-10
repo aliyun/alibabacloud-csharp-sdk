@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
         /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
         /// </summary>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+        /// The ID of the mongos node or shard node whose parameter modification records you want to query in the instance.
         /// 
         /// >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
         /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

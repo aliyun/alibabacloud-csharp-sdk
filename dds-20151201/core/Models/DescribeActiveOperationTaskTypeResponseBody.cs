@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskTypeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of tasks.
+        /// The O\&M tasks.
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]
@@ -33,22 +33,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The type of the task. Valid values:
             /// 
-            /// *   **rds\_apsaradb\_transfer**: instance migration
-            /// *   **rds\_apsaradb\_upgrade**: minor version update
+            /// *   \*\*rds_apsaradb_transfer\*\*: data migration
+            /// *   \*\*rds_apsaradb_upgrade\*\*: minor version update
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
             /// <summary>
-            /// The task type (English).
+            /// The task type in English.
             /// </summary>
             [NameInMap("TaskTypeInfoEn")]
             [Validation(Required=false)]
             public string TaskTypeInfoEn { get; set; }
 
             /// <summary>
-            /// The task type (Chinese).
+            /// The task type in Chinese.
             /// </summary>
             [NameInMap("TaskTypeInfoZh")]
             [Validation(Required=false)]

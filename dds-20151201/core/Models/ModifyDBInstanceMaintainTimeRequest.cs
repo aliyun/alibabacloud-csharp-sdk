@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The end time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mmZ* format. The time must be in UTC.
+        /// The end time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.
         /// 
-        /// >  The end time must be later than the start time.
+        /// >  The end time must be later than the start time of the maintenance window.
         /// </summary>
         [NameInMap("MaintainEndTime")]
         [Validation(Required=false)]

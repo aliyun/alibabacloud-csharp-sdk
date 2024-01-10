@@ -349,6 +349,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? MaxIOPS { get; set; }
 
                 /// <summary>
+                /// The maximum MBPS of the instance, Unit: MB/s.
+                /// </summary>
+                [NameInMap("MaxMBPS")]
+                [Validation(Required=false)]
+                public int? MaxMBPS { get; set; }
+
+                /// <summary>
                 /// The information of the mongos nodes.
                 /// 
                 /// >  This parameter is returned if the instance is a sharded cluster instance.
@@ -658,6 +665,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [NameInMap("MaxConnections")]
                         [Validation(Required=false)]
                         public int? MaxConnections { get; set; }
+
+                        /// <summary>
+                        /// The maximum  MBPS of the shard node, Unit: MB/s.
+                        /// </summary>
+                        [NameInMap("MaxDiskMbps")]
+                        [Validation(Required=false)]
+                        public string MaxDiskMbps { get; set; }
 
                         /// <summary>
                         /// The maximum IOPS of the shard node.

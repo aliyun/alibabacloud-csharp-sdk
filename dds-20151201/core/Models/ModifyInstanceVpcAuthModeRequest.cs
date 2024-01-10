@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyInstanceVpcAuthModeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node in the specified sharded cluster instance.
+        /// The ID of the mongos node in the sharded cluster instance.
         /// 
         /// >  This parameter can be used only when the instance type is sharded cluster.
         /// </summary>
@@ -42,10 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable authentication to allow access within a VPC. Valid values:
-        /// 
-        /// *   **Open**: enables password-free access.
-        /// *   **Close**: disables password-free access.
+        /// Specify whether to disable password-free access over VPC. Set the value to **Close**.
         /// </summary>
         [NameInMap("VpcAuthMode")]
         [Validation(Required=false)]

@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The provisioned IOPS. Valid values: 0 to 50000.
+        /// The provisioned IOPS of the instance:
         /// </summary>
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]
@@ -377,25 +377,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// The custom tags added to the instance.
+        /// The custom tags that you want to add to the instance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateShardingDBInstanceRequestTag> Tag { get; set; }
         public class CreateShardingDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The tag key.
             /// 
-            /// > **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
+            /// >  **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// 
-            /// > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
+            /// >  **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CheckRecoveryConditionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// Indicates whether the recovery conditions are met. Valid values:
+        /// Indicates whether the data of the instance can be restored. Valid values:
         /// 
-        /// *   **true**: The recovery conditions are met.
-        /// *   **false**: The recovery conditions are not met.
+        /// *   **true**: The data of the instance can be restored.
+        /// *   **false**: The data of the instance cannot be restored.
         /// </summary>
         [NameInMap("IsValid")]
         [Validation(Required=false)]
         public bool? IsValid { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

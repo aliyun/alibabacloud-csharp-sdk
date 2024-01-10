@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeShardingNetworkAddressResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the endpoints of DynamoDB instances.
+        /// The endpoints of DynamoDB-compatible instances.
         /// </summary>
         [NameInMap("CompatibleConnections")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection> CompatibleConnection { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection : TeaModel {
                 /// <summary>
-                /// The remaining duration of the classic network address. Unit: seconds.
+                /// The remaining duration of the classic network endpoint. Unit: seconds.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -42,25 +42,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string NetworkAddress { get; set; }
 
                 /// <summary>
-                /// The network type. Valid values:
+                /// The network type of the instance.
                 /// 
-                /// *   **VPC**
-                /// *   **Classic**
-                /// *   **Public**: pubic endpoint
+                /// *   **VPC**: virtual private cloud
+                /// *   **Classic**: classic network
+                /// *   **Public**: the Internet
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The port number.
+                /// The port that is used to connect to the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID of the instance.
                 /// 
                 /// >  This parameter is returned when the network type is **VPC**.
                 /// </summary>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the VPC.
+                /// The ID of the vSwitch in the Virtual Private Cloud (VPC).
                 /// 
                 /// >  This parameter is returned when the network type is **VPC**.
                 /// </summary>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// An array that consists of the endpoints of ApsaraDB for MongoDB instances.
+        /// The endpoints of ApsaraDB for MongoDB instances.
         /// </summary>
         [NameInMap("NetworkAddresses")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress> NetworkAddress { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress : TeaModel {
                 /// <summary>
-                /// The remaining duration of the classic network address. Unit: seconds.
+                /// The remaining duration of the classic network endpoint. Unit: seconds.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -107,25 +107,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string IPAddress { get; set; }
 
                 /// <summary>
-                /// The endpoint of the instance.
+                /// The connection string of the instance.
                 /// </summary>
                 [NameInMap("NetworkAddress")]
                 [Validation(Required=false)]
                 public string NetworkAddress { get; set; }
 
                 /// <summary>
-                /// The network type. Valid values:
+                /// The network type of the instance.
                 /// 
-                /// - **VPC**
-                /// - **Classic**
-                /// - **Public**: pubic endpoint
+                /// *   **VPC**: virtual private cloud
+                /// *   **Classic**: classic network
+                /// *   **Public**: the Internet
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The ID of the mongos.
+                /// The ID of the mongos node.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -134,16 +134,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The type of the node. Valid values:
                 /// 
-                /// - **mongos**
-                /// - **shard**
-                /// - **configserver**
+                /// *   **mongos**: mongos node
+                /// *   **shard**: shard node
+                /// *   **configserver**: Configserver node
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The port number.
+                /// The port that is used to connect to the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -152,15 +152,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The role of the node. Valid values:
                 /// 
-                /// - Primary
-                /// - Secondary
+                /// *   Primary
+                /// *   Secondary
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID of the instance.
                 /// 
                 /// >  This parameter is returned when the network type is **VPC**.
                 /// </summary>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the VPC.
+                /// The ID of the vSwitch in the VPC.
                 /// 
                 /// >  This parameter is returned when the network type is **VPC**.
                 /// </summary>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

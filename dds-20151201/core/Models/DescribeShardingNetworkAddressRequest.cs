@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeShardingNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// The ID of an instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// A sharded cluster instance consists of three components: mongos, shard, and Configserver.
+        /// The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
         /// 
-        /// >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserverr node.
+        /// >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
