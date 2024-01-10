@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? ActiveActive { get; set; }
 
+            [NameInMap("CustomColumns")]
+            [Validation(Required=false)]
+            public List<CreateProjectRequestCommonTransferConfigCustomColumns> CustomColumns { get; set; }
+            public class CreateProjectRequestCommonTransferConfigCustomColumns : TeaModel {
+                [NameInMap("ColumnName")]
+                [Validation(Required=false)]
+                public string ColumnName { get; set; }
+
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
+
+            }
+
             [NameInMap("DataWorksBusinessName")]
             [Validation(Required=false)]
             public string DataWorksBusinessName { get; set; }
@@ -52,6 +66,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("RocketMqSendMsgTimeout")]
             [Validation(Required=false)]
             public long? RocketMqSendMsgTimeout { get; set; }
+
+            [NameInMap("SyncSchema")]
+            [Validation(Required=false)]
+            public bool? SyncSchema { get; set; }
+
+            [NameInMap("SyncSchemaColumnName")]
+            [Validation(Required=false)]
+            public string SyncSchemaColumnName { get; set; }
 
             [NameInMap("TableCategory")]
             [Validation(Required=false)]
