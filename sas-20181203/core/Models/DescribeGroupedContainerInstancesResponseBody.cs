@@ -201,6 +201,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskStatus { get; set; }
 
+            [NameInMap("SyncOpen")]
+            [Validation(Required=false)]
+            public int? SyncOpen { get; set; }
+
+            [NameInMap("SyncStatus")]
+            [Validation(Required=false)]
+            public int? SyncStatus { get; set; }
+
             /// <summary>
             /// The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.
             /// </summary>

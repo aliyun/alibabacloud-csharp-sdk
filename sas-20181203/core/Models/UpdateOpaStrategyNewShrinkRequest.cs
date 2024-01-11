@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateOpaStrategyNewShrinkRequest : TeaModel {
         /// <summary>
-        /// The risks that you want to detect by using the rule on images.
+        /// The rule configuration.
         /// </summary>
         [NameInMap("AlarmDetail")]
         [Validation(Required=false)]
         public string AlarmDetailShrink { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// > This parameter is deprecated. We recommend that you use the Scopes parameter to specify the clusters in which the rule takes effect.
+        /// > This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The cluster name.
         /// 
         /// > This parameter is deprecated.
         /// </summary>
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The description of the rule.
+        /// The rule description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The names of the images in the rule.
+        /// The image names.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public List<string> ImageName { get; set; }
 
         /// <summary>
-        /// The tags that are added to the images in the rule.
+        /// The image tags.
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The action that is performed when the rule is hit. Valid values:
         /// 
-        /// *   **1**: trigger alerts
+        /// *   **1**: alert
         /// *   **2**: block
         /// *   **3**: allow
         /// </summary>
@@ -77,35 +77,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// The effective scope of the rule.
+        /// The application scope.
         /// </summary>
         [NameInMap("Scopes")]
         [Validation(Required=false)]
         public List<UpdateOpaStrategyNewShrinkRequestScopes> Scopes { get; set; }
         public class UpdateOpaStrategyNewShrinkRequestScopes : TeaModel {
             /// <summary>
-            /// The instance ID of the rule in the cluster.
+            /// The ID of the cluster node to which the rule is applied.
             /// 
-            /// >  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the instance IDs of rules.
+            /// >  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the ID of the cluster node to which the rule is applied.
             /// </summary>
             [NameInMap("AckPolicyInstanceId")]
             [Validation(Required=false)]
             public string AckPolicyInstanceId { get; set; }
 
             /// <summary>
-            /// Specifies whether to include all namespaces.
+            /// Specifies whether all namespaces are included. Valid values:
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// *   **0**: Not all namespaces are included.
+            /// *   **1**: All namespaces are included.
             /// </summary>
             [NameInMap("AllNamespace")]
             [Validation(Required=false)]
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the container cluster.
+            /// The cluster ID.
             /// 
-            /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+            /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The namespaces.
             /// 
-            /// > This parameter is valid only when AllNamespace is set to 0.
+            /// > This parameter is valid only when the AllNamespace parameter is set to 0.
             /// </summary>
             [NameInMap("NamespaceList")]
             [Validation(Required=false)]
@@ -123,16 +123,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
-        /// >  You can call the \[ListOpaClusterStrategyNew]\(~~2623574~~) operation to query the IDs of rules.
+        /// >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// The rule name.
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the rule template.
         /// 
-        /// >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.
+        /// >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.
         /// </summary>
         [NameInMap("StrategyTemplateId")]
         [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UnScanedImage { get; set; }
 
         /// <summary>
-        /// The whitelist.
+        /// The whitelists.
         /// </summary>
         [NameInMap("WhiteList")]
         [Validation(Required=false)]

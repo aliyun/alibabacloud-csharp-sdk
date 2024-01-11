@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Item { get; set; }
 
+            [NameInMap("LastHandleTime")]
+            [Validation(Required=false)]
+            public long? LastHandleTime { get; set; }
+
             /// <summary>
             /// The severity level of a risk item. Valid values:
             /// 

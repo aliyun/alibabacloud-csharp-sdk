@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOpaStrategyNewRequest : TeaModel {
         /// <summary>
-        /// The risks that you want to detect by using the rule.
+        /// The rule configuration.
         /// </summary>
         [NameInMap("AlarmDetail")]
         [Validation(Required=false)]
         public CreateOpaStrategyNewRequestAlarmDetail AlarmDetail { get; set; }
         public class CreateOpaStrategyNewRequestAlarmDetail : TeaModel {
             /// <summary>
-            /// The baseline risks.
+            /// The baseline check configuration.
             /// </summary>
             [NameInMap("Baseline")]
             [Validation(Required=false)]
             public CreateOpaStrategyNewRequestAlarmDetailBaseline Baseline { get; set; }
             public class CreateOpaStrategyNewRequestAlarmDetailBaseline : TeaModel {
                 /// <summary>
-                /// The baseline check items.
+                /// The information about the baseline check item.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The ID of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the IDs of check items.
+                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The name of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the names of check items.
+                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -60,14 +60,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The malicious sample risks.
+            /// The configuration of image build risk.
+            /// </summary>
+            [NameInMap("BuildRisk")]
+            [Validation(Required=false)]
+            public CreateOpaStrategyNewRequestAlarmDetailBuildRisk BuildRisk { get; set; }
+            public class CreateOpaStrategyNewRequestAlarmDetailBuildRisk : TeaModel {
+                /// <summary>
+                /// The configuration of image build risk.
+                /// </summary>
+                [NameInMap("Item")]
+                [Validation(Required=false)]
+                public List<CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem> Item { get; set; }
+                public class CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem : TeaModel {
+                    /// <summary>
+                    /// The ID of the image build risk.
+                    /// 
+                    /// >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// The name of the image build risk.
+                    /// 
+                    /// >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                /// <summary>
+                /// The risk levels.
+                /// </summary>
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public List<string> RiskLevel { get; set; }
+
+            }
+
+            /// <summary>
+            /// The configuration of malicious samples.
             /// </summary>
             [NameInMap("MaliciousFile")]
             [Validation(Required=false)]
             public CreateOpaStrategyNewRequestAlarmDetailMaliciousFile MaliciousFile { get; set; }
             public class CreateOpaStrategyNewRequestAlarmDetailMaliciousFile : TeaModel {
                 /// <summary>
-                /// The malicious samples.
+                /// The information about the malicious sample.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
@@ -76,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The ID of the malicious sample.
                     /// 
-                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the IDs of malicious samples.
+                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID of the malicious sample.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -85,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The name of the malicious sample.
                     /// 
-                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the names of malicious samples.
+                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name of the malicious sample.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -103,32 +146,104 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The vulnerability risks.
+            /// The configuration of sensitive file.
             /// </summary>
-            [NameInMap("Vul")]
+            [NameInMap("SensitiveFile")]
             [Validation(Required=false)]
-            public CreateOpaStrategyNewRequestAlarmDetailVul Vul { get; set; }
-            public class CreateOpaStrategyNewRequestAlarmDetailVul : TeaModel {
+            public CreateOpaStrategyNewRequestAlarmDetailSensitiveFile SensitiveFile { get; set; }
+            public class CreateOpaStrategyNewRequestAlarmDetailSensitiveFile : TeaModel {
                 /// <summary>
-                /// The vulnerabilities.
+                /// The configuration of sensitive file.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
-                public List<CreateOpaStrategyNewRequestAlarmDetailVulItem> Item { get; set; }
-                public class CreateOpaStrategyNewRequestAlarmDetailVulItem : TeaModel {
+                public List<CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem> Item { get; set; }
+                public class CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem : TeaModel {
                     /// <summary>
-                    /// The ID of the vulnerability.
+                    /// The ID of the sensitive files.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the IDs of vulnerabilities.
+                    /// >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// The name of the vulnerability.
+                    /// The name of the sensitive files.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the names of vulnerabilities.
+                    /// >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                /// <summary>
+                /// The risk levels.
+                /// </summary>
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public List<string> RiskLevel { get; set; }
+
+            }
+
+            /// <summary>
+            /// The vulnerability configuration.
+            /// </summary>
+            [NameInMap("Vul")]
+            [Validation(Required=false)]
+            public CreateOpaStrategyNewRequestAlarmDetailVul Vul { get; set; }
+            public class CreateOpaStrategyNewRequestAlarmDetailVul : TeaModel {
+                /// <summary>
+                /// The information about the vulnerability.
+                /// </summary>
+                [NameInMap("Item")]
+                [Validation(Required=false)]
+                public List<CreateOpaStrategyNewRequestAlarmDetailVulItem> Item { get; set; }
+                public class CreateOpaStrategyNewRequestAlarmDetailVulItem : TeaModel {
+                    /// <summary>
+                    /// The vulnerability ID.
+                    /// 
+                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// The vulnerability name.
+                    /// 
+                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                /// <summary>
+                /// Risk type of vulnerability.
+                /// </summary>
+                [NameInMap("RiskClass")]
+                [Validation(Required=false)]
+                public List<CreateOpaStrategyNewRequestAlarmDetailVulRiskClass> RiskClass { get; set; }
+                public class CreateOpaStrategyNewRequestAlarmDetailVulRiskClass : TeaModel {
+                    /// <summary>
+                    /// The ID of the vulnerability types. Valid values:
+                    /// 
+                    /// *   **cve**: system vulnerability
+                    /// *   **app**: application vulnerability
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// The name of the vulnerability. Valid values:
+                    /// 
+                    /// *   **system vulnerability**
+                    /// *   **application vulnerability**
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -148,7 +263,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
         /// > This parameter is deprecated.
         /// </summary>
@@ -157,7 +272,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The cluster name.
         /// 
         /// > This parameter is deprecated.
         /// </summary>
@@ -166,21 +281,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The description of the rule.
+        /// The rule description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The names of the images.
+        /// The image names.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public List<string> ImageName { get; set; }
 
         /// <summary>
-        /// The tags that are added to the containers.
+        /// The container tags.
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -208,16 +323,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// The effective scope of the rule.
+        /// The application scope of the rule.
         /// </summary>
         [NameInMap("Scopes")]
         [Validation(Required=false)]
         public List<CreateOpaStrategyNewRequestScopes> Scopes { get; set; }
         public class CreateOpaStrategyNewRequestScopes : TeaModel {
             /// <summary>
-            /// The rule instance ID in the cluster.
+            /// The ID of the cluster node to which the rule is applied.
             /// 
-            /// > This parameter is invalid when you create a rule.
+            /// > This parameter is not required when you create the instance.
             /// </summary>
             [NameInMap("AckPolicyInstanceId")]
             [Validation(Required=false)]
@@ -226,17 +341,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Specifies whether to include all namespaces. Valid values:
             /// 
-            /// *   **1**: yes
-            /// *   **0**: no
+            /// *   **1**: includes all namespaces.
+            /// *   **0**: does not include all namespaces.
             /// </summary>
             [NameInMap("AllNamespace")]
             [Validation(Required=false)]
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// The ID of the cluster in the rule.
+            /// The ID of the cluster that is specified in the rule.
             /// 
-            /// >  You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the IDs of clusters.
+            /// >  You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the cluster ID.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -245,7 +360,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The namespaces.
             /// 
-            /// > This parameter is valid only when AllNamespace is set to 0.
+            /// > This parameter is valid only when the AllNamespace parameter is set to 0.
             /// </summary>
             [NameInMap("NamespaceList")]
             [Validation(Required=false)]
@@ -254,9 +369,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
-        /// >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the IDs of rules.
+        /// >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
         /// 
         /// > This parameter is invalid when you create a rule.
         /// </summary>
@@ -265,7 +380,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// The rule name.
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
@@ -274,7 +389,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the rule template.
         /// 
-        /// >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.
+        /// >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.
         /// </summary>
         [NameInMap("StrategyTemplateId")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The handling status for the exception. Valid values:
         /// 
-        /// *   **processing**: in progress
+        /// *   **exporting**: in progress
         /// *   **success**: successful
         /// *   **failed**: failed
         /// *   **pending**: pending

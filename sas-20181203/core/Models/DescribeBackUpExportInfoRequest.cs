@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackUpExportInfoRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The number of the page to return. Default value: 1.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 20.
+        /// The number of entries to return on each page. Default value: 1.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

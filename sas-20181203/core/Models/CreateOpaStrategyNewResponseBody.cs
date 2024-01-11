@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOpaStrategyNewResponseBody : TeaModel {
         /// <summary>
-        /// The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The IDs of the clusters for which the rule fails to be created.
+        /// The IDs of the clusters that failed to be saved.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetOpaStrategyDetailNewResponseBodyData Data { get; set; }
         public class GetOpaStrategyDetailNewResponseBodyData : TeaModel {
             /// <summary>
-            /// The rule configuration information.
+            /// The rule configuration.
             /// </summary>
             [NameInMap("AlarmDetail")]
             [Validation(Required=false)]
             public GetOpaStrategyDetailNewResponseBodyDataAlarmDetail AlarmDetail { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetail : TeaModel {
                 /// <summary>
-                /// The baseline configuration information.
+                /// The baseline check configuration.
                 /// </summary>
                 [NameInMap("Baseline")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline Baseline { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline : TeaModel {
                     /// <summary>
-                    /// The baseline information.
+                    /// The information about the baseline check item.
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -70,14 +70,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The configuration information about the malicious sample.
+                /// The configuration of image build risk.
+                /// </summary>
+                [NameInMap("BuildRisk")]
+                [Validation(Required=false)]
+                public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk BuildRisk { get; set; }
+                public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk : TeaModel {
+                    /// <summary>
+                    /// The configuration of image build risk.
+                    /// </summary>
+                    [NameInMap("Item")]
+                    [Validation(Required=false)]
+                    public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem> Item { get; set; }
+                    public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem : TeaModel {
+                        /// <summary>
+                        /// The ID of the image build risk.
+                        /// 
+                        /// >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+                        /// </summary>
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
+
+                        /// <summary>
+                        /// The name of the image build risk.
+                        /// 
+                        /// >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+                        /// </summary>
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// The risk levels.
+                    /// </summary>
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public List<string> RiskLevel { get; set; }
+
+                }
+
+                /// <summary>
+                /// The configuration of malicious samples.
                 /// </summary>
                 [NameInMap("MaliciousFile")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile MaliciousFile { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile : TeaModel {
                     /// <summary>
-                    /// The information about the malicious samples.
+                    /// The information about the malicious sample.
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -109,14 +152,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The vulnerability configuration information.
+                /// The configuration of sensitive file.
+                /// </summary>
+                [NameInMap("SensitiveFile")]
+                [Validation(Required=false)]
+                public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile SensitiveFile { get; set; }
+                public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile : TeaModel {
+                    /// <summary>
+                    /// The configuration of sensitive file.
+                    /// </summary>
+                    [NameInMap("Item")]
+                    [Validation(Required=false)]
+                    public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem> Item { get; set; }
+                    public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem : TeaModel {
+                        /// <summary>
+                        /// The ID of the sensitive files.
+                        /// 
+                        /// >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+                        /// </summary>
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
+
+                        /// <summary>
+                        /// The name of the sensitive files.
+                        /// 
+                        /// >  You can call the [GetSensitiveDefineRuleConfig](~~4576877~~) operation to query the ID of the malicious sample.
+                        /// </summary>
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// The risk levels.
+                    /// </summary>
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public List<string> RiskLevel { get; set; }
+
+                }
+
+                /// <summary>
+                /// The vulnerability configuration.
                 /// </summary>
                 [NameInMap("Vul")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul Vul { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul : TeaModel {
                     /// <summary>
-                    /// The vulnerability information.
+                    /// The information about the vulnerability.
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -131,6 +217,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
                         /// <summary>
                         /// The vulnerability name.
+                        /// </summary>
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// Risk type of vulnerability.
+                    /// </summary>
+                    [NameInMap("RiskClass")]
+                    [Validation(Required=false)]
+                    public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass> RiskClass { get; set; }
+                    public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass : TeaModel {
+                        /// <summary>
+                        /// The ID of the vulnerability types. Valid values:
+                        /// 
+                        /// *   **cve**: system vulnerability
+                        /// *   **app**: application vulnerability
+                        /// </summary>
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
+
+                        /// <summary>
+                        /// The name of the vulnerability. Valid values:
+                        /// 
+                        /// *   **system vulnerability**
+                        /// *   **application vulnerability**
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -171,7 +286,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The rule description.
+            /// The description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -202,7 +317,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// Indicates whether the rule applies to malicious Internet images. Valid values:
+            /// Indicates whether the rule supports malicious Internet images. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -230,21 +345,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RuleAction { get; set; }
 
             /// <summary>
-            /// The scope.
+            /// The application scope.
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<GetOpaStrategyDetailNewResponseBodyDataScopes> Scopes { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataScopes : TeaModel {
                 /// <summary>
-                /// The ID of the rule in the cluster.
+                /// The ID of the cluster node to which the rule is applied.
                 /// </summary>
                 [NameInMap("AckPolicyInstanceId")]
                 [Validation(Required=false)]
                 public string AckPolicyInstanceId { get; set; }
 
                 /// <summary>
-                /// Specifies whether all namespaces are included. Valid values:
+                /// Indicates whether all namespaces are included. Valid values:
                 /// 
                 /// *   **1**: All namespaces are included.
                 /// *   **0**: Not all namespaces are included.
@@ -291,7 +406,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyTemplateId { get; set; }
 
             /// <summary>
-            /// Indicates whether the rule applies to unscanned images. Valid values:
+            /// Indicates whether the rule supports unscanned images. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
