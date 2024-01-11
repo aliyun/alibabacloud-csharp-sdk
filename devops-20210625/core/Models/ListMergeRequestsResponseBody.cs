@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("reviewTime")]
+                [Validation(Required=false)]
+                public string ReviewTime { get; set; }
+
                 [NameInMap("state")]
                 [Validation(Required=false)]
                 public string State { get; set; }
