@@ -7577,6 +7577,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["maintenance_window"] = request.MaintenanceWindow;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationPolicy))
+            {
+                body["operation_policy"] = request.OperationPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resource_group_id"] = request.ResourceGroupId;
@@ -7648,6 +7652,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintenanceWindow))
             {
                 body["maintenance_window"] = request.MaintenanceWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationPolicy))
+            {
+                body["operation_policy"] = request.OperationPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {

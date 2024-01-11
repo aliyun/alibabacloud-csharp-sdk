@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// *   `propayasgo`: ACK Pro
         /// *   `edgepayasgo`: ACK Edge
-        /// *   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

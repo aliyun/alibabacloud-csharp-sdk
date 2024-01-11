@@ -19,6 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("keep_slb")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? KeepSlb { get; set; }
 
         /// <summary>

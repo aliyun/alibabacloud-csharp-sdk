@@ -108,19 +108,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.
         /// 
-        /// For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).
+        /// For more information, see [Overview of ACK Pro clusters](~~173290~~).
         /// </summary>
         [NameInMap("cluster_spec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// The cluster type. Valid values:
-        /// 
-        /// *   `Kubernetes`: ACK dedicated cluster.
-        /// *   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.
-        /// *   `Ask`: ACK Serverless Basic cluster.
-        /// *   `ExternalKubernetes`: external cluster that is registered to ACK.
+        /// The cluster type. Valid value: ManagedKubernetes. 
+        /// You can create ACK managed clusters, ACK Serverless clusters, and ACK Edge clusters.
         /// </summary>
         [NameInMap("cluster_type")]
         [Validation(Required=false)]

@@ -102,6 +102,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public MaintenanceWindow MaintenanceWindow { get; set; }
 
+        [NameInMap("operation_policy")]
+        [Validation(Required=false)]
+        public ModifyClusterRequestOperationPolicy OperationPolicy { get; set; }
+        public class ModifyClusterRequestOperationPolicy : TeaModel {
+            [NameInMap("cluster_auto_upgrade")]
+            [Validation(Required=false)]
+            public ModifyClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
+            public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
+                [NameInMap("channel")]
+                [Validation(Required=false)]
+                public string Channel { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// The ID of the resource group to which the cluster belongs.
         /// </summary>
