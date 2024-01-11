@@ -153,11 +153,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        /// <summary>
-        /// The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-        /// 
-        /// > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
-        /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
