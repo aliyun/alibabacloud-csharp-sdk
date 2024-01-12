@@ -317,6 +317,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             {
                 query["RevisionComment"] = request.RevisionComment;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 query["Workspace"] = request.Workspace;
@@ -407,6 +411,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionComment))
             {
                 query["RevisionComment"] = request.RevisionComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
@@ -572,9 +580,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateRunShrinkRequest request = new CreateRunShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecuteOptions.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecuteOptions))
             {
-                request.ExecuteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecuteOptions.ToMap(), "ExecuteOptions", "json");
+                request.ExecuteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecuteOptions, "ExecuteOptions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
@@ -616,6 +624,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFolder))
             {
                 query["OutputFolder"] = request.OutputFolder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
             {
@@ -653,9 +665,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateRunShrinkRequest request = new CreateRunShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecuteOptions.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecuteOptions))
             {
-                request.ExecuteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecuteOptions.ToMap(), "ExecuteOptions", "json");
+                request.ExecuteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecuteOptions, "ExecuteOptions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
@@ -697,6 +709,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFolder))
             {
                 query["OutputFolder"] = request.OutputFolder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
             {
@@ -795,6 +811,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             {
                 query["Revision"] = request.Revision;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 query["Workspace"] = request.Workspace;
@@ -872,6 +892,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             {
                 query["Revision"] = request.Revision;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 query["Workspace"] = request.Workspace;
@@ -940,6 +964,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 query["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootEntity))
             {
@@ -1015,6 +1043,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 query["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootEntity))
             {
@@ -1753,6 +1785,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             {
                 query["Revision"] = request.Revision;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 query["Workspace"] = request.Workspace;
@@ -1787,6 +1823,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Revision))
             {
                 query["Revision"] = request.Revision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionTag))
+            {
+                query["RevisionTag"] = request.RevisionTag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
@@ -3715,6 +3755,14 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             return await ResumeSubmissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq UpdateEntityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateEntityResponse
+         */
+        // Deprecated
         public UpdateEntityResponse UpdateEntityWithOptions(UpdateEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3758,6 +3806,14 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             return TeaModel.ToObject<UpdateEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq UpdateEntityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateEntityResponse
+         */
+        // Deprecated
         public async Task<UpdateEntityResponse> UpdateEntityWithOptionsAsync(UpdateEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3801,12 +3857,26 @@ namespace AlibabaCloud.SDK.EasyGene20210315
             return TeaModel.ToObject<UpdateEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateEntityRequest
+          * @return UpdateEntityResponse
+         */
+        // Deprecated
         public UpdateEntityResponse UpdateEntity(UpdateEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEntityWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request UpdateEntityRequest
+          * @return UpdateEntityResponse
+         */
+        // Deprecated
         public async Task<UpdateEntityResponse> UpdateEntityAsync(UpdateEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

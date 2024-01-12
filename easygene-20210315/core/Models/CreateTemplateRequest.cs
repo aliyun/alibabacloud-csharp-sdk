@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         }
 
+        [NameInMap("RevisionTag")]
+        [Validation(Required=false)]
+        public string RevisionTag { get; set; }
+
         [NameInMap("RootEntity")]
         [Validation(Required=false)]
         public string RootEntity { get; set; }

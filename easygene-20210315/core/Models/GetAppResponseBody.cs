@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string RevisionComment { get; set; }
 
+        [NameInMap("RevisionTag")]
+        [Validation(Required=false)]
+        public string RevisionTag { get; set; }
+
         [NameInMap("Revisions")]
         [Validation(Required=false)]
         public List<GetAppResponseBodyRevisions> Revisions { get; set; }
@@ -180,6 +184,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [NameInMap("RevisionComment")]
             [Validation(Required=false)]
             public string RevisionComment { get; set; }
+
+            [NameInMap("RevisionTag")]
+            [Validation(Required=false)]
+            public string RevisionTag { get; set; }
 
         }
 

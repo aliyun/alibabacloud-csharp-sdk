@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string Location { get; set; }
 
+            /// <summary>
+            /// RAM Role
+            /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
             public string Role { get; set; }

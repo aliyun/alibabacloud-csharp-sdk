@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Revision { get; set; }
 
+        [NameInMap("RevisionTag")]
+        [Validation(Required=false)]
+        public string RevisionTag { get; set; }
+
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
