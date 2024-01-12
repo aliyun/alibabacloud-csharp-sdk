@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string TagList { get; set; }
 
+        [NameInMap("Target")]
+        [Validation(Required=false)]
+        public string Target { get; set; }
+
         [NameInMap("UuidList")]
         [Validation(Required=false)]
         public string UuidList { get; set; }

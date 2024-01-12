@@ -16529,6 +16529,54 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeFieldStatisticsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeFixUsedCountResponse DescribeFixUsedCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFixUsedCount",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFixUsedCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeFixUsedCountResponse> DescribeFixUsedCountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFixUsedCount",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFixUsedCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeFixUsedCountResponse DescribeFixUsedCount()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFixUsedCountWithOptions(runtime);
+        }
+
+        public async Task<DescribeFixUsedCountResponse> DescribeFixUsedCountAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFixUsedCountWithOptionsAsync(runtime);
+        }
+
         public DescribeFrontVulPatchListResponse DescribeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -51997,6 +52045,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["TagList"] = request.TagList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["Target"] = request.Target;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -52035,6 +52087,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
             {
                 query["TagList"] = request.TagList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["Target"] = request.Target;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {

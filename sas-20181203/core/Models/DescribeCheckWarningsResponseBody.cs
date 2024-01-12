@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Item { get; set; }
 
+            /// <summary>
+            /// The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.
+            /// </summary>
             [NameInMap("LastHandleTime")]
             [Validation(Required=false)]
             public long? LastHandleTime { get; set; }
