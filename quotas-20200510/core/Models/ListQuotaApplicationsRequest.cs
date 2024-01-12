@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationsRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
         /// <summary>
         /// The quota dimensions.
         /// </summary>

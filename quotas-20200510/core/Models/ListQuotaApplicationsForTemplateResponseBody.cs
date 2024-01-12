@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications> QuotaBatchApplications { get; set; }
         public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : TeaModel {
             /// <summary>
+            /// The Alibaba Cloud accounts for which the quotas are applied.
+            /// </summary>
+            [NameInMap("AliyunUids")]
+            [Validation(Required=false)]
+            public List<string> AliyunUids { get; set; }
+
+            /// <summary>
             /// The time when the quota increase application was submitted. The value is displayed in UTC.
             /// </summary>
             [NameInMap("ApplyTime")]
@@ -126,6 +133,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("QuotaCategory")]
             [Validation(Required=false)]
             public string QuotaCategory { get; set; }
+
+            /// <summary>
+            /// The reason for the quota increase application.
+            /// </summary>
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
 
         }
 

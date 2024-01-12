@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class CreateQuotaApplicationsForTemplateRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud accounts for which the quotas are applied.
+        /// The Alibaba Cloud accounts that correspond to the resource directory member accounts for which the quotas are applied.
         /// 
-        /// >  For more information about the members of a resource directory, see [Query all the members in a resource directory](~~604207~~).
+        /// >  You can apply for a quota increase for up to 50 member accounts in each request. For more information about the member accounts in a resource directory, see [ListAccounts](~~604207~~).
         /// </summary>
         [NameInMap("AliyunUids")]
         [Validation(Required=false)]

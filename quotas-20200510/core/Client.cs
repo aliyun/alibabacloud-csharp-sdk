@@ -2180,6 +2180,10 @@ namespace AlibabaCloud.SDK.Quotas20200510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
@@ -2242,6 +2246,10 @@ namespace AlibabaCloud.SDK.Quotas20200510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;

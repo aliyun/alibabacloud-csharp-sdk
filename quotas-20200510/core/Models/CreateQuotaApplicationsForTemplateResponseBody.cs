@@ -23,14 +23,23 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [Validation(Required=false)]
         public string BatchQuotaApplicationId { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud accounts of the members in a resource directory whose quota increase request is rejected, and the reason for the rejection.
+        /// </summary>
         [NameInMap("FailResults")]
         [Validation(Required=false)]
         public List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> FailResults { get; set; }
         public class CreateQuotaApplicationsForTemplateResponseBodyFailResults : TeaModel {
+            /// <summary>
+            /// The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.
+            /// </summary>
             [NameInMap("AliyunUid")]
             [Validation(Required=false)]
             public string AliyunUid { get; set; }
 
+            /// <summary>
+            /// The reason for the rejection.
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }

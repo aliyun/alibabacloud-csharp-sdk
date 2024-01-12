@@ -1,3 +1,6 @@
+2024-01-12 Version: 1.0.6
+- Generated csharp 2020-05-10 for quotas.
+
 2023-11-23 Version: 1.0.5
 - Generated csharp 2020-05-10 for quotas.
 

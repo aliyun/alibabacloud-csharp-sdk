@@ -95,6 +95,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            /// <summary>
+            /// Indicates whether the quota is a global quota. Valid values:
+            /// 
+            /// *   true: The quota is shared in all regions.
+            /// *   false: The quota is independently used in a region.
+            /// </summary>
             [NameInMap("GlobalQuota")]
             [Validation(Required=false)]
             public bool? GlobalQuota { get; set; }
