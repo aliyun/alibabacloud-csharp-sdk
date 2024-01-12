@@ -236,6 +236,108 @@ namespace AlibabaCloud.SDK.XrEngine20230313
             return await BatchQueryMotionShopTaskStatusWithOptionsAsync(request, runtime);
         }
 
+        public CreateAvatarTalkProjectResponse CreateAvatarTalkProjectWithOptions(CreateAvatarTalkProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["JwtToken"] = request.JwtToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarProjectId))
+            {
+                body["AvatarProjectId"] = request.AvatarProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoice))
+            {
+                body["TtsVoice"] = request.TtsVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TxtContent))
+            {
+                body["TxtContent"] = request.TxtContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAvatarTalkProject",
+                Version = "2023-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAvatarTalkProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateAvatarTalkProjectResponse> CreateAvatarTalkProjectWithOptionsAsync(CreateAvatarTalkProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["JwtToken"] = request.JwtToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarProjectId))
+            {
+                body["AvatarProjectId"] = request.AvatarProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoice))
+            {
+                body["TtsVoice"] = request.TtsVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TxtContent))
+            {
+                body["TxtContent"] = request.TxtContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAvatarTalkProject",
+                Version = "2023-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAvatarTalkProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateAvatarTalkProjectResponse CreateAvatarTalkProject(CreateAvatarTalkProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAvatarTalkProjectWithOptions(request, runtime);
+        }
+
+        public async Task<CreateAvatarTalkProjectResponse> CreateAvatarTalkProjectAsync(CreateAvatarTalkProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAvatarTalkProjectWithOptionsAsync(request, runtime);
+        }
+
         public CreateDigitalHumanProjectResponse CreateDigitalHumanProjectWithOptions(CreateDigitalHumanProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
