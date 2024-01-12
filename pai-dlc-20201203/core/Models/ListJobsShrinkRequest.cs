@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string UserIdForFilter { get; set; }
 
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
+
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

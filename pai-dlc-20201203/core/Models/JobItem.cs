@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<string> ThirdpartyLibs { get; set; }
 
+        [NameInMap("UseOversoldResource")]
+        [Validation(Required=false)]
+        public bool? UseOversoldResource { get; set; }
+
         [NameInMap("UserCommand")]
         [Validation(Required=false)]
         public string UserCommand { get; set; }
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
 
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
