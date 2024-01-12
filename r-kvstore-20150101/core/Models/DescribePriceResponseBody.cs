@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
             }
 
+            /// <summary>
+            /// Indicates whether the discount information is displayed.
+            /// </summary>
             [NameInMap("ShowDiscountInfo")]
             [Validation(Required=false)]
             public bool? ShowDiscountInfo { get; set; }
@@ -189,14 +192,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The list price of the order.
+                /// The original price of the order.
                 /// </summary>
                 [NameInMap("OriginalAmount")]
                 [Validation(Required=false)]
                 public string OriginalAmount { get; set; }
 
                 /// <summary>
-                /// The ID of the promotion rule.
+                /// The rule IDs.
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]

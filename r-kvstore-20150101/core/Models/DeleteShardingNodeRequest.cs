@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable forced transmission during a configuration change. Valid values:
+        /// 
+        /// *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
+        /// *   **true**: The system skips the version check and directly performs the configuration change.
+        /// </summary>
         [NameInMap("ForceTrans")]
         [Validation(Required=false)]
         public bool? ForceTrans { get; set; }

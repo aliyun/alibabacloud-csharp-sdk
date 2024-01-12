@@ -38,6 +38,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable forced transmission during a configuration change. Valid values:
+        /// 
+        /// *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
+        /// *   **true**: The system skips the version check and directly performs the configuration change.
+        /// </summary>
         [NameInMap("ForceTrans")]
         [Validation(Required=false)]
         public bool? ForceTrans { get; set; }
@@ -72,9 +78,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The number of data shards that you want to add. Default value: **1**.
         /// 
-        /// > 
-        /// 
-        /// *   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.
+        /// >  The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.
         /// </summary>
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
@@ -87,6 +91,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SourceBiz { get; set; }
 
+        /// <summary>
+        /// The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

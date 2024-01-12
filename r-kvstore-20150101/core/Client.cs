@@ -1541,6 +1541,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterBackupId))
+            {
+                query["ClusterBackupId"] = request.ClusterBackupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStringPrefix))
             {
                 query["ConnectionStringPrefix"] = request.ConnectionStringPrefix;
@@ -1745,6 +1749,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterBackupId))
+            {
+                query["ClusterBackupId"] = request.ClusterBackupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStringPrefix))
             {
@@ -2185,6 +2193,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterBackupId))
+            {
+                query["ClusterBackupId"] = request.ClusterBackupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
                 query["CouponNo"] = request.CouponNo;
@@ -2373,6 +2385,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterBackupId))
+            {
+                query["ClusterBackupId"] = request.ClusterBackupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
@@ -4823,6 +4839,64 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCacheAnalysisReportListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeClusterBackupListResponse DescribeClusterBackupListWithOptions(DescribeClusterBackupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClusterBackupList",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClusterBackupListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeClusterBackupListResponse> DescribeClusterBackupListWithOptionsAsync(DescribeClusterBackupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClusterBackupList",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClusterBackupListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeClusterBackupListResponse DescribeClusterBackupList(DescribeClusterBackupListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeClusterBackupListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeClusterBackupListResponse> DescribeClusterBackupListAsync(DescribeClusterBackupListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeClusterBackupListWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -14594,7 +14668,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14652,7 +14726,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14710,7 +14784,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @return ModifySecurityGroupConfigurationResponse
@@ -14722,7 +14796,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
           *
           * @param request ModifySecurityGroupConfigurationRequest
           * @return ModifySecurityGroupConfigurationResponse

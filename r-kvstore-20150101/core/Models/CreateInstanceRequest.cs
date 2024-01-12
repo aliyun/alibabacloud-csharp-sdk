@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("ClusterBackupId")]
+        [Validation(Required=false)]
+        public string ClusterBackupId { get; set; }
+
         /// <summary>
         /// The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.
         /// </summary>

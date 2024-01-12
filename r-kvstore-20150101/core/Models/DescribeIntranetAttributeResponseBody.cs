@@ -30,6 +30,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string BandwidthExpireTime { get; set; }
 
+        /// <summary>
+        /// The billing methods of unexpired bandwith plans. Valid values:
+        /// - **0**: Pay-as-you-go
+        /// - **1**: Subscription
+        /// </summary>
         [NameInMap("BandwidthPrePaid")]
         [Validation(Required=false)]
         public string BandwidthPrePaid { get; set; }
