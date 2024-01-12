@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                [NameInMap("arr_airport")]
+                [Validation(Required=false)]
+                public string ArrAirport { get; set; }
+
+                [NameInMap("arr_city")]
+                [Validation(Required=false)]
+                public string ArrCity { get; set; }
+
                 [NameInMap("arr_time")]
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
@@ -61,9 +69,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? ChangeType { get; set; }
 
+                [NameInMap("dep_airport")]
+                [Validation(Required=false)]
+                public string DepAirport { get; set; }
+
+                [NameInMap("dep_city")]
+                [Validation(Required=false)]
+                public string DepCity { get; set; }
+
                 [NameInMap("dep_time")]
                 [Validation(Required=false)]
                 public string DepTime { get; set; }
+
+                [NameInMap("discount")]
+                [Validation(Required=false)]
+                public string Discount { get; set; }
 
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
@@ -80,6 +100,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("out_apply_id")]
                 [Validation(Required=false)]
                 public string OutApplyId { get; set; }
+
+                [NameInMap("stop_city")]
+                [Validation(Required=false)]
+                public string StopCity { get; set; }
 
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
@@ -184,6 +208,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("apply_id")]
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
+
+                [NameInMap("arr_airport")]
+                [Validation(Required=false)]
+                public string ArrAirport { get; set; }
+
+                [NameInMap("arr_city")]
+                [Validation(Required=false)]
+                public string ArrCity { get; set; }
+
+                [NameInMap("dep_airport")]
+                [Validation(Required=false)]
+                public string DepAirport { get; set; }
+
+                [NameInMap("dep_city")]
+                [Validation(Required=false)]
+                public string DepCity { get; set; }
+
+                [NameInMap("flight_no")]
+                [Validation(Required=false)]
+                public string FlightNo { get; set; }
 
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
