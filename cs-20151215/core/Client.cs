@@ -331,6 +331,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await AttachInstancesToNodePoolWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelClusterUpgradeResponse
+         */
+        // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -352,6 +360,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelClusterUpgradeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelClusterUpgradeResponse
+         */
+        // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -373,6 +389,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelClusterUpgradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return CancelClusterUpgradeResponse
+         */
+        // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgrade(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -380,6 +402,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CancelClusterUpgradeWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return CancelClusterUpgradeResponse
+         */
+        // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3181,6 +3209,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeAddonWithOptionsAsync(addonName, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeAddonsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAddonsResponse
+         */
+        // Deprecated
         public DescribeAddonsResponse DescribeAddonsWithOptions(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3225,6 +3262,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeAddonsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeAddonsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAddonsResponse
+         */
+        // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsWithOptionsAsync(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3269,6 +3315,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeAddonsRequest
+          * @return DescribeAddonsResponse
+         */
+        // Deprecated
         public DescribeAddonsResponse DescribeAddons(DescribeAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3276,6 +3329,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeAddonsWithOptions(request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeAddonsRequest
+          * @return DescribeAddonsResponse
+         */
+        // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsAsync(DescribeAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3283,6 +3343,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeAddonsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonInstanceResponse
+         */
+        // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstanceWithOptions(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3304,6 +3372,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonInstanceResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceWithOptionsAsync(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3325,6 +3401,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonInstanceResponse
+         */
+        // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstance(string ClusterID, string AddonName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3332,6 +3414,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterAddonInstanceWithOptions(ClusterID, AddonName, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonInstanceResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceAsync(string ClusterID, string AddonName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3339,6 +3427,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterAddonInstanceWithOptionsAsync(ClusterID, AddonName, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonMetadataResponse
+         */
+        // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3360,6 +3456,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonMetadataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonMetadataResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3381,6 +3485,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonMetadataResponse
+         */
+        // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadata(string clusterId, string componentId, string version)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3388,6 +3498,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterAddonMetadataWithOptions(clusterId, componentId, version, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonMetadataResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataAsync(string clusterId, string componentId, string version)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3479,6 +3595,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterAddonUpgradeStatusWithOptionsAsync(ClusterId, ComponentId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonsUpgradeStatusResponse
+         */
+        // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatusWithOptions(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3513,6 +3638,15 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonsUpgradeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonsUpgradeStatusResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusWithOptionsAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3547,6 +3681,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonsUpgradeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeClusterAddonsUpgradeStatusRequest
+          * @return DescribeClusterAddonsUpgradeStatusResponse
+         */
+        // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatus(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3554,6 +3695,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterAddonsUpgradeStatusWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeClusterAddonsUpgradeStatusRequest
+          * @return DescribeClusterAddonsUpgradeStatusResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3561,6 +3709,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterAddonsUpgradeStatusWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonsVersionResponse
+         */
+        // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersionWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3582,6 +3738,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonsVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeClusterAddonsVersionResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3603,6 +3767,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAddonsVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonsVersionResponse
+         */
+        // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersion(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3610,6 +3780,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterAddonsVersionWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return DescribeClusterAddonsVersionResponse
+         */
+        // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8367,6 +8543,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await OpenAckServiceWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PauseClusterUpgradeResponse
+         */
+        // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8388,6 +8572,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseClusterUpgradeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PauseClusterUpgradeResponse
+         */
+        // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8409,6 +8601,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseClusterUpgradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return PauseClusterUpgradeResponse
+         */
+        // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgrade(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8416,6 +8614,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return PauseClusterUpgradeWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return PauseClusterUpgradeResponse
+         */
+        // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9077,6 +9281,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ResumeTaskWithOptionsAsync(taskId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResumeUpgradeClusterResponse
+         */
+        // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeClusterWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9098,6 +9310,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeUpgradeClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResumeUpgradeClusterResponse
+         */
+        // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9119,6 +9339,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeUpgradeClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return ResumeUpgradeClusterResponse
+         */
+        // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeCluster(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9126,6 +9352,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ResumeUpgradeClusterWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return ResumeUpgradeClusterResponse
+         */
+        // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10904,7 +11136,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeClusterResponse>(CallApi(params_, req, runtime));
         }
@@ -10944,7 +11176,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
