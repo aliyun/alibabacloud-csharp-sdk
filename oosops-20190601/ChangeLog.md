@@ -1,3 +1,6 @@
+2024-01-15 Version: 1.0.2
+- Generated csharp 2019-06-01 for oosops.
+
 2024-01-05 Version: 1.0.1
 - Generated csharp 2019-06-01 for oosops.
 

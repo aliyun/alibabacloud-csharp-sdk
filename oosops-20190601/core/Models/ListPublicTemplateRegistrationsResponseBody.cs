@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
             [Validation(Required=false)]
             public string Comment { get; set; }
 
+            [NameInMap("CreatedDate")]
+            [Validation(Required=false)]
+            public string CreatedDate { get; set; }
+
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
             [NameInMap("RegistrationId")]
             [Validation(Required=false)]
             public string RegistrationId { get; set; }
+
+            [NameInMap("ShowPages")]
+            [Validation(Required=false)]
+            public string ShowPages { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Oosops20190601.Models
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
+
+            [NameInMap("UpdatedDate")]
+            [Validation(Required=false)]
+            public string UpdatedDate { get; set; }
 
         }
 
