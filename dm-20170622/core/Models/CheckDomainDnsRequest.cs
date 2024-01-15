@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20170622.Models
 {
-    public class DescDomainRequest : TeaModel {
+    public class CheckDomainDnsRequest : TeaModel {
         [NameInMap("DomainId")]
         [Validation(Required=false)]
         public int? DomainId { get; set; }
@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RequireRealTimeDnsRecords")]
-        [Validation(Required=false)]
-        public bool? RequireRealTimeDnsRecords { get; set; }
-
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 
