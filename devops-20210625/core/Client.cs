@@ -8977,6 +8977,62 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await GetWorkitemCommentListWithOptionsAsync(organizationId, workitemId, headers, runtime);
         }
 
+        public GetWorkitemFileResponse GetWorkitemFileWithOptions(string organizationId, string workitemIdentifier, string fileIdentifier, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkitemFile",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId) + "/workitem/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workitemIdentifier) + "/files/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(fileIdentifier),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkitemFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetWorkitemFileResponse> GetWorkitemFileWithOptionsAsync(string organizationId, string workitemIdentifier, string fileIdentifier, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkitemFile",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId) + "/workitem/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workitemIdentifier) + "/files/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(fileIdentifier),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkitemFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetWorkitemFileResponse GetWorkitemFile(string organizationId, string workitemIdentifier, string fileIdentifier)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWorkitemFileWithOptions(organizationId, workitemIdentifier, fileIdentifier, headers, runtime);
+        }
+
+        public async Task<GetWorkitemFileResponse> GetWorkitemFileAsync(string organizationId, string workitemIdentifier, string fileIdentifier)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWorkitemFileWithOptionsAsync(organizationId, workitemIdentifier, fileIdentifier, headers, runtime);
+        }
+
         public GetWorkitemRelationsResponse GetWorkitemRelationsWithOptions(string organizationId, string workitemId, GetWorkitemRelationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
