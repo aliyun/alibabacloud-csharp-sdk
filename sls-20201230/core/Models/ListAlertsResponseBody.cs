@@ -8,17 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListAnnotationLabelsResponseBody : TeaModel {
-        /// <summary>
-        /// The data returned.
-        /// </summary>
-        [NameInMap("data")]
+    public class ListAlertsResponseBody : TeaModel {
+        [NameInMap("count")]
         [Validation(Required=false)]
-        public List<MLLabelParam> Data { get; set; }
+        public int? Count { get; set; }
 
-        /// <summary>
-        /// The total number of tags that meet the query conditions.
-        /// </summary>
+        [NameInMap("results")]
+        [Validation(Required=false)]
+        public List<AlertResp> Results { get; set; }
+
         [NameInMap("total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

@@ -9,30 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateLogtailPipelineConfigRequest : TeaModel {
+        /// <summary>
+        /// The aggregation plug-ins.
+        /// </summary>
         [NameInMap("aggregators")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Aggregators { get; set; }
 
+        /// <summary>
+        /// The name of the configuration.
+        /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
+        /// <summary>
+        /// The data output plug-ins.
+        /// </summary>
         [NameInMap("flushers")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Flushers { get; set; }
 
+        /// <summary>
+        /// The global configuration.
+        /// </summary>
         [NameInMap("global")]
         [Validation(Required=false)]
         public Dictionary<string, object> Global { get; set; }
 
+        /// <summary>
+        /// The data source plug-ins.
+        /// </summary>
         [NameInMap("inputs")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Inputs { get; set; }
 
+        /// <summary>
+        /// The sample log.
+        /// </summary>
         [NameInMap("logSample")]
         [Validation(Required=false)]
         public string LogSample { get; set; }
 
+        /// <summary>
+        /// The processing plug-ins.
+        /// </summary>
         [NameInMap("processors")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Processors { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateAnnotationDataSetRequest : TeaModel {
+        /// <summary>
+        /// The data structure of the request.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public MLDataSetParam Body { get; set; }
 
+        /// <summary>
+        /// The unique identifier of the dataset.
+        /// </summary>
         [NameInMap("datasetId")]
         [Validation(Required=false)]
         public string DatasetId { get; set; }

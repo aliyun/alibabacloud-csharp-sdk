@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListLogStoresResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries that are returned on the current page.
+        /// The number of entries returned on the current page.
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]

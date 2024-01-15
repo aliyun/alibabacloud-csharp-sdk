@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumerGroupHeartBeatRequest : TeaModel {
+        /// <summary>
+        /// The IDs of shards whose data is being consumed.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<int?> Body { get; set; }
 
+        /// <summary>
+        /// The consumer.
+        /// </summary>
         [NameInMap("consumer")]
         [Validation(Required=false)]
         public string Consumer { get; set; }

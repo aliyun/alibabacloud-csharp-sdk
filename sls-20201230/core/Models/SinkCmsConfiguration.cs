@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class CreateAnnotationLabelRequest : TeaModel {
-        /// <summary>
-        /// The data structure of the request.
-        /// </summary>
-        [NameInMap("body")]
+    public class SinkCmsConfiguration : TeaModel {
+        [NameInMap("enabled")]
         [Validation(Required=false)]
-        public MLLabelParam Body { get; set; }
+        public bool? Enabled { get; set; }
 
     }
 

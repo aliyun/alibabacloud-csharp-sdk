@@ -203,6 +203,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ChangeResourceGroupWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ConsumerGroupHeartBeatRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConsumerGroupHeartBeatResponse
+         */
         public ConsumerGroupHeartBeatResponse ConsumerGroupHeartBeatWithOptions(string project, string logstore, string consumerGroup, ConsumerGroupHeartBeatRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -235,6 +245,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ConsumerGroupHeartBeatResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ConsumerGroupHeartBeatRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConsumerGroupHeartBeatResponse
+         */
         public async Task<ConsumerGroupHeartBeatResponse> ConsumerGroupHeartBeatWithOptionsAsync(string project, string logstore, string consumerGroup, ConsumerGroupHeartBeatRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -267,6 +287,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ConsumerGroupHeartBeatResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Usage notes
+          * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ConsumerGroupHeartBeatRequest
+          * @return ConsumerGroupHeartBeatResponse
+         */
         public ConsumerGroupHeartBeatResponse ConsumerGroupHeartBeat(string project, string logstore, string consumerGroup, ConsumerGroupHeartBeatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -274,11 +302,85 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ConsumerGroupHeartBeatWithOptions(project, logstore, consumerGroup, request, headers, runtime);
         }
 
+        /**
+          * ### Usage notes
+          * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request ConsumerGroupHeartBeatRequest
+          * @return ConsumerGroupHeartBeatResponse
+         */
         public async Task<ConsumerGroupHeartBeatResponse> ConsumerGroupHeartBeatAsync(string project, string logstore, string consumerGroup, ConsumerGroupHeartBeatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ConsumerGroupHeartBeatWithOptionsAsync(project, logstore, consumerGroup, request, headers, runtime);
+        }
+
+        public CreateAlertResponse CreateAlertWithOptions(string project, CreateAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<CreateAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateAlertResponse> CreateAlertWithOptionsAsync(string project, CreateAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<CreateAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateAlertResponse CreateAlert(string project, CreateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAlertWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<CreateAlertResponse> CreateAlertAsync(string project, CreateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAlertWithOptionsAsync(project, request, headers, runtime);
         }
 
         public CreateAnnotationDataSetResponse CreateAnnotationDataSetWithOptions(CreateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -413,6 +515,20 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateAnnotationLabelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+          * *   You can create up to 100 Logtail configurations in a project.
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request CreateConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConfigResponse
+         */
         public CreateConfigResponse CreateConfigWithOptions(string project, CreateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -439,6 +555,20 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+          * *   You can create up to 100 Logtail configurations in a project.
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request CreateConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateConfigResponse
+         */
         public async Task<CreateConfigResponse> CreateConfigWithOptionsAsync(string project, CreateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -465,6 +595,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+          * *   You can create up to 100 Logtail configurations in a project.
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request CreateConfigRequest
+          * @return CreateConfigResponse
+         */
         public CreateConfigResponse CreateConfig(string project, CreateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -472,6 +614,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateConfigWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+          * *   You can create up to 100 Logtail configurations in a project.
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request CreateConfigRequest
+          * @return CreateConfigResponse
+         */
         public async Task<CreateConfigResponse> CreateConfigAsync(string project, CreateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -611,6 +765,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateConsumerGroupWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request CreateDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDashboardResponse
+         */
         public CreateDashboardResponse CreateDashboardWithOptions(string project, CreateDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -637,6 +803,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateDashboardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request CreateDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDashboardResponse
+         */
         public async Task<CreateDashboardResponse> CreateDashboardWithOptionsAsync(string project, CreateDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -663,6 +841,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateDashboardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request CreateDashboardRequest
+          * @return CreateDashboardResponse
+         */
         public CreateDashboardResponse CreateDashboard(string project, CreateDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -670,6 +858,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateDashboardWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request CreateDashboardRequest
+          * @return CreateDashboardResponse
+         */
         public async Task<CreateDashboardResponse> CreateDashboardAsync(string project, CreateDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1241,6 +1439,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateLoggingWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request CreateLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLogtailPipelineConfigResponse
+         */
         public CreateLogtailPipelineConfigResponse CreateLogtailPipelineConfigWithOptions(string project, CreateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1296,6 +1502,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request CreateLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLogtailPipelineConfigResponse
+         */
         public async Task<CreateLogtailPipelineConfigResponse> CreateLogtailPipelineConfigWithOptionsAsync(string project, CreateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1351,6 +1565,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<CreateLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request CreateLogtailPipelineConfigRequest
+          * @return CreateLogtailPipelineConfigResponse
+         */
         public CreateLogtailPipelineConfigResponse CreateLogtailPipelineConfig(string project, CreateLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1358,6 +1578,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return CreateLogtailPipelineConfigWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request CreateLogtailPipelineConfigRequest
+          * @return CreateLogtailPipelineConfigResponse
+         */
         public async Task<CreateLogtailPipelineConfigResponse> CreateLogtailPipelineConfigAsync(string project, CreateLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1506,6 +1732,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request CreateOssExternalStoreRequest
@@ -1553,6 +1780,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request CreateOssExternalStoreRequest
@@ -1600,6 +1828,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request CreateOssExternalStoreRequest
@@ -1613,6 +1842,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request CreateOssExternalStoreRequest
@@ -2035,6 +2265,68 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await CreateTicketWithOptionsAsync(headers, runtime);
         }
 
+        public DeleteAlertResponse DeleteAlertWithOptions(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<DeleteAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteAlertResponse> DeleteAlertWithOptionsAsync(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<DeleteAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteAlertResponse DeleteAlert(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAlertWithOptions(project, alertName, headers, runtime);
+        }
+
+        public async Task<DeleteAlertResponse> DeleteAlertAsync(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAlertWithOptionsAsync(project, alertName, headers, runtime);
+        }
+
         public DeleteAnnotationDataResponse DeleteAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2091,6 +2383,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteAnnotationDataWithOptionsAsync(datasetId, annotationdataId, headers, runtime);
         }
 
+        /**
+          * You can delete a dataset only if no data exists in the dataset.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAnnotationDataSetResponse
+         */
         public DeleteAnnotationDataSetResponse DeleteAnnotationDataSetWithOptions(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2112,6 +2411,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteAnnotationDataSetResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * You can delete a dataset only if no data exists in the dataset.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAnnotationDataSetResponse
+         */
         public async Task<DeleteAnnotationDataSetResponse> DeleteAnnotationDataSetWithOptionsAsync(string datasetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2133,6 +2439,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteAnnotationDataSetResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * You can delete a dataset only if no data exists in the dataset.
+          *
+          * @return DeleteAnnotationDataSetResponse
+         */
         public DeleteAnnotationDataSetResponse DeleteAnnotationDataSet(string datasetId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2140,6 +2451,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteAnnotationDataSetWithOptions(datasetId, headers, runtime);
         }
 
+        /**
+          * You can delete a dataset only if no data exists in the dataset.
+          *
+          * @return DeleteAnnotationDataSetResponse
+         */
         public async Task<DeleteAnnotationDataSetResponse> DeleteAnnotationDataSetAsync(string datasetId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2147,6 +2463,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteAnnotationDataSetWithOptionsAsync(datasetId, headers, runtime);
         }
 
+        /**
+          * Only non-built-in tags can be deleted.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAnnotationLabelResponse
+         */
         public DeleteAnnotationLabelResponse DeleteAnnotationLabelWithOptions(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2168,6 +2491,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteAnnotationLabelResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * Only non-built-in tags can be deleted.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAnnotationLabelResponse
+         */
         public async Task<DeleteAnnotationLabelResponse> DeleteAnnotationLabelWithOptionsAsync(string labelId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2189,6 +2519,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * Only non-built-in tags can be deleted.
+          *
+          * @return DeleteAnnotationLabelResponse
+         */
         public DeleteAnnotationLabelResponse DeleteAnnotationLabel(string labelId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2196,6 +2531,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteAnnotationLabelWithOptions(labelId, headers, runtime);
         }
 
+        /**
+          * Only non-built-in tags can be deleted.
+          *
+          * @return DeleteAnnotationLabelResponse
+         */
         public async Task<DeleteAnnotationLabelResponse> DeleteAnnotationLabelAsync(string labelId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2281,6 +2621,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteCollectionPolicyWithOptionsAsync(policyName, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConfigResponse
+         */
         public DeleteConfigResponse DeleteConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2305,6 +2658,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteConfigResponse
+         */
         public async Task<DeleteConfigResponse> DeleteConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2329,6 +2695,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @return DeleteConfigResponse
+         */
         public DeleteConfigResponse DeleteConfig(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2336,6 +2713,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteConfigWithOptions(project, configName, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @return DeleteConfigResponse
+         */
         public async Task<DeleteConfigResponse> DeleteConfigAsync(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2429,6 +2817,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteConsumerGroupWithOptionsAsync(project, logstore, consumerGroup, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDashboardResponse
+         */
         public DeleteDashboardResponse DeleteDashboardWithOptions(string project, string dashboardName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2453,6 +2852,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteDashboardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDashboardResponse
+         */
         public async Task<DeleteDashboardResponse> DeleteDashboardWithOptionsAsync(string project, string dashboardName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2477,6 +2887,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteDashboardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @return DeleteDashboardResponse
+         */
         public DeleteDashboardResponse DeleteDashboard(string project, string dashboardName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2484,6 +2903,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteDashboardWithOptions(project, dashboardName, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @return DeleteDashboardResponse
+         */
         public async Task<DeleteDashboardResponse> DeleteDashboardAsync(string project, string dashboardName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2905,6 +3333,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await DeleteLoggingWithOptionsAsync(project, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLogtailPipelineConfigResponse
+         */
         public DeleteLogtailPipelineConfigResponse DeleteLogtailPipelineConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2929,6 +3364,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteLogtailPipelineConfigResponse
+         */
         public async Task<DeleteLogtailPipelineConfigResponse> DeleteLogtailPipelineConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -2953,6 +3395,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<DeleteLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @return DeleteLogtailPipelineConfigResponse
+         */
         public DeleteLogtailPipelineConfigResponse DeleteLogtailPipelineConfig(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2960,6 +3407,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return DeleteLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @return DeleteLogtailPipelineConfigResponse
+         */
         public async Task<DeleteLogtailPipelineConfigResponse> DeleteLogtailPipelineConfigAsync(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3383,6 +3835,192 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteShipperWithOptionsAsync(project, logstore, shipperName, headers, runtime);
+        }
+
+        public DisableAlertResponse DisableAlertWithOptions(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName + "?action=disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<DisableAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DisableAlertResponse> DisableAlertWithOptionsAsync(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName + "?action=disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<DisableAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DisableAlertResponse DisableAlert(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableAlertWithOptions(project, alertName, headers, runtime);
+        }
+
+        public async Task<DisableAlertResponse> DisableAlertAsync(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableAlertWithOptionsAsync(project, alertName, headers, runtime);
+        }
+
+        public EnableAlertResponse EnableAlertWithOptions(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName + "?action=enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<EnableAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<EnableAlertResponse> EnableAlertWithOptionsAsync(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName + "?action=enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<EnableAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public EnableAlertResponse EnableAlert(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableAlertWithOptions(project, alertName, headers, runtime);
+        }
+
+        public async Task<EnableAlertResponse> EnableAlertAsync(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableAlertWithOptionsAsync(project, alertName, headers, runtime);
+        }
+
+        public GetAlertResponse GetAlertWithOptions(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetAlertResponse> GetAlertWithOptionsAsync(string project, string alertName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetAlertResponse GetAlert(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAlertWithOptions(project, alertName, headers, runtime);
+        }
+
+        public async Task<GetAlertResponse> GetAlertAsync(string project, string alertName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAlertWithOptionsAsync(project, alertName, headers, runtime);
         }
 
         public GetAnnotationDataResponse GetAnnotationDataWithOptions(string datasetId, string annotationdataId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3907,6 +4545,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetCollectionPolicyWithOptionsAsync(policyName, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConfigResponse
+         */
         public GetConfigResponse GetConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3931,6 +4581,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConfigResponse
+         */
         public async Task<GetConfigResponse> GetConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -3955,6 +4617,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @return GetConfigResponse
+         */
         public GetConfigResponse GetConfig(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3962,6 +4634,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetConfigWithOptions(project, configName, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+          *
+          * @return GetConfigResponse
+         */
         public async Task<GetConfigResponse> GetConfigAsync(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4309,6 +4991,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetCursorTimeWithOptionsAsync(project, logstore, shardId, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDashboardResponse
+         */
         public GetDashboardResponse GetDashboardWithOptions(string project, string dashboardName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4333,6 +5026,17 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetDashboardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDashboardResponse
+         */
         public async Task<GetDashboardResponse> GetDashboardWithOptionsAsync(string project, string dashboardName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -4357,6 +5061,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetDashboardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @return GetDashboardResponse
+         */
         public GetDashboardResponse GetDashboard(string project, string dashboardName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4364,6 +5077,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetDashboardWithOptions(project, dashboardName, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @return GetDashboardResponse
+         */
         public async Task<GetDashboardResponse> GetDashboardAsync(string project, string dashboardName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5367,6 +6089,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetLogsV2WithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogtailPipelineConfigResponse
+         */
         public GetLogtailPipelineConfigResponse GetLogtailPipelineConfigWithOptions(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5391,6 +6120,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLogtailPipelineConfigResponse
+         */
         public async Task<GetLogtailPipelineConfigResponse> GetLogtailPipelineConfigWithOptionsAsync(string project, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5415,6 +6151,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<GetLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @return GetLogtailPipelineConfigResponse
+         */
         public GetLogtailPipelineConfigResponse GetLogtailPipelineConfig(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5422,6 +6163,11 @@ namespace AlibabaCloud.SDK.Sls20201230
             return GetLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @return GetLogtailPipelineConfigResponse
+         */
         public async Task<GetLogtailPipelineConfigResponse> GetLogtailPipelineConfigAsync(string project, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6125,6 +6871,98 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await GetShipperStatusWithOptionsAsync(project, logstore, shipperName, request, headers, runtime);
         }
 
+        public ListAlertsResponse ListAlertsWithOptions(string project, ListAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlerts",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListAlertsResponse> ListAlertsWithOptionsAsync(string project, ListAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logstore))
+            {
+                query["logstore"] = request.Logstore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlerts",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListAlertsResponse ListAlerts(string project, ListAlertsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAlertsWithOptions(project, request, headers, runtime);
+        }
+
+        public async Task<ListAlertsResponse> ListAlertsAsync(string project, ListAlertsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAlertsWithOptionsAsync(project, request, headers, runtime);
+        }
+
         public ListAnnotationDataResponse ListAnnotationDataWithOptions(string datasetId, ListAnnotationDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6489,6 +7327,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListCollectionPoliciesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConfigResponse
+         */
         public ListConfigResponse ListConfigWithOptions(string project, ListConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6532,6 +7382,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListConfigResponse
+         */
         public async Task<ListConfigResponse> ListConfigWithOptionsAsync(string project, ListConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6575,6 +7437,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListConfigRequest
+          * @return ListConfigResponse
+         */
         public ListConfigResponse ListConfig(string project, ListConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6582,6 +7454,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListConfigWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListConfigRequest
+          * @return ListConfigResponse
+         */
         public async Task<ListConfigResponse> ListConfigAsync(string project, ListConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6679,6 +7561,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListConsumerGroupWithOptionsAsync(project, logstore, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDashboardResponse
+         */
         public ListDashboardResponse ListDashboardWithOptions(string project, ListDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6714,6 +7608,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListDashboardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDashboardResponse
+         */
         public async Task<ListDashboardResponse> ListDashboardWithOptionsAsync(string project, ListDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6749,6 +7655,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListDashboardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListDashboardRequest
+          * @return ListDashboardResponse
+         */
         public ListDashboardResponse ListDashboard(string project, ListDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6756,6 +7672,16 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListDashboardWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          *
+          * @param request ListDashboardRequest
+          * @return ListDashboardResponse
+         */
         public async Task<ListDashboardResponse> ListDashboardAsync(string project, ListDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7009,7 +7935,15 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /**
           * ### Usage notes
-          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * ### Authentication resources
+          * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+          * |Action|Resource|
+          * |:---|:---|
+          * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
           *
           * @param request ListLogStoresRequest
           * @param headers map
@@ -7065,7 +7999,15 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /**
           * ### Usage notes
-          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * ### Authentication resources
+          * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+          * |Action|Resource|
+          * |:---|:---|
+          * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
           *
           * @param request ListLogStoresRequest
           * @param headers map
@@ -7121,7 +8063,15 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /**
           * ### Usage notes
-          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * ### Authentication resources
+          * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+          * |Action|Resource|
+          * |:---|:---|
+          * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
           *
           * @param request ListLogStoresRequest
           * @return ListLogStoresResponse
@@ -7135,7 +8085,15 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /**
           * ### Usage notes
-          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * ### Authentication resources
+          * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+          * |Action|Resource|
+          * |:---|:---|
+          * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
           *
           * @param request ListLogStoresRequest
           * @return ListLogStoresResponse
@@ -7147,6 +8105,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await ListLogStoresWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request ListLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLogtailPipelineConfigResponse
+         */
         public ListLogtailPipelineConfigResponse ListLogtailPipelineConfigWithOptions(string project, ListLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7190,6 +8156,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request ListLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListLogtailPipelineConfigResponse
+         */
         public async Task<ListLogtailPipelineConfigResponse> ListLogtailPipelineConfigWithOptionsAsync(string project, ListLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7233,6 +8207,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<ListLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request ListLogtailPipelineConfigRequest
+          * @return ListLogtailPipelineConfigResponse
+         */
         public ListLogtailPipelineConfigResponse ListLogtailPipelineConfig(string project, ListLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7240,6 +8220,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return ListLogtailPipelineConfigWithOptions(project, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request ListLogtailPipelineConfigRequest
+          * @return ListLogtailPipelineConfigResponse
+         */
         public async Task<ListLogtailPipelineConfigResponse> ListLogtailPipelineConfigAsync(string project, ListLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7480,7 +8466,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-          * ### Usage notes
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request ListProjectRequest
@@ -7529,7 +8515,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-          * ### Usage notes
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request ListProjectRequest
@@ -7578,7 +8564,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-          * ### Usage notes
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request ListProjectRequest
@@ -7592,7 +8578,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
-          * ### Usage notes
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request ListProjectRequest
@@ -8287,6 +9273,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await PutProjectTransferAccelerationWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+          * *   You can call this operation to collect logs from web pages or clients.
+          * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+          * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+          * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+          *
+          * @param request PutWebtrackingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutWebtrackingResponse
+         */
         public PutWebtrackingResponse PutWebtrackingWithOptions(string project, string logstoreName, PutWebtrackingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8330,6 +9331,21 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<PutWebtrackingResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+          * *   You can call this operation to collect logs from web pages or clients.
+          * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+          * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+          * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+          *
+          * @param request PutWebtrackingRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PutWebtrackingResponse
+         */
         public async Task<PutWebtrackingResponse> PutWebtrackingWithOptionsAsync(string project, string logstoreName, PutWebtrackingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8373,6 +9389,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<PutWebtrackingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+          * *   You can call this operation to collect logs from web pages or clients.
+          * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+          * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+          * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+          *
+          * @param request PutWebtrackingRequest
+          * @return PutWebtrackingResponse
+         */
         public PutWebtrackingResponse PutWebtracking(string project, string logstoreName, PutWebtrackingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8380,6 +9409,19 @@ namespace AlibabaCloud.SDK.Sls20201230
             return PutWebtrackingWithOptions(project, logstoreName, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+          * *   You can call this operation to collect logs from web pages or clients.
+          * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+          * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+          * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+          * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+          *
+          * @param request PutWebtrackingRequest
+          * @return PutWebtrackingResponse
+         */
         public async Task<PutWebtrackingResponse> PutWebtrackingAsync(string project, string logstoreName, PutWebtrackingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8941,6 +9983,72 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        public UpdateAlertResponse UpdateAlertWithOptions(string project, string alertName, UpdateAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<UpdateAlertResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateAlertResponse> UpdateAlertWithOptionsAsync(string project, string alertName, UpdateAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlert",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/" + alertName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "any",
+            };
+            return TeaModel.ToObject<UpdateAlertResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateAlertResponse UpdateAlert(string project, string alertName, UpdateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAlertWithOptions(project, alertName, request, headers, runtime);
+        }
+
+        public async Task<UpdateAlertResponse> UpdateAlertAsync(string project, string alertName, UpdateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAlertWithOptionsAsync(project, alertName, request, headers, runtime);
+        }
+
         public UpdateAnnotationDataSetResponse UpdateAnnotationDataSetWithOptions(string datasetId, UpdateAnnotationDataSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9001,6 +10109,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateAnnotationDataSetWithOptionsAsync(datasetId, request, headers, runtime);
         }
 
+        /**
+          * You can update only the names of the tags in a tag set.
+          *
+          * @param request UpdateAnnotationLabelRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAnnotationLabelResponse
+         */
         public UpdateAnnotationLabelResponse UpdateAnnotationLabelWithOptions(UpdateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9024,6 +10140,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateAnnotationLabelResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * You can update only the names of the tags in a tag set.
+          *
+          * @param request UpdateAnnotationLabelRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAnnotationLabelResponse
+         */
         public async Task<UpdateAnnotationLabelResponse> UpdateAnnotationLabelWithOptionsAsync(UpdateAnnotationLabelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9047,6 +10171,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateAnnotationLabelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * You can update only the names of the tags in a tag set.
+          *
+          * @param request UpdateAnnotationLabelRequest
+          * @return UpdateAnnotationLabelResponse
+         */
         public UpdateAnnotationLabelResponse UpdateAnnotationLabel(UpdateAnnotationLabelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9054,6 +10184,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateAnnotationLabelWithOptions(request, headers, runtime);
         }
 
+        /**
+          * You can update only the names of the tags in a tag set.
+          *
+          * @param request UpdateAnnotationLabelRequest
+          * @return UpdateAnnotationLabelResponse
+         */
         public async Task<UpdateAnnotationLabelResponse> UpdateAnnotationLabelAsync(UpdateAnnotationLabelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9061,6 +10197,20 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateAnnotationLabelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request UpdateConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConfigResponse
+         */
         public UpdateConfigResponse UpdateConfigWithOptions(string project, string configName, UpdateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9087,6 +10237,20 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request UpdateConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateConfigResponse
+         */
         public async Task<UpdateConfigResponse> UpdateConfigWithOptionsAsync(string project, string configName, UpdateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9113,6 +10277,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request UpdateConfigRequest
+          * @return UpdateConfigResponse
+         */
         public UpdateConfigResponse UpdateConfig(string project, string configName, UpdateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9120,6 +10296,18 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateConfigWithOptions(project, configName, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+          * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+          * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+          * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+          * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+          *
+          * @param request UpdateConfigRequest
+          * @return UpdateConfigResponse
+         */
         public async Task<UpdateConfigResponse> UpdateConfigAsync(string project, string configName, UpdateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9243,6 +10431,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateConsumerGroupWithOptionsAsync(project, logstore, consumerGroup, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDashboardResponse
+         */
         public UpdateDashboardResponse UpdateDashboardWithOptions(string project, string dashboardName, UpdateDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9290,6 +10487,15 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateDashboardResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateDashboardRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDashboardResponse
+         */
         public async Task<UpdateDashboardResponse> UpdateDashboardWithOptionsAsync(string project, string dashboardName, UpdateDashboardRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9337,6 +10543,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateDashboardResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateDashboardRequest
+          * @return UpdateDashboardResponse
+         */
         public UpdateDashboardResponse UpdateDashboard(string project, string dashboardName, UpdateDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9344,6 +10557,13 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateDashboardWithOptions(project, dashboardName, request, headers, runtime);
         }
 
+        /**
+          * ### [](#)Usage notes
+          * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+          *
+          * @param request UpdateDashboardRequest
+          * @return UpdateDashboardResponse
+         */
         public async Task<UpdateDashboardResponse> UpdateDashboardAsync(string project, string dashboardName, UpdateDashboardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9895,6 +11115,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return await UpdateLoggingWithOptionsAsync(project, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request UpdateLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLogtailPipelineConfigResponse
+         */
         public UpdateLogtailPipelineConfigResponse UpdateLogtailPipelineConfigWithOptions(string project, string configName, UpdateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9950,6 +11178,14 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLogtailPipelineConfigResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request UpdateLogtailPipelineConfigRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateLogtailPipelineConfigResponse
+         */
         public async Task<UpdateLogtailPipelineConfigResponse> UpdateLogtailPipelineConfigWithOptionsAsync(string project, string configName, UpdateLogtailPipelineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10005,6 +11241,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return TeaModel.ToObject<UpdateLogtailPipelineConfigResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request UpdateLogtailPipelineConfigRequest
+          * @return UpdateLogtailPipelineConfigResponse
+         */
         public UpdateLogtailPipelineConfigResponse UpdateLogtailPipelineConfig(string project, string configName, UpdateLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10012,6 +11254,12 @@ namespace AlibabaCloud.SDK.Sls20201230
             return UpdateLogtailPipelineConfigWithOptions(project, configName, request, headers, runtime);
         }
 
+        /**
+          * The UK (London) region is supported. Supported regions are constantly updated.
+          *
+          * @param request UpdateLogtailPipelineConfigRequest
+          * @return UpdateLogtailPipelineConfigResponse
+         */
         public async Task<UpdateLogtailPipelineConfigResponse> UpdateLogtailPipelineConfigAsync(string project, string configName, UpdateLogtailPipelineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10262,6 +11510,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request UpdateOssExternalStoreRequest
@@ -10309,6 +11558,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request UpdateOssExternalStoreRequest
@@ -10356,6 +11606,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request UpdateOssExternalStoreRequest
@@ -10369,6 +11620,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         }
 
         /**
+          * ### [](#)Usage notes
           * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
           *
           * @param request UpdateOssExternalStoreRequest

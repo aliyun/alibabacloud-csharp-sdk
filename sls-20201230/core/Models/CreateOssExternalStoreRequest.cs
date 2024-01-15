@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// The associated fields.
+            /// The fields that are associated to the external store.
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// The OSS endpoint.
+            /// The Object Storage Service (OSS) endpoint.
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The associated objects.
+            /// The names of the OSS objects that are associated to the external store.
             /// </summary>
             [NameInMap("objects")]
             [Validation(Required=false)]

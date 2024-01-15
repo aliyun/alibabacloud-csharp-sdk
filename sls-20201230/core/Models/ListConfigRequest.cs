@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListConfigRequest : TeaModel {
+        /// <summary>
+        /// The name of the Logtail configuration.
+        /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
+        /// <summary>
+        /// The name of the Logstore.
+        /// </summary>
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }
 
+        /// <summary>
+        /// The line from which the query starts. Default value: 0.
+        /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public long? Offset { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Maximum value: 500.
+        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public long? Size { get; set; }

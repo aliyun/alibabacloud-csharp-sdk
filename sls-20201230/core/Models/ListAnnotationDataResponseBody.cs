@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAnnotationDataResponseBody : TeaModel {
+        /// <summary>
+        /// The data returned.
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<MLDataParam> Data { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

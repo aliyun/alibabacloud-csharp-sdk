@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateConfigRequest : TeaModel {
+        /// <summary>
+        /// The body of the request.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public LogtailConfig Body { get; set; }

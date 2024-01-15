@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource.
+        /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Only PROJECT is supported. Set the value to PROJECT.
+        /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
