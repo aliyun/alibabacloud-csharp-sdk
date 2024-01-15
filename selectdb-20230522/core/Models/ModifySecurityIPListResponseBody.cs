@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifySecurityIPListResponseBody : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string GroupTag { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -40,10 +32,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("SecurityIPType")]
         [Validation(Required=false)]
         public string SecurityIPType { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]
