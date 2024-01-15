@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
         /// <summary>
-        /// The applicable scope of the desktop type. Default value: `Public`.
+        /// Applicable Scope of specifications. Default value: `Public`
         /// </summary>
         [NameInMap("AppliedScope")]
         [Validation(Required=false)]
@@ -23,15 +23,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        [NameInMap("DesktopGroupIdForModify")]
+        [Validation(Required=false)]
+        public string DesktopGroupIdForModify { get; set; }
+
         /// <summary>
-        /// The ID of the cloud desktop whose desktop type that you want to modify. If you specify this parameter, the information that is returned includes whether the desktop type is compatible with the cloud desktop.
+        /// When changing the configuration, enter the desktop ID that needs to be changed. The return value will increase the compatibility between the specifications and the desktop.
         /// </summary>
         [NameInMap("DesktopIdForModify")]
         [Validation(Required=false)]
         public string DesktopIdForModify { get; set; }
 
         /// <summary>
-        /// The ID of the desktop type. Valid values:
+        /// The ID of the cloud desktop type. Valid values:
         /// 
         /// *   eds.graphics.16c1t4
         /// *   eds.graphics.24c1t4
@@ -53,8 +57,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   ecd.advanced.large
         /// *   ecd.basic.large
         /// *   ecd.basic.small
-        /// 
-        /// > When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all desktop types are queried.
         /// </summary>
         [NameInMap("DesktopTypeId")]
         [Validation(Required=false)]
@@ -77,29 +79,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// *   ecd.performance
         /// *   ecd.advanced
         /// *   ecd.basic
-        /// 
-        /// > When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all desktop types are queried.
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The size of the memory. Unit: GiB.
+        /// The memory size. Unit: GiB.
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The type of the order that you want to place.
+        /// The order type.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

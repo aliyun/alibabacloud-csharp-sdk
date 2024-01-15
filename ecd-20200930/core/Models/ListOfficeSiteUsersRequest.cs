@@ -10,46 +10,45 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteUsersRequest : TeaModel {
         /// <summary>
-        /// The character string for fuzzy search.
+        /// The query string for fuzzy query.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 100
-        /// 
-        /// Default value: 10
+        /// *   Valid values: 1 to 100.
+        /// *   Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that specifies the start point of the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The organizational unit (OU) in the specified AD domain.
+        /// The organizational unit (OU) of the specified AD domain.
         /// </summary>
         [NameInMap("OUPath")]
         [Validation(Required=false)]
         public string OUPath { get; set; }
 
         /// <summary>
-        /// The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
+        /// The workspace ID. Only workspaces of the enterprise AD account type are supported.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

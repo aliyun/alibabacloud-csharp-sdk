@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 100.
-        /// *   Default value: 10.
+        /// *   Valid values: 1 to 100
+        /// *   Default value: 10
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range that you want to query.
+        /// The query scope. Default value: 1.
         /// </summary>
         [NameInMap("QueryRange")]
         [Validation(Required=false)]

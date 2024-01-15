@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreatePolicyGroupRequest : TeaModel {
+        [NameInMap("AdminAccess")]
+        [Validation(Required=false)]
+        public string AdminAccess { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the anti-screenshot feature.
         /// 
@@ -376,6 +380,79 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainList { get; set; }
 
         /// <summary>
+        /// The details of the domain name resolution policy.
+        /// </summary>
+        [NameInMap("DomainResolveRule")]
+        [Validation(Required=false)]
+        public List<CreatePolicyGroupRequestDomainResolveRule> DomainResolveRule { get; set; }
+        public class CreatePolicyGroupRequestDomainResolveRule : TeaModel {
+            /// <summary>
+            /// The description of the policy.
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// The domain name.
+            /// </summary>
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
+            /// <summary>
+            /// Specifies whether to allow the policy.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   allow
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   block
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
+            [NameInMap("Policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
+
+        }
+
+        /// <summary>
+        /// The type of the domain name resolution policy.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   OFF
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ON
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// </summary>
+        [NameInMap("DomainResolveRuleType")]
+        [Validation(Required=false)]
+        public string DomainResolveRuleType { get; set; }
+
+        /// <summary>
         /// Specifies whether to allow end users to seek assistance from the administrator. Valid values: ON OFF
         /// </summary>
         [NameInMap("EndUserApplyAdminCoordinate")]
@@ -538,9 +615,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// Specifies whether to enable the network redirection feature.
         /// 
+        /// > This feature is in invitational preview and is not available to the public.
+        /// 
         /// Valid values:
         /// 
-        /// *   off: Network redirection is disabled. This value is the default value.
+        /// *   off (default): The network redirection feature is disabled.
         /// 
         ///     <!-- -->
         /// 
@@ -548,7 +627,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        /// *   on: Network redirection is enabled.
+        /// *   on: The network redirection feature is enabled.
         /// 
         ///     <!-- -->
         /// 
@@ -1016,6 +1095,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("WatermarkRowAmount")]
         [Validation(Required=false)]
         public int? WatermarkRowAmount { get; set; }
+
+        /// <summary>
+        /// The security priority for invisible watermarks. Valid values: on and off.
+        /// </summary>
+        [NameInMap("WatermarkSecurity")]
+        [Validation(Required=false)]
+        public string WatermarkSecurity { get; set; }
 
         /// <summary>
         /// The transparency of the watermark.

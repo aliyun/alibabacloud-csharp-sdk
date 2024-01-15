@@ -10,24 +10,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetOfficeSiteSsoStatusRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable SSO. Valid values:
+        /// Specifies whether to enable SSO.
         /// 
-        /// *   true: enables SSO
-        /// *   false: disables SSO
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EnableSso")]
         [Validation(Required=false)]
         public bool? EnableSso { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// The workspace ID.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

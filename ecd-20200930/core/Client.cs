@@ -137,6 +137,96 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ActivateOfficeSiteWithOptionsAsync(request, runtime);
         }
 
+        public AddDesktopOversoldUserGroupResponse AddDesktopOversoldUserGroupWithOptions(AddDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddDesktopOversoldUserGroupResponse> AddDesktopOversoldUserGroupWithOptionsAsync(AddDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddDesktopOversoldUserGroupResponse AddDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDesktopOversoldUserGroupWithOptions(request, runtime);
+        }
+
+        public async Task<AddDesktopOversoldUserGroupResponse> AddDesktopOversoldUserGroupAsync(AddDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can add only one device to a tenant.
           *
@@ -245,6 +335,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AddDevicesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+          *
+          * @param tmpReq AddFilePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddFilePermissionResponse
+         */
         public AddFilePermissionResponse AddFilePermissionWithOptions(AddFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -266,6 +363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberListShrink))
             {
@@ -294,6 +395,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddFilePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+          *
+          * @param tmpReq AddFilePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddFilePermissionResponse
+         */
         public async Task<AddFilePermissionResponse> AddFilePermissionWithOptionsAsync(AddFilePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -315,6 +423,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberListShrink))
             {
@@ -343,12 +455,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<AddFilePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+          *
+          * @param request AddFilePermissionRequest
+          * @return AddFilePermissionResponse
+         */
         public AddFilePermissionResponse AddFilePermission(AddFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddFilePermissionWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to share a specific folder with other users. You can also configure the folder permissions.
+          *
+          * @param request AddFilePermissionRequest
+          * @return AddFilePermissionResponse
+         */
         public async Task<AddFilePermissionResponse> AddFilePermissionAsync(AddFilePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -451,6 +575,96 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserToDesktopGroupWithOptionsAsync(request, runtime);
+        }
+
+        public AddUserToDesktopOversoldUserGroupResponse AddUserToDesktopOversoldUserGroupWithOptions(AddUserToDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddUserAmount))
+            {
+                query["AddUserAmount"] = request.AddUserAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddUserToDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddUserToDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddUserToDesktopOversoldUserGroupResponse> AddUserToDesktopOversoldUserGroupWithOptionsAsync(AddUserToDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddUserAmount))
+            {
+                query["AddUserAmount"] = request.AddUserAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddUserToDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddUserToDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddUserToDesktopOversoldUserGroupResponse AddUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddUserToDesktopOversoldUserGroupWithOptions(request, runtime);
+        }
+
+        public async Task<AddUserToDesktopOversoldUserGroupResponse> AddUserToDesktopOversoldUserGroupAsync(AddUserToDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddUserToDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -934,10 +1148,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * *   A Cloud Enterprise Network (CEN) instance is created.
+          * Prerequisites
+          * *   A CEN instance is created.
           * *   A workspace of the convenience account type is created.
-          * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -987,10 +1201,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * *   A Cloud Enterprise Network (CEN) instance is created.
+          * Prerequisites
+          * *   A CEN instance is created.
           * *   A workspace of the convenience account type is created.
-          * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1040,10 +1254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * *   A Cloud Enterprise Network (CEN) instance is created.
+          * Prerequisites
+          * *   A CEN instance is created.
           * *   A workspace of the convenience account type is created.
-          * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @return AttachCenResponse
@@ -1055,10 +1269,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * *   A Cloud Enterprise Network (CEN) instance is created.
+          * Prerequisites
+          * *   A CEN instance is created.
           * *   A workspace of the convenience account type is created.
-          * >  The secure office network of a workspace of the enterprise Active Directory (AD) account type is attached to a CEN instance when you create the workspace. The secure office network that corresponds to each workspace can be attached only to a single CEN instance.
+          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @return AttachCenResponse
@@ -1601,6 +1815,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileId"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1643,6 +1861,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1891,6 +2113,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileId"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileReceiverId))
+            {
+                query["FileReceiverId"] = request.FileReceiverId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileReceiverType))
+            {
+                query["FileReceiverType"] = request.FileReceiverType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
                 query["ParentFolderId"] = request.ParentFolderId;
@@ -1937,6 +2171,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileReceiverId))
+            {
+                query["FileReceiverId"] = request.FileReceiverId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileReceiverType))
+            {
+                query["FileReceiverType"] = request.FileReceiverType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
@@ -2264,13 +2510,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
-          *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
-          *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
-          *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
-          *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
+          *     **
+          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2380,13 +2624,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
-          *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
-          *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
-          *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
-          *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
+          *     **
+          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2496,13 +2738,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
-          *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
-          *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
-          *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
-          *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
+          *     **
+          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @return CreateADConnectorOfficeSiteResponse
@@ -2514,13 +2754,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * - When you create a workspace of the enterprise Active Directory (AD) account type, AD connectors are automatically created for you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * - After you call this operation to create the AD workspace, you must configure the AD domain. To configure the AD domain, perform the following operations:
-          *     1. Configure the conditional forwarder in the Domain Name System (DNS) server.
-          *     2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the AD workspace.
-          *     3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the AD workspace.
-          *     > If you specify the DomainUserName and DomainPassword parameters when you create the AD workspace, you need to configure only the conditional forwarder. If you do not specify the DomainUserName and DomainPassword parameters, you need to configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise account type](~~214469~~).
+          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
+          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
+          *     **
+          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @return CreateADConnectorOfficeSiteResponse
@@ -2770,7 +3008,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
@@ -2841,7 +3078,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
@@ -2912,7 +3148,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
@@ -2925,7 +3160,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
@@ -2937,6 +3171,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateBundleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+          *
+          * @param request CreateCdsFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCdsFileResponse
+         */
         public CreateCdsFileResponse CreateCdsFileWithOptions(CreateCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2969,6 +3210,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileType"] = request.FileType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFileId))
             {
                 query["ParentFileId"] = request.ParentFileId;
@@ -2996,6 +3241,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCdsFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+          *
+          * @param request CreateCdsFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCdsFileResponse
+         */
         public async Task<CreateCdsFileResponse> CreateCdsFileWithOptionsAsync(CreateCdsFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3028,6 +3280,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileType"] = request.FileType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFileId))
             {
                 query["ParentFileId"] = request.ParentFileId;
@@ -3055,12 +3311,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCdsFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+          *
+          * @param request CreateCdsFileRequest
+          * @return CreateCdsFileResponse
+         */
         public CreateCdsFileResponse CreateCdsFile(CreateCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCdsFileWithOptions(request, runtime);
         }
 
+        /**
+          * After the RAM permissions are authenticated, you can call the CreateCdsFile operation to obtain the upload URL of a file and upload the file to a cloud disk.
+          *
+          * @param request CreateCdsFileRequest
+          * @return CreateCdsFileResponse
+         */
         public async Task<CreateCdsFileResponse> CreateCdsFileAsync(CreateCdsFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3106,6 +3374,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
             {
                 query["FileIds"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviewLimit))
             {
@@ -3182,6 +3454,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileIds"] = request.FileIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviewLimit))
             {
                 query["PreviewLimit"] = request.PreviewLimit;
@@ -3227,6 +3503,242 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCdsFileShareLinkWithOptionsAsync(request, runtime);
+        }
+
+        public CreateCloudDriveServiceResponse CreateCloudDriveServiceWithOptions(CreateCloudDriveServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSize))
+            {
+                query["MaxSize"] = request.MaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteType))
+            {
+                query["OfficeSiteType"] = request.OfficeSiteType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                query["SolutionId"] = request.SolutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudDriveService",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudDriveServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateCloudDriveServiceResponse> CreateCloudDriveServiceWithOptionsAsync(CreateCloudDriveServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSize))
+            {
+                query["MaxSize"] = request.MaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteType))
+            {
+                query["OfficeSiteType"] = request.OfficeSiteType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                query["SolutionId"] = request.SolutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudDriveService",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudDriveServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateCloudDriveServiceResponse CreateCloudDriveService(CreateCloudDriveServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCloudDriveServiceWithOptions(request, runtime);
+        }
+
+        public async Task<CreateCloudDriveServiceResponse> CreateCloudDriveServiceAsync(CreateCloudDriveServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCloudDriveServiceWithOptionsAsync(request, runtime);
+        }
+
+        public CreateCloudDriveUsersResponse CreateCloudDriveUsersWithOptions(CreateCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudDriveUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateCloudDriveUsersResponse> CreateCloudDriveUsersWithOptionsAsync(CreateCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateCloudDriveUsersResponse CreateCloudDriveUsers(CreateCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCloudDriveUsersWithOptions(request, runtime);
+        }
+
+        public async Task<CreateCloudDriveUsersResponse> CreateCloudDriveUsersAsync(CreateCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCloudDriveUsersWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -3629,6 +4141,176 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateDesktopGroupWithOptionsAsync(request, runtime);
         }
 
+        public CreateDesktopOversoldGroupResponse CreateDesktopOversoldGroupWithOptions(CreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldWarn))
+            {
+                query["OversoldWarn"] = request.OversoldWarn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDuration))
+            {
+                query["StopDuration"] = request.StopDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                query["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDesktopOversoldGroupResponse> CreateDesktopOversoldGroupWithOptionsAsync(CreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldWarn))
+            {
+                query["OversoldWarn"] = request.OversoldWarn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDuration))
+            {
+                query["StopDuration"] = request.StopDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                query["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDesktopOversoldGroupResponse CreateDesktopOversoldGroup(CreateDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDesktopOversoldGroupResponse> CreateDesktopOversoldGroupAsync(CreateDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
         /**
           * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
           * *   A workspace and a user are created. For more information, see the following topics:
@@ -3670,6 +4352,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopMemberIp))
+            {
+                query["DesktopMemberIp"] = request.DesktopMemberIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
@@ -3677,6 +4363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameSuffix))
             {
                 query["DesktopNameSuffix"] = request.DesktopNameSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTimers))
+            {
+                query["DesktopTimers"] = request.DesktopTimers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
@@ -3806,6 +4496,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopMemberIp))
+            {
+                query["DesktopMemberIp"] = request.DesktopMemberIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
@@ -3813,6 +4507,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameSuffix))
             {
                 query["DesktopNameSuffix"] = request.DesktopNameSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTimers))
+            {
+                query["DesktopTimers"] = request.DesktopTimers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
@@ -4133,16 +4831,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateImageWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   You can create a NAS file system for each standard workspace so that cloud desktops within the workspace can share files.
-          * *   The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
-          * *   NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase resource plans to offset the storage fees of the NAS file systems.
-          * For more information, see [Create a NAS file system](~~214481~~).
-          *
-          * @param request CreateNASFileSystemRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNASFileSystemResponse
-         */
         public CreateNASFileSystemResponse CreateNASFileSystemWithOptions(CreateNASFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4190,16 +4878,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNASFileSystemResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   You can create a NAS file system for each standard workspace so that cloud desktops within the workspace can share files.
-          * *   The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
-          * *   NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase resource plans to offset the storage fees of the NAS file systems.
-          * For more information, see [Create a NAS file system](~~214481~~).
-          *
-          * @param request CreateNASFileSystemRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNASFileSystemResponse
-         */
         public async Task<CreateNASFileSystemResponse> CreateNASFileSystemWithOptionsAsync(CreateNASFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4247,30 +4925,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateNASFileSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   You can create a NAS file system for each standard workspace so that cloud desktops within the workspace can share files.
-          * *   The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
-          * *   NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase resource plans to offset the storage fees of the NAS file systems.
-          * For more information, see [Create a NAS file system](~~214481~~).
-          *
-          * @param request CreateNASFileSystemRequest
-          * @return CreateNASFileSystemResponse
-         */
         public CreateNASFileSystemResponse CreateNASFileSystem(CreateNASFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNASFileSystemWithOptions(request, runtime);
         }
 
-        /**
-          * *   You can create a NAS file system for each standard workspace so that cloud desktops within the workspace can share files.
-          * *   The system creates a General-purpose NAS file system and generates a default mount target. The storage types of the NAS file system includes Capacity type and Performance type. The Capacity type provides 10 PiB of storage while the Performance type provides only 1 PiB of storage.
-          * *   NAS file systems are billed on a pay-as-you-go basis. You are charged based on the amount of used storage. You can also purchase resource plans to offset the storage fees of the NAS file systems.
-          * For more information, see [Create a NAS file system](~~214481~~).
-          *
-          * @param request CreateNASFileSystemRequest
-          * @return CreateNASFileSystemResponse
-         */
         public async Task<CreateNASFileSystemResponse> CreateNASFileSystemAsync(CreateNASFileSystemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4426,6 +5086,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminAccess))
+            {
+                query["AdminAccess"] = request.AdminAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -4453,6 +5117,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRule))
+            {
+                query["DomainResolveRule"] = request.DomainResolveRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRuleType))
+            {
+                query["DomainResolveRuleType"] = request.DomainResolveRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserApplyAdminCoordinate))
             {
@@ -4593,6 +5265,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
                 query["WatermarkRowAmount"] = request.WatermarkRowAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
+            {
+                query["WatermarkSecurity"] = request.WatermarkSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparency))
             {
@@ -4636,6 +5312,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminAccess))
+            {
+                query["AdminAccess"] = request.AdminAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -4663,6 +5343,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRule))
+            {
+                query["DomainResolveRule"] = request.DomainResolveRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRuleType))
+            {
+                query["DomainResolveRuleType"] = request.DomainResolveRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserApplyAdminCoordinate))
             {
@@ -4803,6 +5491,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
                 query["WatermarkRowAmount"] = request.WatermarkRowAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
+            {
+                query["WatermarkSecurity"] = request.WatermarkSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparency))
             {
@@ -5055,6 +5747,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["VerifyCode"] = request.VerifyCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcType))
+            {
+                query["VpcType"] = request.VpcType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5129,6 +5825,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyCode))
             {
                 query["VerifyCode"] = request.VerifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcType))
+            {
+                query["VpcType"] = request.VpcType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5449,6 +6149,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileId"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5487,6 +6191,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6051,10 +6759,83 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        public DeleteEduRoomResponse DeleteEduRoomWithOptions(DeleteEduRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduRoomId))
+            {
+                query["EduRoomId"] = request.EduRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEduRoom",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEduRoomResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteEduRoomResponse> DeleteEduRoomWithOptionsAsync(DeleteEduRoomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduRoomId))
+            {
+                query["EduRoomId"] = request.EduRoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEduRoom",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEduRoomResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteEduRoomResponse DeleteEduRoom(DeleteEduRoomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEduRoomWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteEduRoomResponse> DeleteEduRoomAsync(DeleteEduRoomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEduRoomWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * ## Description
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
           *
           * @param request DeleteImagesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6096,9 +6877,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
           *
           * @param request DeleteImagesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6140,9 +6920,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
           *
           * @param request DeleteImagesRequest
           * @return DeleteImagesResponse
@@ -6154,9 +6933,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is used by a desktop bundle, call the [DeleteBundles](~~188885~~) operation to delete the desktop bundle.
+          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
           *
           * @param request DeleteImagesRequest
           * @return DeleteImagesResponse
@@ -6168,9 +6946,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
-          * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+          * **
+          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
           *
           * @param request DeleteNASFileSystemsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6208,9 +6986,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
-          * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+          * **
+          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
           *
           * @param request DeleteNASFileSystemsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6248,9 +7026,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
-          * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+          * **
+          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
           *
           * @param request DeleteNASFileSystemsRequest
           * @return DeleteNASFileSystemsResponse
@@ -6262,9 +7040,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * Before you delete a NAS file system, make sure that the data you want to retain is backed up.
-          * >  If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
+          * **
+          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
           *
           * @param request DeleteNASFileSystemsRequest
           * @return DeleteNASFileSystemsResponse
@@ -6350,10 +7128,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following operations are complete:
+          * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+          * **
+          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6391,10 +7170,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following operations are complete:
+          * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+          * **
+          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6432,10 +7212,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following operations are complete:
+          * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+          * **
+          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @return DeleteOfficeSitesResponse
@@ -6447,10 +7228,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following operations are complete:
+          * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * >  After a workspace is deleted, its resources and data cannot be restored. Proceed with caution.
+          * **
+          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @return DeleteOfficeSitesResponse
@@ -6461,14 +7243,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteOfficeSitesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   System policies cannot be deleted.
-          * *   Custom policies that are associated with cloud desktops cannot be deleted.
-          *
-          * @param request DeletePolicyGroupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePolicyGroupsResponse
-         */
         public DeletePolicyGroupsResponse DeletePolicyGroupsWithOptions(DeletePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6500,14 +7274,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeletePolicyGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   System policies cannot be deleted.
-          * *   Custom policies that are associated with cloud desktops cannot be deleted.
-          *
-          * @param request DeletePolicyGroupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePolicyGroupsResponse
-         */
         public async Task<DeletePolicyGroupsResponse> DeletePolicyGroupsWithOptionsAsync(DeletePolicyGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6539,26 +7305,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeletePolicyGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   System policies cannot be deleted.
-          * *   Custom policies that are associated with cloud desktops cannot be deleted.
-          *
-          * @param request DeletePolicyGroupsRequest
-          * @return DeletePolicyGroupsResponse
-         */
         public DeletePolicyGroupsResponse DeletePolicyGroups(DeletePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePolicyGroupsWithOptions(request, runtime);
         }
 
-        /**
-          * *   System policies cannot be deleted.
-          * *   Custom policies that are associated with cloud desktops cannot be deleted.
-          *
-          * @param request DeletePolicyGroupsRequest
-          * @return DeletePolicyGroupsResponse
-         */
         public async Task<DeletePolicyGroupsResponse> DeletePolicyGroupsAsync(DeletePolicyGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6666,7 +7418,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
@@ -6705,7 +7456,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
@@ -6744,7 +7494,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
@@ -6757,7 +7506,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
@@ -6769,29 +7517,29 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteVirtualMFADeviceWithOptionsAsync(request, runtime);
         }
 
-        public DescribeAlarmEventStackInfoResponse DescribeAlarmEventStackInfoWithOptions(DescribeAlarmEventStackInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeAclEntriesResponse DescribeAclEntriesWithOptions(DescribeAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
-                query["DesktopId"] = request.DesktopId;
+                query["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
-                query["EventName"] = request.EventName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
-                query["UniqueInfo"] = request.UniqueInfo;
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6799,7 +7547,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeAlarmEventStackInfo",
+                Action = "DescribeAclEntries",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -6809,32 +7557,32 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAlarmEventStackInfoResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeAclEntriesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeAlarmEventStackInfoResponse> DescribeAlarmEventStackInfoWithOptionsAsync(DescribeAlarmEventStackInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeAclEntriesResponse> DescribeAclEntriesWithOptionsAsync(DescribeAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
-                query["DesktopId"] = request.DesktopId;
+                query["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
-                query["EventName"] = request.EventName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UniqueInfo))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
             {
-                query["UniqueInfo"] = request.UniqueInfo;
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6842,7 +7590,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeAlarmEventStackInfo",
+                Action = "DescribeAclEntries",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -6852,19 +7600,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAlarmEventStackInfoResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeAclEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAlarmEventStackInfoResponse DescribeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request)
+        public DescribeAclEntriesResponse DescribeAclEntries(DescribeAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeAlarmEventStackInfoWithOptions(request, runtime);
+            return DescribeAclEntriesWithOptions(request, runtime);
         }
 
-        public async Task<DescribeAlarmEventStackInfoResponse> DescribeAlarmEventStackInfoAsync(DescribeAlarmEventStackInfoRequest request)
+        public async Task<DescribeAclEntriesResponse> DescribeAclEntriesAsync(DescribeAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeAlarmEventStackInfoWithOptionsAsync(request, runtime);
+            return await DescribeAclEntriesWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -7043,6 +7791,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
@@ -7050,6 +7802,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedBundle))
             {
@@ -7138,6 +7894,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
@@ -7145,6 +7905,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedBundle))
             {
@@ -7390,7 +8154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+          * The version of the client.
           *
           * @param request DescribeClientEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7476,7 +8240,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+          * The version of the client.
           *
           * @param request DescribeClientEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7562,7 +8326,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+          * The version of the client.
           *
           * @param request DescribeClientEventsRequest
           * @return DescribeClientEventsResponse
@@ -7574,7 +8338,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
+          * The version of the client.
           *
           * @param request DescribeClientEventsRequest
           * @return DescribeClientEventsResponse
@@ -7811,6 +8575,104 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudDrivePermissionsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeCloudDriveUsersResponse DescribeCloudDriveUsersWithOptions(DescribeCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDriveUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCloudDriveUsersResponse> DescribeCloudDriveUsersWithOptionsAsync(DescribeCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeCloudDriveUsersResponse DescribeCloudDriveUsers(DescribeCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCloudDriveUsersWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeCloudDriveUsersResponse> DescribeCloudDriveUsersAsync(DescribeCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCloudDriveUsersWithOptionsAsync(request, runtime);
         }
 
         public DescribeCustomizedListHeadersResponse DescribeCustomizedListHeadersWithOptions(DescribeCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8081,29 +8943,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeDesktopGroupsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeDesktopIdsByVulNamesResponse DescribeDesktopIdsByVulNamesWithOptions(DescribeDesktopIdsByVulNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeDesktopInfoResponse DescribeDesktopInfoWithOptions(DescribeDesktopInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
+                query["DesktopId"] = request.DesktopId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
-            {
-                query["VulName"] = request.VulName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8111,7 +8961,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeDesktopIdsByVulNames",
+                Action = "DescribeDesktopInfo",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -8121,32 +8971,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDesktopIdsByVulNamesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeDesktopInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeDesktopIdsByVulNamesResponse> DescribeDesktopIdsByVulNamesWithOptionsAsync(DescribeDesktopIdsByVulNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeDesktopInfoResponse> DescribeDesktopInfoWithOptionsAsync(DescribeDesktopInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
+                query["DesktopId"] = request.DesktopId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
-            {
-                query["VulName"] = request.VulName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8154,7 +8992,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeDesktopIdsByVulNames",
+                Action = "DescribeDesktopInfo",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -8164,21 +9002,462 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDesktopIdsByVulNamesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeDesktopInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeDesktopIdsByVulNamesResponse DescribeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request)
+        public DescribeDesktopInfoResponse DescribeDesktopInfo(DescribeDesktopInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeDesktopIdsByVulNamesWithOptions(request, runtime);
+            return DescribeDesktopInfoWithOptions(request, runtime);
         }
 
-        public async Task<DescribeDesktopIdsByVulNamesResponse> DescribeDesktopIdsByVulNamesAsync(DescribeDesktopIdsByVulNamesRequest request)
+        public async Task<DescribeDesktopInfoResponse> DescribeDesktopInfoAsync(DescribeDesktopInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeDesktopIdsByVulNamesWithOptionsAsync(request, runtime);
+            return await DescribeDesktopInfoWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDesktopOversoldGroupResponse DescribeDesktopOversoldGroupWithOptions(DescribeDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupIds))
+            {
+                query["OversoldGroupIds"] = request.OversoldGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDesktopOversoldGroupResponse> DescribeDesktopOversoldGroupWithOptionsAsync(DescribeDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupIds))
+            {
+                query["OversoldGroupIds"] = request.OversoldGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDesktopOversoldGroupResponse DescribeDesktopOversoldGroup(DescribeDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDesktopOversoldGroupResponse> DescribeDesktopOversoldGroupAsync(DescribeDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDesktopOversoldUserResponse DescribeDesktopOversoldUserWithOptions(DescribeDesktopOversoldUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopIds))
+            {
+                query["UserDesktopIds"] = request.UserDesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldUser",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDesktopOversoldUserResponse> DescribeDesktopOversoldUserWithOptionsAsync(DescribeDesktopOversoldUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopIds))
+            {
+                query["UserDesktopIds"] = request.UserDesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldUser",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDesktopOversoldUserResponse DescribeDesktopOversoldUser(DescribeDesktopOversoldUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDesktopOversoldUserWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDesktopOversoldUserResponse> DescribeDesktopOversoldUserAsync(DescribeDesktopOversoldUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDesktopOversoldUserWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDesktopOversoldUserGroupResponse DescribeDesktopOversoldUserGroupWithOptions(DescribeDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                query["UserGroupIds"] = request.UserGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDesktopOversoldUserGroupResponse> DescribeDesktopOversoldUserGroupWithOptionsAsync(DescribeDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                query["UserGroupIds"] = request.UserGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDesktopOversoldUserGroupResponse DescribeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDesktopOversoldUserGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDesktopOversoldUserGroupResponse> DescribeDesktopOversoldUserGroupAsync(DescribeDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can query data within the last 30 days.
+          *
+          * @param request DescribeDesktopSessionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDesktopSessionsResponse
+         */
+        public DescribeDesktopSessionsResponse DescribeDesktopSessionsWithOptions(DescribeDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionStatus))
+            {
+                query["SessionStatus"] = request.SessionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopSessions",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopSessionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can query data within the last 30 days.
+          *
+          * @param request DescribeDesktopSessionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDesktopSessionsResponse
+         */
+        public async Task<DescribeDesktopSessionsResponse> DescribeDesktopSessionsWithOptionsAsync(DescribeDesktopSessionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionStatus))
+            {
+                query["SessionStatus"] = request.SessionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopSessions",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopSessionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can query data within the last 30 days.
+          *
+          * @param request DescribeDesktopSessionsRequest
+          * @return DescribeDesktopSessionsResponse
+         */
+        public DescribeDesktopSessionsResponse DescribeDesktopSessions(DescribeDesktopSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDesktopSessionsWithOptions(request, runtime);
+        }
+
+        /**
+          * You can query data within the last 30 days.
+          *
+          * @param request DescribeDesktopSessionsRequest
+          * @return DescribeDesktopSessionsResponse
+         */
+        public async Task<DescribeDesktopSessionsResponse> DescribeDesktopSessionsAsync(DescribeDesktopSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDesktopSessionsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+          *
+          * @param request DescribeDesktopTypesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDesktopTypesResponse
+         */
         public DescribeDesktopTypesResponse DescribeDesktopTypesWithOptions(DescribeDesktopTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8190,6 +9469,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuCount))
             {
                 query["CpuCount"] = request.CpuCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopGroupIdForModify))
+            {
+                query["DesktopGroupIdForModify"] = request.DesktopGroupIdForModify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdForModify))
             {
@@ -8238,6 +9521,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopTypesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+          *
+          * @param request DescribeDesktopTypesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDesktopTypesResponse
+         */
         public async Task<DescribeDesktopTypesResponse> DescribeDesktopTypesWithOptionsAsync(DescribeDesktopTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8249,6 +9539,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuCount))
             {
                 query["CpuCount"] = request.CpuCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopGroupIdForModify))
+            {
+                query["DesktopGroupIdForModify"] = request.DesktopGroupIdForModify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdForModify))
             {
@@ -8297,12 +9591,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeDesktopTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+          *
+          * @param request DescribeDesktopTypesRequest
+          * @return DescribeDesktopTypesResponse
+         */
         public DescribeDesktopTypesResponse DescribeDesktopTypes(DescribeDesktopTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDesktopTypesWithOptions(request, runtime);
         }
 
+        /**
+          * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+          *
+          * @param request DescribeDesktopTypesRequest
+          * @return DescribeDesktopTypesResponse
+         */
         public async Task<DescribeDesktopTypesResponse> DescribeDesktopTypesAsync(DescribeDesktopTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8332,6 +9638,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatus))
             {
                 query["DesktopStatus"] = request.DesktopStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatusList))
+            {
+                query["DesktopStatusList"] = request.DesktopStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
             {
@@ -8463,6 +9773,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatus))
             {
                 query["DesktopStatus"] = request.DesktopStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatusList))
+            {
+                query["DesktopStatusList"] = request.DesktopStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
             {
@@ -9245,6 +10559,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FotaStatus"] = request.FotaStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -9291,6 +10609,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FotaStatus))
             {
                 query["FotaStatus"] = request.FotaStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -9343,32 +10665,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeFotaTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability.
-          *
-          * @param request DescribeFrontVulPatchListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeFrontVulPatchListResponse
-         */
-        public DescribeFrontVulPatchListResponse DescribeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeGuestApplicationsResponse DescribeGuestApplicationsWithOptions(DescribeGuestApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["OperateType"] = request.OperateType;
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulInfo))
-            {
-                query["VulInfo"] = request.VulInfo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9376,7 +10687,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeFrontVulPatchList",
+                Action = "DescribeGuestApplications",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -9386,35 +10697,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeFrontVulPatchListResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeGuestApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability.
-          *
-          * @param request DescribeFrontVulPatchListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeFrontVulPatchListResponse
-         */
-        public async Task<DescribeFrontVulPatchListResponse> DescribeFrontVulPatchListWithOptionsAsync(DescribeFrontVulPatchListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeGuestApplicationsResponse> DescribeGuestApplicationsWithOptionsAsync(DescribeGuestApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["OperateType"] = request.OperateType;
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulInfo))
-            {
-                query["VulInfo"] = request.VulInfo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9422,7 +10722,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeFrontVulPatchList",
+                Action = "DescribeGuestApplications",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -9432,192 +10732,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeFrontVulPatchListResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeGuestApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability.
-          *
-          * @param request DescribeFrontVulPatchListRequest
-          * @return DescribeFrontVulPatchListResponse
-         */
-        public DescribeFrontVulPatchListResponse DescribeFrontVulPatchList(DescribeFrontVulPatchListRequest request)
+        public DescribeGuestApplicationsResponse DescribeGuestApplications(DescribeGuestApplicationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeFrontVulPatchListWithOptions(request, runtime);
+            return DescribeGuestApplicationsWithOptions(request, runtime);
         }
 
-        /**
-          * You can query the information about patches of up to 50 vulnerabilities in each request before you fix the current vulnerability.
-          *
-          * @param request DescribeFrontVulPatchListRequest
-          * @return DescribeFrontVulPatchListResponse
-         */
-        public async Task<DescribeFrontVulPatchListResponse> DescribeFrontVulPatchListAsync(DescribeFrontVulPatchListRequest request)
+        public async Task<DescribeGuestApplicationsResponse> DescribeGuestApplicationsAsync(DescribeGuestApplicationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeFrontVulPatchListWithOptionsAsync(request, runtime);
+            return await DescribeGuestApplicationsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
-          *
-          * @param request DescribeGroupedVulRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeGroupedVulResponse
-         */
-        public DescribeGroupedVulResponse DescribeGroupedVulWithOptions(DescribeGroupedVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
-            {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeGroupedVul",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeGroupedVulResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
-          *
-          * @param request DescribeGroupedVulRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeGroupedVulResponse
-         */
-        public async Task<DescribeGroupedVulResponse> DescribeGroupedVulWithOptionsAsync(DescribeGroupedVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
-            {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeGroupedVul",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeGroupedVulResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
-          *
-          * @param request DescribeGroupedVulRequest
-          * @return DescribeGroupedVulResponse
-         */
-        public DescribeGroupedVulResponse DescribeGroupedVul(DescribeGroupedVulRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeGroupedVulWithOptions(request, runtime);
-        }
-
-        /**
-          * ## Description
-          * After security protection is enabled, the system scans your cloud desktops for vulnerabilities once every day.
-          *
-          * @param request DescribeGroupedVulRequest
-          * @return DescribeGroupedVulResponse
-         */
-        public async Task<DescribeGroupedVulResponse> DescribeGroupedVulAsync(DescribeGroupedVulRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeGroupedVulWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * If you have changed the image for a cloud desktop, you can go to the Elastic Desktop Service (EDS) console to query the image change records. To query the image change records of a cloud desktop, find the cloud desktop that you want to manage, click **Change Image History** to the right of **Image ID/Name** on the **Basic Information** tab.
-          *
-          * @param request DescribeImageModifiedRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImageModifiedRecordsResponse
-         */
         public DescribeImageModifiedRecordsResponse DescribeImageModifiedRecordsWithOptions(DescribeImageModifiedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9657,13 +10786,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImageModifiedRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If you have changed the image for a cloud desktop, you can go to the Elastic Desktop Service (EDS) console to query the image change records. To query the image change records of a cloud desktop, find the cloud desktop that you want to manage, click **Change Image History** to the right of **Image ID/Name** on the **Basic Information** tab.
-          *
-          * @param request DescribeImageModifiedRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImageModifiedRecordsResponse
-         */
         public async Task<DescribeImageModifiedRecordsResponse> DescribeImageModifiedRecordsWithOptionsAsync(DescribeImageModifiedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9703,30 +10825,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImageModifiedRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If you have changed the image for a cloud desktop, you can go to the Elastic Desktop Service (EDS) console to query the image change records. To query the image change records of a cloud desktop, find the cloud desktop that you want to manage, click **Change Image History** to the right of **Image ID/Name** on the **Basic Information** tab.
-          *
-          * @param request DescribeImageModifiedRecordsRequest
-          * @return DescribeImageModifiedRecordsResponse
-         */
         public DescribeImageModifiedRecordsResponse DescribeImageModifiedRecords(DescribeImageModifiedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImageModifiedRecordsWithOptions(request, runtime);
         }
 
-        /**
-          * If you have changed the image for a cloud desktop, you can go to the Elastic Desktop Service (EDS) console to query the image change records. To query the image change records of a cloud desktop, find the cloud desktop that you want to manage, click **Change Image History** to the right of **Image ID/Name** on the **Basic Information** tab.
-          *
-          * @param request DescribeImageModifiedRecordsRequest
-          * @return DescribeImageModifiedRecordsResponse
-         */
         public async Task<DescribeImageModifiedRecordsResponse> DescribeImageModifiedRecordsAsync(DescribeImageModifiedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeImageModifiedRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          *
+          * @param request DescribeImagePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImagePermissionResponse
+         */
         public DescribeImagePermissionResponse DescribeImagePermissionWithOptions(DescribeImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9758,6 +10875,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImagePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          *
+          * @param request DescribeImagePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImagePermissionResponse
+         */
         public async Task<DescribeImagePermissionResponse> DescribeImagePermissionWithOptionsAsync(DescribeImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9789,12 +10913,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeImagePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          *
+          * @param request DescribeImagePermissionRequest
+          * @return DescribeImagePermissionResponse
+         */
         public DescribeImagePermissionResponse DescribeImagePermission(DescribeImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImagePermissionWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          *
+          * @param request DescribeImagePermissionRequest
+          * @return DescribeImagePermissionResponse
+         */
         public async Task<DescribeImagePermissionResponse> DescribeImagePermissionAsync(DescribeImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9809,6 +10945,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopInstanceType"] = request.DesktopInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FotaVersion))
+            {
+                query["FotaVersion"] = request.FotaVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCategory))
             {
                 query["GpuCategory"] = request.GpuCategory;
@@ -9820,6 +10960,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStatus))
             {
@@ -9884,6 +11028,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopInstanceType"] = request.DesktopInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FotaVersion))
+            {
+                query["FotaVersion"] = request.FotaVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCategory))
             {
                 query["GpuCategory"] = request.GpuCategory;
@@ -9895,6 +11043,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageStatus))
             {
@@ -9964,8 +11116,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution result.
-          * *   You can query the execution information in the previous two weeks. Up to 100,000 lines of execution information can be retained.
+          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
           *
           * @param request DescribeInvocationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10039,8 +11191,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution result.
-          * *   You can query the execution information in the previous two weeks. Up to 100,000 lines of execution information can be retained.
+          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
           *
           * @param request DescribeInvocationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10114,8 +11266,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution result.
-          * *   You can query the execution information in the previous two weeks. Up to 100,000 lines of execution information can be retained.
+          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
           *
           * @param request DescribeInvocationsRequest
           * @return DescribeInvocationsResponse
@@ -10127,8 +11279,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution result.
-          * *   You can query the execution information in the previous two weeks. Up to 100,000 lines of execution information can be retained.
+          * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+          * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
           *
           * @param request DescribeInvocationsRequest
           * @return DescribeInvocationsResponse
@@ -10613,6 +11765,644 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribePolicyGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
+          *
+          * @param request DescribePriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePriceResponse
+         */
+        public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleModels))
+            {
+                query["BundleModels"] = request.BundleModels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCdsEnable))
+            {
+                query["EduCdsEnable"] = request.EduCdsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCdsSize))
+            {
+                query["EduCdsSize"] = request.EduCdsSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCommittedTime))
+            {
+                query["EduCommittedTime"] = request.EduCommittedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduDesktopBundleId))
+            {
+                query["EduDesktopBundleId"] = request.EduDesktopBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduDesktopNum))
+            {
+                query["EduDesktopNum"] = request.EduDesktopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduRoomClassify))
+            {
+                query["EduRoomClassify"] = request.EduRoomClassify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduStudentBundleId))
+            {
+                query["EduStudentBundleId"] = request.EduStudentBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduStudentNum))
+            {
+                query["EduStudentNum"] = request.EduStudentNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduTeacherBundleId))
+            {
+                query["EduTeacherBundleId"] = request.EduTeacherBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduTeacherNum))
+            {
+                query["EduTeacherNum"] = request.EduTeacherNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupDesktopCount))
+            {
+                query["GroupDesktopCount"] = request.GroupDesktopCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HardwareVersion))
+            {
+                query["HardwareVersion"] = request.HardwareVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSize))
+            {
+                query["PackageSize"] = request.PackageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
+            {
+                query["RootDiskSizeGib"] = request.RootDiskSizeGib;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpPeriodInfo))
+            {
+                query["SpPeriodInfo"] = request.SpPeriodInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpPrice))
+            {
+                query["SpPrice"] = request.SpPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpType))
+            {
+                query["SpType"] = request.SpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
+            {
+                query["UserDiskSizeGib"] = request.UserDiskSizeGib;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrice",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * ## Usage notes
+          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
+          *
+          * @param request DescribePriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePriceResponse
+         */
+        public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleModels))
+            {
+                query["BundleModels"] = request.BundleModels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCdsEnable))
+            {
+                query["EduCdsEnable"] = request.EduCdsEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCdsSize))
+            {
+                query["EduCdsSize"] = request.EduCdsSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduCommittedTime))
+            {
+                query["EduCommittedTime"] = request.EduCommittedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduDesktopBundleId))
+            {
+                query["EduDesktopBundleId"] = request.EduDesktopBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduDesktopNum))
+            {
+                query["EduDesktopNum"] = request.EduDesktopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduRoomClassify))
+            {
+                query["EduRoomClassify"] = request.EduRoomClassify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduStudentBundleId))
+            {
+                query["EduStudentBundleId"] = request.EduStudentBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduStudentNum))
+            {
+                query["EduStudentNum"] = request.EduStudentNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduTeacherBundleId))
+            {
+                query["EduTeacherBundleId"] = request.EduTeacherBundleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EduTeacherNum))
+            {
+                query["EduTeacherNum"] = request.EduTeacherNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupDesktopCount))
+            {
+                query["GroupDesktopCount"] = request.GroupDesktopCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HardwareVersion))
+            {
+                query["HardwareVersion"] = request.HardwareVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSize))
+            {
+                query["PackageSize"] = request.PackageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
+            {
+                query["RootDiskSizeGib"] = request.RootDiskSizeGib;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpPeriodInfo))
+            {
+                query["SpPeriodInfo"] = request.SpPeriodInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpPrice))
+            {
+                query["SpPrice"] = request.SpPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpType))
+            {
+                query["SpType"] = request.SpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
+            {
+                query["UserDiskSizeGib"] = request.UserDiskSizeGib;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrice",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * ## Usage notes
+          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
+          *
+          * @param request DescribePriceRequest
+          * @return DescribePriceResponse
+         */
+        public DescribePriceResponse DescribePrice(DescribePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePriceWithOptions(request, runtime);
+        }
+
+        /**
+          * ## Usage notes
+          * The request parameters vary based on the type of desktop resources whose price you want to query. Take note of the following items:
+          * *   If you set ResourceType to OfficeSite, you must specify InstanceType.
+          * *   If you set ResourceType to Bandwidth, the pay-by-data-transfer metering method is used for network billing.
+          * *   If you set ResourceType to Desktop, you must specify InstanceType, RootDiskSizeGib, and UserDiskSizeGib. You can specify OsType, PeriodUnit, Period, and Amount based on your business requirements.
+          * > Before you call this operation to query the prices of cloud desktops by setting ResourceType to Desktop, you must know the desktop types and disk sizes that EDS provides. The disk sizes vary based on the desktop types. For more information, see [Cloud desktop types](~~188609~~).
+          *
+          * @param request DescribePriceRequest
+          * @return DescribePriceResponse
+         */
+        public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePriceWithOptionsAsync(request, runtime);
+        }
+
+        public DescribePriceForCreateDesktopOversoldGroupResponse DescribePriceForCreateDesktopOversoldGroupWithOptions(DescribePriceForCreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                query["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForCreateDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForCreateDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribePriceForCreateDesktopOversoldGroupResponse> DescribePriceForCreateDesktopOversoldGroupWithOptionsAsync(DescribePriceForCreateDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                query["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForCreateDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForCreateDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribePriceForCreateDesktopOversoldGroupResponse DescribePriceForCreateDesktopOversoldGroup(DescribePriceForCreateDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePriceForCreateDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribePriceForCreateDesktopOversoldGroupResponse> DescribePriceForCreateDesktopOversoldGroupAsync(DescribePriceForCreateDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePriceForCreateDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DescribePriceForModifyDesktopOversoldGroupSaleResponse DescribePriceForModifyDesktopOversoldGroupSaleWithOptions(DescribePriceForModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForModifyDesktopOversoldGroupSale",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForModifyDesktopOversoldGroupSaleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribePriceForModifyDesktopOversoldGroupSaleResponse> DescribePriceForModifyDesktopOversoldGroupSaleWithOptionsAsync(DescribePriceForModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForModifyDesktopOversoldGroupSale",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForModifyDesktopOversoldGroupSaleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribePriceForModifyDesktopOversoldGroupSaleResponse DescribePriceForModifyDesktopOversoldGroupSale(DescribePriceForModifyDesktopOversoldGroupSaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePriceForModifyDesktopOversoldGroupSaleWithOptions(request, runtime);
+        }
+
+        public async Task<DescribePriceForModifyDesktopOversoldGroupSaleResponse> DescribePriceForModifyDesktopOversoldGroupSaleAsync(DescribePriceForModifyDesktopOversoldGroupSaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePriceForModifyDesktopOversoldGroupSaleWithOptionsAsync(request, runtime);
+        }
+
+        public DescribePriceForRenewDesktopOversoldGroupResponse DescribePriceForRenewDesktopOversoldGroupWithOptions(DescribePriceForRenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForRenewDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForRenewDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribePriceForRenewDesktopOversoldGroupResponse> DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(DescribePriceForRenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePriceForRenewDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceForRenewDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribePriceForRenewDesktopOversoldGroupResponse DescribePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePriceForRenewDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribePriceForRenewDesktopOversoldGroupResponse> DescribePriceForRenewDesktopOversoldGroupAsync(DescribePriceForRenewDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10687,17 +12477,41 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeScanTaskProgressResponse DescribeScanTaskProgressWithOptions(DescribeScanTaskProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+          * *   You can query session statistics for the past hour.
+          *
+          * @param request DescribeSessionStatisticRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSessionStatisticResponse
+         */
+        public DescribeSessionStatisticResponse DescribeSessionStatisticWithOptions(DescribeSessionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
             {
-                query["TaskId"] = request.TaskId;
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10705,7 +12519,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeScanTaskProgress",
+                Action = "DescribeSessionStatistic",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -10715,20 +12529,44 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeScanTaskProgressResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeSessionStatisticResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeScanTaskProgressResponse> DescribeScanTaskProgressWithOptionsAsync(DescribeScanTaskProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+          * *   You can query session statistics for the past hour.
+          *
+          * @param request DescribeSessionStatisticRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSessionStatisticResponse
+         */
+        public async Task<DescribeSessionStatisticResponse> DescribeSessionStatisticWithOptionsAsync(DescribeSessionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
             {
-                query["TaskId"] = request.TaskId;
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10736,7 +12574,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeScanTaskProgress",
+                Action = "DescribeSessionStatistic",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -10746,175 +12584,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeScanTaskProgressResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeSessionStatisticResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeScanTaskProgressResponse DescribeScanTaskProgress(DescribeScanTaskProgressRequest request)
+        /**
+          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+          * *   You can query session statistics for the past hour.
+          *
+          * @param request DescribeSessionStatisticRequest
+          * @return DescribeSessionStatisticResponse
+         */
+        public DescribeSessionStatisticResponse DescribeSessionStatistic(DescribeSessionStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeScanTaskProgressWithOptions(request, runtime);
+            return DescribeSessionStatisticWithOptions(request, runtime);
         }
 
-        public async Task<DescribeScanTaskProgressResponse> DescribeScanTaskProgressAsync(DescribeScanTaskProgressRequest request)
+        /**
+          * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+          * *   You can query session statistics for the past hour.
+          *
+          * @param request DescribeSessionStatisticRequest
+          * @return DescribeSessionStatisticResponse
+         */
+        public async Task<DescribeSessionStatisticResponse> DescribeSessionStatisticAsync(DescribeSessionStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeScanTaskProgressWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeSecurityEventOperationStatusResponse DescribeSecurityEventOperationStatusWithOptions(DescribeSecurityEventOperationStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventId))
-            {
-                query["SecurityEventId"] = request.SecurityEventId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSecurityEventOperationStatus",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationStatusResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeSecurityEventOperationStatusResponse> DescribeSecurityEventOperationStatusWithOptionsAsync(DescribeSecurityEventOperationStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventId))
-            {
-                query["SecurityEventId"] = request.SecurityEventId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSecurityEventOperationStatus",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationStatusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeSecurityEventOperationStatusResponse DescribeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSecurityEventOperationStatusWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeSecurityEventOperationStatusResponse> DescribeSecurityEventOperationStatusAsync(DescribeSecurityEventOperationStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSecurityEventOperationStatusWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperationsWithOptions(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventId))
-            {
-                query["SecurityEventId"] = request.SecurityEventId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSecurityEventOperations",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsWithOptionsAsync(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventId))
-            {
-                query["SecurityEventId"] = request.SecurityEventId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSecurityEventOperations",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperations(DescribeSecurityEventOperationsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSecurityEventOperationsWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsAsync(DescribeSecurityEventOperationsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSecurityEventOperationsWithOptionsAsync(request, runtime);
+            return await DescribeSessionStatisticWithOptionsAsync(request, runtime);
         }
 
         public DescribeSnapshotsResponse DescribeSnapshotsWithOptions(DescribeSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11071,13 +12767,41 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeSnapshotsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeSuspEventOverviewResponse DescribeSuspEventOverviewWithOptions(DescribeSuspEventOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeUserConnectTimeResponse DescribeUserConnectTimeWithOptions(DescribeUserConnectTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
-                query["RegionId"] = request.RegionId;
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopId))
+            {
+                query["UserDesktopId"] = request.UserDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11085,7 +12809,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeSuspEventOverview",
+                Action = "DescribeUserConnectTime",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -11095,16 +12819,44 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSuspEventOverviewResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DescribeUserConnectTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeSuspEventOverviewResponse> DescribeSuspEventOverviewWithOptionsAsync(DescribeSuspEventOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeUserConnectTimeResponse> DescribeUserConnectTimeWithOptionsAsync(DescribeUserConnectTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
-                query["RegionId"] = request.RegionId;
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopId))
+            {
+                query["UserDesktopId"] = request.UserDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11112,7 +12864,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "DescribeSuspEventOverview",
+                Action = "DescribeUserConnectTime",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -11122,303 +12874,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSuspEventOverviewResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DescribeUserConnectTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeSuspEventOverviewResponse DescribeSuspEventOverview(DescribeSuspEventOverviewRequest request)
+        public DescribeUserConnectTimeResponse DescribeUserConnectTime(DescribeUserConnectTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSuspEventOverviewWithOptions(request, runtime);
+            return DescribeUserConnectTimeWithOptions(request, runtime);
         }
 
-        public async Task<DescribeSuspEventOverviewResponse> DescribeSuspEventOverviewAsync(DescribeSuspEventOverviewRequest request)
+        public async Task<DescribeUserConnectTimeResponse> DescribeUserConnectTimeAsync(DescribeUserConnectTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSuspEventOverviewWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
-          *
-          * @param request DescribeSuspEventQuaraFilesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSuspEventQuaraFilesResponse
-         */
-        public DescribeSuspEventQuaraFilesResponse DescribeSuspEventQuaraFilesWithOptions(DescribeSuspEventQuaraFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSuspEventQuaraFiles",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSuspEventQuaraFilesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
-          *
-          * @param request DescribeSuspEventQuaraFilesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSuspEventQuaraFilesResponse
-         */
-        public async Task<DescribeSuspEventQuaraFilesResponse> DescribeSuspEventQuaraFilesWithOptionsAsync(DescribeSuspEventQuaraFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSuspEventQuaraFiles",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSuspEventQuaraFilesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
-          *
-          * @param request DescribeSuspEventQuaraFilesRequest
-          * @return DescribeSuspEventQuaraFilesResponse
-         */
-        public DescribeSuspEventQuaraFilesResponse DescribeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSuspEventQuaraFilesWithOptions(request, runtime);
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to view the quarantined files.
-          *
-          * @param request DescribeSuspEventQuaraFilesRequest
-          * @return DescribeSuspEventQuaraFilesResponse
-         */
-        public async Task<DescribeSuspEventQuaraFilesResponse> DescribeSuspEventQuaraFilesAsync(DescribeSuspEventQuaraFilesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSuspEventQuaraFilesWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * An alert event consists of alerts and exceptions. Each alert event corresponds to multiple exceptions.
-          *
-          * @param request DescribeSuspEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSuspEventsResponse
-         */
-        public DescribeSuspEventsResponse DescribeSuspEventsWithOptions(DescribeSuspEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmUniqueInfo))
-            {
-                query["AlarmUniqueInfo"] = request.AlarmUniqueInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Levels))
-            {
-                query["Levels"] = request.Levels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentEventType))
-            {
-                query["ParentEventType"] = request.ParentEventType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSuspEvents",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSuspEventsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * An alert event consists of alerts and exceptions. Each alert event corresponds to multiple exceptions.
-          *
-          * @param request DescribeSuspEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSuspEventsResponse
-         */
-        public async Task<DescribeSuspEventsResponse> DescribeSuspEventsWithOptionsAsync(DescribeSuspEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmUniqueInfo))
-            {
-                query["AlarmUniqueInfo"] = request.AlarmUniqueInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Levels))
-            {
-                query["Levels"] = request.Levels;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentEventType))
-            {
-                query["ParentEventType"] = request.ParentEventType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeSuspEvents",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeSuspEventsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * An alert event consists of alerts and exceptions. Each alert event corresponds to multiple exceptions.
-          *
-          * @param request DescribeSuspEventsRequest
-          * @return DescribeSuspEventsResponse
-         */
-        public DescribeSuspEventsResponse DescribeSuspEvents(DescribeSuspEventsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSuspEventsWithOptions(request, runtime);
-        }
-
-        /**
-          * An alert event consists of alerts and exceptions. Each alert event corresponds to multiple exceptions.
-          *
-          * @param request DescribeSuspEventsRequest
-          * @return DescribeSuspEventsResponse
-         */
-        public async Task<DescribeSuspEventsResponse> DescribeSuspEventsAsync(DescribeSuspEventsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSuspEventsWithOptionsAsync(request, runtime);
+            return await DescribeUserConnectTimeWithOptionsAsync(request, runtime);
         }
 
         public DescribeUserConnectionRecordsResponse DescribeUserConnectionRecordsWithOptions(DescribeUserConnectionRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -11973,308 +13441,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVirtualMFADevicesWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeVulDetailsResponse DescribeVulDetailsWithOptions(DescribeVulDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulDetails",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulDetailsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeVulDetailsResponse> DescribeVulDetailsWithOptionsAsync(DescribeVulDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulDetails",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulDetailsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeVulDetailsResponse DescribeVulDetails(DescribeVulDetailsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeVulDetailsWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeVulDetailsResponse> DescribeVulDetailsAsync(DescribeVulDetailsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeVulDetailsWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeVulListResponse DescribeVulListWithOptions(DescribeVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
-            {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulList",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulListResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeVulListResponse> DescribeVulListWithOptionsAsync(DescribeVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
-            {
-                query["Dealed"] = request.Dealed;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
-            {
-                query["Necessity"] = request.Necessity;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulList",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeVulListResponse DescribeVulList(DescribeVulListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeVulListWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeVulListResponse> DescribeVulListAsync(DescribeVulListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeVulListWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeVulOverviewResponse DescribeVulOverviewWithOptions(DescribeVulOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulOverview",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulOverviewResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeVulOverviewResponse> DescribeVulOverviewWithOptionsAsync(DescribeVulOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeVulOverview",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeVulOverviewResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeVulOverviewResponse DescribeVulOverview(DescribeVulOverviewRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeVulOverviewWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeVulOverviewResponse> DescribeVulOverviewAsync(DescribeVulOverviewRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeVulOverviewWithOptionsAsync(request, runtime);
         }
 
         public DescribeZonesResponse DescribeZonesWithOptions(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -12841,13 +14007,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ExportClientEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
-          *
-          * @param request ExportDesktopGroupInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ExportDesktopGroupInfoResponse
-         */
         public ExportDesktopGroupInfoResponse ExportDesktopGroupInfoWithOptions(ExportDesktopGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12915,13 +14074,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportDesktopGroupInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
-          *
-          * @param request ExportDesktopGroupInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ExportDesktopGroupInfoResponse
-         */
         public async Task<ExportDesktopGroupInfoResponse> ExportDesktopGroupInfoWithOptionsAsync(ExportDesktopGroupInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12989,24 +14141,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ExportDesktopGroupInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
-          *
-          * @param request ExportDesktopGroupInfoRequest
-          * @return ExportDesktopGroupInfoResponse
-         */
         public ExportDesktopGroupInfoResponse ExportDesktopGroupInfo(ExportDesktopGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportDesktopGroupInfoWithOptions(request, runtime);
         }
 
-        /**
-          * You can call the operation to export desktop groups and then save the desktop groups in the .xlsx file. The information about exported desktop groups includes: the desktop group ID and name, the workspace ID and name, the desktop template, the security policy name, the number of authorized users, the billing method, and the creation time.
-          *
-          * @param request ExportDesktopGroupInfoRequest
-          * @return ExportDesktopGroupInfoResponse
-         */
         public async Task<ExportDesktopGroupInfoResponse> ExportDesktopGroupInfoAsync(ExportDesktopGroupInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13217,6 +14357,80 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ExportDesktopListInfoWithOptionsAsync(request, runtime);
         }
 
+        public GetAsyncTaskResponse GetAsyncTaskWithOptions(GetAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncTaskId))
+            {
+                query["AsyncTaskId"] = request.AsyncTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsyncTask",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAsyncTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAsyncTaskResponse> GetAsyncTaskWithOptionsAsync(GetAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncTaskId))
+            {
+                query["AsyncTaskId"] = request.AsyncTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsyncTask",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAsyncTaskResponse GetAsyncTask(GetAsyncTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAsyncTaskWithOptions(request, runtime);
+        }
+
+        public async Task<GetAsyncTaskResponse> GetAsyncTaskAsync(GetAsyncTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAsyncTaskWithOptionsAsync(request, runtime);
+        }
+
         public GetConnectionTicketResponse GetConnectionTicketWithOptions(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13353,6 +14567,104 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConnectionTicketWithOptionsAsync(request, runtime);
+        }
+
+        public GetCoordinateTicketResponse GetCoordinateTicketWithOptions(GetCoordinateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoId))
+            {
+                query["CoId"] = request.CoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCoordinateTicket",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCoordinateTicketResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCoordinateTicketResponse> GetCoordinateTicketWithOptionsAsync(GetCoordinateTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoId))
+            {
+                query["CoId"] = request.CoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                query["UserType"] = request.UserType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCoordinateTicket",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCoordinateTicketResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCoordinateTicketResponse GetCoordinateTicket(GetCoordinateTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCoordinateTicketWithOptions(request, runtime);
+        }
+
+        public async Task<GetCoordinateTicketResponse> GetCoordinateTicketAsync(GetCoordinateTicketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCoordinateTicketWithOptionsAsync(request, runtime);
         }
 
         public GetDesktopGroupDetailResponse GetDesktopGroupDetailWithOptions(GetDesktopGroupDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -13504,8 +14816,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request GetSpMetadataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13547,8 +14858,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request GetSpMetadataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13590,8 +14900,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request GetSpMetadataRequest
           * @return GetSpMetadataResponse
@@ -13603,8 +14912,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request GetSpMetadataRequest
           * @return GetSpMetadataResponse
@@ -13615,25 +14923,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await GetSpMetadataWithOptionsAsync(request, runtime);
         }
 
-        public HandleSecurityEventsResponse HandleSecurityEventsWithOptions(HandleSecurityEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+          *
+          * @param request HibernateDesktopsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return HibernateDesktopsResponse
+         */
+        public HibernateDesktopsResponse HibernateDesktopsWithOptions(HibernateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationCode))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["OperationCode"] = request.OperationCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParams))
-            {
-                query["OperationParams"] = request.OperationParams;
+                query["DesktopId"] = request.DesktopId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEvent))
-            {
-                query["SecurityEvent"] = request.SecurityEvent;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13641,7 +14948,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "HandleSecurityEvents",
+                Action = "HibernateDesktops",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -13651,28 +14958,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<HandleSecurityEventsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<HibernateDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<HandleSecurityEventsResponse> HandleSecurityEventsWithOptionsAsync(HandleSecurityEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+          *
+          * @param request HibernateDesktopsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return HibernateDesktopsResponse
+         */
+        public async Task<HibernateDesktopsResponse> HibernateDesktopsWithOptionsAsync(HibernateDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationCode))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
-                query["OperationCode"] = request.OperationCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParams))
-            {
-                query["OperationParams"] = request.OperationParams;
+                query["DesktopId"] = request.DesktopId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEvent))
-            {
-                query["SecurityEvent"] = request.SecurityEvent;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13680,7 +14986,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "HandleSecurityEvents",
+                Action = "HibernateDesktops",
                 Version = "2020-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -13690,19 +14996,31 @@ namespace AlibabaCloud.SDK.Ecd20200930
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<HandleSecurityEventsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<HibernateDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public HandleSecurityEventsResponse HandleSecurityEvents(HandleSecurityEventsRequest request)
+        /**
+          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+          *
+          * @param request HibernateDesktopsRequest
+          * @return HibernateDesktopsResponse
+         */
+        public HibernateDesktopsResponse HibernateDesktops(HibernateDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return HandleSecurityEventsWithOptions(request, runtime);
+            return HibernateDesktopsWithOptions(request, runtime);
         }
 
-        public async Task<HandleSecurityEventsResponse> HandleSecurityEventsAsync(HandleSecurityEventsRequest request)
+        /**
+          * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+          *
+          * @param request HibernateDesktopsRequest
+          * @return HibernateDesktopsResponse
+         */
+        public async Task<HibernateDesktopsResponse> HibernateDesktopsAsync(HibernateDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await HandleSecurityEventsWithOptionsAsync(request, runtime);
+            return await HibernateDesktopsWithOptionsAsync(request, runtime);
         }
 
         public ListCdsFilesResponse ListCdsFilesWithOptions(ListCdsFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -13726,6 +15044,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIdsShrink))
             {
                 query["FileIds"] = request.FileIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -13792,6 +15114,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileIds"] = request.FileIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -13848,7 +15174,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system of an enterprise, you can call this operation to obtain the information about users in the AD system.
+          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
           *
           * @param request ListDirectoryUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13902,7 +15228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system of an enterprise, you can call this operation to obtain the information about users in the AD system.
+          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
           *
           * @param request ListDirectoryUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13956,7 +15282,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system of an enterprise, you can call this operation to obtain the information about users in the AD system.
+          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
           *
           * @param request ListDirectoryUsersRequest
           * @return ListDirectoryUsersResponse
@@ -13968,7 +15294,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you use an AD directory to connect to an AD system of an enterprise, you can call this operation to obtain the information about users in the AD system.
+          * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
           *
           * @param request ListDirectoryUsersRequest
           * @return ListDirectoryUsersResponse
@@ -13994,6 +15320,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14033,6 +15363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14282,7 +15616,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
           *
           * @param request ListTagResourcesRequest
@@ -14337,7 +15670,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
           *
           * @param request ListTagResourcesRequest
@@ -14392,7 +15724,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
           *
           * @param request ListTagResourcesRequest
@@ -14405,7 +15736,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
           *
           * @param request ListTagResourcesRequest
@@ -14516,7 +15846,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
@@ -14555,7 +15884,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
@@ -14594,7 +15922,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
@@ -14607,7 +15934,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
@@ -14701,13 +16027,88 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await MigrateDesktopsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This operation modifies only the domain name and Domain Name System (DNS) parameters of AD directories in the ERROR or REGISTERING state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorDirectoryResponse
-         */
+        public MigrateImageProtocolResponse MigrateImageProtocolWithOptions(MigrateImageProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProtocolType))
+            {
+                query["TargetProtocolType"] = request.TargetProtocolType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MigrateImageProtocol",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MigrateImageProtocolResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<MigrateImageProtocolResponse> MigrateImageProtocolWithOptionsAsync(MigrateImageProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProtocolType))
+            {
+                query["TargetProtocolType"] = request.TargetProtocolType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MigrateImageProtocol",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MigrateImageProtocolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public MigrateImageProtocolResponse MigrateImageProtocol(MigrateImageProtocolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MigrateImageProtocolWithOptions(request, runtime);
+        }
+
+        public async Task<MigrateImageProtocolResponse> MigrateImageProtocolAsync(MigrateImageProtocolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MigrateImageProtocolWithOptionsAsync(request, runtime);
+        }
+
         public ModifyADConnectorDirectoryResponse ModifyADConnectorDirectoryWithOptions(ModifyADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14779,13 +16180,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * This operation modifies only the domain name and Domain Name System (DNS) parameters of AD directories in the ERROR or REGISTERING state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorDirectoryResponse
-         */
         public async Task<ModifyADConnectorDirectoryResponse> ModifyADConnectorDirectoryWithOptionsAsync(ModifyADConnectorDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14857,37 +16251,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * This operation modifies only the domain name and Domain Name System (DNS) parameters of AD directories in the ERROR or REGISTERING state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @return ModifyADConnectorDirectoryResponse
-         */
         public ModifyADConnectorDirectoryResponse ModifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyADConnectorDirectoryWithOptions(request, runtime);
         }
 
-        /**
-          * This operation modifies only the domain name and Domain Name System (DNS) parameters of AD directories in the ERROR or REGISTERING state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.
-          *
-          * @param request ModifyADConnectorDirectoryRequest
-          * @return ModifyADConnectorDirectoryResponse
-         */
         public async Task<ModifyADConnectorDirectoryResponse> ModifyADConnectorDirectoryAsync(ModifyADConnectorDirectoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyADConnectorDirectoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorOfficeSiteResponse
-         */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSiteWithOptions(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14959,13 +16334,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorOfficeSiteResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyADConnectorOfficeSiteResponse
-         */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteWithOptionsAsync(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15037,28 +16405,106 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorOfficeSiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @return ModifyADConnectorOfficeSiteResponse
-         */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyADConnectorOfficeSiteWithOptions(request, runtime);
         }
 
-        /**
-          * This operation modifies the domain name and DNS parameters of workspaces that are of enterprise AD account type and in the Error or Registering state. DNS parameters include DomainName, SubDomainName, DnsAddress.N, and SubDomainDnsAddress.N.
-          *
-          * @param request ModifyADConnectorOfficeSiteRequest
-          * @return ModifyADConnectorOfficeSiteResponse
-         */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteAsync(ModifyADConnectorOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyADConnectorOfficeSiteWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyAclEntriesResponse ModifyAclEntriesWithOptions(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAclEntries",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAclEntriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyAclEntriesResponse> ModifyAclEntriesWithOptionsAsync(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                query["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAclEntries",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAclEntriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyAclEntriesResponse ModifyAclEntries(ModifyAclEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAclEntriesWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyAclEntriesResponse> ModifyAclEntriesAsync(ModifyAclEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAclEntriesWithOptionsAsync(request, runtime);
         }
 
         public ModifyAutoSnapshotPolicyResponse ModifyAutoSnapshotPolicyWithOptions(ModifyAutoSnapshotPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -15160,7 +16606,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Only custom desktop templates can be modified.
           *
           * @param request ModifyBundleRequest
@@ -15215,7 +16660,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Only custom desktop templates can be modified.
           *
           * @param request ModifyBundleRequest
@@ -15270,7 +16714,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Only custom desktop templates can be modified.
           *
           * @param request ModifyBundleRequest
@@ -15283,7 +16726,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * Only custom desktop templates can be modified.
           *
           * @param request ModifyBundleRequest
@@ -15318,6 +16760,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -15365,6 +16811,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -15791,6 +17241,104 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyCloudDrivePermissionWithOptionsAsync(request, runtime);
         }
 
+        public ModifyCloudDriveUsersResponse ModifyCloudDriveUsersWithOptions(ModifyCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCloudDriveUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyCloudDriveUsersResponse> ModifyCloudDriveUsersWithOptionsAsync(ModifyCloudDriveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
+            {
+                query["UserMaxSize"] = request.UserMaxSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCloudDriveUsers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCloudDriveUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyCloudDriveUsersResponse ModifyCloudDriveUsers(ModifyCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCloudDriveUsersWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyCloudDriveUsersResponse> ModifyCloudDriveUsersAsync(ModifyCloudDriveUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCloudDriveUsersWithOptionsAsync(request, runtime);
+        }
+
         public ModifyCustomizedListHeadersResponse ModifyCustomizedListHeadersWithOptions(ModifyCustomizedListHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15874,11 +17422,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.<props="china"> 
-          * After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
-          * </props>
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15916,6 +17462,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDuration))
+            {
+                query["UseDuration"] = request.UseDuration;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15936,11 +17486,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.<props="china"> 
-          * After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
-          * </props>
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15978,6 +17526,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDuration))
+            {
+                query["UseDuration"] = request.UseDuration;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15998,11 +17550,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.<props="china"> 
-          * After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
-          * </props>
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -16014,11 +17564,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.<props="china"> 
-          * After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
-          * </props>
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -16338,8 +17886,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
           *
           * @param request ModifyDesktopHostNameRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16381,8 +17928,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
           *
           * @param request ModifyDesktopHostNameRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16424,8 +17970,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
           *
           * @param request ModifyDesktopHostNameRequest
           * @return ModifyDesktopHostNameResponse
@@ -16437,8 +17982,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can only change the hostname of a Windows cloud desktop in the workspace of the enterprise Active Directory (AD) account type. After the hostname is changed, the cloud desktop is recreated.
+          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
           *
           * @param request ModifyDesktopHostNameRequest
           * @return ModifyDesktopHostNameResponse
@@ -16529,6 +18073,316 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDesktopNameWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDesktopOversoldGroupResponse ModifyDesktopOversoldGroupWithOptions(ModifyDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldWarn))
+            {
+                query["OversoldWarn"] = request.OversoldWarn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDuration))
+            {
+                query["StopDuration"] = request.StopDuration;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDesktopOversoldGroupResponse> ModifyDesktopOversoldGroupWithOptionsAsync(ModifyDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldWarn))
+            {
+                query["OversoldWarn"] = request.OversoldWarn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDuration))
+            {
+                query["StopDuration"] = request.StopDuration;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDesktopOversoldGroupResponse ModifyDesktopOversoldGroup(ModifyDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDesktopOversoldGroupResponse> ModifyDesktopOversoldGroupAsync(ModifyDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDesktopOversoldGroupSaleResponse ModifyDesktopOversoldGroupSaleWithOptions(ModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldGroupSale",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldGroupSaleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDesktopOversoldGroupSaleResponse> ModifyDesktopOversoldGroupSaleWithOptionsAsync(ModifyDesktopOversoldGroupSaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrenceCount))
+            {
+                query["ConcurrenceCount"] = request.ConcurrenceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldUserCount))
+            {
+                query["OversoldUserCount"] = request.OversoldUserCount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldGroupSale",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldGroupSaleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDesktopOversoldGroupSaleResponse ModifyDesktopOversoldGroupSale(ModifyDesktopOversoldGroupSaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDesktopOversoldGroupSaleWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDesktopOversoldGroupSaleResponse> ModifyDesktopOversoldGroupSaleAsync(ModifyDesktopOversoldGroupSaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDesktopOversoldGroupSaleWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDesktopOversoldUserGroupResponse ModifyDesktopOversoldUserGroupWithOptions(ModifyDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDesktopOversoldUserGroupResponse> ModifyDesktopOversoldUserGroupWithOptionsAsync(ModifyDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDesktopOversoldUserGroupResponse ModifyDesktopOversoldUserGroup(ModifyDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDesktopOversoldUserGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDesktopOversoldUserGroupResponse> ModifyDesktopOversoldUserGroupAsync(ModifyDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -16715,8 +18569,98 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyDesktopSpecWithOptionsAsync(request, runtime);
         }
 
+        public ModifyDesktopTimerResponse ModifyDesktopTimerWithOptions(ModifyDesktopTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTimers))
+            {
+                query["DesktopTimers"] = request.DesktopTimers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDesktopTimers))
+            {
+                query["UseDesktopTimers"] = request.UseDesktopTimers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopTimer",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopTimerResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDesktopTimerResponse> ModifyDesktopTimerWithOptionsAsync(ModifyDesktopTimerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTimers))
+            {
+                query["DesktopTimers"] = request.DesktopTimers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDesktopTimers))
+            {
+                query["UseDesktopTimers"] = request.UseDesktopTimers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDesktopTimer",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDesktopTimerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDesktopTimerResponse ModifyDesktopTimer(ModifyDesktopTimerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDesktopTimerWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDesktopTimerResponse> ModifyDesktopTimerAsync(ModifyDesktopTimerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDesktopTimerWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * The cloud desktops whose policy you want to modify must be in the Running state.
+          * The cloud desktop must be in the Running (Running) state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16762,7 +18706,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops whose policy you want to modify must be in the Running state.
+          * The cloud desktop must be in the Running (Running) state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16808,7 +18752,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops whose policy you want to modify must be in the Running state.
+          * The cloud desktop must be in the Running (Running) state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @return ModifyDesktopsPolicyGroupResponse
@@ -16820,7 +18764,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops whose policy you want to modify must be in the Running state.
+          * The cloud desktop must be in the Running (Running) state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @return ModifyDesktopsPolicyGroupResponse
@@ -17000,7 +18944,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops to which you want to assign users must be in the Running state.
           *
           * @param request ModifyEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17042,7 +18986,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops to which you want to assign users must be in the Running state.
           *
           * @param request ModifyEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17084,7 +19028,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops to which you want to assign users must be in the Running state.
           *
           * @param request ModifyEntitlementRequest
           * @return ModifyEntitlementResponse
@@ -17096,7 +19040,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops to which you want to assign users must be in the Running state.
           *
           * @param request ModifyEntitlementRequest
           * @return ModifyEntitlementResponse
@@ -17108,8 +19052,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+          * You can call this operation to modify the attributes of only custom images that are in the Available state.
           *
           * @param request ModifyImageAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17155,8 +19098,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+          * You can call this operation to modify the attributes of only custom images that are in the Available state.
           *
           * @param request ModifyImageAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17202,8 +19144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+          * You can call this operation to modify the attributes of only custom images that are in the Available state.
           *
           * @param request ModifyImageAttributeRequest
           * @return ModifyImageAttributeResponse
@@ -17215,8 +19156,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation to modify the properties of only custom images in the Available (Available) state.
+          * You can call this operation to modify the attributes of only custom images that are in the Available state.
           *
           * @param request ModifyImageAttributeRequest
           * @return ModifyImageAttributeResponse
@@ -17227,25 +19167,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyImageAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ### Security of shared images
-          * Elastic Desktop Service (EDS) does not ensure the integrity and security of shared images on cloud desktops. Before you use shared images, make sure that the images come from trusted accounts. You must assume all risks.
-          * ### Quotas and billing
-          * *   Shared images do not count against the image quotas of the recipient Alibaba Cloud accounts.
-          * *   Alibaba Cloud accounts that share images are not charged if the recipient accounts use the shared images to create cloud desktops.
-          * *   There are no additional charges for sharing an image.
-          * ### Supported sharing behavior
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### Unsupported sharing behavior
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share images across regions, you can call the CopyImage operation to copy the images from the source region to the destination region.
-          *
-          * @param request ModifyImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImagePermissionResponse
-         */
         public ModifyImagePermissionResponse ModifyImagePermissionWithOptions(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17285,25 +19206,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyImagePermissionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ### Security of shared images
-          * Elastic Desktop Service (EDS) does not ensure the integrity and security of shared images on cloud desktops. Before you use shared images, make sure that the images come from trusted accounts. You must assume all risks.
-          * ### Quotas and billing
-          * *   Shared images do not count against the image quotas of the recipient Alibaba Cloud accounts.
-          * *   Alibaba Cloud accounts that share images are not charged if the recipient accounts use the shared images to create cloud desktops.
-          * *   There are no additional charges for sharing an image.
-          * ### Supported sharing behavior
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### Unsupported sharing behavior
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share images across regions, you can call the CopyImage operation to copy the images from the source region to the destination region.
-          *
-          * @param request ModifyImagePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyImagePermissionResponse
-         */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionWithOptionsAsync(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17343,48 +19245,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyImagePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ### Security of shared images
-          * Elastic Desktop Service (EDS) does not ensure the integrity and security of shared images on cloud desktops. Before you use shared images, make sure that the images come from trusted accounts. You must assume all risks.
-          * ### Quotas and billing
-          * *   Shared images do not count against the image quotas of the recipient Alibaba Cloud accounts.
-          * *   Alibaba Cloud accounts that share images are not charged if the recipient accounts use the shared images to create cloud desktops.
-          * *   There are no additional charges for sharing an image.
-          * ### Supported sharing behavior
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### Unsupported sharing behavior
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share images across regions, you can call the CopyImage operation to copy the images from the source region to the destination region.
-          *
-          * @param request ModifyImagePermissionRequest
-          * @return ModifyImagePermissionResponse
-         */
         public ModifyImagePermissionResponse ModifyImagePermission(ModifyImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyImagePermissionWithOptions(request, runtime);
         }
 
-        /**
-          * ### Security of shared images
-          * Elastic Desktop Service (EDS) does not ensure the integrity and security of shared images on cloud desktops. Before you use shared images, make sure that the images come from trusted accounts. You must assume all risks.
-          * ### Quotas and billing
-          * *   Shared images do not count against the image quotas of the recipient Alibaba Cloud accounts.
-          * *   Alibaba Cloud accounts that share images are not charged if the recipient accounts use the shared images to create cloud desktops.
-          * *   There are no additional charges for sharing an image.
-          * ### Supported sharing behavior
-          * *   You can share custom images with other Alibaba Cloud accounts.
-          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
-          * ### Unsupported sharing behavior
-          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
-          * *   You cannot share encrypted images.
-          * *   You cannot share images across regions. If you want to share images across regions, you can call the CopyImage operation to copy the images from the source region to the destination region.
-          *
-          * @param request ModifyImagePermissionRequest
-          * @return ModifyImagePermissionResponse
-         */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionAsync(ModifyImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17392,8 +19258,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
           *
           * @param request ModifyNASDefaultMountTargetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17435,8 +19300,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
           *
           * @param request ModifyNASDefaultMountTargetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17478,8 +19342,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
           *
           * @param request ModifyNASDefaultMountTargetRequest
           * @return ModifyNASDefaultMountTargetResponse
@@ -17491,8 +19354,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is accidentally deleted, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
+          * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
           *
           * @param request ModifyNASDefaultMountTargetRequest
           * @return ModifyNASDefaultMountTargetResponse
@@ -17602,8 +19464,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17645,8 +19506,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17688,8 +19548,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @return ModifyNetworkPackageEnabledResponse
@@ -17701,8 +19560,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package based on your requirements.
+          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @return ModifyNetworkPackageEnabledResponse
@@ -17991,108 +19849,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyOfficeSiteMfaEnabledWithOptionsAsync(request, runtime);
         }
 
-        public ModifyOperateVulResponse ModifyOperateVulWithOptions(ModifyOperateVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
-            {
-                query["OperateType"] = request.OperateType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
-            {
-                query["Reason"] = request.Reason;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulInfo))
-            {
-                query["VulInfo"] = request.VulInfo;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyOperateVul",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyOperateVulResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ModifyOperateVulResponse> ModifyOperateVulWithOptionsAsync(ModifyOperateVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
-            {
-                query["OperateType"] = request.OperateType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
-            {
-                query["Reason"] = request.Reason;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulInfo))
-            {
-                query["VulInfo"] = request.VulInfo;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyOperateVul",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyOperateVulResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ModifyOperateVulResponse ModifyOperateVul(ModifyOperateVulRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ModifyOperateVulWithOptions(request, runtime);
-        }
-
-        public async Task<ModifyOperateVulResponse> ModifyOperateVulAsync(ModifyOperateVulRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ModifyOperateVulWithOptionsAsync(request, runtime);
-        }
-
         public ModifyPolicyGroupResponse ModifyPolicyGroupWithOptions(ModifyPolicyGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminAccess))
+            {
+                query["AdminAccess"] = request.AdminAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -18120,6 +19884,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRule))
+            {
+                query["DomainResolveRule"] = request.DomainResolveRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRuleType))
+            {
+                query["DomainResolveRuleType"] = request.DomainResolveRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserApplyAdminCoordinate))
             {
@@ -18272,6 +20044,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
                 query["WatermarkRowAmount"] = request.WatermarkRowAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
+            {
+                query["WatermarkSecurity"] = request.WatermarkSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparency))
             {
@@ -18308,6 +20084,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminAccess))
+            {
+                query["AdminAccess"] = request.AdminAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -18335,6 +20115,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
             {
                 query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRule))
+            {
+                query["DomainResolveRule"] = request.DomainResolveRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainResolveRuleType))
+            {
+                query["DomainResolveRuleType"] = request.DomainResolveRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserApplyAdminCoordinate))
             {
@@ -18487,6 +20275,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
                 query["WatermarkRowAmount"] = request.WatermarkRowAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
+            {
+                query["WatermarkSecurity"] = request.WatermarkSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparency))
             {
@@ -18532,7 +20324,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+          * You can modify user permissions on cloud desktops that are only in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18578,7 +20370,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+          * You can modify user permissions on cloud desktops that are only in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18624,7 +20416,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+          * You can modify user permissions on cloud desktops that are only in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @return ModifyUserEntitlementResponse
@@ -18636,7 +20428,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify permissions for regular users on cloud desktops that are only in the Running state.
+          * You can modify user permissions on cloud desktops that are only in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @return ModifyUserEntitlementResponse
@@ -18757,6 +20549,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileId"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
                 query["ParentFolderId"] = request.ParentFolderId;
@@ -18804,6 +20600,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["FileId"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
                 query["ParentFolderId"] = request.ParentFolderId;
@@ -18841,120 +20641,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveCdsFileWithOptionsAsync(request, runtime);
-        }
-
-        public OperateVulsResponse OperateVulsWithOptions(OperateVulsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
-            {
-                query["OperateType"] = request.OperateType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precondition))
-            {
-                query["Precondition"] = request.Precondition;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
-            {
-                query["Reason"] = request.Reason;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
-            {
-                query["VulName"] = request.VulName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "OperateVuls",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<OperateVulsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<OperateVulsResponse> OperateVulsWithOptionsAsync(OperateVulsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
-            {
-                query["OperateType"] = request.OperateType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precondition))
-            {
-                query["Precondition"] = request.Precondition;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
-            {
-                query["Reason"] = request.Reason;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["Type"] = request.Type;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
-            {
-                query["VulName"] = request.VulName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "OperateVuls",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<OperateVulsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public OperateVulsResponse OperateVuls(OperateVulsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return OperateVulsWithOptions(request, runtime);
-        }
-
-        public async Task<OperateVulsResponse> OperateVulsAsync(OperateVulsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await OperateVulsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -19059,11 +20745,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you change the image of a cloud desktop, take note of the following limits:
-          * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
           * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
           *
           * @param request RebuildDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19080,6 +20766,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -19106,11 +20796,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you change the image of a cloud desktop, take note of the following limits:
-          * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
           * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
           *
           * @param request RebuildDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19127,6 +20817,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -19153,11 +20847,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you change the image of a cloud desktop, take note of the following limits:
-          * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
           * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
           *
           * @param request RebuildDesktopsRequest
           * @return RebuildDesktopsResponse
@@ -19170,11 +20864,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you change the image of a cloud desktop, take note of the following limits:
-          * - You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * - Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
           * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * - The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * - If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
           *
           * @param request RebuildDesktopsRequest
           * @return RebuildDesktopsResponse
@@ -19206,6 +20900,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberListShrink))
             {
@@ -19255,6 +20953,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberListShrink))
             {
@@ -19383,6 +21085,178 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUserFromDesktopGroupWithOptionsAsync(request, runtime);
+        }
+
+        public RemoveUserFromDesktopOversoldUserGroupResponse RemoveUserFromDesktopOversoldUserGroupWithOptions(RemoveUserFromDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopId))
+            {
+                query["UserDesktopId"] = request.UserDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveUserFromDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveUserFromDesktopOversoldUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RemoveUserFromDesktopOversoldUserGroupResponse> RemoveUserFromDesktopOversoldUserGroupWithOptionsAsync(RemoveUserFromDesktopOversoldUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDesktopId))
+            {
+                query["UserDesktopId"] = request.UserDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveUserFromDesktopOversoldUserGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveUserFromDesktopOversoldUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RemoveUserFromDesktopOversoldUserGroupResponse RemoveUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveUserFromDesktopOversoldUserGroupWithOptions(request, runtime);
+        }
+
+        public async Task<RemoveUserFromDesktopOversoldUserGroupResponse> RemoveUserFromDesktopOversoldUserGroupAsync(RemoveUserFromDesktopOversoldUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveUserFromDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        public RenewDesktopOversoldGroupResponse RenewDesktopOversoldGroupWithOptions(RenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewDesktopOversoldGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RenewDesktopOversoldGroupResponse> RenewDesktopOversoldGroupWithOptionsAsync(RenewDesktopOversoldGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldGroupId))
+            {
+                query["OversoldGroupId"] = request.OversoldGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewDesktopOversoldGroup",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewDesktopOversoldGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RenewDesktopOversoldGroupResponse RenewDesktopOversoldGroup(RenewDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewDesktopOversoldGroupWithOptions(request, runtime);
+        }
+
+        public async Task<RenewDesktopOversoldGroupResponse> RenewDesktopOversoldGroupAsync(RenewDesktopOversoldGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
         }
 
         public RenewDesktopsResponse RenewDesktopsWithOptions(RenewDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -19597,6 +21471,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await RenewNetworkPackagesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          *
+          * @param request ResetDesktopsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetDesktopsResponse
+         */
         public ResetDesktopsResponse ResetDesktopsWithOptions(ResetDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19644,6 +21525,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ResetDesktopsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          *
+          * @param request ResetDesktopsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetDesktopsResponse
+         */
         public async Task<ResetDesktopsResponse> ResetDesktopsWithOptionsAsync(ResetDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19691,12 +21579,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ResetDesktopsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          *
+          * @param request ResetDesktopsRequest
+          * @return ResetDesktopsResponse
+         */
         public ResetDesktopsResponse ResetDesktops(ResetDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetDesktopsWithOptions(request, runtime);
         }
 
+        /**
+          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          *
+          * @param request ResetDesktopsRequest
+          * @return ResetDesktopsResponse
+         */
         public async Task<ResetDesktopsResponse> ResetDesktopsAsync(ResetDesktopsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19704,7 +21604,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
           *
           * @param request ResetNASDefaultMountTargetRequest
@@ -19743,7 +21642,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
           *
           * @param request ResetNASDefaultMountTargetRequest
@@ -19782,7 +21680,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
           *
           * @param request ResetNASDefaultMountTargetRequest
@@ -19795,7 +21692,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
           * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
           *
           * @param request ResetNASDefaultMountTargetRequest
@@ -20022,117 +21918,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
+          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
           *
-          * @param request RollbackSuspEventQuaraFileRequest
+          * @param request RunCommandRequest
           * @param runtime runtime options for this request RuntimeOptions
-          * @return RollbackSuspEventQuaraFileResponse
+          * @return RunCommandResponse
          */
-        public RollbackSuspEventQuaraFileResponse RollbackSuspEventQuaraFileWithOptions(RollbackSuspEventQuaraFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuaraFieldId))
-            {
-                query["QuaraFieldId"] = request.QuaraFieldId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RollbackSuspEventQuaraFile",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RollbackSuspEventQuaraFileResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
-          *
-          * @param request RollbackSuspEventQuaraFileRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RollbackSuspEventQuaraFileResponse
-         */
-        public async Task<RollbackSuspEventQuaraFileResponse> RollbackSuspEventQuaraFileWithOptionsAsync(RollbackSuspEventQuaraFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuaraFieldId))
-            {
-                query["QuaraFieldId"] = request.QuaraFieldId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RollbackSuspEventQuaraFile",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RollbackSuspEventQuaraFileResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
-          *
-          * @param request RollbackSuspEventQuaraFileRequest
-          * @return RollbackSuspEventQuaraFileResponse
-         */
-        public RollbackSuspEventQuaraFileResponse RollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RollbackSuspEventQuaraFileWithOptions(request, runtime);
-        }
-
-        /**
-          * ## Description
-          * When alerts are handled, the system quarantines the files that contain detected threats to the quarantine panel. You can call this operation to remove quarantined files from the quarantine panel.
-          *
-          * @param request RollbackSuspEventQuaraFileRequest
-          * @return RollbackSuspEventQuaraFileResponse
-         */
-        public async Task<RollbackSuspEventQuaraFileResponse> RollbackSuspEventQuaraFileAsync(RollbackSuspEventQuaraFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RollbackSuspEventQuaraFileWithOptionsAsync(request, runtime);
-        }
-
         public RunCommandResponse RunCommandWithOptions(RunCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20184,6 +21975,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RunCommandResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+          *
+          * @param request RunCommandRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunCommandResponse
+         */
         public async Task<RunCommandResponse> RunCommandWithOptionsAsync(RunCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20235,12 +22033,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<RunCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+          *
+          * @param request RunCommandRequest
+          * @return RunCommandResponse
+         */
         public RunCommandResponse RunCommand(RunCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RunCommandWithOptions(request, runtime);
         }
 
+        /**
+          * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+          *
+          * @param request RunCommandRequest
+          * @return RunCommandResponse
+         */
         public async Task<RunCommandResponse> RunCommandAsync(RunCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20637,6 +22447,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await SetDesktopGroupTimerStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only for AD directories, not for RAM directories.
+          *
+          * @param request SetDirectorySsoStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDirectorySsoStatusResponse
+         */
         public SetDirectorySsoStatusResponse SetDirectorySsoStatusWithOptions(SetDirectorySsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20672,6 +22489,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDirectorySsoStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for AD directories, not for RAM directories.
+          *
+          * @param request SetDirectorySsoStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDirectorySsoStatusResponse
+         */
         public async Task<SetDirectorySsoStatusResponse> SetDirectorySsoStatusWithOptionsAsync(SetDirectorySsoStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20707,12 +22531,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<SetDirectorySsoStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for AD directories, not for RAM directories.
+          *
+          * @param request SetDirectorySsoStatusRequest
+          * @return SetDirectorySsoStatusResponse
+         */
         public SetDirectorySsoStatusResponse SetDirectorySsoStatus(SetDirectorySsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDirectorySsoStatusWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported only for AD directories, not for RAM directories.
+          *
+          * @param request SetDirectorySsoStatusRequest
+          * @return SetDirectorySsoStatusResponse
+         */
         public async Task<SetDirectorySsoStatusResponse> SetDirectorySsoStatusAsync(SetDirectorySsoStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20720,8 +22556,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request SetIdpMetadataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20767,8 +22602,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request SetIdpMetadataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20814,8 +22648,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request SetIdpMetadataRequest
           * @return SetIdpMetadataResponse
@@ -20827,8 +22660,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types. You cannot call this operation for RAM directories.
+          * You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.
           *
           * @param request SetIdpMetadataRequest
           * @return SetIdpMetadataResponse
@@ -21024,7 +22856,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop to be started must be in the Stopped (Stopped) state.
+          * The cloud desktop that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21062,7 +22894,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop to be started must be in the Stopped (Stopped) state.
+          * The cloud desktop that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21100,7 +22932,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop to be started must be in the Stopped (Stopped) state.
+          * The cloud desktop that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -21112,7 +22944,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop to be started must be in the Stopped (Stopped) state.
+          * The cloud desktop that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -21124,119 +22956,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
-          * > When you specify a workspace, all cloud desktops within the workspace are scanned.
-          *
-          * @param request StartVirusScanTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartVirusScanTaskResponse
-         */
-        public StartVirusScanTaskResponse StartVirusScanTaskWithOptions(StartVirusScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartVirusScanTask",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartVirusScanTaskResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
-          * > When you specify a workspace, all cloud desktops within the workspace are scanned.
-          *
-          * @param request StartVirusScanTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartVirusScanTaskResponse
-         */
-        public async Task<StartVirusScanTaskResponse> StartVirusScanTaskWithOptionsAsync(StartVirusScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartVirusScanTask",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartVirusScanTaskResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
-          * > When you specify a workspace, all cloud desktops within the workspace are scanned.
-          *
-          * @param request StartVirusScanTaskRequest
-          * @return StartVirusScanTaskResponse
-         */
-        public StartVirusScanTaskResponse StartVirusScanTask(StartVirusScanTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return StartVirusScanTaskWithOptions(request, runtime);
-        }
-
-        /**
-          * When you call this operation, you must specify a workspace or a cloud desktop by specifying the OfficeSiteId or DesktopId parameter.
-          * > When you specify a workspace, all cloud desktops within the workspace are scanned.
-          *
-          * @param request StartVirusScanTaskRequest
-          * @return StartVirusScanTaskResponse
-         */
-        public async Task<StartVirusScanTaskResponse> StartVirusScanTaskAsync(StartVirusScanTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await StartVirusScanTaskWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21278,7 +22998,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21320,7 +23040,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse
@@ -21332,7 +23052,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running state.
+          * The cloud desktops that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse
@@ -21344,7 +23064,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+          * The ID of the execution.
           *
           * @param request StopInvocationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21386,7 +23106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+          * The ID of the execution.
           *
           * @param request StopInvocationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21428,7 +23148,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+          * The ID of the execution.
           *
           * @param request StopInvocationRequest
           * @return StopInvocationResponse
@@ -21440,7 +23160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
+          * The ID of the execution.
           *
           * @param request StopInvocationRequest
           * @return StopInvocationResponse
@@ -21821,6 +23541,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await UpdateFotaTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > You can call this operation to upload custom Windows images.
+          *
+          * @param request UploadImageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadImageResponse
+         */
         public UploadImageResponse UploadImageWithOptions(UploadImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21888,6 +23615,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UploadImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > You can call this operation to upload custom Windows images.
+          *
+          * @param request UploadImageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadImageResponse
+         */
         public async Task<UploadImageResponse> UploadImageWithOptionsAsync(UploadImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21955,12 +23689,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<UploadImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > You can call this operation to upload custom Windows images.
+          *
+          * @param request UploadImageRequest
+          * @return UploadImageResponse
+         */
         public UploadImageResponse UploadImage(UploadImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UploadImageWithOptions(request, runtime);
         }
 
+        /**
+          * > You can call this operation to upload custom Windows images.
+          *
+          * @param request UploadImageRequest
+          * @return UploadImageResponse
+         */
         public async Task<UploadImageResponse> UploadImageAsync(UploadImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22063,6 +23809,80 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VerifyCenWithOptionsAsync(request, runtime);
+        }
+
+        public WakeupDesktopsResponse WakeupDesktopsWithOptions(WakeupDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WakeupDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WakeupDesktopsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<WakeupDesktopsResponse> WakeupDesktopsWithOptionsAsync(WakeupDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WakeupDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WakeupDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public WakeupDesktopsResponse WakeupDesktops(WakeupDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WakeupDesktopsWithOptions(request, runtime);
+        }
+
+        public async Task<WakeupDesktopsResponse> WakeupDesktopsAsync(WakeupDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WakeupDesktopsWithOptionsAsync(request, runtime);
         }
 
     }

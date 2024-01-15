@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCustomizedListHeadersRequest : TeaModel {
         /// <summary>
-        /// The list of headers.
+        /// The header of the response.
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public List<ModifyCustomizedListHeadersRequestHeaders> Headers { get; set; }
         public class ModifyCustomizedListHeadersRequestHeaders : TeaModel {
             /// <summary>
-            /// The display type of the header.
+            /// The display type of the header. You can call the `ModifyCustomizedListHeaders` operation to modify the display type of the header.
             /// </summary>
             [NameInMap("DisplayType")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ListType { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

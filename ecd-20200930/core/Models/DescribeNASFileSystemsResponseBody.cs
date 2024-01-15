@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the NAS file systems.
+        /// Details about the NAS file systems.
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
@@ -85,14 +85,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// The status of the NAS file system.
+            /// The status of the NAS file system. The possible values include:
+            /// 
+            /// *   Pending: The NAS file system is being created.
+            /// *   Running: The NAS file system is running.
+            /// *   Stopped: The NAS file system is stopped.
+            /// *   Deleting: The NAS file system is being deleted.
+            /// *   Deleted: The NAS file system is deleted.
+            /// *   Invalid: The NAS file system is invalid.
             /// </summary>
             [NameInMap("FileSystemStatus")]
             [Validation(Required=false)]
             public string FileSystemStatus { get; set; }
 
             /// <summary>
-            /// The type of the NAS file system. Valid value: `standard`.
+            /// The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.
             /// </summary>
             [NameInMap("FileSystemType")]
             [Validation(Required=false)]
@@ -113,7 +120,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MountTargetDomain { get; set; }
 
             /// <summary>
-            /// The status of the mount target.
+            /// The status of the mount target. The possible values include:
+            /// 
+            /// *   Pending: The mount target is being created.
+            /// *   Active: The mount target is enabled.
+            /// *   Inactive: The mount target is disabled.
+            /// *   Deleting: The mount target is being deleted.
+            /// *   Invalid: The mount target is invalid.
             /// </summary>
             [NameInMap("MountTargetStatus")]
             [Validation(Required=false)]
@@ -134,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// Indicates whether the UPM feature is supported.
+            /// Indicates whether the User Profile Management (UPM) feature is supported.
             /// </summary>
             [NameInMap("ProfileCompatible")]
             [Validation(Required=false)]
@@ -148,21 +161,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The storage type of the NAS file system.
+            /// The storage type of the NAS file system. Valid values:
+            /// 
+            /// *   Capacity
+            /// *   Performance
             /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
 
             /// <summary>
-            /// Indicates whether the Server Message Block (SMB) access control list (ACL) feature is enabled.
+            /// Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.
             /// </summary>
             [NameInMap("SupportAcl")]
             [Validation(Required=false)]
             public bool? SupportAcl { get; set; }
 
             /// <summary>
-            /// The zone.
+            /// The ID of the zone where the NAS file system resides.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -171,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The token that is used for the next query. If this parameter is left empty, all results are returned.
+        /// The token that determines the start point of the next query. This parameter is empty if no additional results exist.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

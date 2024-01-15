@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the NAS file systems.
+        /// The IDs of the NAS file system.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -26,15 +26,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 100.
-        /// *   Default value: 10.
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

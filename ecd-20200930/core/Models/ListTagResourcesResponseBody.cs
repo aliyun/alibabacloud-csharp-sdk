@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token used to start the next query.
+        /// A pagination token. If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,28 +31,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The ID of the resource, which is the ID of the cloud desktop.
+            /// The resource ID, namely the cloud desktop ID.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource. Valid value: ALIYUN::GWS::INSTANCE.
+            /// The resource type. Valid value: ALIYUN::GWS::INSTANCE.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key of the resource.
+            /// The tag key.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value of the resource.
+            /// The tag value.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

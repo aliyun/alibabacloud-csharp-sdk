@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RemoveUserFromDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the desktop group on which the permissions you want to revoke from the authorized user.
+        /// The ID of the desktop group.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// Details about the IDs of the desktop groups.
+        /// The IDs of the desktop groups.
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
         public List<string> DesktopGroupIds { get; set; }
 
         /// <summary>
-        /// Details about the authorized users from which you want to revoke permissions on the desktop group.
+        /// The authorized user to be removed.
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]

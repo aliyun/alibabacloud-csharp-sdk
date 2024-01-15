@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteCrossDesktopAccessRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable cross-desktop access for a workspace.
+        /// Specifies whether to enable the cross-desktop access feature for the workspace.
         /// 
-        /// *   true: enables cross-desktop access.
-        /// *   false: disables cross-desktop access.
+        /// *   true: enable
+        /// *   false: disable
         /// </summary>
         [NameInMap("EnableCrossDesktopAccess")]
         [Validation(Required=false)]
         public bool? EnableCrossDesktopAccess { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// The workspace ID.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

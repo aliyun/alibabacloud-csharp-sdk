@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The URL from which you export events.
+        /// The download address from which you can export desktop groups.
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImageModifiedRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The image change records.
+        /// The image modification record collection.
         /// </summary>
         [NameInMap("ImageModifiedRecords")]
         [Validation(Required=false)]
         public List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> ImageModifiedRecords { get; set; }
         public class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords : TeaModel {
             /// <summary>
-            /// The ID of the original image.
+            /// The ID of the image before the change.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The name of the original image.
+            /// The name of the image before the change.
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NewImageId { get; set; }
 
             /// <summary>
-            /// The name of the new image.
+            /// Add the image name.
             /// </summary>
             [NameInMap("NewImageName")]
             [Validation(Required=false)]
             public string NewImageName { get; set; }
 
             /// <summary>
-            /// The status of the image.
+            /// The status of the workspace.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the image was last changed.
+            /// The last time when the disaster recovery plan was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The token that is used for the next query. If this parameter is left empty, all results are returned.
+        /// If the NextToken parameter is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of image change records.
+        /// The total number of image modification records.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

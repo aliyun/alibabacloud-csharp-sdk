@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopInstanceType { get; set; }
 
         /// <summary>
+        /// The image version.
+        /// </summary>
+        [NameInMap("FotaVersion")]
+        [Validation(Required=false)]
+        public string FotaVersion { get; set; }
+
+        /// <summary>
         /// Specifies whether the image is a GPU-accelerated image.
         /// </summary>
         [NameInMap("GpuCategory")]
@@ -36,6 +43,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
+
+        /// <summary>
+        /// The image name.
+        /// </summary>
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
 
         /// <summary>
         /// The state of the image.

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteNASFileSystemsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the NAS file systems.
+        /// The IDs of the NAS file systems that you want to delete.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public List<string> FileSystemId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the NAS file system that you want to delete.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

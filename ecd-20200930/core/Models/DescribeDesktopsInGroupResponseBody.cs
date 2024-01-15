@@ -31,7 +31,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopsInGroupResponseBodyPaidDesktops> PaidDesktops { get; set; }
         public class DescribeDesktopsInGroupResponseBodyPaidDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the cloud desktop.
+            /// The connection state.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Unknown
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Connected
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Disconnected
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
@@ -53,6 +79,72 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The state of the cloud desktop.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Stopped
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Starting
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Rebuilding
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Running
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Stopping
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Expired
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Deleted
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Pending
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
@@ -60,6 +152,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The disk type.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SYSTEM
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     the system disk
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   DATA:
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     the data disk
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
@@ -87,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
+            /// The names of users that are connected to cloud desktops. If no users are connected, null is returned.
             /// </summary>
             [NameInMap("EndUserNames")]
             [Validation(Required=false)]
@@ -123,6 +239,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The flag that is used for management.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Updating: The configurations of the cloud desktop are being changed.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   NoFlag: No flags are available.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
@@ -143,7 +277,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemberEniIp { get; set; }
 
             /// <summary>
-            /// The OS type.
+            /// The OS.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Linux
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
@@ -157,7 +309,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrimaryEniIp { get; set; }
 
             /// <summary>
-            /// The protocol. Valid values:
+            /// The protocol type. Valid values:
             /// 
             /// *   ASP
             /// *   HDX
@@ -197,7 +349,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> PostPaidDesktops { get; set; }
         public class DescribeDesktopsInGroupResponseBodyPostPaidDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the cloud desktop.
+            /// The connection state.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Unknown
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Connected
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Disconnected
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
@@ -211,7 +389,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateDuration { get; set; }
 
             /// <summary>
-            /// The time when the cloud desktop was created.
+            /// The time when the auxiliary media asset was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -233,6 +411,72 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The state of the cloud desktop.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Stopped
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Starting
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Rebuilding
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Running
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Stopping
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Expired
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Deleted
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Pending
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
@@ -240,6 +484,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The disk type.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SYSTEM
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     the system disk
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   DATA:
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     the data disk
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
@@ -267,7 +535,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
+            /// The names of users that are connected to cloud desktops. If no users are connected, null is returned.
             /// </summary>
             [NameInMap("EndUserNames")]
             [Validation(Required=false)]
@@ -303,6 +571,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The flag that is used for management.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Updating: The configurations of the cloud desktop are being changed.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   NoFlag: No flags are available.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
@@ -323,7 +609,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemberEniIp { get; set; }
 
             /// <summary>
-            /// The OS type.
+            /// The OS.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Linux
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
@@ -337,7 +641,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrimaryEniIp { get; set; }
 
             /// <summary>
-            /// The protocol. Valid values:
+            /// The protocol type. Valid values:
             /// 
             /// *   ASP
             /// *   HDX
@@ -403,6 +707,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("StopedPrePaidDesktopsCount")]
         [Validation(Required=false)]
         public int? StopedPrePaidDesktopsCount { get; set; }
+
+        /// <summary>
+        /// The number of subscription cloud desktops that are stopped.
+        /// </summary>
+        [NameInMap("StoppedPrePaidDesktopsCount")]
+        [Validation(Required=false)]
+        public int? StoppedPrePaidDesktopsCount { get; set; }
 
     }
 

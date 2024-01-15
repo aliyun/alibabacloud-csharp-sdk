@@ -38,7 +38,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// 是否自动续费。
+        /// Specifies whether to enable auto-renewal.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -136,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// 桌面组版本。
+        /// The desktop group version.
         /// </summary>
         [NameInMap("GroupVersion")]
         [Validation(Required=false)]

@@ -16,6 +16,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to configure the trust password for the RDS license domain of the AD workspace.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     configures the trust password
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     for the RDS license domain of the AD workspace.
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     configures the trust password
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     for common AD workspaces.
+        /// </summary>
         [NameInMap("RdsLicenseDomain")]
         [Validation(Required=false)]
         public bool? RdsLicenseDomain { get; set; }

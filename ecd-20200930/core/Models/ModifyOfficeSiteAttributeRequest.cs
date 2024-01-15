@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to grant the local administrator permissions to end users.
+        /// </summary>
         [NameInMap("EnableAdminAccess")]
         [Validation(Required=false)]
         public bool? EnableAdminAccess { get; set; }

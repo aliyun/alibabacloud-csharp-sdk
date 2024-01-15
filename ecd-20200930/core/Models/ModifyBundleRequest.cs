@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyBundleRequest : TeaModel {
         /// <summary>
-        /// The ID of the desktop template.
+        /// The desktop template ID.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the new image. The new image must meet the following requirements:
+        /// The new image ID. The new image must meet the following conditions:
         /// 
         /// *   The new image must be in the Available state.
         /// *   The operating system of the new image must be the same as that of the original image.
@@ -43,18 +43,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The language of the operating system. This parameter is available only for system images. Valid values:
+        /// The language of the OS. This parameter is available only for system images. Valid values:
         /// 
         /// *   zh-CN: Simplified Chinese
         /// *   zh-HK: Traditional Chinese (Hong Kong)
         /// *   en-US: English
+        /// *   ja-JP: Japanese
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

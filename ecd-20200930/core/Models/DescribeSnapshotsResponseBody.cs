@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+        /// If the NextToken parameter is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the snapshots.
+        /// The queried snapshots.
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The user that creates the snapshot.
+            /// The user that creates the cloud desktop.
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeletionTime { get; set; }
 
             /// <summary>
-            /// The description of the snapshot.
+            /// The snapshot description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud desktop.
+            /// The cloud desktop name.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The state of the cloud desktop. Valid values:
+            /// The cloud desktop state. Valid values:
             /// 
             /// *   Pending: The cloud desktop is pending.
             /// *   Starting: The cloud desktop is being started.
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The progress of the snapshot creation. Unit: percentage (%).
+            /// The progress of creating the snapshot. Unit: percentage (%).
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// The protocol. Valid values:
             /// 
             /// *   ASP
             /// *   HDX
@@ -115,23 +115,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// The ID of the snapshot.
+            /// The snapshot ID.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// The name of the snapshot.
+            /// The snapshot name.
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// The type of snapshot. Valid values:
+            /// The snapshot type. Valid values:
             /// 
-            /// *   AUTO: auto snapshot
+            /// *   AUTO: automatic snapshot
             /// *   USER: manual snapshot
             /// </summary>
             [NameInMap("SnapshotType")]

@@ -11,8 +11,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DeleteAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
         /// The ID of the policy template that you want to manage.
-        /// 
-        /// > You can call the [ListDefensePolicies](~~195814~~) operation to query the IDs of all policy templates.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

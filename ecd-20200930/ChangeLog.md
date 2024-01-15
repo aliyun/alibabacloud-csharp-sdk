@@ -1,3 +1,6 @@
+2024-01-15 Version: 3.0.0
+- Generated csharp 2020-09-30 for ecd.
+
 2023-04-21 Version: 2.0.14
 - Support desktop group auto scale.
 

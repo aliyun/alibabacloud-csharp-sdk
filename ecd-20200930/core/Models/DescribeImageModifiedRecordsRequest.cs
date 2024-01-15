@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The maximum number of entries to return on each page.
         /// 
         /// *   Maximum value: 100.
         /// *   Default value: 10.
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+        /// The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopDesktopsRequest : TeaModel {
         /// <summary>
-        /// The IDs of cloud desktops. You can specify up to 20 cloud desktop IDs.
+        /// The cloud desktop IDs. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

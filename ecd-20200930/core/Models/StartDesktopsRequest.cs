@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StartDesktopsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify up to 100 IDs.
+        /// The cloud desktop IDs. You can specify 1 to 20 IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

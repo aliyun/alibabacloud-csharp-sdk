@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+        /// The token used to start the next query. If the value of this parameter is empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The names of users corresponding to the AD directory. If the AD directory corresponds only to Administrator and Guest users, the returned value of the Users parameter is empty.
+        /// The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListDirectoryUsersResponseBodyUsers> Users { get; set; }
         public class ListDirectoryUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// The display name of the user.
+            /// The display name.
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]

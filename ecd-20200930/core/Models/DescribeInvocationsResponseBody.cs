@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeInvocationsResponseBody : TeaModel {
         /// <summary>
-        /// The command execution records.
+        /// Details about execution records of the command.
         /// </summary>
         [NameInMap("Invocations")]
         [Validation(Required=false)]
         public List<DescribeInvocationsResponseBodyInvocations> Invocations { get; set; }
         public class DescribeInvocationsResponseBodyInvocations : TeaModel {
             /// <summary>
-            /// The command content that is encoded in Base64.
+            /// The Base64-encoded command content.
             /// </summary>
             [NameInMap("CommandContent")]
             [Validation(Required=false)]
@@ -31,58 +31,55 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CommandType { get; set; }
 
             /// <summary>
-            /// The time when the task was created.
+            /// The time when the execution task is created.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
-            /// <summary>
-            /// The ID of the end user.
-            /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The overall execution status of the command. The overall execution status is determined by the execution status of the command on all related cloud desktops. Valid values:
+            /// The overall execution status of the command. The overall execution status is determined by the execution status on all involved cloud desktops. The valid values include:
             /// 
             /// *   Pending: The system is verifying or sending the command. If the execution status on at least one cloud desktop is Pending, the overall execution status is Pending.
             /// 
             /// *   Running: The execution is in progress on cloud desktops. If the execution status on at least one cloud desktop is Running, the overall execution status is Running.
             /// 
-            /// *   Success: If the execution status on at least one cloud desktop is Success, and the execution status on other cloud desktops is Success or Stopped, the overall execution status is Success.
+            /// *   Success: If the execution status on all cloud desktops is Success or Stopped, or the execution status on at least one cloud desktop is Success, the overall execution status is Success.
             /// 
-            /// *   Failed: If the execution status on all cloud desktops is Stopped or Failed, the overall execution status is Failed. If one or more execution status on a cloud desktop is one of the following values, Failed is returned:
+            /// *   Failed: If the execution status on all cloud desktops is Stopped or Failed, the overall execution status is Failed. If one or more execution status of a cloud desktop is one of the following values, Failed is returned:
             /// 
             ///     *   Invalid: The command is invalid.
-            ///     *   Aborted: The command failed to be sent.
-            ///     *   Failed: The execution is complete, but the exit code is not 0.
-            ///     *   Timeout: The execution times out.
-            ///     *   Error: An error occurs when the execution is in progress.
+            ///     *   Aborted: The command fails to be sent.
+            ///     *   Failed: The command is executed, but the exit code is not 0.
+            ///     *   Timeout: The command times out.
+            ///     *   Error: An error occurs in the command.
             /// 
-            /// *   Stopping: The execution is being stopped. If the execution status on at least one cloud desktop is Stopping, the overall execution status is Stopping.
+            /// *   Stopping: The execution is being stopped. If the execution status on at least one cloud desktop is Stopping, the overall execution state is Stopping.
             /// 
-            /// *   Stopped: The execution is stopped. If the execution status on all cloud desktops is Stopped, the overall execution status is Stopped. If the execution status on a cloud desktop is one of the following values, Stopped is returned:
+            /// *   Stopped: The execution is stopped. If the execution status on all cloud desktops is Stopped, the overall execution state is Stopped. If the execution status on a cloud desktop is one of the following values, Stopped is returned:
             /// 
             ///     *   Cancelled: The execution is canceled.
             ///     *   Terminated: The execution is terminated.
             /// 
-            /// *   PartialFailed: The execution is successful on specific cloud desktops and failed on other cloud desktops. If the execution status on different cloud desktops includes Success, Failed, and Stopped, the overall execution status is PartialFailed.
+            /// *   PartialFailed: The execution succeeded on some cloud desktops and failed on others. If the execution status on different cloud desktops is Success, Failed, or Stopped, the overall execution state is PartialFailed.
             /// </summary>
             [NameInMap("InvocationStatus")]
             [Validation(Required=false)]
             public string InvocationStatus { get; set; }
 
             /// <summary>
-            /// The cloud desktops on which the command is run.
+            /// The cloud desktops on which the command is executed.
             /// </summary>
             [NameInMap("InvokeDesktops")]
             [Validation(Required=false)]
             public List<DescribeInvocationsResponseBodyInvocationsInvokeDesktops> InvokeDesktops { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvokeDesktops : TeaModel {
                 /// <summary>
-                /// The time when the command execution was created.
+                /// The time when the command execution was performed.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -96,51 +93,58 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// The size of the text that is truncated and discarded when the value of the Output parameter exceeds 24 KB in size.
+                /// The name of the cloud desktop.
+                /// </summary>
+                [NameInMap("DesktopName")]
+                [Validation(Required=false)]
+                public string DesktopName { get; set; }
+
+                /// <summary>
+                /// The size of the text that is truncated and discarded when the Output value exceeds 24 KB in size.
                 /// </summary>
                 [NameInMap("Dropped")]
                 [Validation(Required=false)]
                 public int? Dropped { get; set; }
 
                 /// <summary>
-                /// The error code that is returned if the command failed to be sent or run.
+                /// The code that indicates the reason why a command failed to be sent or executed. The valid values include:
                 /// 
-                /// *   If null is returned, the command is run normally.
-                /// *   If InstanceNotExists is returned, the specified cloud desktop does not exist or is released.
-                /// *   If InstanceReleased is returned, the specified cloud desktop is released during the command execution.
-                /// *   If InstanceNotRunning is returned, the specified cloud desktop is not in the Running state when the execution is created.
-                /// *   If CommandNotApplicable is returned, the command cannot be run on the specified cloud desktop.
-                /// *   If ClientNotRunning is returned, Cloud Assistant is not running.
-                /// *   If ClientNotResponse is returned, Cloud Assistant does not respond to your request.
-                /// *   If ClientIsUpgrading is returned, Cloud Assistant is being upgraded.
-                /// *   If ClientNeedUpgrade is returned, you must upgrade Cloud Assistant.
-                /// *   If DeliveryTimeout is returned, the operation to send the command times out.
-                /// *   If ExecutionTimeout is returned, the command execution times out.
-                /// *   If ExecutionException is returned, an execution occurs during the command execution.
-                /// *   If ExecutionInterrupted is returned, the command execution is interrupted.
-                /// *   If ExitCodeNonzero is returned, the command execution is complete, but the exit code is not 0.
+                /// *   If this parameter is empty, the execution is normal.
+                /// *   InstanceNotExists: The specified cloud desktop does not exist or is released.
+                /// *   InstanceReleased: The cloud desktop is released during the execution.
+                /// *   InstanceNotRunning: The cloud desktop is not running during the execution.
+                /// *   CommandNotApplicable: The command cannot be used on the cloud desktop.
+                /// *   ClientNotRunning: The Cloud Assistant client is not running.
+                /// *   ClientNotResponse: The Cloud Assistant client does not respond.
+                /// *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
+                /// *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
+                /// *   DeliveryTimeout: The time to send the command in the request times out.
+                /// *   ExecutionTimeout: The execution times out.
+                /// *   ExecutionException: An exception occurs during the execution.
+                /// *   ExecutionInterrupted: The execution is interrupted.
+                /// *   ExitCodeNonzero: The execution finishes, but the exit code is not 0.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message that is returned if the command failed to be sent or run.
+                /// Details about the reason why the command failed to be sent or executed. The valid values include:
                 /// 
-                /// *   If null is returned, the command is run normally.
-                /// *   If "the specified instance does not exist" is returned, the specified cloud desktop does not exist or is released.
-                /// *   If "the instance has released when create task" is returned, the specified cloud desktop is released during the command execution.
-                /// *   If "the instance is not running when create task" is returned, the specified cloud desktop is not in the Running state when the execution is created.
-                /// *   If "the command is not applicable" is returned, the command cannot be run on the specified cloud desktop.
-                /// *   If "the aliyun service is not running on the instance" is returned, Cloud Assistant is not running.
-                /// *   If "the aliyun service in the instance does not response" is returned, Cloud Assistant does not respond to your request.
-                /// *   If "the aliyun service in the instance is upgrading now" is returned, Cloud Assistant is being upgraded.
-                /// *   If "the aliyun service in the instance need upgrade" is returned, you must upgrade Cloud Assistant.
-                /// *   If "the command delivery has been timeout" is returned, the operation to send the command times out.
-                /// *   If "the command execution has been timeout" is returned, the command execution times out.
-                /// *   If "the command execution got an exception" is returned, an exception occurs during the command execution.
-                /// *   If "the command execution has been interrupted" is returned, the command execution is interrupted.
-                /// *   If "the command execution exit code is not zero" is returned, the command execution is complete, but the exit code is not 0.
+                /// *   If this parameter is empty, the execution is normal.
+                /// *   the specified instance does not exists: The cloud desktop does not exist or is released.
+                /// *   the instance has released when create task: The cloud desktop is released during execution.
+                /// *   the instance is not running when create task: The cloud desktop is not running when the execution is being performed.
+                /// *   the command is not applicable: The command cannot be used on the specified cloud desktop.
+                /// *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
+                /// *   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.
+                /// *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
+                /// *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
+                /// *   the command delivery has been timeout: The command that is sent in the request times out.
+                /// *   the command execution has been timeout: The execution times out.
+                /// *   the command execution got an exception: An exception occurs when the command is running.
+                /// *   the command execution has been interrupted: The execution is interrupted.
+                /// *   the command execution exit code is not zero: The execution finishes, but the exit code is not 0.
                 /// </summary>
                 [NameInMap("ErrorInfo")]
                 [Validation(Required=false)]
@@ -154,14 +158,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? ExitCode { get; set; }
 
                 /// <summary>
-                /// The end time of the command execution.
+                /// The time when the command execution ended.
                 /// </summary>
                 [NameInMap("FinishTime")]
                 [Validation(Required=false)]
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// The execution status on a cloud desktop.
+                /// The execution status on the cloud desktop.
                 /// </summary>
                 [NameInMap("InvocationStatus")]
                 [Validation(Required=false)]
@@ -170,36 +174,36 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <summary>
                 /// The command output.
                 /// 
-                /// *   If the IncludeOutput parameter is set to false, no value of the Output parameter is returned.
-                /// *   If the ContentEncoding parameter is set to Base64, the value of the Output parameter is encoded in Base64.
+                /// *   If the IncludeOutput parameter is set to false, Output is not returned.
+                /// *   If the ContentEncoding parameter is set to Base64, the value of Output is the output information that is encoded in Base64.
                 /// </summary>
                 [NameInMap("Output")]
                 [Validation(Required=false)]
                 public string Output { get; set; }
 
                 /// <summary>
-                /// The number of times that the command is run on the cloud desktop.
+                /// The number of times that the command is executed on the cloud desktop.
                 /// </summary>
                 [NameInMap("Repeats")]
                 [Validation(Required=false)]
                 public int? Repeats { get; set; }
 
                 /// <summary>
-                /// The start time of the command execution on the cloud desktop.
+                /// The start time of the execution on the cloud desktop.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// If you called the [stopInvocation](~~196957~~) operation, the value of this parameter indicates the time when you made the call.
+                /// The time when you called the [StopInvocation](~~196957#doc-api-ecd-StopInvocation~~ "You can call this operation to stop a Cloud Assistant command that is running on one or cloud desktops.") operation to manually stop the command.
                 /// </summary>
                 [NameInMap("StopTime")]
                 [Validation(Required=false)]
                 public string StopTime { get; set; }
 
                 /// <summary>
-                /// The time when the execution status was last updated.
+                /// The time when the execution status was updated.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -217,7 +221,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The query token that is returned in this call.
+        /// The query token that is returned from this call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

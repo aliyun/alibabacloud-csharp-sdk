@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The download address from which you can export desktop groups.
+        /// The download URL of the exported file that contains the monitoring data of sessions in the desktop group.
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

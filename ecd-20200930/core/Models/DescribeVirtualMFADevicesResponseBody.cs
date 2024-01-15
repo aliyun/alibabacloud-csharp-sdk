@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the next query. This parameter is empty if no additional results exist.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> VirtualMFADevices { get; set; }
         public class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices : TeaModel {
             /// <summary>
-            /// The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+            /// The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.
             /// </summary>
             [NameInMap("ConsecutiveFails")]
             [Validation(Required=false)]
             public int? ConsecutiveFails { get; set; }
 
             /// <summary>
-            /// >  This parameter is in invitational preview and unavailable for public use.
+            /// > This parameter is in invitational preview and is not publicly available.
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The time when the virtual MFA device is enabled. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the virtual MFA device was started. The time follows the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("GmtEnabled")]
             [Validation(Required=false)]
             public string GmtEnabled { get; set; }
 
             /// <summary>
-            /// The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when a locked virtual MFA device was automatically unlocked. The time follows the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("GmtUnlock")]
             [Validation(Required=false)]
@@ -80,11 +80,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// The status of the virtual MFA device. The valid values include:
+            /// The status of the virtual MFA device.
             /// 
-            /// *   UNBOUND: The virtual MFA device is not bound.
-            /// *   NORMAL: The virtual MFA device is normal.
-            /// *   LOCKED: The virtual MFA device is locked.
+            /// Valid values:
+            /// 
+            /// *   LOCKED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   UNBOUND
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   NORMAL
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

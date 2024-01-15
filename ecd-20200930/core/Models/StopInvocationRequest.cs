@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopInvocationRequest : TeaModel {
         /// <summary>
-        /// The ID of cloud desktop. Valid values of N: 1 to 50.
+        /// StopInvocation
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the execution.
+        /// The operation that you want to perform. Set the value to StopInvocation.
         /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

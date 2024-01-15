@@ -10,14 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportDesktopGroupInfoRequest : TeaModel {
         /// <summary>
-        /// The billing method of cloud desktops in a desktop group.
+        /// The billing method of the cloud desktop. Valid values:
+        /// 
+        /// *   PostPaid: pay-as-you-go
+        /// *   PrePaid: subscription
+        /// 
+        /// Default value: PostPaid.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The IDs of the desktop groups. You can specify 1 to 100 desktop groups.
+        /// The ID of the desktop group. You can set 1 to 100.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// The IDs of the users authorized to use the desktop group. You can specify 1 to 100 users.
+        /// The ID of the user who is authorized to use the desktop group. You can set 1 to 100.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -45,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// The language that you want to use.
+        /// The language of the response.
         /// </summary>
         [NameInMap("LangType")]
         [Validation(Required=false)]
@@ -54,36 +59,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 100.
-        /// *   Default value: 10.
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+        /// The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the workspace to which the desktop group belongs.
+        /// The ID of the workspace.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of policy with which the desktop group is associated.
+        /// The ID of the policy that is associated with the cloud desktop.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

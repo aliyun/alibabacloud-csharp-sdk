@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+        /// The zone type. Default value: **AvailabilityZone**. This value specifies Alibaba Cloud zones.
         /// </summary>
         [NameInMap("ZoneType")]
         [Validation(Required=false)]

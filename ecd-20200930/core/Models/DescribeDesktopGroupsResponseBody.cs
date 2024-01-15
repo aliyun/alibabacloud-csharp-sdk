@@ -31,18 +31,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? BuyDesktopsCount { get; set; }
 
             /// <summary>
-            /// The remarks on the desktop group.
+            /// The remarks of the desktop group.
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// The maximum period of time during which a session is connected. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
+            /// The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.
             /// </summary>
             [NameInMap("ConnectDuration")]
             [Validation(Required=false)]
             public long? ConnectDuration { get; set; }
+
+            [NameInMap("CountPerStatus")]
+            [Validation(Required=false)]
+            public List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> CountPerStatus { get; set; }
+            public class DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
 
             /// <summary>
             /// The number of vCPUs.
@@ -52,14 +66,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// The time when the cloud desktop was created.
+            /// The time when the desktop group was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account in which the desktop group is created.
+            /// The ID of the Alibaba Cloud account that is used to create the desktop group.
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
@@ -82,8 +96,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   cloud_ssd
             /// 
             ///     <!-- -->
@@ -96,8 +108,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   cloud_essd
             /// 
             ///     <!-- -->
@@ -106,11 +116,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     Enhanced SSD (ESSD)
+            ///     ESSD
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
@@ -122,6 +130,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
+
+            [NameInMap("DesktopCount")]
+            [Validation(Required=false)]
+            public int? DesktopCount { get; set; }
 
             /// <summary>
             /// The ID of the desktop group.
@@ -137,15 +149,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopGroupName { get; set; }
 
+            [NameInMap("DesktopType")]
+            [Validation(Required=false)]
+            public string DesktopType { get; set; }
+
             /// <summary>
-            /// The number of end users who are granted the permissions on the desktop group.
+            /// The number of end users that are authorized to use the desktop group.
             /// </summary>
             [NameInMap("EndUserCount")]
             [Validation(Required=false)]
             public int? EndUserCount { get; set; }
 
             /// <summary>
-            /// The expiration time of the subscription cloud desktop.
+            /// The time when the subscription cloud desktop expires.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -158,6 +174,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public float? GpuCount { get; set; }
 
+            [NameInMap("GpuDriverVersion")]
+            [Validation(Required=false)]
+            public string GpuDriverVersion { get; set; }
+
             /// <summary>
             /// The GPU memory.
             /// </summary>
@@ -166,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// The maximum period of time during which a session is idle. When a session is idle, you cannot perform operations by using a keyboard or a mouse. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
+            /// The maximum period of time during which the session is idle. When a session is idle, no inputs of keyboards or mouses are detected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.
             /// </summary>
             [NameInMap("IdleDisconnectDuration")]
             [Validation(Required=false)]
@@ -180,14 +200,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The keep-alive duration of a cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.
+            /// The retention period of the cloud desktop after the end user is disconnected from the cloud desktop. Unit: milliseconds.
             /// </summary>
             [NameInMap("KeepDuration")]
             [Validation(Required=false)]
             public long? KeepDuration { get; set; }
 
             /// <summary>
-            /// The load balancing policy for the multi-session desktop group.
+            /// The load balancing policy of the multi-session desktop group.
             /// 
             /// Valid values:
             /// 
@@ -203,8 +223,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   1
             /// 
             ///     <!-- -->
@@ -216,8 +234,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             ///     breadth first
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("LoadPolicy")]
             [Validation(Required=false)]
@@ -259,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// The account type of the workspace.
+            /// The account type of the workspace. Possible values: -simple: convenience account type. -ad_connector: enterprise Active Directory (AD) account.
             /// 
             /// Valid values:
             /// 
@@ -291,19 +307,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     .
             /// 
-            /// *   AD_CONNECTOR
+            /// *   AD_CONNECTOR:
             /// 
             ///     <!-- -->
-            /// 
-            ///     :
             /// 
             ///     <!-- -->
             /// 
             ///     enterprise AD account type
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   RAM
             /// 
@@ -364,8 +376,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   1
             /// 
             ///     <!-- -->
@@ -377,8 +387,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             ///     shared desktop group (multi-session)
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("OwnType")]
             [Validation(Required=false)]
@@ -446,14 +454,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. If the specified threshold is reached, new cloud desktops are automatically created. If the specified threshold is not reached, idle cloud desktops are released.
+            /// The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.
             /// </summary>
             [NameInMap("RatioThreshold")]
             [Validation(Required=false)]
             public float? RatioThreshold { get; set; }
 
             /// <summary>
-            /// Indicates which type of disk is reset for the cloud desktops in the desktop group.
+            /// Indicates which type of disk that is used by cloud desktops in the desktop group is reset.
             /// 
             /// Valid values:
             /// 
@@ -465,11 +473,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     No disks are reset
+            ///     No disks are reset.
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   1
             /// 
@@ -479,11 +485,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     Only the system disk is reset
+            ///     Only the system disk is reset.
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   2
             /// 
@@ -493,11 +497,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     Only the data disk is reset
+            ///     Only the data disk is reset.
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   3
             /// 
@@ -507,11 +509,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     The system disk and data disk are reset
+            ///     Both the system disk and data disk are reset.
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("ResetType")]
             [Validation(Required=false)]
@@ -530,11 +530,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     The desktop group is unpaid
+            ///     unpaid
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   1
             /// 
@@ -544,11 +542,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     The desktop group is paid
+            ///     paid
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// 
             /// *   2
             /// 
@@ -558,22 +554,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     The desktop group has an overdue payment or expired
+            ///     overdue or expired
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The period of time before an idle cloud desktop stops. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.
+            /// The period of time before the idle cloud desktop enters the Stopped state. When the specified period of time is reached, the idle cloud desktop automatically enters the Stopped state. If an end user connects to a cloud desktop that is in the Stopped state, the cloud desktop automatically starts. Unit: milliseconds.
             /// </summary>
             [NameInMap("StopDuration")]
             [Validation(Required=false)]
             public long? StopDuration { get; set; }
+
+            [NameInMap("SubnetId")]
+            [Validation(Required=false)]
+            public string SubnetId { get; set; }
 
             /// <summary>
             /// The category of the system disk.
@@ -592,8 +590,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   cloud_ssd
             /// 
             ///     <!-- -->
@@ -606,8 +602,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            ///     .
-            /// 
             /// *   cloud_essd
             /// 
             ///     <!-- -->
@@ -619,8 +613,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             ///     ESSD
             /// 
             ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
@@ -648,7 +640,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.
+            /// The ID of the Key Management Service (KMS) key for disk encryption.
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]
@@ -664,7 +656,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

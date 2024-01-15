@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The query string for fuzzy query. If you specify this parameter, the system returns all results that contain the string.
+        /// The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -26,22 +26,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 100
-        /// *   Default value: 10
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+        /// The token used to start the next query. If the value of this parameter is empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The organizational unit (OU) of the AD domain to which users belong. You can call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the OU.
+        /// The organizational unit (OU) in the specified AD domain.
         /// </summary>
         [NameInMap("OUPath")]
         [Validation(Required=false)]

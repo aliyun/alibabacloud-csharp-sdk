@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string VerifyCode { get; set; }
 
+        [NameInMap("VpcType")]
+        [Validation(Required=false)]
+        public string VpcType { get; set; }
+
     }
 
 }

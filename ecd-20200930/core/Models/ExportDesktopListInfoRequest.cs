@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The ID of cloud desktop N. Valid values of N: 1 to 100.
+        /// The ID of the cloud desktop.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -38,24 +38,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The status of the cloud desktop. Valid values:
         /// 
-        /// *   Pending: The cloud desktop is pending.
-        /// *   Starting: The cloud desktop is being started.
-        /// *   Running: The cloud desktop is running.
-        /// *   Stopping: The cloud desktop is being stopped.
-        /// *   Rebuilding: The cloud desktop is being rebuilt.
-        /// *   Stopped: The cloud desktop is stopped.
-        /// *   Expired: The cloud desktop expired.
-        /// *   Deleted: The cloud desktop is deleted.
+        /// *   Pending
+        /// *   Starting
+        /// *   Running
+        /// *   Stopping
+        /// *   Rebuilding
+        /// *   Stopped
+        /// *   Expired
+        /// *   Deleted
         /// </summary>
         [NameInMap("DesktopStatus")]
         [Validation(Required=false)]
         public string DesktopStatus { get; set; }
 
-        /// <summary>
-        /// The ID of end user N that is assigned the cloud desktop. Valid values of N: 1 to 100.
-        /// 
-        /// > Only one end user can use the cloud desktop at a time.
-        /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
@@ -68,26 +63,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// The ID of the desktop group.
+        /// The ID of the group to which the cloud desktop belongs.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:
-        /// 
-        /// *   `zh-CN`: Simplified Chinese
-        /// *   `en-GB`: English (United Kingdom)
-        /// 
-        /// Default value: `zh-CN`.
+        /// The language that you want to use.
         /// </summary>
         [NameInMap("LangType")]
         [Validation(Required=false)]
         public string LangType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The maximum number of entries to return on each page.
         /// 
         /// Maximum value: 100.
         /// 
@@ -98,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+        /// The token that is used for the next query. If this parameter is empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -126,21 +116,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
+        /// The tags that you want to add to the cloud desktop.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ExportDesktopListInfoRequestTag> Tag { get; set; }
         public class ExportDesktopListInfoRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
+            /// The key of the tag. You can specify 1 to 20 keys for a tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// The value of the tag. You can specify 1 to 20 values for a tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -149,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The username of the end user that is using the cloud desktop.
+        /// The username of the current user of the cloud desktop.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

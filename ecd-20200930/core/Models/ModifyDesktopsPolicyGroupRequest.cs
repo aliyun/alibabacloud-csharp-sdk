@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopsPolicyGroupRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify one or more cloud desktops. The value is a JSON array.
+        /// The ID of the cloud desktop.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the policies.
+        /// The IDs of policy groups.
         /// </summary>
         [NameInMap("PolicyGroupIds")]
         [Validation(Required=false)]
         public List<string> PolicyGroupIds { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the cloud desktop.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

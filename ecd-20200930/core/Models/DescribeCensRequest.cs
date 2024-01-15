@@ -10,25 +10,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCensRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Default value: 1.
+        /// Details about CEN instances.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The number of the page to return.
         /// 
-        /// Default value: 50.
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The ID of the bandwidth plan that is associated with the CEN instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

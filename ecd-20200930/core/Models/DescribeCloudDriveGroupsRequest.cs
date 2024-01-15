@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// The ID of the workspace.
+        /// The workspace ID.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The name of the workspace.
+        /// The workspace name.
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// The status of the team space. Valid values:
+        /// The team space status. Valid values:
         /// 
         /// *   enabled
         /// *   disabled
@@ -43,45 +43,45 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DriveStatus { get; set; }
 
         /// <summary>
-        /// Specifies whether space is increased.
+        /// Specifies whether the space is increased.
         /// 
-        /// *   binding: Space is increased.
-        /// *   unbound: Space is not increased.
+        /// *   binding: increased
+        /// *   unbound: not increased
         /// 
-        /// Default value: null. This value indicates that all results are queried.
+        /// Default value: null. The default value indicates that all spaces are queried.
         /// </summary>
         [NameInMap("DriveType")]
         [Validation(Required=false)]
         public string DriveType { get; set; }
 
         /// <summary>
-        /// The IDs of the teams.
+        /// The team ID.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
 
         /// <summary>
-        /// The name of the team for fuzzy search.
+        /// The team name for fuzzy search.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The type of the team.
+        /// The team type.
         /// 
         /// *   org: organizational structure
         /// *   directory: workspace
         /// 
-        /// Default value: null. This value indicates that all results are queried.
+        /// Default value: null. The default value indicates that all types of teams are queried.
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The number of entries to return on each page.
         /// 
         /// *   Valid values: 1 to 100
         /// *   Default value: 20
@@ -98,7 +98,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the parent ID. If a parent node ID is specified, the subnode list is queried. If you set the value of this parameter to root, the root nodes are queried. Default value: null. This value indicates that all results are queried.
+        /// The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.
+        /// 
+        /// Default value: null. The default value indicates that all nodes are queried.
         /// </summary>
         [NameInMap("ParentGroupId")]
         [Validation(Required=false)]

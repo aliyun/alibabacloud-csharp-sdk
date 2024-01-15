@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupsRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the desktop templates.
+        /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// The ID of the desktop group.
+        /// The desktop group ID.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
@@ -28,46 +31,49 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// The IDs of the end users who have the permissions on the desktop group.
+        /// The authorized users.
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// The IDs of the end users that you want to exclude. The end users have the permissions on the desktop group.
+        /// The authorized users that you want to exclude.
         /// </summary>
         [NameInMap("ExcludedEndUserIds")]
         [Validation(Required=false)]
         public List<string> ExcludedEndUserIds { get; set; }
 
+        /// <summary>
+        /// The IDs of the images.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+        /// The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The workspace ID of the desktop groups that you want to query.
+        /// The workspace ID of the desktop group that you want to query.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The type of the desktop group.
+        /// The desktop group type.
         /// 
         /// Valid values:
         /// 
@@ -79,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     personal desktop group.
+        ///     personal desktop group
         /// 
         ///     <!-- -->
         /// 
@@ -94,8 +100,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         ///     shared desktop group (multi-session)
         /// 
         ///     <!-- -->
-        /// 
-        ///     .
         /// </summary>
         [NameInMap("OwnType")]
         [Validation(Required=false)]
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the validity period of the desktop group.
+        /// The unit of the duration.
         /// 
         /// Valid values:
         /// 
@@ -142,14 +146,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the policy with which you want to associate the desktop group.
+        /// The ID of the policy with which the desktop group is associated.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The type of the protocol. Valid values:
+        /// The protocol. Valid values:
         /// 
         /// *   ASP
         /// *   HDX
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The region ID of the desktop groups that you want to query.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -178,11 +182,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     The desktop group is unpaid
+        ///     unpaid
         /// 
         ///     <!-- -->
-        /// 
-        ///     .
         /// 
         /// *   1
         /// 
@@ -192,11 +194,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     The desktop group is paid
+        ///     paid
         /// 
         ///     <!-- -->
-        /// 
-        ///     .
         /// 
         /// *   2
         /// 
@@ -206,11 +206,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     The desktop group has an overdue payment or expired
+        ///     overdue or expired
         /// 
         ///     <!-- -->
-        /// 
-        ///     .
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

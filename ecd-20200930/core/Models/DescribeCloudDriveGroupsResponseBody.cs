@@ -16,6 +16,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroups> CloudDriveGroups { get; set; }
         public class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups : TeaModel {
+            [NameInMap("AdminUserIds")]
+            [Validation(Required=false)]
+            public string AdminUserIds { get; set; }
+
+            [NameInMap("AdminUserInfos")]
+            [Validation(Required=false)]
+            public List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> AdminUserInfos { get; set; }
+            public class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos : TeaModel {
+                [NameInMap("EndUserId")]
+                [Validation(Required=false)]
+                public string EndUserId { get; set; }
+
+                [NameInMap("NickName")]
+                [Validation(Required=false)]
+                public string NickName { get; set; }
+
+            }
+
             /// <summary>
             /// The time when the team space was created.
             /// </summary>
@@ -24,21 +42,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the workspace.
+            /// The workspace ID.
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The ID of the team space.
+            /// The team space ID.
             /// </summary>
             [NameInMap("DriveId")]
             [Validation(Required=false)]
             public string DriveId { get; set; }
 
             /// <summary>
-            /// The ID of the team.
+            /// The team ID.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -51,8 +69,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            [NameInMap("OrgId")]
+            [Validation(Required=false)]
+            public string OrgId { get; set; }
+
             /// <summary>
-            /// The status of the team space. Valid values:
+            /// The team space status. Valid values:
             /// 
             /// *   enabled
             /// *   disabled
@@ -71,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// The size of the used space. Unit: bytes.
+            /// The capacity of the used space. Unit: bytes.
             /// </summary>
             [NameInMap("UsedSize")]
             [Validation(Required=false)]

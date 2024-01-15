@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
+
             /// <summary>
             /// The time when the Internet access package was created.
             /// </summary>

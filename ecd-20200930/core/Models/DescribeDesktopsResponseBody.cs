@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The connection status of the user.
+            /// The connection status of the end user.
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
@@ -66,21 +66,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to the public.
+            /// > This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to the public.
+            /// > This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
             /// <summary>
-            /// The ID of the group to which the cloud desktop belongs. Default value: null.
+            /// The ID of the desktop group. Default value: null.
+            /// 
+            /// > This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("DesktopGroupId")]
             [Validation(Required=false)]
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The state of the cloud desktop.
+            /// The status of the cloud desktop.
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
@@ -115,14 +117,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// The ID is the same as the workspace ID that is indicated by the value of the OfficeSiteId parameter.
+            /// The ID of the directory. The ID is the same as the workspace ID that is indicated by the OfficeSiteId parameter.
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// This parameter is in invitational preview and unavailable for general users.
+            /// This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("DirectoryType")]
             [Validation(Required=false)]
@@ -180,21 +182,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? DowngradeQuota { get; set; }
 
             /// <summary>
-            /// The number of times for which the cloud desktop is downgraded.
+            /// The number of times for which the cloud desktop has been downgraded.
             /// </summary>
             [NameInMap("DowngradedTimes")]
             [Validation(Required=false)]
             public long? DowngradedTimes { get; set; }
 
             /// <summary>
-            /// The IDs of the users that have the permissions to connect to the cloud desktops.
+            /// The IDs of the end users that have the permissions to connect to the cloud desktops.
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
             public List<string> EndUserIds { get; set; }
 
             /// <summary>
-            /// The time when the subscription cloud desktop expires.
+            /// The time when the subscription cloud desktop expired.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -229,6 +231,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReleaseNote { get; set; }
 
                 /// <summary>
+                /// The description of the version that can be upgraded in English.
+                /// </summary>
+                [NameInMap("ReleaseNoteEn")]
+                [Validation(Required=false)]
+                public string ReleaseNoteEn { get; set; }
+
+                /// <summary>
+                /// The description of the version that can be upgraded in Japanese.
+                /// </summary>
+                [NameInMap("ReleaseNoteJp")]
+                [Validation(Required=false)]
+                public string ReleaseNoteJp { get; set; }
+
+                /// <summary>
                 /// The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.
                 /// </summary>
                 [NameInMap("Size")]
@@ -259,14 +275,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuDriverVersion { get; set; }
 
             /// <summary>
-            /// The GPU model.
+            /// The GPU specifications.
             /// </summary>
             [NameInMap("GpuSpec")]
             [Validation(Required=false)]
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to the public.
+            /// > This parameter is in invitational preview and is not available for use.
+            /// </summary>
+            [NameInMap("HibernationBeta")]
+            [Validation(Required=false)]
+            public bool? HibernationBeta { get; set; }
+
+            /// <summary>
+            /// > This parameter is in invitational preview and is not available for use.
             /// </summary>
             [NameInMap("HibernationOptionsConfigured")]
             [Validation(Required=false)]
@@ -287,11 +310,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The flag that is used for management.
+            /// The flag that is used to manage the cloud desktops.
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public string ManagementFlag { get; set; }
+
+            /// <summary>
+            /// The flag that is used to manage the cloud desktops.
+            /// </summary>
+            [NameInMap("ManagementFlags")]
+            [Validation(Required=false)]
+            public List<string> ManagementFlags { get; set; }
 
             /// <summary>
             /// The memory size. Unit: MiB.
@@ -370,7 +400,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// The IDs of the policies.
+            /// The policies IDs.
             /// </summary>
             [NameInMap("PolicyGroupIdList")]
             [Validation(Required=false)]
@@ -384,7 +414,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupName { get; set; }
 
             /// <summary>
-            /// The names of the policies.
+            /// The policy names.
             /// </summary>
             [NameInMap("PolicyGroupNameList")]
             [Validation(Required=false)]
@@ -405,21 +435,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The type of the session.
+            /// The session type.
+            /// 
+            /// Valid values:
+            /// 
+            /// * **SINGLE_SESSION**
+            /// 
+            /// * **MULTIPLE_SESSION**
             /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
 
             /// <summary>
-            /// Details of the desktop sessions that users hold.
+            /// Details of the desktop sessions that end users hold.
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<DescribeDesktopsResponseBodyDesktopsSessions> Sessions { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsSessions : TeaModel {
                 /// <summary>
-                /// The ID of the user that logged on to the cloud desktop.
+                /// The ID of the end user that logged on to the cloud desktop.
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]
@@ -470,14 +506,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SupportHibernation { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to the public.
+            /// > This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to the public.
+            /// > This parameter is in invitational preview and is unavailable.
             /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
@@ -530,7 +566,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The token that is used for the next query. If this parameter is empty, all results are returned.
+        /// The token that is used for the next query. If this parameter is left empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

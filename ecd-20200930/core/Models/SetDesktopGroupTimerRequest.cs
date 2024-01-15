@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? ResetType { get; set; }
 
         /// <summary>
-        /// The type of the scheduled task. Valid values:
+        /// The type of the scheduled task.
         /// </summary>
         [NameInMap("TimerType")]
         [Validation(Required=false)]

@@ -10,31 +10,46 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// Specifies whether to enable the automatic payment feature.
         /// 
-        /// *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-        /// *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+        /// Valid values:
         /// 
-        /// Default value: true.
+        /// *   true (default): enables the auto-payment feature.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     You can log on to the EDS console and complete the payment based on the order number.
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The IDs of cloud desktops.
-        /// 
-        /// Only subscription cloud desktops can be renewed by calling this operation.
+        /// The cloud desktop ID. Only subscription cloud desktops can be renewed.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The renewal duration. The valid values of this parameter are determined by the PeriodUnit value.
+        /// The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.
         /// 
-        /// *   If PeriodUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.
-        /// *   If PeriodUnit is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
+        /// *   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6
+        /// *   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6
         /// 
         /// Default value: 1.
         /// </summary>
@@ -43,12 +58,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal duration specified by the Period parameter. Valid values:
+        /// The unit of the renewal duration that is specified by the Period parameter.
         /// 
-        /// *   Month
+        /// Valid values:
+        /// 
+        /// *   Month (default)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// *   Year
         /// 
-        /// Default value: Month.
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -62,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID of the cloud desktop.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

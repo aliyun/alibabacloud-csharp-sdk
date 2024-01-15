@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyNetworkPackageEnabledRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to restore or disable Internet access for the cloud desktop.
+        /// Specifies whether to restore or disable Internet access for the cloud desktop. Valid values:
         /// 
         /// *   true: restores Internet access.
         /// *   false: disables Internet access.
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDiskEncryptionServiceRequest : TeaModel {
-        /// <summary>
-        /// The ID of the region.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

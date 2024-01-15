@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyEntitlementRequest : TeaModel {
         /// <summary>
-        /// The ID of the cloud desktop.
+        /// The cloud desktop ID.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The usernames of users. You can specify up to 100 usernames.
+        /// The usernames. You can specify 1 to 100 usernames.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

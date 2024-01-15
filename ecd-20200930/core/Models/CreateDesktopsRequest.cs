@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("DesktopMemberIp")]
+        [Validation(Required=false)]
+        public string DesktopMemberIp { get; set; }
+
         /// <summary>
         /// The name of the cloud desktop. The name must meet the following requirements:
         /// 
@@ -129,6 +133,40 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopNameSuffix")]
         [Validation(Required=false)]
         public bool? DesktopNameSuffix { get; set; }
+
+        [NameInMap("DesktopTimers")]
+        [Validation(Required=false)]
+        public List<CreateDesktopsRequestDesktopTimers> DesktopTimers { get; set; }
+        public class CreateDesktopsRequestDesktopTimers : TeaModel {
+            [NameInMap("AllowClientSetting")]
+            [Validation(Required=false)]
+            public bool? AllowClientSetting { get; set; }
+
+            [NameInMap("CronExpression")]
+            [Validation(Required=false)]
+            public string CronExpression { get; set; }
+
+            [NameInMap("Enforce")]
+            [Validation(Required=false)]
+            public bool? Enforce { get; set; }
+
+            [NameInMap("Interval")]
+            [Validation(Required=false)]
+            public int? Interval { get; set; }
+
+            [NameInMap("OperationType")]
+            [Validation(Required=false)]
+            public string OperationType { get; set; }
+
+            [NameInMap("ResetType")]
+            [Validation(Required=false)]
+            public string ResetType { get; set; }
+
+            [NameInMap("TimerType")]
+            [Validation(Required=false)]
+            public string TimerType { get; set; }
+
+        }
 
         /// <summary>
         /// This parameter is not available.
@@ -269,7 +307,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<CreateDesktopsRequestUserCommands> UserCommands { get; set; }
         public class CreateDesktopsRequestUserCommands : TeaModel {
             /// <summary>
-            /// The content of the command.
+            /// The command content.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -277,13 +315,57 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The encoding mode of the command content (CommandContent).
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Base64: encodes the command content in Base64.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   PlainText: does not encode the command content.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ContentEncoding")]
             [Validation(Required=false)]
             public string ContentEncoding { get; set; }
 
             /// <summary>
-            /// The language type of the command.
+            /// The command language.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   RunPowerShellScript: PowerShell command (applicable to Windows cloud desktops).
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   RunShellScript: shell command (applicable to Linux cloud desktops).
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   RunBatScript: batch command (applicable to Windows cloud desktops).
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ContentType")]
             [Validation(Required=false)]

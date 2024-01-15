@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the desktop types.
+        /// Details of cloud desktop types.
         /// </summary>
         [NameInMap("DesktopTypes")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DataDiskSize { get; set; }
 
             /// <summary>
-            /// The ID of the desktop type.
+            /// The ID of the cloud desktop type.
             /// </summary>
             [NameInMap("DesktopTypeId")]
             [Validation(Required=false)]
             public string DesktopTypeId { get; set; }
 
             /// <summary>
-            /// The status of the desktop type. If `SUFFICIENT` is returned, the number of cloud desktops of the specified desktop type is sufficient.
+            /// The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.
             /// </summary>
             [NameInMap("DesktopTypeStatus")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// The family of the desktop type.
+            /// The family of the cloud desktop type.
             /// </summary>
             [NameInMap("InstanceTypeFamily")]
             [Validation(Required=false)]
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// The size of the memory. Unit: MiB.
+            /// The memory size. Unit: MiB.
             /// </summary>
             [NameInMap("MemorySize")]
             [Validation(Required=false)]

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``
+        /// The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify 1 to 100 IDs of cloud desktops.
+        /// The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -38,37 +38,44 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// The state of the cloud desktop.
+        /// The status of the cloud desktop.
         /// </summary>
         [NameInMap("DesktopStatus")]
         [Validation(Required=false)]
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// The new desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.
+        /// The list of desktop status.
+        /// </summary>
+        [NameInMap("DesktopStatusList")]
+        [Validation(Required=false)]
+        public List<string> DesktopStatusList { get; set; }
+
+        /// <summary>
+        /// The new desktop type. You can call the [DescribeDesktopTypes](~~DescribeDesktopTypes~~) operation to query the IDs of supported desktop types.
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// The ID of the directory. The ID is the same as the workspace ID.
+        /// The ID of the directory, The ID is the same as the workspace ID.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The IDs of the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.
+        /// The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
         /// 
-        /// > Only one user can use the cloud desktop at a time.
+        /// > Only one end user can use the cloud desktop at a time.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// The IDs of the users that are excluded from the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.
+        /// The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
         /// </summary>
         [NameInMap("ExcludedEndUserId")]
         [Validation(Required=false)]
@@ -90,30 +97,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// The ID of the desktop group.
+        /// 
+        /// > The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// 镜像ID列表。
+        /// The IDs of the images.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
 
         /// <summary>
-        /// The flag that is used for management.
+        /// The flag that is used to manage the cloud desktops.
         /// </summary>
         [NameInMap("ManagementFlag")]
         [Validation(Required=false)]
         public string ManagementFlag { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 100
-        /// *   Default value: 10
+        /// *   Maximum value: 100.
+        /// *   Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// Specifies whether to query cloud desktops in the desktop group.
+        /// The progress when the cloud desktop was created.
         /// </summary>
         [NameInMap("OnlyDesktopGroup")]
         [Validation(Required=false)]
@@ -169,28 +178,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the information about image version of the cloud desktop.
+        /// Specifies whether to query the information about image update of the cloud desktop.
         /// </summary>
         [NameInMap("QueryFotaUpdate")]
         [Validation(Required=false)]
         public bool? QueryFotaUpdate { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the automatic snapshot policy.
+        /// The ID of the snapshot policy.
         /// </summary>
         [NameInMap("SnapshotPolicyId")]
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// The tags that you want to add. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
+        /// The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -213,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The name of the user.
+        /// The name of the end user.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
