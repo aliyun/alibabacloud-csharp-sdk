@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
         [Validation(Required=false)]
         public string ClothingType { get; set; }
 
+        [NameInMap("GeneratePictureNum")]
+        [Validation(Required=false)]
+        public int? GeneratePictureNum { get; set; }
+
         [NameInMap("JwtToken")]
         [Validation(Required=false)]
         public string JwtToken { get; set; }

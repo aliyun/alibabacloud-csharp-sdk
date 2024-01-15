@@ -4704,6 +4704,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313
             {
                 query["ClothingType"] = request.ClothingType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GeneratePictureNum))
+            {
+                query["GeneratePictureNum"] = request.GeneratePictureNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
             {
                 query["JwtToken"] = request.JwtToken;
@@ -4754,6 +4758,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothingType))
             {
                 query["ClothingType"] = request.ClothingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GeneratePictureNum))
+            {
+                query["GeneratePictureNum"] = request.GeneratePictureNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
             {
