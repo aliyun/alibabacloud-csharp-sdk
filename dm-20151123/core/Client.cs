@@ -1699,6 +1699,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireRealTimeDnsRecords))
+            {
+                query["RequireRealTimeDnsRecords"] = request.RequireRealTimeDnsRecords;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -1737,6 +1741,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireRealTimeDnsRecords))
+            {
+                query["RequireRealTimeDnsRecords"] = request.RequireRealTimeDnsRecords;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {

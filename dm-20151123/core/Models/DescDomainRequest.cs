@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RequireRealTimeDnsRecords")]
+        [Validation(Required=false)]
+        public bool? RequireRealTimeDnsRecords { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

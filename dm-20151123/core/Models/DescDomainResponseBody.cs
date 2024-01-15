@@ -41,6 +41,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DkimRR { get; set; }
 
+        [NameInMap("DmarcAuthStatus")]
+        [Validation(Required=false)]
+        public int? DmarcAuthStatus { get; set; }
+
+        [NameInMap("DmarcHostRecord")]
+        [Validation(Required=false)]
+        public string DmarcHostRecord { get; set; }
+
+        [NameInMap("DmarcRecord")]
+        [Validation(Required=false)]
+        public string DmarcRecord { get; set; }
+
+        [NameInMap("DnsDmarc")]
+        [Validation(Required=false)]
+        public string DnsDmarc { get; set; }
+
         [NameInMap("DnsMx")]
         [Validation(Required=false)]
         public string DnsMx { get; set; }
