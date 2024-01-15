@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceId { get; set; }
 
+        [NameInMap("AppInstancePersistentId")]
+        [Validation(Required=false)]
+        public string AppInstancePersistentId { get; set; }
+
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }

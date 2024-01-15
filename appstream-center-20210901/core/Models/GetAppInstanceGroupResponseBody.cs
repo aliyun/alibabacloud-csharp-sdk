@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
             public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps : TeaModel {
+                [NameInMap("AppIcon")]
+                [Validation(Required=false)]
+                public string AppIcon { get; set; }
+
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
@@ -59,6 +63,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("AppVersion")]
+                [Validation(Required=false)]
+                public string AppVersion { get; set; }
+
+                [NameInMap("AppVersionName")]
+                [Validation(Required=false)]
+                public string AppVersionName { get; set; }
 
             }
 

@@ -1,3 +1,6 @@
+2024-01-15 Version: 1.1.0
+- Generated csharp 2021-09-01 for appstream-center.
+
 2023-08-23 Version: 1.0.7
 - Generated csharp 2021-09-01 for appstream-center.
 

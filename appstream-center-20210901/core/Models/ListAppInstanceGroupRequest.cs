@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
         [NameInMap("NodeInstanceType")]
         [Validation(Required=false)]
         public string NodeInstanceType { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
