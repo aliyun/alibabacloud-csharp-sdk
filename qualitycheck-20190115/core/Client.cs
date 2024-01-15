@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -107,6 +115,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -134,6 +146,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -172,6 +188,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public AddRuleV4Response AddRuleV4WithOptions(AddRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCopy))
             {
@@ -183,6 +204,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -203,6 +225,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<AddRuleV4Response> AddRuleV4WithOptionsAsync(AddRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCopy))
             {
@@ -214,6 +241,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -247,6 +275,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -274,6 +306,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -313,6 +349,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -340,6 +380,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -379,6 +423,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -406,6 +454,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -445,6 +497,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -472,6 +528,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -511,6 +571,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -538,6 +602,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -577,6 +645,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -604,6 +676,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -643,6 +719,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -670,6 +750,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -709,6 +793,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -736,6 +824,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -775,6 +867,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -802,6 +898,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -841,6 +941,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -868,6 +972,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -903,10 +1011,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await CreateTaskAssignRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateUserResponse
+         */
+        // Deprecated
         public CreateUserResponse CreateUserWithOptions(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -930,10 +1050,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateUserResponse
+         */
+        // Deprecated
         public async Task<CreateUserResponse> CreateUserWithOptionsAsync(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -957,12 +1089,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateUserRequest
+          * @return CreateUserResponse
+         */
+        // Deprecated
         public CreateUserResponse CreateUser(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CreateUserRequest
+          * @return CreateUserResponse
+         */
+        // Deprecated
         public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -973,6 +1119,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1000,6 +1150,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1039,6 +1193,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1066,6 +1224,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1105,6 +1267,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1132,6 +1298,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1171,6 +1341,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1198,6 +1372,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1237,6 +1415,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1264,6 +1446,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1303,6 +1489,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1330,6 +1520,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1369,6 +1563,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1396,6 +1594,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1435,6 +1637,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1462,6 +1668,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1501,6 +1711,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1528,6 +1742,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1567,6 +1785,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -1594,6 +1816,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -1632,6 +1858,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
@@ -1647,6 +1878,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1667,6 +1899,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
@@ -1682,6 +1919,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1714,6 +1952,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public DeleteRuleV4Response DeleteRuleV4WithOptions(DeleteRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
@@ -1725,6 +1968,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1745,6 +1989,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<DeleteRuleV4Response> DeleteRuleV4WithOptionsAsync(DeleteRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
@@ -1756,6 +2005,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1789,6 +2039,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -1816,6 +2070,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -1855,6 +2113,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1882,6 +2144,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1921,6 +2187,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1948,6 +2218,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -1987,6 +2261,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2014,6 +2292,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2053,6 +2335,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2080,6 +2366,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2115,10 +2405,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteTaskAssignRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserResponse
+         */
+        // Deprecated
         public DeleteUserResponse DeleteUserWithOptions(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2142,10 +2444,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserResponse
+         */
+        // Deprecated
         public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(DeleteUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2169,12 +2483,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteUserRequest
+          * @return DeleteUserResponse
+         */
+        // Deprecated
         public DeleteUserResponse DeleteUser(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DeleteUserRequest
+          * @return DeleteUserResponse
+         */
+        // Deprecated
         public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2185,6 +2513,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2212,6 +2544,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2251,6 +2587,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2278,6 +2618,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2317,6 +2661,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2344,6 +2692,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2383,6 +2735,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2410,6 +2766,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2449,6 +2809,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2476,6 +2840,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2515,6 +2883,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2542,6 +2914,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2581,6 +2957,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2608,6 +2988,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2647,6 +3031,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2674,6 +3062,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2713,6 +3105,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2740,6 +3136,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2779,6 +3179,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -2806,6 +3210,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -2845,6 +3253,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2872,6 +3284,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2907,10 +3323,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetResultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetResultCallbackRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetResultCallbackResponse
+         */
+        // Deprecated
         public GetResultCallbackResponse GetResultCallbackWithOptions(GetResultCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2934,10 +3362,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetResultCallbackResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetResultCallbackRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetResultCallbackResponse
+         */
+        // Deprecated
         public async Task<GetResultCallbackResponse> GetResultCallbackWithOptionsAsync(GetResultCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -2961,12 +3401,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetResultCallbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetResultCallbackRequest
+          * @return GetResultCallbackResponse
+         */
+        // Deprecated
         public GetResultCallbackResponse GetResultCallback(GetResultCallbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetResultCallbackWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetResultCallbackRequest
+          * @return GetResultCallbackResponse
+         */
+        // Deprecated
         public async Task<GetResultCallbackResponse> GetResultCallbackAsync(GetResultCallbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2977,6 +3431,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3004,6 +3462,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3043,6 +3505,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3070,6 +3536,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3108,6 +3578,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public GetRuleByIdResponse GetRuleByIdWithOptions(GetRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
@@ -3115,6 +3590,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3135,6 +3611,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<GetRuleByIdResponse> GetRuleByIdWithOptionsAsync(GetRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
@@ -3142,6 +3623,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3175,6 +3657,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3202,6 +3688,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3241,6 +3731,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3268,6 +3762,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3369,9 +3867,118 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetRuleV4WithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : GetRuleV4Str is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+          *
+          * @param request GetRuleV4StrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRuleV4StrResponse
+         */
+        // Deprecated
+        public GetRuleV4StrResponse GetRuleV4StrWithOptions(GetRuleV4StrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSchemeData))
+            {
+                body["IsSchemeData"] = request.IsSchemeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["RuleId"] = request.RuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRuleV4Str",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRuleV4StrResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * @deprecated : GetRuleV4Str is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+          *
+          * @param request GetRuleV4StrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetRuleV4StrResponse
+         */
+        // Deprecated
+        public async Task<GetRuleV4StrResponse> GetRuleV4StrWithOptionsAsync(GetRuleV4StrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSchemeData))
+            {
+                body["IsSchemeData"] = request.IsSchemeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["RuleId"] = request.RuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRuleV4Str",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRuleV4StrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * @deprecated : GetRuleV4Str is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+          *
+          * @param request GetRuleV4StrRequest
+          * @return GetRuleV4StrResponse
+         */
+        // Deprecated
+        public GetRuleV4StrResponse GetRuleV4Str(GetRuleV4StrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRuleV4StrWithOptions(request, runtime);
+        }
+
+        /**
+          * @deprecated : GetRuleV4Str is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+          *
+          * @param request GetRuleV4StrRequest
+          * @return GetRuleV4StrResponse
+         */
+        // Deprecated
+        public async Task<GetRuleV4StrResponse> GetRuleV4StrAsync(GetRuleV4StrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRuleV4StrWithOptionsAsync(request, runtime);
+        }
+
         public GetRulesCountListResponse GetRulesCountListWithOptions(GetRulesCountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))
             {
@@ -3475,6 +4082,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3495,6 +4103,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<GetRulesCountListResponse> GetRulesCountListWithOptionsAsync(GetRulesCountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))
             {
@@ -3598,6 +4211,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3631,6 +4245,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3658,6 +4276,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3697,6 +4319,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3724,6 +4350,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3763,6 +4393,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3790,6 +4424,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3829,6 +4467,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3856,6 +4498,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3895,6 +4541,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3922,6 +4572,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3961,6 +4615,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -3988,6 +4646,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4027,6 +4689,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4054,6 +4720,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4093,6 +4763,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4120,6 +4794,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4159,6 +4837,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4186,6 +4868,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4225,6 +4911,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4252,6 +4942,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4287,6 +4981,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListAsrVocabWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListBusinessSpacesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListBusinessSpacesResponse
+         */
+        // Deprecated
         public ListBusinessSpacesResponse ListBusinessSpacesWithOptions(ListBusinessSpacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4314,6 +5016,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListBusinessSpacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListBusinessSpacesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListBusinessSpacesResponse
+         */
+        // Deprecated
         public async Task<ListBusinessSpacesResponse> ListBusinessSpacesWithOptionsAsync(ListBusinessSpacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4341,12 +5051,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListBusinessSpacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListBusinessSpacesRequest
+          * @return ListBusinessSpacesResponse
+         */
+        // Deprecated
         public ListBusinessSpacesResponse ListBusinessSpaces(ListBusinessSpacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListBusinessSpacesWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListBusinessSpacesRequest
+          * @return ListBusinessSpacesResponse
+         */
+        // Deprecated
         public async Task<ListBusinessSpacesResponse> ListBusinessSpacesAsync(ListBusinessSpacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4357,6 +5081,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4384,6 +5112,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4423,6 +5155,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4450,6 +5186,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4489,6 +5229,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4516,6 +5260,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4555,6 +5303,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4582,6 +5334,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4621,6 +5377,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4648,6 +5408,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4687,6 +5451,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4714,6 +5482,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -4752,6 +5524,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public ListRulesV4Response ListRulesV4WithOptions(ListRulesV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))
             {
@@ -4855,6 +5632,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4875,6 +5653,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<ListRulesV4Response> ListRulesV4WithOptionsAsync(ListRulesV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessName))
             {
@@ -4978,6 +5761,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5011,6 +5795,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5038,6 +5826,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5077,6 +5869,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5104,6 +5900,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5143,6 +5943,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5170,6 +5974,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5209,6 +6017,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5236,6 +6048,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5275,6 +6091,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5302,6 +6122,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5341,6 +6165,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5368,6 +6196,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5407,6 +6239,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5434,6 +6270,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5473,6 +6313,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5500,6 +6344,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5539,6 +6387,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5566,6 +6418,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5605,6 +6461,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5632,6 +6492,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -5671,6 +6535,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5698,6 +6566,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5737,6 +6609,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5764,6 +6640,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5803,6 +6683,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5830,6 +6714,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5869,6 +6757,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5896,6 +6788,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5935,6 +6831,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -5962,6 +6862,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6001,6 +6905,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6028,6 +6936,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6063,10 +6975,88 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SyncQualityCheckWithOptionsAsync(request, runtime);
         }
 
+        public TestRuleV4Response TestRuleV4WithOptions(TestRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSchemeData))
+            {
+                body["IsSchemeData"] = request.IsSchemeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestJson))
+            {
+                body["TestJson"] = request.TestJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestRuleV4",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestRuleV4Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TestRuleV4Response> TestRuleV4WithOptionsAsync(TestRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSchemeData))
+            {
+                body["IsSchemeData"] = request.IsSchemeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestJson))
+            {
+                body["TestJson"] = request.TestJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestRuleV4",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestRuleV4Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TestRuleV4Response TestRuleV4(TestRuleV4Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TestRuleV4WithOptions(request, runtime);
+        }
+
+        public async Task<TestRuleV4Response> TestRuleV4Async(TestRuleV4Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TestRuleV4WithOptionsAsync(request, runtime);
+        }
+
         public UpdateAsrVocabResponse UpdateAsrVocabWithOptions(UpdateAsrVocabRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6094,6 +7084,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6133,6 +7127,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6160,6 +7158,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6199,6 +7201,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6226,6 +7232,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6265,6 +7275,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6292,6 +7306,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6331,6 +7349,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6358,6 +7380,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6396,6 +7422,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public UpdateRuleByIdResponse UpdateRuleByIdWithOptions(UpdateRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCopy))
             {
@@ -6415,6 +7446,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6435,6 +7467,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<UpdateRuleByIdResponse> UpdateRuleByIdWithOptionsAsync(UpdateRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCopy))
             {
@@ -6454,6 +7491,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6487,6 +7525,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6514,6 +7556,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6552,6 +7598,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public UpdateRuleV4Response UpdateRuleV4WithOptions(UpdateRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStrForRule))
             {
@@ -6563,6 +7614,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6583,6 +7635,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public async Task<UpdateRuleV4Response> UpdateRuleV4WithOptionsAsync(UpdateRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStrForRule))
             {
@@ -6594,6 +7651,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6627,6 +7685,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6654,6 +7716,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["jsonStr"] = request.JsonStr;
@@ -6693,6 +7759,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6720,6 +7790,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6759,6 +7833,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6786,6 +7864,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6825,6 +7907,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6852,6 +7938,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6891,6 +7981,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6918,6 +8012,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6957,6 +8055,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -6984,6 +8086,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7023,6 +8129,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7050,6 +8160,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7089,6 +8203,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7116,6 +8234,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7155,6 +8277,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7182,6 +8308,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7221,6 +8351,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7248,6 +8382,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7287,6 +8425,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7314,6 +8456,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7349,10 +8495,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UploadAudioDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+          *
+          * @param request UploadDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadDataResponse
+         */
+        // Deprecated
         public UploadDataResponse UploadDataWithOptions(UploadDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7376,10 +8534,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+          *
+          * @param request UploadDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadDataResponse
+         */
+        // Deprecated
         public async Task<UploadDataResponse> UploadDataWithOptionsAsync(UploadDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7403,12 +8573,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+          *
+          * @param request UploadDataRequest
+          * @return UploadDataResponse
+         */
+        // Deprecated
         public UploadDataResponse UploadData(UploadDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UploadDataWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.
+          *
+          * @param request UploadDataRequest
+          * @return UploadDataResponse
+         */
+        // Deprecated
         public async Task<UploadDataResponse> UploadDataAsync(UploadDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7419,6 +8603,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7446,6 +8634,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7481,10 +8673,88 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UploadDataSyncWithOptionsAsync(request, runtime);
         }
 
+        public UploadDataV4Response UploadDataV4WithOptions(UploadDataV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadDataV4",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadDataV4Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UploadDataV4Response> UploadDataV4WithOptionsAsync(UploadDataV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadDataV4",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadDataV4Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UploadDataV4Response UploadDataV4(UploadDataV4Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadDataV4WithOptions(request, runtime);
+        }
+
+        public async Task<UploadDataV4Response> UploadDataV4Async(UploadDataV4Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadDataV4WithOptionsAsync(request, runtime);
+        }
+
         public UploadRuleResponse UploadRuleWithOptions(UploadRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7512,6 +8782,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7551,6 +8825,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7578,6 +8856,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7617,6 +8899,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;
@@ -7644,6 +8930,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
                 query["JsonStr"] = request.JsonStr;

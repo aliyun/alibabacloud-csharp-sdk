@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class AddRuleV4Request : TeaModel {
+        /// <summary>
+        /// baseMeAgentId
+        /// </summary>
+        [NameInMap("BaseMeAgentId")]
+        [Validation(Required=false)]
+        public long? BaseMeAgentId { get; set; }
+
         [NameInMap("IsCopy")]
         [Validation(Required=false)]
         public bool? IsCopy { get; set; }

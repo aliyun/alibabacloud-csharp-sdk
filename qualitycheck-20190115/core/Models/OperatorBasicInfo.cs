@@ -177,6 +177,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public int? PoutputType { get; set; }
 
+            [NameInMap("Pvalues")]
+            [Validation(Required=false)]
+            public List<string> Pvalues { get; set; }
+
             [NameInMap("QuestionThreshold")]
             [Validation(Required=false)]
             public string QuestionThreshold { get; set; }

@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleByIdRequest : TeaModel {
+        /// <summary>
+        /// baseMeAgentId
+        /// </summary>
+        [NameInMap("BaseMeAgentId")]
+        [Validation(Required=false)]
+        public long? BaseMeAgentId { get; set; }
+
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
