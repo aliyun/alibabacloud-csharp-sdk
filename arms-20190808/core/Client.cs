@@ -2642,6 +2642,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["EnvironmentType"] = request.EnvironmentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["ManagedType"] = request.ManagedType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2697,6 +2701,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["EnvironmentType"] = request.EnvironmentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["ManagedType"] = request.ManagedType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2738,6 +2746,148 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEnvironmentWithOptionsAsync(request, runtime);
+        }
+
+        public CreateGrafanaWorkspaceResponse CreateGrafanaWorkspaceWithOptions(CreateGrafanaWorkspaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGrafanaWorkspaceShrinkRequest request = new CreateGrafanaWorkspaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
+            {
+                query["GrafanaVersion"] = request.GrafanaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceEdition))
+            {
+                query["GrafanaWorkspaceEdition"] = request.GrafanaWorkspaceEdition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceName))
+            {
+                query["GrafanaWorkspaceName"] = request.GrafanaWorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGrafanaWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateGrafanaWorkspaceResponse> CreateGrafanaWorkspaceWithOptionsAsync(CreateGrafanaWorkspaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGrafanaWorkspaceShrinkRequest request = new CreateGrafanaWorkspaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
+            {
+                query["GrafanaVersion"] = request.GrafanaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceEdition))
+            {
+                query["GrafanaWorkspaceEdition"] = request.GrafanaWorkspaceEdition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceName))
+            {
+                query["GrafanaWorkspaceName"] = request.GrafanaWorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGrafanaWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateGrafanaWorkspaceResponse CreateGrafanaWorkspace(CreateGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGrafanaWorkspaceWithOptions(request, runtime);
+        }
+
+        public async Task<CreateGrafanaWorkspaceResponse> CreateGrafanaWorkspaceAsync(CreateGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGrafanaWorkspaceWithOptionsAsync(request, runtime);
         }
 
         public CreateIntegrationResponse CreateIntegrationWithOptions(CreateIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6446,6 +6596,80 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await DeleteGrafanaResourceWithOptionsAsync(request, runtime);
         }
 
+        public DeleteGrafanaWorkspaceResponse DeleteGrafanaWorkspaceWithOptions(DeleteGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteGrafanaWorkspaceResponse> DeleteGrafanaWorkspaceWithOptionsAsync(DeleteGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteGrafanaWorkspaceResponse DeleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGrafanaWorkspaceWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteGrafanaWorkspaceResponse> DeleteGrafanaWorkspaceAsync(DeleteGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
         public DeleteIMRobotResponse DeleteIMRobotWithOptions(DeleteIMRobotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9718,6 +9942,88 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await GetExploreUrlWithOptionsAsync(request, runtime);
         }
 
+        public GetGrafanaWorkspaceResponse GetGrafanaWorkspaceWithOptions(GetGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGrafanaWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetGrafanaWorkspaceResponse> GetGrafanaWorkspaceWithOptionsAsync(GetGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGrafanaWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetGrafanaWorkspaceResponse GetGrafanaWorkspace(GetGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGrafanaWorkspaceWithOptions(request, runtime);
+        }
+
+        public async Task<GetGrafanaWorkspaceResponse> GetGrafanaWorkspaceAsync(GetGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
         public GetIntegrationStateResponse GetIntegrationStateWithOptions(GetIntegrationStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11878,6 +12184,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["EnvironmentId"] = request.EnvironmentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["ManagedType"] = request.ManagedType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11912,6 +12222,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {
                 query["EnvironmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["ManagedType"] = request.ManagedType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -20312,6 +20626,194 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEnvironmentWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateGrafanaWorkspaceResponse UpdateGrafanaWorkspaceWithOptions(UpdateGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceName))
+            {
+                query["GrafanaWorkspaceName"] = request.GrafanaWorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGrafanaWorkspaceResponse> UpdateGrafanaWorkspaceWithOptionsAsync(UpdateGrafanaWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceName))
+            {
+                query["GrafanaWorkspaceName"] = request.GrafanaWorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspace",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGrafanaWorkspaceResponse UpdateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGrafanaWorkspaceWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGrafanaWorkspaceResponse> UpdateGrafanaWorkspaceAsync(UpdateGrafanaWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateGrafanaWorkspaceVersionResponse UpdateGrafanaWorkspaceVersionWithOptions(UpdateGrafanaWorkspaceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
+            {
+                query["GrafanaVersion"] = request.GrafanaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspaceVersion",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateGrafanaWorkspaceVersionResponse> UpdateGrafanaWorkspaceVersionWithOptionsAsync(UpdateGrafanaWorkspaceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
+            {
+                query["GrafanaVersion"] = request.GrafanaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspaceVersion",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateGrafanaWorkspaceVersionResponse UpdateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGrafanaWorkspaceVersionWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateGrafanaWorkspaceVersionResponse> UpdateGrafanaWorkspaceVersionAsync(UpdateGrafanaWorkspaceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGrafanaWorkspaceVersionWithOptionsAsync(request, runtime);
         }
 
         public UpdateIntegrationResponse UpdateIntegrationWithOptions(UpdateIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

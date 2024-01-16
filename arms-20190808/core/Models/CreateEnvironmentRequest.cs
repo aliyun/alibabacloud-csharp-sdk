@@ -54,6 +54,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentType { get; set; }
 
         /// <summary>
+        /// type of managed：
+        /// - none： not managed. default value of prometheus for ACK.
+        /// - agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.
+        /// - agent-exproter： maanged agent and exporter. default of prometheus for Cloud.
+        /// </summary>
+        [NameInMap("ManagedType")]
+        [Validation(Required=false)]
+        public string ManagedType { get; set; }
+
+        /// <summary>
         /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]

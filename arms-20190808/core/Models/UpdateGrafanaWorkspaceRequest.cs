@@ -8,28 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class InitEnvironmentRequest : TeaModel {
-        /// <summary>
-        /// Locale, the default is Chinese zh.
-        /// </summary>
+    public class UpdateGrafanaWorkspaceRequest : TeaModel {
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
-        /// <summary>
-        /// Environment ID.
-        /// </summary>
-        [NameInMap("EnvironmentId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string EnvironmentId { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("ManagedType")]
+        [NameInMap("GrafanaWorkspaceId")]
         [Validation(Required=false)]
-        public string ManagedType { get; set; }
+        public string GrafanaWorkspaceId { get; set; }
 
-        /// <summary>
-        /// The region ID.
-        /// </summary>
+        [NameInMap("GrafanaWorkspaceName")]
+        [Validation(Required=false)]
+        public string GrafanaWorkspaceName { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
