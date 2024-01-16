@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class PublishPlaybookRequest : TeaModel {
+        /// <summary>
+        /// The description of the released version.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The playbook UUID.
+        /// 
+        /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+        /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }

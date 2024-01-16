@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class QueryTreeDataRequest : TeaModel {
+        /// <summary>
+        /// The language of the content within the response. Valid values:
+        /// 
+        /// *   **zh**: Chinese (default)
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

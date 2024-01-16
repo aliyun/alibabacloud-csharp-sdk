@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescriberPython3ScriptLogsResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The operational logs of the Python3 script.
+        /// </summary>
         [NameInMap("RunResult")]
         [Validation(Required=false)]
         public string RunResult { get; set; }

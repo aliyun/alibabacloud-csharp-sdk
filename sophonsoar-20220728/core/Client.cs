@@ -2457,6 +2457,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExeConfig))
+            {
+                body["ExeConfig"] = request.ExeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParams))
             {
                 body["InputParams"] = request.InputParams;
@@ -2500,6 +2504,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExeConfig))
+            {
+                body["ExeConfig"] = request.ExeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParams))
             {
                 body["InputParams"] = request.InputParams;
@@ -2941,6 +2949,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return await RevertPlaybookReleaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request RunPython3ScriptRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunPython3ScriptResponse
+         */
         public RunPython3ScriptResponse RunPython3ScriptWithOptions(RunPython3ScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2980,6 +2995,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<RunPython3ScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request RunPython3ScriptRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunPython3ScriptResponse
+         */
         public async Task<RunPython3ScriptResponse> RunPython3ScriptWithOptionsAsync(RunPython3ScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3019,18 +3041,37 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<RunPython3ScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request RunPython3ScriptRequest
+          * @return RunPython3ScriptResponse
+         */
         public RunPython3ScriptResponse RunPython3Script(RunPython3ScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RunPython3ScriptWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request RunPython3ScriptRequest
+          * @return RunPython3ScriptResponse
+         */
         public async Task<RunPython3ScriptResponse> RunPython3ScriptAsync(RunPython3ScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RunPython3ScriptWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerPlaybookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TriggerPlaybookResponse
+         */
         public TriggerPlaybookResponse TriggerPlaybookWithOptions(TriggerPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3062,6 +3103,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<TriggerPlaybookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerPlaybookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TriggerPlaybookResponse
+         */
         public async Task<TriggerPlaybookResponse> TriggerPlaybookWithOptionsAsync(TriggerPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3093,12 +3141,24 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<TriggerPlaybookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerPlaybookRequest
+          * @return TriggerPlaybookResponse
+         */
         public TriggerPlaybookResponse TriggerPlaybook(TriggerPlaybookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TriggerPlaybookWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerPlaybookRequest
+          * @return TriggerPlaybookResponse
+         */
         public async Task<TriggerPlaybookResponse> TriggerPlaybookAsync(TriggerPlaybookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3183,6 +3243,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return await TriggerProcessTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerSophonPlaybookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TriggerSophonPlaybookResponse
+         */
         public TriggerSophonPlaybookResponse TriggerSophonPlaybookWithOptions(TriggerSophonPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3226,6 +3293,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<TriggerSophonPlaybookResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerSophonPlaybookRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TriggerSophonPlaybookResponse
+         */
         public async Task<TriggerSophonPlaybookResponse> TriggerSophonPlaybookWithOptionsAsync(TriggerSophonPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3269,12 +3343,24 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             return TeaModel.ToObject<TriggerSophonPlaybookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerSophonPlaybookRequest
+          * @return TriggerSophonPlaybookResponse
+         */
         public TriggerSophonPlaybookResponse TriggerSophonPlaybook(TriggerSophonPlaybookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TriggerSophonPlaybookWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+          *
+          * @param request TriggerSophonPlaybookRequest
+          * @return TriggerSophonPlaybookResponse
+         */
         public async Task<TriggerSophonPlaybookResponse> TriggerSophonPlaybookAsync(TriggerSophonPlaybookRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

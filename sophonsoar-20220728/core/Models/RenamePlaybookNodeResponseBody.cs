@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RenamePlaybookNodeResponseBody : TeaModel {
+        /// <summary>
+        /// The returned new name of the node.
+        /// </summary>
         [NameInMap("RenameResult")]
         [Validation(Required=false)]
         public string RenameResult { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordInOutputResponseBody : TeaModel {
+        /// <summary>
+        /// The execution result of the component action.
+        /// </summary>
         [NameInMap("InOutputInfo")]
         [Validation(Required=false)]
         public string InOutputInfo { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

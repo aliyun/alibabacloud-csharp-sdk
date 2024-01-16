@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class VerifyPythonFileRequest : TeaModel {
+        /// <summary>
+        /// The Python code snippet.
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
