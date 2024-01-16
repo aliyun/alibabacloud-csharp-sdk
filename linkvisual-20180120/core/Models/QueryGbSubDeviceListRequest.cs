@@ -8,42 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
-    public class CreateGbDeviceRequest : TeaModel {
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
+    public class QueryGbSubDeviceListRequest : TeaModel {
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
-        [NameInMap("DeviceType")]
+        [NameInMap("IotId")]
         [Validation(Required=false)]
-        public int? DeviceType { get; set; }
-
-        [NameInMap("GbId")]
-        [Validation(Required=false)]
-        public string GbId { get; set; }
+        public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("MediaNetProtocol")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string MediaNetProtocol { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("Password")]
+        [NameInMap("PageStart")]
         [Validation(Required=false)]
-        public string Password { get; set; }
+        public int? PageStart { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("SubProductKey")]
-        [Validation(Required=false)]
-        public string SubProductKey { get; set; }
 
     }
 
