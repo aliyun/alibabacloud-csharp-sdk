@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of data in the column of the table.
+        /// A list of columns.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeColumnsResponseBodyItems> Items { get; set; }
         public class DescribeColumnsResponseBodyItems : TeaModel {
             /// <summary>
-            /// The beginning of the time range during which data in the column of the table is created. The value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the data in the column of the table is created. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -58,14 +58,31 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// A list of tags for data that hits the recognition model.
+            /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeColumnsResponseBodyItemsModelTags> ModelTags { get; set; }
             public class DescribeColumnsResponseBodyItemsModelTags : TeaModel {
+                /// <summary>
+                /// The tag ID.
+                /// 
+                /// *   **101**: sensitive personal information
+                /// *   **102**: personal information
+                /// *   **103**: important information
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// The tag name.
+                /// 
+                /// *   Sensitive personal information
+                /// *   Personal information
+                /// *   Important information
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -80,9 +97,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The name of the sensitivity level for data in the column of the table. Valid values:
+            /// The name of the sensitivity level for asset. Valid values:
             /// 
-            /// *   **N/A**: No sensitive data is detected.
+            /// *   **N/A**: indicates that no sensitive data is detected.
             /// *   **S1**: indicates the low sensitivity level.
             /// *   **S2**: indicates the medium sensitivity level.
             /// *   **S3**: indicates the high sensitivity level.
@@ -93,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string OdpsRiskLevelName { get; set; }
 
             /// <summary>
-            /// The ID of the sensitivity level for data in the column of the table. Valid values:
+            /// The ID of the sensitivity level of the asset. Valid values:
             /// 
             /// *   **1**: N/A
             /// *   **2**: S1
@@ -145,7 +162,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// The name of the sensitivity level for data in the column of the table. Valid values:
             /// 
-            /// *   **N/A**: No sensitive data is detected.
+            /// *   **N/A**: indicates that no sensitive data is detected.
             /// *   **S1**: indicates the low sensitivity level.
             /// *   **S2**: indicates the medium sensitivity level.
             /// *   **S3**: indicates the high sensitivity level.
@@ -170,9 +187,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:
+            /// The name of the sensitivity level. Valid values:
             /// 
-            /// *   **N/A**: No sensitive data is detected.
+            /// *   **N/A**: indicates that no sensitive data is detected.
             /// *   **S1**: indicates the low sensitivity level.
             /// *   **S2**: indicates the medium sensitivity level.
             /// *   **S3**: indicates the high sensitivity level.
@@ -185,8 +202,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// Indicates whether the column contains sensitive data. Valid values:
             /// 
-            /// *   true: the column contains sensitive data.
-            /// *   false: the column does not contain sensitive data.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("Sensitive")]
             [Validation(Required=false)]

@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? InstanceNum { get; set; }
 
+            /// <summary>
+            /// The total number of instances.
+            /// </summary>
             [NameInMap("InstanceTotalCount")]
             [Validation(Required=false)]
             public long? InstanceTotalCount { get; set; }
@@ -108,10 +111,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? LabStatus { get; set; }
 
+            /// <summary>
+            /// OSS total storage capacity. Unit: Bytes.
+            /// </summary>
             [NameInMap("OssTotalSize")]
             [Validation(Required=false)]
             public long? OssTotalSize { get; set; }
 
+            /// <summary>
+            /// Accumulate the number of days to protect user assets.
+            /// </summary>
             [NameInMap("ProtectionDays")]
             [Validation(Required=false)]
             public int? ProtectionDays { get; set; }
@@ -157,6 +166,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public bool? Trail { get; set; }
 
+            /// <summary>
+            /// Indicates whether the agent audit feature is used. Valid values:
+            /// 
+            /// *   **1**: yes
+            /// *   **0**: no
+            /// </summary>
             [NameInMap("UseAgentAudit")]
             [Validation(Required=false)]
             public bool? UseAgentAudit { get; set; }

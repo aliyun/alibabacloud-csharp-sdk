@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// An array consisting of the sensitive data detection rules that the OSS object hits.
+            /// A list of the sensitive data detection rules that the OSS object hits.
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -72,14 +72,31 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                /// <summary>
+                /// A list of tags for data that hits the recognition model.
+                /// </summary>
                 [NameInMap("ModelTags")]
                 [Validation(Required=false)]
                 public List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags> ModelTags { get; set; }
                 public class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags : TeaModel {
+                    /// <summary>
+                    /// The tag ID.
+                    /// 
+                    /// *   **101**: sensitive personal information
+                    /// *   **102**: personal information
+                    /// *   **103**: important information
+                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
+                    /// <summary>
+                    /// The tag name.
+                    /// 
+                    /// *   Sensitive personal information
+                    /// *   Personal information
+                    /// *   Important information
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -87,7 +104,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 }
 
                 /// <summary>
-                /// The sensitivity level of the OSS object.
+                /// The ID of the sensitivity level of the OSS object.
                 /// 
                 /// *   **1**: No sensitive data is detected.
                 /// *   **2**: indicates the low sensitivity level.

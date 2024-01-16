@@ -17,37 +17,43 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of the OSS objects.
+        /// A list of OSS objects.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeOssObjectsResponseBodyItems> Items { get; set; }
         public class DescribeOssObjectsResponseBodyItems : TeaModel {
             /// <summary>
-            /// The name of the OSS bucket.
+            /// The name of the bucket.
             /// </summary>
             [NameInMap("BucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
             /// <summary>
-            /// The type ID of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.
+            /// The type of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public long? Category { get; set; }
 
             /// <summary>
-            /// The file type of the OSS object.
+            /// The name of the file type.
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
+            /// <summary>
+            /// The code of the file type.
+            /// </summary>
             [NameInMap("FileCategoryCode")]
             [Validation(Required=false)]
             public long? FileCategoryCode { get; set; }
 
+            /// <summary>
+            /// The name of the file type.
+            /// </summary>
             [NameInMap("FileCategoryName")]
             [Validation(Required=false)]
             public string FileCategoryName { get; set; }
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The sensitivity level of the OSS object. Valid values:
+            /// The ID of the sensitivity level of the OSS object. Valid values:
             /// 
             /// *   **1**: N/A, which indicates that no sensitive data is detected.
             /// *   **2**: S1, which indicates the low sensitivity level.
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// An array that consists of the rules.
+            /// A list of rules.
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -136,7 +142,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The sensitivity level of the OSS object. Valid values:
+                /// The ID of the sensitivity level of the OSS object. Valid values:
                 /// 
                 /// *   **1**: N/A, which indicates that no sensitive data is detected.
                 /// *   **2**: S1, which indicates the low sensitivity level.

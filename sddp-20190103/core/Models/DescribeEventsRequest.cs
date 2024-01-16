@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string UserName { get; set; }
 
+        [NameInMap("WarnLevel")]
+        [Validation(Required=false)]
+        public int? WarnLevel { get; set; }
+
     }
 
 }

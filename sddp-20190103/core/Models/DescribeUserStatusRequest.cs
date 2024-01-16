@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeUserStatusRequest : TeaModel {
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }

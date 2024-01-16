@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The code of the file type.
+        /// </summary>
         [NameInMap("FileCategoryCode")]
         [Validation(Required=false)]
         public long? FileCategoryCode { get; set; }
