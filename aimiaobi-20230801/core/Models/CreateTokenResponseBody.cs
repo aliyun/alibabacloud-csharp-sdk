@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
