@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class QueryContentRequest : TeaModel {
+    public class QueryContentAdvanceRequest : TeaModel {
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
-        public string FileUrl { get; set; }
+        public Stream FileUrlObject { get; set; }
 
         [NameInMap("Filter")]
         [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
+                [NameInMap("FileURL")]
+                [Validation(Required=false)]
+                public string FileURL { get; set; }
+
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -74,6 +78,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("Usage")]
+        [Validation(Required=false)]
+        public QueryContentResponseBodyUsage Usage { get; set; }
+        public class QueryContentResponseBodyUsage : TeaModel {
+            [NameInMap("EmbeddingEntries")]
+            [Validation(Required=false)]
+            public string EmbeddingEntries { get; set; }
+
+            [NameInMap("EmbeddingTokens")]
+            [Validation(Required=false)]
+            public string EmbeddingTokens { get; set; }
+
+        }
 
     }
 
