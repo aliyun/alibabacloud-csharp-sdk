@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> Rules { get; set; }
             public class DescribeSchedulerRulesResponseBodySchedulerRulesRules : TeaModel {
+                [NameInMap("Line")]
+                [Validation(Required=false)]
+                public string Line { get; set; }
+
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
