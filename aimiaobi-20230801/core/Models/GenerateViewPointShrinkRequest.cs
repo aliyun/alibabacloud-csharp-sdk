@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class CreateTokenRequest : TeaModel {
+    public class GenerateViewPointShrinkRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
+
+        [NameInMap("ReferenceData")]
+        [Validation(Required=false)]
+        public string ReferenceDataShrink { get; set; }
 
     }
 
