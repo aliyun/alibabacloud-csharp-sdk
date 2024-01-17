@@ -95,15 +95,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Proto { get; set; }
 
         /// <summary>
-        /// Specifies whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:
+        /// The status of the access control policy. Valid values:
         /// 
-        /// *   **true**: The access control policy is enabled.
-        /// *   **false**: The access control policy is disabled.
+        /// *   **true**: enabled
+        /// *   **false**: disabled
         /// </summary>
         [NameInMap("Release")]
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        /// <summary>
+        /// The recurrence type for the access control policy to take effect. Valid values:
+        /// 
+        /// *   **Permanent** (default): The policy always takes effect.
+        /// *   **None**: The policy takes effect for only once.
+        /// *   **Daily**: The policy takes effect on a daily basis.
+        /// *   **Weekly**: The policy takes effect on a weekly basis.
+        /// *   **Monthly**: The policy takes effect on a monthly basis.
+        /// </summary>
         [NameInMap("RepeatType")]
         [Validation(Required=false)]
         public string RepeatType { get; set; }

@@ -727,7 +727,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
           *
           * @param request CreateNatFirewallControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -853,7 +853,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
           *
           * @param request CreateNatFirewallControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -979,7 +979,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
           *
           * @param request CreateNatFirewallControlPolicyRequest
           * @return CreateNatFirewallControlPolicyResponse
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+          * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
           *
           * @param request CreateNatFirewallControlPolicyRequest
           * @return CreateNatFirewallControlPolicyResponse
@@ -10924,6 +10924,72 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutEnableFwSwitchWithOptionsAsync(request, runtime);
+        }
+
+        public ReleasePostInstanceResponse ReleasePostInstanceWithOptions(ReleasePostInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleasePostInstance",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleasePostInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ReleasePostInstanceResponse> ReleasePostInstanceWithOptionsAsync(ReleasePostInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleasePostInstance",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleasePostInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ReleasePostInstanceResponse ReleasePostInstance(ReleasePostInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleasePostInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<ReleasePostInstanceResponse> ReleasePostInstanceAsync(ReleasePostInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleasePostInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
