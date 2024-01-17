@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeBatchResultDetailResponseBody : TeaModel {
         /// <summary>
-        /// Detailed information about the batch operation result.
+        /// The detailed results of the batch operation.
         /// </summary>
         [NameInMap("BatchResultDetails")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Line { get; set; }
 
                 /// <summary>
-                /// The new host record.
+                /// The new hostname.
                 /// </summary>
                 [NameInMap("NewRr")]
                 [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string NewValue { get; set; }
 
                 /// <summary>
-                /// The time when the operation was performed.
+                /// The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("OperateDateStr")]
                 [Validation(Required=false)]
                 public string OperateDateStr { get; set; }
 
                 /// <summary>
-                /// The priority of an MX-type DNS record.
+                /// The priority of the mail exchanger (MX) record.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The host record.
+                /// The hostname.
                 /// </summary>
                 [NameInMap("Rr")]
                 [Validation(Required=false)]
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string RrStatus { get; set; }
 
                 /// <summary>
-                /// The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.
+                /// The execution result of the batch operation. Valid values: **true**: The operation succeeded. **false**: The operation failed.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public bool? Status { get; set; }
 
                 /// <summary>
-                /// The TTL of the DNS record.
+                /// The time-to-live (TTL) of the DNS record.
                 /// </summary>
                 [NameInMap("Ttl")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The value of the DNS record.
+                /// The record value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -137,21 +137,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

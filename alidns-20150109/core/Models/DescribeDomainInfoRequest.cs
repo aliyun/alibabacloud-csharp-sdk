@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// Specifies whether detailed attributes are required. Default value: **false**, which indicates that detailed attributes are not required.
+        /// Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.
         /// 
         /// If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.
         /// </summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmLogsRequest : TeaModel {
+        /// <summary>
+        /// The timestamp that specifies the end of the time range to query.
+        /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }

@@ -24,40 +24,40 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Addr { get; set; }
 
             /// <summary>
-            /// The source region of the address, in JSON-formatted string.
+            /// The information about the source region of the address. The value of this parameter is a JSON string. Valid values:
             /// 
-            /// *   LineCode: the line code of the source region of the address.
+            /// *   LineCode: the line code of the source region for the address
             /// 
             /// *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
             /// 
-            ///     *   NO_NEED: no need for rectification.
-            ///     *   RECTIFIED: rectified.
-            ///     *   AUTO: automatic rectification.
+            ///     *   NO_NEED: no need for rectification
+            ///     *   RECTIFIED: rectified
+            ///     *   AUTO: automatic rectification
             /// </summary>
             [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
             public string AttributeInfo { get; set; }
 
             /// <summary>
-            /// The weight of the address.
+            /// The weight of the address pool.
             /// </summary>
             [NameInMap("LbaWeight")]
             [Validation(Required=false)]
             public int? LbaWeight { get; set; }
 
             /// <summary>
-            /// The response mode of address resolution. Valid values:
+            /// The return mode of the addresses: Valid values:
             /// 
-            /// *   SMART: smart return.
-            /// *   ONLINE: always online.
-            /// *   OFFLINE: always offline.
+            /// *   SMART: smart return
+            /// *   ONLINE: always online
+            /// *   OFFLINE: always offline
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
             /// <summary>
-            /// The additional information about the address.
+            /// The remarks.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The number of consecutive health check failures.
+        /// The number of consecutive failures.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -87,21 +87,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// The city nodes to monitor.
+        /// The nodes for monitoring.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
         public List<AddDnsGtmAddressPoolRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmAddressPoolRequestIspCityNode : TeaModel {
             /// <summary>
-            /// The code of the city node to monitor.
+            /// The city code.
+            /// 
+            /// Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.
             /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public string CityCode { get; set; }
 
             /// <summary>
-            /// The code of the Internet service provider (ISP) node to monitor.
+            /// *   The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.
+            /// *   If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.
+            /// *   If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.
             /// </summary>
             [NameInMap("IspCode")]
             [Validation(Required=false)]
@@ -127,50 +131,50 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string LbaStrategy { get; set; }
 
         /// <summary>
-        /// The extended information. The required parameters vary based on the health check protocol.
+        /// The extended information. The required parameters vary based on the value of ProtocolType.
         /// 
-        /// *   HTTP or HTTPS:
+        /// *   When ProtocolType is set to HTTP or HTTPS:
         /// 
-        ///     *   port: the check port.
+        ///     *   port: the port that you want to check
         /// 
-        ///     *   host: the host settings.
+        ///     *   host: the host settings
         /// 
-        ///     *   path: the URL path.
+        ///     *   path: the URL path
         /// 
-        ///     *   code: the return code greater than the specified value.
+        ///     *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value.
         /// 
-        ///     *   failureRate: the failure rate.
+        ///     *   failureRate: the failure rate
         /// 
-        ///     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when Health Check Protocol is set to HTTPS. Valid values:
+        ///     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:
         /// 
         ///         *   true: enables SNI.
         ///         *   other: disables SNI.
         /// 
-        ///     *   nodeType: The type of the node to monitor when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
         /// 
-        /// *   PING:
+        /// *   When ProtocolType is set to PING:
         /// 
-        ///     *   failureRate: the failure rate.
+        ///     *   failureRate: the failure rate
         /// 
-        ///     *   packetNum: the number of ping packets.
+        ///     *   packetNum: the number of ping packets
         /// 
-        ///     *   packetLossRate: the loss rate of ping packets.
+        ///     *   packetLossRate: the loss rate of ping packets
         /// 
-        ///     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
         /// 
-        /// *   TCP:
+        /// *   When ProtocolType is set to TCP:
         /// 
-        ///     *   port: the check port.
+        ///     *   port: the port that you want to check
         /// 
-        ///     *   failureRate: the failure rate.
+        ///     *   failureRate: the failure rate
         /// 
-        ///     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
@@ -209,7 +213,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The period of health check timeout. Unit: milliseconds.
+        /// The timeout period. Unit: milliseconds.
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
@@ -218,9 +222,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The type of the address pool. Valid values:
         /// 
-        /// *   IPV4: IPv4 address.
-        /// *   IPV6: IPv6 address.
-        /// *   DOMAIN: domain name.
+        /// *   IPV4: IPv4 address
+        /// *   IPV6: IPv6 address
+        /// *   DOMAIN: domain name
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

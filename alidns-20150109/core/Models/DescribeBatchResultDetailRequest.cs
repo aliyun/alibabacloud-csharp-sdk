@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   **DOMAIN_ADD**: adds domain names in batches.
         /// *   **DOMAIN_DEL**: deletes domain names in batches.
-        /// *   **RR_ADD**: adds DNS records in batches.
+        /// *   **RR_ADD**: adds Domain Name System (DNS) records in batches.
         /// *   **RR_DEL**: deletes DNS records in batches.
         /// </summary>
         [NameInMap("BatchType")]
@@ -22,32 +22,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string BatchType { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The execution result. If you do not specify this parameter, all results are returned.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// The ID of the batch operation task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

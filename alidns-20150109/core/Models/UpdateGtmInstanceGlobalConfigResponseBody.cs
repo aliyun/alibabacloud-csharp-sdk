@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmInstanceGlobalConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

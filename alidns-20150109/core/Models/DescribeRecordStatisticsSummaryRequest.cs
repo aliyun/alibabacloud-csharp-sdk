@@ -16,14 +16,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The type of the domain name. The parameter value is not case-sensitive. Valid values:
+        /// 
+        /// *   PUBLIC (default): hosted public domain name
+        /// *   CACHE: cache-accelerated domain name
+        /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+        /// The end date of the query. Specify the start date in the **YYYY-MM-DD** format.
         /// 
-        /// The default value is the day when you perform the operation.
+        /// The default value is the day when you query the data.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -37,21 +43,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **100**. Minimum value: **1**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -60,24 +66,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The search mode of the keyword. Valid values:
         /// 
-        /// *   **LIKE**: fuzzy match (default).
-        /// *   **EXACT**: exact match.
+        /// *   **LIKE** (default): fuzzy search
+        /// *   **EXACT**: exact search
         /// </summary>
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+        /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
         /// 
-        /// You can only query DNS records of the last 90 days.
+        /// You can only query the DNS records within the last 90 days.``
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
         /// <summary>
-        /// The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.
+        /// The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

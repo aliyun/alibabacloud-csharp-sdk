@@ -17,12 +17,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language of the subdomain.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.
+        /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// Specifies whether to enable or disable weighted round-robin. Valid values:
         /// 
-        /// *   **true**: enables weighted round-robin. This is the default value.
+        /// *   **true** (default): enables weighted round-robin.
         /// *   **false**: disables weighted round-robin.
         /// </summary>
         [NameInMap("Open")]
@@ -38,21 +41,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? Open { get; set; }
 
         /// <summary>
-        /// The subdomain for which you want to configure weighted round-robin. Do not set the value to a string such as aliyun.com. Instead, set the value to @.aliyun.com.
+        /// The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public string SubDomain { get; set; }
 
         /// <summary>
-        /// The type of the DNS record. Valid values: A and AAAA. Default value: A.
+        /// The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The IP address of the client that you use to configure weighted round-robin.
+        /// The IP address of the client.
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

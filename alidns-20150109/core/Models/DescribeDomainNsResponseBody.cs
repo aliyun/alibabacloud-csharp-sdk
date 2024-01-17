@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? AllAliDns { get; set; }
 
         /// <summary>
-        /// 检测失败原因编码
+        /// The cause code of the detection failure.
         /// </summary>
         [NameInMap("DetectFailedReasonCode")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The DNS server names assigned by Alibaba Cloud DNS.
+        /// The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.
         /// </summary>
         [NameInMap("ExpectDnsServers")]
         [Validation(Required=false)]

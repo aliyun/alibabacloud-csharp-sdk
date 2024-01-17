@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of query volume records.
+        /// The DNS requests.
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic : TeaModel {
                 /// <summary>
-                /// The number of queries.
+                /// The number of DNS requests.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// The subdomain name.
+                /// The subdomain.
                 /// </summary>
                 [NameInMap("SubDomain")]
                 [Validation(Required=false)]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The total number of data records.The total number of data records.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalItems")]
         [Validation(Required=false)]
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// The total number of returned pages.
+        /// The total number of pages returned.
         /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]

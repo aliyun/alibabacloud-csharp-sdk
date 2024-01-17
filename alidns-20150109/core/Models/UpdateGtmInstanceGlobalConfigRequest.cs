@@ -10,33 +10,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmInstanceGlobalConfigRequest : TeaModel {
         /// <summary>
-        /// The alert group of the GTM instance. Currently, only one alert group is supported.
+        /// The alert group. Only one alert group is supported.
         /// 
-        /// >  This parameter is required for the first update, but is optional for later updates.
+        /// >  This parameter is required only for the first modification.
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroup { get; set; }
 
         /// <summary>
-        /// The CNAME record of a domain name, which must be the primary domain name. When **CnameMode** is **CUSTOM**, this parameter is required for access.
+        /// If you set **CnameMode** to **CUSTOM**, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.
         /// </summary>
         [NameInMap("CnameCustomDomainName")]
         [Validation(Required=false)]
         public string CnameCustomDomainName { get; set; }
 
         /// <summary>
-        /// Specifies whether the CNAME record is user-defined or automatically assigned by the system. Valid values:
+        /// Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:
         /// 
-        /// *   **SYSTEM_ASSIGN**: Assigned by the system
-        /// *   **CUSTOM**: User-defined
+        /// *   **SYSTEM_ASSIGN**: system-assigned CNAME
+        /// *   **CUSTOM**: custom CNAME
         /// </summary>
         [NameInMap("CnameMode")]
         [Validation(Required=false)]
         public string CnameMode { get; set; }
 
         /// <summary>
-        /// The ID of the GTM instance whose configuration you want to modify.
+        /// The ID of the GTM instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -45,34 +45,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The name of the GTM instance.
         /// 
-        /// >  This parameter is required for the first update, but is not required for later updates.
+        /// >  This parameter is required only for the first modification.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The language used by the user.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The load balancing policy. Valid values:
+        /// The balancing policy. Valid values:
         /// 
-        /// *   **ALL_RR**: Load balancing
+        /// *   **ALL_RR**: load balancing
+        /// *   **RATIO**: weighted round-robin
         /// 
-        /// *   **RATIO**: Weighted round robin
-        /// 
-        /// > This parameter is required for the first update, but is optional for later updates.
+        /// >  This parameter is required only for the first modification.
         /// </summary>
         [NameInMap("LbaStrategy")]
         [Validation(Required=false)]
         public string LbaStrategy { get; set; }
 
         /// <summary>
-        /// The time when the modification takes effect.
+        /// The global time-to-live (TTL).
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The primary domain name.
         /// 
-        /// >  This parameter is required for the first update, but is optional for later updates.
+        /// >  This parameter is required only for the first modification.
         /// </summary>
         [NameInMap("UserDomainName")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+        /// The number of consecutive failures.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -31,26 +31,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// The monitored nodes.
+        /// The nodes for monitoring.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
         public List<AddGtmMonitorRequestIspCityNode> IspCityNode { get; set; }
         public class AddGtmMonitorRequestIspCityNode : TeaModel {
             /// <summary>
-            /// The code of the city where the monitored node is deployed.
+            /// The city code.
             /// 
-            /// For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+            /// Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.
             /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public string CityCode { get; set; }
 
             /// <summary>
-            /// The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+            /// The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.
             /// 
-            /// *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
-            /// *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
+            /// *   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.
+            /// *   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.
             /// </summary>
             [NameInMap("IspCode")]
             [Validation(Required=false)]
@@ -59,33 +59,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The language of the values of specific response parameters.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+        /// The extended information. The required parameters vary based on the health check protocol.
         /// 
-        /// HTTP or HTTPS:
+        /// HTTP or HTTPS
         /// 
-        /// *   port: the port to check.
-        /// *   failureRate: the failure rate.
-        /// *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
-        /// *   host: the host configuration.
-        /// *   path: the health check URL.
+        /// *   port: the port that you want to check
+        /// *   failureRate: the failure rate
+        /// *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.
+        /// *   host: the host settings
+        /// *   path: the URL path
         /// 
-        /// PING:
+        /// PING
         /// 
-        /// *   packetNum: the number of ping packets.
-        /// *   packetLossRate: the loss rate of ping packets.
-        /// *   failureRate: the failure rate.
+        /// *   packetNum: the number of ping packets
+        /// *   packetLossRate: the packet loss rate
+        /// *   failureRate: the failure rate
         /// 
-        /// TCP:
+        /// TCP
         /// 
-        /// *   port: the port to check.
-        /// *   failureRate: the failure rate.
+        /// *   port: the port that you want to check
+        /// *   failureRate: the failure rate
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The DNS records returned.
+        /// The returned DNS records.
         /// </summary>
         [NameInMap("DomainRecords")]
         [Validation(Required=false)]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// The domain name to which the DNS record belongs.
+                /// The domain name.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The line that is used by the DNS record.
+                /// The resolution line.
                 /// </summary>
                 [NameInMap("Line")]
                 [Validation(Required=false)]
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public bool? Locked { get; set; }
 
                 /// <summary>
-                /// The priority of the MX record.
+                /// The priority of the mail exchanger (MX) record.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public long? Priority { get; set; }
 
                 /// <summary>
-                /// The RR value.
+                /// The hostname.
                 /// </summary>
                 [NameInMap("RR")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// The description of the DNS record.
+                /// The description.
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time-to-live (TTL) of the DNS record.
+                /// The time-to-live (TTL) of the cached data. Unit: seconds.
                 /// </summary>
                 [NameInMap("TTL")]
                 [Validation(Required=false)]
@@ -117,28 +117,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of DNS records.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

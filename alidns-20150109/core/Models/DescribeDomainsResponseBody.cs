@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DomainId { get; set; }
 
+                [NameInMap("DomainLoggingSwitchStatus")]
+                [Validation(Required=false)]
+                public string DomainLoggingSwitchStatus { get; set; }
+
                 /// <summary>
                 /// The domain name.
                 /// </summary>

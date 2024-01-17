@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsRequest : TeaModel {
         /// <summary>
-        /// The order in which the returned DNS records are sorted. Valid values: DESC and ASC. Default value: DESC.
+        /// The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The domain name for which you want to query DNS records.
+        /// The domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,31 +25,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the domain name group.
+        /// 
+        /// *   If you do not specify GroupId, all domain names are queried.
+        /// *   If you set GroupId to 0, no value is returned.
+        /// *   If you set GroupId to 1, the domain names in the default group are queried.
+        /// *   If you set GroupId to -2, all domain names are queried.
+        /// *   You can also specify GroupId based on the actual group ID.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The keyword based on which the system queries DNS records.
+        /// The keyword.
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// The language of the domain name.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The line based on which the system queries DNS records. Default value: **default**.
+        /// The resolution line. Default value: **default**.
         /// 
-        /// For more information, see the following topic:
+        /// For more information, see
         /// 
-        /// [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm)
+        /// [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
         /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
@@ -63,21 +69,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **500**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1 to 500**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The resource record (RR) keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
+        /// The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
         /// </summary>
         [NameInMap("RRKeyWord")]
         [Validation(Required=false)]
@@ -86,14 +92,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The search mode. Valid values: **LIKE, EXACT, and ADVANCED**.
         /// 
-        /// *   If you set this parameter to LIKE or EXACT, specify the KeyWord parameter.In this case, the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters are ignored.
+        /// *   If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.
         /// 
-        /// *   If you set this parameter to ADVANCED, specify the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters.
+        /// *   If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.
         /// 
-        /// *   If you do not specify this parameter, the system determines the search mode based on the following rules:
+        /// *   If you do not specify SearchMode, the system determines the search mode based on the following rules:
         /// 
-        ///     *   If the KeyWord parameter is specified, the system uses the LIKE mode.
-        ///     *   If the KeyWord parameter is not specified, the system queries DNS records based on values of the RRKeyWord and ValueKeyWord parameters in fuzzy match mode, and based on the values of the TypeKeyWord, Type, Line, and Status parameters in exact match mode.
+        ///     *   If KeyWord is specified, the system uses the LIKE mode.
+        ///     *   If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.
         /// </summary>
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
@@ -107,9 +113,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The type of the DNS records to query. For more information, see the following topic:
+        /// The type of the DNS records to query. For more information, see
         /// 
-        /// [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm)
+        /// [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

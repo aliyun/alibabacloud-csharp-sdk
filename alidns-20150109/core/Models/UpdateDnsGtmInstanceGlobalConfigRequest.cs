@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AlertGroup { get; set; }
 
         /// <summary>
-        /// The type of the CNAME domain name that is used to access the instance. Valid value:
+        /// The type of the canonical name (CNAME).
         /// 
-        /// *   PUBLIC: The CNAME domain name is used to access the instance over the Internet.
+        /// *   Set the value to PUBLIC.
         /// </summary>
         [NameInMap("CnameType")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordLogsResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The list of the operation logs of the domain name.
+        /// The operation logs.
         /// </summary>
         [NameInMap("RecordLogs")]
         [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// The time when the operation was performed.
+                /// The time when you performed the operation.
                 /// </summary>
                 [NameInMap("ActionTime")]
                 [Validation(Required=false)]
                 public string ActionTime { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp representing the time of the operation.
+                /// The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("ActionTimestamp")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string ClientIp { get; set; }
 
                 /// <summary>
-                /// The returned operation message.
+                /// The operation message.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of operation logs.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
