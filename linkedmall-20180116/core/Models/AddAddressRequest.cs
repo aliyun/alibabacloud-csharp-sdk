@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class AddAddressRequest : TeaModel {
+        [NameInMap("AddressInfo")]
+        [Validation(Required=false)]
+        public string AddressInfo { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -23,10 +27,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
         public bool? UseAnonymousTbAccount { get; set; }
-
-        [NameInMap("AddressInfo")]
-        [Validation(Required=false)]
-        public string AddressInfo { get; set; }
 
     }
 

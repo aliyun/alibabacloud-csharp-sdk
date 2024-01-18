@@ -17,33 +17,39 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("QueryAgreementResponse")]
         [Validation(Required=false)]
         public QueryAgreementResponseBodyQueryAgreementResponse QueryAgreementResponse { get; set; }
         public class QueryAgreementResponseBodyQueryAgreementResponse : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("ExternalAgreementNo")]
-            [Validation(Required=false)]
-            public string ExternalAgreementNo { get; set; }
-            [NameInMap("ValidTime")]
-            [Validation(Required=false)]
-            public string ValidTime { get; set; }
-            [NameInMap("InvalidTime")]
-            [Validation(Required=false)]
-            public string InvalidTime { get; set; }
             [NameInMap("AgreementNo")]
             [Validation(Required=false)]
             public string AgreementNo { get; set; }
+
+            [NameInMap("ExternalAgreementNo")]
+            [Validation(Required=false)]
+            public string ExternalAgreementNo { get; set; }
+
+            [NameInMap("InvalidTime")]
+            [Validation(Required=false)]
+            public string InvalidTime { get; set; }
+
             [NameInMap("SignTime")]
             [Validation(Required=false)]
             public string SignTime { get; set; }
-        };
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("ValidTime")]
+            [Validation(Required=false)]
+            public string ValidTime { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

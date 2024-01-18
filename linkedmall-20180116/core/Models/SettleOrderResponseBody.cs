@@ -25,13 +25,15 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public SettleOrderResponseBodyTradeOrderSettleResponse TradeOrderSettleResponse { get; set; }
         public class SettleOrderResponseBodyTradeOrderSettleResponse : TeaModel {
-            [NameInMap("TradeNo")]
-            [Validation(Required=false)]
-            public string TradeNo { get; set; }
             [NameInMap("OutRequestNo")]
             [Validation(Required=false)]
             public string OutRequestNo { get; set; }
-        };
+
+            [NameInMap("TradeNo")]
+            [Validation(Required=false)]
+            public string TradeNo { get; set; }
+
+        }
 
     }
 

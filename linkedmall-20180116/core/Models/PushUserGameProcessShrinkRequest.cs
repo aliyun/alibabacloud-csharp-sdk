@@ -1,0 +1,42 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Linkedmall20180116.Models
+{
+    public class PushUserGameProcessShrinkRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
+        [NameInMap("CurrentStepId")]
+        [Validation(Required=false)]
+        public string CurrentStepId { get; set; }
+
+        [NameInMap("ExtInfo")]
+        [Validation(Required=false)]
+        public string ExtInfoShrink { get; set; }
+
+        [NameInMap("ProcessId")]
+        [Validation(Required=false)]
+        public string ProcessId { get; set; }
+
+        [NameInMap("ThirdPartyUserId")]
+        [Validation(Required=false)]
+        public string ThirdPartyUserId { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string BodyShrink { get; set; }
+
+    }
+
+}

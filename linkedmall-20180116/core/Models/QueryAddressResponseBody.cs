@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DivisionAddress")]
         [Validation(Required=false)]
         public QueryAddressResponseBodyDivisionAddress DivisionAddress { get; set; }
@@ -29,12 +21,33 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryAddressResponseBodyDivisionAddressDivisionAddress> DivisionAddress { get; set; }
             public class QueryAddressResponseBodyDivisionAddressDivisionAddress : TeaModel {
-                public long? ParentId { get; set; }
+                [NameInMap("DivisionCode")]
+                [Validation(Required=false)]
                 public long? DivisionCode { get; set; }
+
+                [NameInMap("DivisionLevel")]
+                [Validation(Required=false)]
                 public int? DivisionLevel { get; set; }
+
+                [NameInMap("DivisionName")]
+                [Validation(Required=false)]
                 public string DivisionName { get; set; }
+
+                [NameInMap("ParentId")]
+                [Validation(Required=false)]
+                public long? ParentId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

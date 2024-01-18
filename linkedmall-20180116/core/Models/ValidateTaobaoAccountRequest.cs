@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string ExtJson { get; set; }
 
-        [NameInMap("TbUserNick")]
-        [Validation(Required=false)]
-        public string TbUserNick { get; set; }
-
         [NameInMap("MobileNo")]
         [Validation(Required=false)]
         public string MobileNo { get; set; }
+
+        [NameInMap("TbUserNick")]
+        [Validation(Required=false)]
+        public string TbUserNick { get; set; }
 
     }
 

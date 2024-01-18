@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("OutRequestNo")]
             [Validation(Required=false)]
             public string OutRequestNo { get; set; }
-        };
+
+        }
 
     }
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("LockSeatApplyKey")]
-        [Validation(Required=false)]
-        public string LockSeatApplyKey { get; set; }
-
         [NameInMap("BizUid")]
         [Validation(Required=false)]
         public string BizUid { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("ExtJson")]
         [Validation(Required=false)]
         public string ExtJson { get; set; }
+
+        [NameInMap("LockSeatApplyKey")]
+        [Validation(Required=false)]
+        public string LockSeatApplyKey { get; set; }
 
     }
 

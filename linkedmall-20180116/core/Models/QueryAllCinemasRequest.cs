@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public long? CityCode { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
         [NameInMap("ExtJson")]
         [Validation(Required=false)]
         public string ExtJson { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
 
     }
 

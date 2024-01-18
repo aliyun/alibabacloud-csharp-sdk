@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryGuideItemGroupWithOutInventoryRequest : TeaModel {
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("BizId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string BizId { get; set; }
+        public int? PageSize { get; set; }
 
     }
 

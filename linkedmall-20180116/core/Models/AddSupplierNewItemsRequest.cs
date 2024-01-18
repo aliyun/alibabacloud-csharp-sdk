@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public List<AddSupplierNewItemsRequestItemList> ItemList { get; set; }
         public class AddSupplierNewItemsRequestItemList : TeaModel {
-            [NameInMap("LmItemId")]
-            [Validation(Required=false)]
-            public string LmItemId { get; set; }
-
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public long? ItemId { get; set; }
+
+            [NameInMap("LmItemId")]
+            [Validation(Required=false)]
+            public string LmItemId { get; set; }
 
             [NameInMap("SkuList")]
             [Validation(Required=false)]

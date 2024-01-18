@@ -17,24 +17,31 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RefundApplicationData")]
         [Validation(Required=false)]
         public ApplyRefundResponseBodyRefundApplicationData RefundApplicationData { get; set; }
         public class ApplyRefundResponseBodyRefundApplicationData : TeaModel {
-            [NameInMap("DisputeType")]
+            [NameInMap("DisputeId")]
             [Validation(Required=false)]
-            public int? DisputeType { get; set; }
-            [NameInMap("SubLmOrderId")]
-            [Validation(Required=false)]
-            public string SubLmOrderId { get; set; }
+            public long? DisputeId { get; set; }
+
             [NameInMap("DisputeStatus")]
             [Validation(Required=false)]
             public int? DisputeStatus { get; set; }
-        };
+
+            [NameInMap("DisputeType")]
+            [Validation(Required=false)]
+            public int? DisputeType { get; set; }
+
+            [NameInMap("SubLmOrderId")]
+            [Validation(Required=false)]
+            public string SubLmOrderId { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

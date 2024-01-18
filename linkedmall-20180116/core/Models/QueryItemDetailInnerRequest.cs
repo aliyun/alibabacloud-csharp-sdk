@@ -13,22 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("ItemId")]
-        [Validation(Required=false)]
-        public long? ItemId { get; set; }
-
-        [NameInMap("LmItemId")]
-        [Validation(Required=false)]
-        public string LmItemId { get; set; }
-
-        [NameInMap("UseAnonymousTbAccount")]
-        [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
-
-        [NameInMap("ThirdPartyUserId")]
-        [Validation(Required=false)]
-        public string ThirdPartyUserId { get; set; }
-
         [NameInMap("BizUid")]
         [Validation(Required=false)]
         public string BizUid { get; set; }
@@ -40,6 +24,22 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
+
+        [NameInMap("ItemId")]
+        [Validation(Required=false)]
+        public long? ItemId { get; set; }
+
+        [NameInMap("LmItemId")]
+        [Validation(Required=false)]
+        public string LmItemId { get; set; }
+
+        [NameInMap("ThirdPartyUserId")]
+        [Validation(Required=false)]
+        public string ThirdPartyUserId { get; set; }
+
+        [NameInMap("UseAnonymousTbAccount")]
+        [Validation(Required=false)]
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

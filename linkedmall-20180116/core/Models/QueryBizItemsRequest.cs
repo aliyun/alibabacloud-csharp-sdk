@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("SubBizId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string SubBizId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("SubBizId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string SubBizId { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]

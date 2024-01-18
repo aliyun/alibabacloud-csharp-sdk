@@ -9,33 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryMovieSeatsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("SubMessage")]
-        [Validation(Required=false)]
-        public string SubMessage { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("LogsId")]
+        [Validation(Required=false)]
+        public string LogsId { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("SubCode")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SubCode { get; set; }
-
-        [NameInMap("LogsId")]
-        [Validation(Required=false)]
-        public string LogsId { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("SeatMap")]
         [Validation(Required=false)]
@@ -44,45 +32,51 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("MaxCanBuy")]
             [Validation(Required=false)]
             public long? MaxCanBuy { get; set; }
-            [NameInMap("TipMessage")]
-            [Validation(Required=false)]
-            public string TipMessage { get; set; }
-            [NameInMap("MaxRow")]
-            [Validation(Required=false)]
-            public long? MaxRow { get; set; }
-            [NameInMap("MinColumn")]
-            [Validation(Required=false)]
-            public long? MinColumn { get; set; }
-            [NameInMap("MinTopPx")]
-            [Validation(Required=false)]
-            public long? MinTopPx { get; set; }
-            [NameInMap("Notice")]
-            [Validation(Required=false)]
-            public string Notice { get; set; }
+
             [NameInMap("MaxColumn")]
             [Validation(Required=false)]
             public long? MaxColumn { get; set; }
-            [NameInMap("Regular")]
-            [Validation(Required=false)]
-            public bool? Regular { get; set; }
-            [NameInMap("MaxTopPx")]
-            [Validation(Required=false)]
-            public long? MaxTopPx { get; set; }
+
             [NameInMap("MaxLeftPx")]
             [Validation(Required=false)]
             public long? MaxLeftPx { get; set; }
-            [NameInMap("SoldCount")]
+
+            [NameInMap("MaxRow")]
             [Validation(Required=false)]
-            public long? SoldCount { get; set; }
-            [NameInMap("MinRow")]
+            public long? MaxRow { get; set; }
+
+            [NameInMap("MaxTopPx")]
             [Validation(Required=false)]
-            public long? MinRow { get; set; }
-            [NameInMap("SeatCount")]
+            public long? MaxTopPx { get; set; }
+
+            [NameInMap("MinColumn")]
             [Validation(Required=false)]
-            public long? SeatCount { get; set; }
+            public long? MinColumn { get; set; }
+
             [NameInMap("MinLeftPx")]
             [Validation(Required=false)]
             public long? MinLeftPx { get; set; }
+
+            [NameInMap("MinRow")]
+            [Validation(Required=false)]
+            public long? MinRow { get; set; }
+
+            [NameInMap("MinTopPx")]
+            [Validation(Required=false)]
+            public long? MinTopPx { get; set; }
+
+            [NameInMap("Notice")]
+            [Validation(Required=false)]
+            public string Notice { get; set; }
+
+            [NameInMap("Regular")]
+            [Validation(Required=false)]
+            public bool? Regular { get; set; }
+
+            [NameInMap("SeatCount")]
+            [Validation(Required=false)]
+            public long? SeatCount { get; set; }
+
             [NameInMap("Seats")]
             [Validation(Required=false)]
             public QueryMovieSeatsResponseBodySeatMapSeats Seats { get; set; }
@@ -91,50 +85,71 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 [Validation(Required=false)]
                 public List<QueryMovieSeatsResponseBodySeatMapSeatsSeat> Seat { get; set; }
                 public class QueryMovieSeatsResponseBodySeatMapSeatsSeat : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public long? Status { get; set; }
-
-                    [NameInMap("Flag")]
-                    [Validation(Required=false)]
-                    public long? Flag { get; set; }
-
-                    [NameInMap("ExtId")]
-                    [Validation(Required=false)]
-                    public string ExtId { get; set; }
-
-                    [NameInMap("RowName")]
-                    [Validation(Required=false)]
-                    public string RowName { get; set; }
-
-                    [NameInMap("TopPx")]
-                    [Validation(Required=false)]
-                    public long? TopPx { get; set; }
-
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public string Area { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                    [NameInMap("LeftPx")]
-                    [Validation(Required=false)]
-                    public long? LeftPx { get; set; }
 
                     [NameInMap("Column")]
                     [Validation(Required=false)]
                     public long? Column { get; set; }
 
+                    [NameInMap("ExtId")]
+                    [Validation(Required=false)]
+                    public string ExtId { get; set; }
+
+                    [NameInMap("Flag")]
+                    [Validation(Required=false)]
+                    public long? Flag { get; set; }
+
+                    [NameInMap("LeftPx")]
+                    [Validation(Required=false)]
+                    public long? LeftPx { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
                     [NameInMap("Row")]
                     [Validation(Required=false)]
                     public long? Row { get; set; }
 
+                    [NameInMap("RowName")]
+                    [Validation(Required=false)]
+                    public string RowName { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public long? Status { get; set; }
+
+                    [NameInMap("TopPx")]
+                    [Validation(Required=false)]
+                    public long? TopPx { get; set; }
+
                 }
 
             }
-        };
+
+            [NameInMap("SoldCount")]
+            [Validation(Required=false)]
+            public long? SoldCount { get; set; }
+
+            [NameInMap("TipMessage")]
+            [Validation(Required=false)]
+            public string TipMessage { get; set; }
+
+        }
+
+        [NameInMap("SubCode")]
+        [Validation(Required=false)]
+        public string SubCode { get; set; }
+
+        [NameInMap("SubMessage")]
+        [Validation(Required=false)]
+        public string SubMessage { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

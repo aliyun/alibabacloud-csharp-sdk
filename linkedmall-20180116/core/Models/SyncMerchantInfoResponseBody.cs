@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Model")]
         [Validation(Required=false)]
         public SyncMerchantInfoResponseBodyModel Model { get; set; }
@@ -28,13 +24,20 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
-        };
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

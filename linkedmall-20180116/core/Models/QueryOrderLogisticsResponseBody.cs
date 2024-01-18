@@ -17,26 +17,48 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OrderLogistics")]
         [Validation(Required=false)]
         public QueryOrderLogisticsResponseBodyOrderLogistics OrderLogistics { get; set; }
         public class QueryOrderLogisticsResponseBodyOrderLogistics : TeaModel {
-            [NameInMap("LogisticsCompanyCode")]
-            [Validation(Required=false)]
-            public string LogisticsCompanyCode { get; set; }
-            [NameInMap("LogisticsCompanyName")]
-            [Validation(Required=false)]
-            public string LogisticsCompanyName { get; set; }
             [NameInMap("DataProvider")]
             [Validation(Required=false)]
             public string DataProvider { get; set; }
+
             [NameInMap("DataProviderTitle")]
             [Validation(Required=false)]
             public string DataProviderTitle { get; set; }
+
+            [NameInMap("Fetcher")]
+            [Validation(Required=false)]
+            public QueryOrderLogisticsResponseBodyOrderLogisticsFetcher Fetcher { get; set; }
+            public class QueryOrderLogisticsResponseBodyOrderLogisticsFetcher : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
+                public string Address { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("PhoneNumber")]
+                [Validation(Required=false)]
+                public string PhoneNumber { get; set; }
+
+                [NameInMap("ZipCode")]
+                [Validation(Required=false)]
+                public string ZipCode { get; set; }
+
+            }
+
+            [NameInMap("LogisticsCompanyCode")]
+            [Validation(Required=false)]
+            public string LogisticsCompanyCode { get; set; }
+
+            [NameInMap("LogisticsCompanyName")]
+            [Validation(Required=false)]
+            public string LogisticsCompanyName { get; set; }
+
             [NameInMap("LogisticsDetailList")]
             [Validation(Required=false)]
             public QueryOrderLogisticsResponseBodyOrderLogisticsLogisticsDetailList LogisticsDetailList { get; set; }
@@ -60,6 +82,7 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 }
 
             }
+
             [NameInMap("Receiver")]
             [Validation(Required=false)]
             public QueryOrderLogisticsResponseBodyOrderLogisticsReceiver Receiver { get; set; }
@@ -81,28 +104,12 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 public string ZipCode { get; set; }
 
             }
-            [NameInMap("Fetcher")]
-            [Validation(Required=false)]
-            public QueryOrderLogisticsResponseBodyOrderLogisticsFetcher Fetcher { get; set; }
-            public class QueryOrderLogisticsResponseBodyOrderLogisticsFetcher : TeaModel {
-                [NameInMap("Address")]
-                [Validation(Required=false)]
-                public string Address { get; set; }
 
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
+        }
 
-                [NameInMap("PhoneNumber")]
-                [Validation(Required=false)]
-                public string PhoneNumber { get; set; }
-
-                [NameInMap("ZipCode")]
-                [Validation(Required=false)]
-                public string ZipCode { get; set; }
-
-            }
-        };
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

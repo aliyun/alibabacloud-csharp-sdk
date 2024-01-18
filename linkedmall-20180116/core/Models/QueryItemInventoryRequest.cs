@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public List<QueryItemInventoryRequestItemList> ItemList { get; set; }
         public class QueryItemInventoryRequestItemList : TeaModel {
-            [NameInMap("LmItemId")]
-            [Validation(Required=false)]
-            public string LmItemId { get; set; }
-
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public long? ItemId { get; set; }
+
+            [NameInMap("LmItemId")]
+            [Validation(Required=false)]
+            public string LmItemId { get; set; }
 
             [NameInMap("SkuIdList")]
             [Validation(Required=false)]

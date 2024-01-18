@@ -13,6 +13,64 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("DeliveryAddress")]
+        [Validation(Required=false)]
+        public QueryAddressDetailResponseBodyDeliveryAddress DeliveryAddress { get; set; }
+        public class QueryAddressDetailResponseBodyDeliveryAddress : TeaModel {
+            [NameInMap("AddressDetail")]
+            [Validation(Required=false)]
+            public string AddressDetail { get; set; }
+
+            [NameInMap("AddressId")]
+            [Validation(Required=false)]
+            public long? AddressId { get; set; }
+
+            [NameInMap("Area")]
+            [Validation(Required=false)]
+            public string Area { get; set; }
+
+            [NameInMap("City")]
+            [Validation(Required=false)]
+            public string City { get; set; }
+
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
+
+            [NameInMap("DivisionCode")]
+            [Validation(Required=false)]
+            public string DivisionCode { get; set; }
+
+            [NameInMap("FullName")]
+            [Validation(Required=false)]
+            public string FullName { get; set; }
+
+            [NameInMap("Mobile")]
+            [Validation(Required=false)]
+            public string Mobile { get; set; }
+
+            [NameInMap("PostCode")]
+            [Validation(Required=false)]
+            public string PostCode { get; set; }
+
+            [NameInMap("Province")]
+            [Validation(Required=false)]
+            public string Province { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("Town")]
+            [Validation(Required=false)]
+            public string Town { get; set; }
+
+            [NameInMap("TownDivisionCode")]
+            [Validation(Required=false)]
+            public string TownDivisionCode { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,51 +78,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("DeliveryAddress")]
-        [Validation(Required=false)]
-        public QueryAddressDetailResponseBodyDeliveryAddress DeliveryAddress { get; set; }
-        public class QueryAddressDetailResponseBodyDeliveryAddress : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-            [NameInMap("PostCode")]
-            [Validation(Required=false)]
-            public string PostCode { get; set; }
-            [NameInMap("FullName")]
-            [Validation(Required=false)]
-            public string FullName { get; set; }
-            [NameInMap("AddressDetail")]
-            [Validation(Required=false)]
-            public string AddressDetail { get; set; }
-            [NameInMap("City")]
-            [Validation(Required=false)]
-            public string City { get; set; }
-            [NameInMap("AddressId")]
-            [Validation(Required=false)]
-            public long? AddressId { get; set; }
-            [NameInMap("DivisionCode")]
-            [Validation(Required=false)]
-            public string DivisionCode { get; set; }
-            [NameInMap("Mobile")]
-            [Validation(Required=false)]
-            public string Mobile { get; set; }
-            [NameInMap("Country")]
-            [Validation(Required=false)]
-            public string Country { get; set; }
-            [NameInMap("Area")]
-            [Validation(Required=false)]
-            public string Area { get; set; }
-            [NameInMap("TownDivisionCode")]
-            [Validation(Required=false)]
-            public string TownDivisionCode { get; set; }
-            [NameInMap("Town")]
-            [Validation(Required=false)]
-            public string Town { get; set; }
-            [NameInMap("Province")]
-            [Validation(Required=false)]
-            public string Province { get; set; }
-        };
 
     }
 

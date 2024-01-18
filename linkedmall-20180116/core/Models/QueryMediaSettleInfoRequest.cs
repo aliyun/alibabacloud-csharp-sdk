@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryMediaSettleInfoRequest : TeaModel {
-        [NameInMap("MediaName")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public string MediaName { get; set; }
+        public string BizId { get; set; }
 
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("ExtInfo")]
+        [Validation(Required=false)]
+        public string ExtInfo { get; set; }
+
+        [NameInMap("MediaName")]
+        [Validation(Required=false)]
+        public string MediaName { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("SettleNo")]
         [Validation(Required=false)]
@@ -24,22 +44,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ExtInfo")]
-        [Validation(Required=false)]
-        public string ExtInfo { get; set; }
 
     }
 

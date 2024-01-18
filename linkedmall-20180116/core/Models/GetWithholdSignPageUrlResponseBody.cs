@@ -25,13 +25,15 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public GetWithholdSignPageUrlResponseBodyWithholdSignResponse WithholdSignResponse { get; set; }
         public class GetWithholdSignPageUrlResponseBodyWithholdSignResponse : TeaModel {
-            [NameInMap("PageUrl")]
-            [Validation(Required=false)]
-            public string PageUrl { get; set; }
             [NameInMap("OutRequestNo")]
             [Validation(Required=false)]
             public string OutRequestNo { get; set; }
-        };
+
+            [NameInMap("PageUrl")]
+            [Validation(Required=false)]
+            public string PageUrl { get; set; }
+
+        }
 
     }
 

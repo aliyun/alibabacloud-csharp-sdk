@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class CancelOrderRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("LmOrderId")]
         [Validation(Required=false)]
         public string LmOrderId { get; set; }
-
-        [NameInMap("AccountType")]
-        [Validation(Required=false)]
-        public string AccountType { get; set; }
 
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]

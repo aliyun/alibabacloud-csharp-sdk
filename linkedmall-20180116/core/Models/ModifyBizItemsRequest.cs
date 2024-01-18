@@ -13,37 +13,25 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("SubBizId")]
-        [Validation(Required=false)]
-        public string SubBizId { get; set; }
-
         [NameInMap("ItemList")]
         [Validation(Required=false)]
         public List<ModifyBizItemsRequestItemList> ItemList { get; set; }
         public class ModifyBizItemsRequestItemList : TeaModel {
-            [NameInMap("LmItemId")]
-            [Validation(Required=false)]
-            public string LmItemId { get; set; }
-
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public long? ItemId { get; set; }
+
+            [NameInMap("LmItemId")]
+            [Validation(Required=false)]
+            public string LmItemId { get; set; }
 
             [NameInMap("SkuList")]
             [Validation(Required=false)]
             public List<ModifyBizItemsRequestItemListSkuList> SkuList { get; set; }
             public class ModifyBizItemsRequestItemListSkuList : TeaModel {
-                [NameInMap("StatusAction")]
+                [NameInMap("BenefitId")]
                 [Validation(Required=false)]
-                public long? StatusAction { get; set; }
-
-                [NameInMap("PriceCent")]
-                [Validation(Required=false)]
-                public long? PriceCent { get; set; }
-
-                [NameInMap("SkuId")]
-                [Validation(Required=false)]
-                public long? SkuId { get; set; }
+                public string BenefitId { get; set; }
 
                 [NameInMap("Points")]
                 [Validation(Required=false)]
@@ -53,17 +41,29 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 [Validation(Required=false)]
                 public long? PointsAmount { get; set; }
 
-                [NameInMap("BenefitId")]
+                [NameInMap("PriceCent")]
                 [Validation(Required=false)]
-                public string BenefitId { get; set; }
+                public long? PriceCent { get; set; }
 
                 [NameInMap("Quantity")]
                 [Validation(Required=false)]
                 public int? Quantity { get; set; }
 
+                [NameInMap("SkuId")]
+                [Validation(Required=false)]
+                public long? SkuId { get; set; }
+
+                [NameInMap("StatusAction")]
+                [Validation(Required=false)]
+                public long? StatusAction { get; set; }
+
             }
 
         }
+
+        [NameInMap("SubBizId")]
+        [Validation(Required=false)]
+        public string SubBizId { get; set; }
 
     }
 

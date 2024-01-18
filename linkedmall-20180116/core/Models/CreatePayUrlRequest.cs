@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BuyInfo { get; set; }
 
-        [NameInMap("UseAnonymousTbAccount")]
-        [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
-
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]
         public string ThirdPartyUserId { get; set; }
+
+        [NameInMap("UseAnonymousTbAccount")]
+        [Validation(Required=false)]
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

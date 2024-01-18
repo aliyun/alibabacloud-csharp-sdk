@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class AddItemLimitRuleRequest : TeaModel {
+        [NameInMap("BeginTime")]
+        [Validation(Required=false)]
+        public long? BeginTime { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("SubBizCode")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SubBizCode { get; set; }
+        public long? EndTime { get; set; }
+
+        [NameInMap("ItemId")]
+        [Validation(Required=false)]
+        public long? ItemId { get; set; }
 
         [NameInMap("LmActivityId")]
         [Validation(Required=false)]
@@ -25,25 +33,17 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string LmItemId { get; set; }
 
-        [NameInMap("ItemId")]
-        [Validation(Required=false)]
-        public long? ItemId { get; set; }
-
-        [NameInMap("UpperNum")]
-        [Validation(Required=false)]
-        public int? UpperNum { get; set; }
-
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
-        [NameInMap("BeginTime")]
+        [NameInMap("SubBizCode")]
         [Validation(Required=false)]
-        public long? BeginTime { get; set; }
+        public string SubBizCode { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("UpperNum")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public int? UpperNum { get; set; }
 
     }
 

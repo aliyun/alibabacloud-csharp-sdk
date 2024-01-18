@@ -13,33 +13,33 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("SubBizId")]
+        [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public string SubBizId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("LmItemIds")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> LmItemIds { get; set; }
+        public long? CategoryId { get; set; }
 
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
         public Dictionary<string, object> ItemIds { get; set; }
 
-        [NameInMap("CategoryId")]
+        [NameInMap("LmItemIds")]
         [Validation(Required=false)]
-        public long? CategoryId { get; set; }
+        public Dictionary<string, object> LmItemIds { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("SubBizId")]
+        [Validation(Required=false)]
+        public string SubBizId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

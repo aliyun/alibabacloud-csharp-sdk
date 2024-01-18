@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("LmActivityId")]
+        [Validation(Required=false)]
+        public long? LmActivityId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("LmActivityId")]
-        [Validation(Required=false)]
-        public long? LmActivityId { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("ExtJson")]
+        [Validation(Required=false)]
+        public string ExtJson { get; set; }
+
         [NameInMap("MovieId")]
         [Validation(Required=false)]
         public long? MovieId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
-
-        [NameInMap("ExtJson")]
-        [Validation(Required=false)]
-        public string ExtJson { get; set; }
 
     }
 

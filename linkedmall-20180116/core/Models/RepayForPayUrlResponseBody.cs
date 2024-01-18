@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Model")]
         [Validation(Required=false)]
         public RepayForPayUrlResponseBodyModel Model { get; set; }
@@ -28,7 +24,12 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("FrontUrl")]
             [Validation(Required=false)]
             public string FrontUrl { get; set; }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

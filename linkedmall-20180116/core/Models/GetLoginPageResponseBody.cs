@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("ReturnUrl")]
             [Validation(Required=false)]
             public string ReturnUrl { get; set; }
-        };
+
+        }
 
     }
 

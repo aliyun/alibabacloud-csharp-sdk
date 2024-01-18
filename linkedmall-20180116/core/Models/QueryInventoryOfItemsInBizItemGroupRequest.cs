@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ItemIds { get; set; }
+        public List<long?> ItemIds { get; set; }
 
         [NameInMap("LmItemIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> LmItemIds { get; set; }
+        public List<string> LmItemIds { get; set; }
 
         [NameInMap("SubBizId")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class GetCustomServiceUrlRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("BizUid")]
         [Validation(Required=false)]
         public string BizUid { get; set; }
-
-        [NameInMap("SellerId")]
-        [Validation(Required=false)]
-        public string SellerId { get; set; }
 
         [NameInMap("Cuid")]
         [Validation(Required=false)]
@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Nick { get; set; }
 
-        [NameInMap("UseAnonymousTbAccount")]
+        [NameInMap("SellerId")]
         [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
+        public string SellerId { get; set; }
 
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]
         public string ThirdPartyUserId { get; set; }
 
-        [NameInMap("AccountType")]
+        [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
-        public string AccountType { get; set; }
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

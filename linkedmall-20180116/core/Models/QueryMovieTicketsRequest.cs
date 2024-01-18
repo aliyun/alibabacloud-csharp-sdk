@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizUid { get; set; }
 
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
         [NameInMap("ExtJson")]
         [Validation(Required=false)]
         public string ExtJson { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
     }
 

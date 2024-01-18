@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
-
         [NameInMap("DivisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
 
     }
 

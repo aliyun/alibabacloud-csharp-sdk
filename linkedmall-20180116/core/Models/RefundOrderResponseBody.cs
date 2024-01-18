@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RefundResponse")]
         [Validation(Required=false)]
         public RefundOrderResponseBodyRefundResponse RefundResponse { get; set; }
@@ -28,19 +24,28 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("FundChange")]
             [Validation(Required=false)]
             public string FundChange { get; set; }
+
             [NameInMap("GmtRefundPay")]
             [Validation(Required=false)]
             public string GmtRefundPay { get; set; }
-            [NameInMap("TradeNo")]
-            [Validation(Required=false)]
-            public string TradeNo { get; set; }
-            [NameInMap("OutTradeNo")]
-            [Validation(Required=false)]
-            public string OutTradeNo { get; set; }
+
             [NameInMap("OutRequestNo")]
             [Validation(Required=false)]
             public string OutRequestNo { get; set; }
-        };
+
+            [NameInMap("OutTradeNo")]
+            [Validation(Required=false)]
+            public string OutTradeNo { get; set; }
+
+            [NameInMap("TradeNo")]
+            [Validation(Required=false)]
+            public string TradeNo { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

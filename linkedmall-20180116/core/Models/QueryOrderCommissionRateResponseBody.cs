@@ -13,29 +13,14 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CommissionModels")]
         [Validation(Required=false)]
         public List<QueryOrderCommissionRateResponseBodyCommissionModels> CommissionModels { get; set; }
         public class QueryOrderCommissionRateResponseBodyCommissionModels : TeaModel {
-            [NameInMap("LmOrderId")]
-            [Validation(Required=false)]
-            public long? LmOrderId { get; set; }
-
             [NameInMap("CommissionInfo")]
             [Validation(Required=false)]
             public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfo CommissionInfo { get; set; }
             public class QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfo : TeaModel {
-                [NameInMap("RateType")]
-                [Validation(Required=false)]
-                public string RateType { get; set; }
                 [NameInMap("RateConfig")]
                 [Validation(Required=false)]
                 public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfig RateConfig { get; set; }
@@ -44,20 +29,37 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     [Validation(Required=false)]
                     public List<QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfigConfigs> Configs { get; set; }
                     public class QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfigConfigs : TeaModel {
-                        [NameInMap("ValueUnit")]
-                        [Validation(Required=false)]
-                        public string ValueUnit { get; set; }
-
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public long? Value { get; set; }
 
+                        [NameInMap("ValueUnit")]
+                        [Validation(Required=false)]
+                        public string ValueUnit { get; set; }
+
                     }
 
                 }
-            };
+
+                [NameInMap("RateType")]
+                [Validation(Required=false)]
+                public string RateType { get; set; }
+
+            }
+
+            [NameInMap("LmOrderId")]
+            [Validation(Required=false)]
+            public long? LmOrderId { get; set; }
 
         }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

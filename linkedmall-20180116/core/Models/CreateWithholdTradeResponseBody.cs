@@ -25,19 +25,23 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public CreateWithholdTradeResponseBodyWithholdTradeResponse WithholdTradeResponse { get; set; }
         public class CreateWithholdTradeResponseBodyWithholdTradeResponse : TeaModel {
-            [NameInMap("PaymentDate")]
-            [Validation(Required=false)]
-            public string PaymentDate { get; set; }
-            [NameInMap("TradeNo")]
-            [Validation(Required=false)]
-            public string TradeNo { get; set; }
             [NameInMap("OutRequestNo")]
             [Validation(Required=false)]
             public string OutRequestNo { get; set; }
+
             [NameInMap("OutTradeNo")]
             [Validation(Required=false)]
             public string OutTradeNo { get; set; }
-        };
+
+            [NameInMap("PaymentDate")]
+            [Validation(Required=false)]
+            public string PaymentDate { get; set; }
+
+            [NameInMap("TradeNo")]
+            [Validation(Required=false)]
+            public string TradeNo { get; set; }
+
+        }
 
     }
 

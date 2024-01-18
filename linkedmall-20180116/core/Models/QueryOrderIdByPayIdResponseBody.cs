@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LmOrderIds")]
         [Validation(Required=false)]
         public QueryOrderIdByPayIdResponseBodyLmOrderIds LmOrderIds { get; set; }
@@ -29,9 +21,21 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryOrderIdByPayIdResponseBodyLmOrderIdsLmOrderIds> LmOrderIds { get; set; }
             public class QueryOrderIdByPayIdResponseBodyLmOrderIdsLmOrderIds : TeaModel {
+                [NameInMap("LmOrderId")]
+                [Validation(Required=false)]
                 public long? LmOrderId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

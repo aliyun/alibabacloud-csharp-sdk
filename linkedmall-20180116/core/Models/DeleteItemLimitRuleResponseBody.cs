@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Model")]
-        [Validation(Required=false)]
-        public bool? Model { get; set; }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public bool? Model { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

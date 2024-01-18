@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FailedItemList")]
         [Validation(Required=false)]
         public ModifyBasicAndBizItemsResponseBodyFailedItemList FailedItemList { get; set; }
@@ -29,8 +21,16 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<ModifyBasicAndBizItemsResponseBodyFailedItemListItem> Item { get; set; }
             public class ModifyBasicAndBizItemsResponseBodyFailedItemListItem : TeaModel {
-                public string LmItemId { get; set; }
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
                 public long? ItemId { get; set; }
+
+                [NameInMap("LmItemId")]
+                [Validation(Required=false)]
+                public string LmItemId { get; set; }
+
+                [NameInMap("SkuIdList")]
+                [Validation(Required=false)]
                 public ModifyBasicAndBizItemsResponseBodyFailedItemListItemSkuIdList SkuIdList { get; set; }
                 public class ModifyBasicAndBizItemsResponseBodyFailedItemListItemSkuIdList : TeaModel {
                     [NameInMap("Sku")]
@@ -38,8 +38,18 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     public List<string> Sku { get; set; }
 
                 }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryItemInventoryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("SubMessage")]
-        [Validation(Required=false)]
-        public string SubMessage { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("SubCode")]
-        [Validation(Required=false)]
-        public string SubCode { get; set; }
 
         [NameInMap("ItemList")]
         [Validation(Required=false)]
@@ -41,18 +21,22 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryItemInventoryResponseBodyItemListItem> Item { get; set; }
             public class QueryItemInventoryResponseBodyItemListItem : TeaModel {
-                public string LmItemId { get; set; }
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
                 public long? ItemId { get; set; }
+
+                [NameInMap("LmItemId")]
+                [Validation(Required=false)]
+                public string LmItemId { get; set; }
+
+                [NameInMap("SkuList")]
+                [Validation(Required=false)]
                 public QueryItemInventoryResponseBodyItemListItemSkuList SkuList { get; set; }
                 public class QueryItemInventoryResponseBodyItemListItemSkuList : TeaModel {
                     [NameInMap("Sku")]
                     [Validation(Required=false)]
                     public List<QueryItemInventoryResponseBodyItemListItemSkuListSku> Sku { get; set; }
                     public class QueryItemInventoryResponseBodyItemListItemSkuListSku : TeaModel {
-                        [NameInMap("SkuId")]
-                        [Validation(Required=false)]
-                        public long? SkuId { get; set; }
-
                         [NameInMap("Inventory")]
                         [Validation(Required=false)]
                         public QueryItemInventoryResponseBodyItemListItemSkuListSkuInventory Inventory { get; set; }
@@ -60,13 +44,43 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                             [NameInMap("Quantity")]
                             [Validation(Required=false)]
                             public long? Quantity { get; set; }
-                        };
+
+                        }
+
+                        /// <summary>
+                        /// skuId
+                        /// </summary>
+                        [NameInMap("SkuId")]
+                        [Validation(Required=false)]
+                        public long? SkuId { get; set; }
 
                     }
 
                 }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SubCode")]
+        [Validation(Required=false)]
+        public string SubCode { get; set; }
+
+        [NameInMap("SubMessage")]
+        [Validation(Required=false)]
+        public string SubMessage { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LmItemActivityModelList")]
         [Validation(Required=false)]
         public ListItemActivitiesResponseBodyLmItemActivityModelList LmItemActivityModelList { get; set; }
@@ -29,33 +21,25 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModel> LmItemActivityModel { get; set; }
             public class ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModel : TeaModel {
-                public string LmItemId { get; set; }
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
                 public long? ItemId { get; set; }
+
+                [NameInMap("LmActivityPopModel")]
+                [Validation(Required=false)]
                 public ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModelLmActivityPopModel LmActivityPopModel { get; set; }
                 public class ListItemActivitiesResponseBodyLmItemActivityModelListLmItemActivityModelLmActivityPopModel : TeaModel {
-                    [NameInMap("SubBizCode")]
+                    [NameInMap("BizId")]
                     [Validation(Required=false)]
-                    public string SubBizCode { get; set; }
-
-                    [NameInMap("EndDate")]
-                    [Validation(Required=false)]
-                    public string EndDate { get; set; }
+                    public string BizId { get; set; }
 
                     [NameInMap("DisplayDate")]
                     [Validation(Required=false)]
                     public string DisplayDate { get; set; }
 
-                    [NameInMap("BizId")]
+                    [NameInMap("EndDate")]
                     [Validation(Required=false)]
-                    public string BizId { get; set; }
-
-                    [NameInMap("StartDate")]
-                    [Validation(Required=false)]
-                    public string StartDate { get; set; }
-
-                    [NameInMap("Title")]
-                    [Validation(Required=false)]
-                    public string Title { get; set; }
+                    public string EndDate { get; set; }
 
                     [NameInMap("ExtInfo")]
                     [Validation(Required=false)]
@@ -65,9 +49,35 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
+                    [NameInMap("StartDate")]
+                    [Validation(Required=false)]
+                    public string StartDate { get; set; }
+
+                    [NameInMap("SubBizCode")]
+                    [Validation(Required=false)]
+                    public string SubBizCode { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
                 }
+
+                [NameInMap("LmItemId")]
+                [Validation(Required=false)]
+                public string LmItemId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

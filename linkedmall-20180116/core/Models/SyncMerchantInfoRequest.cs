@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("ItemList")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string ItemList { get; set; }
 
         [NameInMap("SellerNick")]
         [Validation(Required=false)]
         public string SellerNick { get; set; }
 
-        [NameInMap("ItemList")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string ItemList { get; set; }
+        public string TaskId { get; set; }
 
         [NameInMap("TimeStamp")]
         [Validation(Required=false)]

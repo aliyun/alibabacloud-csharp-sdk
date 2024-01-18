@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class RenderOrderRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -17,51 +21,47 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizUid { get; set; }
 
-        [NameInMap("ExtJson")]
-        [Validation(Required=false)]
-        public string ExtJson { get; set; }
-
         [NameInMap("DeliveryAddress")]
         [Validation(Required=false)]
         public string DeliveryAddress { get; set; }
 
-        [NameInMap("UseAnonymousTbAccount")]
+        [NameInMap("ExtJson")]
         [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
-
-        [NameInMap("ThirdPartyUserId")]
-        [Validation(Required=false)]
-        public string ThirdPartyUserId { get; set; }
-
-        [NameInMap("LmItemId")]
-        [Validation(Required=false)]
-        public string LmItemId { get; set; }
-
-        [NameInMap("AccountType")]
-        [Validation(Required=false)]
-        public string AccountType { get; set; }
+        public string ExtJson { get; set; }
 
         [NameInMap("ItemList")]
         [Validation(Required=false)]
         public List<RenderOrderRequestItemList> ItemList { get; set; }
         public class RenderOrderRequestItemList : TeaModel {
-            [NameInMap("SkuId")]
+            [NameInMap("ItemId")]
             [Validation(Required=false)]
-            public long? SkuId { get; set; }
+            public long? ItemId { get; set; }
 
             [NameInMap("LmItemId")]
             [Validation(Required=false)]
             public string LmItemId { get; set; }
 
-            [NameInMap("ItemId")]
-            [Validation(Required=false)]
-            public long? ItemId { get; set; }
-
             [NameInMap("Quantity")]
             [Validation(Required=false)]
             public int? Quantity { get; set; }
 
+            [NameInMap("SkuId")]
+            [Validation(Required=false)]
+            public long? SkuId { get; set; }
+
         }
+
+        [NameInMap("LmItemId")]
+        [Validation(Required=false)]
+        public string LmItemId { get; set; }
+
+        [NameInMap("ThirdPartyUserId")]
+        [Validation(Required=false)]
+        public string ThirdPartyUserId { get; set; }
+
+        [NameInMap("UseAnonymousTbAccount")]
+        [Validation(Required=false)]
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

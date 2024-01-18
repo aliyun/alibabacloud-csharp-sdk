@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class ExecuteNodeRequest : TeaModel {
-        [NameInMap("ProcessInstanceId")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public string ProcessInstanceId { get; set; }
+        public string BizId { get; set; }
 
-        [NameInMap("ProcessId")]
+        [NameInMap("NodeId")]
         [Validation(Required=false)]
-        public string ProcessId { get; set; }
+        public string NodeId { get; set; }
 
         [NameInMap("NodeInstanceId")]
         [Validation(Required=false)]
         public string NodeInstanceId { get; set; }
 
-        [NameInMap("NodeId")]
+        [NameInMap("ProcessId")]
         [Validation(Required=false)]
-        public string NodeId { get; set; }
+        public string ProcessId { get; set; }
+
+        [NameInMap("ProcessInstanceId")]
+        [Validation(Required=false)]
+        public string ProcessInstanceId { get; set; }
 
         [NameInMap("RequestData")]
         [Validation(Required=false)]

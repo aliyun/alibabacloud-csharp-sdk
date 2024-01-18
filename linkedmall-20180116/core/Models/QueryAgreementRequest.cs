@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryAgreementRequest : TeaModel {
+        [NameInMap("AgreementNo")]
+        [Validation(Required=false)]
+        public string AgreementNo { get; set; }
+
         [NameInMap("ExternalAgreementNo")]
         [Validation(Required=false)]
         public string ExternalAgreementNo { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("MerchantId")]
         [Validation(Required=false)]
         public string MerchantId { get; set; }
-
-        [NameInMap("AgreementNo")]
-        [Validation(Required=false)]
-        public string AgreementNo { get; set; }
 
     }
 

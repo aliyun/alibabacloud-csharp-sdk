@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("LmItemIds")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> LmItemIds { get; set; }
-
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
         public Dictionary<string, object> ItemIds { get; set; }
+
+        [NameInMap("LmItemIds")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> LmItemIds { get; set; }
 
         [NameInMap("QueryTime")]
         [Validation(Required=false)]

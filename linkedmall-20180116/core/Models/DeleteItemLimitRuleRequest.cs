@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("SubBizCode")]
+        [NameInMap("ItemId")]
         [Validation(Required=false)]
-        public string SubBizCode { get; set; }
+        public long? ItemId { get; set; }
 
         [NameInMap("LmActivityId")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string LmItemId { get; set; }
 
-        [NameInMap("ItemId")]
-        [Validation(Required=false)]
-        public long? ItemId { get; set; }
-
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
+
+        [NameInMap("SubBizCode")]
+        [Validation(Required=false)]
+        public string SubBizCode { get; set; }
 
     }
 

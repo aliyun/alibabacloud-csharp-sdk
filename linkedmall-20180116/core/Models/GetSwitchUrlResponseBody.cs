@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

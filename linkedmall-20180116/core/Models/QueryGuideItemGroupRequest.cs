@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("ItemState")]
+        [Validation(Required=false)]
+        public string ItemState { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryOrderCommissionRateRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public long? LmOrderId { get; set; }
 
-        [NameInMap("UseAnonymousTbAccount")]
-        [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
-
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]
         public string ThirdPartyUserId { get; set; }
 
-        [NameInMap("AccountType")]
+        [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
-        public string AccountType { get; set; }
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

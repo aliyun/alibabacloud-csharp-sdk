@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class ApplyRefundRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("ApplyReasonTextId")]
+        [Validation(Required=false)]
+        public long? ApplyReasonTextId { get; set; }
+
+        [NameInMap("ApplyRefundCount")]
+        [Validation(Required=false)]
+        public int? ApplyRefundCount { get; set; }
+
+        [NameInMap("ApplyRefundFee")]
+        [Validation(Required=false)]
+        public long? ApplyRefundFee { get; set; }
+
+        [NameInMap("BizClaimType")]
+        [Validation(Required=false)]
+        public int? BizClaimType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -17,59 +37,39 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizUid { get; set; }
 
-        [NameInMap("SubLmOrderId")]
+        [NameInMap("GoodsStatus")]
         [Validation(Required=false)]
-        public string SubLmOrderId { get; set; }
-
-        [NameInMap("BizClaimType")]
-        [Validation(Required=false)]
-        public int? BizClaimType { get; set; }
-
-        [NameInMap("ApplyRefundFee")]
-        [Validation(Required=false)]
-        public long? ApplyRefundFee { get; set; }
-
-        [NameInMap("ApplyRefundCount")]
-        [Validation(Required=false)]
-        public int? ApplyRefundCount { get; set; }
-
-        [NameInMap("ApplyReasonTextId")]
-        [Validation(Required=false)]
-        public long? ApplyReasonTextId { get; set; }
+        public int? GoodsStatus { get; set; }
 
         [NameInMap("LeaveMessage")]
         [Validation(Required=false)]
         public string LeaveMessage { get; set; }
 
-        [NameInMap("GoodsStatus")]
+        [NameInMap("LeavePictureList")]
         [Validation(Required=false)]
-        public int? GoodsStatus { get; set; }
+        public List<ApplyRefundRequestLeavePictureList> LeavePictureList { get; set; }
+        public class ApplyRefundRequestLeavePictureList : TeaModel {
+            [NameInMap("Desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
 
-        [NameInMap("UseAnonymousTbAccount")]
+            [NameInMap("Picture")]
+            [Validation(Required=false)]
+            public string Picture { get; set; }
+
+        }
+
+        [NameInMap("SubLmOrderId")]
         [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
+        public string SubLmOrderId { get; set; }
 
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]
         public string ThirdPartyUserId { get; set; }
 
-        [NameInMap("AccountType")]
+        [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
-        public string AccountType { get; set; }
-
-        [NameInMap("LeavePictureList")]
-        [Validation(Required=false)]
-        public List<ApplyRefundRequestLeavePictureList> LeavePictureList { get; set; }
-        public class ApplyRefundRequestLeavePictureList : TeaModel {
-            [NameInMap("Picture")]
-            [Validation(Required=false)]
-            public string Picture { get; set; }
-
-            [NameInMap("Desc")]
-            [Validation(Required=false)]
-            public string Desc { get; set; }
-
-        }
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class BatchRegistAnonymousTbAccountResponseBody : TeaModel {
+        [NameInMap("BatchId")]
+        [Validation(Required=false)]
+        public string BatchId { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("BatchId")]
-        [Validation(Required=false)]
-        public string BatchId { get; set; }
 
     }
 

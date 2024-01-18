@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("BizUid")]
+        [Validation(Required=false)]
+        public string BizUid { get; set; }
+
+        [NameInMap("ExtJson")]
+        [Validation(Required=false)]
+        public string ExtJson { get; set; }
+
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
         public long? ScheduleId { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("SeatNames")]
         [Validation(Required=false)]
         public string SeatNames { get; set; }
-
-        [NameInMap("BizUid")]
-        [Validation(Required=false)]
-        public string BizUid { get; set; }
-
-        [NameInMap("Mobile")]
-        [Validation(Required=false)]
-        public string Mobile { get; set; }
-
-        [NameInMap("ExtJson")]
-        [Validation(Required=false)]
-        public string ExtJson { get; set; }
 
     }
 

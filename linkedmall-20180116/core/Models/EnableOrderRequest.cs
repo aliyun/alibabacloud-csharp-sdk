@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class EnableOrderRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
@@ -17,29 +21,25 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizUid { get; set; }
 
-        [NameInMap("OutTradeId")]
+        [NameInMap("ExtJson")]
         [Validation(Required=false)]
-        public string OutTradeId { get; set; }
+        public string ExtJson { get; set; }
 
         [NameInMap("LmOrderId")]
         [Validation(Required=false)]
         public string LmOrderId { get; set; }
 
-        [NameInMap("ExtJson")]
+        [NameInMap("OutTradeId")]
         [Validation(Required=false)]
-        public string ExtJson { get; set; }
-
-        [NameInMap("UseAnonymousTbAccount")]
-        [Validation(Required=false)]
-        public bool? UseAnonymousTbAccount { get; set; }
+        public string OutTradeId { get; set; }
 
         [NameInMap("ThirdPartyUserId")]
         [Validation(Required=false)]
         public string ThirdPartyUserId { get; set; }
 
-        [NameInMap("AccountType")]
+        [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
-        public string AccountType { get; set; }
+        public bool? UseAnonymousTbAccount { get; set; }
 
     }
 

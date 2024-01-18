@@ -13,6 +13,40 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("LoginResult")]
+        [Validation(Required=false)]
+        public GetUserInfoResponseBodyLoginResult LoginResult { get; set; }
+        public class GetUserInfoResponseBodyLoginResult : TeaModel {
+            [NameInMap("BizId")]
+            [Validation(Required=false)]
+            public string BizId { get; set; }
+
+            [NameInMap("BizUid")]
+            [Validation(Required=false)]
+            public string BizUid { get; set; }
+
+            [NameInMap("BizUserName")]
+            [Validation(Required=false)]
+            public string BizUserName { get; set; }
+
+            [NameInMap("ExtInfo")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> ExtInfo { get; set; }
+
+            [NameInMap("LmUserId")]
+            [Validation(Required=false)]
+            public long? LmUserId { get; set; }
+
+            [NameInMap("ReturnUrl")]
+            [Validation(Required=false)]
+            public string ReturnUrl { get; set; }
+
+            [NameInMap("SubBizId")]
+            [Validation(Required=false)]
+            public List<string> SubBizId { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,33 +54,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("LoginResult")]
-        [Validation(Required=false)]
-        public GetUserInfoResponseBodyLoginResult LoginResult { get; set; }
-        public class GetUserInfoResponseBodyLoginResult : TeaModel {
-            [NameInMap("ReturnUrl")]
-            [Validation(Required=false)]
-            public string ReturnUrl { get; set; }
-            [NameInMap("BizUserName")]
-            [Validation(Required=false)]
-            public string BizUserName { get; set; }
-            [NameInMap("BizUid")]
-            [Validation(Required=false)]
-            public string BizUid { get; set; }
-            [NameInMap("BizId")]
-            [Validation(Required=false)]
-            public string BizId { get; set; }
-            [NameInMap("LmUserId")]
-            [Validation(Required=false)]
-            public long? LmUserId { get; set; }
-            [NameInMap("ExtInfo")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> ExtInfo { get; set; }
-            [NameInMap("SubBizId")]
-            [Validation(Required=false)]
-            public List<string> SubBizId { get; set; }
-        };
 
     }
 

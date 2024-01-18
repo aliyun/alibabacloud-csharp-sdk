@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class UnsignWithholdAgreementRequest : TeaModel {
-        [NameInMap("OutRequestNo")]
+        [NameInMap("AgreementNo")]
         [Validation(Required=false)]
-        public string OutRequestNo { get; set; }
+        public string AgreementNo { get; set; }
 
         [NameInMap("ExternalAgreementNo")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string MerchantId { get; set; }
 
-        [NameInMap("AgreementNo")]
+        [NameInMap("OutRequestNo")]
         [Validation(Required=false)]
-        public string AgreementNo { get; set; }
+        public string OutRequestNo { get; set; }
 
     }
 

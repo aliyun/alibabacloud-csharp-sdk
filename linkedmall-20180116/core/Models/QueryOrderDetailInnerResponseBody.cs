@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Model")]
         [Validation(Required=false)]
         public QueryOrderDetailInnerResponseBodyModel Model { get; set; }
@@ -29,113 +25,167 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public QueryOrderDetailInnerResponseBodyModelOrder Order { get; set; }
             public class QueryOrderDetailInnerResponseBodyModelOrder : TeaModel {
-                [NameInMap("Eticket")]
+                [NameInMap("ChannelBizType")]
                 [Validation(Required=false)]
-                public bool? Eticket { get; set; }
-
-                [NameInMap("CreateDate")]
-                [Validation(Required=false)]
-                public string CreateDate { get; set; }
-
-                [NameInMap("LogisticsCompName")]
-                [Validation(Required=false)]
-                public string LogisticsCompName { get; set; }
+                public string ChannelBizType { get; set; }
 
                 [NameInMap("ChannelCode")]
                 [Validation(Required=false)]
                 public string ChannelCode { get; set; }
 
-                [NameInMap("LogisticsMobilePhone")]
+                [NameInMap("ChannelOrderId")]
                 [Validation(Required=false)]
-                public string LogisticsMobilePhone { get; set; }
+                public string ChannelOrderId { get; set; }
 
-                [NameInMap("ResExtInfo")]
+                [NameInMap("CreateDate")]
                 [Validation(Required=false)]
-                public string ResExtInfo { get; set; }
+                public string CreateDate { get; set; }
 
                 [NameInMap("EnableStatus")]
                 [Validation(Required=false)]
                 public int? EnableStatus { get; set; }
 
-                [NameInMap("ChannelBizType")]
+                [NameInMap("EndTime")]
                 [Validation(Required=false)]
-                public string ChannelBizType { get; set; }
+                public long? EndTime { get; set; }
 
-                [NameInMap("Shipping")]
+                [NameInMap("Eticket")]
                 [Validation(Required=false)]
-                public string Shipping { get; set; }
-
-                [NameInMap("OrderPayInfo")]
-                [Validation(Required=false)]
-                public string OrderPayInfo { get; set; }
-
-                [NameInMap("LogisticsStatusDesc")]
-                [Validation(Required=false)]
-                public string LogisticsStatusDesc { get; set; }
-
-                [NameInMap("TbOrderId")]
-                [Validation(Required=false)]
-                public string TbOrderId { get; set; }
-
-                [NameInMap("LogisticsStatus")]
-                [Validation(Required=false)]
-                public int? LogisticsStatus { get; set; }
-
-                [NameInMap("LmOrderId")]
-                [Validation(Required=false)]
-                public long? LmOrderId { get; set; }
-
-                [NameInMap("SellerId")]
-                [Validation(Required=false)]
-                public long? SellerId { get; set; }
-
-                [NameInMap("ShopName")]
-                [Validation(Required=false)]
-                public string ShopName { get; set; }
-
-                [NameInMap("OrderAmount")]
-                [Validation(Required=false)]
-                public long? OrderAmount { get; set; }
+                public bool? Eticket { get; set; }
 
                 [NameInMap("ExtInfo")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> ExtInfo { get; set; }
 
-                [NameInMap("EndTime")]
+                [NameInMap("FundStructureModels")]
                 [Validation(Required=false)]
-                public long? EndTime { get; set; }
+                public QueryOrderDetailInnerResponseBodyModelOrderFundStructureModels FundStructureModels { get; set; }
+                public class QueryOrderDetailInnerResponseBodyModelOrderFundStructureModels : TeaModel {
+                    [NameInMap("FundStructure")]
+                    [Validation(Required=false)]
+                    public List<QueryOrderDetailInnerResponseBodyModelOrderFundStructureModelsFundStructure> FundStructure { get; set; }
+                    public class QueryOrderDetailInnerResponseBodyModelOrderFundStructureModelsFundStructure : TeaModel {
+                        [NameInMap("FundAmount")]
+                        [Validation(Required=false)]
+                        public long? FundAmount { get; set; }
 
-                [NameInMap("PayStatus")]
-                [Validation(Required=false)]
-                public int? PayStatus { get; set; }
+                        [NameInMap("FundAmountMoney")]
+                        [Validation(Required=false)]
+                        public long? FundAmountMoney { get; set; }
 
-                [NameInMap("LogisticsNo")]
-                [Validation(Required=false)]
-                public string LogisticsNo { get; set; }
+                        [NameInMap("FundType")]
+                        [Validation(Required=false)]
+                        public string FundType { get; set; }
 
-                [NameInMap("LogisticsUserName")]
+                        [NameInMap("LmOrderId")]
+                        [Validation(Required=false)]
+                        public long? LmOrderId { get; set; }
+
+                        [NameInMap("TbSubOrderId")]
+                        [Validation(Required=false)]
+                        public long? TbSubOrderId { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("LmOrderId")]
                 [Validation(Required=false)]
-                public string LogisticsUserName { get; set; }
+                public long? LmOrderId { get; set; }
 
                 [NameInMap("LogisticsAddress")]
                 [Validation(Required=false)]
                 public string LogisticsAddress { get; set; }
 
+                [NameInMap("LogisticsCompName")]
+                [Validation(Required=false)]
+                public string LogisticsCompName { get; set; }
+
+                [NameInMap("LogisticsMobilePhone")]
+                [Validation(Required=false)]
+                public string LogisticsMobilePhone { get; set; }
+
+                [NameInMap("LogisticsNo")]
+                [Validation(Required=false)]
+                public string LogisticsNo { get; set; }
+
+                [NameInMap("LogisticsStatus")]
+                [Validation(Required=false)]
+                public int? LogisticsStatus { get; set; }
+
+                [NameInMap("LogisticsStatusDesc")]
+                [Validation(Required=false)]
+                public string LogisticsStatusDesc { get; set; }
+
+                [NameInMap("LogisticsUserName")]
+                [Validation(Required=false)]
+                public string LogisticsUserName { get; set; }
+
+                [NameInMap("OrderAmount")]
+                [Validation(Required=false)]
+                public long? OrderAmount { get; set; }
+
+                [NameInMap("OrderPayInfo")]
+                [Validation(Required=false)]
+                public string OrderPayInfo { get; set; }
+
+                [NameInMap("PayStatus")]
+                [Validation(Required=false)]
+                public int? PayStatus { get; set; }
+
                 [NameInMap("PayWaterStatus")]
                 [Validation(Required=false)]
                 public int? PayWaterStatus { get; set; }
+
+                [NameInMap("PostFee")]
+                [Validation(Required=false)]
+                public QueryOrderDetailInnerResponseBodyModelOrderPostFee PostFee { get; set; }
+                public class QueryOrderDetailInnerResponseBodyModelOrderPostFee : TeaModel {
+                    [NameInMap("FundAmount")]
+                    [Validation(Required=false)]
+                    public long? FundAmount { get; set; }
+
+                    [NameInMap("FundAmountMoney")]
+                    [Validation(Required=false)]
+                    public long? FundAmountMoney { get; set; }
+
+                    [NameInMap("FundType")]
+                    [Validation(Required=false)]
+                    public string FundType { get; set; }
+
+                    [NameInMap("LmOrderId")]
+                    [Validation(Required=false)]
+                    public long? LmOrderId { get; set; }
+
+                    [NameInMap("TbSubOrderId")]
+                    [Validation(Required=false)]
+                    public long? TbSubOrderId { get; set; }
+
+                }
 
                 [NameInMap("RefundStatus")]
                 [Validation(Required=false)]
                 public int? RefundStatus { get; set; }
 
+                [NameInMap("ResExtInfo")]
+                [Validation(Required=false)]
+                public string ResExtInfo { get; set; }
+
+                [NameInMap("SellerId")]
+                [Validation(Required=false)]
+                public long? SellerId { get; set; }
+
                 [NameInMap("SellerNick")]
                 [Validation(Required=false)]
                 public string SellerNick { get; set; }
 
-                [NameInMap("ChannelOrderId")]
+                [NameInMap("Shipping")]
                 [Validation(Required=false)]
-                public string ChannelOrderId { get; set; }
+                public string Shipping { get; set; }
+
+                [NameInMap("ShopName")]
+                [Validation(Required=false)]
+                public string ShopName { get; set; }
 
                 [NameInMap("SubItemOrderList")]
                 [Validation(Required=false)]
@@ -145,19 +195,24 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     [Validation(Required=false)]
                     public List<QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrder> SubItemOrder { get; set; }
                     public class QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrder : TeaModel {
-                        public long? LmOrderId { get; set; }
-                        public string ItemPriceInfo { get; set; }
-                        public string ItemTitle { get; set; }
-                        public long? TbSubOrderId { get; set; }
-                        public string LmItemId { get; set; }
-                        public string TotalPaymentInfo { get; set; }
-                        public string ItemPic { get; set; }
-                        public long? ItemId { get; set; }
+                        [NameInMap("ChannelCode")]
+                        [Validation(Required=false)]
                         public string ChannelCode { get; set; }
-                        public int? PayStatus { get; set; }
-                        public string SkuName { get; set; }
-                        public int? Number { get; set; }
-                        public long? SkuId { get; set; }
+
+                        [NameInMap("ItemId")]
+                        [Validation(Required=false)]
+                        public long? ItemId { get; set; }
+
+                        [NameInMap("ItemPic")]
+                        [Validation(Required=false)]
+                        public string ItemPic { get; set; }
+
+                        [NameInMap("ItemPriceInfo")]
+                        [Validation(Required=false)]
+                        public string ItemPriceInfo { get; set; }
+
+                        [NameInMap("ItemPriceList")]
+                        [Validation(Required=false)]
                         public QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrderItemPriceList ItemPriceList { get; set; }
                         public class QueryOrderDetailInnerResponseBodyModelOrderSubItemOrderListSubItemOrderItemPriceList : TeaModel {
                             [NameInMap("ItemPrice")]
@@ -168,17 +223,17 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                                 [Validation(Required=false)]
                                 public long? FundAmount { get; set; }
 
-                                [NameInMap("TbOrderId")]
+                                [NameInMap("FundAmountMoney")]
                                 [Validation(Required=false)]
-                                public long? TbOrderId { get; set; }
+                                public long? FundAmountMoney { get; set; }
 
                                 [NameInMap("FundType")]
                                 [Validation(Required=false)]
                                 public string FundType { get; set; }
 
-                                [NameInMap("FundAmountMoney")]
+                                [NameInMap("TbOrderId")]
                                 [Validation(Required=false)]
-                                public long? FundAmountMoney { get; set; }
+                                public long? TbOrderId { get; set; }
 
                                 [NameInMap("TbSubOrderId")]
                                 [Validation(Required=false)]
@@ -187,48 +242,58 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                             }
 
                         }
-                    }
-                };
 
-                [NameInMap("FundStructureModels")]
-                [Validation(Required=false)]
-                public QueryOrderDetailInnerResponseBodyModelOrderFundStructureModels FundStructureModels { get; set; }
-                public class QueryOrderDetailInnerResponseBodyModelOrderFundStructureModels : TeaModel {
-                    [NameInMap("FundStructure")]
-                    [Validation(Required=false)]
-                    public List<QueryOrderDetailInnerResponseBodyModelOrderFundStructureModelsFundStructure> FundStructure { get; set; }
-                    public class QueryOrderDetailInnerResponseBodyModelOrderFundStructureModelsFundStructure : TeaModel {
-                        public long? FundAmount { get; set; }
+                        [NameInMap("ItemTitle")]
+                        [Validation(Required=false)]
+                        public string ItemTitle { get; set; }
+
+                        [NameInMap("LmItemId")]
+                        [Validation(Required=false)]
+                        public string LmItemId { get; set; }
+
+                        [NameInMap("LmOrderId")]
+                        [Validation(Required=false)]
                         public long? LmOrderId { get; set; }
-                        public string FundType { get; set; }
-                        public long? FundAmountMoney { get; set; }
-                        public long? TbSubOrderId { get; set; }
-                    }
-                };
 
-                [NameInMap("PostFee")]
+                        [NameInMap("Number")]
+                        [Validation(Required=false)]
+                        public int? Number { get; set; }
+
+                        [NameInMap("PayStatus")]
+                        [Validation(Required=false)]
+                        public int? PayStatus { get; set; }
+
+                        [NameInMap("SkuId")]
+                        [Validation(Required=false)]
+                        public long? SkuId { get; set; }
+
+                        [NameInMap("SkuName")]
+                        [Validation(Required=false)]
+                        public string SkuName { get; set; }
+
+                        [NameInMap("TbSubOrderId")]
+                        [Validation(Required=false)]
+                        public long? TbSubOrderId { get; set; }
+
+                        [NameInMap("TotalPaymentInfo")]
+                        [Validation(Required=false)]
+                        public string TotalPaymentInfo { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("TbOrderId")]
                 [Validation(Required=false)]
-                public QueryOrderDetailInnerResponseBodyModelOrderPostFee PostFee { get; set; }
-                public class QueryOrderDetailInnerResponseBodyModelOrderPostFee : TeaModel {
-                    [NameInMap("FundAmount")]
-                    [Validation(Required=false)]
-                    public long? FundAmount { get; set; }
-                    [NameInMap("LmOrderId")]
-                    [Validation(Required=false)]
-                    public long? LmOrderId { get; set; }
-                    [NameInMap("FundType")]
-                    [Validation(Required=false)]
-                    public string FundType { get; set; }
-                    [NameInMap("FundAmountMoney")]
-                    [Validation(Required=false)]
-                    public long? FundAmountMoney { get; set; }
-                    [NameInMap("TbSubOrderId")]
-                    [Validation(Required=false)]
-                    public long? TbSubOrderId { get; set; }
-                };
+                public string TbOrderId { get; set; }
 
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

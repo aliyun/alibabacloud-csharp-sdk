@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string BizUid { get; set; }
 
+        [NameInMap("ThirdPartyUserId")]
+        [Validation(Required=false)]
+        public string ThirdPartyUserId { get; set; }
+
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("UseAnonymousTbAccount")]
         [Validation(Required=false)]
         public bool? UseAnonymousTbAccount { get; set; }
-
-        [NameInMap("ThirdPartyUserId")]
-        [Validation(Required=false)]
-        public string ThirdPartyUserId { get; set; }
 
     }
 

@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryGuideItemGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("SubMessage")]
-        [Validation(Required=false)]
-        public string SubMessage { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("SubCode")]
-        [Validation(Required=false)]
-        public string SubCode { get; set; }
 
         [NameInMap("GuideItemGroup")]
         [Validation(Required=false)]
@@ -41,18 +21,69 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryGuideItemGroupResponseBodyGuideItemGroupItemInfo> ItemInfo { get; set; }
             public class QueryGuideItemGroupResponseBodyGuideItemGroupItemInfo : TeaModel {
-                public long? PriceCent { get; set; }
-                public string MainPicUrl { get; set; }
-                public string ItemTitle { get; set; }
-                public string LmItemId { get; set; }
-                public long? PointPrice { get; set; }
+                [NameInMap("ItemId")]
+                [Validation(Required=false)]
                 public long? ItemId { get; set; }
-                public long? Points { get; set; }
-                public long? PointsAmount { get; set; }
-                public string ReservePrice { get; set; }
+
+                [NameInMap("ItemTitle")]
+                [Validation(Required=false)]
+                public string ItemTitle { get; set; }
+
+                [NameInMap("ItemUrl")]
+                [Validation(Required=false)]
                 public string ItemUrl { get; set; }
+
+                [NameInMap("LmItemId")]
+                [Validation(Required=false)]
+                public string LmItemId { get; set; }
+
+                [NameInMap("MainPicUrl")]
+                [Validation(Required=false)]
+                public string MainPicUrl { get; set; }
+
+                [NameInMap("PointPrice")]
+                [Validation(Required=false)]
+                public long? PointPrice { get; set; }
+
+                [NameInMap("Points")]
+                [Validation(Required=false)]
+                public long? Points { get; set; }
+
+                [NameInMap("PointsAmount")]
+                [Validation(Required=false)]
+                public long? PointsAmount { get; set; }
+
+                [NameInMap("PriceCent")]
+                [Validation(Required=false)]
+                public long? PriceCent { get; set; }
+
+                [NameInMap("ReservePrice")]
+                [Validation(Required=false)]
+                public string ReservePrice { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SubCode")]
+        [Validation(Required=false)]
+        public string SubCode { get; set; }
+
+        [NameInMap("SubMessage")]
+        [Validation(Required=false)]
+        public string SubMessage { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

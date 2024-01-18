@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class GetCategoryListResponseBody : TeaModel {
+        [NameInMap("CategoryList")]
+        [Validation(Required=false)]
+        public GetCategoryListResponseBodyCategoryList CategoryList { get; set; }
+        public class GetCategoryListResponseBodyCategoryList : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public List<GetCategoryListResponseBodyCategoryListCategory> Category { get; set; }
+            public class GetCategoryListResponseBodyCategoryListCategory : TeaModel {
+                [NameInMap("CategoryId")]
+                [Validation(Required=false)]
+                public long? CategoryId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+        }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,19 +40,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("CategoryList")]
-        [Validation(Required=false)]
-        public GetCategoryListResponseBodyCategoryList CategoryList { get; set; }
-        public class GetCategoryListResponseBodyCategoryList : TeaModel {
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public List<GetCategoryListResponseBodyCategoryListCategory> Category { get; set; }
-            public class GetCategoryListResponseBodyCategoryListCategory : TeaModel {
-                public string Name { get; set; }
-                public long? CategoryId { get; set; }
-            }
-        };
 
     }
 
