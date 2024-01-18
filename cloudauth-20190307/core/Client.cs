@@ -1781,6 +1781,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RarelyCharacters))
+            {
+                query["RarelyCharacters"] = request.RarelyCharacters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadImg))
             {
                 query["ReadImg"] = request.ReadImg;
@@ -1933,6 +1937,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RarelyCharacters))
+            {
+                query["RarelyCharacters"] = request.RarelyCharacters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadImg))
             {

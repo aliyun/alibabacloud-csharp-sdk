@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("RarelyCharacters")]
+        [Validation(Required=false)]
+        public string RarelyCharacters { get; set; }
+
         [NameInMap("ReadImg")]
         [Validation(Required=false)]
         public string ReadImg { get; set; }

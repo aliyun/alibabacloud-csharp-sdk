@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string Success { get; set; }
 
+            [NameInMap("UserInfo")]
+            [Validation(Required=false)]
+            public string UserInfo { get; set; }
+
         }
 
     }
