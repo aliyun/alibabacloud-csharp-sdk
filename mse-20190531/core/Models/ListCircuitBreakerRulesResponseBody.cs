@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? HalfOpenRecoveryStepNum { get; set; }
 
                 /// <summary>
-                /// The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
+                /// The maximum RT. Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
                 /// </summary>
                 [NameInMap("MaxAllowedRtMs")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The region where the cluster resides.
+                /// The region in which the instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("Resource")]
                 [Validation(Required=false)]
                 public string Resource { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public int? ResourceType { get; set; }
 
                 /// <summary>
                 /// The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.

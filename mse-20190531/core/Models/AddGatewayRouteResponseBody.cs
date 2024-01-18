@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The response data.
+        /// The ID of the created route.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

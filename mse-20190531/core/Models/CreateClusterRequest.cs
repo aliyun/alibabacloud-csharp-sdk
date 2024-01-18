@@ -20,33 +20,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method.
+        /// The billing method. Valid values: PREPAY and POSTPAY.
         /// 
-        /// Valid values:
-        /// 
-        /// *   PREPAY
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     the subscription billing method
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   POSTPAY
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     the pay-as-you-go billing method
-        /// 
-        ///     <!-- -->
+        /// Ignore this parameter for serverless instances.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -67,6 +43,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
         /// *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
+        /// 
+        /// \[Serverless Edition]
+        /// 
+        /// Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.
         /// </summary>
         [NameInMap("ClusterSpecification")]
         [Validation(Required=false)]
@@ -82,35 +62,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The engine version of the instance. Valid values:
         /// 
-        /// \[Professional version]
+        /// \[Professional Edition]
         /// 
-        /// *   `NACOS_2_0_0`: Nacos 2.0.0
-        /// *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+        /// *   `NACOS_2_0_0`
+        /// *   `ZooKeeper_3_8_0`
         /// 
         /// \[Developer Edition]
         /// 
-        /// *   `NACOS_2_0_0`: Nacos 2.0.0
-        /// *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+        /// *   `NACOS_2_0_0`
+        /// *   `ZooKeeper_3_8_0`
+        /// 
+        /// \[Serverless Edition]
+        /// 
+        /// *   `NACOS_2_0_0`
+        /// *   `ZooKeeper_3_8_0`
         /// </summary>
         [NameInMap("ClusterVersion")]
         [Validation(Required=false)]
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// The network connection type. Valid values:
-        /// 
-        /// *   slb
-        /// *   eni
+        /// The network connection type. Valid values: `slb` or `single_eni`. For instances of the Developer Edition in some regions, only the value `single_eni` is supported.
         /// </summary>
         [NameInMap("ConnectionType")]
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// The type of the disk. Valid values:
-        /// 
-        /// *   alicloud-disk-ssd
-        /// *   alicloud-disk-essd-pl1
+        /// This parameter is obsolete.
         /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
@@ -119,6 +98,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EipEnabled")]
         [Validation(Required=false)]
@@ -129,18 +126,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// \[Professional Edition]
         /// 
-        /// *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
+        /// *   The value must be greater than or equal to 3 and must be an odd number.
         /// 
         /// \[Developer Edition]
         /// 
-        /// *   Only one node can be deployed for an instance.
+        /// *   The value must be 1.
+        /// 
+        /// \[Serverless Edition]
+        /// 
+        /// Ignore this parameter.
         /// </summary>
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// The name of the MSE instance.
+        /// The custom name of the instance.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -150,7 +151,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// Configure this parameter unless otherwise specified. Valid values:
         /// 
         /// *   `mse_pro`: Professional Edition
-        /// *   `mse_dev`: Developer Edition.
+        /// *   `mse_dev`: Developer Edition
+        /// *   `mse_dev`: Serverless Edition
         /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
@@ -167,10 +169,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NetType { get; set; }
 
         /// <summary>
-        /// The specifications of the internal-facing SLB instance. Valid values:
-        /// 
-        /// *   `slb.s1.small`
-        /// *   `slb.s3.medium`
+        /// This parameter is obsolete.
         /// </summary>
         [NameInMap("PrivateSlbSpecification")]
         [Validation(Required=false)]
@@ -178,18 +177,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PrivateSlbSpecification { get; set; }
 
         /// <summary>
-        /// The public bandwidth. Unit: Mbit/s. This parameter is required.\
-        /// Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
+        /// This parameter is valid only if the ConnectionType parameter is set to `slb`. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.
+        /// 
+        /// Valid values: 0 to 5000.
         /// </summary>
         [NameInMap("PubNetworkFlow")]
         [Validation(Required=false)]
         public string PubNetworkFlow { get; set; }
 
         /// <summary>
-        /// The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
-        /// 
-        /// *   `slb.s1.small`
-        /// *   `slb.s3.medium`
+        /// This parameter is obsolete.
         /// </summary>
         [NameInMap("PubSlbSpecification")]
         [Validation(Required=false)]
@@ -224,7 +221,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.
+        /// The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to `single_eni`.
         /// 
         /// Valid values:
         /// 
@@ -236,21 +233,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SecurityGroupType { get; set; }
 
         /// <summary>
-        /// The list of the tags that you want to add.
+        /// The tags to add to the resource. You can specify up to 20 tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag.
+            /// The key of tag N to add to the resource.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag.
+            /// The value of tag N to add to the resource.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

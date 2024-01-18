@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("CertName")]
+        [Validation(Required=false)]
+        public string CertName { get; set; }
+
         /// <summary>
         /// The unique ID of the gateway.
         /// </summary>

@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.
+        /// </summary>
         [NameInMap("ToAuthorizeSecurityGroups")]
         [Validation(Required=false)]
         public string ToAuthorizeSecurityGroupsShrink { get; set; }

@@ -106,18 +106,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.
+        /// </summary>
         [NameInMap("ToAuthorizeSecurityGroups")]
         [Validation(Required=false)]
         public List<AddServiceSourceRequestToAuthorizeSecurityGroups> ToAuthorizeSecurityGroups { get; set; }
         public class AddServiceSourceRequestToAuthorizeSecurityGroups : TeaModel {
+            /// <summary>
+            /// The description of the authorization record.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).
+            /// </summary>
             [NameInMap("PortRange")]
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
+            /// <summary>
+            /// The ID of the security group.
+            /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }

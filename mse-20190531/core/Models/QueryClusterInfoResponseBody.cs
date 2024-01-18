@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppVersion { get; set; }
 
+            [NameInMap("CanUpdate")]
+            [Validation(Required=false)]
+            public bool? CanUpdate { get; set; }
+
             /// <summary>
             /// The billing method, such as subscription or pay-as-you-go.
             /// </summary>
@@ -370,6 +374,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
+            [NameInMap("VersionCode")]
+            [Validation(Required=false)]
+            public string VersionCode { get; set; }
 
             /// <summary>
             /// The ID of the VPC where the instance resides.

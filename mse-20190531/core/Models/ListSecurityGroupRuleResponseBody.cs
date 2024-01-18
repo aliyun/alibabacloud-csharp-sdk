@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The returned result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// The time when the instance was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the instance configuration was last modified.
+            /// The last modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The authorization record ID of the security group.
+            /// The ID of the security group authorization record.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

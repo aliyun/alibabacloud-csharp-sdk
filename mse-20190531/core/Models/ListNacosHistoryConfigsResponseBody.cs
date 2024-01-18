@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string OpType { get; set; }
 
+            [NameInMap("SrcUser")]
+            [Validation(Required=false)]
+            public string SrcUser { get; set; }
+
         }
 
         /// <summary>

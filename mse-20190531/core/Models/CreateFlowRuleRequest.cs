@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public int? ResourceType { get; set; }
+
         /// <summary>
         /// The throttling threshold.
         /// </summary>

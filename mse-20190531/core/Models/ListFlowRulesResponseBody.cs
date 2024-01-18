@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? MaxQueueingTimeMs { get; set; }
 
                 /// <summary>
-                /// The statistical dimension. The value 1 indicates the number of accepted requests.
+                /// The statistical dimension. The value 1 indicates that the number of accepted requests is used for statistics.
                 /// </summary>
                 [NameInMap("MetricType")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region in which the instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -158,8 +158,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Resource { get; set; }
 
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public int? ResourceType { get; set; }
+
                 /// <summary>
-                /// The ID of the rule.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]

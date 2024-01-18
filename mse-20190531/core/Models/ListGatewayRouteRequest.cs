@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// </summary>
             [NameInMap("DefaultServiceId")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? DefaultServiceId { get; set; }
 
             /// <summary>
@@ -74,6 +75,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
 
             /// <summary>
             /// The order.

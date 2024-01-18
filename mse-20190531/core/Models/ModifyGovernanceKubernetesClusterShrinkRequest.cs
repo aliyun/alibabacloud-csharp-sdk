@@ -26,12 +26,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.
+        /// </summary>
         [NameInMap("NamespaceInfos")]
         [Validation(Required=false)]
         public string NamespaceInfosShrink { get; set; }
 
         /// <summary>
-        /// The region in which the cluster resides.
+        /// The ID of the region in which the instance resides. The region is supported by MSE.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

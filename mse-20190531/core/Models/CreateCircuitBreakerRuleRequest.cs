@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public int? ResourceType { get; set; }
+
         /// <summary>
         /// The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period. The value must be an integral multiple of 1,000. Default value: 10000. This value indicates 10 seconds.
         /// </summary>

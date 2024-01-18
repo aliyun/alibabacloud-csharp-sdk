@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ModifyGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The deletion result.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

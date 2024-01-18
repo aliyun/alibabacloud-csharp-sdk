@@ -438,6 +438,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string GroupName { get; set; }
 
+                    [NameInMap("HealthStatus")]
+                    [Validation(Required=false)]
+                    public string HealthStatus { get; set; }
+
                     /// <summary>
                     /// The transcoder of the Dubbo protocol.
                     /// </summary>
@@ -620,6 +624,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
                     public string SourceType { get; set; }
+
+                    [NameInMap("UnhealthyEndpoints")]
+                    [Validation(Required=false)]
+                    public List<string> UnhealthyEndpoints { get; set; }
 
                     /// <summary>
                     /// The version of the service.

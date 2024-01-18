@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ClusterAliasName { get; set; }
 
+        [NameInMap("KeyId")]
+        [Validation(Required=false)]
+        public string KeyId { get; set; }
+
         /// <summary>
         /// The number of the page to return.
         /// </summary>
