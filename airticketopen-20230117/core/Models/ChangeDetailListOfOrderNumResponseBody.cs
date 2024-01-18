@@ -1,0 +1,510 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
+{
+    public class ChangeDetailListOfOrderNumResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public ChangeDetailListOfOrderNumResponseBodyData Data { get; set; }
+        public class ChangeDetailListOfOrderNumResponseBodyData : TeaModel {
+            [NameInMap("list")]
+            [Validation(Required=false)]
+            public List<ChangeDetailListOfOrderNumResponseBodyDataList> List { get; set; }
+            public class ChangeDetailListOfOrderNumResponseBodyDataList : TeaModel {
+                [NameInMap("change_fee_details")]
+                [Validation(Required=false)]
+                public List<ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetails> ChangeFeeDetails { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetails : TeaModel {
+                    [NameInMap("change_fee")]
+                    [Validation(Required=false)]
+                    public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee ChangeFee { get; set; }
+                    public class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee : TeaModel {
+                        [NameInMap("service_fee")]
+                        [Validation(Required=false)]
+                        public double? ServiceFee { get; set; }
+
+                        [NameInMap("tax_fee")]
+                        [Validation(Required=false)]
+                        public double? TaxFee { get; set; }
+
+                        [NameInMap("upgrade_fee")]
+                        [Validation(Required=false)]
+                        public double? UpgradeFee { get; set; }
+
+                    }
+
+                    [NameInMap("passenger")]
+                    [Validation(Required=false)]
+                    public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsPassenger Passenger { get; set; }
+                    public class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsPassenger : TeaModel {
+                        [NameInMap("document")]
+                        [Validation(Required=false)]
+                        public string Document { get; set; }
+
+                        [NameInMap("first_name")]
+                        [Validation(Required=false)]
+                        public string FirstName { get; set; }
+
+                        [NameInMap("last_name")]
+                        [Validation(Required=false)]
+                        public string LastName { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("change_order_num")]
+                [Validation(Required=false)]
+                public long? ChangeOrderNum { get; set; }
+
+                [NameInMap("change_passengers")]
+                [Validation(Required=false)]
+                public List<ChangeDetailListOfOrderNumResponseBodyDataListChangePassengers> ChangePassengers { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListChangePassengers : TeaModel {
+                    [NameInMap("document")]
+                    [Validation(Required=false)]
+                    public string Document { get; set; }
+
+                    [NameInMap("first_name")]
+                    [Validation(Required=false)]
+                    public string FirstName { get; set; }
+
+                    [NameInMap("last_name")]
+                    [Validation(Required=false)]
+                    public string LastName { get; set; }
+
+                }
+
+                [NameInMap("change_reason_type")]
+                [Validation(Required=false)]
+                public int? ChangeReasonType { get; set; }
+
+                [NameInMap("changed_journeys")]
+                [Validation(Required=false)]
+                public List<ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneys> ChangedJourneys { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneys : TeaModel {
+                    [NameInMap("segment_list")]
+                    [Validation(Required=false)]
+                    public List<ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneysSegmentList> SegmentList { get; set; }
+                    public class ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneysSegmentList : TeaModel {
+                        [NameInMap("arrival_airport")]
+                        [Validation(Required=false)]
+                        public string ArrivalAirport { get; set; }
+
+                        [NameInMap("arrival_city")]
+                        [Validation(Required=false)]
+                        public string ArrivalCity { get; set; }
+
+                        [NameInMap("arrival_terminal")]
+                        [Validation(Required=false)]
+                        public string ArrivalTerminal { get; set; }
+
+                        [NameInMap("arrival_time")]
+                        [Validation(Required=false)]
+                        public string ArrivalTime { get; set; }
+
+                        [NameInMap("availability")]
+                        [Validation(Required=false)]
+                        public string Availability { get; set; }
+
+                        [NameInMap("cabin")]
+                        [Validation(Required=false)]
+                        public string Cabin { get; set; }
+
+                        [NameInMap("cabin_class")]
+                        [Validation(Required=false)]
+                        public string CabinClass { get; set; }
+
+                        [NameInMap("code_share")]
+                        [Validation(Required=false)]
+                        public bool? CodeShare { get; set; }
+
+                        [NameInMap("departure_airport")]
+                        [Validation(Required=false)]
+                        public string DepartureAirport { get; set; }
+
+                        [NameInMap("departure_city")]
+                        [Validation(Required=false)]
+                        public string DepartureCity { get; set; }
+
+                        [NameInMap("departure_terminal")]
+                        [Validation(Required=false)]
+                        public string DepartureTerminal { get; set; }
+
+                        [NameInMap("departure_time")]
+                        [Validation(Required=false)]
+                        public string DepartureTime { get; set; }
+
+                        [NameInMap("equip_type")]
+                        [Validation(Required=false)]
+                        public string EquipType { get; set; }
+
+                        [NameInMap("flight_duration")]
+                        [Validation(Required=false)]
+                        public int? FlightDuration { get; set; }
+
+                        [NameInMap("marketing_airline")]
+                        [Validation(Required=false)]
+                        public string MarketingAirline { get; set; }
+
+                        [NameInMap("marketing_flight_no")]
+                        [Validation(Required=false)]
+                        public string MarketingFlightNo { get; set; }
+
+                        [NameInMap("marketing_flight_no_int")]
+                        [Validation(Required=false)]
+                        public int? MarketingFlightNoInt { get; set; }
+
+                        [NameInMap("operating_airline")]
+                        [Validation(Required=false)]
+                        public string OperatingAirline { get; set; }
+
+                        [NameInMap("operating_flight_no")]
+                        [Validation(Required=false)]
+                        public string OperatingFlightNo { get; set; }
+
+                        [NameInMap("segment_id")]
+                        [Validation(Required=false)]
+                        public string SegmentId { get; set; }
+
+                        [NameInMap("stop_city_list")]
+                        [Validation(Required=false)]
+                        public string StopCityList { get; set; }
+
+                        [NameInMap("stop_quantity")]
+                        [Validation(Required=false)]
+                        public int? StopQuantity { get; set; }
+
+                    }
+
+                    [NameInMap("transfer_count")]
+                    [Validation(Required=false)]
+                    public int? TransferCount { get; set; }
+
+                }
+
+                [NameInMap("close_reason")]
+                [Validation(Required=false)]
+                public string CloseReason { get; set; }
+
+                [NameInMap("close_utc_time")]
+                [Validation(Required=false)]
+                public long? CloseUtcTime { get; set; }
+
+                [NameInMap("contact")]
+                [Validation(Required=false)]
+                public ChangeDetailListOfOrderNumResponseBodyDataListContact Contact { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListContact : TeaModel {
+                    [NameInMap("email")]
+                    [Validation(Required=false)]
+                    public string Email { get; set; }
+
+                    [NameInMap("mobile_country_code")]
+                    [Validation(Required=false)]
+                    public string MobileCountryCode { get; set; }
+
+                    [NameInMap("mobile_phone_num")]
+                    [Validation(Required=false)]
+                    public string MobilePhoneNum { get; set; }
+
+                }
+
+                [NameInMap("create_utc_time")]
+                [Validation(Required=false)]
+                public long? CreateUtcTime { get; set; }
+
+                [NameInMap("last_confirm_utc_time")]
+                [Validation(Required=false)]
+                public long? LastConfirmUtcTime { get; set; }
+
+                [NameInMap("last_journeys")]
+                [Validation(Required=false)]
+                public List<ChangeDetailListOfOrderNumResponseBodyDataListLastJourneys> LastJourneys { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListLastJourneys : TeaModel {
+                    [NameInMap("segment_list")]
+                    [Validation(Required=false)]
+                    public List<ChangeDetailListOfOrderNumResponseBodyDataListLastJourneysSegmentList> SegmentList { get; set; }
+                    public class ChangeDetailListOfOrderNumResponseBodyDataListLastJourneysSegmentList : TeaModel {
+                        [NameInMap("arrival_airport")]
+                        [Validation(Required=false)]
+                        public string ArrivalAirport { get; set; }
+
+                        [NameInMap("arrival_city")]
+                        [Validation(Required=false)]
+                        public string ArrivalCity { get; set; }
+
+                        [NameInMap("arrival_terminal")]
+                        [Validation(Required=false)]
+                        public string ArrivalTerminal { get; set; }
+
+                        [NameInMap("arrival_time")]
+                        [Validation(Required=false)]
+                        public string ArrivalTime { get; set; }
+
+                        [NameInMap("availability")]
+                        [Validation(Required=false)]
+                        public string Availability { get; set; }
+
+                        [NameInMap("cabin")]
+                        [Validation(Required=false)]
+                        public string Cabin { get; set; }
+
+                        [NameInMap("cabin_class")]
+                        [Validation(Required=false)]
+                        public string CabinClass { get; set; }
+
+                        [NameInMap("code_share")]
+                        [Validation(Required=false)]
+                        public bool? CodeShare { get; set; }
+
+                        [NameInMap("departure_airport")]
+                        [Validation(Required=false)]
+                        public string DepartureAirport { get; set; }
+
+                        [NameInMap("departure_city")]
+                        [Validation(Required=false)]
+                        public string DepartureCity { get; set; }
+
+                        [NameInMap("departure_terminal")]
+                        [Validation(Required=false)]
+                        public string DepartureTerminal { get; set; }
+
+                        [NameInMap("departure_time")]
+                        [Validation(Required=false)]
+                        public string DepartureTime { get; set; }
+
+                        [NameInMap("equip_type")]
+                        [Validation(Required=false)]
+                        public string EquipType { get; set; }
+
+                        [NameInMap("flight_duration")]
+                        [Validation(Required=false)]
+                        public int? FlightDuration { get; set; }
+
+                        [NameInMap("marketing_airline")]
+                        [Validation(Required=false)]
+                        public string MarketingAirline { get; set; }
+
+                        [NameInMap("marketing_flight_no")]
+                        [Validation(Required=false)]
+                        public string MarketingFlightNo { get; set; }
+
+                        [NameInMap("marketing_flight_no_int")]
+                        [Validation(Required=false)]
+                        public int? MarketingFlightNoInt { get; set; }
+
+                        [NameInMap("operating_airline")]
+                        [Validation(Required=false)]
+                        public string OperatingAirline { get; set; }
+
+                        [NameInMap("operating_flight_no")]
+                        [Validation(Required=false)]
+                        public string OperatingFlightNo { get; set; }
+
+                        [NameInMap("segment_id")]
+                        [Validation(Required=false)]
+                        public string SegmentId { get; set; }
+
+                        [NameInMap("stop_city_list")]
+                        [Validation(Required=false)]
+                        public string StopCityList { get; set; }
+
+                        [NameInMap("stop_quantity")]
+                        [Validation(Required=false)]
+                        public int? StopQuantity { get; set; }
+
+                    }
+
+                    [NameInMap("transfer_count")]
+                    [Validation(Required=false)]
+                    public int? TransferCount { get; set; }
+
+                }
+
+                [NameInMap("order_num")]
+                [Validation(Required=false)]
+                public long? OrderNum { get; set; }
+
+                [NameInMap("order_status")]
+                [Validation(Required=false)]
+                public int? OrderStatus { get; set; }
+
+                [NameInMap("original_journeys")]
+                [Validation(Required=false)]
+                public List<ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneys> OriginalJourneys { get; set; }
+                public class ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneys : TeaModel {
+                    [NameInMap("segment_list")]
+                    [Validation(Required=false)]
+                    public List<ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneysSegmentList> SegmentList { get; set; }
+                    public class ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneysSegmentList : TeaModel {
+                        [NameInMap("arrival_airport")]
+                        [Validation(Required=false)]
+                        public string ArrivalAirport { get; set; }
+
+                        [NameInMap("arrival_city")]
+                        [Validation(Required=false)]
+                        public string ArrivalCity { get; set; }
+
+                        [NameInMap("arrival_terminal")]
+                        [Validation(Required=false)]
+                        public string ArrivalTerminal { get; set; }
+
+                        [NameInMap("arrival_time")]
+                        [Validation(Required=false)]
+                        public string ArrivalTime { get; set; }
+
+                        [NameInMap("availability")]
+                        [Validation(Required=false)]
+                        public string Availability { get; set; }
+
+                        [NameInMap("cabin")]
+                        [Validation(Required=false)]
+                        public string Cabin { get; set; }
+
+                        [NameInMap("cabin_class")]
+                        [Validation(Required=false)]
+                        public string CabinClass { get; set; }
+
+                        [NameInMap("code_share")]
+                        [Validation(Required=false)]
+                        public bool? CodeShare { get; set; }
+
+                        [NameInMap("departure_airport")]
+                        [Validation(Required=false)]
+                        public string DepartureAirport { get; set; }
+
+                        [NameInMap("departure_city")]
+                        [Validation(Required=false)]
+                        public string DepartureCity { get; set; }
+
+                        [NameInMap("departure_terminal")]
+                        [Validation(Required=false)]
+                        public string DepartureTerminal { get; set; }
+
+                        [NameInMap("departure_time")]
+                        [Validation(Required=false)]
+                        public string DepartureTime { get; set; }
+
+                        [NameInMap("equip_type")]
+                        [Validation(Required=false)]
+                        public string EquipType { get; set; }
+
+                        [NameInMap("flight_duration")]
+                        [Validation(Required=false)]
+                        public int? FlightDuration { get; set; }
+
+                        [NameInMap("marketing_airline")]
+                        [Validation(Required=false)]
+                        public string MarketingAirline { get; set; }
+
+                        [NameInMap("marketing_flight_no")]
+                        [Validation(Required=false)]
+                        public string MarketingFlightNo { get; set; }
+
+                        [NameInMap("marketing_flight_no_int")]
+                        [Validation(Required=false)]
+                        public int? MarketingFlightNoInt { get; set; }
+
+                        [NameInMap("operating_airline")]
+                        [Validation(Required=false)]
+                        public string OperatingAirline { get; set; }
+
+                        [NameInMap("operating_flight_no")]
+                        [Validation(Required=false)]
+                        public string OperatingFlightNo { get; set; }
+
+                        [NameInMap("segment_id")]
+                        [Validation(Required=false)]
+                        public string SegmentId { get; set; }
+
+                        [NameInMap("stop_city_list")]
+                        [Validation(Required=false)]
+                        public string StopCityList { get; set; }
+
+                        [NameInMap("stop_quantity")]
+                        [Validation(Required=false)]
+                        public int? StopQuantity { get; set; }
+
+                    }
+
+                    [NameInMap("transfer_count")]
+                    [Validation(Required=false)]
+                    public int? TransferCount { get; set; }
+
+                }
+
+                [NameInMap("pay_status")]
+                [Validation(Required=false)]
+                public int? PayStatus { get; set; }
+
+                [NameInMap("pay_success_utc_time")]
+                [Validation(Required=false)]
+                public long? PaySuccessUtcTime { get; set; }
+
+                [NameInMap("total_amount")]
+                [Validation(Required=false)]
+                public double? TotalAmount { get; set; }
+
+                [NameInMap("transaction_no")]
+                [Validation(Required=false)]
+                public string TransactionNo { get; set; }
+
+            }
+
+            [NameInMap("pagination")]
+            [Validation(Required=false)]
+            public ChangeDetailListOfOrderNumResponseBodyDataPagination Pagination { get; set; }
+            public class ChangeDetailListOfOrderNumResponseBodyDataPagination : TeaModel {
+                [NameInMap("current_page")]
+                [Validation(Required=false)]
+                public int? CurrentPage { get; set; }
+
+                [NameInMap("page_size")]
+                [Validation(Required=false)]
+                public int? PageSize { get; set; }
+
+                [NameInMap("total_count")]
+                [Validation(Required=false)]
+                public int? TotalCount { get; set; }
+
+                [NameInMap("total_page")]
+                [Validation(Required=false)]
+                public int? TotalPage { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("error_code")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("error_data")]
+        [Validation(Required=false)]
+        public object ErrorData { get; set; }
+
+        [NameInMap("error_msg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}
