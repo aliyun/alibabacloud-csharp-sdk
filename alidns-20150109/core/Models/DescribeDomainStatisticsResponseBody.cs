@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
+                public string DomainName { get; set; }
+
                 /// <summary>
                 /// The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>

@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DomainType { get; set; }
 
+                [NameInMap("resolveAnalysisStatus")]
+                [Validation(Required=false)]
+                public string ResolveAnalysisStatus { get; set; }
+
             }
 
         }
