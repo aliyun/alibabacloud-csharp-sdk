@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public GetUploadDocumentJobResponseBodyUsage Usage { get; set; }
         public class GetUploadDocumentJobResponseBodyUsage : TeaModel {
+            [NameInMap("EmbeddingEntries")]
+            [Validation(Required=false)]
+            public int? EmbeddingEntries { get; set; }
+
             [NameInMap("EmbeddingTokens")]
             [Validation(Required=false)]
             public int? EmbeddingTokens { get; set; }
