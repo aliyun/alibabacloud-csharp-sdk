@@ -17,8 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
-        /// For Cloud type environments, the current field value is RegionId.
+        /// The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
@@ -55,9 +54,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// type of managed：
-        /// - none： not managed. default value of prometheus for ACK.
-        /// - agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.
-        /// - agent-exproter： maanged agent and exporter. default of prometheus for Cloud.
+        /// - none: not managed. default value of prometheus for ACK.
+        /// - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
+        /// - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
         /// </summary>
         [NameInMap("ManagedType")]
         [Validation(Required=false)]
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags to add to the instance.
+        /// The tags of the instance. You can specify this parameter to manage tags for the instance.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
