@@ -49,22 +49,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<CreateConsumerGroupRequestTag> Tag { get; set; }
         public class CreateConsumerGroupRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.
+            /// The tag key.
             /// 
-            /// *   Valid values of N: 1 to 20.
             /// *   You must specify this parameter.
-            /// *   The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
+            /// *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.
+            /// The tag value.
             /// 
-            /// *   Valid values of N: 1 to 20.
             /// *   You can leave this parameter empty.
-            /// *   The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// *   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

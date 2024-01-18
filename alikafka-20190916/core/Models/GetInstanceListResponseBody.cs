@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? DeployType { get; set; }
 
                 /// <summary>
-                /// The disk size of the instance.
+                /// The disk size of the instance. Unit: GB
                 /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// The disk type of the instance. Unit: GB Valid values:
+                /// The disk type. Valid values:
                 /// 
                 /// *   **0**: ultra disk
                 /// *   **1**: standard SSD
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string EndPoint { get; set; }
 
                 /// <summary>
-                /// The expiration time. Unit: milliseconds.
+                /// The time when the instance expires. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The security group to which the instance belongs.
                 /// 
-                /// *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, the returned value is empty.
+                /// *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
                 /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
                 /// </summary>
                 [NameInMap("SecurityGroup")]
@@ -327,14 +327,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC) to which the instance belongs.
+                /// The ID of the virtual private cloud (VPC) in which the instance is deployed.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

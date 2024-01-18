@@ -44,16 +44,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The list of tags that you want to associate with the instances.
+        /// The tags that you want to add.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// 
+            /// *   You must specify this parameter.
+            /// *   The tag key must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// 
+            /// *   You can leave this parameter empty.
+            /// *   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

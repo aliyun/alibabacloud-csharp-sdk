@@ -24,15 +24,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. A resource ID complies with the following rules:
+        /// The resource ID. The following items describe the formats of resource IDs:
         /// 
-        /// *   The resource ID of an instance is the value of the instanceId parameter.
-        /// *   The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.
-        /// *   The resource ID of a group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.
+        /// *   Instance ID: instanceId
+        /// *   Topic ID: Kafka_alikafka_instanceId_topic
+        /// *   Group ID: Kafka_alikafka_instanceId_consumerGroup
         /// 
-        /// For example, the resources whose tags you want to query include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.
+        /// For example, you create an instance whose ID is alikafka_post-cn-v0h1fgs2xxxx, a topic whose name is test-topic, and a group whose ID is test-consumer-group. In this case, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.
         /// 
-        /// >  You must set at least one of the **ResourceId** and **Tag** parameters to query the tags of a specified resource. Otherwise, the request fails.
+        /// >  You must specify one of the **ResourceId** and **Tag** parameters to query the tags that are attached to a resource. Otherwise, the call fails.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag list.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -59,9 +59,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// The tag key.
             /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   If this parameter is not configured, all tag keys are matched.
-            /// *   The tag key can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// *   If you leave this parameter empty, the keys of all tags are matched.
+            /// *   The tag key must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -70,9 +69,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// The tag value.
             /// 
-            /// *   Valid values of N: 1 to 20.
-            /// *   If the Key parameter is not configured, you cannot configure this parameter. If this parameter is not configured, all tag values are matched.
-            /// *   The tag value can be 1 to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// *   If you do not specify the tag key, you cannot specify the tag value. If you leave this parameter empty, the values of all tags are matched.
+            /// *   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag value cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

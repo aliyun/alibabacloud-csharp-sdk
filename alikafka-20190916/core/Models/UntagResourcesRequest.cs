@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key of the tag that you want to attach to the specified resource.
+        /// The tag key.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

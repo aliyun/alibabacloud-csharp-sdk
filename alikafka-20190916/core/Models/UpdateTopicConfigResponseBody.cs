@@ -8,31 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class UpdateInstanceConfigResponseBody : TeaModel {
-        /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the call is successful.
-        /// </summary>
+    public class UpdateTopicConfigResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
-        /// <summary>
-        /// The returned message.
-        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the call is successful.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -1,3 +1,6 @@
+2024-01-18 Version: 2.1.0
+- Generated csharp 2019-09-16 for alikafka.
+
 2023-10-09 Version: 2.0.3
 - Generated csharp 2019-09-16 for alikafka.
 
