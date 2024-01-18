@@ -8664,6 +8664,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -8679,6 +8687,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
@@ -8761,6 +8773,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -8776,6 +8796,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
@@ -9032,6 +9056,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -9051,6 +9083,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
@@ -9165,6 +9201,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -9184,6 +9228,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
@@ -9310,6 +9358,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -9325,6 +9381,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
@@ -9427,6 +9487,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
                 request.ThirdChannelCategoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ThirdChannelCategory, "ThirdChannelCategory", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityContentState))
+            {
+                body["ActivityContentState"] = request.ActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityEvent))
+            {
+                body["ActivityEvent"] = request.ActivityEvent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -9442,6 +9510,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryType))
             {
                 body["DeliveryType"] = request.DeliveryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DismissalDate))
+            {
+                body["DismissalDate"] = request.DismissalDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredSeconds))
             {
