@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string IdSpoof { get; set; }
 
+        [NameInMap("LanguageConfig")]
+        [Validation(Required=false)]
+        public string LanguageConfig { get; set; }
+
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }

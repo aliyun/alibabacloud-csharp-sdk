@@ -1895,6 +1895,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["IdSpoof"] = request.IdSpoof;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
+            {
+                query["LanguageConfig"] = request.LanguageConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -2009,6 +2013,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
             {
                 query["IdSpoof"] = request.IdSpoof;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
+            {
+                query["LanguageConfig"] = request.LanguageConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
