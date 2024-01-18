@@ -13140,6 +13140,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["CenId"] = request.CenId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckInterval))
             {
                 query["HealthCheckInterval"] = request.HealthCheckInterval;
@@ -13225,6 +13229,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckInterval))
             {

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.
         /// </summary>
