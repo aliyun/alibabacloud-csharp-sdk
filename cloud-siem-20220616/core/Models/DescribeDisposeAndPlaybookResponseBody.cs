@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     [Validation(Required=false)]
                     public string OpLevel { get; set; }
 
+                    [NameInMap("ParamConfig")]
+                    [Validation(Required=false)]
+                    public List<object> ParamConfig { get; set; }
+
                     /// <summary>
                     /// The opcode configuration.
                     /// </summary>
