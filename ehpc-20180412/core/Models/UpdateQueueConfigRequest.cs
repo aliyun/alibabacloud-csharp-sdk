@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
 
+        /// <summary>
+        /// The communication model of the ENI. Valid values:
+        /// 
+        /// *   Standard: uses the TCP communication mode.
+        /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
+        /// </summary>
         [NameInMap("NetworkInterfaceTrafficMode")]
         [Validation(Required=false)]
         public string NetworkInterfaceTrafficMode { get; set; }

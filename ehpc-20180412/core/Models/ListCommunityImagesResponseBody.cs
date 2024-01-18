@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCommunityImagesResponseBody : TeaModel {
         /// <summary>
-        /// The list of community images, including custom images and shared images.
+        /// The list of custom images and shared images that are supported by the E-HPC.
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string Architecture { get; set; }
 
                     /// <summary>
-                    /// The tag of the OS image.
+                    /// The operating system tag of the image.
                     /// </summary>
                     [NameInMap("OsTag")]
                     [Validation(Required=false)]
@@ -81,21 +81,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// The image ID.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// The image name.
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The type of the image. Valid values:
+                /// The image type. Valid values:
                 /// 
                 /// *   self: custom image
                 /// *   others: shared image
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string BaseOsTag { get; set; }
 
                     /// <summary>
-                    /// The tag of the OS image.
+                    /// The operating system tag of the image.
                     /// </summary>
                     [NameInMap("OsTag")]
                     [Validation(Required=false)]
                     public string OsTag { get; set; }
 
                     /// <summary>
-                    /// The operating system.
+                    /// The OS.
                     /// </summary>
                     [NameInMap("Platform")]
                     [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string PricingCycle { get; set; }
 
                 /// <summary>
-                /// The Alibaba Cloud Marketplace product code of the image.
+                /// The product code in Alibaba Cloud Marketplace.
                 /// </summary>
                 [NameInMap("ProductCode")]
                 [Validation(Required=false)]
@@ -194,12 +194,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string SkuCode { get; set; }
 
                 /// <summary>
-                /// The status of the image. Valid values:
+                /// The state of the image. Valid values:
                 /// 
-                /// *   UnAvailable: The image is unavailable.
-                /// *   Available: The image is available.
-                /// *   Creating: The image is being created.
-                /// *   CreateFailed: The image failed to be created.
+                /// *   UnAvailable
+                /// *   Available
+                /// *   Creating
+                /// *   CreateFailed
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

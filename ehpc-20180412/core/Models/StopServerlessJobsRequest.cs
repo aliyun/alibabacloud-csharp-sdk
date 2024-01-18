@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The serverless job IDs or subtask IDs (array jobs).
         /// 
-        /// > 
-        /// 
         /// *   If you specify the job ID of an array job, all subtasks under the array job are stopped.
-        /// 
         /// *   If you specify the ID of a subtask of an array job, only the subtask is stopped.
         /// </summary>
         [NameInMap("JobIds")]

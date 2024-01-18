@@ -307,6 +307,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }

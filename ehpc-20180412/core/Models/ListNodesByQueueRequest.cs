@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListNodesByQueueRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable asynchronous query.
+        /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The number of entries to return on each page. Valid values: 1 to 50.
         /// 
-        /// Default value: 10
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

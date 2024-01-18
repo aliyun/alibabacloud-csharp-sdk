@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ImageExpirationTimeout { get; set; }
 
         /// <summary>
-        /// The timeout period for pulling images.
+        /// The timeout period for pulling images. Unit: seconds.
         /// </summary>
         [NameInMap("PullUpdateTimeout")]
         [Validation(Required=false)]

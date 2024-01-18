@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public bool? IsArrayJob { get; set; }
 
             /// <summary>
-            /// The ID of the serverless job or subtask (array job).
+            /// The ID of the serverless job or the subtask (array job).
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]

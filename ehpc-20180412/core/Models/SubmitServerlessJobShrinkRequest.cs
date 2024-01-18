@@ -12,9 +12,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The configuration of the array job.
         /// 
-        /// > 
-        /// 
-        /// *   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.
+        /// >  The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.
         /// </summary>
         [NameInMap("ArrayProperties")]
         [Validation(Required=false)]
@@ -68,6 +66,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         /// <summary>
         /// The name of the serverless job.
+        /// 
+        /// >  The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
+        /// <summary>
+        /// The retry policy for the serverless job.
+        /// </summary>
         [NameInMap("RetryStrategy")]
         [Validation(Required=false)]
         public string RetryStrategyShrink { get; set; }

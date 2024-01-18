@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string AddTime { get; set; }
 
                 /// <summary>
-                /// The mode in which the node was added. Valid values:
+                /// The mode in which the node is created. Valid values:
                 /// 
-                /// *   manual: The node was manually added.
+                /// *   manual: The node is manually added.
                 /// *   autoscale: The node is automatically added.
                 /// </summary>
                 [NameInMap("CreateMode")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The name of the node.
+                /// The node name.
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public bool? HtEnabled { get; set; }
 
                 /// <summary>
-                /// The ID of the ECS instance.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// The image ID.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The location where the node is deployed. Valid values:
                 /// 
-                /// *   OnPremise: The node is deployed on a hybrid cloud.
-                /// *   PublicCloud: The node is deployed on a public cloud.
+                /// *   OnPremise: The cluster is deployed on a hybrid cloud.
+                /// *   PublicCloud: The cluster is deployed on a public cloud.
                 /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The reason why the node is locked. Valid values:
                 /// 
-                /// *   financial: The node is locked due to overdue payments.
-                /// *   security: The node is locked due to security reasons.
-                /// *   recycling: The preemptible node is locked and pending release.
-                /// *   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.
+                /// *   financial: The instance is locked due to overdue payments.
+                /// *   security: The node is locked for security reasons.
+                /// *   recycling: The preemptible instance is locked and pending release.
+                /// *   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.
                 /// 
                 /// By default, an empty string is returned.
                 /// </summary>
@@ -137,18 +137,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string PublicIpAddress { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The preemption policy for the Elastic Compute Service (ECS) instance. Valid values:
+                /// The preemption policy of the instance. Valid values:
                 /// 
-                /// *   NoSpot: applies to regular pay-as-you-go instances.
-                /// *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-                /// *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+                /// *   NoSpot: The instance is created as a pay-as-you-go instance.
+                /// *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+                /// *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
                 /// </summary>
                 [NameInMap("SpotStrategy")]
                 [Validation(Required=false)]
@@ -167,8 +167,8 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// *   uninit: The node is not initialized.
                 /// *   init: The node is being initialized.
                 /// *   ready: The node is ready.
-                /// *   running: The node is running.
-                /// *   exception: An exception has occurred on the node.
+                /// *   running: The cluster is running.
+                /// *   exception: An exception occurred on the node.
                 /// *   untracking: The node is not added to the cluster.
                 /// </summary>
                 [NameInMap("Status")]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -250,14 +250,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC).
+                /// The VPC ID of the node.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID of the node.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

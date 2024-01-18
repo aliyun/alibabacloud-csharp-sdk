@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public List<string> JobNames { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The page number. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to sort the serverless jobs by the job start time. Valid value:
+        /// Specifies whether to sort the serverless jobs by the job start time. Valid values:
         /// 
-        /// *   Asc: ascending order
-        /// *   Desc: descending order
+        /// *   Asc: ascending order.
+        /// *   Desc: descending order.
         /// </summary>
         [NameInMap("StartOrder")]
         [Validation(Required=false)]
         public string StartOrder { get; set; }
 
         /// <summary>
-        /// The status of the serverless job. Valid value:
+        /// The status of the serverless job. Valid values:
         /// 
         /// *   All
         /// *   Pending
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string State { get; set; }
 
         /// <summary>
-        /// Specifies whether to sort the serverless jobs by the job submission time. Valid value:
+        /// Specifies whether to sort the serverless jobs by the job submission time. Valid values:
         /// 
-        /// *   Asc: ascending order
-        /// *   Desc: descending order
+        /// *   Asc: ascending order.
+        /// *   Desc: descending order.
         /// </summary>
         [NameInMap("SubmitOrder")]
         [Validation(Required=false)]

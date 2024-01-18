@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListNodesNoPagingResponseBody : TeaModel {
         /// <summary>
-        /// The information about nodes.
+        /// The list of nodes.
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
@@ -21,28 +21,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListNodesNoPagingResponseBodyNodesNodeInfo> NodeInfo { get; set; }
             public class ListNodesNoPagingResponseBodyNodesNodeInfo : TeaModel {
                 /// <summary>
-                /// The name of the node.
+                /// The node name.
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
                 public string HostName { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// The image ID.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The instance type of the node.
+                /// The node type.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// The status of the node. Valid values:
                 /// 
                 /// *   uninit: The node is being installed.
-                /// *   exception: An exception has occurred on the node.
+                /// *   exception: An exception occurred on the node.
                 /// *   running: The node is running.
                 /// *   initing: The node is being initialized.
                 /// *   releasing: The node is being released.
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

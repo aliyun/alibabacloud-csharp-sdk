@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   Login: logon node
         /// *   Compute: compute node
         /// 
-        /// Default value: Compute
+        /// Default value: Compute.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// *   Forward: sorts the nodes in chronological order.
         /// *   Backward: sorts the nodes in reverse chronological order.
         /// 
-        /// Default value: Forward
+        /// Default value: Forward.
         /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]

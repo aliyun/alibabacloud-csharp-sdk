@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<string> Commands { get; set; }
 
                     /// <summary>
-                    /// The number of vCPUs of the container.
+                    /// The number of vCPUs.
                     /// </summary>
                     [NameInMap("Cpu")]
                     [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars> EnvironmentVars { get; set; }
                     public class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars : TeaModel {
                         /// <summary>
-                        /// The key of the environment variable.
+                        /// The name of the environment variable.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// The policy for image pulling. Valid values:
+                    /// The policy to pull images. Valid values:
                     /// 
                     /// *   Always: Each time instances are created, image pulling is performed.
                     /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public List<string> Execs { get; set; }
 
                         /// <summary>
-                        /// The minimum number of consecutive failures that must occur for the probe to be considered failed. Default value: 3.
+                        /// The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.
                         /// </summary>
                         [NameInMap("FailureThreshold")]
                         [Validation(Required=false)]
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         }
 
                         /// <summary>
-                        /// The number of seconds between the time when the startup of the container ends and the time when the check starts.
+                        /// The number of seconds after the container is started and before a liveness probe is initiated.
                         /// </summary>
                         [NameInMap("InitialDelaySeconds")]
                         [Validation(Required=false)]
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public long? PeriodSeconds { get; set; }
 
                         /// <summary>
-                        /// The minimum number of consecutive successes for the probe to be considered successful after having failed. Default value: 1. Set the value to 1.
+                        /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
                         /// </summary>
                         [NameInMap("SuccessThreshold")]
                         [Validation(Required=false)]
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         }
 
                         /// <summary>
-                        /// The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+                        /// The timeout period of the check. Default value: 1. Minimum value: 1.
                         /// </summary>
                         [NameInMap("TimeoutSeconds")]
                         [Validation(Required=false)]
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public List<string> Execs { get; set; }
 
                         /// <summary>
-                        /// The minimum number of consecutive failures that must occur for the check to be considered failure. Default value: 3.
+                        /// The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.
                         /// </summary>
                         [NameInMap("FailureThreshold")]
                         [Validation(Required=false)]
@@ -499,21 +499,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         }
 
                         /// <summary>
-                        /// The number of seconds between the time when the startup of the container ends and the time when the check starts.
+                        /// The number of seconds after the container is started and before a liveness probe is initiated.
                         /// </summary>
                         [NameInMap("InitialDelaySeconds")]
                         [Validation(Required=false)]
                         public long? InitialDelaySeconds { get; set; }
 
                         /// <summary>
-                        /// The interval at which the check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+                        /// The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.
                         /// </summary>
                         [NameInMap("PeriodSeconds")]
                         [Validation(Required=false)]
                         public long? PeriodSeconds { get; set; }
 
                         /// <summary>
-                        /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+                        /// The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.
                         /// </summary>
                         [NameInMap("SuccessThreshold")]
                         [Validation(Required=false)]
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public bool? ReadOnlyRootFilesystem { get; set; }
 
                         /// <summary>
-                        /// The UID that is used to run the entry point of the container process.
+                        /// The user ID (UID) that is used to run the entry point of the container process.
                         /// </summary>
                         [NameInMap("RunAsUser")]
                         [Validation(Required=false)]
@@ -605,14 +605,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                     /// <summary>
-                    /// Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.
+                    /// Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
                     /// </summary>
                     [NameInMap("Stdin")]
                     [Validation(Required=false)]
                     public bool? Stdin { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, remains empty until the first client attaches to stdin, and then is open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+                    /// Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
                     /// </summary>
                     [NameInMap("StdinOnce")]
                     [Validation(Required=false)]
@@ -831,7 +831,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The name of the object to which the event belongs.
+                    /// The name of the category to which the event belongs.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The time when the instance failed to run due to overdue payments. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
+                /// The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -885,7 +885,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<string> Hostnames { get; set; }
 
                     /// <summary>
-                    /// The IP address of the host.
+                    /// The IP address.
                     /// </summary>
                     [NameInMap("Ip")]
                     [Validation(Required=false)]
@@ -950,7 +950,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string FinishTime { get; set; }
 
                         /// <summary>
-                        /// The message of the event.
+                        /// The message about the event.
                         /// </summary>
                         [NameInMap("Message")]
                         [Validation(Required=false)]
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars> EnvironmentVars { get; set; }
                     public class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars : TeaModel {
                         /// <summary>
-                        /// The key of the environment variable.
+                        /// The name of the environment variable.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
@@ -1046,14 +1046,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public long? Gpu { get; set; }
 
                     /// <summary>
-                    /// The image of the container.
+                    /// The image.
                     /// </summary>
                     [NameInMap("Image")]
                     [Validation(Required=false)]
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// The policy for image pulling.
+                    /// The policy to pull images.
                     /// </summary>
                     [NameInMap("ImagePullPolicy")]
                     [Validation(Required=false)]
@@ -1295,7 +1295,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Ipv6Address { get; set; }
 
                 /// <summary>
-                /// The memory size of the instance. Unit: GiB.
+                /// The memory size of the elastic container instance. Unit: GiB.
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
@@ -1316,7 +1316,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the instance belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+                /// The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -1327,14 +1327,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// 
                 /// *   Always: Always restarts the instance if a container in the instance exits upon termination.
                 /// *   Never: Never restarts the instance if a container in the instance exits upon termination.
-                /// *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
+                /// *   OnFailure: Restarts the instance when the last start failed.
                 /// </summary>
                 [NameInMap("RestartPolicy")]
                 [Validation(Required=false)]
                 public string RestartPolicy { get; set; }
 
                 /// <summary>
-                /// The ID of the security group to which the instances belong.
+                /// The ID of the security group.
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
@@ -1343,25 +1343,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The maximum hourly price for the preemptible instance.
                 /// 
-                /// This parameter is returned only if you set SpotStrategy to SpotWithPriceLimit.
+                /// This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
                 /// </summary>
                 [NameInMap("SpotPriceLimit")]
                 [Validation(Required=false)]
                 public float? SpotPriceLimit { get; set; }
 
                 /// <summary>
-                /// The bidding policy for the instance. Valid values:
+                /// The bidding policy of the instance. Valid values:
                 /// 
-                /// *   NoSpot: The node is a regular pay-as-you-go instance.
-                /// *   SpotWithPriceLimit: The node is a preemptible instance that has a user-defined maximum hourly price.
-                /// *   SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+                /// *   NoSpot: The instance is a regular pay-as-you-go instance.
+                /// *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+                /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
                 /// </summary>
                 [NameInMap("SpotStrategy")]
                 [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
 
                 /// <summary>
-                /// The status of the instance. Valid value:
+                /// The status of the instance. Valid values:
                 /// 
                 /// *   Pending: The instance is being started.
                 /// *   Running: The instance is running.
@@ -1379,7 +1379,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time when all containers exited on success. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
+                /// The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.
                 /// </summary>
                 [NameInMap("SucceededTime")]
                 [Validation(Required=false)]
@@ -1481,17 +1481,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string DiskVolumeDiskId { get; set; }
 
                     /// <summary>
-                    /// The file system type of the disk volume.
+                    /// The type of the volume.
                     /// </summary>
                     [NameInMap("DiskVolumeFsType")]
                     [Validation(Required=false)]
                     public string DiskVolumeFsType { get; set; }
 
                     /// <summary>
-                    /// The storage media of emptyDir volume N. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
+                    /// The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
                     /// 
                     /// *   Memory: uses memory as the storage media.
-                    /// *   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
+                    /// *   LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
                     /// </summary>
                     [NameInMap("EmptyDirVolumeMedium")]
                     [Validation(Required=false)]
@@ -1526,7 +1526,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string FlexVolumeOptions { get; set; }
 
                     /// <summary>
-                    /// The path to the NFS volume.
+                    /// The path of the Network File System (NFS) volume.
                     /// </summary>
                     [NameInMap("NFSVolumePath")]
                     [Validation(Required=false)]
@@ -1540,7 +1540,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public bool? NFSVolumeReadOnly { get; set; }
 
                     /// <summary>
-                    /// The endpoint of the server when you set the Type parameter to NFSVolume.
+                    /// The endpoint of the server if you set Type to NFSVolume.
                     /// </summary>
                     [NameInMap("NFSVolumeServer")]
                     [Validation(Required=false)]
@@ -1568,7 +1568,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC to which the elastic container instances belong.
+                /// The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

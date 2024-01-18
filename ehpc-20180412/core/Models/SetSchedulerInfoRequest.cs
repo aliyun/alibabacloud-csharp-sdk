@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SetSchedulerInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the E-HPC cluster.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The information about PBS schedulers.
+        /// </summary>
         [NameInMap("PbsInfo")]
         [Validation(Required=false)]
         public List<SetSchedulerInfoRequestPbsInfo> PbsInfo { get; set; }
         public class SetSchedulerInfoRequestPbsInfo : TeaModel {
+            /// <summary>
+            /// The information about limits on the queue.
+            /// </summary>
             [NameInMap("AclLimit")]
             [Validation(Required=false)]
             public List<SetSchedulerInfoRequestPbsInfoAclLimit> AclLimit { get; set; }
@@ -47,16 +53,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             }
 
             /// <summary>
-            /// The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.
-            /// 
-            /// Valid values: 1 to 30
-            /// 
-            /// Default value: 14
+            /// The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\
+            /// Valid values: 1 to 30.\
+            /// Default value: 14.
             /// </summary>
             [NameInMap("JobHistoryDuration")]
             [Validation(Required=false)]
             public int? JobHistoryDuration { get; set; }
 
+            /// <summary>
+            /// The information about the nodes that are used by cluster users.
+            /// </summary>
             [NameInMap("ResourceLimit")]
             [Validation(Required=false)]
             public List<SetSchedulerInfoRequestPbsInfoResourceLimit> ResourceLimit { get; set; }
@@ -122,7 +129,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// 
             /// A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.
             /// 
-            /// Default value: 60
+            /// Default value: 60.
             /// </summary>
             [NameInMap("SchedInterval")]
             [Validation(Required=false)]
@@ -145,7 +152,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// 
         /// You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).
         /// </summary>
@@ -153,6 +160,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The scheduler information.
+        /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
         public List<SetSchedulerInfoRequestScheduler> Scheduler { get; set; }
@@ -166,7 +176,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// *   slurm19
             /// *   slurm20
             /// 
-            /// >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
+            /// >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
             /// </summary>
             [NameInMap("SchedName")]
             [Validation(Required=false)]
@@ -174,6 +184,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        /// <summary>
+        /// The information about Slurm schedulers.
+        /// </summary>
         [NameInMap("SlurmInfo")]
         [Validation(Required=false)]
         public List<SetSchedulerInfoRequestSlurmInfo> SlurmInfo { get; set; }
@@ -181,7 +194,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The backfill scheduling period. Unit: seconds.
             /// 
-            /// Default value: 60
+            /// Default value: 60.
             /// </summary>
             [NameInMap("BackfillInterval")]
             [Validation(Required=false)]
@@ -192,7 +205,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// 
             /// SchedInterval specifies the scheduling period. Unit: seconds.
             /// 
-            /// Default value: 60
+            /// Default value: 60.
             /// </summary>
             [NameInMap("SchedInterval")]
             [Validation(Required=false)]

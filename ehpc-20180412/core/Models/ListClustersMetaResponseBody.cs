@@ -57,6 +57,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// The version of E-HPC.
+                /// </summary>
+                [NameInMap("EhpcVersion")]
+                [Validation(Required=false)]
+                public string EhpcVersion { get; set; }
+
+                /// <summary>
                 /// Indicates whether the cluster uses a plug-in. Valid values:
                 /// 
                 /// *   true

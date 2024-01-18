@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SetSchedulerInfoResponseBody : TeaModel {
         /// <summary>
-        /// The response message.
+        /// The data returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
