@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string LogContent { get; set; }
 
+            [NameInMap("LogSize")]
+            [Validation(Required=false)]
+            public int? LogSize { get; set; }
+
             /// <summary>
             /// The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
             /// </summary>
