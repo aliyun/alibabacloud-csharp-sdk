@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportType { get; set; }
 
         /// <summary>
+        /// The ID of the server group.
+        /// > You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
+        /// <summary>
         /// The export method of the results for the weak password baseline check. Valid values:
         /// 
         /// *   **0**: exports the check results after it is masked.

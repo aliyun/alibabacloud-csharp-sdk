@@ -32595,6 +32595,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ExportType"] = request.ExportType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCleartextPwd))
             {
                 query["IsCleartextPwd"] = request.IsCleartextPwd;
@@ -32677,6 +32681,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
             {
                 query["ExportType"] = request.ExportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCleartextPwd))
             {
