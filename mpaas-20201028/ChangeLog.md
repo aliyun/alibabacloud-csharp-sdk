@@ -1,3 +1,6 @@
+2024-01-19 Version: 1.1.2
+- Generated csharp 2020-10-28 for mPaaS.
+
 2024-01-18 Version: 1.1.1
 - Generated csharp 2020-10-28 for mPaaS.
 
