@@ -30,12 +30,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string AggQuery { get; set; }
 
+            [NameInMap("columnTypes")]
+            [Validation(Required=false)]
+            public List<string> ColumnTypes { get; set; }
+
             /// <summary>
             /// The number of rows that are returned.
             /// </summary>
             [NameInMap("count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
+
+            [NameInMap("cpuCores")]
+            [Validation(Required=false)]
+            public int? CpuCores { get; set; }
+
+            [NameInMap("cpuSec")]
+            [Validation(Required=false)]
+            public double? CpuSec { get; set; }
 
             /// <summary>
             /// The amount of time that is consumed by the request. Unit: milliseconds.
@@ -51,6 +63,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public bool? HasSQL { get; set; }
 
+            [NameInMap("highlights")]
+            [Validation(Required=false)]
+            public List<List<LogContent>> Highlights { get; set; }
+
             /// <summary>
             /// Indicates whether the returned result is accurate.
             /// </summary>
@@ -64,6 +80,36 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("keys")]
             [Validation(Required=false)]
             public List<string> Keys { get; set; }
+
+            [NameInMap("limited")]
+            [Validation(Required=false)]
+            public int? Limited { get; set; }
+
+            [NameInMap("mode")]
+            [Validation(Required=false)]
+            public int? Mode { get; set; }
+
+            [NameInMap("phraseQueryInfo")]
+            [Validation(Required=false)]
+            public GetLogsV2ResponseBodyMetaPhraseQueryInfo PhraseQueryInfo { get; set; }
+            public class GetLogsV2ResponseBodyMetaPhraseQueryInfo : TeaModel {
+                [NameInMap("beginOffset")]
+                [Validation(Required=false)]
+                public long? BeginOffset { get; set; }
+
+                [NameInMap("endOffset")]
+                [Validation(Required=false)]
+                public long? EndOffset { get; set; }
+
+                [NameInMap("endTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                [NameInMap("scanAll")]
+                [Validation(Required=false)]
+                public bool? ScanAll { get; set; }
+
+            }
 
             /// <summary>
             /// The number of logs that are processed in the request.
@@ -88,6 +134,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [NameInMap("progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
+
+            [NameInMap("scanBytes")]
+            [Validation(Required=false)]
+            public long? ScanBytes { get; set; }
 
             /// <summary>
             /// The type of observable data.

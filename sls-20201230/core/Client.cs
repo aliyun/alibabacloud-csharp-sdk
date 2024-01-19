@@ -5897,6 +5897,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["from"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Highlight))
+            {
+                body["highlight"] = request.Highlight;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
             {
                 body["line"] = request.Line;
@@ -5988,6 +5992,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Highlight))
+            {
+                body["highlight"] = request.Highlight;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
             {

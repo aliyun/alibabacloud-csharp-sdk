@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? From { get; set; }
 
+        [NameInMap("highlight")]
+        [Validation(Required=false)]
+        public bool? Highlight { get; set; }
+
         /// <summary>
         /// The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100.
         /// </summary>
