@@ -888,9 +888,9 @@ namespace AlibabaCloud.SDK.CS20151215
           * *   [Create an ACK managed cluster](~~90776~~)
           * *   [Create an ACK dedicated cluster](~~197620~~)
           * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Edge cluster](~~128204~~)
           * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
           *
           * @param request CreateClusterRequest
           * @param headers map
@@ -1286,9 +1286,9 @@ namespace AlibabaCloud.SDK.CS20151215
           * *   [Create an ACK managed cluster](~~90776~~)
           * *   [Create an ACK dedicated cluster](~~197620~~)
           * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Edge cluster](~~128204~~)
           * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
           *
           * @param request CreateClusterRequest
           * @param headers map
@@ -1684,9 +1684,9 @@ namespace AlibabaCloud.SDK.CS20151215
           * *   [Create an ACK managed cluster](~~90776~~)
           * *   [Create an ACK dedicated cluster](~~197620~~)
           * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Edge cluster](~~128204~~)
           * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
           *
           * @param request CreateClusterRequest
           * @return CreateClusterResponse
@@ -1703,9 +1703,9 @@ namespace AlibabaCloud.SDK.CS20151215
           * *   [Create an ACK managed cluster](~~90776~~)
           * *   [Create an ACK dedicated cluster](~~197620~~)
           * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](128204)
+          * *   [Create an ACK Edge cluster](~~128204~~)
           * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
           *
           * @param request CreateClusterRequest
           * @return CreateClusterResponse

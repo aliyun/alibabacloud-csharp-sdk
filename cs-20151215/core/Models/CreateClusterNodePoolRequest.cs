@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("eip_bandwidth")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? EipBandwidth { get; set; }
 
             /// <summary>
@@ -37,6 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("eip_internet_charge_type")]
             [Validation(Required=false)]
+            [Obsolete]
             public string EipInternetChargeType { get; set; }
 
             /// <summary>
@@ -63,6 +65,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("is_bond_eip")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? IsBondEip { get; set; }
 
             /// <summary>
@@ -102,6 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? Count { get; set; }
 
         /// <summary>
@@ -111,6 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("interconnect_config")]
         [Validation(Required=false)]
+        [Obsolete]
         public CreateClusterNodePoolRequestInterconnectConfig InterconnectConfig { get; set; }
         public class CreateClusterNodePoolRequestInterconnectConfig : TeaModel {
             /// <summary>
@@ -340,6 +345,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public bool? AutoUpgrade { get; set; }
 
                 /// <summary>
@@ -374,6 +380,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("max_nodes")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? MaxNodes { get; set; }
 
         [NameInMap("node_config")]
@@ -676,6 +683,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("security_group_id")]
             [Validation(Required=false)]
+            [Obsolete]
             public string SecurityGroupId { get; set; }
 
             /// <summary>

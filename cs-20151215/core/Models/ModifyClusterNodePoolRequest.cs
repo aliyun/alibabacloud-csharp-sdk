@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("eip_bandwidth")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? EipBandwidth { get; set; }
 
             /// <summary>
@@ -33,6 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("eip_internet_charge_type")]
             [Validation(Required=false)]
+            [Obsolete]
             public string EipInternetChargeType { get; set; }
 
             /// <summary>
@@ -57,6 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("is_bond_eip")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? IsBondEip { get; set; }
 
             /// <summary>
@@ -85,6 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Type { get; set; }
 
         }
@@ -154,6 +158,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("taints")]
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
+
+            [NameInMap("unschedulable")]
+            [Validation(Required=false)]
+            public bool? Unschedulable { get; set; }
 
             /// <summary>
             /// The user-defined data of the node pool. For more information, see [Prepare user data](~~49121~~).
@@ -297,6 +305,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public bool? AutoUpgrade { get; set; }
 
                 /// <summary>

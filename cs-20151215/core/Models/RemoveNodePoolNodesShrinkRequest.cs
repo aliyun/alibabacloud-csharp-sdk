@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodesShrink { get; set; }
 
         /// <summary>

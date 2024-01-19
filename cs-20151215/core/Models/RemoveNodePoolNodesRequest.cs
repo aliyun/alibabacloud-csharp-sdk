@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> Nodes { get; set; }
 
         /// <summary>
