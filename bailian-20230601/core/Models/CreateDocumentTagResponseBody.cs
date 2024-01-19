@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
-    public class CancelFineTuneJobRequest : TeaModel {
-        [NameInMap("AgentKey")]
+    public class CreateDocumentTagResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AgentKey { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("TagId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string TagId { get; set; }
 
     }
 

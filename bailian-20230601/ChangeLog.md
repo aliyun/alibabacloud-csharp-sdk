@@ -1,3 +1,6 @@
+2024-01-19 Version: 1.3.0
+- Generated csharp 2023-06-01 for bailian.
+
 2024-01-05 Version: 1.2.0
 - Generated csharp 2023-06-01 for bailian.
 
