@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new description of the VPN attachment.
+        /// The new description of the VPN connection.
         /// 
-        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TransitRouterAttachmentDescription")]
         [Validation(Required=false)]
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// The name of the VPN attachment.
+        /// The name of the VPN connection.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]

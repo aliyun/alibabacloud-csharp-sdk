@@ -1783,9 +1783,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /**
           * ## Limits
-          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation,[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
           * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
-          * *   By default, the next hop of the route entry is the regional gateway of the Cloud Enterprise Network (CEN) instance. You cannot modify the next hop.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
           *
           * @param request CreateCenChildInstanceRouteEntryToCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1860,9 +1860,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /**
           * ## Limits
-          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation,[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
           * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
-          * *   By default, the next hop of the route entry is the regional gateway of the Cloud Enterprise Network (CEN) instance. You cannot modify the next hop.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
           *
           * @param request CreateCenChildInstanceRouteEntryToCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1937,9 +1937,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /**
           * ## Limits
-          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation,[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
           * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
-          * *   By default, the next hop of the route entry is the regional gateway of the Cloud Enterprise Network (CEN) instance. You cannot modify the next hop.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
           *
           * @param request CreateCenChildInstanceRouteEntryToCenRequest
           * @return CreateCenChildInstanceRouteEntryToCenResponse
@@ -1952,9 +1952,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /**
           * ## Limits
-          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation,[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
           * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
-          * *   By default, the next hop of the route entry is the regional gateway of the Cloud Enterprise Network (CEN) instance. You cannot modify the next hop.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
           *
           * @param request CreateCenChildInstanceRouteEntryToCenRequest
           * @return CreateCenChildInstanceRouteEntryToCenResponse
@@ -7203,6 +7203,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DeleteTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Before you delete an aggregate route, make sure that your network has a redundant route to prevent service interruptions.
+          * *   After an aggregate route is deleted, the aggregate route is automatically withdrawn from virtual private clouds (VPCs). Specific routes that fall within the aggregate route are advertised to the VPCs.
+          *
+          * @param request DeleteTransitRouteTableAggregationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouteTableAggregationResponse
+         */
         public DeleteTransitRouteTableAggregationResponse DeleteTransitRouteTableAggregationWithOptions(DeleteTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7258,6 +7266,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouteTableAggregationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Before you delete an aggregate route, make sure that your network has a redundant route to prevent service interruptions.
+          * *   After an aggregate route is deleted, the aggregate route is automatically withdrawn from virtual private clouds (VPCs). Specific routes that fall within the aggregate route are advertised to the VPCs.
+          *
+          * @param request DeleteTransitRouteTableAggregationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouteTableAggregationResponse
+         */
         public async Task<DeleteTransitRouteTableAggregationResponse> DeleteTransitRouteTableAggregationWithOptionsAsync(DeleteTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7313,12 +7329,26 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouteTableAggregationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Before you delete an aggregate route, make sure that your network has a redundant route to prevent service interruptions.
+          * *   After an aggregate route is deleted, the aggregate route is automatically withdrawn from virtual private clouds (VPCs). Specific routes that fall within the aggregate route are advertised to the VPCs.
+          *
+          * @param request DeleteTransitRouteTableAggregationRequest
+          * @return DeleteTransitRouteTableAggregationResponse
+         */
         public DeleteTransitRouteTableAggregationResponse DeleteTransitRouteTableAggregation(DeleteTransitRouteTableAggregationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouteTableAggregationWithOptions(request, runtime);
         }
 
+        /**
+          * *   Before you delete an aggregate route, make sure that your network has a redundant route to prevent service interruptions.
+          * *   After an aggregate route is deleted, the aggregate route is automatically withdrawn from virtual private clouds (VPCs). Specific routes that fall within the aggregate route are advertised to the VPCs.
+          *
+          * @param request DeleteTransitRouteTableAggregationRequest
+          * @return DeleteTransitRouteTableAggregationResponse
+         */
         public async Task<DeleteTransitRouteTableAggregationResponse> DeleteTransitRouteTableAggregationAsync(DeleteTransitRouteTableAggregationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7669,6 +7699,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DeleteTransitRouterCidrWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public DeleteTransitRouterMulticastDomainResponse DeleteTransitRouterMulticastDomainWithOptions(DeleteTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7720,6 +7760,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterMulticastDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public async Task<DeleteTransitRouterMulticastDomainResponse> DeleteTransitRouterMulticastDomainWithOptionsAsync(DeleteTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7771,12 +7821,30 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterMulticastDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public DeleteTransitRouterMulticastDomainResponse DeleteTransitRouterMulticastDomain(DeleteTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterMulticastDomainWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public async Task<DeleteTransitRouterMulticastDomainResponse> DeleteTransitRouterMulticastDomainAsync(DeleteTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
