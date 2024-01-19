@@ -4,6 +4,9 @@
 2024-01-19 Version: 1.0.40
 - Generated csharp 2017-09-12 for Cbn.
 
+2024-01-19 Version: 1.0.40
+- Generated csharp 2017-09-12 for Cbn.
+
 2024-01-18 Version: 1.0.39
 - Generated csharp 2017-09-12 for Cbn.
 
