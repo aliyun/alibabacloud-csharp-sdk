@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class StopReplicationJobRequest : TeaModel {
+        /// <summary>
+        /// The migration job ID.
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +23,6 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
 
     }
 

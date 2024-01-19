@@ -8,13 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
-    public class CutOverReplicationJobRequest : TeaModel {
+    public class ListAccessTokensRequest : TeaModel {
         /// <summary>
-        /// The ID of the incremental migration job.
+        /// The information about activation codes.
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("AccessTokenId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public List<string> AccessTokenId { get; set; }
+
+        /// <summary>
+        /// The name of the activation code.
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,16 +32,15 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// Specifies whether to migrate full data for the last time. Valid Values:
+        /// The status of the activation code. Valid values:
         /// 
-        /// *   true: migrates full data for the last time.
-        /// *   false: does not migrate full data for the last time.
-        /// 
-        /// Default value: false.
+        /// *   activated
+        /// *   unactivated
+        /// *   expired
         /// </summary>
-        [NameInMap("SyncData")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public bool? SyncData { get; set; }
+        public string Status { get; set; }
 
     }
 

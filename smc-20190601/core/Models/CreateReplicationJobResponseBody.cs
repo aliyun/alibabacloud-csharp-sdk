@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class CreateReplicationJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The ID of the migration job.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

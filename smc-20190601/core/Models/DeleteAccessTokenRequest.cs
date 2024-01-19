@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
-    public class StartReplicationJobRequest : TeaModel {
+    public class DeleteAccessTokenRequest : TeaModel {
         /// <summary>
-        /// The migration job ID.
+        /// The ID of the activation code.
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("AccessTokenId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string AccessTokenId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

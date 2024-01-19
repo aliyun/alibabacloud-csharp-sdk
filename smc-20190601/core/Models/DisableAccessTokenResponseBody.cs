@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
-    public class StopReplicationJobResponseBody : TeaModel {
+    public class DisableAccessTokenResponseBody : TeaModel {
         /// <summary>
         /// The request ID.
         /// </summary>

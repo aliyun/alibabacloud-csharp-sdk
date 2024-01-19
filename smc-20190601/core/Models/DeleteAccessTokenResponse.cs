@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smc20190601.Models
 {
-    public class DescribeSourceServersResponse : TeaModel {
+    public class DeleteAccessTokenResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSourceServersResponseBody Body { get; set; }
+        public DeleteAccessTokenResponseBody Body { get; set; }
 
     }
 
