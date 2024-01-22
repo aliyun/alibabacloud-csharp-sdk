@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of the VPN gateway.
         /// 
-        /// Only **Normal** may be returned, which indicates a standard NAT gateway.
+        /// Only **Normal** may be returned, which indicates a standard VPN gateway.
         /// </summary>
         [NameInMap("VpnType")]
         [Validation(Required=false)]

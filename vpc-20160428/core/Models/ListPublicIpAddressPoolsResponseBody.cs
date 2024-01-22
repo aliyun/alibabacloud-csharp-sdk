@@ -118,6 +118,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("SecurityProtectionTypes")]
+            [Validation(Required=false)]
+            public List<string> SecurityProtectionTypes { get; set; }
+
             /// <summary>
             /// Indicates whether the IP address pool is shared.
             /// 

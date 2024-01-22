@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SecurityProtectionTypes")]
+        [Validation(Required=false)]
+        public List<string> SecurityProtectionTypes { get; set; }
+
         /// <summary>
         /// The tag of the resource.
         /// </summary>

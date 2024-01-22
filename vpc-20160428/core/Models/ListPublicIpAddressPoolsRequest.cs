@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SecurityProtectionEnabled")]
+        [Validation(Required=false)]
+        public bool? SecurityProtectionEnabled { get; set; }
+
         /// <summary>
         /// The status of the IP address pool. Valid values:
         /// 

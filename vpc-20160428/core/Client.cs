@@ -11991,6 +11991,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityProtectionTypes))
+            {
+                query["SecurityProtectionTypes"] = request.SecurityProtectionTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -12076,6 +12080,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityProtectionTypes))
+            {
+                query["SecurityProtectionTypes"] = request.SecurityProtectionTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -41226,6 +41234,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityProtectionEnabled))
+            {
+                query["SecurityProtectionEnabled"] = request.SecurityProtectionEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -41304,6 +41316,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityProtectionEnabled))
+            {
+                query["SecurityProtectionEnabled"] = request.SecurityProtectionEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
