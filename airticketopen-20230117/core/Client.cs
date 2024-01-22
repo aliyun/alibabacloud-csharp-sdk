@@ -1624,10 +1624,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             {
                 request.FlightSegmentParamListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlightSegmentParamList, "flight_segment_param_list", "json");
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlightSegmentParamListShrink))
             {
-                body["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
+                query["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -1645,7 +1645,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1656,7 +1656,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<LuggageDirectResponse>(CallApi(params_, req, runtime));
@@ -1671,10 +1671,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             {
                 request.FlightSegmentParamListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlightSegmentParamList, "flight_segment_param_list", "json");
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlightSegmentParamListShrink))
             {
-                body["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
+                query["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -1692,7 +1692,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1703,7 +1703,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<LuggageDirectResponse>(await CallApiAsync(params_, req, runtime));
@@ -2764,10 +2764,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             {
                 request.FlightSegmentParamListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlightSegmentParamList, "flight_segment_param_list", "json");
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlightSegmentParamListShrink))
             {
-                body["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
+                query["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -2785,7 +2785,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2796,7 +2796,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<TransitVisaResponse>(CallApi(params_, req, runtime));
@@ -2811,10 +2811,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             {
                 request.FlightSegmentParamListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FlightSegmentParamList, "flight_segment_param_list", "json");
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlightSegmentParamListShrink))
             {
-                body["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
+                query["flight_segment_param_list"] = request.FlightSegmentParamListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -2832,7 +2832,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2843,7 +2843,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<TransitVisaResponse>(await CallApiAsync(params_, req, runtime));
