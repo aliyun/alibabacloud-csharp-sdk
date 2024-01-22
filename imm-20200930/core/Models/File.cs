@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string EXIF { get; set; }
 
+        [NameInMap("Elements")]
+        [Validation(Required=false)]
+        public List<Element> Elements { get; set; }
+
         [NameInMap("FigureCount")]
         [Validation(Required=false)]
         public long? FigureCount { get; set; }
@@ -172,6 +176,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("OCRContents")]
         [Validation(Required=false)]
         public List<OCRContents> OCRContents { get; set; }
+
+        [NameInMap("OCRTexts")]
+        [Validation(Required=false)]
+        public string OCRTexts { get; set; }
 
         [NameInMap("OSSCRC64")]
         [Validation(Required=false)]
@@ -252,6 +260,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("SemanticTypes")]
+        [Validation(Required=false)]
+        public List<string> SemanticTypes { get; set; }
 
         [NameInMap("ServerSideDataEncryption")]
         [Validation(Required=false)]

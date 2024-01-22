@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? Left { get; set; }
 
+        [NameInMap("Polygon")]
+        [Validation(Required=false)]
+        public List<PointInt64> Polygon { get; set; }
+
         [NameInMap("Top")]
         [Validation(Required=false)]
         public long? Top { get; set; }

@@ -6151,6 +6151,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["ProjectName"] = request.ProjectName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceURI))
             {
                 query["SourceURI"] = request.SourceURI;
@@ -6191,6 +6195,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceURI))
             {

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
