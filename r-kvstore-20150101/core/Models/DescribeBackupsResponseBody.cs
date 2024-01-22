@@ -172,6 +172,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        [NameInMap("FreeSize")]
+        [Validation(Required=false)]
+        public long? FreeSize { get; set; }
+
+        [NameInMap("FullStorageSize")]
+        [Validation(Required=false)]
+        public long? FullStorageSize { get; set; }
+
+        [NameInMap("LogStorageSize")]
+        [Validation(Required=false)]
+        public long? LogStorageSize { get; set; }
+
         /// <summary>
         /// The page number of the returned page.
         /// </summary>

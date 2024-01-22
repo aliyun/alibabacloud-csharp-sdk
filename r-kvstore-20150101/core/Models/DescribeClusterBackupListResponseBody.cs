@@ -111,6 +111,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        [NameInMap("FreeSize")]
+        [Validation(Required=false)]
+        public long? FreeSize { get; set; }
+
+        [NameInMap("FullStorageSize")]
+        [Validation(Required=false)]
+        public long? FullStorageSize { get; set; }
+
+        [NameInMap("LogStorageSize")]
+        [Validation(Required=false)]
+        public long? LogStorageSize { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
