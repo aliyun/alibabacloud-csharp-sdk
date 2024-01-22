@@ -152,18 +152,39 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? ProxyProtocolEnabled { get; set; }
 
+        /// <summary>
+        /// Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+        /// </summary>
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
         public GetListenerAttributeResponseBodyProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
         public class GetListenerAttributeResponseBodyProxyProtocolV2Config : TeaModel {
+            /// <summary>
+            /// Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
+            /// <summary>
+            /// Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
+            /// <summary>
+            /// Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("Ppv2VpcIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2VpcIdEnabled { get; set; }
@@ -227,14 +248,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<GetListenerAttributeResponseBodyTags> Tags { get; set; }
         public class GetListenerAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// The key of the tag that you want to remove. You can remove up to 20 tags in each call.
+            /// The tag key.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

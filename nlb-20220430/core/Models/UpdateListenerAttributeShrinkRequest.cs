@@ -127,6 +127,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? ProxyProtocolEnabled { get; set; }
 
+        /// <summary>
+        /// Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+        /// </summary>
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
         public string ProxyProtocolV2ConfigShrink { get; set; }

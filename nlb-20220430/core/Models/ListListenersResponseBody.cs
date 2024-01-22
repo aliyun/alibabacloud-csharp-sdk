@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListListenersResponseBody : TeaModel {
         /// <summary>
-        /// The list of listeners.
+        /// A list of listeners.
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:
             /// 
-            /// *   **true**: enabled
-            /// *   **false**: disabled
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("AlpnEnabled")]
             [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string AlpnPolicy { get; set; }
 
             /// <summary>
-            /// The list of CA certificates.
+            /// A list of CA certificates.
             /// 
             /// >  This parameter takes effect only for listeners that use SSL over TCP.
             /// </summary>
@@ -50,15 +50,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// Indicates whether mutual authentication is enabled. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("CaEnabled")]
             [Validation(Required=false)]
             public bool? CaEnabled { get; set; }
 
             /// <summary>
-            /// The list of server certificates.
+            /// The server certificate.
             /// 
             /// >  This parameter takes effect only for listeners that use SSL over TCP.
             /// </summary>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? Cps { get; set; }
 
             /// <summary>
-            /// The last port in the listening port range.
+            /// The last port in the listener port range.
             /// </summary>
             [NameInMap("EndPort")]
             [Validation(Required=false)]
             public string EndPort { get; set; }
 
             /// <summary>
-            /// The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.
+            /// The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.
             /// </summary>
             [NameInMap("IdleTimeout")]
             [Validation(Required=false)]
@@ -97,21 +97,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ListenerDescription { get; set; }
 
             /// <summary>
-            /// The ID of the listener.
+            /// The listener ID.
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
             public string ListenerId { get; set; }
 
             /// <summary>
-            /// The listening port.
+            /// The information about the listener port of your server.
             /// </summary>
             [NameInMap("ListenerPort")]
             [Validation(Required=false)]
             public int? ListenerPort { get; set; }
 
             /// <summary>
-            /// The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
+            /// The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
             /// </summary>
             [NameInMap("ListenerProtocol")]
             [Validation(Required=false)]
@@ -120,57 +120,78 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// The status of the listener. Valid values:
             /// 
-            /// *   **Provisioning**
-            /// *   **Running**
-            /// *   **Configuring**
-            /// *   **Stopping**
-            /// *   **Stopped**
-            /// *   **Starting**
-            /// *   **Deleting**
-            /// *   **Deleted**
+            /// *   **Provisioning**: The listener is being created.
+            /// *   **Running**: The listener is running.
+            /// *   **Configuring**: The listener is being configured.
+            /// *   **Stopping**: The listener is being stopped.
+            /// *   **Stopped**: The listener is stopped.
+            /// *   **Starting**: The listener is being started.
+            /// *   **Deleting**: The listener is being deleted.
+            /// *   **Deleted**: The listener is deleted.
             /// </summary>
             [NameInMap("ListenerStatus")]
             [Validation(Required=false)]
             public string ListenerStatus { get; set; }
 
             /// <summary>
-            /// The ID of the NLB instance.
+            /// The CLB instance ID.
             /// </summary>
             [NameInMap("LoadBalancerId")]
             [Validation(Required=false)]
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the maximum segment size remains unchanged.
+            /// The size of the largest TCP packet segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the Mss value of TCP packets remains unchanged.
             /// 
-            /// >  This parameter is supported only by listeners that use SSL over TCP.
+            /// >  This parameter takes effect only for listeners that use SSL over TCP.
             /// </summary>
             [NameInMap("Mss")]
             [Validation(Required=false)]
             public int? Mss { get; set; }
 
             /// <summary>
-            /// Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
+            /// Indicates whether the Proxy protocol passes source client IP addresses to backend servers. Valid values:
             /// 
-            /// *   **true**: enabled
-            /// *   **false**: disabled
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ProxyProtocolEnabled")]
             [Validation(Required=false)]
             public bool? ProxyProtocolEnabled { get; set; }
 
+            /// <summary>
+            /// Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+            /// </summary>
             [NameInMap("ProxyProtocolV2Config")]
             [Validation(Required=false)]
             public ListListenersResponseBodyListenersProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
             public class ListListenersResponseBodyListenersProxyProtocolV2Config : TeaModel {
+                /// <summary>
+                /// Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
                 [Validation(Required=false)]
                 public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
+                /// <summary>
+                /// Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
                 [Validation(Required=false)]
                 public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
+                /// <summary>
+                /// Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("Ppv2VpcIdEnabled")]
                 [Validation(Required=false)]
                 public bool? Ppv2VpcIdEnabled { get; set; }
@@ -178,7 +199,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             }
 
             /// <summary>
-            /// The ID of the region where the NLB instance is deployed.
+            /// The region ID of the NLB instance.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -187,8 +208,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// Indicates whether fine-grained monitoring is enabled. Valid values:
             /// 
-            /// *   **true**: enabled
-            /// *   **false**: disabled
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("SecSensorEnabled")]
             [Validation(Required=false)]
@@ -204,37 +225,35 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// The ID of the server group.
+            /// The server group ID.
             /// </summary>
             [NameInMap("ServerGroupId")]
             [Validation(Required=false)]
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// The first port in the listening port range.
+            /// The first port in the listener port range.
             /// </summary>
             [NameInMap("StartPort")]
             [Validation(Required=false)]
             public string StartPort { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// A list of tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListListenersResponseBodyListenersTags> Tags { get; set; }
             public class ListListenersResponseBodyListenersTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag option.
-                /// 
-                /// The value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

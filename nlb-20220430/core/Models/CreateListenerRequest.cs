@@ -156,18 +156,39 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         [Validation(Required=false)]
         public bool? ProxyProtocolEnabled { get; set; }
 
+        /// <summary>
+        /// Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+        /// </summary>
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
         public CreateListenerRequestProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
         public class CreateListenerRequestProxyProtocolV2Config : TeaModel {
+            /// <summary>
+            /// Specifies whether to use the Proxy protocol to pass the Ppv2PrivateLinkEpId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false** (default)
+            /// </summary>
             [NameInMap("Ppv2PrivateLinkEpIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
+            /// <summary>
+            /// Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false** (default)
+            /// </summary>
             [NameInMap("Ppv2PrivateLinkEpsIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
+            /// <summary>
+            /// Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false** (default)
+            /// </summary>
             [NameInMap("Ppv2VpcIdEnabled")]
             [Validation(Required=false)]
             public bool? Ppv2VpcIdEnabled { get; set; }
