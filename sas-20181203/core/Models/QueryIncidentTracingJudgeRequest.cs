@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryIncidentTracingJudgeRequest : TeaModel {
         /// <summary>
-        /// The event ID.
+        /// The ID of the event that you want to query.
+        /// 
+        /// >  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the event ID.
         /// </summary>
         [NameInMap("IncidentId")]
         [Validation(Required=false)]

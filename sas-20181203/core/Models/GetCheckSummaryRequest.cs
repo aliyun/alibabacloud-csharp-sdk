@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryRequest : TeaModel {
+        [NameInMap("IsItemStatistic")]
+        [Validation(Required=false)]
+        public bool? IsItemStatistic { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Valid values:
         /// 

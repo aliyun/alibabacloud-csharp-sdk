@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOssBucketScanInfoResponseBody : TeaModel {
         /// <summary>
-        /// The data that is returned.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
                 /// <summary>
                 /// Display type. Value:
-                /// - **grid**：Detection grid
-                /// - **text**：text
+                /// - **grid**: Detection grid
+                /// - **text**: text
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// Display type. Value:
-            /// - **grid**：Detection grid
-            /// - **text**：text
+            /// - **grid**: Detection grid
+            /// - **text**: text
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

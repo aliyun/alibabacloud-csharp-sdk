@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the check item.
         /// 
-        /// > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.
+        /// >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the alert that is triggered by the check item.
         /// 
-        /// >  To query the details about a specified check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
+        /// >  To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
         /// </summary>
         [NameInMap("CheckWarningId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The Alibaba Cloud account ID of the member in the resource directory.
         /// 
-        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of Alibaba Cloud accounts.
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The server UUID.
+        /// The UUID of the server.
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

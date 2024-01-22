@@ -34303,6 +34303,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsItemStatistic))
+            {
+                query["IsItemStatistic"] = request.IsItemStatistic;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -34338,6 +34342,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsItemStatistic))
+            {
+                query["IsItemStatistic"] = request.IsItemStatistic;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;

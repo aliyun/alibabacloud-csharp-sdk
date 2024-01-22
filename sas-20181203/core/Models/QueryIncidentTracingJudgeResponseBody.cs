@@ -17,14 +17,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The result data.
+        /// The request result.
         /// </summary>
         [NameInMap("TracingJudge")]
         [Validation(Required=false)]

@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryResponseBody : TeaModel {
+        [NameInMap("OverallItemStatistic")]
+        [Validation(Required=false)]
+        public GetCheckSummaryResponseBodyOverallItemStatistic OverallItemStatistic { get; set; }
+        public class GetCheckSummaryResponseBodyOverallItemStatistic : TeaModel {
+            [NameInMap("ReleaseCount")]
+            [Validation(Required=false)]
+            public int? ReleaseCount { get; set; }
+
+            [NameInMap("ResultCount")]
+            [Validation(Required=false)]
+            public int? ResultCount { get; set; }
+
+        }
+
         /// <summary>
         /// overall risk statistics of check items.
         /// </summary>
