@@ -10,45 +10,45 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// The list of O\&M tasks.
+        /// The O\&M tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("AllowCancel")]
             [Validation(Required=false)]
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// Indicates whether the time can be changed. Valid values:
+            /// Indicates whether the change is allowed.
             /// 
-            /// *   **0**: The time cannot be changed.
-            /// *   **1**: The time can be changed.
+            /// *   **0**: The change is not allowed.
+            /// *   **1**: The change is allowed.
             /// </summary>
             [NameInMap("AllowChange")]
             [Validation(Required=false)]
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// The change type.
+            /// The change level of the O\&M task.
             /// </summary>
             [NameInMap("ChangeLevel")]
             [Validation(Required=false)]
             public string ChangeLevel { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("ChangeLevelEn")]
             [Validation(Required=false)]
             public string ChangeLevelEn { get; set; }
 
             /// <summary>
-            /// The change type in Chinese.
+            /// The task type in English.
             /// </summary>
             [NameInMap("ChangeLevelZh")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("CurrentAVZ")]
             [Validation(Required=false)]
@@ -83,49 +83,49 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// The end time of the task.
+            /// The end time of the O\&M task.
             /// </summary>
             [NameInMap("Deadline")]
             [Validation(Required=false)]
             public string Deadline { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("ImpactEn")]
             [Validation(Required=false)]
             public string ImpactEn { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
             public string ImpactZh { get; set; }
 
             /// <summary>
-            /// The description of the task.
+            /// The description of the instance.
             /// </summary>
             [NameInMap("InsComment")]
             [Validation(Required=false)]
             public string InsComment { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The node ID.
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
             public string InsName { get; set; }
 
             /// <summary>
-            /// The time when the task was modified. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -146,56 +146,56 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// The result information. This parameter can be ignored.
+            /// The result information. The value of this parameter can be ignored.
             /// </summary>
             [NameInMap("ResultInfo")]
             [Validation(Required=false)]
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// The start time of the task. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The names of the subinstances.
+            /// The subinstances.
             /// </summary>
             [NameInMap("SubInsNames")]
             [Validation(Required=false)]
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).
+            /// The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC. Service interruptions may occur during switchover.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// The type of the task.
+            /// The task type.
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
             /// <summary>
-            /// N/A
+            /// None
             /// </summary>
             [NameInMap("TaskTypeEn")]
             [Validation(Required=false)]
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// The type of the task in Chinese.
+            /// The task type in Chinese.
             /// </summary>
             [NameInMap("TaskTypeZh")]
             [Validation(Required=false)]

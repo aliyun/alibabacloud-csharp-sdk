@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to obtain the value of this parameter.
         /// 
-        /// If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Multiple , with commas (,) in the middle.
+        /// If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Separate them with commas (,) in the middle.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]

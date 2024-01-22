@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
         /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// 
         /// > 
         /// 
@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// The logical relationship among multiple keywords.
+        /// 
+        /// *   **or**
+        /// *   **and** (default value)
+        /// </summary>
+        [NameInMap("LogicalOperator")]
+        [Validation(Required=false)]
+        public string LogicalOperator { get; set; }
 
         /// <summary>
         /// The ID of the shard node.
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+        /// The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -80,7 +90,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+        /// </summary>
+        [NameInMap("QueryKeywords")]
+        [Validation(Required=false)]
+        public string QueryKeywords { get; set; }
+
+        /// <summary>
+        /// The ID of the resource group to which the instances you want to query belong.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -95,7 +112,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

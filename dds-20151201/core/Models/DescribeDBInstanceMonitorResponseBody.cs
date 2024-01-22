@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The collection frequency of monitoring data. The value is **1** or **300**. Unit: seconds.
+        /// The collection frequency of monitoring data for the instance. Valid value: **5**. Unit: seconds.
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeMongoDBLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the audit log feature is enabled. Valid values:
+        /// Indicates whether to enable the audit log feature.
         /// 
         /// *   **true**: The audit log feature is enabled.
         /// *   **false**: The audit log feature is disabled.

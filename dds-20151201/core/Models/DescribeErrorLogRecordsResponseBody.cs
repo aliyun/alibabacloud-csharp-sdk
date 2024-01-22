@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.
+                /// The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]

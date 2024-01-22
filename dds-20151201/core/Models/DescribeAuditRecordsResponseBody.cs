@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ThreadID { get; set; }
 
                 /// <summary>
-                /// The execution time of the statement. Unit: microseconds.
+                /// The duration of the statement execution. Unit: microseconds.
                 /// </summary>
                 [NameInMap("TotalExecutionTimes")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

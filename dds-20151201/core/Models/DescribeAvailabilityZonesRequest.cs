@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 节点数，只适用于副本集。
+        /// The number of nodes. This parameter is available only for replica set instances.
         /// </summary>
         [NameInMap("ReplicationFactor")]
         [Validation(Required=false)]
@@ -112,7 +112,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The storage type of the instance. cloud: The system displays only zones in which cloud disk-based instances can be deployed. local: The system displays only zones in which local disk-based instances can be deployed. default or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.
+        /// The storage type of the instance. 
+        /// - **cloud**: The system displays only zones in which cloud disk-based instances can be deployed. 
+        /// - **local**: The system displays only zones in which local disk-based instances can be deployed. 
+        /// - **default** or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.
         /// </summary>
         [NameInMap("StorageSupport")]
         [Validation(Required=false)]
@@ -126,11 +129,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **cloud_essd3**: PL3 ESSD
         /// *   **local_ssd**: Local SSD
         /// 
-        /// > 
-        /// 
-        /// *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-        /// 
-        /// *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+        /// > *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+        /// > *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

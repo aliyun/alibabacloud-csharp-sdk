@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries returned.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

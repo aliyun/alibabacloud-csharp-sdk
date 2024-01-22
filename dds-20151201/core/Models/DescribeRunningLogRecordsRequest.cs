@@ -35,6 +35,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// The logical relationship among multiple keywords.
+        /// 
+        /// *   **or**
+        /// *   **and** (default value)
+        /// </summary>
+        [NameInMap("LogicalOperator")]
+        [Validation(Required=false)]
+        public string LogicalOperator { get; set; }
+
+        /// <summary>
         /// The ID of the mongos node or shard node whose operational logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
         /// 
         /// >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
@@ -74,6 +84,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+        /// </summary>
+        [NameInMap("QueryKeywords")]
+        [Validation(Required=false)]
+        public string QueryKeywords { get; set; }
 
         /// <summary>
         /// The ID of the resource group.

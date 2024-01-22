@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditRecordsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
         /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
         /// > The end time must be within 24 hours from the start time. Otherwise, the query fails.
         /// </summary>
@@ -35,19 +35,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The form of the audit log that the operation returns. Default value: File. Valid values:
+        /// The form of the audit log that the operation returns. Valid values:
         /// 
-        /// *   **File** triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
-        /// *   **Stream**: returns data streams.
+        /// *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
+        /// *   **Stream** (default): returns data streams.
         /// </summary>
         [NameInMap("Form")]
         [Validation(Required=false)]
         public string Form { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+        /// The logical relationship between multiple keywords. Valid values:
         /// 
-        /// > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+        /// *   **or**
+        /// *   **and** (default value)
+        /// </summary>
+        [NameInMap("LogicalOperator")]
+        [Validation(Required=false)]
+        public string LogicalOperator { get; set; }
+
+        /// <summary>
+        /// The ID of the mongos node or shard node in the instance.
+        /// 
+        /// > This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -72,7 +82,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Valid values: any non-zero positive integer. Default value: 1.
+        /// The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -86,7 +96,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The keywords that are used for queries. Separate multiple keywords with spaces. The maximum number of keywords is 10.
+        /// The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
         /// </summary>
         [NameInMap("QueryKeywords")]
         [Validation(Required=false)]
@@ -101,14 +111,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The account of the database. If you do not specify this parameter, this operation returns records of all accounts.
+        /// The user of the database. If you do not specify this parameter, this operation returns records of all users.
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]

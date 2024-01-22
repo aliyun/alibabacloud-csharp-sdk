@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The operation on the SSL feature. Valid values: Valid values:
+        /// The operation on the SSL feature. Valid values:
         /// 
         /// *   **Open**: enables SSL encryption.
         /// *   **Close**: disables SSL encryption.

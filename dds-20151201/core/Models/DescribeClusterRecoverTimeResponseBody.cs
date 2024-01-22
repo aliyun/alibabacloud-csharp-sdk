@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The method used to restore data. Valid values:
             /// 
-            /// *   \*\* PointInTime\*\* (default): Data is restored based on point in time
+            /// *   **PointInTime** (default): Data is restored based on point in time
             /// </summary>
             [NameInMap("RestoreType")]
             [Validation(Required=false)]

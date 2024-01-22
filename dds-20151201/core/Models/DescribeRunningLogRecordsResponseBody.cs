@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeRunningLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeRunningLogRecordsResponseBodyItemsLogRecords : TeaModel {
                 /// <summary>
-                /// The category of the log entry. Valid values:
+                /// The category of the log entry.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
