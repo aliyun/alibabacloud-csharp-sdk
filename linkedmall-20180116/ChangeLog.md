@@ -1,3 +1,6 @@
+2024-01-22 Version: 1.1.2
+- Generated csharp 2018-01-16 for linkedmall.
+
 2024-01-19 Version: 1.1.1
 - Generated csharp 2018-01-16 for linkedmall.
 
