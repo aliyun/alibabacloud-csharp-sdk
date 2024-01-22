@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsStatResponseBody : TeaModel {
         /// <summary>
-        /// The migration tasks.
+        /// The event.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// Event category.
+            /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
             /// </summary>
             [NameInMap("EventCategory")]
             [Validation(Required=false)]
             public string EventCategory { get; set; }
 
             /// <summary>
-            /// The total number of tasks that meet these constraints without taking pagination into account.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

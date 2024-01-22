@@ -10,27 +10,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksStatResponseBody : TeaModel {
         /// <summary>
-        /// The details of the instance.
+        /// The information about the task.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// The status of the migration task. Valid values:
+            /// The task status. Valid values:
             /// 
-            /// *   **NoStart**: The task is not started.
-            /// *   **Running**:The task is in progress.
-            /// *   **Success**: The task is successful.
-            /// *   **Failed**: The task failed.
-            /// *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+            /// *   Scheduled
+            /// *   Running
+            /// *   Succeed
+            /// *   Failed
+            /// *   Cancelling
+            /// *   Canceled
+            /// *   Waiting
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The total number of tasks that meet these constraints without taking pagination into account.
+            /// The total number of tasks.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

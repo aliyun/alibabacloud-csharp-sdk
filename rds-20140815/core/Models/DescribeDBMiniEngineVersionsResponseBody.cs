@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
 
+            /// <summary>
+            /// The expiration time of the minor engine version.
+            /// </summary>
             [NameInMap("ExpireDate")]
             [Validation(Required=false)]
             public string ExpireDate { get; set; }
@@ -86,9 +89,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The RDS edition of the instance that runs the minor engine version. Valid values:
             /// 
-            /// *   **Basic**: RDS Basic Edition
-            /// *   **HighAvailability**: RDS High-availability Edition
-            /// *   **Finance**: RDS Enterprise Edition
+            /// *   **Basic**: RDS Basic Edition.
+            /// *   **HighAvailability**: RDS High-availability Edition.
+            /// *   **Finance**: RDS Enterprise Edition.
             /// </summary>
             [NameInMap("NodeType")]
             [Validation(Required=false)]
@@ -114,8 +117,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The status of the minor engine version. Valid values:
             /// 
-            /// *   **Offline**: Discontinued
-            /// *   **online**: Available
+            /// *   **Offline**
+            /// *   **online**
             /// 
             /// >  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.
             /// </summary>

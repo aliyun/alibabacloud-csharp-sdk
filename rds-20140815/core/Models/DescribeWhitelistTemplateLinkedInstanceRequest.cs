@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeWhitelistTemplateLinkedInstanceRequest : TeaModel {
         /// <summary>
-        /// 资源组ID，可以为空。
+        /// The resource group ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

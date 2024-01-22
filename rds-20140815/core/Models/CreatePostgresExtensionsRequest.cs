@@ -67,6 +67,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// There are security risks associated with installing certain plug-ins on an instance of a minor version that is too low, and you can install it after confirming the risk. 
+        /// 
+        /// Valid values:
+        /// - true
+        /// - false
+        /// 
+        /// > For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).
+        /// </summary>
         [NameInMap("RiskConfirmed")]
         [Validation(Required=false)]
         public bool? RiskConfirmed { get; set; }

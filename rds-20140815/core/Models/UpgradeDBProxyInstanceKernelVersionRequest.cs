@@ -51,11 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Immediate**: performs the upgrade immediately.
         /// *   **SpecificTime**: performs the upgrade at a specified point in time.
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
-        /// 
-        /// *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
+        /// > *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
+        /// > *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
         /// </summary>
         [NameInMap("UpgradeTime")]
         [Validation(Required=false)]

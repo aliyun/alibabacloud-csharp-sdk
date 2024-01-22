@@ -39,11 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
         /// 
-        /// > 
-        /// 
-        /// *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
-        /// 
-        /// *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
+        /// > *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.
+        /// > *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]
@@ -130,9 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         ///     Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`
         /// 
-        ///     **
-        /// 
-        ///     **Note** **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..
+        ///     > **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..
         /// </summary>
         [NameInMap("ReadOnlyInstanceWeight")]
         [Validation(Required=false)]

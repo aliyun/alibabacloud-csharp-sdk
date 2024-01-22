@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The consistency check method for the database. Valid values:
         /// 
-        /// *   **SyncExecuteDBCheck**: synchronous database check
-        /// *   **AsyncExecuteDBCheck**: asynchronous database check
+        /// *   **SyncExecuteDBCheck**: synchronous database check.
+        /// *   **AsyncExecuteDBCheck**: asynchronous database check.
         /// 
         /// Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).
         /// 
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **True**
         /// *   **False**
         /// 
-        /// > Set the value to **True** for instances that run SQL Server 2008 R2.
+        /// >  Set the value to **True** for instances that run SQL Server 2008 R2.
         /// </summary>
         [NameInMap("IsOnlineDB")]
         [Validation(Required=false)]
         public string IsOnlineDB { get; set; }
 
         /// <summary>
-        /// The ID of the migration task.
+        /// The migration task ID.
         /// 
         /// *   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.
         /// *   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.
@@ -84,9 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OSSUrls { get; set; }
 
         /// <summary>
-        /// The information about the backup file in the OSS bucket.
-        /// 
-        /// The values consist of three parts that are separated by colons (:):
+        /// The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):
         /// 
         /// *   OSS endpoint: oss-ap-southeast-1.aliyuncs.com.
         /// *   Name of the OSS bucket: rdsmssqlsingapore.

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Error taskId.
+        /// The ID of the failed task. This parameter is returned when a task fails.
         /// </summary>
         [NameInMap("ErrorTaskId")]
         [Validation(Required=false)]

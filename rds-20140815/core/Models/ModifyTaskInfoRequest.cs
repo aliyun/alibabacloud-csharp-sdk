@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// Action params.
+        /// The action parameter.
         /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// Step name.
+        /// The name of the execution step.
         /// </summary>
         [NameInMap("StepName")]
         [Validation(Required=false)]
         public string StepName { get; set; }
 
         /// <summary>
-        /// The name of the operation that generates the task. Valid values:
+        /// The name of the operation that you can call to execute the task. Valid values:
         /// 
         /// *   ImportImage
         /// *   ExportImage

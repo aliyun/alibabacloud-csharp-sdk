@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyEventInfoRequest : TeaModel {
         /// <summary>
-        /// Action params.
+        /// The action parameter. Set this value in the JSON string format.
         /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// Event action.
+        /// The event handling action. Set this value to archive or undo.
         /// </summary>
         [NameInMap("EventAction")]
         [Validation(Required=false)]
         public string EventAction { get; set; }
 
         /// <summary>
-        /// The event ID.
+        /// The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]

@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems : TeaModel {
                 /// <summary>
-                /// The endpoint of the proxy terminal.
+                /// The database proxy endpoint.
                 /// </summary>
                 [NameInMap("DBProxyConnectString")]
                 [Validation(Required=false)]
                 public string DBProxyConnectString { get; set; }
 
                 /// <summary>
-                /// The network type of the proxy endpoint.
+                /// The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:
                 /// 
                 /// *   OuterString: Internet
                 /// *   InnerString: internal network
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBProxyConnectStringNetType { get; set; }
 
                 /// <summary>
-                /// The network type of the database proxy.
+                /// The network type of the database proxy. Valid values:
                 /// 
                 /// *   0: Internet
                 /// *   1: classic network
@@ -62,42 +62,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBProxyConnectStringNetWorkType { get; set; }
 
                 /// <summary>
-                /// The port number that is associated with the proxy endpoint.
+                /// The port that is associated with the database proxy endpoint.
                 /// </summary>
                 [NameInMap("DBProxyConnectStringPort")]
                 [Validation(Required=false)]
                 public string DBProxyConnectStringPort { get; set; }
 
                 /// <summary>
-                /// The ID of the proxy terminal to which the proxy endpoint belongs.
+                /// The ID of the backend database proxy endpoint.
                 /// </summary>
                 [NameInMap("DBProxyEndpointId")]
                 [Validation(Required=false)]
                 public string DBProxyEndpointId { get; set; }
 
                 /// <summary>
-                /// The name of the proxy terminal to which the proxy endpoint belongs.
+                /// The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.
                 /// </summary>
                 [NameInMap("DBProxyEndpointName")]
                 [Validation(Required=false)]
                 public string DBProxyEndpointName { get; set; }
 
                 /// <summary>
-                /// The VPC that is associated with the proxy endpoint.
+                /// The VPC of the database proxy.
                 /// </summary>
                 [NameInMap("DBProxyVpcId")]
                 [Validation(Required=false)]
                 public string DBProxyVpcId { get; set; }
 
                 /// <summary>
-                /// The proxy instance ID.
+                /// The ID of the database proxy instance.
                 /// </summary>
                 [NameInMap("DBProxyVpcInstanceId")]
                 [Validation(Required=false)]
                 public string DBProxyVpcInstanceId { get; set; }
 
                 /// <summary>
-                /// The vSwitch of the proxy service.
+                /// The vSwitch of the database proxy.
                 /// </summary>
                 [NameInMap("DBProxyVswitchId")]
                 [Validation(Required=false)]
@@ -177,6 +177,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// Connection Persistence State. 
+        /// 
+        /// Valid values:
+        /// - Enabled: Enabled
+        /// - Disabled: Disabled
+        /// - Unsupported: The instance does not support connection persistence
+        /// </summary>
         [NameInMap("DBProxyPersistentConnectionStatus")]
         [Validation(Required=false)]
         public string DBProxyPersistentConnectionStatus { get; set; }
@@ -203,34 +211,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems> DbProxyEndpointItems { get; set; }
             public class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems : TeaModel {
                 /// <summary>
-                /// The description of the proxy terminal.
+                /// The description of the database proxy endpoint.
                 /// </summary>
                 [NameInMap("DbProxyEndpointAliases")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointAliases { get; set; }
 
                 /// <summary>
-                /// The proxy terminal ID.
+                /// The ID of the database proxy endpoint.
                 /// </summary>
                 [NameInMap("DbProxyEndpointName")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointName { get; set; }
 
                 /// <summary>
-                /// The proxy terminal type. Valid values:
+                /// The type of the database proxy endpoint. Valid values:
                 /// 
-                /// *   Custom: custom proxy terminal
-                /// *   RWSplit: default proxy terminal
+                /// *   Custom: custom database proxy endpoint
+                /// *   RWSplit: default database proxy endpoint
                 /// </summary>
                 [NameInMap("DbProxyEndpointType")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointType { get; set; }
 
                 /// <summary>
-                /// The read and write attributes of the proxy terminal. Valid values:
+                /// The read and write attributes of the database proxy endpoint.
                 /// 
-                /// *   ReadOnly: The proxy terminal supports only read requests.
-                /// *   ReadWrite: The proxy terminal supports read and write requests.
+                /// *   ReadOnly
+                /// *   ReadWrite
                 /// </summary>
                 [NameInMap("DbProxyReadWriteMode")]
                 [Validation(Required=false)]

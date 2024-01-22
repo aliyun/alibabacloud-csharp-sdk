@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsStatRequest : TeaModel {
         /// <summary>
-        /// Archive status.
+        /// The status of the asset instance. Valid values: **starting**, **running**, **stopping**, and **stopped**.
         /// </summary>
         [NameInMap("ArchiveStatus")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

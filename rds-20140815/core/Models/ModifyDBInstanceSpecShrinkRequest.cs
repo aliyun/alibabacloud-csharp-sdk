@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is that is supported by the new instance type.
+        /// The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is supported by the new instance type.
         /// 
         /// > *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.
         /// > *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.

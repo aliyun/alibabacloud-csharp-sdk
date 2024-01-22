@@ -62,6 +62,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// Whether to enable connection keep. Valid values:
+        /// 
+        /// - Enabled: enables connection keeping
+        /// - Disabled: disables connection hold
+        /// 
+        /// > - This parameter is supported only for an ApsaraDB RDS for MySQL.
+        /// > - When you modify the connection persistence state, the value of **ConfigDBProxyService** is modify.
+        /// </summary>
         [NameInMap("PersistentConnectionStatus")]
         [Validation(Required=false)]
         public string PersistentConnectionStatus { get; set; }

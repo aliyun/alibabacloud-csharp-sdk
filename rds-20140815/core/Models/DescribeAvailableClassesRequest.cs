@@ -26,9 +26,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.
         ///     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
         /// 
-        ///     **
-        /// 
-        ///     **Note** If you create a serverless instance, you must specify this parameter.
+        ///     > If you create a serverless instance, you must specify this parameter.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -104,9 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
         ///     *   Valid value if you set Engine to PostgreSQL: **14.0**
         /// 
-        ///     **
-        /// 
-        ///     **Note** ApsaraDB RDS for MariaDB does not support serverless instances.
+        ///     > ApsaraDB RDS for MariaDB does not support serverless instances.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

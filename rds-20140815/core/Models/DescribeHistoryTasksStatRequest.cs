@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, the specified time is automatically converted to a time that is exactly 30 days earlier than the current time.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*t*HH:mm:ss*z format. The time must be in UTC.
         /// </summary>
         [NameInMap("FromStartTime")]
         [Validation(Required=false)]
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// The task status. Valid values:
         /// 
         /// *   Scheduled
         /// *   Running
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The type of tasks.
+        /// The task type.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
