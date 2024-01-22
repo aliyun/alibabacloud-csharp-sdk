@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateConfigMapRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("ConfigMapId")]
         [Validation(Required=false)]
         public long? ConfigMapId { get; set; }

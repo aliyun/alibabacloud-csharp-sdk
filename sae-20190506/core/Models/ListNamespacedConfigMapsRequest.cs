@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespacedConfigMapsRequest : TeaModel {
+        /// <summary>
+        /// cn-hangzhou
+        /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }

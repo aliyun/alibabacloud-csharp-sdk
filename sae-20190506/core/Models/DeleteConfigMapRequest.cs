@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteConfigMapRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("ConfigMapId")]
         [Validation(Required=false)]
         public long? ConfigMapId { get; set; }

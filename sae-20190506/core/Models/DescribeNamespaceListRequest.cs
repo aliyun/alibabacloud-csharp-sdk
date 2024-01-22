@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeNamespaceListRequest : TeaModel {
+        /// <summary>
+        /// true
+        /// </summary>
         [NameInMap("ContainCustom")]
         [Validation(Required=false)]
         public bool? ContainCustom { get; set; }
 
+        /// <summary>
+        /// true
+        /// </summary>
         [NameInMap("HybridCloudExclude")]
         [Validation(Required=false)]
         public bool? HybridCloudExclude { get; set; }

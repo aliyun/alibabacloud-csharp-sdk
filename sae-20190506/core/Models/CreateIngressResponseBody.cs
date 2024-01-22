@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("IngressId")]
             [Validation(Required=false)]
             public long? IngressId { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

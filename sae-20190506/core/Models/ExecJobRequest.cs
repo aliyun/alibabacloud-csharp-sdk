@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string JarStartOptions { get; set; }
 
+        [NameInMap("Replicas")]
+        [Validation(Required=false)]
+        public string Replicas { get; set; }
+
+        [NameInMap("Time")]
+        [Validation(Required=false)]
+        public string Time { get; set; }
+
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]
         public string WarStartOptions { get; set; }

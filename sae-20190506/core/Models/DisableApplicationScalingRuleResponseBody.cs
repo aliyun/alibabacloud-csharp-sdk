@@ -9,9 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DisableApplicationScalingRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// The ID of the trace. The ID is used to query the details of a request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("TraceId")]
         [Validation(Required=false)]

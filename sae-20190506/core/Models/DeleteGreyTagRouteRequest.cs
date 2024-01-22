@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteGreyTagRouteRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("GreyTagRouteId")]
         [Validation(Required=false)]
         public long? GreyTagRouteId { get; set; }

@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
+
             [NameInMap("Msg")]
             [Validation(Required=false)]
             public string Msg { get; set; }
+
             [NameInMap("Success")]
             [Validation(Required=false)]
             public string Success { get; set; }
-        };
+
+        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CertId { get; set; }
 
+        [NameInMap("CertIds")]
+        [Validation(Required=false)]
+        public string CertIds { get; set; }
+
         [NameInMap("DefaultRule")]
         [Validation(Required=false)]
         public string DefaultRule { get; set; }
