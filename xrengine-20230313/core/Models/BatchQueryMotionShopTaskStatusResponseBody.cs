@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
             [Validation(Required=false)]
             public List<BatchQueryMotionShopTaskStatusResponseBodyDataTasks> Tasks { get; set; }
             public class BatchQueryMotionShopTaskStatusResponseBodyDataTasks : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public BatchQueryMotionShopTaskStatusResponseBodyDataTasksResult Result { get; set; }

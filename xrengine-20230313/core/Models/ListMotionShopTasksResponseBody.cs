@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
         [Validation(Required=false)]
         public List<ListMotionShopTasksResponseBodyData> Data { get; set; }
         public class ListMotionShopTasksResponseBodyData : TeaModel {
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             [NameInMap("Material")]
             [Validation(Required=false)]
             public ListMotionShopTasksResponseBodyDataMaterial Material { get; set; }
