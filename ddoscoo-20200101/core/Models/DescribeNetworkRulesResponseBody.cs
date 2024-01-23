@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<string> RealServers { get; set; }
 
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
         }
 
         /// <summary>
