@@ -2865,6 +2865,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 query["OutputTable"] = request.OutputTable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paragraph))
+            {
+                query["Paragraph"] = request.Paragraph;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 query["Url"] = request.Url;
@@ -2909,6 +2913,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputTable))
             {
                 query["OutputTable"] = request.OutputTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paragraph))
+            {
+                query["Paragraph"] = request.Paragraph;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {

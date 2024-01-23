@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public bool? OutputTable { get; set; }
 
+        [NameInMap("Paragraph")]
+        [Validation(Required=false)]
+        public bool? Paragraph { get; set; }
+
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
