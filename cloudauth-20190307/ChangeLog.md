@@ -1,3 +1,6 @@
+2024-01-23 Version: 2.2.2
+- Update Tea.
+
 2024-01-18 Version: 2.2.1
 - Generated csharp 2019-03-07 for Cloudauth.
 
