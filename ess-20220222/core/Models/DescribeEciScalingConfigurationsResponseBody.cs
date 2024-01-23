@@ -185,6 +185,62 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string ImagePullPolicy { get; set; }
 
+                [NameInMap("LifecyclePostStartHandlerExecs")]
+                [Validation(Required=false)]
+                public List<string> LifecyclePostStartHandlerExecs { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
+                [Validation(Required=false)]
+                public string LifecyclePostStartHandlerHttpGetHost { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
+                [Validation(Required=false)]
+                public string LifecyclePostStartHandlerHttpGetPath { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
+                [Validation(Required=false)]
+                public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerHttpGetScheme")]
+                [Validation(Required=false)]
+                public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
+                [Validation(Required=false)]
+                public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
+
+                [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
+                [Validation(Required=false)]
+                public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerExecs")]
+                [Validation(Required=false)]
+                public List<string> LifecyclePreStopHandlerExecs { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
+                [Validation(Required=false)]
+                public string LifecyclePreStopHandlerHttpGetHost { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
+                [Validation(Required=false)]
+                public string LifecyclePreStopHandlerHttpGetPath { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
+                [Validation(Required=false)]
+                public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerHttpGetScheme")]
+                [Validation(Required=false)]
+                public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
+                [Validation(Required=false)]
+                public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
+
+                [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
+                [Validation(Required=false)]
+                public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
+
                 /// <summary>
                 /// The commands that are run in the container when you use the CLI to perform probes.
                 /// </summary>
