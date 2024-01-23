@@ -725,6 +725,72 @@ namespace AlibabaCloud.SDK.PTS20201020
             return await GetJMeterLogsWithOptionsAsync(request, runtime);
         }
 
+        public GetJMeterReportDetailsResponse GetJMeterReportDetailsWithOptions(GetJMeterReportDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJMeterReportDetails",
+                Version = "2020-10-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJMeterReportDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetJMeterReportDetailsResponse> GetJMeterReportDetailsWithOptionsAsync(GetJMeterReportDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJMeterReportDetails",
+                Version = "2020-10-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJMeterReportDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetJMeterReportDetailsResponse GetJMeterReportDetails(GetJMeterReportDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJMeterReportDetailsWithOptions(request, runtime);
+        }
+
+        public async Task<GetJMeterReportDetailsResponse> GetJMeterReportDetailsAsync(GetJMeterReportDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJMeterReportDetailsWithOptionsAsync(request, runtime);
+        }
+
         public GetJMeterSampleMetricsResponse GetJMeterSampleMetricsWithOptions(GetJMeterSampleMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

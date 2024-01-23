@@ -155,6 +155,20 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RegionalCondition")]
+            [Validation(Required=false)]
+            public List<GetOpenJMeterSceneResponseBodySceneRegionalCondition> RegionalCondition { get; set; }
+            public class GetOpenJMeterSceneResponseBodySceneRegionalCondition : TeaModel {
+                [NameInMap("Amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public string SceneId { get; set; }

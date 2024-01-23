@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public int? Concurrency { get; set; }
 
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("HasError")]
+            [Validation(Required=false)]
+            public bool? HasError { get; set; }
+
             [NameInMap("HasReport")]
             [Validation(Required=false)]
             public bool? HasReport { get; set; }
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("IsDebugging")]
             [Validation(Required=false)]
             public bool? IsDebugging { get; set; }
+
+            [NameInMap("ReportId")]
+            [Validation(Required=false)]
+            public string ReportId { get; set; }
 
             [NameInMap("SampleStatList")]
             [Validation(Required=false)]

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
         }
 
         [NameInMap("Message")]

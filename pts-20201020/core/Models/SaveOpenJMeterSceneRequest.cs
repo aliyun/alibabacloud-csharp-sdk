@@ -123,6 +123,20 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("RegionalCondition")]
+            [Validation(Required=false)]
+            public List<SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition> RegionalCondition { get; set; }
+            public class SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition : TeaModel {
+                [NameInMap("Amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
             [NameInMap("SceneId")]
             [Validation(Required=false)]
             public string SceneId { get; set; }
