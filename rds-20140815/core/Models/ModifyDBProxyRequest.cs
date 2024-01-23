@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceNum { get; set; }
 
         /// <summary>
-        /// A reserved parameter. You do not need to specify this parameter.
+        /// This parameter is reserved. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]

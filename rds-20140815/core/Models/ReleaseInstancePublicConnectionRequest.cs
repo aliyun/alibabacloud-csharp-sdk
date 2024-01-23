@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The public endpoint. You can call the DescribeDBInstanceNetInfo to query the public endpoint.
+        /// The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
