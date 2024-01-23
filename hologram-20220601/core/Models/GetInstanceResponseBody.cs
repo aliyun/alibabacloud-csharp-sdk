@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code that is returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The details of the instance.
+        /// The information about the instance.
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
@@ -187,21 +187,21 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The number of compute nodes. In a typical configuration, a node has 16 vCPUs and 32 GB of memory.
+            /// The number of compute nodes. In a typical configuration, a node has 16 CPU cores and 32 GB of memory.
             /// </summary>
             [NameInMap("ComputeNodeCount")]
             [Validation(Required=false)]
             public long? ComputeNodeCount { get; set; }
 
             /// <summary>
-            /// The number of vCPUs.
+            /// The number of CPU cores.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// The time when the instance was created.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -338,14 +338,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// The ID of the VPC to which the instance belongs.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of VPC to which the instance belongs.
+                /// The ID of the instance that is deployed in the VPC.
                 /// </summary>
                 [NameInMap("VpcInstanceId")]
                 [Validation(Required=false)]
@@ -361,23 +361,21 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// 网关节点数量。
+            /// The number of gateway nodes.
             /// </summary>
             [NameInMap("GatewayCount")]
             [Validation(Required=false)]
             public long? GatewayCount { get; set; }
 
             /// <summary>
-            /// 网关cpu资源。
-            /// 单位：core。
+            /// The number of CPU cores of the gateway. Unit: core.
             /// </summary>
             [NameInMap("GatewayCpu")]
             [Validation(Required=false)]
             public long? GatewayCpu { get; set; }
 
             /// <summary>
-            /// 网关内存资源。
-            /// 单位：GB。
+            /// The size of memory resources of the gateway. Unit: GB.
             /// </summary>
             [NameInMap("GatewayMemory")]
             [Validation(Required=false)]
@@ -533,9 +531,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public long? Memory { get; set; }
 
+            /// <summary>
+            /// The ID of the region in which the instance resides.
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("ReplicaRole")]
+            [Validation(Required=false)]
+            public string ReplicaRole { get; set; }
 
             /// <summary>
             /// The ID of the resource group.
@@ -546,6 +551,50 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
             /// <summary>
             /// The reason for the suspension.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Indebet
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     The instance has an overdue payment
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     .
+            /// 
+            /// *   Manual
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     The instance is manually suspended
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     .
+            /// 
+            /// *   Overdue
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     :
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     The instance has expired
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     .
             /// </summary>
             [NameInMap("SuspendReason")]
             [Validation(Required=false)]
@@ -559,14 +608,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<GetInstanceResponseBodyInstanceTags> Tags { get; set; }
             public class GetInstanceResponseBodyInstanceTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of tag N.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

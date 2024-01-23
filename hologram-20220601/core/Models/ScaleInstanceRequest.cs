@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// The infrequent access (IA) storage space of the instance. Unit: GB.
         /// 
-        /// > This parameter is invalid for pay-as-you-go instances.
+        /// > Ignore this parameter for pay-as-you-go instances.
         /// </summary>
         [NameInMap("coldStorageSize")]
         [Validation(Required=false)]
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// The specifications of the instance. Valid values:
         /// 
-        /// *   8-core 32 GB (number of compute Nodes: 1)
-        /// *   16-core 64 GB (number of compute nodes: 1)
-        /// *   32-core 128 GB (number of compute nodes: 2)
-        /// *   64-core 256 GB (number of compute nodes: 4)
-        /// *   96-core 384 GB (number of compute nodes: 6)
-        /// *   128-core 512 GB (number of compute nodes: 8)
+        /// *   8-core 32GB (number of compute nodes: 1)
+        /// *   16-core 64GB (number of compute nodes: 1)
+        /// *   32-core 128GB (number of compute nodes: 2)
+        /// *   64-core 256GB (number of compute nodes: 4)
+        /// *   96-core 384GB (number of compute nodes: 6)
+        /// *   128-core 512GB (number of compute nodes: 8)
         /// *   Others
         /// 
         /// > 
@@ -35,14 +35,19 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// 
         /// *   If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.
         /// 
-        /// *   This parameter is invalid for shared instances.
+        /// *   This parameter is invalid for Hologres Shared Cluster instances.
         /// 
-        /// *   The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
+        /// *   The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
         /// </summary>
         [NameInMap("cpu")]
         [Validation(Required=false)]
         public long? Cpu { get; set; }
 
+        /// <summary>
+        /// The number of gateways. Valid values: 2 to 50.
+        /// 
+        /// > This parameter is required only for virtual warehouse instances.
+        /// </summary>
         [NameInMap("gatewayCount")]
         [Validation(Required=false)]
         public long? GatewayCount { get; set; }
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// The standard storage space of the instance. Unit: GB.
         /// 
-        /// > This parameter is invalid for pay-as-you-go instances.
+        /// > Ignore this parameter for pay-as-you-go instances.
         /// </summary>
         [NameInMap("storageSize")]
         [Validation(Required=false)]
