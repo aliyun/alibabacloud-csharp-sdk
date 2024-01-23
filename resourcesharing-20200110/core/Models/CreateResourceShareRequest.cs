@@ -70,6 +70,20 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         }
 
+        [NameInMap("TargetProperties")]
+        [Validation(Required=false)]
+        public List<CreateResourceShareRequestTargetProperties> TargetProperties { get; set; }
+        public class CreateResourceShareRequestTargetProperties : TeaModel {
+            [NameInMap("Property")]
+            [Validation(Required=false)]
+            public string Property { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+        }
+
         /// <summary>
         /// The information about the principals.
         /// </summary>
