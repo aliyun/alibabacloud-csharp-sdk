@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDBTopologyResponseBody : TeaModel {
         /// <summary>
-        /// The topology of the logical database.
+        /// The topology of the data table.
         /// </summary>
         [NameInMap("DBTopology")]
         [Validation(Required=false)]
         public GetDBTopologyResponseBodyDBTopology DBTopology { get; set; }
         public class GetDBTopologyResponseBodyDBTopology : TeaModel {
             /// <summary>
-            /// The alias of the logical database.
+            /// The alias of the access point.
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
             public string Alias { get; set; }
 
             /// <summary>
-            /// The topologies of the physical database shards.
+            /// The list of database splitting topology information.
             /// </summary>
             [NameInMap("DBTopologyInfoList")]
             [Validation(Required=false)]
@@ -40,65 +40,56 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string CatalogName { get; set; }
 
                 /// <summary>
-                /// The ID of the logical database.
+                /// The ID of the database for which the schema design is executed.
                 /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
                 /// <summary>
-                /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+                /// The type of the database engine.
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the logical database belongs. Valid values:
+                /// The type of the environment to which the database belongs. Valid values:
                 /// 
-                /// *   **product**: production environment
-                /// *   **dev**: development environment
-                /// *   **pre**: pre-release environment
-                /// *   **test**: test environment
-                /// *   **sit**: SIT environment
-                /// *   **uat**: UAT environment
-                /// *   **pet**: stress testing environment
-                /// *   **stag**: staging environment
-                /// 
-                /// > For more information, see [Change the environment type of an instance](~~163309~~).
+                /// *   product: production environment
+                /// *   dev: development environment
+                /// *   pre: staging environment
+                /// *   test: test environment
+                /// *   sit: SIT environment
+                /// *   uat: user acceptance testing (UAT) environment
+                /// *   pet: stress testing environment
+                /// *   stag: STAG environment
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// The ID of the instance in which the logical database resides.
+                /// The ID of the instance. The valid value is returned if you call the ListInstances operation. The instance ID is not the ID of the RDS instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.
-                /// 
-                /// *   If the value of the InstanceSource parameter is RDS, the ID of an ApsaraDB RDS instance is returned.
-                /// *   If the value of the InstanceSource parameter is ECS_OWN, the ID of a self-managed database that is hosted on an Elastic Compute Service (ECS) instance is returned.
-                /// *   If the value of the InstanceSource parameter is PUBLIC_OWN, an empty string is returned.
-                /// *   If the value of the InstanceSource parameter is VPC_ID, the ID of a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits is returned.
-                /// *   If the value of the InstanceSource parameter is GATEWAY, the ID of a database instance connected by using a database gateway is returned.
+                /// Instance resource ID.
                 /// </summary>
                 [NameInMap("InstanceResourceId")]
                 [Validation(Required=false)]
                 public string InstanceResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the database instance. Valid values:
+                /// The source of the database instance. Valid values:
                 /// 
-                /// *   **RDS**: an ApsaraDB RDS instance.
-                /// *   **ECS_OWN**: a self-managed database that is hosted on an ECS instance.
-                /// *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
-                /// *   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.
-                /// *   **GATEWAY**: a database instance connected by using a database gateway.
+                /// *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
+                /// *   **RDS:** an ApsaraDB RDS instance
+                /// *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
+                /// *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
                 /// </summary>
                 [NameInMap("InstanceSource")]
                 [Validation(Required=false)]
@@ -121,7 +112,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used to search for the database.
+                /// The name of the saved search.
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
@@ -130,25 +121,23 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+            /// The type of the database engine.
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The type of the environment to which the logical database belongs. Valid values:
+            /// The type of the environment in which the database instance is deployed. Valid values:
             /// 
-            /// *   **product**: production environment
-            /// *   **dev**: development environment
-            /// *   **pre**: pre-release environment
-            /// *   **test**: test environment
-            /// *   **sit**: system integration testing (SIT) environment
-            /// *   **uat**: user acceptance testing (UAT) environment
-            /// *   **pet**: stress testing environment
-            /// *   **stag**: staging environment
-            /// 
-            /// > For more information, see [Change the environment type of an instance](~~163309~~).
+            /// *   product: production environment
+            /// *   dev: development environment
+            /// *   pre: pre-release environment
+            /// *   test: test environment
+            /// *   sit: system integration testing (SIT) environment
+            /// *   uat: user acceptance testing (UAT) environment
+            /// *   pet: stress testing environment
+            /// *   stag: staging environment
             /// </summary>
             [NameInMap("EnvType")]
             [Validation(Required=false)]
@@ -162,14 +151,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public long? LogicDbId { get; set; }
 
             /// <summary>
-            /// The name of the logical database.
+            /// Logical database name.
             /// </summary>
             [NameInMap("LogicDbName")]
             [Validation(Required=false)]
             public string LogicDbName { get; set; }
 
             /// <summary>
-            /// The name that is used to search for the logical database.
+            /// The name of the saved search.
             /// </summary>
             [NameInMap("SearchName")]
             [Validation(Required=false)]
@@ -185,7 +174,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -199,7 +188,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   **true**: The request is successful.
+        /// *   **false**: The request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
