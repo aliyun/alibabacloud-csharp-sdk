@@ -195,6 +195,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string LatestReleaseCreateTime { get; set; }
 
+                [NameInMap("ManagedType")]
+                [Validation(Required=false)]
+                public string ManagedType { get; set; }
+
                 /// <summary>
                 /// Prometheus ID.
                 /// </summary>

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string LatestVersion { get; set; }
 
+            [NameInMap("Managed")]
+            [Validation(Required=false)]
+            public bool? Managed { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
+                [NameInMap("Managed")]
+                [Validation(Required=false)]
+                public bool? Managed { get; set; }
+
                 /// <summary>
                 /// The ID of the region.
                 /// </summary>
