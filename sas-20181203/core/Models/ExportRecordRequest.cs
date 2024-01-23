@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportRecordRequest : TeaModel {
+        [NameInMap("ExportFileType")]
+        [Validation(Required=false)]
+        public string ExportFileType { get; set; }
+
         /// <summary>
         /// The type of the check result list to export. Valid values:
         /// 

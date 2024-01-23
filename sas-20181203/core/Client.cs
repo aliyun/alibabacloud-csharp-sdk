@@ -32008,6 +32008,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportFileType))
+            {
+                query["ExportFileType"] = request.ExportFileType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
             {
                 query["ExportType"] = request.ExportType;
@@ -32054,6 +32058,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportFileType))
+            {
+                query["ExportFileType"] = request.ExportFileType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
             {
                 query["ExportType"] = request.ExportType;

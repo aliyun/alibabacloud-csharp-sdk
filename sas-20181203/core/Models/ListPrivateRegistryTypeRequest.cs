@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPrivateRegistryTypeRequest : TeaModel {
         /// <summary>
-        /// 请求和接收消息的语言类型。取值：
-        /// - **zh**：中文
-        /// - **en**：英文
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
