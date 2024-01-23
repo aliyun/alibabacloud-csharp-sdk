@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ModuleName { get; set; }
 
+        [NameInMap("Summary")]
+        [Validation(Required=false)]
+        public bool? Summary { get; set; }
+
     }
 
 }

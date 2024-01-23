@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
+
         /// <summary>
         /// The ID of the event notification rule.
         /// </summary>

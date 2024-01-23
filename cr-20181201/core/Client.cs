@@ -5887,6 +5887,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["ModuleName"] = request.ModuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Summary))
+            {
+                query["Summary"] = request.Summary;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5917,6 +5921,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
             {
                 query["ModuleName"] = request.ModuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Summary))
+            {
+                query["Summary"] = request.Summary;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
