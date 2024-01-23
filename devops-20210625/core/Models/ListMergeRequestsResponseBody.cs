@@ -82,6 +82,28 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? Iid { get; set; }
 
+            [NameInMap("labels")]
+            [Validation(Required=false)]
+            public List<ListMergeRequestsResponseBodyResultLabels> Labels { get; set; }
+            public class ListMergeRequestsResponseBodyResultLabels : TeaModel {
+                [NameInMap("color")]
+                [Validation(Required=false)]
+                public string Color { get; set; }
+
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             [NameInMap("localId")]
             [Validation(Required=false)]
             public long? LocalId { get; set; }

@@ -25,6 +25,22 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public MergeMergeRequestResponseBodyResult Result { get; set; }
         public class MergeMergeRequestResponseBodyResult : TeaModel {
+            [NameInMap("bizId")]
+            [Validation(Required=false)]
+            public string BizId { get; set; }
+
+            [NameInMap("localId")]
+            [Validation(Required=false)]
+            public long? LocalId { get; set; }
+
+            [NameInMap("mergedRevision")]
+            [Validation(Required=false)]
+            public string MergedRevision { get; set; }
+
+            [NameInMap("projectId")]
+            [Validation(Required=false)]
+            public long? ProjectId { get; set; }
+
             [NameInMap("result")]
             [Validation(Required=false)]
             public bool? Result { get; set; }

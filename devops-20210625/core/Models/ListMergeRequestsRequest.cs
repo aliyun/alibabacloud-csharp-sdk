@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string GroupIds { get; set; }
 
+        [NameInMap("labelIds")]
+        [Validation(Required=false)]
+        public string LabelIds { get; set; }
+
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }

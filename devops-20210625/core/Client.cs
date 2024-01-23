@@ -10715,6 +10715,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             {
                 query["groupIds"] = request.GroupIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelIds))
+            {
+                query["labelIds"] = request.LabelIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["orderBy"] = request.OrderBy;
@@ -10790,6 +10794,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
                 query["groupIds"] = request.GroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelIds))
+            {
+                query["labelIds"] = request.LabelIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
