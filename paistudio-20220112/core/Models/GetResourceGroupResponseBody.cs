@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
         public string GmtCreatedTime { get; set; }
@@ -48,6 +52,20 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SupportRDMA")]
         [Validation(Required=false)]
         public bool? SupportRDMA { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetResourceGroupResponseBodyTags> Tags { get; set; }
+        public class GetResourceGroupResponseBodyTags : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         [NameInMap("UserVpc")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Labels { get; set; }
 
+        [NameInMap("LayoutMode")]
+        [Validation(Required=false)]
+        public string LayoutMode { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }

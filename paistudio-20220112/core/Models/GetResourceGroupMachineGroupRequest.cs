@@ -8,15 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
-    public class GetResourceGroupRequest : TeaModel {
-        [NameInMap("IsAIWorkspaceDataEnabled")]
-        [Validation(Required=false)]
-        public bool? IsAIWorkspaceDataEnabled { get; set; }
-
+    public class GetResourceGroupMachineGroupRequest : TeaModel {
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<GetResourceGroupRequestTag> Tag { get; set; }
-        public class GetResourceGroupRequestTag : TeaModel {
+        public List<GetResourceGroupMachineGroupRequestTag> Tag { get; set; }
+        public class GetResourceGroupMachineGroupRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }

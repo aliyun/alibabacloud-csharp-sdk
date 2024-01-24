@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Memory { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("PaymentDuration")]
         [Validation(Required=false)]
         public string PaymentDuration { get; set; }
@@ -84,6 +88,20 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SupportedDrivers")]
         [Validation(Required=false)]
         public List<string> SupportedDrivers { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetResourceGroupMachineGroupResponseBodyTags> Tags { get; set; }
+        public class GetResourceGroupMachineGroupResponseBodyTags : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 
