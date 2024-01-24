@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ResourceLevel { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("RestartTimes")]
         [Validation(Required=false)]
         public string RestartTimes { get; set; }

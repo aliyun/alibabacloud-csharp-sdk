@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("InstanceTypes")]
+        [Validation(Required=false)]
+        public string InstanceTypes { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]

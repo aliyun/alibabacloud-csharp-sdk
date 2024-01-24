@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public JobSettings Settings { get; set; }
