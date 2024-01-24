@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class ElementSmartVerifyAdvanceRequest : TeaModel {
-        [NameInMap("CertFileObject")]
-        [Validation(Required=true)]
+        [NameInMap("CertFile")]
+        [Validation(Required=false)]
         public Stream CertFileObject { get; set; }
 
         [NameInMap("CertName")]

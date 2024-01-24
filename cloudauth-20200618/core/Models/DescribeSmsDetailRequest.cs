@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         public string BizId { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("ErrorCode")]
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         public string OuterOrderNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("SendDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SendDate { get; set; }
 
         [NameInMap("SendStatus")]

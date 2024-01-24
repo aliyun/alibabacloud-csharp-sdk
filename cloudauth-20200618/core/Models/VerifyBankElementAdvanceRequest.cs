@@ -9,8 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class VerifyBankElementAdvanceRequest : TeaModel {
-        [NameInMap("BankCardFileObject")]
-        [Validation(Required=true)]
+        [NameInMap("BankCardFile")]
+        [Validation(Required=false)]
         public Stream BankCardFileObject { get; set; }
 
         [NameInMap("BankCardNo")]
