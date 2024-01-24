@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRecycleBinStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The status of the table recycle bin. Valid values:
+        /// 
+        /// *   disable: The table recycle bin is enabled.
+        /// *   enable: The table recycle bin is disabled.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The result of the request.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

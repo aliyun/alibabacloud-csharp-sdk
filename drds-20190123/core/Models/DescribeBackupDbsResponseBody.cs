@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupDbsResponseBody : TeaModel {
+        /// <summary>
+        /// The details about a database.
+        /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
         public DescribeBackupDbsResponseBodyDbNames DbNames { get; set; }
@@ -16,12 +19,19 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [NameInMap("dbName")]
             [Validation(Required=false)]
             public List<string> DbName { get; set; }
-        };
 
+        }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The result of request.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

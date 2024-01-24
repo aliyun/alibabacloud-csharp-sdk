@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class ReleaseInstanceInternetAddressResponseBody : TeaModel {
+        /// <summary>
+        /// The result returned by the current API.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

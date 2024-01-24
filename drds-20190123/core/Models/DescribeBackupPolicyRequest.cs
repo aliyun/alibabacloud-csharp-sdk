@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }

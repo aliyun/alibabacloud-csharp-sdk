@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsDbInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the custom ApsaraDB RDS for MySQL instance that you want to query.
+        /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the database.
+        /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
+        /// <summary>
+        /// The name of the PolarDB-X 1.0 instance.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }

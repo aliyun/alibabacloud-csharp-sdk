@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class TagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

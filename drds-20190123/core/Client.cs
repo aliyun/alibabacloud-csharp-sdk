@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Drds20190123
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeVSwitch))
+            {
+                query["ChangeVSwitch"] = request.ChangeVSwitch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
             {
                 query["DrdsInstanceId"] = request.DrdsInstanceId;
@@ -174,6 +178,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsRegionId))
             {
                 query["DrdsRegionId"] = request.DrdsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewVSwitch))
+            {
+                query["NewVSwitch"] = request.NewVSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAzoneId))
             {
@@ -206,6 +214,10 @@ namespace AlibabaCloud.SDK.Drds20190123
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeVSwitch))
+            {
+                query["ChangeVSwitch"] = request.ChangeVSwitch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
             {
                 query["DrdsInstanceId"] = request.DrdsInstanceId;
@@ -213,6 +225,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsRegionId))
             {
                 query["DrdsRegionId"] = request.DrdsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewVSwitch))
+            {
+                query["NewVSwitch"] = request.NewVSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAzoneId))
             {
@@ -987,6 +1003,13 @@ namespace AlibabaCloud.SDK.Drds20190123
             return await CreateInstanceInternetAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+          *
+          * @param request CreateOrderForRdsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrderForRdsResponse
+         */
         public CreateOrderForRdsResponse CreateOrderForRdsWithOptions(CreateOrderForRdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1018,6 +1041,13 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<CreateOrderForRdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+          *
+          * @param request CreateOrderForRdsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrderForRdsResponse
+         */
         public async Task<CreateOrderForRdsResponse> CreateOrderForRdsWithOptionsAsync(CreateOrderForRdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1049,12 +1079,24 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<CreateOrderForRdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+          *
+          * @param request CreateOrderForRdsRequest
+          * @return CreateOrderForRdsResponse
+         */
         public CreateOrderForRdsResponse CreateOrderForRds(CreateOrderForRdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOrderForRdsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+          *
+          * @param request CreateOrderForRdsRequest
+          * @return CreateOrderForRdsResponse
+         */
         public async Task<CreateOrderForRdsResponse> CreateOrderForRdsAsync(CreateOrderForRdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1819,6 +1861,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
             {
                 query["Search"] = request.Search;
@@ -1861,6 +1907,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
             {
@@ -2069,6 +2119,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             {
                 query["GroupName"] = request.GroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2103,6 +2157,10 @@ namespace AlibabaCloud.SDK.Drds20190123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2469,88 +2527,6 @@ namespace AlibabaCloud.SDK.Drds20190123
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDrdsDbRdsNameListWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeDrdsDbTasksResponse DescribeDrdsDbTasksWithOptions(DescribeDrdsDbTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
-            {
-                query["DrdsInstanceId"] = request.DrdsInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDrdsDbTasks",
-                Version = "2019-01-23",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDrdsDbTasksResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeDrdsDbTasksResponse> DescribeDrdsDbTasksWithOptionsAsync(DescribeDrdsDbTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
-            {
-                query["DrdsInstanceId"] = request.DrdsInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDrdsDbTasks",
-                Version = "2019-01-23",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDrdsDbTasksResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeDrdsDbTasksResponse DescribeDrdsDbTasks(DescribeDrdsDbTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeDrdsDbTasksWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeDrdsDbTasksResponse> DescribeDrdsDbTasksAsync(DescribeDrdsDbTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeDrdsDbTasksWithOptionsAsync(request, runtime);
         }
 
         public DescribeDrdsInstanceResponse DescribeDrdsInstanceWithOptions(DescribeDrdsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4061,6 +4037,13 @@ namespace AlibabaCloud.SDK.Drds20190123
             return await DescribeInstanceSwitchAzoneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribeInstanceSwitchNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceSwitchNetworkResponse
+         */
         public DescribeInstanceSwitchNetworkResponse DescribeInstanceSwitchNetworkWithOptions(DescribeInstanceSwitchNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4088,6 +4071,13 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<DescribeInstanceSwitchNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribeInstanceSwitchNetworkRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceSwitchNetworkResponse
+         */
         public async Task<DescribeInstanceSwitchNetworkResponse> DescribeInstanceSwitchNetworkWithOptionsAsync(DescribeInstanceSwitchNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4115,12 +4105,24 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<DescribeInstanceSwitchNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribeInstanceSwitchNetworkRequest
+          * @return DescribeInstanceSwitchNetworkResponse
+         */
         public DescribeInstanceSwitchNetworkResponse DescribeInstanceSwitchNetwork(DescribeInstanceSwitchNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceSwitchNetworkWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribeInstanceSwitchNetworkRequest
+          * @return DescribeInstanceSwitchNetworkResponse
+         */
         public async Task<DescribeInstanceSwitchNetworkResponse> DescribeInstanceSwitchNetworkAsync(DescribeInstanceSwitchNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4927,120 +4929,6 @@ namespace AlibabaCloud.SDK.Drds20190123
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeShardTaskInfoWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeShardTaskListResponse DescribeShardTaskListWithOptions(DescribeShardTaskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
-            {
-                query["DrdsInstanceId"] = request.DrdsInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
-            {
-                query["Query"] = request.Query;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeShardTaskList",
-                Version = "2019-01-23",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeShardTaskListResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeShardTaskListResponse> DescribeShardTaskListWithOptionsAsync(DescribeShardTaskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
-            {
-                query["CurrentPage"] = request.CurrentPage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrdsInstanceId))
-            {
-                query["DrdsInstanceId"] = request.DrdsInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
-            {
-                query["Query"] = request.Query;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
-            {
-                query["TaskType"] = request.TaskType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeShardTaskList",
-                Version = "2019-01-23",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeShardTaskListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeShardTaskListResponse DescribeShardTaskList(DescribeShardTaskListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeShardTaskListWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeShardTaskListResponse> DescribeShardTaskListAsync(DescribeShardTaskListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeShardTaskListWithOptionsAsync(request, runtime);
         }
 
         public DescribeSqlFlashbakTaskResponse DescribeSqlFlashbakTaskWithOptions(DescribeSqlFlashbakTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7099,6 +6987,14 @@ namespace AlibabaCloud.SDK.Drds20190123
             return await RemoveDrdsDbFailedRecordWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+          * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+          *
+          * @param request RemoveDrdsInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDrdsInstanceResponse
+         */
         public RemoveDrdsInstanceResponse RemoveDrdsInstanceWithOptions(RemoveDrdsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7126,6 +7022,14 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<RemoveDrdsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+          * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+          *
+          * @param request RemoveDrdsInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveDrdsInstanceResponse
+         */
         public async Task<RemoveDrdsInstanceResponse> RemoveDrdsInstanceWithOptionsAsync(RemoveDrdsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7153,12 +7057,26 @@ namespace AlibabaCloud.SDK.Drds20190123
             return TeaModel.ToObject<RemoveDrdsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+          * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+          *
+          * @param request RemoveDrdsInstanceRequest
+          * @return RemoveDrdsInstanceResponse
+         */
         public RemoveDrdsInstanceResponse RemoveDrdsInstance(RemoveDrdsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveDrdsInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+          * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+          *
+          * @param request RemoveDrdsInstanceRequest
+          * @return RemoveDrdsInstanceResponse
+         */
         public async Task<RemoveDrdsInstanceResponse> RemoveDrdsInstanceAsync(RemoveDrdsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

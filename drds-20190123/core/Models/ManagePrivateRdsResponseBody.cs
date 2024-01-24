@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class ManagePrivateRdsResponseBody : TeaModel {
+        /// <summary>
+        /// The parameter result set returned for the operation that is called for the custom ApsaraDB RDS instance.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

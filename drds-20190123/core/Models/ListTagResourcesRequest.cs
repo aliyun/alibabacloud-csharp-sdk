@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        /// <summary>
+        /// Specify the token that is used to display the returned tags on multiple pages.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of the region in which the resource is located.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
+        /// <summary>
+        /// The resource type. Set the value to INSTANCE.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
@@ -29,10 +38,16 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag that you want to query.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag that you want to query.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

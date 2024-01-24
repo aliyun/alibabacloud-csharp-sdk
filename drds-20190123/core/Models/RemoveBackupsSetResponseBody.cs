@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class RemoveBackupsSetResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether SQL audit was disabled for the DRDS database.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

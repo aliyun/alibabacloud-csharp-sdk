@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateInstanceInternetAddressRequest : TeaModel {
+        /// <summary>
+        /// The ID of the DRDS instance.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region to which the DRDS instance belongs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

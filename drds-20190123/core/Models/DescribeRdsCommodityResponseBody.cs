@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRdsCommodityResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates the returned result.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// Indicates the ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

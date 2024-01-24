@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SubmitSmoothExpandPreCheckRequest : TeaModel {
+        /// <summary>
+        /// The type of the database. Valid values:
+        /// 
+        /// *   RDS
+        /// *   POLARDB
+        /// </summary>
         [NameInMap("DbInstType")]
         [Validation(Required=false)]
         public string DbInstType { get; set; }
 
+        /// <summary>
+        /// The name of the PolarDB-X database.
+        /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
+        /// <summary>
+        /// The ID of the PolarDB-X 1.0 instance.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
