@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -84,6 +90,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -131,12 +143,22 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
+        /**
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -387,6 +409,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
@@ -418,6 +444,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCapacity))
             {
                 query["QueueCapacity"] = request.QueueCapacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewStatus))
+            {
+                query["RenewStatus"] = request.RenewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewalDurationUnit))
+            {
+                query["RenewalDurationUnit"] = request.RenewalDurationUnit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
@@ -470,6 +504,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
@@ -501,6 +539,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCapacity))
             {
                 query["QueueCapacity"] = request.QueueCapacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewStatus))
+            {
+                query["RenewStatus"] = request.RenewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewalDurationUnit))
+            {
+                query["RenewalDurationUnit"] = request.RenewalDurationUnit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
@@ -949,6 +995,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return await DeleteBindingWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## [](#)Usage notes
+          * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+          * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+          *
+          * @param request DeleteExchangeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteExchangeResponse
+         */
         public DeleteExchangeResponse DeleteExchangeWithOptions(DeleteExchangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -984,6 +1039,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<DeleteExchangeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Usage notes
+          * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+          * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+          *
+          * @param request DeleteExchangeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteExchangeResponse
+         */
         public async Task<DeleteExchangeResponse> DeleteExchangeWithOptionsAsync(DeleteExchangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1019,12 +1083,28 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<DeleteExchangeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## [](#)Usage notes
+          * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+          * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+          *
+          * @param request DeleteExchangeRequest
+          * @return DeleteExchangeResponse
+         */
         public DeleteExchangeResponse DeleteExchange(DeleteExchangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteExchangeWithOptions(request, runtime);
         }
 
+        /**
+          * ## [](#)Usage notes
+          * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+          * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+          *
+          * @param request DeleteExchangeRequest
+          * @return DeleteExchangeResponse
+         */
         public async Task<DeleteExchangeResponse> DeleteExchangeAsync(DeleteExchangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1113,6 +1193,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return await DeleteQueueWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+          *
+          * @param request DeleteVirtualHostRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVirtualHostResponse
+         */
         public DeleteVirtualHostResponse DeleteVirtualHostWithOptions(DeleteVirtualHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1144,6 +1231,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<DeleteVirtualHostResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+          *
+          * @param request DeleteVirtualHostRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteVirtualHostResponse
+         */
         public async Task<DeleteVirtualHostResponse> DeleteVirtualHostWithOptionsAsync(DeleteVirtualHostRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1175,12 +1269,24 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<DeleteVirtualHostResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+          *
+          * @param request DeleteVirtualHostRequest
+          * @return DeleteVirtualHostResponse
+         */
         public DeleteVirtualHostResponse DeleteVirtualHost(DeleteVirtualHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVirtualHostWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+          *
+          * @param request DeleteVirtualHostRequest
+          * @return DeleteVirtualHostResponse
+         */
         public async Task<DeleteVirtualHostResponse> DeleteVirtualHostAsync(DeleteVirtualHostRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1601,6 +1707,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return await ListInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+          *
+          * @param request ListQueueConsumersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListQueueConsumersResponse
+         */
         public ListQueueConsumersResponse ListQueueConsumersWithOptions(ListQueueConsumersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1624,6 +1737,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<ListQueueConsumersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+          *
+          * @param request ListQueueConsumersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListQueueConsumersResponse
+         */
         public async Task<ListQueueConsumersResponse> ListQueueConsumersWithOptionsAsync(ListQueueConsumersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1647,12 +1767,24 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             return TeaModel.ToObject<ListQueueConsumersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+          *
+          * @param request ListQueueConsumersRequest
+          * @return ListQueueConsumersResponse
+         */
         public ListQueueConsumersResponse ListQueueConsumers(ListQueueConsumersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQueueConsumersWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+          *
+          * @param request ListQueueConsumersRequest
+          * @return ListQueueConsumersResponse
+         */
         public async Task<ListQueueConsumersResponse> ListQueueConsumersAsync(ListQueueConsumersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

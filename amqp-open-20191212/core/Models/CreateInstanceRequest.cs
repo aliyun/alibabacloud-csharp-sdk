@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -52,6 +56,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("QueueCapacity")]
         [Validation(Required=false)]
         public int? QueueCapacity { get; set; }
+
+        [NameInMap("RenewStatus")]
+        [Validation(Required=false)]
+        public string RenewStatus { get; set; }
+
+        [NameInMap("RenewalDurationUnit")]
+        [Validation(Required=false)]
+        public string RenewalDurationUnit { get; set; }
 
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
