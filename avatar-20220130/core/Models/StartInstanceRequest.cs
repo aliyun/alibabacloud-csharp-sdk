@@ -45,11 +45,41 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public bool? AlphaSwitch { get; set; }
 
+            [NameInMap("BackGroundImageUrl")]
+            [Validation(Required=false)]
+            public string BackGroundImageUrl { get; set; }
+
+            [NameInMap("Locate")]
+            [Validation(Required=false)]
+            public int? Locate { get; set; }
+
         }
 
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
+
+        [NameInMap("TextRequest")]
+        [Validation(Required=false)]
+        public StartInstanceRequestTextRequest TextRequest { get; set; }
+        public class StartInstanceRequestTextRequest : TeaModel {
+            [NameInMap("PitchRate")]
+            [Validation(Required=false)]
+            public int? PitchRate { get; set; }
+
+            [NameInMap("SpeechRate")]
+            [Validation(Required=false)]
+            public int? SpeechRate { get; set; }
+
+            [NameInMap("Voice")]
+            [Validation(Required=false)]
+            public string Voice { get; set; }
+
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
 
         [NameInMap("User")]
         [Validation(Required=false)]

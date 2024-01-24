@@ -2088,6 +2088,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 request.CommandRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommandRequest, "CommandRequest", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextRequest))
+            {
+                request.TextRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextRequest, "TextRequest", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
             {
                 request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
@@ -2112,6 +2116,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextRequestShrink))
+            {
+                query["TextRequest"] = request.TextRequestShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserShrink))
             {
@@ -2153,6 +2161,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 request.CommandRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommandRequest, "CommandRequest", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextRequest))
+            {
+                request.TextRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextRequest, "TextRequest", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
             {
                 request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
@@ -2177,6 +2189,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextRequestShrink))
+            {
+                query["TextRequest"] = request.TextRequestShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserShrink))
             {

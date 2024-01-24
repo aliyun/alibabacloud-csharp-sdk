@@ -1,3 +1,6 @@
+2024-01-24 Version: 2.5.1
+- Generated csharp 2022-01-30 for avatar.
+
 2024-01-17 Version: 2.5.0
 - Generated csharp 2022-01-30 for avatar.
 

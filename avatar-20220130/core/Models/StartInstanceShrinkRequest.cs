@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public long? TenantId { get; set; }
 
+        [NameInMap("TextRequest")]
+        [Validation(Required=false)]
+        public string TextRequestShrink { get; set; }
+
         [NameInMap("User")]
         [Validation(Required=false)]
         public string UserShrink { get; set; }
