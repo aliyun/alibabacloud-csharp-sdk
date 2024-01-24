@@ -1,3 +1,6 @@
+2024-01-24 Version: 1.3.3
+- Generated csharp 2022-08-09 for Cloudauth-intl.
+
 2024-01-22 Version: 1.3.2
 - Generated csharp 2022-08-09 for Cloudauth-intl.
 
