@@ -86,6 +86,42 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
         }
 
+        [NameInMap("privateNetwork")]
+        [Validation(Required=false)]
+        public List<CreateAppRequestPrivateNetwork> PrivateNetwork { get; set; }
+        public class CreateAppRequestPrivateNetwork : TeaModel {
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("pvlEndpointId")]
+            [Validation(Required=false)]
+            public string PvlEndpointId { get; set; }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("vpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("whiteIpGroup")]
+            [Validation(Required=false)]
+            public List<CreateAppRequestPrivateNetworkWhiteIpGroup> WhiteIpGroup { get; set; }
+            public class CreateAppRequestPrivateNetworkWhiteIpGroup : TeaModel {
+                [NameInMap("groupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("ips")]
+                [Validation(Required=false)]
+                public List<string> Ips { get; set; }
+
+            }
+
+        }
+
         [NameInMap("quotaInfo")]
         [Validation(Required=false)]
         public CreateAppRequestQuotaInfo QuotaInfo { get; set; }

@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             {
                 body["network"] = request.Network;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateNetwork))
+            {
+                body["privateNetwork"] = request.PrivateNetwork;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaInfo))
             {
                 body["quotaInfo"] = request.QuotaInfo;
@@ -127,6 +131,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
             {
                 body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateNetwork))
+            {
+                body["privateNetwork"] = request.PrivateNetwork;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaInfo))
             {
@@ -539,17 +547,33 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyReason))
+            {
+                body["applyReason"] = request.ApplyReason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authentication))
             {
                 body["authentication"] = request.Authentication;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["contactInfo"] = request.ContactInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimiterInfo))
+            {
+                body["limiterInfo"] = request.LimiterInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
             {
                 body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateNetwork))
+            {
+                body["privateNetwork"] = request.PrivateNetwork;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -575,17 +599,33 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyReason))
+            {
+                body["applyReason"] = request.ApplyReason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authentication))
             {
                 body["authentication"] = request.Authentication;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["contactInfo"] = request.ContactInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimiterInfo))
+            {
+                body["limiterInfo"] = request.LimiterInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
             {
                 body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateNetwork))
+            {
+                body["privateNetwork"] = request.PrivateNetwork;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
