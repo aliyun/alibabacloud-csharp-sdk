@@ -248,6 +248,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Role { get; set; }
 
+            [NameInMap("ServerlessType")]
+            [Validation(Required=false)]
+            public string ServerlessType { get; set; }
+
             /// <summary>
             /// The storage space that is occupied by the cluster. Unit: bytes.
             /// </summary>

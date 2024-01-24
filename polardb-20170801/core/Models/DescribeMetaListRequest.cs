@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](~~2319132~~) operation to query the region ID of the instance.
+        /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
         public string RegionCode { get; set; }
