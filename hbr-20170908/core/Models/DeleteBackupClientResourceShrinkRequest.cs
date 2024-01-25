@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteBackupClientResourceShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of HBR clients. You can specify a maximum of 100 client IDs.
+        /// The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).
         /// </summary>
         [NameInMap("ClientIds")]
         [Validation(Required=false)]

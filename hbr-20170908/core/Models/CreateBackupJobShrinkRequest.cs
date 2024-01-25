@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class CreateBackupJobRequest : TeaModel {
+    public class CreateBackupJobShrinkRequest : TeaModel {
         /// <summary>
         /// The backup type. Valid values:
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         [NameInMap("Detail")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Detail { get; set; }
+        public string DetailShrink { get; set; }
 
         /// <summary>
         /// This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.

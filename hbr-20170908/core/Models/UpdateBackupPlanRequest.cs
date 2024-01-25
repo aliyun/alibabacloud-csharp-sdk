@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class UpdateBackupPlanRequest : TeaModel {
+        /// <summary>
+        /// The configurations of the incremental file synchronization. This parameter is required for data synchronization only.
+        /// </summary>
         [NameInMap("ChangeListPath")]
         [Validation(Required=false)]
         public string ChangeListPath { get; set; }

@@ -615,9 +615,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await CheckRoleWithOptionsAsync(request, runtime);
         }
 
-        public CreateBackupJobResponse CreateBackupJobWithOptions(CreateBackupJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateBackupJobResponse CreateBackupJobWithOptions(CreateBackupJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBackupJobShrinkRequest request = new CreateBackupJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Detail))
+            {
+                request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
             {
@@ -646,6 +652,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
+            {
+                query["Detail"] = request.DetailShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
             {
@@ -706,9 +716,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<CreateBackupJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateBackupJobResponse> CreateBackupJobWithOptionsAsync(CreateBackupJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateBackupJobResponse> CreateBackupJobWithOptionsAsync(CreateBackupJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBackupJobShrinkRequest request = new CreateBackupJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Detail))
+            {
+                request.DetailShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Detail, "Detail", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
             {
@@ -737,6 +753,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailShrink))
+            {
+                query["Detail"] = request.DetailShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
             {

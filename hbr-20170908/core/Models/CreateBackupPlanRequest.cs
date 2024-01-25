@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// 增量文件同步列表的配置。（仅同步需要）
+        /// The configurations of the incremental file synchronization. This parameter is required for data synchronization only.
         /// </summary>
         [NameInMap("ChangeListPath")]
         [Validation(Required=false)]
