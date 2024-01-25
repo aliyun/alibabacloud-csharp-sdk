@@ -1,0 +1,50 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Aiops20200806.Models
+{
+    public class GetRiskPatrolListRequest : TeaModel {
+        [NameInMap("BusinessGroupId")]
+        [Validation(Required=false)]
+        public string BusinessGroupId { get; set; }
+
+        [NameInMap("BusinessGroupName")]
+        [Validation(Required=false)]
+        public string BusinessGroupName { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("OperaUid")]
+        [Validation(Required=false)]
+        public string OperaUid { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("PatrolId")]
+        [Validation(Required=false)]
+        public long? PatrolId { get; set; }
+
+        [NameInMap("RiskPatrolItem")]
+        [Validation(Required=false)]
+        public string RiskPatrolItem { get; set; }
+
+        [NameInMap("SeverityLevel")]
+        [Validation(Required=false)]
+        public int? SeverityLevel { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
+    }
+
+}
