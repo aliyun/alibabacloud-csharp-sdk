@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ImageSearch20190325.Models
             [Validation(Required=false)]
             public string ProductId { get; set; }
 
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public float? Score { get; set; }
+
             [NameInMap("SortExprValues")]
             [Validation(Required=false)]
             public string SortExprValues { get; set; }
@@ -54,13 +58,16 @@ namespace AlibabaCloud.SDK.ImageSearch20190325.Models
             [NameInMap("DocsFound")]
             [Validation(Required=false)]
             public int? DocsFound { get; set; }
+
             [NameInMap("DocsReturn")]
             [Validation(Required=false)]
             public int? DocsReturn { get; set; }
+
             [NameInMap("SearchTime")]
             [Validation(Required=false)]
             public int? SearchTime { get; set; }
-        };
+
+        }
 
         [NameInMap("Msg")]
         [Validation(Required=false)]
@@ -74,16 +81,35 @@ namespace AlibabaCloud.SDK.ImageSearch20190325.Models
             [Validation(Required=false)]
             public List<SearchImageResponseBodyPicInfoAllCategories> AllCategories { get; set; }
             public class SearchImageResponseBodyPicInfoAllCategories : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public int? Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
+
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
+
+            [NameInMap("MultiRegion")]
+            [Validation(Required=false)]
+            public List<SearchImageResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
+            public class SearchImageResponseBodyPicInfoMultiRegion : TeaModel {
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

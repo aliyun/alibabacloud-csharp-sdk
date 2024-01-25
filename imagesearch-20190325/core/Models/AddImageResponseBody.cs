@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.ImageSearch20190325.Models
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
+
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

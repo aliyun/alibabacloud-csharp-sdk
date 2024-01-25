@@ -37,20 +37,6 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public AddImageResponse AddImage(AddImageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AddImageWithOptions(request, headers, runtime);
-        }
-
-        public async Task<AddImageResponse> AddImageAsync(AddImageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AddImageWithOptionsAsync(request, headers, runtime);
-        }
-
         public AddImageResponse AddImageWithOptions(AddImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -100,7 +86,19 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddImageResponse>(DoROARequestWithForm("AddImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/add", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddImageResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AddImageResponse> AddImageWithOptionsAsync(AddImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -152,21 +150,33 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddImageResponse>(await DoROARequestWithFormAsync("AddImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/add", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteImageResponse DeleteImage(DeleteImageRequest request)
+        public AddImageResponse AddImage(AddImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteImageWithOptions(request, headers, runtime);
+            return AddImageWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteImageResponse> DeleteImageAsync(DeleteImageRequest request)
+        public async Task<AddImageResponse> AddImageAsync(AddImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteImageWithOptionsAsync(request, headers, runtime);
+            return await AddImageWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteImageResponse DeleteImageWithOptions(DeleteImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -190,7 +200,19 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteImageResponse>(DoROARequestWithForm("DeleteImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteImageResponse> DeleteImageWithOptionsAsync(DeleteImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -214,21 +236,33 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteImageResponse>(await DoROARequestWithFormAsync("DeleteImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SearchImageResponse SearchImage(SearchImageRequest request)
+        public DeleteImageResponse DeleteImage(DeleteImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchImageWithOptions(request, headers, runtime);
+            return DeleteImageWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchImageResponse> SearchImageAsync(SearchImageRequest request)
+        public async Task<DeleteImageResponse> DeleteImageAsync(DeleteImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchImageWithOptionsAsync(request, headers, runtime);
+            return await DeleteImageWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchImageResponse SearchImageWithOptions(SearchImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -284,7 +318,19 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<SearchImageResponse>(DoROARequestWithForm("SearchImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/search", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SearchImageResponse> SearchImageWithOptionsAsync(SearchImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -340,7 +386,33 @@ namespace AlibabaCloud.SDK.ImageSearch20190325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<SearchImageResponse>(await DoROARequestWithFormAsync("SearchImage", "2019-03-25", "HTTPS", "POST", "AK", "/v2/image/search", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImage",
+                Version = "2019-03-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/image/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SearchImageResponse SearchImage(SearchImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SearchImageWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SearchImageResponse> SearchImageAsync(SearchImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SearchImageWithOptionsAsync(request, headers, runtime);
         }
 
     }
