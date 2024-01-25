@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20190620.Models
 {
     public class DescribeDBInstancesForDmsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeDBInstancesForDmsResponseBody Body { get; set; }
 
     }
