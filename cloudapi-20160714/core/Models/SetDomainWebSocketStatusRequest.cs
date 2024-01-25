@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetDomainWebSocketStatusRequest : TeaModel {
+        /// <summary>
+        /// The action.
+        /// </summary>
         [NameInMap("ActionValue")]
         [Validation(Required=false)]
         public string ActionValue { get; set; }
 
+        /// <summary>
+        /// The custom domain name.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The ID of the API group.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

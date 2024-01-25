@@ -8890,6 +8890,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribeAppAttributesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation is intended for API callers.
+          *
+          * @param request DescribeAppSecurityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAppSecurityResponse
+         */
         public DescribeAppSecurityResponse DescribeAppSecurityWithOptions(DescribeAppSecurityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8925,6 +8932,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeAppSecurityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is intended for API callers.
+          *
+          * @param request DescribeAppSecurityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAppSecurityResponse
+         */
         public async Task<DescribeAppSecurityResponse> DescribeAppSecurityWithOptionsAsync(DescribeAppSecurityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8960,12 +8974,24 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeAppSecurityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   This operation is intended for API callers.
+          *
+          * @param request DescribeAppSecurityRequest
+          * @return DescribeAppSecurityResponse
+         */
         public DescribeAppSecurityResponse DescribeAppSecurity(DescribeAppSecurityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAppSecurityWithOptions(request, runtime);
         }
 
+        /**
+          * *   This operation is intended for API callers.
+          *
+          * @param request DescribeAppSecurityRequest
+          * @return DescribeAppSecurityResponse
+         */
         public async Task<DescribeAppSecurityResponse> DescribeAppSecurityAsync(DescribeAppSecurityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12032,9 +12058,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+          * *   This operation is used to query the ACLs in a region. Region is a system parameter.
           * *   You can filter the query results by ACL ID, name, or type.
-          * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+          * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
           *
           * @param request DescribeIpControlsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12089,9 +12115,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+          * *   This operation is used to query the ACLs in a region. Region is a system parameter.
           * *   You can filter the query results by ACL ID, name, or type.
-          * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+          * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
           *
           * @param request DescribeIpControlsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12146,9 +12172,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+          * *   This operation is used to query the ACLs in a region. Region is a system parameter.
           * *   You can filter the query results by ACL ID, name, or type.
-          * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+          * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
           *
           * @param request DescribeIpControlsRequest
           * @return DescribeIpControlsResponse
@@ -12161,9 +12187,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /**
           * *   This operation is intended for API providers.
-          * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+          * *   This operation is used to query the ACLs in a region. Region is a system parameter.
           * *   You can filter the query results by ACL ID, name, or type.
-          * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+          * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
           *
           * @param request DescribeIpControlsRequest
           * @return DescribeIpControlsResponse
@@ -17092,6 +17118,172 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ModifyDatasetItemWithOptionsAsync(request, runtime);
         }
 
+        public ModifyInstanceAttributeResponse ModifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceAttributeShrinkRequest request = new ModifyInstanceAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToConnectVpcIpBlock))
+            {
+                request.ToConnectVpcIpBlockShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToConnectVpcIpBlock, "ToConnectVpcIpBlock", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteVpcIpBlock))
+            {
+                query["DeleteVpcIpBlock"] = request.DeleteVpcIpBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EgressIpv6Enable))
+            {
+                query["EgressIpv6Enable"] = request.EgressIpv6Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPolicy))
+            {
+                query["HttpsPolicy"] = request.HttpsPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPV6Enabled))
+            {
+                query["IPV6Enabled"] = request.IPV6Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSegments))
+            {
+                query["IntranetSegments"] = request.IntranetSegments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToConnectVpcIpBlockShrink))
+            {
+                query["ToConnectVpcIpBlock"] = request.ToConnectVpcIpBlockShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSlbIntranetEnable))
+            {
+                query["VpcSlbIntranetEnable"] = request.VpcSlbIntranetEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceAttribute",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeWithOptionsAsync(ModifyInstanceAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceAttributeShrinkRequest request = new ModifyInstanceAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToConnectVpcIpBlock))
+            {
+                request.ToConnectVpcIpBlockShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToConnectVpcIpBlock, "ToConnectVpcIpBlock", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteVpcIpBlock))
+            {
+                query["DeleteVpcIpBlock"] = request.DeleteVpcIpBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EgressIpv6Enable))
+            {
+                query["EgressIpv6Enable"] = request.EgressIpv6Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPolicy))
+            {
+                query["HttpsPolicy"] = request.HttpsPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPV6Enabled))
+            {
+                query["IPV6Enabled"] = request.IPV6Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetSegments))
+            {
+                query["IntranetSegments"] = request.IntranetSegments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToConnectVpcIpBlockShrink))
+            {
+                query["ToConnectVpcIpBlock"] = request.ToConnectVpcIpBlockShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSlbIntranetEnable))
+            {
+                query["VpcSlbIntranetEnable"] = request.VpcSlbIntranetEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceAttribute",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyInstanceAttributeResponse ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeAsync(ModifyInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceAttributeWithOptionsAsync(request, runtime);
+        }
+
         public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21546,6 +21738,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await SetTrafficControlApisWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * * This operation is intended for API providers.
+          * * This operation is used to authorize API Gateway to access your VPC instance.
+          *
+          * @param request SetVpcAccessRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetVpcAccessResponse
+         */
         public SetVpcAccessResponse SetVpcAccessWithOptions(SetVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21601,6 +21801,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SetVpcAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * * This operation is intended for API providers.
+          * * This operation is used to authorize API Gateway to access your VPC instance.
+          *
+          * @param request SetVpcAccessRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetVpcAccessResponse
+         */
         public async Task<SetVpcAccessResponse> SetVpcAccessWithOptionsAsync(SetVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21656,12 +21864,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SetVpcAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * * This operation is intended for API providers.
+          * * This operation is used to authorize API Gateway to access your VPC instance.
+          *
+          * @param request SetVpcAccessRequest
+          * @return SetVpcAccessResponse
+         */
         public SetVpcAccessResponse SetVpcAccess(SetVpcAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetVpcAccessWithOptions(request, runtime);
         }
 
+        /**
+          * * This operation is intended for API providers.
+          * * This operation is used to authorize API Gateway to access your VPC instance.
+          *
+          * @param request SetVpcAccessRequest
+          * @return SetVpcAccessResponse
+         */
         public async Task<SetVpcAccessResponse> SetVpcAccessAsync(SetVpcAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

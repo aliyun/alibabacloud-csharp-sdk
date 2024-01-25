@@ -1,3 +1,6 @@
+2024-01-25 Version: 3.6.0
+- Update Tea.
+
 2023-12-15 Version: 3.5.0
 - Generated csharp 2016-07-14 for CloudAPI.
 

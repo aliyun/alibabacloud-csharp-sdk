@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAccessControlListsRequest : TeaModel {
+        /// <summary>
+        /// The name of the access control policy.
+        /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
 
+        /// <summary>
+        /// IP版本，可以设置为**ipv4**或者**ipv6**。
+        /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
+        /// <summary>
+        /// The page number of the current page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

@@ -9,33 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeIpControlsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the ACL. The ID is unique.
+        /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
 
+        /// <summary>
+        /// The name of the ACL.
+        /// </summary>
         [NameInMap("IpControlName")]
         [Validation(Required=false)]
         public string IpControlName { get; set; }
 
         /// <summary>
-        /// The name of the ACL.
+        /// The type of the ACL. Valid values:
+        /// 
+        /// *   **ALLOW**: a whitelist
+        /// *   **REFUSE**: a blacklist
         /// </summary>
         [NameInMap("IpControlType")]
         [Validation(Required=false)]
         public string IpControlType { get; set; }
 
         /// <summary>
-        /// ACLtest
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The type of the ACL. Valid values:
-        /// 
-        /// *   **ALLOW**: an IP address whitelist
-        /// *   **REFUSE**: an IP address blacklist
+        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

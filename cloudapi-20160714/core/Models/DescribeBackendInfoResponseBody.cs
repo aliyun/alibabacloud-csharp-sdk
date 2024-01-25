@@ -130,6 +130,24 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         [Validation(Required=false)]
                         public string RcType { get; set; }
 
+                        [NameInMap("ZookeeperConfig")]
+                        [Validation(Required=false)]
+                        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig ZookeeperConfig { get; set; }
+                        public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig : TeaModel {
+                            [NameInMap("ConnectString")]
+                            [Validation(Required=false)]
+                            public string ConnectString { get; set; }
+
+                            [NameInMap("Namespace")]
+                            [Validation(Required=false)]
+                            public string Namespace { get; set; }
+
+                            [NameInMap("ServiceName")]
+                            [Validation(Required=false)]
+                            public string ServiceName { get; set; }
+
+                        }
+
                     }
 
                     [NameInMap("EdasConfig")]
