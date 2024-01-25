@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class AssociateAnycastEipAddressResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

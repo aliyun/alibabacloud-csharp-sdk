@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class DescribeAnycastServerRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The list of regions where you can associate Anycast EIPs with backend servers.
+        /// The list of regions where you can associate Anycast EIPs with endpoints.
         /// </summary>
         [NameInMap("AnycastServerRegionList")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of returned entries.
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public string Count { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

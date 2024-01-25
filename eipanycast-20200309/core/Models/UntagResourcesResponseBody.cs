@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the operation is successful. Valid values:
         /// 
         /// **true**
         /// 

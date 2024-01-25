@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public long? AliUid { get; set; }
 
         /// <summary>
-        /// The information about the cloud resource with which the Anycast EIP is associated.
+        /// The information about the endpoint with which the Anycast EIP is associated.
         /// </summary>
         [NameInMap("AnycastEipBindInfoList")]
         [Validation(Required=false)]
@@ -26,32 +26,32 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The association mode. Valid values:
             /// 
-            /// *   **Default**: the default mode. In this mode, associated cloud resources are set as default origin servers.
-            /// *   **Normal**: the standard mode. In this mode, associated cloud resources are set as standard origin servers.
+            /// *   **Default**: the default mode. In this mode, the associated endpoint serves as the default origin server.
+            /// *   **Normal**: the standard mode. In this mode, the associated endpoint serves as a standard origin server.
             /// </summary>
             [NameInMap("AssociationMode")]
             [Validation(Required=false)]
             public string AssociationMode { get; set; }
 
             /// <summary>
-            /// The ID of the cloud resource with which the Anycast EIP is associated.
+            /// The ID of the endpoint with which the Anycast EIP is associated.
             /// </summary>
             [NameInMap("BindInstanceId")]
             [Validation(Required=false)]
             public string BindInstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the cloud resource is deployed.
+            /// The ID of the region in which the endpoint is deployed.
             /// </summary>
             [NameInMap("BindInstanceRegionId")]
             [Validation(Required=false)]
             public string BindInstanceRegionId { get; set; }
 
             /// <summary>
-            /// The type of cloud resource with which the Anycast EIP is associated. Valid values:
+            /// The type of endpoint with which the Anycast EIP is associated. Valid values:
             /// 
-            /// *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
-            /// *   **NetworkInterface**: an elastic network interface (ENI)
+            /// *   **SlbInstance**: a CLB instance in a VPC.
+            /// *   **NetworkInterface**: an elastic network interface (ENI).
             /// </summary>
             [NameInMap("BindInstanceType")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The time when the Anycast EIP was associated.
             /// 
-            /// The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+            /// The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("BindTime")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
             /// 
-            /// If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
+            /// If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
             /// </summary>
             [NameInMap("PopLocations")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
                 /// <summary>
                 /// The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
                 /// 
-                /// If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
+                /// If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
                 /// </summary>
                 [NameInMap("PopLocation")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             public string PrivateIpAddress { get; set; }
 
             /// <summary>
-            /// The status of the cloud resource. Valid values:
+            /// The status of the endpoint. Valid values:
             /// 
             /// *   **BINDING**
             /// *   **BINDED**
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// The time when the Anycast EIP was created.
+        /// The point in time at which the Anycast EIP was created.
         /// 
         /// The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
         /// </summary>
@@ -196,12 +196,15 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the instance belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The area from which you can use the Anycast EIP to access the backend server over the Internet.
+        /// The access area of the Anycast EIP.
         /// 
         /// Only **international** may be returned, which indicates the areas outside the Chinese mainland.
         /// </summary>
@@ -210,7 +213,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public string ServiceLocation { get; set; }
 
         /// <summary>
-        /// The status of the Anycast EIP. Valid values:
+        /// The status of the Anycast EIP.
         /// 
         /// *   **Associating**
         /// *   **Unassociating**
@@ -225,7 +228,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tag information.
+        /// The information about the tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

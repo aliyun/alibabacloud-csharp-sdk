@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         /// <summary>
         /// The access area from which you use the Anycast EIP to communicate with the Internet.
         /// 
-        /// Set the value to **international**, which specifies the regions outside the Chinese mainland.
+        /// Set the value to **international**, which specifies the areas outside the Chinese mainland.
         /// </summary>
         [NameInMap("ServiceLocation")]
         [Validation(Required=false)]

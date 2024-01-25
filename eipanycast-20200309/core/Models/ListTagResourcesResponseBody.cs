@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If the **NextToken** parameter is empty, no next page exists.
-        /// *   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -41,21 +41,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The resource type. Set the value to **ANYCASTEIPADDRESS**.
+            /// The resource type. Only **ANYCASTEIPADDRESS** may be returned.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// The key of tag N.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of tag N.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

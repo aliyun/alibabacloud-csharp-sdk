@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The list of resource IDs.
+        /// The resource ID. You can specify at most 20 IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tag information.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The key of tag N to add to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
             /// 
-            /// >  When you call this operation, you must specify **Tag.N.Key**.
+            /// > When you call this operation, **Tag.N.Key** is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             /// <summary>
             /// The value of tag N to add to the resource. You must enter at least one tag value and at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
-            /// >  When you call this operation, you must specify **Tag.N.Value**.
+            /// > When you call this operation, **Tag.N.Value** is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
