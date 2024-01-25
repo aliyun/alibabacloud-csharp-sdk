@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceLogRequest : TeaModel {
-        /// <summary>
-        /// 服务实例的容器名称。
-        /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }

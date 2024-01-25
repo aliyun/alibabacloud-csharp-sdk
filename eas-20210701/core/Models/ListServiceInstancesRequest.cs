@@ -37,6 +37,29 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsSpot { get; set; }
 
+        /// <summary>
+        /// The sorting order.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   asc: The instances are sorted in ascending order.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   desc
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     : The instances are sorted in descending order.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }

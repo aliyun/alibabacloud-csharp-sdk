@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
+        /// <summary>
+        /// The region ID of the private gateway.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The private gateway ID.
+        /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

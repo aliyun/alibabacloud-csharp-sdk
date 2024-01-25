@@ -9,6 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enter development mode.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// </summary>
         [NameInMap("Develop")]
         [Validation(Required=false)]
         public string Develop { get; set; }

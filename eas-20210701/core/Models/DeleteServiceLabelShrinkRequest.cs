@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteServiceLabelShrinkRequest : TeaModel {
+        /// <summary>
+        /// The service tags that you want to delete.
+        /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public string KeysShrink { get; set; }

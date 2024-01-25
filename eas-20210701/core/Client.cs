@@ -4023,6 +4023,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["ParentServiceUid"] = request.ParentServiceUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 query["ResourceName"] = request.ResourceName;
@@ -4108,6 +4112,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentServiceUid))
             {
                 query["ParentServiceUid"] = request.ParentServiceUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
@@ -5050,9 +5058,15 @@ namespace AlibabaCloud.SDK.Eas20210701
         public UpdateServiceResponse UpdateServiceWithOptions(string ClusterId, string ServiceName, UpdateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                query["UpdateType"] = request.UpdateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5073,9 +5087,15 @@ namespace AlibabaCloud.SDK.Eas20210701
         public async Task<UpdateServiceResponse> UpdateServiceWithOptionsAsync(string ClusterId, string ServiceName, UpdateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                query["UpdateType"] = request.UpdateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

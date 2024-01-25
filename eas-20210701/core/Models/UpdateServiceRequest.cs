@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceRequest : TeaModel {
+        /// <summary>
+        /// The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.
+        /// 
+        /// *   merge: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"a":"b","c":"d"}` after the service update.
+        /// *   replace: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"c":"d"}` after the service update.
+        /// </summary>
+        [NameInMap("UpdateType")]
+        [Validation(Required=false)]
+        public string UpdateType { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

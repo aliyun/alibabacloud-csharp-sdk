@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ParentServiceUid { get; set; }
 
+        [NameInMap("QuotaId")]
+        [Validation(Required=false)]
+        public string QuotaId { get; set; }
+
         /// <summary>
         /// 服务所属的资源组名称或ID。
         /// </summary>

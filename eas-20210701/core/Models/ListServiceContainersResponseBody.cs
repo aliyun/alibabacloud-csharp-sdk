@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceContainersResponseBody : TeaModel {
+        /// <summary>
+        /// The containers of the service.
+        /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
         public List<ContainerInfo> Containers { get; set; }

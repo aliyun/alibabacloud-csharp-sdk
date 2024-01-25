@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteGatewayIntranetLinkedVpcRequest : TeaModel {
+        /// <summary>
+        /// The ID of the vSwitch.
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// The virtual private cloud (VPC) ID.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

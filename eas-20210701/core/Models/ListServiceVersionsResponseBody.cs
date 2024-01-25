@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            [NameInMap("ServiceConfig")]
+            [Validation(Required=false)]
+            public string ServiceConfig { get; set; }
+
             [NameInMap("ServiceRunnable")]
             [Validation(Required=false)]
             public string ServiceRunnable { get; set; }

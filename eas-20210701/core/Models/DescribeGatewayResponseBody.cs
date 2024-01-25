@@ -42,18 +42,48 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// The Internet access control policies.
+        /// </summary>
         [NameInMap("InternetAclPolicyList")]
         [Validation(Required=false)]
         public List<DescribeGatewayResponseBodyInternetAclPolicyList> InternetAclPolicyList { get; set; }
         public class DescribeGatewayResponseBodyInternetAclPolicyList : TeaModel {
+            /// <summary>
+            /// The description.
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
+            /// <summary>
+            /// The accessible CIDR block.
+            /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
             public string Entry { get; set; }
 
+            /// <summary>
+            /// The state of the private gateway.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Creating
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Running
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -86,22 +116,55 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<DescribeGatewayResponseBodyIntranetLinkedVpcList> IntranetLinkedVpcList { get; set; }
         public class DescribeGatewayResponseBodyIntranetLinkedVpcList : TeaModel {
+            /// <summary>
+            /// The IP address.
+            /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            /// <summary>
+            /// The ID of the security group.
+            /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// The state of the private gateway.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Creating
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Running
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The vSwitch ID.
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// The ID of the virtual private cloud (VPC).
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }

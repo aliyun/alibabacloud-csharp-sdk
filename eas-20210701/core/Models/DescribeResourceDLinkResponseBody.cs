@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<string> AuxVSwitchList { get; set; }
 
+        /// <summary>
+        /// The CIDR blocks of the clients that you want to connect to. The CIDR blocks are added to the back-to-origin route of the server.
+        /// </summary>
         [NameInMap("DestinationCIDRs")]
         [Validation(Required=false)]
         public string DestinationCIDRs { get; set; }

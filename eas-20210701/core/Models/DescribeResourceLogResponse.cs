@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeResourceLogResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeResourceLogResponseBody Body { get; set; }
 
     }
