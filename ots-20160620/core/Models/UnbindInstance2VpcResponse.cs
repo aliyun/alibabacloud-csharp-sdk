@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ots20160620.Models
 {
     public class UnbindInstance2VpcResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UnbindInstance2VpcResponseBody Body { get; set; }
 
     }
