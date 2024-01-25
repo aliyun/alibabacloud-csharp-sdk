@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        [NameInMap("ApplicationName")]
+        [Validation(Required=false)]
+        public string ApplicationName { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public string TagId { get; set; }
+
+        [NameInMap("TagName")]
+        [Validation(Required=false)]
+        public string TagName { get; set; }
 
         /// <summary>
         /// 用户组ID。取值来源：

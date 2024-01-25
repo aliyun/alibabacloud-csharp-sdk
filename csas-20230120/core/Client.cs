@@ -420,6 +420,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
+            {
+                body["DeviceAttributeId"] = request.DeviceAttributeId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -492,6 +496,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
+            {
+                body["DeviceAttributeId"] = request.DeviceAttributeId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -2257,6 +2265,64 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPolicesForUserGroupWithOptionsAsync(request, runtime);
         }
 
+        public ListPopTrafficStatisticsResponse ListPopTrafficStatisticsWithOptions(ListPopTrafficStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPopTrafficStatistics",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPopTrafficStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListPopTrafficStatisticsResponse> ListPopTrafficStatisticsWithOptionsAsync(ListPopTrafficStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPopTrafficStatistics",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPopTrafficStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListPopTrafficStatisticsResponse ListPopTrafficStatistics(ListPopTrafficStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPopTrafficStatisticsWithOptions(request, runtime);
+        }
+
+        public async Task<ListPopTrafficStatisticsResponse> ListPopTrafficStatisticsAsync(ListPopTrafficStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPopTrafficStatisticsWithOptionsAsync(request, runtime);
+        }
+
         public ListPrivateAccessApplicationsResponse ListPrivateAccessApplicationsWithOptions(ListPrivateAccessApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3476,6 +3542,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
+            {
+                body["DeviceAttributeId"] = request.DeviceAttributeId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
@@ -3552,6 +3622,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
+            {
+                body["DeviceAttributeId"] = request.DeviceAttributeId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {

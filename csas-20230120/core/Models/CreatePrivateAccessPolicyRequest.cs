@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DeviceAttributeId")]
+        [Validation(Required=false)]
+        public string DeviceAttributeId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class ListPrivateAccessPolicesResponse : TeaModel {
+    public class ListPopTrafficStatisticsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListPrivateAccessPolicesResponseBody Body { get; set; }
+        public ListPopTrafficStatisticsResponseBody Body { get; set; }
 
     }
 
