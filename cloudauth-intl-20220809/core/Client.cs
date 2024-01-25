@@ -1557,10 +1557,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Crop"] = request.Crop;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
-            {
-                query["FacePictureBase64"] = request.FacePictureBase64;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
@@ -1585,9 +1581,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                body["FacePictureBase64"] = request.FacePictureBase64;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1612,10 +1614,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Crop"] = request.Crop;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
-            {
-                query["FacePictureBase64"] = request.FacePictureBase64;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
@@ -1640,9 +1638,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
+            {
+                body["FacePictureBase64"] = request.FacePictureBase64;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
