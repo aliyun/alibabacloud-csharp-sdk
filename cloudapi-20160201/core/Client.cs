@@ -5240,6 +5240,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160201
             {
                 query["AliUid"] = request.AliUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5266,6 +5270,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUid))
             {
                 query["AliUid"] = request.AliUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
