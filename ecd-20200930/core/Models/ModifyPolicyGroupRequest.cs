@@ -465,6 +465,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RecordingStartTime { get; set; }
 
+        [NameInMap("RecordingUserNotify")]
+        [Validation(Required=false)]
+        public string RecordingUserNotify { get; set; }
+
+        [NameInMap("RecordingUserNotifyMessage")]
+        [Validation(Required=false)]
+        public string RecordingUserNotifyMessage { get; set; }
+
         /// <summary>
         /// The ID of the region where the cloud desktop resides.
         /// </summary>
@@ -709,6 +717,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Watermark { get; set; }
 
+        [NameInMap("WatermarkAntiCam")]
+        [Validation(Required=false)]
+        public string WatermarkAntiCam { get; set; }
+
         /// <summary>
         /// The font color of the watermark. Valid values: 0 to 16777215.
         /// </summary>
@@ -739,6 +751,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("WatermarkFontStyle")]
         [Validation(Required=false)]
         public string WatermarkFontStyle { get; set; }
+
+        [NameInMap("WatermarkPower")]
+        [Validation(Required=false)]
+        public string WatermarkPower { get; set; }
 
         /// <summary>
         /// The number of watermark rows. This parameter is not in use.

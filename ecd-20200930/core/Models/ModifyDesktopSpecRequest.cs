@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The new cloud desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported cloud desktop types.
+        /// The desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]

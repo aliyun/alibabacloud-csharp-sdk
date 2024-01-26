@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// The name of the AD directory. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The directory name. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]

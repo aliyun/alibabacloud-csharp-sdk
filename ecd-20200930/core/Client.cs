@@ -5210,6 +5210,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RecordingStartTime"] = request.RecordingStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotify))
+            {
+                query["RecordingUserNotify"] = request.RecordingUserNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotifyMessage))
+            {
+                query["RecordingUserNotifyMessage"] = request.RecordingUserNotifyMessage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5246,6 +5254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Watermark"] = request.Watermark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkAntiCam))
+            {
+                query["WatermarkAntiCam"] = request.WatermarkAntiCam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkColor))
             {
                 query["WatermarkColor"] = request.WatermarkColor;
@@ -5261,6 +5273,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkFontStyle))
             {
                 query["WatermarkFontStyle"] = request.WatermarkFontStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkPower))
+            {
+                query["WatermarkPower"] = request.WatermarkPower;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
@@ -5436,6 +5452,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RecordingStartTime"] = request.RecordingStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotify))
+            {
+                query["RecordingUserNotify"] = request.RecordingUserNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotifyMessage))
+            {
+                query["RecordingUserNotifyMessage"] = request.RecordingUserNotifyMessage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5472,6 +5496,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Watermark"] = request.Watermark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkAntiCam))
+            {
+                query["WatermarkAntiCam"] = request.WatermarkAntiCam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkColor))
             {
                 query["WatermarkColor"] = request.WatermarkColor;
@@ -5487,6 +5515,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkFontStyle))
             {
                 query["WatermarkFontStyle"] = request.WatermarkFontStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkPower))
+            {
+                query["WatermarkPower"] = request.WatermarkPower;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
@@ -7131,7 +7163,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * **
           * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
@@ -7173,7 +7204,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * **
           * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
@@ -7215,7 +7245,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * **
           * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
@@ -7231,7 +7260,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you delete a workspace, make sure that the following requirements are met:
           * *   All cloud desktops in the workspace are released.
           * *   The data that you want to retain is backed up.
-          * **
           * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
           *
           * @param request DeleteOfficeSitesRequest
@@ -19981,6 +20009,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RecordingStartTime"] = request.RecordingStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotify))
+            {
+                query["RecordingUserNotify"] = request.RecordingUserNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotifyMessage))
+            {
+                query["RecordingUserNotifyMessage"] = request.RecordingUserNotifyMessage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -20025,6 +20061,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Watermark"] = request.Watermark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkAntiCam))
+            {
+                query["WatermarkAntiCam"] = request.WatermarkAntiCam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkColor))
             {
                 query["WatermarkColor"] = request.WatermarkColor;
@@ -20040,6 +20080,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkFontStyle))
             {
                 query["WatermarkFontStyle"] = request.WatermarkFontStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkPower))
+            {
+                query["WatermarkPower"] = request.WatermarkPower;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
@@ -20212,6 +20256,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RecordingStartTime"] = request.RecordingStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotify))
+            {
+                query["RecordingUserNotify"] = request.RecordingUserNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordingUserNotifyMessage))
+            {
+                query["RecordingUserNotifyMessage"] = request.RecordingUserNotifyMessage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -20256,6 +20308,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Watermark"] = request.Watermark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkAntiCam))
+            {
+                query["WatermarkAntiCam"] = request.WatermarkAntiCam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkColor))
             {
                 query["WatermarkColor"] = request.WatermarkColor;
@@ -20271,6 +20327,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkFontStyle))
             {
                 query["WatermarkFontStyle"] = request.WatermarkFontStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkPower))
+            {
+                query["WatermarkPower"] = request.WatermarkPower;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkRowAmount))
             {
