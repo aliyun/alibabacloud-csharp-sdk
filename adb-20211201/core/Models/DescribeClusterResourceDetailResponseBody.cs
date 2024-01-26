@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ClusterSizeResource { get; set; }
 
+                [NameInMap("EnableSpot")]
+                [Validation(Required=false)]
+                public bool? EnableSpot { get; set; }
+
                 /// <summary>
                 /// A reserved parameter.
                 /// </summary>

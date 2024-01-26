@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("EnableSpot")]
+        [Validation(Required=false)]
+        public bool? EnableSpot { get; set; }
+
         /// <summary>
         /// The name of the resource group.
         /// 

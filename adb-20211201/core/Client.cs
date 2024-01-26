@@ -852,6 +852,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
+            {
+                query["EnableSpot"] = request.EnableSpot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
@@ -914,6 +918,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
+            {
+                query["EnableSpot"] = request.EnableSpot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -10214,6 +10222,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
+            {
+                query["EnableSpot"] = request.EnableSpot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
@@ -10276,6 +10288,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSpot))
+            {
+                query["EnableSpot"] = request.EnableSpot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
