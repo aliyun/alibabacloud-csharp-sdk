@@ -78,6 +78,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// 集群备份集ID。
+        /// </summary>
         [NameInMap("ClusterBackupId")]
         [Validation(Required=false)]
         public string ClusterBackupId { get; set; }
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 参数模板ID，根据新创建的参数模板参数创建实例，不可重复。
+        /// The ID of the parameter template. The instance is created based on the parameters in the parameter template. The ID must be unique.
         /// </summary>
         [NameInMap("ParamGroupId")]
         [Validation(Required=false)]
@@ -271,6 +274,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ShardType")]
         [Validation(Required=false)]
         public string ShardType { get; set; }
+
+        [NameInMap("SlaveReadOnlyCount")]
+        [Validation(Required=false)]
+        public int? SlaveReadOnlyCount { get; set; }
 
         /// <summary>
         /// The ID of the source instance.

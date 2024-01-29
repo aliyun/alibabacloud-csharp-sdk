@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
+        [NameInMap("SlaveReadOnlyCount")]
+        [Validation(Required=false)]
+        public int? SlaveReadOnlyCount { get; set; }
+
         /// <summary>
         /// The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
         /// </summary>

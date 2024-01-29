@@ -87,6 +87,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// Backup files ID of cluster instance.
+        /// </summary>
         [NameInMap("ClusterBackupId")]
         [Validation(Required=false)]
         public string ClusterBackupId { get; set; }

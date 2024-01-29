@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TargetNetworkType { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~DescribeVpcs~~) operation to query vSwitch IDs.
+        /// The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query vSwitch IDs.
         /// 
         /// >  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.
         /// </summary>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~DescribeVpcs~~) operation to query VPC IDs.
+        /// The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query VPC IDs.
         /// 
         /// > *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
         /// > *   After you set this parameter, you must also set the **VSwitchId** parameter.

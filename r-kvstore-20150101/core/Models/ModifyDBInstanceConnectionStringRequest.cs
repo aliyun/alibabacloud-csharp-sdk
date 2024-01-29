@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.
+        /// The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.
         /// 
-        /// > You must specify one of the **NewConnectionString** and **Port** parameters.
+        /// >  You must specify one of the **NewConnectionString** and **Port** parameters.
         /// </summary>
         [NameInMap("NewConnectionString")]
         [Validation(Required=false)]

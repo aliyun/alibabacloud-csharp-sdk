@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class UnlockDBInstanceWriteResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UnlockDBInstanceWriteResponseBody Body { get; set; }
 
     }
