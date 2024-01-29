@@ -676,6 +676,68 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string HealthStatus { get; set; }
 
+                [NameInMap("HttpDubboTranscoder")]
+                [Validation(Required=false)]
+                public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
+                public class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder : TeaModel {
+                    [NameInMap("DubboServiceGroup")]
+                    [Validation(Required=false)]
+                    public string DubboServiceGroup { get; set; }
+
+                    [NameInMap("DubboServiceName")]
+                    [Validation(Required=false)]
+                    public string DubboServiceName { get; set; }
+
+                    [NameInMap("DubboServiceVersion")]
+                    [Validation(Required=false)]
+                    public string DubboServiceVersion { get; set; }
+
+                    [NameInMap("MothedMapList")]
+                    [Validation(Required=false)]
+                    public List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList> MothedMapList { get; set; }
+                    public class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList : TeaModel {
+                        [NameInMap("DubboMothedName")]
+                        [Validation(Required=false)]
+                        public string DubboMothedName { get; set; }
+
+                        [NameInMap("HttpMothed")]
+                        [Validation(Required=false)]
+                        public string HttpMothed { get; set; }
+
+                        [NameInMap("Mothedpath")]
+                        [Validation(Required=false)]
+                        public string Mothedpath { get; set; }
+
+                        [NameInMap("ParamMapsList")]
+                        [Validation(Required=false)]
+                        public List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> ParamMapsList { get; set; }
+                        public class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList : TeaModel {
+                            [NameInMap("ExtractKey")]
+                            [Validation(Required=false)]
+                            public string ExtractKey { get; set; }
+
+                            [NameInMap("ExtractKeySpec")]
+                            [Validation(Required=false)]
+                            public string ExtractKeySpec { get; set; }
+
+                            [NameInMap("MappingType")]
+                            [Validation(Required=false)]
+                            public string MappingType { get; set; }
+
+                        }
+
+                        [NameInMap("PassThroughAllHeaders")]
+                        [Validation(Required=false)]
+                        public string PassThroughAllHeaders { get; set; }
+
+                        [NameInMap("PassThroughList")]
+                        [Validation(Required=false)]
+                        public List<string> PassThroughList { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// The service name.
                 /// </summary>

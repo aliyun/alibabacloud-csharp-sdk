@@ -1,3 +1,7 @@
+2024-01-29 Version: 5.2.8
+- Update API GetGatewayRouteDetailupdate response param.
+
+
 2024-01-25 Version: 5.2.7
 - Generated csharp 2019-05-31 for mse.
 
