@@ -1598,7 +1598,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~159973~~).
+          * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
           *
           * @param request CreateResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1640,7 +1640,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~159973~~).
+          * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
           *
           * @param request CreateResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1682,7 +1682,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~159973~~).
+          * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
           *
           * @param request CreateResourceGroupRequest
           * @return CreateResourceGroupResponse
@@ -1694,7 +1694,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~159973~~).
+          * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
           *
           * @param request CreateResourceGroupRequest
           * @return CreateResourceGroupResponse
@@ -8495,10 +8495,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await UpdateAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+          *
+          * @param request UpdateAssociatedTransferSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAssociatedTransferSettingResponse
+         */
         public UpdateAssociatedTransferSettingResponse UpdateAssociatedTransferSettingWithOptions(UpdateAssociatedTransferSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableExistingResourcesTransfer))
+            {
+                query["EnableExistingResourcesTransfer"] = request.EnableExistingResourcesTransfer;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSettings))
             {
                 query["RuleSettings"] = request.RuleSettings;
@@ -8522,10 +8533,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateAssociatedTransferSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+          *
+          * @param request UpdateAssociatedTransferSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAssociatedTransferSettingResponse
+         */
         public async Task<UpdateAssociatedTransferSettingResponse> UpdateAssociatedTransferSettingWithOptionsAsync(UpdateAssociatedTransferSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableExistingResourcesTransfer))
+            {
+                query["EnableExistingResourcesTransfer"] = request.EnableExistingResourcesTransfer;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSettings))
             {
                 query["RuleSettings"] = request.RuleSettings;
@@ -8549,12 +8571,24 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateAssociatedTransferSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+          *
+          * @param request UpdateAssociatedTransferSettingRequest
+          * @return UpdateAssociatedTransferSettingResponse
+         */
         public UpdateAssociatedTransferSettingResponse UpdateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAssociatedTransferSettingWithOptions(request, runtime);
         }
 
+        /**
+          * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+          *
+          * @param request UpdateAssociatedTransferSettingRequest
+          * @return UpdateAssociatedTransferSettingResponse
+         */
         public async Task<UpdateAssociatedTransferSettingResponse> UpdateAssociatedTransferSettingAsync(UpdateAssociatedTransferSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
