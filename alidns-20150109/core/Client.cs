@@ -38,7 +38,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The operation that you want to perform. Set the value to AddCustomLine.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request AddCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -84,7 +85,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The operation that you want to perform. Set the value to AddCustomLine.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request AddCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -130,7 +132,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The operation that you want to perform. Set the value to AddCustomLine.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request AddCustomLineRequest
           * @return AddCustomLineResponse
@@ -142,7 +145,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The operation that you want to perform. Set the value to AddCustomLine.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request AddCustomLineRequest
           * @return AddCustomLineResponse
@@ -4998,7 +5002,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The number of the page to return. Pages start from page **1**. Default value: **1**.
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5060,7 +5064,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The number of the page to return. Pages start from page **1**. Default value: **1**.
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5122,7 +5126,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The number of the page to return. Pages start from page **1**. Default value: **1**.
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @return DescribeDnsProductInstancesResponse
@@ -5134,7 +5138,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * The number of the page to return. Pages start from page **1**. Default value: **1**.
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @return DescribeDnsProductInstancesResponse

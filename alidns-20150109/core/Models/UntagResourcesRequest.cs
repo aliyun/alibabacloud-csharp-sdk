@@ -9,33 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to remove all tags. Default value: false. This parameter is valid only when TagKey is left empty. Valid values: true and false.
+        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        /// <summary>
+        /// The language.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+        /// The resource ID.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// Resource Type
+        /// The resource type.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// Specifies whether to remove all tags from the specified resource. Default value: false. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// The tags added to the resource.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

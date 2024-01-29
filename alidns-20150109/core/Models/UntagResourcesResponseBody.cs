@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// "dns-example.com","dns-test.com"
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

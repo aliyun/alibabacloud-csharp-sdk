@@ -13,25 +13,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineRequest : TeaModel {
         /// <summary>
-        /// The name of the custom line.
+        /// The domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The CIDR blocks.
+        /// </summary>
         [NameInMap("IpSegment")]
         [Validation(Required=false)]
         public List<AddCustomLineRequestIpSegment> IpSegment { get; set; }
         public class AddCustomLineRequestIpSegment : TeaModel {
             /// <summary>
-            /// The start IP address of the CIDR block.
+            /// The end IP address of the CIDR block.
             /// </summary>
             [NameInMap("EndIp")]
             [Validation(Required=false)]
             public string EndIp { get; set; }
 
             /// <summary>
-            /// The unique ID of the custom line.
+            /// The start IP address of the CIDR block.
             /// </summary>
             [NameInMap("StartIp")]
             [Validation(Required=false)]
@@ -40,14 +43,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The domain name for which you configure the custom line.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The end IP address of the CIDR block.
+        /// The name of the custom line.
         /// </summary>
         [NameInMap("LineName")]
         [Validation(Required=false)]

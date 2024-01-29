@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineResponseBody : TeaModel {
+        /// <summary>
+        /// The code of the custom line.
+        /// </summary>
         [NameInMap("LineCode")]
         [Validation(Required=false)]
         public string LineCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The unique ID of the custom line.
         /// </summary>
         [NameInMap("LineId")]
         [Validation(Required=false)]
         public long? LineId { get; set; }
 
         /// <summary>
-        /// The code of the custom line.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
