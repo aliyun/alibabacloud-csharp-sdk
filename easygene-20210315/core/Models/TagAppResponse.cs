@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class GetGlobalAppResponse : TeaModel {
+    public class TagAppResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetGlobalAppResponseBody Body { get; set; }
+        public TagAppResponseBody Body { get; set; }
 
     }
 

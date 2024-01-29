@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListContainerImagesResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListContainerImagesResponseBody Body { get; set; }
 
     }
