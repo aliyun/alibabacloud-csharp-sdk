@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        /// <summary>
+        /// The types of the integrated events. Separate multiple event types with commas (,). Valid values:
+        /// 
+        /// *   ConfigurationItemChangeNotification: resource change event
+        /// *   NonCompliantNotification: non-compliance event
+        /// </summary>
         [NameInMap("IntegratedTypes")]
         [Validation(Required=false)]
         public string IntegratedTypes { get; set; }

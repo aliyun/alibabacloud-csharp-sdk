@@ -50,8 +50,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the resource in the account group belongs.
-        /// 
-        /// > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
         /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]

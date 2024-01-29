@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListConfigRulesResponseBodyConfigRules ConfigRules { get; set; }
         public class ListConfigRulesResponseBodyConfigRules : TeaModel {
             /// <summary>
-            /// The types of resources evaluated by the rule. Separate multiple resource types with commas (,).
+            /// The rule list.
             /// </summary>
             [NameInMap("ConfigRuleList")]
             [Validation(Required=false)]

@@ -1605,6 +1605,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1666,6 +1670,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2099,10 +2107,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * ### Limits
-          * You can use an ordinary account to create up to 200 rules.
-          * ### Usage notes
-          * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+          * ## Limits
+          * You can use a common account to create up to 200 rules.
           *
           * @param tmpReq CreateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2206,10 +2212,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * ### Limits
-          * You can use an ordinary account to create up to 200 rules.
-          * ### Usage notes
-          * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+          * ## Limits
+          * You can use a common account to create up to 200 rules.
           *
           * @param tmpReq CreateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2313,10 +2317,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * ### Limits
-          * You can use an ordinary account to create up to 200 rules.
-          * ### Usage notes
-          * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+          * ## Limits
+          * You can use a common account to create up to 200 rules.
           *
           * @param request CreateConfigRuleRequest
           * @return CreateConfigRuleResponse
@@ -2328,10 +2330,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * ### Limits
-          * You can use an ordinary account to create up to 200 rules.
-          * ### Usage notes
-          * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+          * ## Limits
+          * You can use a common account to create up to 200 rules.
           *
           * @param request CreateConfigRuleRequest
           * @return CreateConfigRuleResponse
@@ -6656,7 +6656,11 @@ namespace AlibabaCloud.SDK.Config20200907
         public GetAggregatorResponse GetAggregatorWithOptions(GetAggregatorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                query["AggregatorId"] = request.AggregatorId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6667,7 +6671,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Version = "2020-09-07",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -6686,7 +6690,11 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<GetAggregatorResponse> GetAggregatorWithOptionsAsync(GetAggregatorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                query["AggregatorId"] = request.AggregatorId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6697,7 +6705,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Version = "2020-09-07",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",

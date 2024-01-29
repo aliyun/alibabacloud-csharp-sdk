@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Regions { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }

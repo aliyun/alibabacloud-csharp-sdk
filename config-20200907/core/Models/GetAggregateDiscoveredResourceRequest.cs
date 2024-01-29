@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// 账号组内待查询资源所属的阿里云账号ID。 
-        /// > 参数ResourceAccountId和ResourceOwnerId必须设置其中一个，推荐使用本参数。
+        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// > You can use either the `ResourceAccountId` or `ResourceOwnerId` parameter. We recommend that you use the ResourceAccountId parameter.
         /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]

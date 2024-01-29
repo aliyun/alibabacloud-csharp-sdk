@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// The rule ID.
+        /// The ID of the rule.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

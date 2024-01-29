@@ -89,8 +89,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// Indicates whether the input parameter is required. Valid values:
                     /// 
-                    /// *   true: The input parameter is required.
-                    /// *   false: The input parameter is optional.
+                    /// *   true
+                    /// *   false
                     /// </summary>
                     [NameInMap("Required")]
                     [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// The description of the rule.
+                /// The rule description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceTypesScope { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the rule. Valid values:
+                /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
                 /// *   1: high
                 /// *   2: medium
