@@ -214,6 +214,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string CreditSpecification { get; set; }
 
+        [NameInMap("CustomPriorities")]
+        [Validation(Required=false)]
+        public List<CreateScalingConfigurationShrinkRequestCustomPriorities> CustomPriorities { get; set; }
+        public class CreateScalingConfigurationShrinkRequestCustomPriorities : TeaModel {
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
+
+        }
+
         /// <summary>
         /// The data disks.
         /// </summary>

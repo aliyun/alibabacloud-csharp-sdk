@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class VerifyAuthenticationResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public VerifyAuthenticationResponseBody Body { get; set; }
 
     }

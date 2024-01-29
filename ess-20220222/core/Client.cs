@@ -2475,6 +2475,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["CreditSpecification"] = request.CreditSpecification;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPriorities))
+            {
+                query["CustomPriorities"] = request.CustomPriorities;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
                 query["DataDisks"] = request.DataDisks;
@@ -2732,6 +2736,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
             {
                 query["CreditSpecification"] = request.CreditSpecification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPriorities))
+            {
+                query["CustomPriorities"] = request.CustomPriorities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
@@ -10085,6 +10093,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["CreditSpecification"] = request.CreditSpecification;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPriorities))
+            {
+                query["CustomPriorities"] = request.CustomPriorities;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
                 query["DataDisks"] = request.DataDisks;
@@ -10320,6 +10332,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditSpecification))
             {
                 query["CreditSpecification"] = request.CreditSpecification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPriorities))
+            {
+                query["CustomPriorities"] = request.CustomPriorities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
