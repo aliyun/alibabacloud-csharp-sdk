@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? LocalId { get; set; }
 
+            [NameInMap("mergedRevision")]
+            [Validation(Required=false)]
+            public string MergedRevision { get; set; }
+
             [NameInMap("mrBizId")]
             [Validation(Required=false)]
             public string MrBizId { get; set; }
@@ -140,6 +144,14 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
+                [NameInMap("hasCommented")]
+                [Validation(Required=false)]
+                public bool? HasCommented { get; set; }
+
+                [NameInMap("hasReviewed")]
+                [Validation(Required=false)]
+                public bool? HasReviewed { get; set; }
+
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
@@ -147,6 +159,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("reviewOpinionStatus")]
+                [Validation(Required=false)]
+                public string ReviewOpinionStatus { get; set; }
 
                 [NameInMap("reviewTime")]
                 [Validation(Required=false)]

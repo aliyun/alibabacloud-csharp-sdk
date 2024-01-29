@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AuthorIds { get; set; }
 
+        [NameInMap("createdAfter")]
+        [Validation(Required=false)]
+        public string CreatedAfter { get; set; }
+
+        [NameInMap("createdBefore")]
+        [Validation(Required=false)]
+        public string CreatedBefore { get; set; }
+
         [NameInMap("filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
