@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListPublicMediaBasicInfosRequest : TeaModel {
+        [NameInMap("BusinessType")]
+        [Validation(Required=false)]
+        public string BusinessType { get; set; }
+
         [NameInMap("IncludeFileBasicInfo")]
         [Validation(Required=false)]
         public bool? IncludeFileBasicInfo { get; set; }

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SubJobMaterials")]
+            [Validation(Required=false)]
+            public string SubJobMaterials { get; set; }
+
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }

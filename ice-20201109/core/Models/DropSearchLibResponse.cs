@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DropSearchLibResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DropSearchLibResponseBody Body { get; set; }
 
     }

@@ -4789,6 +4789,72 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await GetAvatarTrainingJobWithOptionsAsync(request, runtime);
         }
 
+        public GetBatchMediaProducingJobResponse GetBatchMediaProducingJobWithOptions(GetBatchMediaProducingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchMediaProducingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchMediaProducingJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetBatchMediaProducingJobResponse> GetBatchMediaProducingJobWithOptionsAsync(GetBatchMediaProducingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchMediaProducingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchMediaProducingJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetBatchMediaProducingJobResponse GetBatchMediaProducingJob(GetBatchMediaProducingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBatchMediaProducingJobWithOptions(request, runtime);
+        }
+
+        public async Task<GetBatchMediaProducingJobResponse> GetBatchMediaProducingJobAsync(GetBatchMediaProducingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBatchMediaProducingJobWithOptionsAsync(request, runtime);
+        }
+
         public GetCategoriesResponse GetCategoriesWithOptions(GetCategoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9445,6 +9511,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFileBasicInfo))
             {
                 query["IncludeFileBasicInfo"] = request.IncludeFileBasicInfo;
@@ -9492,6 +9562,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFileBasicInfo))
             {
                 query["IncludeFileBasicInfo"] = request.IncludeFileBasicInfo;
@@ -12975,6 +13049,108 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitAvatarVideoJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitBatchMediaProducingJobResponse SubmitBatchMediaProducingJobWithOptions(SubmitBatchMediaProducingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchMediaProducingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchMediaProducingJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitBatchMediaProducingJobResponse> SubmitBatchMediaProducingJobWithOptionsAsync(SubmitBatchMediaProducingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchMediaProducingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchMediaProducingJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitBatchMediaProducingJobResponse SubmitBatchMediaProducingJob(SubmitBatchMediaProducingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitBatchMediaProducingJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitBatchMediaProducingJobResponse> SubmitBatchMediaProducingJobAsync(SubmitBatchMediaProducingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitBatchMediaProducingJobWithOptionsAsync(request, runtime);
         }
 
         public SubmitCustomizedVoiceJobResponse SubmitCustomizedVoiceJobWithOptions(SubmitCustomizedVoiceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
