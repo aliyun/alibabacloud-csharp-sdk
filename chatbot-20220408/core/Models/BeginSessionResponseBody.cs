@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class BeginSessionResponseBody : TeaModel {
+        [NameInMap("AsrMaxEndSilence")]
+        [Validation(Required=false)]
+        public int? AsrMaxEndSilence { get; set; }
+
+        [NameInMap("Interruptible")]
+        [Validation(Required=false)]
+        public bool? Interruptible { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
