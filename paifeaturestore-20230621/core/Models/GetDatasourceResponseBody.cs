@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string DatasourceId { get; set; }
 
+        [NameInMap("GmtCreateTime")]
+        [Validation(Required=false)]
+        public string GmtCreateTime { get; set; }
+
+        [NameInMap("GmtModifiedTime")]
+        [Validation(Required=false)]
+        public string GmtModifiedTime { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

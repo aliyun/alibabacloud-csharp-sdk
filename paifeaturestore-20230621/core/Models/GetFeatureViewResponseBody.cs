@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("PublishTableScript")]
+        [Validation(Required=false)]
+        public string PublishTableScript { get; set; }
+
         [NameInMap("RegisterDatasourceId")]
         [Validation(Required=false)]
         public string RegisterDatasourceId { get; set; }

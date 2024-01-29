@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetModelFeatureResponseBody : TeaModel {
+        [NameInMap("ExportTrainingSetTableScript")]
+        [Validation(Required=false)]
+        public string ExportTrainingSetTableScript { get; set; }
+
         [NameInMap("Features")]
         [Validation(Required=false)]
         public List<GetModelFeatureResponseBodyFeatures> Features { get; set; }
