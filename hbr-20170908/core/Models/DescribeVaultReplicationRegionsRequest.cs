@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// </summary>
         [NameInMap("VaultId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string VaultId { get; set; }
 
     }

@@ -194,6 +194,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? KeepLatestSnapshots { get; set; }
 
+                [NameInMap("LatestExecuteJobId")]
+                [Validation(Required=false)]
+                public string LatestExecuteJobId { get; set; }
+
                 /// <summary>
                 /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.
                 /// </summary>

@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string DetailShrink { get; set; }
 
+        [NameInMap("Disabled")]
+        [Validation(Required=false)]
+        public bool? Disabled { get; set; }
+
         /// <summary>
         /// This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value can be up to 255 characters in length.
         /// </summary>

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string PlanId { get; set; }
 
+        [NameInMap("RequireNoRunningJobs")]
+        [Validation(Required=false)]
+        public bool? RequireNoRunningJobs { get; set; }
+
         /// <summary>
         /// The type of the data source. Valid values:
         /// 
