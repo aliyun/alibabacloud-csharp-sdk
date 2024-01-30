@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
-    public class GetTemplateResponse : TeaModel {
+    public class GetPotentialFailZonesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetTemplateResponseBody Body { get; set; }
+        public GetPotentialFailZonesResponseBody Body { get; set; }
 
     }
 

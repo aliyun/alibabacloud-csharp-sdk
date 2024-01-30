@@ -11,15 +11,15 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
     public class ListFoCreatedAppsResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFoCreatedAppsResponseBodyData> Data { get; set; }
         public class ListFoCreatedAppsResponseBodyData : TeaModel {
-            [NameInMap("AppId")]
+            [NameInMap("ApplicationId")]
             [Validation(Required=false)]
-            public string AppId { get; set; }
+            public string ApplicationId { get; set; }
 
             [NameInMap("ReportUrl")]
             [Validation(Required=false)]
