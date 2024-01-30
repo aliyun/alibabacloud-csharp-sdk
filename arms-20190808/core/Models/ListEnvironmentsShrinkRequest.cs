@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
+        [NameInMap("BindResourceId")]
+        [Validation(Required=false)]
+        public string BindResourceId { get; set; }
+
         /// <summary>
         /// Environment type, AddonName or EnvironmentType must be at least one.
         /// </summary>

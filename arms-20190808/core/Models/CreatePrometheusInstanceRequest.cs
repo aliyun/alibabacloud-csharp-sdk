@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// - aliyun-cs: Prometheus Instance for Container Service
         /// - cloud-product: Prometheus for cloud monitor
         /// - cloud-monitor: Prometheus for enterprise cloud monitor
-        /// - flink: Prometheus for FLink
+        /// - flink: Prometheus for Flink
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]

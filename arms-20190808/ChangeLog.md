@@ -1,3 +1,10 @@
+2024-01-30 Version: 4.2.0
+- Support API ListEnvironmentDashboards.
+- Update API CreateIntegrationadd RegionId param.
+- Update API DescribeEnvironmentupdate response param.
+- Update API ListEnvironmentsadd BindResourceId param.
+
+
 2024-01-23 Version: 4.1.2
 - Generated csharp 2019-08-08 for ARMS.
 

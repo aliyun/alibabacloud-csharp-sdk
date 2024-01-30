@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string GrafanaFolderUrl { get; set; }
 
+            [NameInMap("ManagedType")]
+            [Validation(Required=false)]
+            public string ManagedType { get; set; }
+
             /// <summary>
             /// The ID of the Prometheus instance.
             /// </summary>

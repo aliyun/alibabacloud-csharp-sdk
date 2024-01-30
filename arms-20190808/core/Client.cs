@@ -246,6 +246,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await AddGrafanaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request AddIntegrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddIntegrationResponse
+         */
+        // Deprecated
         public AddIntegrationResponse AddIntegrationWithOptions(AddIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -281,6 +289,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<AddIntegrationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request AddIntegrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddIntegrationResponse
+         */
+        // Deprecated
         public async Task<AddIntegrationResponse> AddIntegrationWithOptionsAsync(AddIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -316,12 +332,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<AddIntegrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request AddIntegrationRequest
+          * @return AddIntegrationResponse
+         */
+        // Deprecated
         public AddIntegrationResponse AddIntegration(AddIntegrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddIntegrationWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request AddIntegrationRequest
+          * @return AddIntegrationResponse
+         */
+        // Deprecated
         public async Task<AddIntegrationResponse> AddIntegrationAsync(AddIntegrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2893,6 +2923,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public CreateIntegrationResponse CreateIntegrationWithOptions(CreateIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRecover))
             {
@@ -2916,6 +2951,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2936,6 +2972,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public async Task<CreateIntegrationResponse> CreateIntegrationWithOptionsAsync(CreateIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRecover))
             {
@@ -2959,6 +3000,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6736,6 +6778,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await DeleteIMRobotWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteIntegrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteIntegrationResponse
+         */
+        // Deprecated
         public DeleteIntegrationResponse DeleteIntegrationWithOptions(DeleteIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6771,6 +6821,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteIntegrationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteIntegrationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteIntegrationResponse
+         */
+        // Deprecated
         public async Task<DeleteIntegrationResponse> DeleteIntegrationWithOptionsAsync(DeleteIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6806,12 +6864,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteIntegrationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteIntegrationRequest
+          * @return DeleteIntegrationResponse
+         */
+        // Deprecated
         public DeleteIntegrationResponse DeleteIntegration(DeleteIntegrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteIntegrationWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteIntegrationRequest
+          * @return DeleteIntegrationResponse
+         */
+        // Deprecated
         public async Task<DeleteIntegrationResponse> DeleteIntegrationAsync(DeleteIntegrationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10024,6 +10096,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await GetGrafanaWorkspaceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
+          *
+          * @param request GetIntegrationStateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIntegrationStateResponse
+         */
+        // Deprecated
         public GetIntegrationStateResponse GetIntegrationStateWithOptions(GetIntegrationStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10059,6 +10139,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<GetIntegrationStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
+          *
+          * @param request GetIntegrationStateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetIntegrationStateResponse
+         */
+        // Deprecated
         public async Task<GetIntegrationStateResponse> GetIntegrationStateWithOptionsAsync(GetIntegrationStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10094,12 +10182,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<GetIntegrationStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
+          *
+          * @param request GetIntegrationStateRequest
+          * @return GetIntegrationStateResponse
+         */
+        // Deprecated
         public GetIntegrationStateResponse GetIntegrationState(GetIntegrationStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetIntegrationStateWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
+          *
+          * @param request GetIntegrationStateRequest
+          * @return GetIntegrationStateResponse
+         */
+        // Deprecated
         public async Task<GetIntegrationStateResponse> GetIntegrationStateAsync(GetIntegrationStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13938,6 +14040,96 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await ListEnvServiceMonitorsWithOptionsAsync(request, runtime);
         }
 
+        public ListEnvironmentDashboardsResponse ListEnvironmentDashboardsWithOptions(ListEnvironmentDashboardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["AddonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["EnvironmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["Scene"] = request.Scene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnvironmentDashboards",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnvironmentDashboardsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListEnvironmentDashboardsResponse> ListEnvironmentDashboardsWithOptionsAsync(ListEnvironmentDashboardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["AddonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["EnvironmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["Scene"] = request.Scene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnvironmentDashboards",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnvironmentDashboardsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListEnvironmentDashboardsResponse ListEnvironmentDashboards(ListEnvironmentDashboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEnvironmentDashboardsWithOptions(request, runtime);
+        }
+
+        public async Task<ListEnvironmentDashboardsResponse> ListEnvironmentDashboardsAsync(ListEnvironmentDashboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEnvironmentDashboardsWithOptionsAsync(request, runtime);
+        }
+
         public ListEnvironmentFeaturesResponse ListEnvironmentFeaturesWithOptions(ListEnvironmentFeaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14026,6 +14218,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["AddonName"] = request.AddonName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceId))
+            {
+                query["BindResourceId"] = request.BindResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentType))
             {
                 query["EnvironmentType"] = request.EnvironmentType;
@@ -14074,6 +14270,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
             {
                 query["AddonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceId))
+            {
+                query["BindResourceId"] = request.BindResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentType))
             {
