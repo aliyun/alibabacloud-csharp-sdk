@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
+        [NameInMap("BackupRetentionPeriod")]
+        [Validation(Required=false)]
+        public int? BackupRetentionPeriod { get; set; }
+
         /// <summary>
         /// Enables or disables the data flashback feature for the instance. Valid values:
         /// 
