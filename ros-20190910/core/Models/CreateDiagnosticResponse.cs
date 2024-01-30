@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateDiagnosticResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateDiagnosticResponseBody Body { get; set; }
 
     }
