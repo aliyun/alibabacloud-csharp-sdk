@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetServiceDetailResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data that is returned.
+        /// The data structure.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public string EdasAppName { get; set; }
 
             /// <summary>
-            /// The group to which the service belongs.
+            /// The group.
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string MethodController { get; set; }
 
                 /// <summary>
-                /// The name.
+                /// The name of the service.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -80,42 +80,42 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string NameDetail { get; set; }
 
                 /// <summary>
-                /// The definition of the parameter.
+                /// The parameter definitions.
                 /// </summary>
                 [NameInMap("ParameterDefinitions")]
                 [Validation(Required=false)]
                 public string ParameterDefinitions { get; set; }
 
                 /// <summary>
-                /// The details of the parameters.
+                /// The parameter details.
                 /// </summary>
                 [NameInMap("ParameterDetails")]
                 [Validation(Required=false)]
                 public string ParameterDetails { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// The parameter names.
                 /// </summary>
                 [NameInMap("ParameterNames")]
                 [Validation(Required=false)]
                 public string ParameterNames { get; set; }
 
                 /// <summary>
-                /// The data type of the parameter.
+                /// The parameter types.
                 /// </summary>
                 [NameInMap("ParameterTypes")]
                 [Validation(Required=false)]
                 public string ParameterTypes { get; set; }
 
                 /// <summary>
-                /// The method path.
+                /// The method paths.
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
                 public string Paths { get; set; }
 
                 /// <summary>
-                /// The request method.
+                /// The request methods.
                 /// </summary>
                 [NameInMap("RequestMethods")]
                 [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// The type.
+                    /// The type of the response.
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -145,14 +145,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 }
 
                 /// <summary>
-                /// The details of the response.
+                /// The response details.
                 /// </summary>
                 [NameInMap("ReturnDetails")]
                 [Validation(Required=false)]
                 public string ReturnDetails { get; set; }
 
                 /// <summary>
-                /// The data format of the response.
+                /// The type of the response.
                 /// </summary>
                 [NameInMap("ReturnType")]
                 [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the call was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

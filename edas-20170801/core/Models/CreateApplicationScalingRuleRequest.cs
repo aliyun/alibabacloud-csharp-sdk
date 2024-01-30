@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 配置自定义弹性行为，具体数据结构参考样例。
+        /// Configure custom elastic behavior, refer to the example for specific data structure.
         /// </summary>
         [NameInMap("ScalingBehaviour")]
         [Validation(Required=false)]

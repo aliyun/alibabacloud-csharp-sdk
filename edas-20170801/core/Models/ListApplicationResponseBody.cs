@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The applications that are queried.
+        /// The information about applications.
         /// </summary>
         [NameInMap("ApplicationList")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListApplicationResponseBodyApplicationListApplication> Application { get; set; }
             public class ListApplicationResponseBodyApplicationListApplication : TeaModel {
                 /// <summary>
-                /// The application ID.
+                /// The ID of the application.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public long? BuildPackageId { get; set; }
 
                 /// <summary>
-                /// The cluster ID.
+                /// The ID of the cluster.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
@@ -106,6 +106,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The ID of the microservices namespace.
+                /// </summary>
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
                 public string NamespaceId { get; set; }
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The region ID of the application.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

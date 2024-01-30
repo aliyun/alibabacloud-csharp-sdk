@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the service.
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]

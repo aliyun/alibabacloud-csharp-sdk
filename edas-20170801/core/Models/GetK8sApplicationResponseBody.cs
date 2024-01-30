@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetK8sApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The details of the application.
+        /// The information about the application.
         /// </summary>
         [NameInMap("Applcation")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string DeployType { get; set; }
 
                 /// <summary>
-                /// The type of the application. Valid values:
+                /// The application type. Valid values:
                 /// 
                 /// *   General: native Java application
                 /// *   Pandora: Pandora application
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string EdasContainerVersion { get; set; }
 
                 /// <summary>
-                /// 应用是否开启了推空保护。
+                /// Indicates whether the Empty List Protection feature is enabled for the application.
                 /// </summary>
                 [NameInMap("EnableEmptyPushReject")]
                 [Validation(Required=false)]
                 public bool? EnableEmptyPushReject { get; set; }
 
                 /// <summary>
-                /// 应用是否开启了无损上线。
+                /// Indicates whether the Graceful Release feature is enabled for the application.
                 /// </summary>
                 [NameInMap("EnableLosslessRule")]
                 [Validation(Required=false)]
@@ -159,6 +159,18 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     }
 
                 }
+
+                /// <summary>
+                /// The feature annotations. Possible values:
+                /// 
+                /// *   base.combination.edas: enables EDAS integrated management solution.
+                /// *   base.combination.arms: enables ARMS monitoring.
+                /// *   base.combination.mse: enables MSE microservices governance.
+                /// *   base.combination.none: enables lifecycle management.
+                /// </summary>
+                [NameInMap("FeatureAnnotations")]
+                [Validation(Required=false)]
+                public string FeatureAnnotations { get; set; }
 
                 /// <summary>
                 /// The number of application instances.
@@ -210,35 +222,35 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public int? LimitMem { get; set; }
 
                 /// <summary>
-                /// 应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务注册。
+                /// Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.
                 /// </summary>
                 [NameInMap("LosslessRuleAligned")]
                 [Validation(Required=false)]
                 public bool? LosslessRuleAligned { get; set; }
 
                 /// <summary>
-                /// 应用配置的服务延迟注册时长，单位：秒。
+                /// The delay of service registration. Unit: seconds.
                 /// </summary>
                 [NameInMap("LosslessRuleDelayTime")]
                 [Validation(Required=false)]
                 public int? LosslessRuleDelayTime { get; set; }
 
                 /// <summary>
-                /// 应用设置的服务预热曲线。
+                /// The number of prefetching curves.
                 /// </summary>
                 [NameInMap("LosslessRuleFuncType")]
                 [Validation(Required=false)]
                 public int? LosslessRuleFuncType { get; set; }
 
                 /// <summary>
-                /// 应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务预热。
+                /// Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.
                 /// </summary>
                 [NameInMap("LosslessRuleRelated")]
                 [Validation(Required=false)]
                 public bool? LosslessRuleRelated { get; set; }
 
                 /// <summary>
-                /// 应用设置的服务预热时长，单位：秒。
+                /// The service prefetching duration. Unit: seconds.
                 /// </summary>
                 [NameInMap("LosslessRuleWarmupTime")]
                 [Validation(Required=false)]
@@ -285,6 +297,13 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [NameInMap("TomcatVersion")]
                 [Validation(Required=false)]
                 public string TomcatVersion { get; set; }
+
+                /// <summary>
+                /// The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.
+                /// </summary>
+                [NameInMap("WorkloadType")]
+                [Validation(Required=false)]
+                public string WorkloadType { get; set; }
 
             }
 
@@ -428,7 +447,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Tolerations { get; set; }
 
                 /// <summary>
-                /// 使用自定义OpenJDK运行时，配置的基础镜像地址。
+                /// The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.
                 /// </summary>
                 [NameInMap("UserBaseImageUrl")]
                 [Validation(Required=false)]
@@ -459,7 +478,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public List<GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents> Components { get; set; }
                         public class GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents : TeaModel {
                             /// <summary>
-                            /// The ID of the component.
+                            /// The component ID.
                             /// </summary>
                             [NameInMap("ComponentId")]
                             [Validation(Required=false)]
@@ -473,7 +492,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                             public string ComponentKey { get; set; }
 
                             /// <summary>
-                            /// The type of the component. Valid values:
+                            /// The component type. Valid values:
                             /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetJvmConfigurationResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetJvmConfigurationResponseBody Body { get; set; }
 
     }

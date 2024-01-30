@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string CustomAffinity { get; set; }
 
+        [NameInMap("CustomAgentVersion")]
+        [Validation(Required=false)]
+        public string CustomAgentVersion { get; set; }
+
         /// <summary>
         /// The scheduling tolerance configuration of the pod. This parameter takes effect only if both the DeployAcrossNodes and DeployAcrossZones parameters are set to false.
         /// </summary>

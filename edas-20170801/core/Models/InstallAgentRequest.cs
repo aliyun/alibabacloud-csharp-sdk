@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated.
+        /// This parameter is discontinued.
         /// </summary>
         [NameInMap("DoAsync")]
         [Validation(Required=false)]

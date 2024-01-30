@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateK8sResourceResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UpdateK8sResourceResponseBody Body { get; set; }
 
     }

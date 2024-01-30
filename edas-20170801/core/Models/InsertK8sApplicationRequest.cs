@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string CustomAffinity { get; set; }
 
+        [NameInMap("CustomAgentVersion")]
+        [Validation(Required=false)]
+        public string CustomAgentVersion { get; set; }
+
         /// <summary>
         /// The custom tolerances.
         /// </summary>
@@ -217,6 +221,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string Envs { get; set; }
+
+        [NameInMap("FeatureConfig")]
+        [Validation(Required=false)]
+        public string FeatureConfig { get; set; }
 
         [NameInMap("ImagePlatforms")]
         [Validation(Required=false)]

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UnbindK8sSlbResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UnbindK8sSlbResponseBody Body { get; set; }
 
     }

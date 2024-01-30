@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data that is returned.
+        /// The response data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListK8sIngressRulesResponseBodyData> Data { get; set; }
         public class ListK8sIngressRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Kubernetes cluster.
+            /// The cluster ID.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The name of the Kubernetes cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListK8sIngressRulesResponseBodyDataIngressConfs> IngressConfs { get; set; }
             public class ListK8sIngressRulesResponseBodyDataIngressConfs : TeaModel {
                 /// <summary>
-                /// The ID of the Application Load Balancer (ALB) instance.
+                /// The ID of the ALB instance.
                 /// </summary>
                 [NameInMap("AlbId")]
                 [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// The type of the Ingress. Valid values:
+                /// The Ingress type. Valid values:
                 /// 
                 /// *   **NginxIngress**: NGINX Ingress controller
                 /// *   **AlbIngress**: ALB Ingress controller
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string IngressType { get; set; }
 
                 /// <summary>
-                /// The labels.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// The ID of the Microservices Engine (MSE) gateway.
+                /// The ID of the MSE gateway.
                 /// </summary>
                 [NameInMap("MseGatewayId")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string MseGatewayName { get; set; }
 
                 /// <summary>
-                /// The name of the Ingress.
+                /// The Ingress name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 public string OfficalRequestUrl { get; set; }
 
                 /// <summary>
-                /// The list of routing rules.
+                /// The routing rules.
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     /// <summary>
                     /// Indicates whether TLS is enabled. Valid values:
                     /// 
-                    /// *   true: TLS is enabled.
-                    /// *   false: TLS is disabled.
+                    /// *   true
+                    /// *   false
                     /// </summary>
                     [NameInMap("EnableTls")]
                     [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     public string Host { get; set; }
 
                     /// <summary>
-                    /// The list of paths to be accessed.
+                    /// The paths to be accessed.
                     /// </summary>
                     [NameInMap("Paths")]
                     [Validation(Required=false)]
@@ -186,21 +186,21 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         public string AppName { get; set; }
 
                         /// <summary>
-                        /// The configuration of the backend service.
+                        /// The configurations of the backend Service.
                         /// </summary>
                         [NameInMap("Backend")]
                         [Validation(Required=false)]
                         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend Backend { get; set; }
                         public class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend : TeaModel {
                             /// <summary>
-                            /// The name of the backend service.
+                            /// The name of the backend Service.
                             /// </summary>
                             [NameInMap("ServiceName")]
                             [Validation(Required=false)]
                             public string ServiceName { get; set; }
 
                             /// <summary>
-                            /// The port of the backend service.
+                            /// The port of the backend Service.
                             /// </summary>
                             [NameInMap("ServicePort")]
                             [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         }
 
                         /// <summary>
-                        /// The collection rate that is set based on the trace query feature. You can add a TraceID to a gateway to use the trace query feature of EDAS.
+                        /// The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.
                         /// </summary>
                         [NameInMap("CollectRate")]
                         [Validation(Required=false)]
@@ -222,17 +222,24 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                         [Validation(Required=false)]
                         public string Path { get; set; }
 
+                        /// <summary>
+                        /// The path type that determines how a path is matched.
+                        /// 
+                        /// *   ImplementationSpecific (default)
+                        /// *   Exact
+                        /// *   Prefix
+                        /// </summary>
                         [NameInMap("PathType")]
                         [Validation(Required=false)]
                         public string PathType { get; set; }
 
                         /// <summary>
-                        /// The status of the Ingress. Valid values:
+                        /// The state of the Ingress. Valid values:
                         /// 
-                        /// *   **Normal**: The Ingress works properly.
-                        /// *   **ServiceNotFound**: The backend service does not exist.
-                        /// *   **InvalidServicePort**: The service port is invalid.
-                        /// *   **NotManagedService**: The service is not managed by EDAS.
+                        /// *   **Normal**: The Ingress works as expected.
+                        /// *   **ServiceNotFound**: The backend Service does not exist.
+                        /// *   **InvalidServicePort**: The Service port is invalid.
+                        /// *   **NotManagedService**: The Service is not managed by EDAS.
                         /// *   **Unknown**: An unknown error occurred.
                         /// </summary>
                         [NameInMap("Status")]
@@ -242,7 +249,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                     }
 
                     /// <summary>
-                    /// The name of the Secret that stores the information about the Transport Layer Security (TLS) certificate.
+                    /// The name of the Secret that stores the Transport Layer Security (TLS) certificate.
                     /// </summary>
                     [NameInMap("SecretName")]
                     [Validation(Required=false)]
@@ -251,10 +258,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 }
 
                 /// <summary>
-                /// Indicates whether SSL redirect is enabled. Valid values:
+                /// Indicates whether SSL redirection is enabled. Valid values:
                 /// 
-                /// *   true: SSL redirect is enabled.
-                /// *   false: SSL redirect is disabled.
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("SslRedirect")]
                 [Validation(Required=false)]
@@ -263,7 +270,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// The ID of the region where the cluster resides.
+            /// The ID of the Alibaba Cloud region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

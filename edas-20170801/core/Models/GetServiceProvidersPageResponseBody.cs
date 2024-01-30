@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data that is returned.
+        /// The data structure.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             [Validation(Required=false)]
             public List<GetServiceProvidersPageResponseBodyDataContent> Content { get; set; }
             public class GetServiceProvidersPageResponseBodyDataContent : TeaModel {
+                /// <summary>
+                /// The remarks of the service provider.
+                /// </summary>
                 [NameInMap("Iannotations")]
                 [Validation(Required=false)]
                 public string Iannotations { get; set; }

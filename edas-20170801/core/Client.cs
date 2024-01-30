@@ -3508,6 +3508,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["CustomAffinity"] = request.CustomAffinity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentVersion))
+            {
+                query["CustomAgentVersion"] = request.CustomAgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTolerations))
             {
                 query["CustomTolerations"] = request.CustomTolerations;
@@ -3799,6 +3803,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAffinity))
             {
                 query["CustomAffinity"] = request.CustomAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentVersion))
+            {
+                query["CustomAgentVersion"] = request.CustomAgentVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTolerations))
             {
@@ -7094,6 +7102,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["CustomAffinity"] = request.CustomAffinity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentVersion))
+            {
+                query["CustomAgentVersion"] = request.CustomAgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTolerations))
             {
                 query["CustomTolerations"] = request.CustomTolerations;
@@ -7137,6 +7149,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureConfig))
+            {
+                query["FeatureConfig"] = request.FeatureConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePlatforms))
             {
@@ -7450,6 +7466,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["CustomAffinity"] = request.CustomAffinity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentVersion))
+            {
+                query["CustomAgentVersion"] = request.CustomAgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTolerations))
             {
                 query["CustomTolerations"] = request.CustomTolerations;
@@ -7493,6 +7513,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureConfig))
+            {
+                query["FeatureConfig"] = request.FeatureConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePlatforms))
             {
