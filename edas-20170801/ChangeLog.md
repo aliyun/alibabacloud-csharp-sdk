@@ -5,6 +5,13 @@
 add FeatureConfig param.
 
 
+2024-01-30 Version: 1.0.8
+- Update API DeployK8sApplicationadd CustomAgentVersion param.
+- Update API GetK8sApplicationupdate response param.
+- Update API InsertK8sApplicationadd CustomAgentVersion param.
+add FeatureConfig param.
+
+
 2023-10-10 Version: 1.0.7
 - Generated csharp 2017-08-01 for Edas.
 
