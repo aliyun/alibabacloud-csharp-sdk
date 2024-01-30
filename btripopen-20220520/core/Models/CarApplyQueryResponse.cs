@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyQueryResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CarApplyQueryResponseBody Body { get; set; }
 
     }
