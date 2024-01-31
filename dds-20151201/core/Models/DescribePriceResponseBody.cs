@@ -113,12 +113,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string DiscountAmount { get; set; }
 
+            [NameInMap("OptionalPromotions")]
+            [Validation(Required=false)]
+            public string OptionalPromotions { get; set; }
+
             /// <summary>
             /// The original price of the order.
             /// </summary>
             [NameInMap("OriginalAmount")]
             [Validation(Required=false)]
             public string OriginalAmount { get; set; }
+
+            [NameInMap("PromDetailList")]
+            [Validation(Required=false)]
+            public string PromDetailList { get; set; }
 
             /// <summary>
             /// The rules of the order.
