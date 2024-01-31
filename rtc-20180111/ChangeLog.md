@@ -1,3 +1,7 @@
+2024-01-31 Version: 1.5.1
+- Update API DescribeAppsupdate response param.
+
+
 2024-01-02 Version: 1.5.0
 - Generated csharp 2018-01-11 for rtc.
 

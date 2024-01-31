@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                [NameInMap("Region")]
-                [Validation(Required=false)]
-                public string Region { get; set; }
-
                 [NameInMap("ServiceAreas")]
                 [Validation(Required=false)]
                 public DescribeAppsResponseBodyAppListAppServiceAreas ServiceAreas { get; set; }
@@ -54,6 +50,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
 
             }
 
