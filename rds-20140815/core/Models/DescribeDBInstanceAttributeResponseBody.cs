@@ -572,6 +572,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **Postpaid**: pay-as-you-go
                 /// *   **Prepaid**: subscription
+                /// *   **SERVERLESS**: Serverless
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]

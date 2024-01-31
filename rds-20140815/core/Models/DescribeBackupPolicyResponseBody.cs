@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? EnableIncrementDataBackup { get; set; }
 
+        [NameInMap("EnablePitrProtection")]
+        [Validation(Required=false)]
+        public bool? EnablePitrProtection { get; set; }
+
         /// <summary>
         /// Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:
         /// 
@@ -175,6 +179,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]
         public int? LogBackupRetentionPeriod { get; set; }
+
+        [NameInMap("PitrRetentionPeriod")]
+        [Validation(Required=false)]
+        public int? PitrRetentionPeriod { get; set; }
 
         /// <summary>
         /// The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:
