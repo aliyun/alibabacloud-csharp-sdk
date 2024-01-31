@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
-    public class FileModerationResponse : TeaModel {
+    public class UrlAsyncModerationResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public FileModerationResponseBody Body { get; set; }
+        public UrlAsyncModerationResponseBody Body { get; set; }
 
     }
 
