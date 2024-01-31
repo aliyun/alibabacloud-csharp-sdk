@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the server group.
-        /// > You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.
+        /// 
+        /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

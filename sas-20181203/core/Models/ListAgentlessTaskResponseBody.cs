@@ -44,12 +44,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("MeasureSpace")]
+            [Validation(Required=false)]
+            public long? MeasureSpace { get; set; }
+
             /// <summary>
             /// The progress of the task.
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
+
+            [NameInMap("ProgressByProject")]
+            [Validation(Required=false)]
+            public string ProgressByProject { get; set; }
+
+            [NameInMap("ReportDownloadUrl")]
+            [Validation(Required=false)]
+            public string ReportDownloadUrl { get; set; }
+
+            [NameInMap("ReportStatus")]
+            [Validation(Required=false)]
+            public string ReportStatus { get; set; }
 
             /// <summary>
             /// The result of the detection.

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCanFixVulListResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeCanFixVulListResponseBody Body { get; set; }
 
     }

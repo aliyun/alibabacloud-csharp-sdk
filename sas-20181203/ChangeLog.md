@@ -1,3 +1,10 @@
+2024-01-31 Version: 2.24.0
+- Support API DeleteVulAutoRepairConfig.
+- Update API DescribeSuspEventDetailupdate Lang param.
+- Update API DescribeSuspEventsupdate Lang param.
+- Update API ListAgentlessTaskupdate response param.
+
+
 2024-01-23 Version: 2.23.4
 - Generated csharp 2018-12-03 for Sas.
 
