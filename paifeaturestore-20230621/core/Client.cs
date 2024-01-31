@@ -805,6 +805,62 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             return await CreateModelFeatureWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        public CreateModelFeatureTrainingSetFGTableResponse CreateModelFeatureTrainingSetFGTableWithOptions(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelFeatureTrainingSetFGTable",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/trainingsetfgtable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelFeatureTrainingSetFGTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateModelFeatureTrainingSetFGTableResponse> CreateModelFeatureTrainingSetFGTableWithOptionsAsync(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelFeatureTrainingSetFGTable",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/trainingsetfgtable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelFeatureTrainingSetFGTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateModelFeatureTrainingSetFGTableResponse CreateModelFeatureTrainingSetFGTable(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
+        public async Task<CreateModelFeatureTrainingSetFGTableResponse> CreateModelFeatureTrainingSetFGTableAsync(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateModelFeatureTrainingSetFGTableWithOptionsAsync(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
         public CreateProjectResponse CreateProjectWithOptions(string InstanceId, CreateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1321,6 +1377,76 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             return await DeleteProjectWithOptionsAsync(InstanceId, ProjectId, headers, runtime);
         }
 
+        public ExportModelFeatureTrainingSetFGTableResponse ExportModelFeatureTrainingSetFGTableWithOptions(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetFgConfig))
+            {
+                body["TrainingSetFgConfig"] = request.TrainingSetFgConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportModelFeatureTrainingSetFGTable",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/action/exporttrainingsetfgtable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportModelFeatureTrainingSetFGTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ExportModelFeatureTrainingSetFGTableResponse> ExportModelFeatureTrainingSetFGTableWithOptionsAsync(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetFgConfig))
+            {
+                body["TrainingSetFgConfig"] = request.TrainingSetFgConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportModelFeatureTrainingSetFGTable",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/action/exporttrainingsetfgtable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportModelFeatureTrainingSetFGTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ExportModelFeatureTrainingSetFGTableResponse ExportModelFeatureTrainingSetFGTable(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExportModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public async Task<ExportModelFeatureTrainingSetFGTableResponse> ExportModelFeatureTrainingSetFGTableAsync(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExportModelFeatureTrainingSetFGTableWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
         public ExportModelFeatureTrainingSetTableResponse ExportModelFeatureTrainingSetTableWithOptions(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1797,6 +1923,118 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetModelFeatureWithOptionsAsync(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
+        public GetModelFeatureFGFeatureResponse GetModelFeatureFGFeatureWithOptions(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelFeatureFGFeature",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fgfeature",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelFeatureFGFeatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetModelFeatureFGFeatureResponse> GetModelFeatureFGFeatureWithOptionsAsync(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelFeatureFGFeature",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fgfeature",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelFeatureFGFeatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetModelFeatureFGFeatureResponse GetModelFeatureFGFeature(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetModelFeatureFGFeatureWithOptions(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
+        public async Task<GetModelFeatureFGFeatureResponse> GetModelFeatureFGFeatureAsync(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetModelFeatureFGFeatureWithOptionsAsync(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
+        public GetModelFeatureFGInfoResponse GetModelFeatureFGInfoWithOptions(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelFeatureFGInfo",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelFeatureFGInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetModelFeatureFGInfoResponse> GetModelFeatureFGInfoWithOptionsAsync(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelFeatureFGInfo",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelFeatureFGInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetModelFeatureFGInfoResponse GetModelFeatureFGInfo(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetModelFeatureFGInfoWithOptions(InstanceId, ModelFeatureId, headers, runtime);
+        }
+
+        public async Task<GetModelFeatureFGInfoResponse> GetModelFeatureFGInfoAsync(string InstanceId, string ModelFeatureId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetModelFeatureFGInfoWithOptionsAsync(InstanceId, ModelFeatureId, headers, runtime);
         }
 
         public GetProjectResponse GetProjectWithOptions(string InstanceId, string ProjectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3031,6 +3269,76 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             return await ListLabelTablesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        public ListModelFeatureAvailableFeaturesResponse ListModelFeatureAvailableFeaturesWithOptions(string InstanceId, string ModelFeatureId, ListModelFeatureAvailableFeaturesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureName))
+            {
+                query["FeatureName"] = request.FeatureName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelFeatureAvailableFeatures",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/availablefeatures",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelFeatureAvailableFeaturesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListModelFeatureAvailableFeaturesResponse> ListModelFeatureAvailableFeaturesWithOptionsAsync(string InstanceId, string ModelFeatureId, ListModelFeatureAvailableFeaturesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureName))
+            {
+                query["FeatureName"] = request.FeatureName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelFeatureAvailableFeatures",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/availablefeatures",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelFeatureAvailableFeaturesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListModelFeatureAvailableFeaturesResponse ListModelFeatureAvailableFeatures(string InstanceId, string ModelFeatureId, ListModelFeatureAvailableFeaturesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListModelFeatureAvailableFeaturesWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public async Task<ListModelFeatureAvailableFeaturesResponse> ListModelFeatureAvailableFeaturesAsync(string InstanceId, string ModelFeatureId, ListModelFeatureAvailableFeaturesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListModelFeatureAvailableFeaturesWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
         public ListModelFeaturesResponse ListModelFeaturesWithOptions(string InstanceId, ListModelFeaturesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4049,6 +4357,170 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelFeatureWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public UpdateModelFeatureFGFeatureResponse UpdateModelFeatureFGFeatureWithOptions(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGFeatureRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupFeatures))
+            {
+                body["LookupFeatures"] = request.LookupFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawFeatures))
+            {
+                body["RawFeatures"] = request.RawFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reserves))
+            {
+                body["Reserves"] = request.Reserves;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SequenceFeatures))
+            {
+                body["SequenceFeatures"] = request.SequenceFeatures;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelFeatureFGFeature",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fgfeature",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelFeatureFGFeatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateModelFeatureFGFeatureResponse> UpdateModelFeatureFGFeatureWithOptionsAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGFeatureRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupFeatures))
+            {
+                body["LookupFeatures"] = request.LookupFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawFeatures))
+            {
+                body["RawFeatures"] = request.RawFeatures;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reserves))
+            {
+                body["Reserves"] = request.Reserves;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SequenceFeatures))
+            {
+                body["SequenceFeatures"] = request.SequenceFeatures;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelFeatureFGFeature",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fgfeature",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelFeatureFGFeatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateModelFeatureFGFeatureResponse UpdateModelFeatureFGFeature(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGFeatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateModelFeatureFGFeatureWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public async Task<UpdateModelFeatureFGFeatureResponse> UpdateModelFeatureFGFeatureAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGFeatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateModelFeatureFGFeatureWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public UpdateModelFeatureFGInfoResponse UpdateModelFeatureFGInfoWithOptions(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelFeatureFGInfo",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelFeatureFGInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateModelFeatureFGInfoResponse> UpdateModelFeatureFGInfoWithOptionsAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelFeatureFGInfo",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelFeatureFGInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateModelFeatureFGInfoResponse UpdateModelFeatureFGInfo(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateModelFeatureFGInfoWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
+        }
+
+        public async Task<UpdateModelFeatureFGInfoResponse> UpdateModelFeatureFGInfoAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateModelFeatureFGInfoWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
         }
 
         public UpdateProjectResponse UpdateProjectWithOptions(string InstanceId, string ProjectId, UpdateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
