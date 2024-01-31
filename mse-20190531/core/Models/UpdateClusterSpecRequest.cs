@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         /// <summary>
         /// The ID of the cluster.
         /// </summary>
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }
+
+        [NameInMap("PubNetworkFlow")]
+        [Validation(Required=false)]
+        public int? PubNetworkFlow { get; set; }
 
     }
 

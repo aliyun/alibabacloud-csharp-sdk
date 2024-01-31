@@ -17955,6 +17955,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -17974,6 +17978,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseVersion))
             {
                 query["MseVersion"] = request.MseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PubNetworkFlow))
+            {
+                query["PubNetworkFlow"] = request.PubNetworkFlow;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18009,6 +18017,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -18028,6 +18040,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseVersion))
             {
                 query["MseVersion"] = request.MseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PubNetworkFlow))
+            {
+                query["PubNetworkFlow"] = request.PubNetworkFlow;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
