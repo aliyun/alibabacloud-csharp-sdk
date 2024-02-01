@@ -1,3 +1,7 @@
+2024-02-01 Version: 1.1.4
+- Update API DescribeVaultsupdate response param.
+
+
 2024-01-30 Version: 1.1.3
 - Update API CreateBackupPlanadd Disabled param.
 update VaultId param.

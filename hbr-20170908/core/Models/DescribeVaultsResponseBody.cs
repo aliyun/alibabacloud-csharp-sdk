@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string ReplicationSourceVaultId { get; set; }
 
+                [NameInMap("ReplicationTargetRegionId")]
+                [Validation(Required=false)]
+                public string ReplicationTargetRegionId { get; set; }
+
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
