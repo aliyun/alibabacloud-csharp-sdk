@@ -161,6 +161,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string HealthCheckType { get; set; }
 
+        [NameInMap("HealthCheckTypes")]
+        [Validation(Required=false)]
+        public List<string> HealthCheckTypes { get; set; }
+
         /// <summary>
         /// The ID of the existing ECS instance that provides instance configurations for Auto Scaling to create a scaling configuration.
         /// </summary>
