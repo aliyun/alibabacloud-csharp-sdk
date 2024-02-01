@@ -1,3 +1,7 @@
+2024-02-01 Version: 1.2.1
+- Update API CreateServiceInstanceadd BusinessInfo param.
+
+
 2021-12-28 Version: 1.2.0
 - Generate SDK for service instance APIs.
 

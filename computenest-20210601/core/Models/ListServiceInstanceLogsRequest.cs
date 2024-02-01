@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceLogsRequest : TeaModel {
+        [NameInMap("LogSource")]
+        [Validation(Required=false)]
+        public string LogSource { get; set; }
+
+        [NameInMap("Logstore")]
+        [Validation(Required=false)]
+        public string Logstore { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]

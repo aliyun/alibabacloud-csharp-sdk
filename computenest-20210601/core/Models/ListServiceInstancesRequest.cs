@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,10 +35,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("RequestTag")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public List<ListServiceInstancesRequestRequestTag> RequestTag { get; set; }
-        public class ListServiceInstancesRequestRequestTag : TeaModel {
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListServiceInstancesRequestTag> Tag { get; set; }
+        public class ListServiceInstancesRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class ListServiceInstanceResourcesResponse : TeaModel {
+    public class GetServiceTemplateParameterConstraintsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListServiceInstanceResourcesResponseBody Body { get; set; }
+        public GetServiceTemplateParameterConstraintsResponseBody Body { get; set; }
 
     }
 

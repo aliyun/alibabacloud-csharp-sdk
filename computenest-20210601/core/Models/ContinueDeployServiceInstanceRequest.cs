@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -15,6 +12,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("Option")]
+        [Validation(Required=false)]
+        public List<string> Option { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]

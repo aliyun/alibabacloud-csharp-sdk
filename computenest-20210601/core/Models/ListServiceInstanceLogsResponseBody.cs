@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
     public class ListServiceInstanceLogsResponseBody : TeaModel {
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -29,17 +29,25 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
-            [NameInMap("Phase")]
+            [NameInMap("LogType")]
             [Validation(Required=false)]
-            public string Phase { get; set; }
+            public string LogType { get; set; }
 
-            [NameInMap("ServiceInstanceId")]
+            [NameInMap("ResourceId")]
             [Validation(Required=false)]
-            public string ServiceInstanceId { get; set; }
+            public string ResourceId { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
 
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("Timestamp")]
             [Validation(Required=false)]

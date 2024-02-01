@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateServiceInstanceResponseBody : TeaModel {
+        [NameInMap("MarketInstanceId")]
+        [Validation(Required=false)]
+        public string MarketInstanceId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
