@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string TrafficMirrorFilterId { get; set; }
 
+        /// <summary>
+        /// The ID of the inbound or outbound rule.
+        /// </summary>
         [NameInMap("TrafficMirrorFilterRuleIds")]
         [Validation(Required=false)]
         public List<string> TrafficMirrorFilterRuleIds { get; set; }

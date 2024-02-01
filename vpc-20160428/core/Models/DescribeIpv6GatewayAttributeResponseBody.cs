@@ -41,6 +41,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        /// <summary>
+        /// The ID of the gateway route table associated with the IPv6 gateway.
+        /// 
+        /// >  This parameter is available only when the IPv6 gateway is associated with a gateway route table.
+        /// </summary>
         [NameInMap("GatewayRouteTableId")]
         [Validation(Required=false)]
         public string GatewayRouteTableId { get; set; }

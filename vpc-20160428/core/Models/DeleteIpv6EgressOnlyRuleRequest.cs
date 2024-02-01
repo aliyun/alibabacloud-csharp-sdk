@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the IPv6 gateway.
+        /// The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

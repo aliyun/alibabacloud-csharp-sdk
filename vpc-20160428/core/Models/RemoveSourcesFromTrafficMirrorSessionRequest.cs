@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string TrafficMirrorSessionId { get; set; }
 
+        /// <summary>
+        /// The ID of the traffic mirror source to be deleted. Maximum value of N: 10.
+        /// </summary>
         [NameInMap("TrafficMirrorSourceIds")]
         [Validation(Required=false)]
         public List<string> TrafficMirrorSourceIds { get; set; }

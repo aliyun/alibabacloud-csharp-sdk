@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The details about the network ACL.
+        /// The details of the network ACLs.
         /// </summary>
         [NameInMap("NetworkAclAttribute")]
         [Validation(Required=false)]
@@ -55,10 +55,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string DestinationCidrIp { get; set; }
 
+                    /// <summary>
+                    /// The type of the inbound rule.
+                    /// 
+                    /// - **custom**
+                    /// 
+                    /// - **system**
+                    /// </summary>
                     [NameInMap("EntryType")]
                     [Validation(Required=false)]
                     public string EntryType { get; set; }
 
+                    /// <summary>
+                    /// The IP version. Valid values:
+                    /// 
+                    /// *   **IPv4**
+                    /// *   **IPv6**
+                    /// </summary>
                     [NameInMap("IpVersion")]
                     [Validation(Required=false)]
                     public string IpVersion { get; set; }
@@ -80,31 +93,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The action to be performed on network traffic that matches the rule. Valid values:
                     /// 
-                    /// - **accept**: allows network traffic.
-                    /// - **drop**: blocks network traffic.
+                    /// *   **accept**
+                    /// *   **drop**
                     /// </summary>
                     [NameInMap("Policy")]
                     [Validation(Required=false)]
                     public string Policy { get; set; }
 
                     /// <summary>
-                    /// The destination port range of the outbound traffic. 
+                    /// The destination port range of the outbound traffic.
                     /// 
-                    /// - If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.
-                    /// - If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.
+                    /// *   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.
+                    /// *   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public string Port { get; set; }
 
                     /// <summary>
-                    /// The protocol. Valid values:
+                    /// The protocol type. Valid values:
                     /// 
-                    /// - **icmp**: ICMP
-                    /// - **gre**: GRE
-                    /// - **tcp**: TCP
-                    /// - **udp**: UDP
-                    /// - **all**: all protocols
+                    /// *   **icmp**
+                    /// *   **gre**
+                    /// *   **tcp**
+                    /// *   **udp**
+                    /// *   **all**
                     /// </summary>
                     [NameInMap("Protocol")]
                     [Validation(Required=false)]
@@ -132,10 +145,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// The type of the inbound rule.
+                    /// 
+                    /// - **custom**
+                    /// 
+                    /// - **system**
+                    /// </summary>
                     [NameInMap("EntryType")]
                     [Validation(Required=false)]
                     public string EntryType { get; set; }
 
+                    /// <summary>
+                    /// The IP version. Valid values:
+                    /// 
+                    /// *   **IPv4**
+                    /// *   **IPv6**
+                    /// </summary>
                     [NameInMap("IpVersion")]
                     [Validation(Required=false)]
                     public string IpVersion { get; set; }
@@ -157,8 +183,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The action to be performed on network traffic that matches the rule. Valid values:
                     /// 
-                    /// *   **accept**: allows network traffic.
-                    /// *   **drop**: blocks network traffic.
+                    /// *   **accept**
+                    /// *   **drop**
                     /// </summary>
                     [NameInMap("Policy")]
                     [Validation(Required=false)]
@@ -167,21 +193,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The destination port range of the inbound traffic.
                     /// 
-                    /// *   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.
-                    /// *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**, which indicates port 1 to port 200, or port 80. Valid values for a port: **1** to **65535**.
+                    /// *   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.
+                    /// *   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public string Port { get; set; }
 
                     /// <summary>
-                    /// The protocol. Valid values:
+                    /// The protocol type. Valid values:
                     /// 
-                    /// *   **icmp**: ICMP
-                    /// *   **gre**: GRE
-                    /// *   **tcp**: TCP
-                    /// *   **udp**: UDP
-                    /// *   **all**: all protocols
+                    /// *   **icmp**
+                    /// *   **gre**
+                    /// *   **tcp**
+                    /// *   **udp**
+                    /// *   **all**
                     /// </summary>
                     [NameInMap("Protocol")]
                     [Validation(Required=false)]
@@ -227,7 +253,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The details about the resource that is associated with the network ACL.
+            /// The resources that are associated with the network ACL.
             /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
@@ -252,11 +278,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string ResourceType { get; set; }
 
                     /// <summary>
-                    /// The status of the associated resource. Valid values:
+                    /// The association status of the resource. Valid values:
                     /// 
-                    /// - **BINDED**: The resource is associated with the network ACL.
-                    /// - **BINDING**: The resource is being associated with the network ACL.
-                    /// - **UNBINDING**: The resource is disassociated from the network ACL.
+                    /// *   **BINDED**
+                    /// *   **BINDING**
+                    /// *   **UNBINDING**
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -267,7 +293,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The status of the associated resource. Valid values:
+            /// The association status of the resource. Valid values:
             /// 
             /// *   **Available**
             /// *   **Modifying**
@@ -277,7 +303,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The tag list.
+            /// The information about the tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -288,14 +314,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public List<DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTagsTag> Tag { get; set; }
                 public class DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTagsTag : TeaModel {
                     /// <summary>
-                    /// The tag key.
+                    /// The key of tag N added to the resource.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// The tag value.
+                    /// The value of tag N added to the resource.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -306,7 +332,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC) with which the network ACL is associated.
+            /// The ID of the VPC to which the network ACL belongs.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -315,7 +341,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpv4GatewaysResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListIpv4GatewaysResponseBody Body { get; set; }
 
     }

@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// The details about the filters.
+        /// The information about the filters.
         /// </summary>
         [NameInMap("TrafficMirrorFilters")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The details about the outbound rules.
+            /// The information about the outbound rules.
             /// </summary>
             [NameInMap("EgressRules")]
             [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The details about the inbound rules.
+            /// The information about the inbound rules.
             /// </summary>
             [NameInMap("IngressRules")]
             [Validation(Required=false)]
@@ -266,28 +266,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The ID of the resource group to which the traffic mirror session belongs.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The list of tags.
+            /// The tag list.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> Tags { get; set; }
             public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags : TeaModel {
                 /// <summary>
-                /// The key of tag N.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag N.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -303,14 +303,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorFilterDescription { get; set; }
 
             /// <summary>
-            /// The ID of the traffic mirror filter.
+            /// The ID of the filter.
             /// </summary>
             [NameInMap("TrafficMirrorFilterId")]
             [Validation(Required=false)]
             public string TrafficMirrorFilterId { get; set; }
 
             /// <summary>
-            /// The name of the filter.
+            /// The filter name.
             /// </summary>
             [NameInMap("TrafficMirrorFilterName")]
             [Validation(Required=false)]

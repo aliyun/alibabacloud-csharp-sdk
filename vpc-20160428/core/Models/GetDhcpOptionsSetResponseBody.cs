@@ -113,6 +113,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -129,14 +132,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetDhcpOptionsSetResponseBodyTags> Tags { get; set; }
         public class GetDhcpOptionsSetResponseBodyTags : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

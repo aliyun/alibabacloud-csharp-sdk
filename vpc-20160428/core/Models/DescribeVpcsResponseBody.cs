@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpcsResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The details of the VPCs.
+        /// The details about the VPC.
         /// </summary>
         [NameInMap("Vpcs")]
         [Validation(Required=false)]
@@ -49,9 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpcsResponseBodyVpcsVpc> Vpc { get; set; }
             public class DescribeVpcsResponseBodyVpcsVpc : TeaModel {
                 /// <summary>
-                /// The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.
-                /// 
-                /// **Attached** is returned only if the VPC is attached to a CEN instance.
+                /// The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. **Attached** is returned only if the VPC is attached to a CEN instance.
                 /// </summary>
                 [NameInMap("CenStatus")]
                 [Validation(Required=false)]
@@ -88,10 +86,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the DHCP options set. Valid values:
                 /// 
-                /// *   **Available**: available
-                /// *   **InUse**: in use
-                /// *   **Deleted**: deleted
-                /// *   **Pending**: being configured
+                /// *   **Available**
+                /// *   **InUse**
+                /// *   **Deleted**
+                /// *   **Pending**
                 /// </summary>
                 [NameInMap("DhcpOptionsSetStatus")]
                 [Validation(Required=false)]
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Ipv6CidrBlock { get; set; }
 
                 /// <summary>
-                /// The IPv6 CIDR blocks of the VPC.
+                /// The IPv6 CIDR block of the VPC.
                 /// </summary>
                 [NameInMap("Ipv6CidrBlocks")]
                 [Validation(Required=false)]
@@ -125,12 +123,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The type of IPv6 CIDR block. Valid values:
                         /// 
-                        /// - **BGP**: an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
-                        /// - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
-                        /// - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
-                        /// - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+                        /// *   **BGP**
+                        /// *   **ChinaMobile**
+                        /// *   **ChinaUnicom**
+                        /// *   **ChinaTelecom**
                         /// 
-                        /// >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+                        /// >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
                         /// </summary>
                         [NameInMap("Ipv6Isp")]
                         [Validation(Required=false)]
@@ -143,15 +141,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// Indicates whether the VPC is the default VPC in the region. Valid values:
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("IsDefault")]
                 [Validation(Required=false)]
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// The IDs of the NAT gateways.
+                /// The ID of the Internet NAT gateway.
                 /// </summary>
                 [NameInMap("NatGatewayIds")]
                 [Validation(Required=false)]
@@ -185,7 +183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The IDs of the route tables.
+                /// The information about the route table.
                 /// </summary>
                 [NameInMap("RouterTableIds")]
                 [Validation(Required=false)]
@@ -198,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The secondary CIDR blocks of the VPC.
+                /// The information about the secondary CIDR block.
                 /// </summary>
                 [NameInMap("SecondaryCidrBlocks")]
                 [Validation(Required=false)]
@@ -213,8 +211,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the VPC. Valid values:
                 /// 
-                /// *   **Pending**: being configured
-                /// *   **Available**: available
+                /// *   **Pending**
+                /// *   **Available**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -232,14 +230,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeVpcsResponseBodyVpcsVpcTagsTag> Tag { get; set; }
                     public class DescribeVpcsResponseBodyVpcsVpcTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag that is added to the VPC.
+                        /// The key of tag N.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag that is added to the VPC.
+                        /// The value of tag N.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -270,9 +268,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string VRouterId { get; set; }
 
                 /// <summary>
-                /// The vSwitches in the VPC. 
+                /// The vSwitches in the VPC.
                 /// 
-                /// You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](/help/en/virtual-private-cloud/latest/describevswitches) operation.
+                /// You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](~~35748~~) operation.
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -285,7 +283,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

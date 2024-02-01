@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6AddressesResponseBody : TeaModel {
         /// <summary>
-        /// The details about the IPv6 addresses.
+        /// The details of the IPv6 address.
         /// </summary>
         [NameInMap("Ipv6Addresses")]
         [Validation(Required=false)]
@@ -28,26 +28,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AllocationTime { get; set; }
 
                 /// <summary>
-                /// The ID of the instance that is assigned the IPv6 address.
+                /// The ID of the instance associated with the IPv6 address.
                 /// </summary>
                 [NameInMap("AssociatedInstanceId")]
                 [Validation(Required=false)]
                 public string AssociatedInstanceId { get; set; }
 
                 /// <summary>
-                /// The type of the instance that is assigned the IPv6 address.
+                /// The type of instance associated with the IPv6 address.
                 /// </summary>
                 [NameInMap("AssociatedInstanceType")]
                 [Validation(Required=false)]
                 public string AssociatedInstanceType { get; set; }
 
                 /// <summary>
-                /// The IPv6 address of the instance.
+                /// The IPv6 address.
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                /// <summary>
+                /// The description of the IPv6 address.
+                /// </summary>
                 [NameInMap("Ipv6AddressDescription")]
                 [Validation(Required=false)]
                 public string Ipv6AddressDescription { get; set; }
@@ -74,14 +77,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Ipv6GatewayId { get; set; }
 
                 /// <summary>
-                /// The information about the Internet bandwidth of the IPv6 address.
+                /// The Internet bandwidth of the IPv6 address.
                 /// </summary>
                 [NameInMap("Ipv6InternetBandwidth")]
                 [Validation(Required=false)]
                 public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth Ipv6InternetBandwidth { get; set; }
                 public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth : TeaModel {
                     /// <summary>
-                    /// The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.
+                    /// The dedicated Internet bandwidth of the IPv6 address. Unit: Mbit/s.
                     /// </summary>
                     [NameInMap("Bandwidth")]
                     [Validation(Required=false)]
@@ -99,17 +102,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string BusinessStatus { get; set; }
 
                     /// <summary>
-                    /// Indicates whether renewal data is included.
+                    /// Indicates whether renewal data is included. Valid values:
                     /// 
                     /// *   **false**
-                    /// *   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.
+                    /// *   **true** **true** is returned only when **IncludeReservationData** is set to **true** and some orders have not taken effect.
                     /// </summary>
                     [NameInMap("HasReservationData")]
                     [Validation(Required=false)]
                     public bool? HasReservationData { get; set; }
 
                     /// <summary>
-                    /// The billing method of the Internet bandwidth of the IPv6 address.
+                    /// The billing method of the Internet bandwidth of the IPv6 address. Valid values:
                     /// 
                     /// Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
                     /// </summary>
@@ -120,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The billing method of the Internet bandwidth of the IPv6 address. Valid values:
                     /// 
-                    /// *   **PayByTraffic**: pay-by-data-transfer
+                    /// *   **PayByTraffic**
                     /// *   **PayByBandwidth**: pay-by-bandwidth
                     /// </summary>
                     [NameInMap("InternetChargeType")]
@@ -128,14 +131,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string InternetChargeType { get; set; }
 
                     /// <summary>
-                    /// The instance ID of the Internet bandwidth of the IPv6 address.
+                    /// The Internet bandwidth ID of the IPv6 address.
                     /// </summary>
                     [NameInMap("Ipv6InternetBandwidthId")]
                     [Validation(Required=false)]
                     public string Ipv6InternetBandwidthId { get; set; }
 
                     /// <summary>
-                    /// The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+                    /// The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
                     /// </summary>
                     [NameInMap("ReservationActiveTime")]
                     [Validation(Required=false)]
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// <summary>
                     /// The metering method that is used after the renewal takes effect.
                     /// 
-                    /// *   **PayByTraffic**: pay-by-data-transfer
+                    /// *   **PayByTraffic**
                     /// *   **PayByBandwidth**: pay-by-bandwidth
                     /// </summary>
                     [NameInMap("ReservationInternetChargeType")]
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The service provider of the IPv6 address. Valid values:
+                /// The ISP of the IPv6 address.
                 /// 
                 /// *   **BGP** (default)
                 /// *   **ChinaMobile**
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Ipv6Isp { get; set; }
 
                 /// <summary>
-                /// The type of communication supported by the IPv6 address. Valid values:
+                /// The type of connection supported by the IPv6 address. Valid values:
                 /// 
                 /// *   **Private**
                 /// *   **Public**
@@ -190,22 +193,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The maximum bandwidth value of the IPv6 address.
-                /// 
-                /// *   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.
-                /// *   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.
-                /// *   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.
+                /// The peak bandwidth of the IPv6 address.
                 /// </summary>
                 [NameInMap("RealBandwidth")]
                 [Validation(Required=false)]
                 public int? RealBandwidth { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the IPv6 gateway belongs.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the IPv6 address. Valid values:
+                /// The status of the IPv6 address.
                 /// 
                 /// *   **Pending**
                 /// *   **Available**
@@ -214,6 +216,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tag list.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTags Tags { get; set; }
@@ -222,10 +227,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag> Tag { get; set; }
                     public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag : TeaModel {
+                        /// <summary>
+                        /// The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+                        /// 
+                        /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The value of tag N.
+                        /// 
+                        /// The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                        /// 
+                        /// Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

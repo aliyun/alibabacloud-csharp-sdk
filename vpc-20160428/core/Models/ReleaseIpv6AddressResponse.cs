@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ReleaseIpv6AddressResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ReleaseIpv6AddressResponseBody Body { get; set; }
 
     }

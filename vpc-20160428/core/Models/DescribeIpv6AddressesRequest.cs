@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the instance that is assigned the IPv6 address.
+        /// The type of instance associated with the IPv6 address. Valid values:
         /// 
-        /// Set the value to **EcsInstance**, which specifies an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC). This is the default value.
+        /// **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
         /// </summary>
         [NameInMap("AssociatedInstanceType")]
         [Validation(Required=false)]
@@ -104,6 +104,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the IPv6 gateway belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -116,14 +119,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeIpv6AddressesRequestTag> Tag { get; set; }
         public class DescribeIpv6AddressesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N.
+            /// 
+            /// The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+            /// 
+            /// Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

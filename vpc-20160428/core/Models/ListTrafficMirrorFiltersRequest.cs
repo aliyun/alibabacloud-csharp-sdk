@@ -60,23 +60,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTrafficMirrorFiltersRequestTags> Tags { get; set; }
         public class ListTrafficMirrorFiltersRequestTags : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -84,6 +87,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The ID of the traffic mirror filter. The maximum value of **N** is **100**, which specifies that you can query up to 100 filters at a time.
+        /// </summary>
         [NameInMap("TrafficMirrorFilterIds")]
         [Validation(Required=false)]
         public List<string> TrafficMirrorFilterIds { get; set; }

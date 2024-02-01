@@ -74,16 +74,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableName { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags of the resource.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateRouteTableRequestTag> Tag { get; set; }
         public class CreateRouteTableRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -1,3 +1,12 @@
+2024-02-01 Version: 6.3.3
+- Update API CreatePublicIpAddressPooladd SecurityProtectionTypes param.
+- Update API DescribePhysicalConnectionsupdate response param.
+- Update API ListPublicIpAddressPoolsadd SecurityProtectionEnabled param.
+update response param.
+- Update API ModifyNatGatewayAttributeupdate response param.
+- Update API ModifySnatEntryupdate response param.
+
+
 2024-01-22 Version: 6.3.2
 - Generated csharp 2016-04-28 for Vpc.
 

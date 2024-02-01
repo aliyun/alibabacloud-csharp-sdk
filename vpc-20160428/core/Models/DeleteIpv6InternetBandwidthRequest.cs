@@ -12,16 +12,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the IPv6 address.
         /// 
-        /// >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+        /// >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// The ID of the Internet bandwidth that you purchase for the IPv6 gateway.
-        /// 
-        /// >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+        /// The instance ID of the Internet bandwidth of the IPv6 address.
         /// </summary>
         [NameInMap("Ipv6InternetBandwidthId")]
         [Validation(Required=false)]
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPv6 gateway is deployed.
+        /// The region ID of the IPv6 gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

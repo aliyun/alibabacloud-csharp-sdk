@@ -49,7 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The maximum transmission unit (MTU). Default value: **1500**.
+        /// The maximum transmission unit.
+        /// 
+        /// Valid values: **64 to 9600**. Default value: **1500**.
         /// </summary>
         [NameInMap("PacketLength")]
         [Validation(Required=false)]
@@ -86,21 +88,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorSessionRequestTag> Tag { get; set; }
         public class CreateTrafficMirrorSessionRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+            /// The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -133,6 +140,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string TrafficMirrorSessionName { get; set; }
 
+        /// <summary>
+        /// The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.
+        /// </summary>
         [NameInMap("TrafficMirrorSourceIds")]
         [Validation(Required=false)]
         public List<string> TrafficMirrorSourceIds { get; set; }

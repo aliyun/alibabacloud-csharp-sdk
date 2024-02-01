@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.
+        /// The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.
+        /// 
+        /// *   If the billing method is pay-by-data-transfer, valid values are **1** to **1000**.
+        /// *   If the billing method is pay-by-bandwidth, valid values are **1** to **2000**.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -37,9 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.
-        /// 
-        /// >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+        /// The instance ID of the Internet bandwidth of the IPv6 address.
         /// </summary>
         [NameInMap("Ipv6InternetBandwidthId")]
         [Validation(Required=false)]

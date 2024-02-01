@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetId { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+        /// *   **true**: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.
         /// </summary>
         [NameInMap("DryRun")]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to query the default VPC in the specified region. Valid values:
         /// 
-        /// *   **true** (default): yes
-        /// *   **false**: no
+        /// *   **true** (default)
+        /// *   **false**
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -82,14 +82,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVpcsRequestTag> Tag { get; set; }
         public class DescribeVpcsRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -97,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The VPC ID.
         /// 
         /// You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).
         /// </summary>

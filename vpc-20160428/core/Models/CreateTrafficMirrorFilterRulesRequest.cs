@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// The list of outbound rules.
+        /// </summary>
         [NameInMap("EgressRules")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorFilterRulesRequestEgressRules> EgressRules { get; set; }
@@ -97,6 +100,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The list of inbound rules.
+        /// </summary>
         [NameInMap("IngressRules")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorFilterRulesRequestIngressRules> IngressRules { get; set; }

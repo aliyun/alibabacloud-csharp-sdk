@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags of the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListIpv4GatewaysRequestTags> Tags { get; set; }

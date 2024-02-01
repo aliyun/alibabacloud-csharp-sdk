@@ -253,6 +253,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ProductType { get; set; }
 
+                [NameInMap("QosId")]
+                [Validation(Required=false)]
+                public string QosId { get; set; }
+
                 /// <summary>
                 /// The ID of the redundant Express Connect circuit.
                 /// </summary>
