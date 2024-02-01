@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string PublicKey { get; set; }
 
-            [NameInMap("tittle")]
+            [NameInMap("title")]
             [Validation(Required=false)]
-            public string Tittle { get; set; }
+            public string Title { get; set; }
 
         }
 
