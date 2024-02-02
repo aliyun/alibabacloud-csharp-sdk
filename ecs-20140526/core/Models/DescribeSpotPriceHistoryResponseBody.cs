@@ -10,34 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The instance type of the preemptible instance.
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]
         public string Currency { get; set; }
 
         /// <summary>
-        /// The currency unit of the price.
-        /// 
-        /// Alibaba Cloud China site (aliyun.com): CNY.
-        /// 
-        /// Alibaba Cloud International site (alibabacloud.com): USD.
+        /// The network type of the preemptible instance.
         /// </summary>
         [NameInMap("NextOffset")]
         [Validation(Required=false)]
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// The line from which the next query starts.
-        /// 
-        /// Default value: 0.
+        /// The instance type of the preemptible instance.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The start line of the next page. It is the value of the `Offset` request parameter.
+        /// The zone ID of the preemptible instance.
         /// </summary>
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -47,6 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
+                /// <summary>
+                /// The instance type of the preemptible instance.
+                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
@@ -59,32 +56,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string IoOptimized { get; set; }
 
                 /// <summary>
-                /// The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
+                /// Queries the price history of a preemptible instance within the last 30 days.
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
+                /// <summary>
+                /// The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
+                /// </summary>
                 [NameInMap("OriginPrice")]
                 [Validation(Required=false)]
                 public float? OriginPrice { get; set; }
 
                 /// <summary>
-                /// The zone ID of the preemptible instance.
+                /// The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
                 /// </summary>
                 [NameInMap("SpotPrice")]
                 [Validation(Required=false)]
                 public float? SpotPrice { get; set; }
 
                 /// <summary>
-                /// The spot price (market price) of the preemptible instance.
+                /// The currency unit of the price.
+                /// 
+                /// Alibaba Cloud China site (aliyun.com): CNY.
+                /// 
+                /// Alibaba Cloud International site (alibabacloud.com): USD.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
 
                 /// <summary>
-                /// Indicates whether the preemptible instance is I/O optimized.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

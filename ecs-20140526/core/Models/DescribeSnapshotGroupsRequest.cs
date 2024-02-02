@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotGroupsRequest : TeaModel {
         /// <summary>
-        /// This parameter is unavailable.
+        /// This parameter is not publicly available.
         /// </summary>
         [NameInMap("AdditionalAttributes")]
         [Validation(Required=false)]
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 100.
+        /// Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>

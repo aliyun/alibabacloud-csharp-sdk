@@ -465,6 +465,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? Throughput { get; set; }
 
+                [NameInMap("ThroughputRead")]
+                [Validation(Required=false)]
+                public int? ThroughputRead { get; set; }
+
+                [NameInMap("ThroughputWrite")]
+                [Validation(Required=false)]
+                public int? ThroughputWrite { get; set; }
+
                 /// <summary>
                 /// The disk type. Valid values:
                 /// 

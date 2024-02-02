@@ -97,6 +97,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InvokeStatus { get; set; }
 
+        /// <summary>
+        /// The maximum number of entries per page. 
+        /// 
+        /// Valid values: 1 to 50. 
+        /// 
+        /// Default value: 10.
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -29,13 +29,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 /// <summary>
                 /// The Base64-encoded command content.
+                /// 
+                /// *   If you set ContentEncoding to PlainText, the original command content is returned.
+                /// *   If you set ContentEncoding to Base64, the Base64-encoded command content is returned.
                 /// </summary>
                 [NameInMap("CommandContent")]
                 [Validation(Required=false)]
                 public string CommandContent { get; set; }
 
                 /// <summary>
-                /// The command ID.
+                /// The ID of the command.
                 /// </summary>
                 [NameInMap("CommandId")]
                 [Validation(Required=false)]
@@ -49,14 +52,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The command description.
+                /// The description of the command.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether the custom parameter feature was enabled for the command.
+                /// Indicates whether the custom parameter feature is enabled for the command.
                 /// </summary>
                 [NameInMap("EnableParameter")]
                 [Validation(Required=false)]
@@ -70,14 +73,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InvokeTimes { get; set; }
 
                 /// <summary>
-                /// Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
+                /// Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
                 /// </summary>
                 [NameInMap("Latest")]
                 [Validation(Required=false)]
                 public bool? Latest { get; set; }
 
                 /// <summary>
-                /// The command name.
+                /// The name of the command.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string ParameterName { get; set; }
 
                         /// <summary>
-                        /// The valid values of the custom enumeration parameter.
+                        /// The valid values of the custom parameter of the enumeration type.
                         /// </summary>
                         [NameInMap("PossibleValues")]
                         [Validation(Required=false)]
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// Indicates whether the custom parameter is required. Valid values:
+                        /// Indicates whether the custom parameter is required.
                         /// 
                         /// *   true
                         /// *   false
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.
+                /// The list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is disabled, an empty list is returned.
                 /// </summary>
                 [NameInMap("ParameterNames")]
                 [Validation(Required=false)]
@@ -164,6 +167,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Provider { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the command belongs.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -180,14 +186,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeCommandsResponseBodyCommandsCommandTagsTag> Tag { get; set; }
                     public class DescribeCommandsResponseBodyCommandsCommandTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag of the command.
+                        /// The tag key of the command.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of the tag of the command.
+                        /// The tag value of the command.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -198,28 +204,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The timeout period.
+                /// The timeout period. Unit: seconds.
                 /// </summary>
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
                 public long? Timeout { get; set; }
 
                 /// <summary>
-                /// The command type.
+                /// The type of the command.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
+                /// The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public int? Version { get; set; }
 
                 /// <summary>
-                /// The working directory of the command.
+                /// The execution path of the command.
                 /// </summary>
                 [NameInMap("WorkingDir")]
                 [Validation(Required=false)]
@@ -228,6 +234,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
         }
+
+        /// <summary>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// The page number.
@@ -244,7 +257,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

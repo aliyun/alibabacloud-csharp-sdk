@@ -71,6 +71,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public int? ThreadsPerCore { get; set; }
 
+                    /// <summary>
+                    /// The CPU topology type of the instance. Valid values:
+                    /// 
+                    /// - ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode
+                    /// 
+                    /// - DiscreteCoreToHTMapping: HT discrete mode
+                    /// </summary>
+                    [NameInMap("TopologyType")]
+                    [Validation(Required=false)]
+                    public string TopologyType { get; set; }
+
                 }
 
                 /// <summary>
@@ -784,6 +795,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("SpotDuration")]
                 [Validation(Required=false)]
                 public int? SpotDuration { get; set; }
+
+                /// <summary>
+                /// The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:
+                /// 
+                /// - Terminate: releases the instance. 
+                /// 
+                /// - Stop: stops the instance in economical mode.
+                /// </summary>
+                [NameInMap("SpotInterruptionBehavior")]
+                [Validation(Required=false)]
+                public string SpotInterruptionBehavior { get; set; }
 
                 /// <summary>
                 /// The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.

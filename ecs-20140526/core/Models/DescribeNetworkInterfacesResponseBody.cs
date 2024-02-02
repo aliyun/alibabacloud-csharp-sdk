@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                /// <summary>
+                /// Specifies whether to retain the ENI when the associated instance is released. Valid values:
+                /// 
+                /// - true
+                /// - false
+                /// </summary>
                 [NameInMap("DeleteOnRelease")]
                 [Validation(Required=false)]
                 public bool? DeleteOnRelease { get; set; }
@@ -200,10 +206,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The communication mode of the ENI. Valid values:
                 /// 
-                /// *   Standard: the TCP communication mode is used.
-                /// *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
+                /// *   Standard: uses the TCP communication mode. 
+                /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled. 
                 /// 
-                /// > You can set this parameter to HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+                /// > The parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
                 /// </summary>
                 [NameInMap("NetworkInterfaceTrafficMode")]
                 [Validation(Required=false)]
@@ -400,7 +406,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The returned pagination token which can be used in the next request to retrieve a new page of results.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoProvisioningGroupId { get; set; }
 
         /// <summary>
-        /// Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.
+        /// The instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
         /// </summary>
         [NameInMap("LaunchResults")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// The IDs of created instances.
+                /// The IDs of instances created.
                 /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The instance type.
+                /// The instance type of the instance.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

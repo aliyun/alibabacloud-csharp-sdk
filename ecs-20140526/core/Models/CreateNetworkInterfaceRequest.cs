@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to retain the ENI when the associated instance is released. Valid values:
+        /// 
+        /// - true
+        /// - false
+        /// </summary>
         [NameInMap("DeleteOnRelease")]
         [Validation(Required=false)]
         public bool? DeleteOnRelease { get; set; }
@@ -180,8 +186,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RxQueueSize")]
+        [Validation(Required=false)]
+        public int? RxQueueSize { get; set; }
+
         /// <summary>
         /// The number of private IP addresses to be automatically created by ECS.
+        /// Valid values: 1 to 49.
         /// </summary>
         [NameInMap("SecondaryPrivateIpAddressCount")]
         [Validation(Required=false)]
@@ -229,6 +240,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TxQueueSize")]
+        [Validation(Required=false)]
+        public int? TxQueueSize { get; set; }
 
         /// <summary>
         /// The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.

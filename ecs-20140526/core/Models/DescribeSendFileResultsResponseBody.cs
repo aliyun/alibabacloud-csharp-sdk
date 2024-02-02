@@ -270,6 +270,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
         /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]

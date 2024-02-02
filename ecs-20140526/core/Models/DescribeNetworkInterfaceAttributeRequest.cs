@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// The attributes of the ENI.
+        /// The attribute of the ENI. Valid values:
+        /// 
+        /// attachment: attachment information about the ENI 
+        /// 
+        /// >This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("Attribute")]
         [Validation(Required=false)]
@@ -47,21 +51,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// > This parameter is unavailable.
+        /// >  This parameter is unavailable.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkInterfaceAttributeRequestTag> Tag { get; set; }
         public class DescribeNetworkInterfaceAttributeRequestTag : TeaModel {
             /// <summary>
-            /// > This parameter is unavailable.
+            /// >  This parameter is unavailable.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable.
+            /// >  This parameter is unavailable.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

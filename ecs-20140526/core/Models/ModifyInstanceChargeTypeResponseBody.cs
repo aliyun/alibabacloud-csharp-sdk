@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The charged amount.
+                /// The cost value.
                 /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]

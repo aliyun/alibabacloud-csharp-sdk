@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationResultsResponseBody : TeaModel {
         /// <summary>
-        /// The time when the command stopped being run on the instance. If you called the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.
+        /// The information about the execution results.
         /// </summary>
         [NameInMap("Invocation")]
         [Validation(Required=false)]
         public DescribeInvocationResultsResponseBodyInvocation Invocation { get; set; }
         public class DescribeInvocationResultsResponseBodyInvocation : TeaModel {
             /// <summary>
-            /// The tags to use for query.
+            /// The execution results.
             /// </summary>
             [NameInMap("InvocationResults")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> InvocationResult { get; set; }
                 public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult : TeaModel {
                     /// <summary>
-                    /// The ID of the request.
+                    /// The ID of the command.
                     /// </summary>
                     [NameInMap("CommandId")]
                     [Validation(Required=false)]
@@ -42,99 +42,92 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ContainerId { get; set; }
 
                     /// <summary>
-                    /// The name of the container.
+                    /// The container name.
                     /// </summary>
                     [NameInMap("ContainerName")]
                     [Validation(Required=false)]
                     public string ContainerName { get; set; }
 
                     /// <summary>
-                    /// The key of the tag.
+                    /// The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
                     /// </summary>
                     [NameInMap("Dropped")]
                     [Validation(Required=false)]
                     public int? Dropped { get; set; }
 
                     /// <summary>
-                    /// The tags of the command execution.
+                    /// The error code returned when the command failed to be sent or run. Valid values:
+                    /// 
+                    /// *   If this parameter is left empty, the command is run normally.
+                    /// *   InstanceNotExists: The instance does not exist or is released.
+                    /// *   InstanceReleased: The instance is released while the command is being run.
+                    /// *   InstanceNotRunning: The instance is not running while the command is being run.
+                    /// *   CommandNotApplicable: The command is not applicable to the specified instance.
+                    /// *   AccountNotExists: The specified account does not exist.
+                    /// *   DirectoryNotExists: The specified directory does not exist.
+                    /// *   BadCronExpression: The specified cron expression for the execution schedule is invalid.
+                    /// *   ClientNotRunning: Cloud Assistant Agent is not running.
+                    /// *   ClientNotResponse: Cloud Assistant Agent does not respond.
+                    /// *   ClientIsUpgrading: Cloud Assistant Agent was being upgraded.
+                    /// *   ClientNeedUpgrade: Cloud Assistant Agent must be upgraded.
+                    /// *   DeliveryTimeout: The request to send the command timed out.
+                    /// *   ExecutionTimeout: The request to send the command timed out.
+                    /// *   ExecutionException: An exception occurred while the command is being run.
+                    /// *   ExecutionInterrupted: The execution is interrupted.
+                    /// *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
                     /// </summary>
                     [NameInMap("ErrorCode")]
                     [Validation(Required=false)]
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// The name of the container.
+                    /// The error message returned when the command failed to be sent or run. Valid values:
+                    /// 
+                    /// *   If this parameter is left empty, the command is run normally.
+                    /// *   the specified instance does not exists
+                    /// *   the instance has released when create task
+                    /// *   the instance is not running when create task
+                    /// *   the command is not applicable
+                    /// *   the specified account does not exists
+                    /// *   the specified directory does not exists
+                    /// *   the cron job expression is invalid
+                    /// *   the aliyun service is not running on the instance
+                    /// *   the aliyun service in the instance does not response
+                    /// *   the aliyun service in the instance is upgrading now
+                    /// *   the aliyun service in the instance is upgrading now
+                    /// *   the command delivery has been timeout
+                    /// *   the command execution has been timeout
+                    /// *   the command execution got an exception
+                    /// *   the command execution has been interrupted
+                    /// *   the command execution exit code is not zero
                     /// </summary>
                     [NameInMap("ErrorInfo")]
                     [Validation(Required=false)]
                     public string ErrorInfo { get; set; }
 
                     /// <summary>
-                    /// The error message returned when the command is not successfully sent or run. Valid values:
+                    /// The exit code of the command task.
                     /// 
-                    /// *   If this parameter is empty, the command is run normally.
-                    /// *   the specified instance does not exists: The specified instance does not exist is released.
-                    /// *   the instance has released when create task: The instance was released while the command was being run on the instance.
-                    /// *   the instance is not running when create task: The instance is not in the Running state while the command is being run.
-                    /// *   the command is not applicable: The command is not applicable to the specified instance.
-                    /// *   the specified account does not exists: The specified account does not exist.
-                    /// *   the specified directory does not exists: The specified directory does not exist.
-                    /// *   the cron job expression is invalid: The cron expression that specifies the execution time is invalid.
-                    /// *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
-                    /// *   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.
-                    /// *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
-                    /// *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
-                    /// *   the command delivery has been timeout: The request to send the command timed out.
-                    /// *   the command execution has been timeout: The command execution timed out.
-                    /// *   the command execution got an exception: An exception occurred while the command is being run.
-                    /// *   the command execution has been interrupted: The command execution was interrupted.
-                    /// *   the command execution exit code is not zero: The command execution is complete, but the exit code is not 0.
+                    /// *   For Linux instances, the exit code is the exit code of the shell command.
+                    /// *   For Windows instances, the exit code is the exit code of the batch or PowerShell command.
                     /// </summary>
                     [NameInMap("ExitCode")]
                     [Validation(Required=false)]
                     public long? ExitCode { get; set; }
 
                     /// <summary>
-                    /// The ID of the command execution. You can call the [DescribeInvocations](~~64840~~) operation to query the execution IDs.
+                    /// The time when the command task was complete. If the command task times out, the end time is equal to the start time of the command task specified by StartTime plus the timeout period specified by Timeout in the [CreateCommand](~~64844~~) operation.
                     /// </summary>
                     [NameInMap("FinishedTime")]
                     [Validation(Required=false)]
                     public string FinishedTime { get; set; }
 
                     /// <summary>
-                    /// The key of tag N of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-                    /// 
-                    /// If a single tag is specified to query resources, up to 1,000 resources with this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags can be returned. To query more than 1,000 resources with specified tags, call the [ListTagResources](~~110425~~) operation.
-                    /// 
-                    /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+                    /// The ID of the instance
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
-
-                    /// <summary>
-                    /// The exit code of the command execution.
-                    /// 
-                    /// *   For Linux instances, the value is the exit code of the shell command.
-                    /// *   For Windows instances, the value is the exit code of the batch or PowerShell command.
-                    /// </summary>
-                    [NameInMap("InvocationStatus")]
-                    [Validation(Required=false)]
-                    public string InvocationStatus { get; set; }
-
-                    /// <summary>
-                    /// The ID of the instance.
-                    /// </summary>
-                    [NameInMap("InvokeId")]
-                    [Validation(Required=false)]
-                    public string InvokeId { get; set; }
-
-                    /// <summary>
-                    /// The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-                    /// </summary>
-                    [NameInMap("InvokeRecordStatus")]
-                    [Validation(Required=false)]
-                    public string InvokeRecordStatus { get; set; }
 
                     /// <summary>
                     /// The execution state on a single instance. Valid values:
@@ -150,53 +143,72 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// *   Success:
                     /// 
                     ///     *   Command that is set to run only once: The execution is complete, and the exit code is 0.
-                    ///     *   Command that is set to run on a schedule: The last execution succeeds, the exit code is 0, and the specified cycle ends.
+                    ///     *   Command that is set to run on a schedule: The previous execution is complete, and the exit code is 0. The specified execution period ends.
                     /// 
                     /// *   Failed:
                     /// 
                     ///     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
-                    ///     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.
+                    ///     *   Command that is set to run on a schedule: The previous execution is complete, but the exit code is not 0. The specified execution period is about to end.
                     /// 
                     /// *   Error: The execution cannot proceed due to an exception.
                     /// 
-                    /// *   Timeout: The execution times out.
+                    /// *   Timeout: The execution timed out.
                     /// 
                     /// *   Cancelled: The execution is canceled, and the command is not run.
                     /// 
-                    /// *   Stopping: The running command is being stopped.
+                    /// *   Stopping: The command task is being stopped.
                     /// 
-                    /// *   Terminated: The command is terminated while it is being run.
+                    /// *   Terminated: The command task is terminated while it is being run.
                     /// 
                     /// *   Scheduled:
                     /// 
-                    ///     *   Command that is set to run only once: The command is not applicable.
+                    ///     *   Command that is set to run only once: The execution state cannot be Scheduled.
                     ///     *   Command that is set to run on a schedule: The command is waiting to be run.
+                    /// </summary>
+                    [NameInMap("InvocationStatus")]
+                    [Validation(Required=false)]
+                    public string InvocationStatus { get; set; }
+
+                    /// <summary>
+                    /// The ID of the command task.
+                    /// </summary>
+                    [NameInMap("InvokeId")]
+                    [Validation(Required=false)]
+                    public string InvokeId { get; set; }
+
+                    /// <summary>
+                    /// The execution state of the command task.
+                    /// </summary>
+                    [NameInMap("InvokeRecordStatus")]
+                    [Validation(Required=false)]
+                    public string InvokeRecordStatus { get; set; }
+
+                    /// <summary>
+                    /// The command output.
                     /// </summary>
                     [NameInMap("Output")]
                     [Validation(Required=false)]
                     public string Output { get; set; }
 
                     /// <summary>
-                    /// The value of the tag.
+                    /// The number of times that the command was run on the instance.
+                    /// 
+                    /// *   If the command is set to run only once, the value is 0 or 1.
+                    /// *   If the command is set to run on a schedule, the value is the number of times that the command was run.
                     /// </summary>
                     [NameInMap("Repeats")]
                     [Validation(Required=false)]
                     public int? Repeats { get; set; }
 
                     /// <summary>
-                    /// The total number of the commands.
+                    /// The time when the command started to be run on the instance.
                     /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
 
                     /// <summary>
-                    /// The encoding method of the `Output` response parameter. Valid values:
-                    /// 
-                    /// *   PlainText: returns the original command content and command output.
-                    /// *   Base64: returns the Base64-encoded command content and command output.
-                    /// 
-                    /// Default value: Base64.
+                    /// The time when the command task was stopped. If you call the `StopInvocation` operation to stop the command task, the value of this parameter is the time when the operation is called.
                     /// </summary>
                     [NameInMap("StopTime")]
                     [Validation(Required=false)]
@@ -232,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// Queries the execution results of one or more Cloud Assistant commands on an Elastic Compute Service (ECS) instance.
+                    /// The username that was used to run the command on the instance.
                     /// </summary>
                     [NameInMap("Username")]
                     [Validation(Required=false)]
@@ -243,33 +255,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The execution state of the command. Valid values:
-            /// 
-            /// *   Running
-            /// *   Finished
-            /// *   Failed
-            /// *   Stopped
-            /// 
-            /// > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+            /// The query token returned in this call.
+            /// </summary>
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
+            /// <summary>
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// The information about the tag.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// Specifies whether to return the results of historical scheduled executions. Valid values:
-            /// 
-            /// *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled execution.
-            /// *   false: does not return the results of historical scheduled executions.
-            /// 
-            /// Default value: false.
+            /// The total number of the commands.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -278,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class CreateElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The type of the private pool with which the elasticity assurance is associated. Valid values:
+            /// The type of the private pool with which you want to associate the elasticity assurance. Valid values:
             /// 
-            /// *   Open: open private pool
-            /// *   Target: specified private pool
+            /// *   Open: open private pool.
+            /// *   Target: specified private pool.
             /// 
             /// Default value: Open.
             /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// The name of the elasticity assurance. The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.
+        /// The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective duration.
         /// 
         /// Default value: Unlimited.
         /// </summary>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssuranceTimes { get; set; }
 
         /// <summary>
-        /// The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// The description of the elasticity assurance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
         /// 
         /// This parameter is empty by default.
         /// </summary>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The total number of instances for which the capacity of an instance type is reserved.
+        /// The total number of instances for which to reserve capacity of an instance type.
         /// 
         /// Valid values: 1 to 1000.
         /// </summary>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InstanceCpuCoreCount { get; set; }
 
         /// <summary>
-        /// The instance types. Currently, an elasticity assurance can be created to reserve the capacity of a single instance type.
+        /// The instance type. An elasticity assurance can be created to reserve the capacity of a single instance type.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The effective period of the elasticity assurance. The unit of the effective period is determined by the `PeriodUnit` value. Valid values:
+        /// The term of the elasticity assurance. The unit of the term is determined by the `PeriodUnit` value. Valid values:
         /// 
-        /// *   When the `PeriodUnit` parameter is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-        /// *   When the `PeriodUnit` parameter is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
+        /// *   When `PeriodUnit` is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+        /// *   When `PeriodUnit` is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the effective period of the elasticity assurance. Valid values:
+        /// The unit of the term of the elasticity assurance. Valid values:
         /// 
         /// *   Month
         /// *   Year
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the elasticity assurance is assigned.
+        /// The ID of the resource group to which to assign the elasticity assurance.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateElasticityAssuranceRequestTag> Tag { get; set; }
         public class CreateElasticityAssuranceRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+            /// The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone IDs of the elasticity assurances. Currently, an elasticity assurance can be used to reserve resources within a single zone.
+        /// The ID of the zone in which to create the elasticity assurance. An elasticity assurance can be used to reserve resources within a single zone.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

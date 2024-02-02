@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// 58928
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

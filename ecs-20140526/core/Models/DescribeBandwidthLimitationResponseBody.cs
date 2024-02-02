@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeBandwidthLimitationResponseBody : TeaModel {
         /// <summary>
-        /// The maximum public bandwidth.
+        /// Details about the maximum public bandwidth.
         /// </summary>
         [NameInMap("Bandwidths")]
         [Validation(Required=false)]
@@ -21,26 +21,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> Bandwidth { get; set; }
             public class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth : TeaModel {
                 /// <summary>
-                /// The minimum public bandwidth.
+                /// The billing method for network usage. Valid values:
+                /// 
+                /// *   PayByBandwidth: pay-by-bandwidth
+                /// *   PayByTraffic: pay-by-traffic
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
                 public string InternetChargeType { get; set; }
 
                 /// <summary>
-                /// The unit of the public bandwidth.
+                /// The maximum public bandwidth.
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
                 public int? Max { get; set; }
 
                 /// <summary>
-                /// DescribeBandwidthLimitation
+                /// The minimum public bandwidth.
                 /// </summary>
                 [NameInMap("Min")]
                 [Validation(Required=false)]
                 public int? Min { get; set; }
 
+                /// <summary>
+                /// The unit of the public bandwidth.
+                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Details about the maximum public bandwidth.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

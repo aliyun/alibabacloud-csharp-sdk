@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to disable the instant access feature. Valid values:
         /// 
-        /// *   true: disables the instant access feature.
-        /// *   false: does not disable the instant access feature.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -44,6 +44,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The retention period of the snapshot. After you specify this parameter, the end time of the new retention period is the specified number of days apart from the **creation time** of the snapshot, which follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC. Valid values: 1 to 65536.
+        /// 
+        /// >  You can extend the retention period of the snapshot and cannot shorten the retention period.
+        /// </summary>
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
@@ -56,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+        /// The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// 
         /// The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>

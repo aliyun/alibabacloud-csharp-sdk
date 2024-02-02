@@ -41,6 +41,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? ThreadsPerCore { get; set; }
 
+            /// <summary>
+            /// The CPU topology type of the instance. Valid values:
+            /// 
+            /// - ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.
+            /// 
+            /// - DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.
+            /// 
+            /// This parameter is empty by default.
+            /// 
+            /// >This parameter is supported only for specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).
+            /// </summary>
+            [NameInMap("TopologyType")]
+            [Validation(Required=false)]
+            public string TopologyType { get; set; }
+
         }
 
         [NameInMap("HibernationOptions")]
@@ -275,7 +290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? ProvisionedIops { get; set; }
 
             /// <summary>
-            /// The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+            /// The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter.
             /// </summary>
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]
@@ -712,18 +727,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// 镜像相关属性信息。
+        /// The image-related attribute parameters.
         /// </summary>
         [NameInMap("ImageOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestImageOptions ImageOptions { get; set; }
         public class RunInstancesRequestImageOptions : TeaModel {
             /// <summary>
-            /// 使用该镜像的实例是否支持使用ecs-user用户登录。可能值：
+            /// Specifies whether the instance that uses the image support logons from the ecs-user user. Valid values:
             /// 
-            /// - true：是
+            /// - true
             /// 
-            /// - false：否
+            /// - false
             /// </summary>
             [NameInMap("LoginAsNonRoot")]
             [Validation(Required=false)]
@@ -891,6 +906,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
+            /// <summary>
+            /// Specifies whether to release ENI N when the instance is released. Valid values:
+            /// 
+            /// - true
+            /// 
+            /// - false
+            /// 
+            /// Default value: true.
+            /// 
+            /// > Note This parameter takes effect only for secondary ENIs.
+            /// Example: true.
+            /// </summary>
             [NameInMap("DeleteOnRelease")]
             [Validation(Required=false)]
             public bool? DeleteOnRelease { get; set; }
@@ -949,17 +976,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? Ipv6AddressCount { get; set; }
 
             /// <summary>
-            /// 网卡指定的物理网卡索引。
+            /// The network interface controller (NIC) index specified for an ENI. 
             /// 
-            /// 您需要注意：
-            /// - 只有特定实例规格支持指定物理网卡索引。
-            /// - NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。
-            /// - NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。
+            /// Take note of the following items:
+            /// - You can specify NIC indexes only for instances of specific instance types. 
+            /// - If NetworkInterface.N.InstanceType is set to Primary, set this parameter to 0 for the instance that supports NICs. 
+            /// - If NetworkInterface.N.InstanceType is set to Secondary or left empty, specify this parameter based on the instance type of the instance that supports NICs. For more information, see [Overview of instance families](~~25378~~).
             /// </summary>
             [NameInMap("NetworkCardIndex")]
             [Validation(Required=false)]
             public int? NetworkCardIndex { get; set; }
 
+            /// <summary>
+            /// The ID of ENI N.
+            /// 
+            /// > Note This parameter takes effect only for secondary ENIs.
+            /// Example: eni-bp1gn106np8jhxhj****.
+            /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
@@ -1032,6 +1065,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public long? QueuePairNumber { get; set; }
 
+            [NameInMap("RxQueueSize")]
+            [Validation(Required=false)]
+            public int? RxQueueSize { get; set; }
+
             /// <summary>
             /// The ID of the security group to which to assign secondary ENI N.
             /// 
@@ -1060,6 +1097,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            [NameInMap("TxQueueSize")]
+            [Validation(Required=false)]
+            public int? TxQueueSize { get; set; }
+
             /// <summary>
             /// The ID of the vSwitch to which to connect to ENI N.
             /// 
@@ -1087,22 +1128,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? NetworkInterfaceQueueNumber { get; set; }
 
         /// <summary>
-        /// 网络相关属性参数。
+        /// The network-related attribute parameters.
         /// </summary>
         [NameInMap("NetworkOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestNetworkOptions NetworkOptions { get; set; }
         public class RunInstancesRequestNetworkOptions : TeaModel {
             /// <summary>
-            /// 实例是否开启Jumbo frame特性。参数取值范围：
+            /// Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:
             /// 
-            /// - false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。
+            /// - false: does not enable the Jumbo Frame feature for the instance. The maximum transmission unit (MTU) values of all primary and secondary elastic network interfaces (ENIs) on the instance are set to 1500. 
             /// 
-            /// - true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。
+            /// - true: enables the Jumbo Frame feature for the instance. The MTU values of all primary and secondary ENIs on the instance are set to 8500. 
             /// 
-            /// 默认值：true。
+            /// Default value: true. 
             /// 
-            /// >只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。
+            /// > Only instances of some 8th-generation or later instance types support the Jumbo Frame feature. For more information, see [MTUs](~~200512~~).
             /// </summary>
             [NameInMap("EnableJumboFrame")]
             [Validation(Required=false)]

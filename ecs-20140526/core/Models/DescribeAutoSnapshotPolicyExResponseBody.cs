@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string TimePoints { get; set; }
 
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
                 /// <summary>
                 /// The ID of the resource group.
                 /// </summary>

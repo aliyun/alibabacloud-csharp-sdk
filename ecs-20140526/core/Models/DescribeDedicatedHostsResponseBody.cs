@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// *   on: The dedicated host was added to the resource pool for automatic deployment.
                 /// *   off: The dedicated host was not added to the resource pool for automatic deployment.
                 /// 
-                /// For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.
+                /// For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).
                 /// </summary>
                 [NameInMap("AutoPlacement")]
                 [Validation(Required=false)]
                 public string AutoPlacement { get; set; }
 
                 /// <summary>
-                /// The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+                /// The automatic release time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("AutoReleaseTime")]
                 [Validation(Required=false)]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity Capacity { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity : TeaModel {
                     /// <summary>
-                    /// The amount of available capacity on the local disks. Unit: GiB.
+                    /// The amount of available space on the local disks. Unit: GiB.
                     /// </summary>
                     [NameInMap("AvailableLocalStorage")]
                     [Validation(Required=false)]
                     public int? AvailableLocalStorage { get; set; }
 
                     /// <summary>
-                    /// The amount of available memory. Unit: GiB.
+                    /// The amount of available memory space. Unit: GiB.
                     /// </summary>
                     [NameInMap("AvailableMemory")]
                     [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? AvailableVgpus { get; set; }
 
                     /// <summary>
-                    /// The instance family that uses local disks.
+                    /// The category of local disks.
                     /// </summary>
                     [NameInMap("LocalStorageCategory")]
                     [Validation(Required=false)]
                     public string LocalStorageCategory { get; set; }
 
                     /// <summary>
-                    /// The socket capacities.
+                    /// Socket capacity information.
                     /// </summary>
                     [NameInMap("SocketCapacities")]
                     [Validation(Required=false)]
@@ -115,35 +115,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity> SocketCapacity { get; set; }
                         public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity : TeaModel {
                             /// <summary>
-                            /// The remaining capacity of the memory. Unit: GiB.
+                            /// Remaining memory capacity, unit: GiB.
                             /// </summary>
                             [NameInMap("AvailableMemory")]
                             [Validation(Required=false)]
                             public float? AvailableMemory { get; set; }
 
                             /// <summary>
-                            /// The total number of vCPUs.
+                            /// The remaining number of vCPU cores.
                             /// </summary>
                             [NameInMap("AvailableVcpu")]
                             [Validation(Required=false)]
                             public int? AvailableVcpu { get; set; }
 
                             /// <summary>
-                            /// The socket ID.
+                            /// The ID of the socket.
                             /// </summary>
                             [NameInMap("SocketId")]
                             [Validation(Required=false)]
                             public int? SocketId { get; set; }
 
                             /// <summary>
-                            /// The total capacity of the memory. Unit: GiB.
+                            /// Total memory capacity, unit: GiB.
                             /// </summary>
                             [NameInMap("TotalMemory")]
                             [Validation(Required=false)]
                             public float? TotalMemory { get; set; }
 
                             /// <summary>
-                            /// The number of available vCPUs.
+                            /// Total number of vCPU cores.
                             /// </summary>
                             [NameInMap("TotalVcpu")]
                             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The total capacity of local disks. Unit: GiB.
+                    /// The total capacity of the local disks. Unit: GiB.
                     /// </summary>
                     [NameInMap("TotalLocalStorage")]
                     [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DedicatedHostName { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated host owner.
+                /// 专有宿主机所有者的用户ID。
                 /// </summary>
                 [NameInMap("DedicatedHostOwnerId")]
                 [Validation(Required=false)]
@@ -295,28 +295,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> Instance { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance : TeaModel {
                         /// <summary>
-                        /// The ID of the ECS instance.
+                        /// The ID of the ECS instance created on the dedicated host.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// The ID of the ECS instance owner.
+                        /// ECS实例所有者的用户ID。
                         /// </summary>
                         [NameInMap("InstanceOwnerId")]
                         [Validation(Required=false)]
                         public long? InstanceOwnerId { get; set; }
 
                         /// <summary>
-                        /// The instance type of the ECS instance.
+                        /// The instance type of the ECS instance created on the dedicated host.
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The ID of the socket to which the ECS instance belongs.
+                        /// The ID of the socket to which the instance belongs.
                         /// </summary>
                         [NameInMap("SocketId")]
                         [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? SlbUdpTimeout { get; set; }
 
                     /// <summary>
-                    /// The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
+                    /// The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
                     /// </summary>
                     [NameInMap("UdpTimeout")]
                     [Validation(Required=false)]
@@ -368,10 +368,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// The reason why the EIP is locked. Valid values:
+                        /// The reason why the dedicated host was locked. Valid values:
                         /// 
-                        /// *   **financial**: The EIP is locked due to overdue payments.
-                        /// *   **security**: The EIP is locked for security reasons.
+                        /// *   financial
+                        /// *   security
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -420,18 +420,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Sockets { get; set; }
 
                 /// <summary>
-                /// The service state of the dedicated host. Valid values:
+                /// The state of the dedicated host. Valid values:
                 /// 
                 /// *   Available: The dedicated host is running normally.
                 /// *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
-                /// *   PermanentFailure: The dedicated host encounters permanent failures and is unavailable.
+                /// *   PermanentFailure: The dedicated host has permanent failures and is unavailable.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The custom ECS instance families supported by the dedicated host.
+                /// The custom ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedCustomInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ECS instance families supported by the dedicated host.
+                /// The ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ECS instance types supported by the dedicated host.
+                /// The ECS instance types that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypesList")]
                 [Validation(Required=false)]
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

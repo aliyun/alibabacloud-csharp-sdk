@@ -35,7 +35,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   cloud: basic disk
             /// *   cloud_efficiency: ultra disk
-            /// *   cloud_ssd: standard SSD.
+            /// *   cloud_ssd: standard SSD
+            /// *   cloud_auto: ESSD AutoPL disk
             /// *   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk.
             /// 
             /// For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
@@ -138,6 +139,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AutoReleaseTime { get; set; }
 
+        /// <summary>
+        /// The performance mode of the burstable instance. Valid values:
+        /// 
+        /// *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
+        /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+        /// </summary>
         [NameInMap("CreditSpecification")]
         [Validation(Required=false)]
         public string CreditSpecification { get; set; }
@@ -171,7 +178,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   cloud: basic disk
             /// *   cloud_efficiency: ultra disk
-            /// *   cloud_ssd: standard SSD.
+            /// *   cloud_ssd: standard SSD
+            /// *   cloud_auto: ESSD AutoPL disk
             /// *   cloud_essd: ESSD
             /// 
             /// For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.

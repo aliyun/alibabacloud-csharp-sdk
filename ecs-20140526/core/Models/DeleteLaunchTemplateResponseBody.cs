@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
+        [NameInMap("LaunchTemplateVersionNumbers")]
+        [Validation(Required=false)]
+        public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers LaunchTemplateVersionNumbers { get; set; }
+        public class DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers : TeaModel {
+            [NameInMap("versionNumbers")]
+            [Validation(Required=false)]
+            public List<long?> VersionNumbers { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>

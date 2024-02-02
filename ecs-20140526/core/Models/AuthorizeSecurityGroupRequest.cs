@@ -10,52 +10,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AuthorizeSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Description` to specify the description of the security group rule.
+        /// This parameter is no longer used. Use `Permissions.N.Description` to specify the description of security group rule N.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+        /// This parameter is no longer used. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+        /// This parameter is no longer used. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+        /// This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
         /// </summary>
         [NameInMap("Ipv6DestCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+        /// This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
         /// </summary>
         [NameInMap("Ipv6SourceCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
+        /// This parameter is no longer used. Use `Permissions.N.NicType` to specify the network interface type.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NicType { get; set; }
 
         [NameInMap("OwnerAccount")]
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The security group rules. You can specify up to 100 security group rules.
+        /// Security group rule N. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
             /// 
-            /// This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestCidrIp { get; set; }
 
             /// <summary>
-            /// The transport layer protocol of security group rule N. The values of this parameter are case-insensitive. Valid values:
+            /// The transport layer protocol of security group rule N. The value of this parameter is case-insensitive. Valid values:
             /// 
             /// *   TCP
             /// *   UDP
@@ -112,11 +118,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
             /// 
-            /// This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
             /// 
             /// Valid values of N: 1 to 100.
             /// 
-            /// > This parameter takes effect only if the destinations are ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and `DestCidrIp` at the same time.
+            /// > This parameter is valid only when the source is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
             /// </summary>
             [NameInMap("Ipv6DestCidrIp")]
             [Validation(Required=false)]
@@ -136,12 +142,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The network interface controller (NIC) type of security group rule N when the security group is in the classic network. Valid values:
             /// 
-            /// *   internet: public NIC
-            /// *   intranet: internal NIC
+            /// *   internet: public NIC.
+            /// *   intranet: internal NIC.
             /// 
-            /// If the security group is of the VPC type, you must set this parameter to intranet.
+            /// If the security group is in a VPC, this parameter is set to intranet by default and cannot be changed.
             /// 
-            /// If you specify only DestGroupId when you configure access between security groups, you must set this parameter to intranet.
+            /// If you specify only DestGroupId when you configure access between security groups, this parameter must be set to intranet.
             /// 
             /// Default value: internet.
             /// 
@@ -154,8 +160,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The action of security group rule N that determines whether to allow inbound access. Valid values:
             /// 
-            /// *   accept: allows inbound access.
-            /// *   drop: denies inbound access and does not return responses. In this case, the request times out or the connection cannot be established.
+            /// *   accept: allows access.
+            /// *   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.
             /// 
             /// Default value: accept.
             /// 
@@ -168,12 +174,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
             /// 
-            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
             /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
-            /// *   If you set Permissions.N.IpProtocol to GRE, the port number range is -1/-1.
-            /// *   If you set Permissions.N.IpProtocol to ALL, the port number range is -1/-1.
+            /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+            /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
             /// 
-            /// For more information, see [Common ports](~~40724~~).
+            /// For more information, see [Typical applications of commonly used ports](~~40724~~).
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -202,28 +208,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// The ID of the source security group that you want to reference in the security group rule.
+            /// The ID of the source security group to be referenced in security group rule N.
             /// 
-            /// *   Specify at least one of the following parameters: `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId`.
-            /// *   If you specify `SourceGroupId` but do not specify `SourceCidrIp` or `Ipv6SourceCidrIp`, you must set `NicType` to `intranet`.
-            /// *   If you specify `SourceGroupId` and `SourceCidrIp`, `SourceCidrIp` takes precedence.
+            /// *   At least one of `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId` must be specified.
+            /// *   If `SourceGroupId` is specified but `SourceCidrIp` or `Ipv6SourceCidrIp` is not specified, `NicType` must be set to `intranet`.
+            /// *   If both `SourceGroupId` and `SourceCidrIp` are specified, `SourceCidrIp` takes precedence.
             /// 
             /// Valid values of N: 1 to 100.
             /// 
             /// Take note of the following items:
             /// 
-            /// *   You cannot reference security groups as destinations or sources in the rules of advanced security groups.
-            /// *   You can reference up to 20 security groups as destinations or sources in the rules of each basic security group.
+            /// *   For advanced security groups, security groups cannot be used as authorization objects.
+            /// *   For each basic security group, up to 20 security groups can be used as authorization objects.
             /// </summary>
             [NameInMap("SourceGroupId")]
             [Validation(Required=false)]
             public string SourceGroupId { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
+            /// The Alibaba Cloud account that manages the source security group when you set a security group rule across accounts.
             /// 
             /// *   If you do not specify `SourceGroupOwnerAccount` and `SourceGroupOwnerId`, access permissions are configured for another security group managed by your account.
-            /// *   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` is ignored.
+            /// *   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` becomes invalid.
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -232,10 +238,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceGroupOwnerAccount { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
+            /// The ID of the Alibaba Cloud account that manages the source security group when you set security group rule N across accounts.
             /// 
             /// *   If you do not specify `SourceGroupOwnerAccount` and `SourceGroupOwnerId`, access permissions are configured for another security group managed by your account.
-            /// *   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` becomes invalid.
+            /// *   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` is ignored.
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -246,12 +252,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:
             /// 
-            /// *   If you set Permissions.N.IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-            /// *   If you set Permissions.N.IpProtocol to ICMP, the port number range is -1/-1.
-            /// *   If you set Permissions.N.IpProtocol to GRE, the port number range is -1/-1.
-            /// *   If you set Permissions.N.IpProtocol to ALL, the port number range is -1/-1.
+            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+            /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+            /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+            /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
             /// 
-            /// This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -260,14 +266,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourcePortRange { get; set; }
 
             /// <summary>
-            /// The ID of the source prefix list that you want to reference in the security group rule. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
+            /// The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
             /// 
             /// Valid values of N: 1 to 100.
             /// 
             /// Take note of the following items:
             /// 
-            /// *   If the network type of a security group is classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section of the [Limits](~~25412#SecurityGroupQuota1~~) topic.
-            /// *   If you specify the `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId` parameter, this parameter is ignored.
+            /// *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
+            /// *   If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.
             /// </summary>
             [NameInMap("SourcePrefixListId")]
             [Validation(Required=false)]
@@ -276,24 +282,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow inbound access.
+        /// This parameter is no longer used. Use `Permissions.N.Policy` to specify whether to allow inbound access.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Policy { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
+        /// This parameter is no longer used. Use `Permissions.N.PortRange` to specify the range of destination ports.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PortRange { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
+        /// This parameter is no longer used. Use `Permissions.N.Priority` to specify the rule priority.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Priority { get; set; }
 
         /// <summary>
@@ -319,45 +328,51 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+        /// This parameter is no longer used. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
+        /// This parameter is no longer used. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
         /// </summary>
         [NameInMap("SourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
+        /// This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
         /// </summary>
         [NameInMap("SourceGroupOwnerAccount")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceGroupOwnerAccount { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
+        /// This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
         /// </summary>
         [NameInMap("SourceGroupOwnerId")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? SourceGroupOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+        /// This parameter is no longer used. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
         /// </summary>
         [NameInMap("SourcePortRange")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
+        /// This parameter is no longer used. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
         /// </summary>
         [NameInMap("SourcePrefixListId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourcePrefixListId { get; set; }
 
     }

@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class DescribeInstanceVncPasswdResponse : TeaModel {
+    public class DescribeSavingsPlanEstimationResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public DescribeInstanceVncPasswdResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public DescribeSavingsPlanEstimationResponseBody Body { get; set; }
 
     }
 

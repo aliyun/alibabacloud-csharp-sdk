@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCommandsRequest : TeaModel {
         /// <summary>
-        /// The command ID.
+        /// The ID of the command.
         /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
         /// <summary>
-        /// The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:
+        /// The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:
         /// 
         /// *   PlainText: returns the original command content and command output.
         /// *   Base64: returns the Base64-encoded command content and command output.
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated and does not take effect.
+        /// The description of the common command. This parameter takes effect and fuzzy search is supported by default only when `Provider` is specified.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to query only the latest version of common commands if common commands are queried. This parameter does not affect the query for private commands. Valid values:
+        /// Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.
         /// 
         /// *   true: queries only the latest version of common commands.
         /// *   false: queries all versions of common commands.
@@ -48,11 +48,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Latest { get; set; }
 
         /// <summary>
-        /// The command name. Partial command names are not supported.
+        /// The maximum number of entries per page. 
+        /// 
+        /// Valid values: 1 to 50. 
+        /// 
+        /// Default value: 10.
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// The name of the command. If you specify `Provider`, fuzzy search is supported by default.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -107,6 +125,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the command belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -120,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the command.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -129,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
             /// 
             /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// </summary>
@@ -140,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+            /// It can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -149,11 +170,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The command type. Valid values:
+        /// The type of the command. Valid values:
         /// 
-        /// *   RunBatScript: batch command, applicable to Windows instances.
-        /// *   RunPowerShellScript: PowerShell command, applicable to Windows instances.
-        /// *   RunShellScript: shell command, applicable to Linux instances.
+        /// *   RunBatScript: batch command, applicable to Windows instances
+        /// *   RunPowerShellScript: PowerShell command, applicable to Windows instances
+        /// *   RunShellScript: shell command, applicable to Linux instances
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

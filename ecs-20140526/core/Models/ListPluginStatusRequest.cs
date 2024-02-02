@@ -10,26 +10,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListPluginStatusRequest : TeaModel {
         /// <summary>
-        /// The instance IDs. You can specify up to 50 instance IDs in a request. Valid values of N: 1 to 50.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
+        /// The maximum number of entries per page. 
+        /// 
+        /// Valid values: 1 to 50. 
+        /// 
+        /// Default value: 10.
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
         /// The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
         /// 
-        /// *   If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+        /// *   If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.
         /// 
         ///     **
         /// 
-        ///     **Note**If this parameter is not specified, only a single instance ID can be specified.
+        ///     **Note** If this parameter is not specified, only a single instance ID can be specified.
         /// 
-        /// *   If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
+        /// *   If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -40,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// 
         /// *   Pages start from page 1.
         /// *   Default value: 1.
@@ -50,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
         /// *   Valid values: 1 to 50.
         /// *   Default value: 10.
@@ -60,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

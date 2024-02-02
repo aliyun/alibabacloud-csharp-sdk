@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportSnapshotResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ExportSnapshotResponseBody Body { get; set; }
 
     }

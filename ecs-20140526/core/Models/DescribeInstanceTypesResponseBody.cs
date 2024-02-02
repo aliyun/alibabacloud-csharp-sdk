@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
             public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
                 /// <summary>
-                /// The baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+                /// The baseline vCPU computing performance (overall computing performance of all vCPUs) of the t5 or t6 burstable instance.
                 /// </summary>
                 [NameInMap("BaselineCredit")]
                 [Validation(Required=false)]
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The CPU architecture. Valid values:
                 /// 
-                /// *   X86
-                /// *   ARM
+                /// *   X86: x86
+                /// *   ARM: ARM
                 /// </summary>
                 [NameInMap("CpuArchitecture")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? CpuTurboFrequency { get; set; }
 
                 /// <summary>
-                /// The maximum number of cloud disks.
+                /// The maximum number of cloud disks per instance.
                 /// </summary>
                 [NameInMap("DiskQuantity")]
                 [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.
                 /// 
-                /// > This parameter is in invitational preview and is unavailable to general users.
+                /// >  This parameter is in invitational preview and unavailable for general users.
                 /// </summary>
                 [NameInMap("EniTotalQuantity")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates whether NICs on instances of the instance type support trunking.
                 /// 
-                /// > This parameter is in invitational preview and is unavailable to general users.
+                /// >  This parameter is in invitational preview and unavailable for general users.
                 /// </summary>
                 [NameInMap("EniTrunkSupported")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The number of ERIs.
                 /// 
-                /// > This parameter is in invitational preview and is unavailable to general users.
+                /// >  This parameter is in invitational preview and unavailable for general users.
                 /// </summary>
                 [NameInMap("EriQuantity")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string GPUSpec { get; set; }
 
                 /// <summary>
-                /// The initial vCPU credits per t5 or t6 burstable instance.
+                /// The initial vCPU credits of a t5 or t6 burstable instance.
                 /// </summary>
                 [NameInMap("InitialCredit")]
                 [Validation(Required=false)]
@@ -173,6 +173,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
                 /// *   ECS Bare Metal: ECS Bare Metal Instance type
                 /// *   Super Computing Cluster: SCC instance type
+                /// - High Performance Compute.
+                /// - Cloud Physical Server.
                 /// </summary>
                 [NameInMap("InstanceCategory")]
                 [Validation(Required=false)]
@@ -183,14 +185,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// 
                 /// *   EntryLevel: entry level (shared).
                 /// *   EnterpriseLevel: enterprise level.
-                /// *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).
+                /// *   CreditEntryLevel: credit-based entry level. For more information about instance families of this level, see [Overview](~~59977~~).
                 /// </summary>
                 [NameInMap("InstanceFamilyLevel")]
                 [Validation(Required=false)]
                 public string InstanceFamilyLevel { get; set; }
 
                 /// <summary>
-                /// The inbound packet forwarding rate over the internal network. Unit: pps.
+                /// The inbound packet forwarding rate of the internal network. Unit: pps.
                 /// </summary>
                 [NameInMap("InstancePpsRx")]
                 [Validation(Required=false)]
@@ -218,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceTypeId { get; set; }
 
                 /// <summary>
-                /// The number of local disks.
+                /// The number of local disks per instance.
                 /// </summary>
                 [NameInMap("LocalStorageAmount")]
                 [Validation(Required=false)]
@@ -242,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LocalStorageCategory { get; set; }
 
                 /// <summary>
-                /// The maximum number of queues per ENI (including primary ENI and secondary ENI).
+                /// The maximum number of queues per ENI (including primary and secondary ENIs).
                 /// </summary>
                 [NameInMap("MaximumQueueNumberPerEni")]
                 [Validation(Required=false)]
@@ -256,14 +258,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? MemorySize { get; set; }
 
                 /// <summary>
-                /// The number of NICs.
+                /// The maximum number of network cards that the instance type supports.
                 /// </summary>
                 [NameInMap("NetworkCardQuantity")]
                 [Validation(Required=false)]
                 public int? NetworkCardQuantity { get; set; }
 
                 /// <summary>
-                /// Details about NICs.
+                /// Details about the network cards.
                 /// </summary>
                 [NameInMap("NetworkCards")]
                 [Validation(Required=false)]
@@ -274,7 +276,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCardsNetworkCardInfo> NetworkCardInfo { get; set; }
                     public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCardsNetworkCardInfo : TeaModel {
                         /// <summary>
-                        /// The index of the NIC.
+                        /// The index of the network card.
                         /// </summary>
                         [NameInMap("NetworkCardIndex")]
                         [Validation(Required=false)]
@@ -295,10 +297,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? NetworkEncryptionSupport { get; set; }
 
                 /// <summary>
-                /// Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:
+                /// Indicates whether the cloud disk can be attached by using the NVMe protocol. Valid values:
                 /// 
-                /// *   required: Cloud disks can be attached by using the NVMe protocol.
-                /// *   unsupported: Cloud disk cannot be attached by using the NVMe protocol.
+                /// *   required: The cloud disk can be attached by using the NVMe protocol.
+                /// *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
                 /// </summary>
                 [NameInMap("NvmeSupport")]
                 [Validation(Required=false)]
@@ -326,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? QueuePairNumber { get; set; }
 
                 /// <summary>
-                /// The default number of queues per secondary ENI.
+                /// The default number of queues supported by the secondary ENI.
                 /// </summary>
                 [NameInMap("SecondaryEniQueueNumber")]
                 [Validation(Required=false)]

@@ -118,6 +118,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RegistrationTime { get; set; }
 
             /// <summary>
+            /// The ID of the resource group to which the managed instance belongs.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// The tags of the managed instance.
             /// </summary>
             [NameInMap("Tags")]
@@ -147,6 +154,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
         }
+
+        /// <summary>
+        /// The query token returned in the call.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// The page number.

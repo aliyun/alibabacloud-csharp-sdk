@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class DescribeInstanceVncPasswdResponseBody : TeaModel {
+    public class CreateSavingsPlanResponseBody : TeaModel {
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("VncPasswd")]
+        [NameInMap("SavingsPlanId")]
         [Validation(Required=false)]
-        public string VncPasswd { get; set; }
+        public string SavingsPlanId { get; set; }
 
     }
 

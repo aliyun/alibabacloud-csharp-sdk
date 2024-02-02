@@ -105,6 +105,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string AutoReleaseTime { get; set; }
 
+                    /// <summary>
+                    /// The performance mode of the burstable instance. Valid values:
+                    /// 
+                    /// *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+                    /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+                    /// </summary>
                     [NameInMap("CreditSpecification")]
                     [Validation(Required=false)]
                     public string CreditSpecification { get; set; }
@@ -512,12 +518,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+                    /// The protection period of the preemptible instance. Unit: hours. Valid values:
                     /// 
-                    /// Take note of the following items:
+                    /// - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
+                    /// - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance can run for one hour. The system compares the biding price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
                     /// 
-                    /// *   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
-                    /// *   A value of 0 indicates that no protection period is configured for the preemptible instance.
+                    /// Alibaba Cloud sent ECS system events to notify you 5 minutes before the instance is released. Preemptible instances were billed by second. We recommend that you specify an appropriate protection period based on your business requirements. 
+                    /// 
+                    /// >This parameter was returned when the SpotStrategy parameter was set to SpotWithPriceLimit or SpotAsPriceGo.
                     /// </summary>
                     [NameInMap("SpotDuration")]
                     [Validation(Required=false)]

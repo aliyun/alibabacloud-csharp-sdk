@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create the instance, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+            /// The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create the instance, you must specify this parameter.
             /// </summary>
             [NameInMap("StorageClusterId")]
             [Validation(Required=false)]

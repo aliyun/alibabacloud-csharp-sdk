@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListPluginStatusResponseBody : TeaModel {
         /// <summary>
-        /// The states of the Cloud Assistant plug-ins on the ECS instances.
+        /// The states of Cloud Assistant plug-ins on the instances.
         /// </summary>
         [NameInMap("InstancePluginStatusSet")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus> InstancePluginStatus { get; set; }
             public class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus : TeaModel {
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The states of the Cloud Assistant plug-ins.
+                /// The queried Cloud Assistant plug-ins.
                 /// </summary>
                 [NameInMap("PluginStatusSet")]
                 [Validation(Required=false)]
@@ -62,13 +62,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <summary>
                         /// The state of the Cloud Assistant plug-in. Valid values:
                         /// 
-                        /// *   NotInstalled
-                        /// *   Installed
-                        /// *   Running
-                        /// *   Stopped
-                        /// *   Crashed
-                        /// *   Removed
-                        /// *   Unknown
+                        /// *   NotInstalled: The plug-in is not installed.
+                        /// *   Installed: The one-time plug-in is installed.
+                        /// *   Running: The long-running plug-in is running.
+                        /// *   Stopped: The long-running plug-in is not running.
+                        /// *   Crashed: The plug-in is abnormal.
+                        /// *   Removed: The plug-in is uninstalled.
+                        /// *   Unknown: The state of the plug-in is unknown.
                         /// </summary>
                         [NameInMap("PluginStatus")]
                         [Validation(Required=false)]
@@ -90,14 +90,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

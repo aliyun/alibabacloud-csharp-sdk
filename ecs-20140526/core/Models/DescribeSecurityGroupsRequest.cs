@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SecurityGroupType { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
         /// <summary>
         /// The tags to add to the security groups.
         /// </summary>

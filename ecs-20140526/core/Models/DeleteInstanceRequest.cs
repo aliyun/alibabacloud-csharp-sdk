@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteInstanceRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// Specifies whether to forcefully release the instance in the `Running` state. Valid values:****
         /// 

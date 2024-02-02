@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the snapshot-consistent groups.
+        /// The snapshot-consistent groups.
         /// </summary>
         [NameInMap("SnapshotGroups")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+                /// The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all snapshots in the snapshot-consistent group belong to the same instance. If snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` for the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// > This parameter is unavailable.
+                /// >  This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("ProgressStatus")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotGroupId { get; set; }
 
                 /// <summary>
-                /// Details of the snapshots in the snapshot-consistent group.
+                /// The snapshots in the snapshot-consistent group.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
@@ -96,6 +96,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot> Snapshot { get; set; }
                     public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot : TeaModel {
+                        /// <summary>
+                        /// Indicates whether the snapshot can be used to create or roll back disks. Valid values:
+                        /// 
+                        /// *   true
+                        /// *   false
+                        /// </summary>
                         [NameInMap("Available")]
                         [Validation(Required=false)]
                         public bool? Available { get; set; }
@@ -104,14 +110,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// Indicates whether the instant access feature was enabled. Valid values:
                         /// 
                         /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                        /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+                        /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                         /// </summary>
                         [NameInMap("InstantAccess")]
                         [Validation(Required=false)]
                         public bool? InstantAccess { get; set; }
 
                         /// <summary>
-                        /// The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+                        /// The validity period of the instant access feature. When the period expires, the instant access snapshot is automatically released.
                         /// </summary>
                         [NameInMap("InstantAccessRetentionDays")]
                         [Validation(Required=false)]
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string SourceDiskType { get; set; }
 
                         /// <summary>
-                        /// The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.
+                        /// The tags of the snapshot. The default values contain snapshot source information.
                         /// </summary>
                         [NameInMap("Tags")]
                         [Validation(Required=false)]
@@ -160,14 +166,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag> Tag { get; set; }
                             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag : TeaModel {
                                 /// <summary>
-                                /// The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+                                /// The tag key of the snapshot. The default values of Key and Value contain snapshot source information.
                                 /// </summary>
                                 [NameInMap("Key")]
                                 [Validation(Required=false)]
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+                                /// The tag value of the snapshot. The default values of Key and Value contain snapshot source information.
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -184,9 +190,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The state of the snapshot-consistent group. Valid values:
                 /// 
-                /// *   progressing: The snapshot-consistent group is being created.
-                /// *   accomplished: The snapshot-consistent group is created.
-                /// *   failed: The snapshot-consistent group fails to be created.
+                /// *   progressing: The snapshot-consistent group was being created.
+                /// *   accomplished: The snapshot-consistent group was created.
+                /// *   failed: The snapshot-consistent group failed to be created.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

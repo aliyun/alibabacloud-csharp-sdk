@@ -67,29 +67,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
-        /// 
-        /// > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.
+        /// >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Maximum value: 1000.
-        /// 
-        /// Default value: 10.
-        /// 
-        /// > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+        /// >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? PageSize { get; set; }
 
         /// <summary>

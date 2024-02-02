@@ -19,7 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
         /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Stop: The instance is stopped due to a system error.
-        /// *
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]

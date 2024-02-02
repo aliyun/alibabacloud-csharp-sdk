@@ -8,10 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class DescribeInstanceVncPasswdRequest : TeaModel {
+    public class ModifyInvocationAttributeRequest : TeaModel {
+        [NameInMap("CommandContent")]
+        [Validation(Required=false)]
+        public string CommandContent { get; set; }
+
+        [NameInMap("ContentEncoding")]
+        [Validation(Required=false)]
+        public string ContentEncoding { get; set; }
+
+        [NameInMap("EnableParameter")]
+        [Validation(Required=false)]
+        public bool? EnableParameter { get; set; }
+
+        [NameInMap("Frequency")]
+        [Validation(Required=false)]
+        public string Frequency { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("InvokeId")]
+        [Validation(Required=false)]
+        public string InvokeId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -20,6 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Parameters { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

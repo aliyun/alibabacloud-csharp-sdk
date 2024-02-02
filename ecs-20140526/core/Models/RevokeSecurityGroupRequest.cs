@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Description { get; set; }
 
         /// <summary>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DestCidrIp { get; set; }
 
         /// <summary>
@@ -35,6 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IpProtocol { get; set; }
 
         /// <summary>
@@ -42,6 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("Ipv6DestCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
@@ -49,6 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("Ipv6SourceCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
@@ -56,6 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NicType { get; set; }
 
         [NameInMap("OwnerAccount")]
@@ -278,6 +284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Policy { get; set; }
 
         /// <summary>
@@ -285,6 +292,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PortRange { get; set; }
 
         /// <summary>
@@ -292,6 +300,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Priority { get; set; }
 
         /// <summary>
@@ -328,6 +337,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceCidrIp { get; set; }
 
         /// <summary>
@@ -335,6 +345,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceGroupId { get; set; }
 
         /// <summary>
@@ -342,6 +353,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourceGroupOwnerAccount")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceGroupOwnerAccount { get; set; }
 
         /// <summary>
@@ -349,6 +361,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourceGroupOwnerId")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? SourceGroupOwnerId { get; set; }
 
         /// <summary>
@@ -356,6 +369,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourcePortRange")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourcePortRange { get; set; }
 
         /// <summary>
@@ -363,6 +377,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("SourcePrefixListId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourcePrefixListId { get; set; }
 
     }

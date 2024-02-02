@@ -10,13 +10,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.
+        /// The type of the operating system platform. Valid values:
         /// 
-        /// This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.
+        /// *   linux
+        /// *   windows
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.
+        /// 
+        /// This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        /// <summary>
+        /// Specifies whether the instance is I/O optimized. Valid values:
+        /// 
+        /// *   optimized: The instance is I/O optimized.
+        /// *   none: The instance is not I/O optimized.
+        /// 
+        /// For instances of generation I instance families, the default value is none.
+        /// 
+        /// For instances of other instance families, the default value is optimized.
+        /// </summary>
+        [NameInMap("IoOptimized")]
+        [Validation(Required=false)]
+        public string IoOptimized { get; set; }
 
         /// <summary>
         /// The network type of the preemptible instance. Valid values:
@@ -24,43 +48,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   classic: classic network
         /// *   vpc: Virtual Private Cloud (VPC)
         /// </summary>
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        /// <summary>
-        /// The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-        /// 
-        /// *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
-        /// *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
-        /// 
-        /// Default value: 1.
-        /// </summary>
-        [NameInMap("IoOptimized")]
-        [Validation(Required=false)]
-        public string IoOptimized { get; set; }
-
-        /// <summary>
-        /// The zone ID of the preemptible instance.
-        /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// The type of the operating system platform. Valid values:
         /// 
-        /// This parameter is empty by default. If this parameter is empty, the current time is used.
+        /// - linux
+        /// - windows
         /// </summary>
         [NameInMap("OSType")]
         [Validation(Required=false)]
         public string OSType { get; set; }
 
         /// <summary>
-        /// The type of the operating system platform. Valid values:
+        /// The line from which the query starts. 
         /// 
-        /// *   linux
-        /// *   windows
+        /// Default value: 0.
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Queries the price history of a preemptible instance within the last 30 days.
+        /// The zone ID of the preemptible instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -90,28 +95,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The instance type of the preemptible instance.
+        /// The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: 
+        /// 
+        /// - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance. 
+        /// 
+        /// - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance. 
+        /// 
+        /// Alibaba Cloud sends Elastic Compute Service (ECS) system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by the second. We recommend that you specify a protection period based on your business requirements. 
+        /// 
+        /// >If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.
         /// </summary>
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is I/O optimized. Valid values:
-        /// 
-        /// *   optimized: The instance is I/O optimized.
-        /// *   none: The instance is not I/O optimized.
-        /// 
-        /// For instances of generation I instance families, the default value is none.
-        /// 
-        /// For instances of other instance families, the default value is optimized.
+        /// The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The region ID of the preemptible instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The spot price (market price) of the preemptible instance.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

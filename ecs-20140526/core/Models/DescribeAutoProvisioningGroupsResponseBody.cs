@@ -164,6 +164,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// The policy related to preemptible instances.
                 /// </summary>

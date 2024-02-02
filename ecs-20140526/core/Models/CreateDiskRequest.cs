@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// 
-        /// This parameter is left empty by default.
+        /// This parameter is empty by default.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The category of the disk. Valid values:
         /// 
-        /// *   cloud: basic disk
-        /// *   cloud_efficiency: ultra disk
-        /// *   cloud_ssd: standard SSD
-        /// *   cloud_essd: ESSD
+        /// *   cloud: basic disk.
+        /// *   cloud_efficiency: ultra disk.
+        /// *   cloud_ssd: standard SSD.
+        /// *   cloud_essd: ESSD.
         /// 
         /// Default value: cloud.
         /// </summary>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// The disk name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// 
-        /// This parameter is left empty by default.
+        /// This parameter is empty by default.
         /// </summary>
         [NameInMap("DiskName")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   After you specify the instance ID, ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId are ignored.
         /// *   You cannot specify ZoneId and InstanceId at the same time.
         /// 
-        /// This parameter is empty by default. This indicates that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
+        /// This parameter is empty by default. This indicates that a pay-as-you-go disk is created. RegionId and ZoneId specify where the disk resides.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -200,44 +200,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The size of the disk. Unit: GiB. This parameter is required. Valid values:
         /// 
-        /// *   Valid values when DiskCategory is set to cloud: 5 to 2,000
+        /// *   Valid values when DiskCategory is set to cloud: 5 to 2,000.
         /// 
-        /// *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768
+        /// *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768.
         /// 
-        /// *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768
+        /// *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768.
         /// 
         /// *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
         /// 
-        ///     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768
-        ///     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768
-        ///     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768
-        ///     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768
+        ///     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768.
+        ///     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768.
+        ///     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768.
+        ///     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768.
         /// 
-        /// If the `SnapshotId` parameter is specified, the following limits apply to the `SnapshotId` and `Size` parameters:
+        /// If `SnapshotId` is specified, the following limits apply to `SnapshotId` and `Size`:
         /// 
-        /// *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-        /// *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+        /// *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+        /// *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot that you want to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
+        /// The ID of the snapshot used to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
         /// 
-        /// The following limits apply to the `SnapshotId` and `Size` parameters:
+        /// The following limits apply to `SnapshotId` and `Size`:
         /// 
-        /// *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-        /// *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+        /// *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+        /// *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+        /// The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter.
         /// 
-        /// > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+        /// > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time. Otherwise, the operation cannot be called.
         /// </summary>
         [NameInMap("StorageClusterId")]
         [Validation(Required=false)]
@@ -246,14 +246,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the storage set.
         /// 
-        /// > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+        /// > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time. Otherwise, the operation cannot be called.
         /// </summary>
         [NameInMap("StorageSetId")]
         [Validation(Required=false)]
         public string StorageSetId { get; set; }
 
         /// <summary>
-        /// The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
+        /// The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~)operation.
         /// 
         /// Default value: 2.
         /// </summary>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the zone in which to create the pay-as-you-go disk.
         /// 
-        /// *   If you do not specify InstanceId, you must specify ZoneId.
+        /// *   If InstanceId is not specified, ZoneId is required.
         /// *   You cannot specify ZoneId and InstanceId at the same time.
         /// </summary>
         [NameInMap("ZoneId")]

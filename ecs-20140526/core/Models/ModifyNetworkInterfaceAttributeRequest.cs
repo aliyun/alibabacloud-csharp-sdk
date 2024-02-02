@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyNetworkInterfaceAttributeRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to retain the ENI when the associated instance is released. Valid values:
+        /// 
+        /// - true
+        /// - false
+        /// </summary>
         [NameInMap("DeleteOnRelease")]
         [Validation(Required=false)]
         public bool? DeleteOnRelease { get; set; }
@@ -72,6 +78,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RxQueueSize")]
+        [Validation(Required=false)]
+        public int? RxQueueSize { get; set; }
+
         /// <summary>
         /// The ID of security group N to which the secondary ENI finally belongs. If a security group to which the ENI has belonged is in the ID list, that security group is removed from the list. Valid values of N: 1, 2, 3, 4, and 5.
         /// 
@@ -80,6 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public List<string> SecurityGroupId { get; set; }
+
+        [NameInMap("TxQueueSize")]
+        [Validation(Required=false)]
+        public int? TxQueueSize { get; set; }
 
     }
 

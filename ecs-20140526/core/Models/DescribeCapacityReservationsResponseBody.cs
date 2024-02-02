@@ -31,6 +31,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource : TeaModel {
+                        [NameInMap("AvailableAmount")]
+                        [Validation(Required=false)]
+                        public int? AvailableAmount { get; set; }
+
+                        [NameInMap("CapacityReservationUsages")]
+                        [Validation(Required=false)]
+                        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages CapacityReservationUsages { get; set; }
+                        public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages : TeaModel {
+                            [NameInMap("CapacityReservationUsage")]
+                            [Validation(Required=false)]
+                            public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage> CapacityReservationUsage { get; set; }
+                            public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage : TeaModel {
+                                [NameInMap("AccountId")]
+                                [Validation(Required=false)]
+                                public string AccountId { get; set; }
+
+                                [NameInMap("ServiceName")]
+                                [Validation(Required=false)]
+                                public string ServiceName { get; set; }
+
+                                [NameInMap("UsedAmount")]
+                                [Validation(Required=false)]
+                                public int? UsedAmount { get; set; }
+
+                            }
+
+                        }
+
                         /// <summary>
                         /// The instance type.
                         /// </summary>
@@ -62,6 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
+
+                [NameInMap("CapacityReservationOwnerId")]
+                [Validation(Required=false)]
+                public string CapacityReservationOwnerId { get; set; }
 
                 /// <summary>
                 /// The description of the capacity reservation.
