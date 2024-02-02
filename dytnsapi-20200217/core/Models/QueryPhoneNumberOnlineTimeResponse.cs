@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class QueryAvailableAuthCodeResponse : TeaModel {
+    public class QueryPhoneNumberOnlineTimeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public QueryAvailableAuthCodeResponseBody Body { get; set; }
+        public QueryPhoneNumberOnlineTimeResponseBody Body { get; set; }
 
     }
 
