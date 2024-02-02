@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class PauseCampaignResponse : TeaModel {
+    public class ChangeVisibilityResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public PauseCampaignResponseBody Body { get; set; }
+        public ChangeVisibilityResponseBody Body { get; set; }
 
     }
 

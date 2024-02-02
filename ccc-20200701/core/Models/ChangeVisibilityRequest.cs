@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class GetVideoResponse : TeaModel {
-        [NameInMap("headers")]
+    public class ChangeVisibilityRequest : TeaModel {
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("Invisible")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public bool? Invisible { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public GetVideoResponseBody Body { get; set; }
+        public string UserId { get; set; }
 
     }
 

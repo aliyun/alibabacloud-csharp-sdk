@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public string ReleaseReason { get; set; }
 
+                    [NameInMap("SkillGroupId")]
+                    [Validation(Required=false)]
+                    public string SkillGroupId { get; set; }
+
                     [NameInMap("Timestamp")]
                     [Validation(Required=false)]
                     public long? Timestamp { get; set; }

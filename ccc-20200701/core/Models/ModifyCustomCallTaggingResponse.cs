@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifyCustomCallTaggingResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ModifyCustomCallTaggingResponseBody Body { get; set; }
 
     }

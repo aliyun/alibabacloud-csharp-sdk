@@ -145,10 +145,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public List<string> SignedSkillGroupIdList { get; set; }
 
-                [NameInMap("Uri")]
-                [Validation(Required=false)]
-                public string Uri { get; set; }
-
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }

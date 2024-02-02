@@ -1542,6 +1542,88 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CancelAttendedTransferWithOptionsAsync(request, runtime);
         }
 
+        public ChangeVisibilityResponse ChangeVisibilityWithOptions(ChangeVisibilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Invisible))
+            {
+                query["Invisible"] = request.Invisible;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeVisibility",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeVisibilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ChangeVisibilityResponse> ChangeVisibilityWithOptionsAsync(ChangeVisibilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Invisible))
+            {
+                query["Invisible"] = request.Invisible;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeVisibility",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeVisibilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ChangeVisibilityResponse ChangeVisibility(ChangeVisibilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeVisibilityWithOptions(request, runtime);
+        }
+
+        public async Task<ChangeVisibilityResponse> ChangeVisibilityAsync(ChangeVisibilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeVisibilityWithOptionsAsync(request, runtime);
+        }
+
         public ChangeWorkModeResponse ChangeWorkModeWithOptions(ChangeWorkModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6694,6 +6776,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListAgentStateLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+          *
+          * @param request ListAgentStatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAgentStatesResponse
+         */
+        // Deprecated
         public ListAgentStatesResponse ListAgentStatesWithOptions(ListAgentStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6745,6 +6835,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentStatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+          *
+          * @param request ListAgentStatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAgentStatesResponse
+         */
+        // Deprecated
         public async Task<ListAgentStatesResponse> ListAgentStatesWithOptionsAsync(ListAgentStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6796,18 +6894,40 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+          *
+          * @param request ListAgentStatesRequest
+          * @return ListAgentStatesResponse
+         */
+        // Deprecated
         public ListAgentStatesResponse ListAgentStates(ListAgentStatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAgentStatesWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+          *
+          * @param request ListAgentStatesRequest
+          * @return ListAgentStatesResponse
+         */
+        // Deprecated
         public async Task<ListAgentStatesResponse> ListAgentStatesAsync(ListAgentStatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAgentStatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+          *
+          * @param request ListAgentSummaryReportsSinceMidnightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAgentSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public ListAgentSummaryReportsSinceMidnightResponse ListAgentSummaryReportsSinceMidnightWithOptions(ListAgentSummaryReportsSinceMidnightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6831,6 +6951,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+          *
+          * @param request ListAgentSummaryReportsSinceMidnightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAgentSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public async Task<ListAgentSummaryReportsSinceMidnightResponse> ListAgentSummaryReportsSinceMidnightWithOptionsAsync(ListAgentSummaryReportsSinceMidnightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6854,12 +6982,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+          *
+          * @param request ListAgentSummaryReportsSinceMidnightRequest
+          * @return ListAgentSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public ListAgentSummaryReportsSinceMidnightResponse ListAgentSummaryReportsSinceMidnight(ListAgentSummaryReportsSinceMidnightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAgentSummaryReportsSinceMidnightWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+          *
+          * @param request ListAgentSummaryReportsSinceMidnightRequest
+          * @return ListAgentSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public async Task<ListAgentSummaryReportsSinceMidnightResponse> ListAgentSummaryReportsSinceMidnightAsync(ListAgentSummaryReportsSinceMidnightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10750,6 +10892,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListRolesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+          *
+          * @param request ListSkillGroupStatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSkillGroupStatesResponse
+         */
+        // Deprecated
         public ListSkillGroupStatesResponse ListSkillGroupStatesWithOptions(ListSkillGroupStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10773,6 +10923,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupStatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+          *
+          * @param request ListSkillGroupStatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSkillGroupStatesResponse
+         */
+        // Deprecated
         public async Task<ListSkillGroupStatesResponse> ListSkillGroupStatesWithOptionsAsync(ListSkillGroupStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10796,18 +10954,40 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+          *
+          * @param request ListSkillGroupStatesRequest
+          * @return ListSkillGroupStatesResponse
+         */
+        // Deprecated
         public ListSkillGroupStatesResponse ListSkillGroupStates(ListSkillGroupStatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSkillGroupStatesWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+          *
+          * @param request ListSkillGroupStatesRequest
+          * @return ListSkillGroupStatesResponse
+         */
+        // Deprecated
         public async Task<ListSkillGroupStatesResponse> ListSkillGroupStatesAsync(ListSkillGroupStatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSkillGroupStatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+          *
+          * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public ListSkillGroupSummaryReportsSinceMidnightResponse ListSkillGroupSummaryReportsSinceMidnightWithOptions(ListSkillGroupSummaryReportsSinceMidnightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10831,6 +11011,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+          *
+          * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public async Task<ListSkillGroupSummaryReportsSinceMidnightResponse> ListSkillGroupSummaryReportsSinceMidnightWithOptionsAsync(ListSkillGroupSummaryReportsSinceMidnightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10854,12 +11042,26 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+          *
+          * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+          * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public ListSkillGroupSummaryReportsSinceMidnightResponse ListSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSkillGroupSummaryReportsSinceMidnightWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+          *
+          * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+          * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+         */
+        // Deprecated
         public async Task<ListSkillGroupSummaryReportsSinceMidnightResponse> ListSkillGroupSummaryReportsSinceMidnightAsync(ListSkillGroupSummaryReportsSinceMidnightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11502,6 +11704,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["MaskedCallee"] = request.MaskedCallee;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -11556,6 +11762,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaskedCallee))
             {
                 query["MaskedCallee"] = request.MaskedCallee;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {

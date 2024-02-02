@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public string JobId { get; set; }
 
+                    [NameInMap("MediaType")]
+                    [Validation(Required=false)]
+                    public string MediaType { get; set; }
+
                     [NameInMap("Originator")]
                     [Validation(Required=false)]
                     public string Originator { get; set; }
