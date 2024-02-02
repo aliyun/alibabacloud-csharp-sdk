@@ -44613,6 +44613,96 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await UnbindSceneRuleFromEdgeInstanceWithOptionsAsync(request, runtime);
         }
 
+        public UnsubscribeTopicResponse UnsubscribeTopicWithOptions(UnsubscribeTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnsubscribeTopic",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnsubscribeTopicResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UnsubscribeTopicResponse> UnsubscribeTopicWithOptionsAsync(UnsubscribeTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                query["DeviceName"] = request.DeviceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnsubscribeTopic",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnsubscribeTopicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UnsubscribeTopicResponse UnsubscribeTopic(UnsubscribeTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnsubscribeTopicWithOptions(request, runtime);
+        }
+
+        public async Task<UnsubscribeTopicResponse> UnsubscribeTopicAsync(UnsubscribeTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnsubscribeTopicWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ## Limits
           * *   You cannot modify the default consumer group provided by IoT Platform.
