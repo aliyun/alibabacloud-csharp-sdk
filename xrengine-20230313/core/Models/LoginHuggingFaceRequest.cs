@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.XrEngine20230313.Models
+{
+    public class LoginHuggingFaceRequest : TeaModel {
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+    }
+
+}

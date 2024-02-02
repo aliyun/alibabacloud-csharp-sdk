@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.XrEngine20230313.Models
 {
-    public class PopListPakRenderExpressionResponse : TeaModel {
+    public class LoginHuggingFaceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public PopListPakRenderExpressionResponseBody Body { get; set; }
+        public LoginHuggingFaceResponseBody Body { get; set; }
 
     }
 

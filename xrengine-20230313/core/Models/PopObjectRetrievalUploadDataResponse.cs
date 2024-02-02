@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
 {
     public class PopObjectRetrievalUploadDataResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public PopObjectRetrievalUploadDataResponseBody Body { get; set; }
 
     }
