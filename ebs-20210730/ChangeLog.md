@@ -1,3 +1,9 @@
+2024-02-02 Version: 2.0.0
+- Support API QueryDedicatedBlockStorageClusterInventoryData.
+- Delete API StartDiskMonitor.
+- Delete API StopDiskMonitor.
+
+
 2024-01-08 Version: 1.6.0
 - Generated csharp 2021-07-30 for ebs.
 

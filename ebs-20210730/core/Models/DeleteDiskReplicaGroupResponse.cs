@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DeleteDiskReplicaGroupResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteDiskReplicaGroupResponseBody Body { get; set; }
 
     }

@@ -678,10 +678,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
-          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
           * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
           * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          * You are charged for creating dedicated block storage clusters.
           *
           * @param request CreateDedicatedBlockStorageClusterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -751,10 +751,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
-          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
           * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
           * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          * You are charged for creating dedicated block storage clusters.
           *
           * @param request CreateDedicatedBlockStorageClusterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -824,10 +824,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
-          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
           * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
           * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          * You are charged for creating dedicated block storage clusters.
           *
           * @param request CreateDedicatedBlockStorageClusterRequest
           * @return CreateDedicatedBlockStorageClusterResponse
@@ -839,10 +839,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
-          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster. For more information, see [Overview](~~208883~~).
+          * Dedicated block storage clusters are physically isolated from public block storage clusters. The owner of each dedicated block storage cluster has exclusive access to all resources in the cluster.
           * Disks created in a dedicated block storage cluster can be attached only to Elastic Compute Service (ECS) instances that reside in the same zone as the cluster. Before you create a dedicated block storage cluster, decide the regions and zones in which to deploy your cloud resources.
           * Dedicated block storage clusters are classified into basic and performance types. When you create a dedicated block storage cluster, select a cluster type based on your business requirements.
-          * You are charged for creating dedicated block storage clusters. For more information, see [~~208884~~](~~208884~~).
+          * You are charged for creating dedicated block storage clusters.
           *
           * @param request CreateDedicatedBlockStorageClusterRequest
           * @return CreateDedicatedBlockStorageClusterResponse
@@ -4430,6 +4430,142 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
+          * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
+          *
+          * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+         */
+        public QueryDedicatedBlockStorageClusterInventoryDataResponse QueryDedicatedBlockStorageClusterInventoryDataWithOptions(QueryDedicatedBlockStorageClusterInventoryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbscId))
+            {
+                body["DbscId"] = request.DbscId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDedicatedBlockStorageClusterInventoryData",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDedicatedBlockStorageClusterInventoryDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
+          *
+          * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+         */
+        public async Task<QueryDedicatedBlockStorageClusterInventoryDataResponse> QueryDedicatedBlockStorageClusterInventoryDataWithOptionsAsync(QueryDedicatedBlockStorageClusterInventoryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbscId))
+            {
+                body["DbscId"] = request.DbscId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDedicatedBlockStorageClusterInventoryData",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDedicatedBlockStorageClusterInventoryDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
+          *
+          * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+          * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+         */
+        public QueryDedicatedBlockStorageClusterInventoryDataResponse QueryDedicatedBlockStorageClusterInventoryData(QueryDedicatedBlockStorageClusterInventoryDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDedicatedBlockStorageClusterInventoryDataWithOptions(request, runtime);
+        }
+
+        /**
+          * Period is the time interval between data retrieval points. When set to 60 (minute interval), a maximum of 1440 data points can be returned; when set to 3600 (hour interval), a maximum of 744 data points can be returned; and when set to 86400 (day interval), a maximum of 366 data points can be returned.
+          *
+          * @param request QueryDedicatedBlockStorageClusterInventoryDataRequest
+          * @return QueryDedicatedBlockStorageClusterInventoryDataResponse
+         */
+        public async Task<QueryDedicatedBlockStorageClusterInventoryDataResponse> QueryDedicatedBlockStorageClusterInventoryDataAsync(QueryDedicatedBlockStorageClusterInventoryDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDedicatedBlockStorageClusterInventoryDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * ## [](#)Usage notes
           * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
           * *   The replication pair-consistent group from which you want to remove a replication pair must be in the **Created** (`created`), **Stopped** (`stopped`), or **Invalid** (`invalid`) state.
@@ -4823,126 +4959,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReprotectDiskReplicaPairWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * ## Usage notes
-          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
-          *
-          * @param tmpReq StartDiskMonitorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartDiskMonitorResponse
-         */
-        public StartDiskMonitorResponse StartDiskMonitorWithOptions(StartDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            StartDiskMonitorShrinkRequest request = new StartDiskMonitorShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
-            {
-                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
-            {
-                query["DiskIds"] = request.DiskIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartDiskMonitor",
-                Version = "2021-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartDiskMonitorResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ## Usage notes
-          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
-          *
-          * @param tmpReq StartDiskMonitorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartDiskMonitorResponse
-         */
-        public async Task<StartDiskMonitorResponse> StartDiskMonitorWithOptionsAsync(StartDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            StartDiskMonitorShrinkRequest request = new StartDiskMonitorShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
-            {
-                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
-            {
-                query["DiskIds"] = request.DiskIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StartDiskMonitor",
-                Version = "2021-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StartDiskMonitorResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ## Usage notes
-          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
-          *
-          * @param request StartDiskMonitorRequest
-          * @return StartDiskMonitorResponse
-         */
-        public StartDiskMonitorResponse StartDiskMonitor(StartDiskMonitorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return StartDiskMonitorWithOptions(request, runtime);
-        }
-
-        /**
-          * ## Usage notes
-          * *   CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          * *   CloudLens for EBS can be used to monitor the performance of enhanced SSDs (ESSDs), standard SSDs, and ultra disks. After you enable CloudLens for EBS, you can enable the data collection feature to obtain the near real-time monitoring data. For more information, see [Enable near real-time monitoring for disks](~~354196~~).
-          *
-          * @param request StartDiskMonitorRequest
-          * @return StartDiskMonitorResponse
-         */
-        public async Task<StartDiskMonitorResponse> StartDiskMonitorAsync(StartDiskMonitorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await StartDiskMonitorWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -5419,122 +5435,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartReplicaGroupDrillWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * ## Usage notes
-          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          *
-          * @param tmpReq StopDiskMonitorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopDiskMonitorResponse
-         */
-        public StopDiskMonitorResponse StopDiskMonitorWithOptions(StopDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            StopDiskMonitorShrinkRequest request = new StopDiskMonitorShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
-            {
-                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
-            {
-                query["DiskIds"] = request.DiskIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StopDiskMonitor",
-                Version = "2021-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StopDiskMonitorResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ## Usage notes
-          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          *
-          * @param tmpReq StopDiskMonitorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopDiskMonitorResponse
-         */
-        public async Task<StopDiskMonitorResponse> StopDiskMonitorWithOptionsAsync(StopDiskMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            StopDiskMonitorShrinkRequest request = new StopDiskMonitorShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
-            {
-                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
-            {
-                query["DiskIds"] = request.DiskIdsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "StopDiskMonitor",
-                Version = "2021-07-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<StopDiskMonitorResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ## Usage notes
-          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          *
-          * @param request StopDiskMonitorRequest
-          * @return StopDiskMonitorResponse
-         */
-        public StopDiskMonitorResponse StopDiskMonitor(StopDiskMonitorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return StopDiskMonitorWithOptions(request, runtime);
-        }
-
-        /**
-          * ## Usage notes
-          * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
-          *
-          * @param request StopDiskMonitorRequest
-          * @return StopDiskMonitorResponse
-         */
-        public async Task<StopDiskMonitorResponse> StopDiskMonitorAsync(StopDiskMonitorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await StopDiskMonitorWithOptionsAsync(request, runtime);
         }
 
         /**

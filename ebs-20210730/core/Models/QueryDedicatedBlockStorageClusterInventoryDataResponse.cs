@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class StartDiskMonitorResponse : TeaModel {
+    public class QueryDedicatedBlockStorageClusterInventoryDataResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public StartDiskMonitorResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public QueryDedicatedBlockStorageClusterInventoryDataResponseBody Body { get; set; }
 
     }
 
