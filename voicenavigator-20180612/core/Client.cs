@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["NluServiceParamsJson"] = request.NluServiceParamsJson;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NluServiceType))
+            {
+                query["NluServiceType"] = request.NluServiceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionSource))
             {
                 query["UnionSource"] = request.UnionSource;
@@ -100,6 +104,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["NluServiceParamsJson"] = request.NluServiceParamsJson;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NluServiceType))
+            {
+                query["NluServiceType"] = request.NluServiceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionSource))
             {
                 query["UnionSource"] = request.UnionSource;
@@ -139,9 +147,29 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
+            {
+                query["AccessKey"] = request.AccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
+            {
+                query["PitchRate"] = request.PitchRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretKey))
+            {
+                query["SecretKey"] = request.SecretKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
             {
@@ -182,9 +210,29 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
+            {
+                query["AccessKey"] = request.AccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
+            {
+                query["PitchRate"] = request.PitchRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretKey))
+            {
+                query["SecretKey"] = request.SecretKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
             {
@@ -3061,6 +3109,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["AppKey"] = request.AppKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
+            {
+                query["EngineXunfei"] = request.EngineXunfei;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -3107,6 +3163,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
             {
                 query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
+            {
+                query["EngineXunfei"] = request.EngineXunfei;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {

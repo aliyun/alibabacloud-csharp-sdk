@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class AuditTTSVoiceRequest : TeaModel {
+        [NameInMap("AccessKey")]
+        [Validation(Required=false)]
+        public string AccessKey { get; set; }
+
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("PitchRate")]
+        [Validation(Required=false)]
+        public string PitchRate { get; set; }
+
+        [NameInMap("SecretKey")]
+        [Validation(Required=false)]
+        public string SecretKey { get; set; }
 
         [NameInMap("SpeechRate")]
         [Validation(Required=false)]

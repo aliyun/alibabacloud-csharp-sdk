@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SilenceTimeoutResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public SilenceTimeoutResponseBody Body { get; set; }
 
     }

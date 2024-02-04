@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListConversationDetailsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListConversationDetailsResponseBody Body { get; set; }
 
     }

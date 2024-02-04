@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string NluServiceParamsJson { get; set; }
 
+        [NameInMap("NluServiceType")]
+        [Validation(Required=false)]
+        public string NluServiceType { get; set; }
+
         [NameInMap("UnionSource")]
         [Validation(Required=false)]
         public string UnionSource { get; set; }

@@ -13,9 +13,21 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
+        [NameInMap("EngineXunfei")]
+        [Validation(Required=false)]
+        public string EngineXunfei { get; set; }
+
         [NameInMap("NlsServiceType")]
         [Validation(Required=false)]
         public string NlsServiceType { get; set; }
+
+        [NameInMap("PitchRate")]
+        [Validation(Required=false)]
+        public int? PitchRate { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
