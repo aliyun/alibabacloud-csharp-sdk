@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<HotelOrderQueryResponseBodyModulePassengerList> PassengerList { get; set; }
             public class HotelOrderQueryResponseBodyModulePassengerList : TeaModel {
+                [NameInMap("apply_id")]
+                [Validation(Required=false)]
+                public string ApplyId { get; set; }
+
                 [NameInMap("cost_center_id")]
                 [Validation(Required=false)]
                 public long? CostCenterId { get; set; }
@@ -186,6 +190,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
 
+                [NameInMap("itinerary_id")]
+                [Validation(Required=false)]
+                public string ItineraryId { get; set; }
+
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
@@ -197,6 +205,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("project_title")]
                 [Validation(Required=false)]
                 public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_apply_id")]
+                [Validation(Required=false)]
+                public string ThirdpartApplyId { get; set; }
 
                 [NameInMap("thirdpart_cost_center_id")]
                 [Validation(Required=false)]
