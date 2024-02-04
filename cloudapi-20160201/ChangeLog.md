@@ -1,3 +1,10 @@
+2024-02-04 Version: 1.0.4
+- Update API AbolishApiadd SecurityToken param.
+- Update API AbolishApiForInneradd SecurityToken param.
+- Update API CheckAoneAppAuditadd SecurityToken param.
+- Update API DescribeBidByUserIdForInneradd SecurityToken param.
+
+
 2024-01-25 Version: 1.0.3
 - Generated csharp 2016-02-01 for CloudAPI.
 
