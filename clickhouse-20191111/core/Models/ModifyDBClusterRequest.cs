@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string DBNodeStorage { get; set; }
 
+        [NameInMap("DbNodeStorageType")]
+        [Validation(Required=false)]
+        public string DbNodeStorageType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

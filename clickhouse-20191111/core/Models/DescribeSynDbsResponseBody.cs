@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeSynDbsResponseBody : TeaModel {
+        /// <summary>
+        /// The page number.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -32,8 +38,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<DescribeSynDbsResponseBodySynDbs> SynDbs { get; set; }
         public class DescribeSynDbsResponseBodySynDbs : TeaModel {
             /// <summary>
-            /// *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
-            /// *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
+            /// *   If the value **true** is returned for the **SynStatus** parameter, this parameter is not returned.
+            /// *   If the value **false** is returned for the **SynStatus** parameter, the system returns the ErrorMsg parameter that provides the cause why the data synchronization failed.
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RdsId { get; set; }
 
             /// <summary>
-            /// The account that is used to log on to the ApsaraDB RDS for MySQL database.
+            /// The database account that is used to log on to the ApsaraDB RDS for MySQL instance.
             /// </summary>
             [NameInMap("RdsUserName")]
             [Validation(Required=false)]
@@ -79,6 +85,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

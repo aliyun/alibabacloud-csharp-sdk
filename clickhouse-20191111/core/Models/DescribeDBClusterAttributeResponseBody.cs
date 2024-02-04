@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string AliUid { get; set; }
 
+            /// <summary>
+            /// The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).
+            /// </summary>
             [NameInMap("AppointmentRestartTime")]
             [Validation(Required=false)]
             public string AppointmentRestartTime { get; set; }
@@ -225,10 +228,21 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            /// <summary>
+            /// The extended storage space. Unit: GB.
+            /// </summary>
             [NameInMap("ExtStorageSize")]
             [Validation(Required=false)]
             public int? ExtStorageSize { get; set; }
 
+            /// <summary>
+            /// The extended storage type. Valid values:
+            /// 
+            /// *   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.
+            /// *   **CloudESSD_PL2**: The cluster uses an ESSD of PL 2.
+            /// *   **CloudESSD_PL3**: The cluster uses an ESSD of PL 3.
+            /// *   **CloudEfficiency**: The cluster uses an ultra disk.
+            /// </summary>
             [NameInMap("ExtStorageType")]
             [Validation(Required=false)]
             public string ExtStorageType { get; set; }
@@ -326,6 +340,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -477,6 +494,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public Dictionary<string, object> ZoneIdVswitchMap { get; set; }
 
+            /// <summary>
+            /// The ZooKeeper specifications.
+            /// </summary>
             [NameInMap("ZookeeperClass")]
             [Validation(Required=false)]
             public string ZookeeperClass { get; set; }

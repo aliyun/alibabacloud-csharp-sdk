@@ -6264,6 +6264,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["DBNodeStorage"] = request.DBNodeStorage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbNodeStorageType))
+            {
+                query["DbNodeStorageType"] = request.DbNodeStorageType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -6322,6 +6326,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeStorage))
             {
                 query["DBNodeStorage"] = request.DBNodeStorage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbNodeStorageType))
+            {
+                query["DbNodeStorageType"] = request.DbNodeStorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

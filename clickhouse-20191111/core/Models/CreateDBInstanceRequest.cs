@@ -205,10 +205,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
+        /// <summary>
+        /// 备专有网络交换机
+        /// </summary>
         [NameInMap("VSwitchBak")]
         [Validation(Required=false)]
         public string VSwitchBak { get; set; }
 
+        /// <summary>
+        /// 备专有网络交换机2
+        /// </summary>
         [NameInMap("VSwitchBak2")]
         [Validation(Required=false)]
         public string VSwitchBak2 { get; set; }
