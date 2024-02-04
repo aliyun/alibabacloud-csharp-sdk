@@ -6,6 +6,14 @@
 - Update API UpdateResourceShareupdate response param.
 
 
+2024-02-04 Version: 2.1.5
+- Update API AcceptResourceShareInvitationupdate response param.
+- Update API DeleteResourceShareupdate response param.
+- Update API ListResourceShareAssociationsupdate response param.
+- Update API ListResourceShareInvitationsupdate response param.
+- Update API UpdateResourceShareupdate response param.
+
+
 2024-01-23 Version: 2.1.4
 - Generated csharp 2020-01-10 for ResourceSharing.
 
