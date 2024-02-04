@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Cluster key list.
+        /// </summary>
         [NameInMap("KeyList")]
         [Validation(Required=false)]
         public List<string> KeyList { get; set; }

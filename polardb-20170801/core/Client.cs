@@ -8409,6 +8409,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBEndpointId))
+            {
+                query["DBEndpointId"] = request.DBEndpointId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -8454,6 +8458,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBEndpointId))
+            {
+                query["DBEndpointId"] = request.DBEndpointId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -19027,157 +19035,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-          *
-          * @param request UpgradeDBClusterMinorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeDBClusterMinorVersionResponse
-         */
-        public UpgradeDBClusterMinorVersionResponse UpgradeDBClusterMinorVersionWithOptions(UpgradeDBClusterMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTimeService))
-            {
-                query["FromTimeService"] = request.FromTimeService;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
-            {
-                query["PlannedEndTime"] = request.PlannedEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
-            {
-                query["PlannedStartTime"] = request.PlannedStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpgradeDBClusterMinorVersion",
-                Version = "2017-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpgradeDBClusterMinorVersionResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-          *
-          * @param request UpgradeDBClusterMinorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeDBClusterMinorVersionResponse
-         */
-        public async Task<UpgradeDBClusterMinorVersionResponse> UpgradeDBClusterMinorVersionWithOptionsAsync(UpgradeDBClusterMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTimeService))
-            {
-                query["FromTimeService"] = request.FromTimeService;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedEndTime))
-            {
-                query["PlannedEndTime"] = request.PlannedEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedStartTime))
-            {
-                query["PlannedStartTime"] = request.PlannedStartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpgradeDBClusterMinorVersion",
-                Version = "2017-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpgradeDBClusterMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-          *
-          * @param request UpgradeDBClusterMinorVersionRequest
-          * @return UpgradeDBClusterMinorVersionResponse
-         */
-        public UpgradeDBClusterMinorVersionResponse UpgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpgradeDBClusterMinorVersionWithOptions(request, runtime);
-        }
-
-        /**
-          * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-          *
-          * @param request UpgradeDBClusterMinorVersionRequest
-          * @return UpgradeDBClusterMinorVersionResponse
-         */
-        public async Task<UpgradeDBClusterMinorVersionResponse> UpgradeDBClusterMinorVersionAsync(UpgradeDBClusterMinorVersionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpgradeDBClusterMinorVersionWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * > 
-          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
           *
           * @param request UpgradeDBClusterVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19255,9 +19114,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > 
-          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
           *
           * @param request UpgradeDBClusterVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19335,9 +19193,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > 
-          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
           *
           * @param request UpgradeDBClusterVersionRequest
           * @return UpgradeDBClusterVersionResponse
@@ -19349,9 +19206,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > 
-          * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-          * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+          * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+          * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
           *
           * @param request UpgradeDBClusterVersionRequest
           * @return UpgradeDBClusterVersionResponse

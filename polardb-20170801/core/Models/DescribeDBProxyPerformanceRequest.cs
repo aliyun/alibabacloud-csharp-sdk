@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// The ID of the endpoint.
+        /// </summary>
+        [NameInMap("DBEndpointId")]
+        [Validation(Required=false)]
+        public string DBEndpointId { get; set; }
+
+        /// <summary>
         /// The end of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]

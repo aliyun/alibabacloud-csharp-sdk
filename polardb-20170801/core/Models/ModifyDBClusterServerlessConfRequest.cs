@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:
+        /// 
+        /// *   false: scheduled task
+        /// *   true: immediate task
+        /// </summary>
         [NameInMap("FromTimeService")]
         [Validation(Required=false)]
         public bool? FromTimeService { get; set; }
@@ -38,10 +44,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// > * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+        /// >*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+        /// </summary>
         [NameInMap("PlannedEndTime")]
         [Validation(Required=false)]
         public string PlannedEndTime { get; set; }
 
+        /// <summary>
+        /// The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// > *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
+        /// >*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.
+        /// </summary>
         [NameInMap("PlannedStartTime")]
         [Validation(Required=false)]
         public string PlannedStartTime { get; set; }
@@ -54,10 +71,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The maximum number of stable AP read-only nodes. Valid values: 0 to 7.
+        /// </summary>
         [NameInMap("ScaleApRoNumMax")]
         [Validation(Required=false)]
         public string ScaleApRoNumMax { get; set; }
 
+        /// <summary>
+        /// The minimum number of stable AP read-only nodes. Valid values: 0 to 7.
+        /// </summary>
         [NameInMap("ScaleApRoNumMin")]
         [Validation(Required=false)]
         public string ScaleApRoNumMin { get; set; }

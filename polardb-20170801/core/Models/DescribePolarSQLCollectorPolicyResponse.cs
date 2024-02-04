@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarSQLCollectorPolicyResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribePolarSQLCollectorPolicyResponseBody Body { get; set; }
 
     }
