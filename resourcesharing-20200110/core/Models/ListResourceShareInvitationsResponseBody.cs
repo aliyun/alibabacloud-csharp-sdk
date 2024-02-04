@@ -54,6 +54,18 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
+                [NameInMap("FailureDescription")]
+                [Validation(Required=false)]
+                public string FailureDescription { get; set; }
+
+                [NameInMap("FailureReason")]
+                [Validation(Required=false)]
+                public string FailureReason { get; set; }
+
+                [NameInMap("OperationType")]
+                [Validation(Required=false)]
+                public string OperationType { get; set; }
+
                 /// <summary>
                 /// The ID of the shared resource.
                 /// </summary>
