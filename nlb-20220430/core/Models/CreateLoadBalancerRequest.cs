@@ -213,6 +213,18 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public string AllocationId { get; set; }
 
+            [NameInMap("Ipv4LocalAddresses")]
+            [Validation(Required=false)]
+            public List<string> Ipv4LocalAddresses { get; set; }
+
+            [NameInMap("Ipv6Address")]
+            [Validation(Required=false)]
+            public string Ipv6Address { get; set; }
+
+            [NameInMap("Ipv6LocalAddresses")]
+            [Validation(Required=false)]
+            public List<string> Ipv6LocalAddresses { get; set; }
+
             /// <summary>
             /// The private IP address. You must add at least two zones. You can add a maximum of 10 zones.
             /// </summary>

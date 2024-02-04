@@ -327,12 +327,20 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 [Validation(Required=false)]
                 public string EniId { get; set; }
 
+                [NameInMap("Ipv4LocalAddresses")]
+                [Validation(Required=false)]
+                public List<string> Ipv4LocalAddresses { get; set; }
+
                 /// <summary>
                 /// The IPv6 address of the NLB instance.
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
+
+                [NameInMap("Ipv6LocalAddresses")]
+                [Validation(Required=false)]
+                public List<string> Ipv6LocalAddresses { get; set; }
 
                 /// <summary>
                 /// The private IPv4 address of the NLB instance.
