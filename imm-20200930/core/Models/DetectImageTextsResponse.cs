@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateFigureClustersMergingTaskResponse : TeaModel {
+    public class DetectImageTextsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateFigureClustersMergingTaskResponseBody Body { get; set; }
+        public DetectImageTextsResponseBody Body { get; set; }
 
     }
 

@@ -1,0 +1,26 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Imm20200930.Models
+{
+    public class DetectImageTextsResponseBody : TeaModel {
+        [NameInMap("OCRContents")]
+        [Validation(Required=false)]
+        public List<OCRContents> OCRContents { get; set; }
+
+        [NameInMap("OCRTexts")]
+        [Validation(Required=false)]
+        public string OCRTexts { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
