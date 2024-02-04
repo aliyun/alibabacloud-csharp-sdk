@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.Trademark20180724.Models
                     [Validation(Required=false)]
                     public string TrademarkNumber { get; set; }
 
+                    [NameInMap("UserId")]
+                    [Validation(Required=false)]
+                    public string UserId { get; set; }
+
                 }
 
             }
