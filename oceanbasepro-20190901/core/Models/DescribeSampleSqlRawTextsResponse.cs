@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class KillProcessListResponse : TeaModel {
+    public class DescribeSampleSqlRawTextsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public KillProcessListResponseBody Body { get; set; }
+        public DescribeSampleSqlRawTextsResponseBody Body { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public List<DescribeAvailableCpuResourceResponseBodyData> Data { get; set; }
         public class DescribeAvailableCpuResourceResponseBodyData : TeaModel {
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
+
             [NameInMap("MaxCpu")]
             [Validation(Required=false)]
             public long? MaxCpu { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("MinCpu")]
             [Validation(Required=false)]
             public long? MinCpu { get; set; }
+
+            [NameInMap("ReviewCode")]
+            [Validation(Required=false)]
+            public string ReviewCode { get; set; }
 
             [NameInMap("UnitNum")]
             [Validation(Required=false)]

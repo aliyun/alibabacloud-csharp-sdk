@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public double? AvgGetPlanTime { get; set; }
 
+            [NameInMap("AvgLogicalReads")]
+            [Validation(Required=false)]
+            public float? AvgLogicalReads { get; set; }
+
+            [NameInMap("AvgRetryCount")]
+            [Validation(Required=false)]
+            public float? AvgRetryCount { get; set; }
+
             /// <summary>
             /// CPU time of the suspicious SQL.
             /// </summary>
@@ -121,6 +129,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public double? AvgGetPlanTime { get; set; }
 
+                [NameInMap("AvgLogicalReads")]
+                [Validation(Required=false)]
+                public float? AvgLogicalReads { get; set; }
+
+                [NameInMap("AvgRetryCount")]
+                [Validation(Required=false)]
+                public float? AvgRetryCount { get; set; }
+
                 [NameInMap("CpuTime")]
                 [Validation(Required=false)]
                 public double? CpuTime { get; set; }
@@ -169,6 +185,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string SumElapsedTime { get; set; }
 
+                [NameInMap("SumRetryCount")]
+                [Validation(Required=false)]
+                public float? SumRetryCount { get; set; }
+
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
@@ -199,6 +219,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("SumElapsedTime")]
             [Validation(Required=false)]
             public string SumElapsedTime { get; set; }
+
+            [NameInMap("SumRetryCount")]
+            [Validation(Required=false)]
+            public float? SumRetryCount { get; set; }
 
             /// <summary>
             /// Username.

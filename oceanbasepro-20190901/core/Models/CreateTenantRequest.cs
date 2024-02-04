@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The size of the log disk allocated to the tenant, in GB.
+        /// </summary>
         [NameInMap("LogDisk")]
         [Validation(Required=false)]
         public long? LogDisk { get; set; }
@@ -61,6 +64,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
+        /// <summary>
+        /// Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).
+        /// ><notice><br>At present, this parameter is unavailable.></notice>
+        /// </summary>
         [NameInMap("ReadOnlyZoneList")]
         [Validation(Required=false)]
         public string ReadOnlyZoneList { get; set; }

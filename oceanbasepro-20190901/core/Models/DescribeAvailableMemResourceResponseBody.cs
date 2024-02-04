@@ -10,34 +10,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeAvailableMemResourceResponseBody : TeaModel {
         /// <summary>
-        /// ```
-        /// http(s)://[Endpoint]/?Action=DescribeAvailableMemResource
-        /// &InstanceId=ob317v4uif****
-        /// &TenantId=ob2mr3oae0****
-        /// &UnitNum=2
-        /// &CpuNum=14
-        /// &Common request parameters
-        /// ```
+        /// The available memory size.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAvailableMemResourceResponseBodyData Data { get; set; }
         public class DescribeAvailableMemResourceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The maximum memory size for each resource unit, in GB.
+            /// </summary>
             [NameInMap("MaxMem")]
             [Validation(Required=false)]
             public long? MaxMem { get; set; }
 
             /// <summary>
-            /// You can call this operation to query the available memory resource of an OceanBase Database tenant.
+            /// The minimum memory size required for each resource unit, in GB.
             /// </summary>
             [NameInMap("MinMem")]
             [Validation(Required=false)]
             public long? MinMem { get; set; }
 
+            /// <summary>
+            /// The maximum allowed memory usage, in GB.
+            /// </summary>
             [NameInMap("SafeMem")]
             [Validation(Required=false)]
             public string SafeMem { get; set; }
 
+            /// <summary>
+            /// The number of resource units in the tenant.
+            /// </summary>
             [NameInMap("UsedMem")]
             [Validation(Required=false)]
             public long? UsedMem { get; set; }
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The number of CPU cores.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

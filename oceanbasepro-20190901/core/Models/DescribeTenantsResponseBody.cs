@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("EnableReadOnlyReplica")]
+            [Validation(Required=false)]
+            public bool? EnableReadOnlyReplica { get; set; }
+
             /// <summary>
             /// The number of the page to return.   
             /// Start value: 1

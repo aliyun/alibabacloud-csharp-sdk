@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableParallelQuery { get; set; }
 
+            [NameInMap("EnableReadOnlyReplica")]
+            [Validation(Required=false)]
+            public bool? EnableReadOnlyReplica { get; set; }
+
             [NameInMap("EnableReadWriteSplit")]
             [Validation(Required=false)]
             public bool? EnableReadWriteSplit { get; set; }

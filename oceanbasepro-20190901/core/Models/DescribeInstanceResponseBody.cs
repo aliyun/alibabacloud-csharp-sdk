@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public long? UpperMergeThreshold { get; set; }
 
+                [NameInMap("UpperScaleStep")]
+                [Validation(Required=false)]
+                public string UpperScaleStep { get; set; }
+
+                [NameInMap("UpperScaleStrategy")]
+                [Validation(Required=false)]
+                public string UpperScaleStrategy { get; set; }
+
                 [NameInMap("UpperThreshold")]
                 [Validation(Required=false)]
                 public long? UpperThreshold { get; set; }
@@ -119,9 +127,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableProxyService { get; set; }
 
+            [NameInMap("EnableReadOnlyReplica")]
+            [Validation(Required=false)]
+            public bool? EnableReadOnlyReplica { get; set; }
+
+            [NameInMap("EnableReadOnlyReplicaManagement")]
+            [Validation(Required=false)]
+            public bool? EnableReadOnlyReplicaManagement { get; set; }
+
             [NameInMap("EnableUpgradeLogDisk")]
             [Validation(Required=false)]
             public bool? EnableUpgradeLogDisk { get; set; }
+
+            [NameInMap("ExclusiveUnitNumLimit")]
+            [Validation(Required=false)]
+            public int? ExclusiveUnitNumLimit { get; set; }
 
             /// <summary>
             /// The information of the OceanBase cluster.
@@ -566,6 +586,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Series { get; set; }
 
+            [NameInMap("SharedUnitNumLimit")]
+            [Validation(Required=false)]
+            public int? SharedUnitNumLimit { get; set; }
+
             /// <summary>
             /// The information about cluster resources.
             /// </summary>
@@ -586,6 +610,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 public bool? EnableCreateTenant { get; set; }
 
             }
+
+            [NameInMap("UnitSpec")]
+            [Validation(Required=false)]
+            public string UnitSpec { get; set; }
 
             /// <summary>
             /// You can call this operation to query the detailed information of an OceanBase cluster.

@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public double? AvgCpuTime { get; set; }
 
+            [NameInMap("AvgDbTime")]
+            [Validation(Required=false)]
+            public double? AvgDbTime { get; set; }
+
             /// <summary>
             /// Average syntax parsing time (in milliseconds) during the execution period.
             /// </summary>
@@ -435,6 +439,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("StrongConsistencyPercentage")]
             [Validation(Required=false)]
             public double? StrongConsistencyPercentage { get; set; }
+
+            [NameInMap("SumDbTime")]
+            [Validation(Required=false)]
+            public double? SumDbTime { get; set; }
 
             /// <summary>
             /// Total response time (in milliseconds) during the execution period.

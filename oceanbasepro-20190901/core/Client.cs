@@ -2402,7 +2402,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
           *
           * @param request DeleteInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2444,7 +2446,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
           *
           * @param request DeleteInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2486,7 +2490,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
           *
           * @param request DeleteInstancesRequest
           * @return DeleteInstancesResponse
@@ -2498,7 +2504,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
           *
           * @param request DeleteInstancesRequest
           * @return DeleteInstancesResponse
@@ -6951,6 +6959,128 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return await DescribeSQLSamplesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeSampleSqlRawTextsResponse DescribeSampleSqlRawTextsWithOptions(DescribeSampleSqlRawTextsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                body["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSampleSqlRawTexts",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSampleSqlRawTextsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeSampleSqlRawTextsResponse> DescribeSampleSqlRawTextsWithOptionsAsync(DescribeSampleSqlRawTextsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                body["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSampleSqlRawTexts",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSampleSqlRawTextsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeSampleSqlRawTextsResponse DescribeSampleSqlRawTexts(DescribeSampleSqlRawTextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSampleSqlRawTextsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSampleSqlRawTextsResponse> DescribeSampleSqlRawTextsAsync(DescribeSampleSqlRawTextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSampleSqlRawTextsWithOptionsAsync(request, runtime);
+        }
+
         public DescribeSecurityIpGroupsResponse DescribeSecurityIpGroupsWithOptions(DescribeSecurityIpGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10227,6 +10357,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["UserVSwitchId"] = request.UserVSwitchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -10281,6 +10415,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVSwitchId))
             {
                 body["UserVSwitchId"] = request.UserVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

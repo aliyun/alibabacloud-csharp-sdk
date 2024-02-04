@@ -9,31 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// 实例ID
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateInstanceResponseBodyData Data { get; set; }
         public class CreateInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The result of the dry-run request.
+            /// 
+            /// If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
+            /// If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
+            /// </summary>
             [NameInMap("DryRunResult")]
             [Validation(Required=false)]
             public bool? DryRunResult { get; set; }
 
             /// <summary>
-            /// 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。
+            /// Instance ID.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// 资源组ID
+            /// Order ID. The ID of the order that you have placed.
+            /// This parameter returns a value after you create a pre-paid or post-paid cluster.
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
+            /// <summary>
+            /// Resource group ID.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -41,7 +48,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// Response parameters
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

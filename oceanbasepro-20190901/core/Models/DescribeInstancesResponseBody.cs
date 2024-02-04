@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public long? UpperMergeThreshold { get; set; }
 
+                [NameInMap("UpperScaleStrategy")]
+                [Validation(Required=false)]
+                public string UpperScaleStrategy { get; set; }
+
                 [NameInMap("UpperThreshold")]
                 [Validation(Required=false)]
                 public long? UpperThreshold { get; set; }
@@ -112,6 +116,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
+
+            [NameInMap("EnableReadOnlyReplicaManagement")]
+            [Validation(Required=false)]
+            public bool? EnableReadOnlyReplicaManagement { get; set; }
 
             /// <summary>
             /// The ID of the OceanBase cluster.
