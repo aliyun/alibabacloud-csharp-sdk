@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SceneCode { get; set; }
 
+        [NameInMap("SecurityLevel")]
+        [Validation(Required=false)]
+        public string SecurityLevel { get; set; }
+
         [NameInMap("ServiceLevel")]
         [Validation(Required=false)]
         public string ServiceLevel { get; set; }
