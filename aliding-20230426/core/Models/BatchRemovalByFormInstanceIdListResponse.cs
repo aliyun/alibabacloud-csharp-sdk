@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class BatchRemovalByFormInstanceIdListResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public BatchRemovalByFormInstanceIdListResponseBody Body { get; set; }
 
     }

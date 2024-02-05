@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class SendSearchShadeResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public SendSearchShadeResponseBody Body { get; set; }
 
     }
