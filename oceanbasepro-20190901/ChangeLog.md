@@ -1,6 +1,9 @@
 2024-02-06 Version: 2.4.0
 - Generated csharp 2019-09-01 for OceanBasePro.
 
+2024-02-06 Version: 2.4.0
+- Generated csharp 2019-09-01 for OceanBasePro.
+
 2024-02-04 Version: 2.3.0
 - Support API DescribeSampleSqlRawTexts.
 - Update API CreateInstanceupdate InstanceClass param.
