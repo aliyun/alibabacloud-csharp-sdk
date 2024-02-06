@@ -3543,6 +3543,80 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return await DescribeAvailableZoneWithOptionsAsync(request, runtime);
         }
 
+        public DescribeBackupSetDownloadLinkResponse DescribeBackupSetDownloadLinkWithOptions(DescribeBackupSetDownloadLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadTaskId))
+            {
+                body["DownloadTaskId"] = request.DownloadTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupSetDownloadLink",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupSetDownloadLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeBackupSetDownloadLinkResponse> DescribeBackupSetDownloadLinkWithOptionsAsync(DescribeBackupSetDownloadLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadTaskId))
+            {
+                body["DownloadTaskId"] = request.DownloadTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupSetDownloadLink",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupSetDownloadLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeBackupSetDownloadLinkResponse DescribeBackupSetDownloadLink(DescribeBackupSetDownloadLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBackupSetDownloadLinkWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeBackupSetDownloadLinkResponse> DescribeBackupSetDownloadLinkAsync(DescribeBackupSetDownloadLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBackupSetDownloadLinkWithOptionsAsync(request, runtime);
+        }
+
         public DescribeCharsetResponse DescribeCharsetWithOptions(DescribeCharsetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
