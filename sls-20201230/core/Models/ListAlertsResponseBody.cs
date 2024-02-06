@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("results")]
         [Validation(Required=false)]
-        public List<AlertResp> Results { get; set; }
+        public List<Alert> Results { get; set; }
 
         [NameInMap("total")]
         [Validation(Required=false)]

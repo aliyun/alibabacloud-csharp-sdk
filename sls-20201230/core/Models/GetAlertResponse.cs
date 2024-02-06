@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetAlertResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public AlertResp Body { get; set; }
+        [Validation(Required=false)]
+        public Alert Body { get; set; }
 
     }
 

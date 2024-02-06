@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateAlertRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("configuration")]
         [Validation(Required=false)]
-        public UpdateAlertReq Body { get; set; }
+        public AlertConfiguration Configuration { get; set; }
+
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("displayName")]
+        [Validation(Required=false)]
+        public string DisplayName { get; set; }
+
+        [NameInMap("schedule")]
+        [Validation(Required=false)]
+        public Schedule Schedule { get; set; }
 
     }
 
