@@ -1133,6 +1133,122 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyApproveWithOptionsAsync(request, headers, runtime);
         }
 
+        public ApplyExternalNodeStatusUpdateResponse ApplyExternalNodeStatusUpdateWithOptions(ApplyExternalNodeStatusUpdateRequest tmpReq, ApplyExternalNodeStatusUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyExternalNodeStatusUpdateShrinkRequest request = new ApplyExternalNodeStatusUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperationRecords))
+            {
+                request.OperationRecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationRecords, "operation_records", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["node_id"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationRecordsShrink))
+            {
+                body["operation_records"] = request.OperationRecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessActionResult))
+            {
+                body["process_action_result"] = request.ProcessActionResult;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyExternalNodeStatusUpdate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/apply/v1/external-nodes/action/status-update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyExternalNodeStatusUpdateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ApplyExternalNodeStatusUpdateResponse> ApplyExternalNodeStatusUpdateWithOptionsAsync(ApplyExternalNodeStatusUpdateRequest tmpReq, ApplyExternalNodeStatusUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyExternalNodeStatusUpdateShrinkRequest request = new ApplyExternalNodeStatusUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperationRecords))
+            {
+                request.OperationRecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationRecords, "operation_records", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["node_id"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationRecordsShrink))
+            {
+                body["operation_records"] = request.OperationRecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessActionResult))
+            {
+                body["process_action_result"] = request.ProcessActionResult;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyExternalNodeStatusUpdate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/apply/v1/external-nodes/action/status-update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyExternalNodeStatusUpdateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ApplyExternalNodeStatusUpdateResponse ApplyExternalNodeStatusUpdate(ApplyExternalNodeStatusUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyExternalNodeStatusUpdateHeaders headers = new ApplyExternalNodeStatusUpdateHeaders();
+            return ApplyExternalNodeStatusUpdateWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ApplyExternalNodeStatusUpdateResponse> ApplyExternalNodeStatusUpdateAsync(ApplyExternalNodeStatusUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyExternalNodeStatusUpdateHeaders headers = new ApplyExternalNodeStatusUpdateHeaders();
+            return await ApplyExternalNodeStatusUpdateWithOptionsAsync(request, headers, runtime);
+        }
+
         public ApplyInvoiceTaskResponse ApplyInvoiceTaskWithOptions(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);

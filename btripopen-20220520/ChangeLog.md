@@ -1,3 +1,6 @@
+2024-02-06 Version: 1.11.0
+- Generated csharp 2022-05-20 for btripOpen.
+
 2024-02-04 Version: 1.10.6
 - Update API HotelOrderQueryupdate response param.
 
