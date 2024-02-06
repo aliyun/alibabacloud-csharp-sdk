@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
-    public class QueryMappCenterAppResponse : TeaModel {
+    public class QueryInfoFromMdpResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public QueryMappCenterAppResponseBody Body { get; set; }
+        public QueryInfoFromMdpResponseBody Body { get; set; }
 
     }
 
