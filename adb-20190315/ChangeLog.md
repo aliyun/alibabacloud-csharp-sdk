@@ -1,3 +1,6 @@
+2024-02-06 Version: 3.1.2
+- Generated csharp 2019-03-15 for adb.
+
 2023-12-27 Version: 3.1.1
 - Generated csharp 2019-03-15 for adb.
 
