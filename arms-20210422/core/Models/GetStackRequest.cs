@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class GetStackRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [NameInMap("RpcID")]
         [Validation(Required=false)]
         public string RpcID { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         [NameInMap("TraceID")]
         [Validation(Required=false)]

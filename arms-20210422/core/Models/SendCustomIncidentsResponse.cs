@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class SendCustomIncidentsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public SendCustomIncidentsResponseBody Body { get; set; }
 
     }

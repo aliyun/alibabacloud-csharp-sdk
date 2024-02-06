@@ -3309,6 +3309,10 @@ namespace AlibabaCloud.SDK.ARMS20210422
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
             {
                 query["Pid"] = request.Pid;
@@ -3320,6 +3324,10 @@ namespace AlibabaCloud.SDK.ARMS20210422
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RpcID))
             {
                 query["RpcID"] = request.RpcID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceID))
             {
@@ -3348,6 +3356,10 @@ namespace AlibabaCloud.SDK.ARMS20210422
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
             {
                 query["Pid"] = request.Pid;
@@ -3359,6 +3371,10 @@ namespace AlibabaCloud.SDK.ARMS20210422
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RpcID))
             {
                 query["RpcID"] = request.RpcID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceID))
             {
