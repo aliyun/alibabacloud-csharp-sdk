@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string RuntimeVersion { get; set; }
 
+        [NameInMap("use_replace")]
+        [Validation(Required=false)]
+        public bool? UseReplace { get; set; }
+
     }
 
 }

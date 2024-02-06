@@ -11283,6 +11283,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["runtime_version"] = request.RuntimeVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseReplace))
+            {
+                body["use_replace"] = request.UseReplace;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11330,6 +11334,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeVersion))
             {
                 body["runtime_version"] = request.RuntimeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseReplace))
+            {
+                body["use_replace"] = request.UseReplace;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
