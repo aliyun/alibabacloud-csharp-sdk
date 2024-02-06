@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteDiskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the disk.
+        /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }

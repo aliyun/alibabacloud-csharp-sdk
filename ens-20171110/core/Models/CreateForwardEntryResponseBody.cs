@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateForwardEntryResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the DNAT entry.
+        /// </summary>
         [NameInMap("ForwardEntryId")]
         [Validation(Required=false)]
         public string ForwardEntryId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

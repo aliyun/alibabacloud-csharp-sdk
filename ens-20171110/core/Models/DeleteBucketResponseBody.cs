@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeEnsNetLevelRequest : TeaModel {
-        [NameInMap("Version")]
+    public class DeleteBucketResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEnsServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The service code. 0 is returned for a successful request. An error code is returned for a failed request.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

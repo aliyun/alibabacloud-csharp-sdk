@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeAICInstanceImageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the AIC image.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// The IDs of the servers.
+        /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]
         public List<string> ServerIds { get; set; }
 
+        /// <summary>
+        /// The timeout period of the update. Unit: seconds.
+        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }

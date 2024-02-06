@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateClassicNetworkResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the network.
+        /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

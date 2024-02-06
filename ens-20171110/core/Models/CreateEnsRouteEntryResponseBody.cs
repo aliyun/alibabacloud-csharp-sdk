@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEnsRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the route.
+        /// </summary>
         [NameInMap("RouteEntryId")]
         [Validation(Required=false)]
         public string RouteEntryId { get; set; }

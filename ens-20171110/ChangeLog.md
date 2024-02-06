@@ -1,3 +1,6 @@
+2024-02-06 Version: 4.0.0
+- Generated csharp 2017-11-10 for Ens.
+
 2023-07-20 Version: 3.0.18
 - Support clouddisk API.
 

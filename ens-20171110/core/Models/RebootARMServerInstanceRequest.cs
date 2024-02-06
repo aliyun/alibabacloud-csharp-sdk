@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RebootARMServerInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the server.
+        /// </summary>
         [NameInMap("ServerId")]
         [Validation(Required=false)]
         public string ServerId { get; set; }
-
-        [NameInMap("ServerIds")]
-        [Validation(Required=false)]
-        public List<string> ServerIds { get; set; }
 
     }
 

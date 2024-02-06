@@ -9,25 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeBandwitdhByInternetChargeTypeRequest : TeaModel {
+        /// <summary>
+        /// The end of the time range to query.
+        /// 
+        /// *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// The Internet service provider (ISP). Valid values:
+        /// 
+        /// *   cmcc: China Mobile
+        /// *   telecom: China Telecom
+        /// *   unicom: China Unicom
+        /// *   multiCarrier: multi-line ISP
+        /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
 
+        /// <summary>
+        /// The beginning of the time range to query.
+        /// 
+        /// *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

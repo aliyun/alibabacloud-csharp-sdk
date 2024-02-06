@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeReservedResourceRequest : TeaModel {
-        [NameInMap("Version")]
+    public class DeleteSnapshotRequest : TeaModel {
+        /// <summary>
+        /// The ID of the snapshot.
+        /// </summary>
+        [NameInMap("SnapshotId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string SnapshotId { get; set; }
 
     }
 

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNetworkAclResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the network ACL.
+        /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

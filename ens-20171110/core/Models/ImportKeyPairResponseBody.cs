@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ImportKeyPairResponseBody : TeaModel {
+        /// <summary>
+        /// The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.
+        /// </summary>
         [NameInMap("KeyPairFingerPrint")]
         [Validation(Required=false)]
         public string KeyPairFingerPrint { get; set; }
 
+        /// <summary>
+        /// The name of the key pair.
+        /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

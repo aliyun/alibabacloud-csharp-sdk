@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateMountTargetRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the file system.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// The name of the mount target.
+        /// </summary>
         [NameInMap("MountTargetName")]
         [Validation(Required=false)]
         public string MountTargetName { get; set; }
 
+        /// <summary>
+        /// The ID of the network.
+        /// </summary>
         [NameInMap("NetWorkId")]
         [Validation(Required=false)]
         public string NetWorkId { get; set; }

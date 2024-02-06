@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeRegionIspsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the node. You can specify only one node ID in a call.
+        /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }

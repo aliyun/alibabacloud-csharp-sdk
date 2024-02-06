@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeAvailableResourceRequest : TeaModel {
-        [NameInMap("Version")]
+    public class PutBucketLifecycleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string RequestId { get; set; }
 
     }
 

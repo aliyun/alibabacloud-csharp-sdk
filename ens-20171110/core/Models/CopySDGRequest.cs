@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RebootARMServerInstanceShrinkRequest : TeaModel {
-        [NameInMap("ServerId")]
+    public class CopySDGRequest : TeaModel {
+        [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
-        public string ServerId { get; set; }
+        public List<string> DestinationRegionIds { get; set; }
 
-        [NameInMap("ServerIds")]
+        [NameInMap("SDGId")]
         [Validation(Required=false)]
-        public string ServerIdsShrink { get; set; }
+        public string SDGId { get; set; }
 
     }
 

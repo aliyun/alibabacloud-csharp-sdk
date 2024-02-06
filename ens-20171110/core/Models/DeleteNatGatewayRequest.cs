@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNatGatewayRequest : TeaModel {
+        /// <summary>
+        /// The ID of the NAT gateway that you want to delete.
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }

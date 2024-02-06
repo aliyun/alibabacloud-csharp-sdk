@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkInterfacesResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the ENIs.
+        /// </summary>
         [NameInMap("NetworkInterfaceSets")]
         [Validation(Required=false)]
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets NetworkInterfaceSets { get; set; }
@@ -17,34 +20,82 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> NetworkInterfaceSet { get; set; }
             public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet : TeaModel {
+                /// <summary>
+                /// The time when the ENI was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
+                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                /// <summary>
+                /// The description of the ENI.
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// The ID of the edge node.
+                /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
+                /// <summary>
+                /// The ID of the instance to which the ENI is attached.
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// The media access control (MAC) address of the ENI.
+                /// </summary>
                 [NameInMap("MacAddress")]
                 [Validation(Required=false)]
                 public string MacAddress { get; set; }
 
+                /// <summary>
+                /// The ID of the network.
+                /// </summary>
+                [NameInMap("NetworkId")]
+                [Validation(Required=false)]
+                public string NetworkId { get; set; }
+
+                /// <summary>
+                /// The ID of the ENI.
+                /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
 
+                /// <summary>
+                /// The name of the ENI.
+                /// </summary>
+                [NameInMap("NetworkInterfaceName")]
+                [Validation(Required=false)]
+                public string NetworkInterfaceName { get; set; }
+
+                /// <summary>
+                /// The primary private IP address.
+                /// </summary>
                 [NameInMap("PrimaryIp")]
                 [Validation(Required=false)]
                 public string PrimaryIp { get; set; }
 
+                /// <summary>
+                /// The type of the primary IP address. Valid values:
+                /// 
+                /// *   **Public**: public endpoint.
+                /// *   **Private**: internal endpoint.
+                /// </summary>
                 [NameInMap("PrimaryIpType")]
                 [Validation(Required=false)]
                 public string PrimaryIpType { get; set; }
 
+                /// <summary>
+                /// Details about the private IP addresses.
+                /// </summary>
                 [NameInMap("PrivateIpSets")]
                 [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets PrivateIpSets { get; set; }
@@ -53,10 +104,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet : TeaModel {
+                        /// <summary>
+                        /// Indicates whether the IP address is the primary private IP address. Valid values:
+                        /// 
+                        /// *   true: The IP address is the primary private IP address.
+                        /// *   false: The IP address is the secondary private IP address.
+                        /// </summary>
                         [NameInMap("Primary")]
                         [Validation(Required=false)]
                         public bool? Primary { get; set; }
 
+                        /// <summary>
+                        /// The private IP address.
+                        /// </summary>
                         [NameInMap("PrivateIpAddress")]
                         [Validation(Required=false)]
                         public string PrivateIpAddress { get; set; }
@@ -65,10 +125,45 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                /// <summary>
+                /// IDs of security groups.
+                /// </summary>
+                [NameInMap("SecurityGroupIds")]
+                [Validation(Required=false)]
+                public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds SecurityGroupIds { get; set; }
+                public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds : TeaModel {
+                    [NameInMap("SecurityGroup")]
+                    [Validation(Required=false)]
+                    public List<string> SecurityGroup { get; set; }
+
+                }
+
+                /// <summary>
+                /// The status of the ENI. Valid values:
+                /// 
+                /// *   Available: The ENI is available.
+                /// *   Attaching: The ENI is being attached to an instance.
+                /// *   InUse: The ENI is attached to an instance.
+                /// *   Detaching: The ENI is being detached from an instance.
+                /// *   Deleting: The ENI is being deleted.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The type of the ENI. Valid values:
+                /// 
+                /// *   Primary
+                /// *   Secondary
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// The ID of the vSwitch.
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -77,18 +172,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        /// <summary>
+        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries in the list.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnAssociateEnsEipAddressRequest : TeaModel {
+        /// <summary>
+        /// The ID of the EIP.
+        /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }

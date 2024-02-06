@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeInstanceTypesRequest : TeaModel {
-        [NameInMap("Version")]
+    public class PutBucketAclResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class JoinPublicIpsToEpnInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the EPN instance.
+        /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
+        /// <summary>
+        /// The information about the public IP address that you want to add to the EPN instance.
+        /// </summary>
         [NameInMap("InstanceInfos")]
         [Validation(Required=false)]
         public string InstanceInfos { get; set; }

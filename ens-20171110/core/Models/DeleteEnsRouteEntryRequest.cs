@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteEnsRouteEntryRequest : TeaModel {
+        /// <summary>
+        /// The ID of the route that you want to delete.
+        /// </summary>
         [NameInMap("RouteEntryId")]
         [Validation(Required=false)]
         public string RouteEntryId { get; set; }

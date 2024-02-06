@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeRegionBandwidthQuotaResponse : TeaModel {
+    public class CreateSnapshotResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public DescribeRegionBandwidthQuotaResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public CreateSnapshotResponseBody Body { get; set; }
 
     }
 

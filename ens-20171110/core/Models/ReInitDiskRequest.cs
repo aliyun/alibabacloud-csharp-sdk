@@ -9,20 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReInitDiskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the disk to be initialized. You can initialize only one disk at a time.
+        /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        /// <summary>
+        /// The ID of the image to use to create the instance.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
-
-        /// <summary>
-        /// 2017-11-10
-        /// </summary>
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

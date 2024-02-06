@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNetworkAclRequest : TeaModel {
+        /// <summary>
+        /// The ID of the network ACL.
+        /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }

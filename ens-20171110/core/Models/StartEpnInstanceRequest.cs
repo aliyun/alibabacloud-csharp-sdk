@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartEpnInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the EPN instance.
+        /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
         public string EPNInstanceId { get; set; }

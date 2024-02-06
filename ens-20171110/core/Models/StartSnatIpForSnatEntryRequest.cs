@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartSnatIpForSnatEntryRequest : TeaModel {
+        /// <summary>
+        /// The ID of the SNAT entry.
+        /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
         public string SnatEntryId { get; set; }
 
+        /// <summary>
+        /// The EIP specified in the SNAT entry.
+        /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]
         public string SnatIp { get; set; }

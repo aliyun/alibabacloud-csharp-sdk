@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerSpecRequest : TeaModel {
+        /// <summary>
+        /// The specifications of the ELB instance.
+        /// </summary>
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
         public string LoadBalancerSpec { get; set; }

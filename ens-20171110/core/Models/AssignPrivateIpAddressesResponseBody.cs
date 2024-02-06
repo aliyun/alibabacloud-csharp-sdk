@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AssignPrivateIpAddressesResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
+        /// </summary>
         [NameInMap("AssignedPrivateIpAddressesSet")]
         [Validation(Required=false)]
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
         public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet : TeaModel {
+            /// <summary>
+            /// The ID of the ENI.
+            /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
 
+            /// <summary>
+            /// The secondary private IP addresses that are assigned to the ENI.
+            /// </summary>
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
             public List<string> PrivateIpSet { get; set; }
@@ -24,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

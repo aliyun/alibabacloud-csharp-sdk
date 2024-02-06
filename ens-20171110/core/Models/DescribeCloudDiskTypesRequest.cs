@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCloudDiskTypesRequest : TeaModel {
         /// <summary>
-        /// A short description of struct
+        /// The ID of the edge node.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]

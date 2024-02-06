@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSecurityGroupRequest : TeaModel {
+        /// <summary>
+        /// The security group ID of the instance.
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

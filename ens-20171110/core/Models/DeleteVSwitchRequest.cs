@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteVSwitchRequest : TeaModel {
+        /// <summary>
+        /// The ID of the vSwitch.
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

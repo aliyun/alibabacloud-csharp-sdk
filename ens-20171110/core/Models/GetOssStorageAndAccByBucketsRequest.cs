@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetOssStorageAndAccByBucketsRequest : TeaModel {
+        /// <summary>
+        /// The information about the bucket.
+        /// </summary>
         [NameInMap("BucketList")]
         [Validation(Required=false)]
         public string BucketList { get; set; }

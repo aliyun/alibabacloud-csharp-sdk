@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceVncUrlResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The URL of the VNC management terminal.
+        /// </summary>
         [NameInMap("VncUrl")]
         [Validation(Required=false)]
         public string VncUrl { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteForwardEntryRequest : TeaModel {
+        /// <summary>
+        /// The ID of the DNAT entry that you want to delete.
+        /// </summary>
         [NameInMap("ForwardEntryId")]
         [Validation(Required=false)]
         public string ForwardEntryId { get; set; }

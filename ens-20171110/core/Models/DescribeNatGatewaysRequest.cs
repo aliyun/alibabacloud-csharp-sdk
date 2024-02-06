@@ -9,30 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNatGatewaysRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Edge Node Service (ENS) node.
+        /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// The name of the NAT gateway.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The ID of the NAT gateway.
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// The ID of the network.
+        /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
+        /// <summary>
+        /// The page number. Pages start from page **1**.
+        /// 
+        /// Default value: **1**.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. The maximum value is **100**.
+        /// 
+        /// Default value: **10**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the vSwitch.
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

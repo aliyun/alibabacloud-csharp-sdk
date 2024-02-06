@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeRegionBandwidthQuotaRequest : TeaModel {
-        [NameInMap("RegionId")]
+    public class DeleteBucketLifecycleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCreatePrePaidInstanceResultRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the CreateIntance operation to create an instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

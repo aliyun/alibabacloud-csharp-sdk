@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEipAddressesResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the EIPs.
+        /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
         public DescribeEipAddressesResponseBodyEipAddresses EipAddresses { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
+                /// <summary>
+                /// The information about an EIP.
+                /// </summary>
                 [NameInMap("Eip")]
                 [Validation(Required=false)]
                 public string Eip { get; set; }
 
+                /// <summary>
+                /// The public IP address of the ENS instance.
+                /// </summary>
                 [NameInMap("InstanceIdInternetIp")]
                 [Validation(Required=false)]
                 public string InstanceIdInternetIp { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
