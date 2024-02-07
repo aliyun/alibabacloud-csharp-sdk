@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the task.
+        /// The task information.
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
-            /// The time when the task ended.
+            /// The end time of the task.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// The time when the task started.
+            /// The start time of the task.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The status of the task. Valid values:
+            /// The task status. Valid values:
             /// 
             /// *   InProgress: The task is running.
             /// *   Success: The task is successful.
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// The type of the task. Valid values:
+            /// The task type. Valid values:
             /// 
             /// *   ProvisionAccessConfiguration: An access configuration is provisioned.
             /// *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.

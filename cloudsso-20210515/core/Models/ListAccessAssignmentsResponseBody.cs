@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// The path ID of the task object in your resource directory.
+            /// The path ID of the task object in the resource directory.
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// The path name of the task object in your resource directory.
+            /// The path name of the task object in the resource directory.
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// The type of the task object.
             /// 
-            /// The value is fixed as RD-Account, which indicates an account in your resource directory.
+            /// The value is fixed as RD-Account, which indicates the accounts in the resource directory.
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
@@ -103,31 +103,31 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// Indicates whether the queried entries are truncated. Valid values:
         /// 
-        /// *   true: The queried entries are truncated.
-        /// *   false: The queried entries are not truncated.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The maximum number of entries returned per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is returned for the next page.
+        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
         /// 
-        /// >  This parameter is returned only when the value of `IsTruncated` is `true`.
+        /// >  This parameter is returned only when the value of IsTruncated is `true`.``
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

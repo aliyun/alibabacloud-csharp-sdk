@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
           * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
           * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
           *
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
           * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
           * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
           *
@@ -586,7 +586,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
           * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
           * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
           *
@@ -600,7 +600,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+          * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
           * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
           * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
           *
@@ -3175,6 +3175,72 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             return await GetGroupWithOptionsAsync(request, runtime);
         }
 
+        public GetLoginPreferenceResponse GetLoginPreferenceWithOptions(GetLoginPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLoginPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLoginPreferenceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetLoginPreferenceResponse> GetLoginPreferenceWithOptionsAsync(GetLoginPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLoginPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLoginPreferenceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetLoginPreferenceResponse GetLoginPreference(GetLoginPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLoginPreferenceWithOptions(request, runtime);
+        }
+
+        public async Task<GetLoginPreferenceResponse> GetLoginPreferenceAsync(GetLoginPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLoginPreferenceWithOptionsAsync(request, runtime);
+        }
+
         /**
           * If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
           * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named `00q8wbq42wiltcrk****`.
@@ -3459,6 +3525,72 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             return await GetMFAAuthenticationStatusWithOptionsAsync(request, runtime);
         }
 
+        public GetPasswordPolicyResponse GetPasswordPolicyWithOptions(GetPasswordPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPasswordPolicy",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPasswordPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetPasswordPolicyResponse> GetPasswordPolicyWithOptionsAsync(GetPasswordPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPasswordPolicy",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPasswordPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetPasswordPolicyResponse GetPasswordPolicy(GetPasswordPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPasswordPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<GetPasswordPolicyResponse> GetPasswordPolicyAsync(GetPasswordPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPasswordPolicyWithOptionsAsync(request, runtime);
+        }
+
         /**
           * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
           *
@@ -3700,7 +3832,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
           * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
           *
           * @param request GetTaskStatusRequest
@@ -3739,7 +3871,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
           * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
           *
           * @param request GetTaskStatusRequest
@@ -3778,7 +3910,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
           * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
           *
           * @param request GetTaskStatusRequest
@@ -3791,7 +3923,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+          * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
           * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
           *
           * @param request GetTaskStatusRequest
@@ -4366,7 +4498,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
           *
           * @param request ListAccessAssignmentsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4428,7 +4560,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
           *
           * @param request ListAccessAssignmentsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4490,7 +4622,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
           *
           * @param request ListAccessAssignmentsRequest
           * @return ListAccessAssignmentsResponse
@@ -4502,7 +4634,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         }
 
         /**
-          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+          * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
           *
           * @param request ListAccessAssignmentsRequest
           * @return ListAccessAssignmentsResponse
@@ -6947,6 +7079,80 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             return await SetExternalSAMLIdentityProviderWithOptionsAsync(request, runtime);
         }
 
+        public SetLoginPreferenceResponse SetLoginPreferenceWithOptions(SetLoginPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginNetworkMasks))
+            {
+                query["LoginNetworkMasks"] = request.LoginNetworkMasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetLoginPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetLoginPreferenceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetLoginPreferenceResponse> SetLoginPreferenceWithOptionsAsync(SetLoginPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginNetworkMasks))
+            {
+                query["LoginNetworkMasks"] = request.LoginNetworkMasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetLoginPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetLoginPreferenceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetLoginPreferenceResponse SetLoginPreference(SetLoginPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetLoginPreferenceWithOptions(request, runtime);
+        }
+
+        public async Task<SetLoginPreferenceResponse> SetLoginPreferenceAsync(SetLoginPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetLoginPreferenceWithOptionsAsync(request, runtime);
+        }
+
         /**
           * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
           * This topic provides an example on how to enable MFA for users.
@@ -7049,6 +7255,120 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetMFAAuthenticationStatusWithOptionsAsync(request, runtime);
+        }
+
+        public SetPasswordPolicyResponse SetPasswordPolicyWithOptions(SetPasswordPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLoginAttempts))
+            {
+                query["MaxLoginAttempts"] = request.MaxLoginAttempts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPasswordAge))
+            {
+                query["MaxPasswordAge"] = request.MaxPasswordAge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinPasswordDifferentChars))
+            {
+                query["MinPasswordDifferentChars"] = request.MinPasswordDifferentChars;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinPasswordLength))
+            {
+                query["MinPasswordLength"] = request.MinPasswordLength;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordNotContainUsername))
+            {
+                query["PasswordNotContainUsername"] = request.PasswordNotContainUsername;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordReusePrevention))
+            {
+                query["PasswordReusePrevention"] = request.PasswordReusePrevention;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetPasswordPolicy",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetPasswordPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetPasswordPolicyResponse> SetPasswordPolicyWithOptionsAsync(SetPasswordPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLoginAttempts))
+            {
+                query["MaxLoginAttempts"] = request.MaxLoginAttempts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPasswordAge))
+            {
+                query["MaxPasswordAge"] = request.MaxPasswordAge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinPasswordDifferentChars))
+            {
+                query["MinPasswordDifferentChars"] = request.MinPasswordDifferentChars;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinPasswordLength))
+            {
+                query["MinPasswordLength"] = request.MinPasswordLength;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordNotContainUsername))
+            {
+                query["PasswordNotContainUsername"] = request.PasswordNotContainUsername;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordReusePrevention))
+            {
+                query["PasswordReusePrevention"] = request.PasswordReusePrevention;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetPasswordPolicy",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetPasswordPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetPasswordPolicyResponse SetPasswordPolicy(SetPasswordPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetPasswordPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<SetPasswordPolicyResponse> SetPasswordPolicyAsync(SetPasswordPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetPasswordPolicyWithOptionsAsync(request, runtime);
         }
 
         /**

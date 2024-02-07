@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetTaskStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// The directory ID.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

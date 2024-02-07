@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateAccessAssignmentResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the task.
+        /// The queried task.
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// The status of the task. Valid values:
+            /// The task status. Valid values:
             /// 
             /// *   InProgress: The task is running.
             /// *   Success: The task is successful.
@@ -87,35 +87,35 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// The path ID of the task object in your resource directory.
+            /// The path ID of the task object in the resource directory.
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// The path name of the task object in your resource directory.
+            /// The path name of the task object in the resource directory.
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
+            /// The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The ID of the job.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// The type of the task. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
+            /// The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
