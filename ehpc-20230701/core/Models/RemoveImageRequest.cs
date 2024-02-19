@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
     }
 
 }
