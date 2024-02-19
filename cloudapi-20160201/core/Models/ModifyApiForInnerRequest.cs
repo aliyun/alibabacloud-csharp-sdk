@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160201.Models
         [Validation(Required=false)]
         public string ResultType { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }

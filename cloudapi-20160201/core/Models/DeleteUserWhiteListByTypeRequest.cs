@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160201.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
