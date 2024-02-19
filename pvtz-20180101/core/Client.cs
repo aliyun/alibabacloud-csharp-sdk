@@ -347,6 +347,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsGroup))
+            {
+                query["DnsGroup"] = request.DnsGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -397,6 +401,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsGroup))
+            {
+                query["DnsGroup"] = request.DnsGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {

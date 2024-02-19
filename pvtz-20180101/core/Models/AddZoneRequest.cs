@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DnsGroup")]
+        [Validation(Required=false)]
+        public string DnsGroup { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteUserVpcAuthorizationResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteUserVpcAuthorizationResponseBody Body { get; set; }
 
     }
