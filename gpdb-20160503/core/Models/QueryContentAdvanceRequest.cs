@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("IncludeVector")]
+        [Validation(Required=false)]
+        public bool? IncludeVector { get; set; }
+
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public string Metrics { get; set; }
@@ -49,9 +53,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RecallWindow")]
+        [Validation(Required=false)]
+        public List<int?> RecallWindow { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RerankFactor")]
+        [Validation(Required=false)]
+        public double? RerankFactor { get; set; }
 
         [NameInMap("TopK")]
         [Validation(Required=false)]

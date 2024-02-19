@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
+                [NameInMap("RerankScore")]
+                [Validation(Required=false)]
+                public double? RerankScore { get; set; }
+
                 [NameInMap("RetrievalSource")]
                 [Validation(Required=false)]
                 public int? RetrievalSource { get; set; }
@@ -90,6 +94,50 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("EmbeddingTokens")]
             [Validation(Required=false)]
             public string EmbeddingTokens { get; set; }
+
+        }
+
+        [NameInMap("WindowMatches")]
+        [Validation(Required=false)]
+        public QueryContentResponseBodyWindowMatches WindowMatches { get; set; }
+        public class QueryContentResponseBodyWindowMatches : TeaModel {
+            [NameInMap("windowMatches")]
+            [Validation(Required=false)]
+            public List<QueryContentResponseBodyWindowMatchesWindowMatches> WindowMatches { get; set; }
+            public class QueryContentResponseBodyWindowMatchesWindowMatches : TeaModel {
+                [NameInMap("WindowMatch")]
+                [Validation(Required=false)]
+                public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch WindowMatch { get; set; }
+                public class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch : TeaModel {
+                    [NameInMap("windowMatch")]
+                    [Validation(Required=false)]
+                    public List<QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch> WindowMatch { get; set; }
+                    public class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch : TeaModel {
+                        [NameInMap("Content")]
+                        [Validation(Required=false)]
+                        public string Content { get; set; }
+
+                        [NameInMap("FileName")]
+                        [Validation(Required=false)]
+                        public string FileName { get; set; }
+
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
+
+                        [NameInMap("LoaderMetadata")]
+                        [Validation(Required=false)]
+                        public string LoaderMetadata { get; set; }
+
+                        [NameInMap("Metadata")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, string> Metadata { get; set; }
+
+                    }
+
+                }
+
+            }
 
         }
 

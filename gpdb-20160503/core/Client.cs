@@ -12075,9 +12075,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await QueryCollectionDataWithOptionsAsync(request, runtime);
         }
 
-        public QueryContentResponse QueryContentWithOptions(QueryContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryContentResponse QueryContentWithOptions(QueryContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryContentShrinkRequest request = new QueryContentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecallWindow))
+            {
+                request.RecallWindowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecallWindow, "RecallWindow", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -12103,6 +12109,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Filter"] = request.Filter;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVector))
+            {
+                query["IncludeVector"] = request.IncludeVector;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
             {
                 query["Metrics"] = request.Metrics;
@@ -12119,9 +12129,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallWindowShrink))
+            {
+                query["RecallWindow"] = request.RecallWindowShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankFactor))
+            {
+                query["RerankFactor"] = request.RerankFactor;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
@@ -12150,9 +12168,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<QueryContentResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryContentResponse> QueryContentWithOptionsAsync(QueryContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryContentResponse> QueryContentWithOptionsAsync(QueryContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryContentShrinkRequest request = new QueryContentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecallWindow))
+            {
+                request.RecallWindowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecallWindow, "RecallWindow", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -12178,6 +12202,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Filter"] = request.Filter;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVector))
+            {
+                query["IncludeVector"] = request.IncludeVector;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
             {
                 query["Metrics"] = request.Metrics;
@@ -12194,9 +12222,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallWindowShrink))
+            {
+                query["RecallWindow"] = request.RecallWindowShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankFactor))
+            {
+                query["RerankFactor"] = request.RerankFactor;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {

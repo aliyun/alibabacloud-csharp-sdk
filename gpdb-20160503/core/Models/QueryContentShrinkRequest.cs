@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class QueryContentRequest : TeaModel {
+    public class QueryContentShrinkRequest : TeaModel {
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("RecallWindow")]
         [Validation(Required=false)]
-        public List<int?> RecallWindow { get; set; }
+        public string RecallWindowShrink { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

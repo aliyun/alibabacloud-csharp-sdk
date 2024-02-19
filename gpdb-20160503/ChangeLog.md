@@ -1,3 +1,11 @@
+2024-02-19 Version: 1.7.2
+- Update API DescribeSampleData: update response param.
+- Update API QueryContent: add param IncludeVector.
+- Update API QueryContent: add param RecallWindow.
+- Update API QueryContent: add param RerankFactor.
+- Update API QueryContent: update response param.
+
+
 2024-01-18 Version: 1.7.1
 - Generated csharp 2016-05-03 for gpdb.
 

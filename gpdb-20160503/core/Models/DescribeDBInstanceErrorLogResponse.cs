@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceErrorLogResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeDBInstanceErrorLogResponseBody Body { get; set; }
 
     }
