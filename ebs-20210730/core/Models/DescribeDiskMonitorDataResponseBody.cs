@@ -51,12 +51,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public long? ReadBPS { get; set; }
 
+            [NameInMap("ReadBlockSize")]
+            [Validation(Required=false)]
+            public long? ReadBlockSize { get; set; }
+
             /// <summary>
             /// The maximum number of read IOPS.
             /// </summary>
             [NameInMap("ReadIOPS")]
             [Validation(Required=false)]
             public long? ReadIOPS { get; set; }
+
+            [NameInMap("ReadLatency")]
+            [Validation(Required=false)]
+            public long? ReadLatency { get; set; }
 
             /// <summary>
             /// The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
@@ -72,12 +80,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public long? WriteBPS { get; set; }
 
+            [NameInMap("WriteBlockSize")]
+            [Validation(Required=false)]
+            public long? WriteBlockSize { get; set; }
+
             /// <summary>
             /// The maximum number of write IOPS.
             /// </summary>
             [NameInMap("WriteIOPS")]
             [Validation(Required=false)]
             public long? WriteIOPS { get; set; }
+
+            [NameInMap("WriteLatency")]
+            [Validation(Required=false)]
+            public long? WriteLatency { get; set; }
 
         }
 
