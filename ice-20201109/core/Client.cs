@@ -4797,6 +4797,26 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                query["Signature"] = request.Signature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureMehtod))
+            {
+                query["SignatureMehtod"] = request.SignatureMehtod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureNonce))
+            {
+                query["SignatureNonce"] = request.SignatureNonce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureType))
+            {
+                query["SignatureType"] = request.SignatureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureVersion))
+            {
+                query["SignatureVersion"] = request.SignatureVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4823,6 +4843,26 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
+            {
+                query["Signature"] = request.Signature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureMehtod))
+            {
+                query["SignatureMehtod"] = request.SignatureMehtod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureNonce))
+            {
+                query["SignatureNonce"] = request.SignatureNonce;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureType))
+            {
+                query["SignatureType"] = request.SignatureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureVersion))
+            {
+                query["SignatureVersion"] = request.SignatureVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
