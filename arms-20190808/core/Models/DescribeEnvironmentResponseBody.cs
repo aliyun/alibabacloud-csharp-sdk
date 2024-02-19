@@ -135,6 +135,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string GrafanaFolderUrl { get; set; }
 
+            /// <summary>
+            /// managed type:
+            /// - none: unmanaged. The default value for ACK clusters.
+            /// - agent: managed agent (including KSM). The default values for ASK, ACS, and AckOne clusters.
+            /// - agent-exporter: managed agent and exporters. The default value for the cloud service type.
+            /// </summary>
             [NameInMap("ManagedType")]
             [Validation(Required=false)]
             public string ManagedType { get; set; }
@@ -175,14 +181,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<DescribeEnvironmentResponseBodyDataTags> Tags { get; set; }
             public class DescribeEnvironmentResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of the tag.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// VPC ID.
+            /// The VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

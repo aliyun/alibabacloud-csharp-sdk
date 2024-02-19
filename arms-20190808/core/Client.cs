@@ -5780,6 +5780,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await DeleteAppListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteCmsExporterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCmsExporterResponse
+         */
+        // Deprecated
         public DeleteCmsExporterResponse DeleteCmsExporterWithOptions(DeleteCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5811,6 +5819,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteCmsExporterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteCmsExporterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCmsExporterResponse
+         */
+        // Deprecated
         public async Task<DeleteCmsExporterResponse> DeleteCmsExporterWithOptionsAsync(DeleteCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5842,12 +5858,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteCmsExporterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteCmsExporterRequest
+          * @return DeleteCmsExporterResponse
+         */
+        // Deprecated
         public DeleteCmsExporterResponse DeleteCmsExporter(DeleteCmsExporterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCmsExporterWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.
+          *
+          * @param request DeleteCmsExporterRequest
+          * @return DeleteCmsExporterResponse
+         */
+        // Deprecated
         public async Task<DeleteCmsExporterResponse> DeleteCmsExporterAsync(DeleteCmsExporterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9702,6 +9732,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await GetAuthTokenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.
+          *
+          * @param request GetCloudClusterAllUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCloudClusterAllUrlResponse
+         */
+        // Deprecated
         public GetCloudClusterAllUrlResponse GetCloudClusterAllUrlWithOptions(GetCloudClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9733,6 +9771,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<GetCloudClusterAllUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.
+          *
+          * @param request GetCloudClusterAllUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCloudClusterAllUrlResponse
+         */
+        // Deprecated
         public async Task<GetCloudClusterAllUrlResponse> GetCloudClusterAllUrlWithOptionsAsync(GetCloudClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9764,12 +9810,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<GetCloudClusterAllUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.
+          *
+          * @param request GetCloudClusterAllUrlRequest
+          * @return GetCloudClusterAllUrlResponse
+         */
+        // Deprecated
         public GetCloudClusterAllUrlResponse GetCloudClusterAllUrl(GetCloudClusterAllUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCloudClusterAllUrlWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.
+          *
+          * @param request GetCloudClusterAllUrlRequest
+          * @return GetCloudClusterAllUrlResponse
+         */
+        // Deprecated
         public async Task<GetCloudClusterAllUrlResponse> GetCloudClusterAllUrlAsync(GetCloudClusterAllUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12486,6 +12546,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await InstallAddonWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request InstallCmsExporterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCmsExporterResponse
+         */
+        // Deprecated
         public InstallCmsExporterResponse InstallCmsExporterWithOptions(InstallCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12529,6 +12597,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<InstallCmsExporterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request InstallCmsExporterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCmsExporterResponse
+         */
+        // Deprecated
         public async Task<InstallCmsExporterResponse> InstallCmsExporterWithOptionsAsync(InstallCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12572,12 +12648,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<InstallCmsExporterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request InstallCmsExporterRequest
+          * @return InstallCmsExporterResponse
+         */
+        // Deprecated
         public InstallCmsExporterResponse InstallCmsExporter(InstallCmsExporterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallCmsExporterWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
+          *
+          * @param request InstallCmsExporterRequest
+          * @return InstallCmsExporterResponse
+         */
+        // Deprecated
         public async Task<InstallCmsExporterResponse> InstallCmsExporterAsync(InstallCmsExporterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13034,6 +13124,104 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await ListAddonReleasesWithOptionsAsync(request, runtime);
         }
 
+        public ListAddonsResponse ListAddonsWithOptions(ListAddonsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Regexp))
+            {
+                query["Regexp"] = request.Regexp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["Search"] = request.Search;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAddons",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAddonsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAddonsResponse> ListAddonsWithOptionsAsync(ListAddonsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Regexp))
+            {
+                query["Regexp"] = request.Regexp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["Search"] = request.Search;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAddons",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAddonsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAddonsResponse ListAddons(ListAddonsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAddonsWithOptions(request, runtime);
+        }
+
+        public async Task<ListAddonsResponse> ListAddonsAsync(ListAddonsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAddonsWithOptionsAsync(request, runtime);
+        }
+
         public ListAlertEventsResponse ListAlertEventsWithOptions(ListAlertEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13368,6 +13556,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await ListClusterFromGrafanaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.
+          *
+          * @param request ListCmsInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCmsInstancesResponse
+         */
+        // Deprecated
         public ListCmsInstancesResponse ListCmsInstancesWithOptions(ListCmsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13403,6 +13599,14 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ListCmsInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.
+          *
+          * @param request ListCmsInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCmsInstancesResponse
+         */
+        // Deprecated
         public async Task<ListCmsInstancesResponse> ListCmsInstancesWithOptionsAsync(ListCmsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13438,12 +13642,26 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ListCmsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.
+          *
+          * @param request ListCmsInstancesRequest
+          * @return ListCmsInstancesResponse
+         */
+        // Deprecated
         public ListCmsInstancesResponse ListCmsInstances(ListCmsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCmsInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.
+          *
+          * @param request ListCmsInstancesRequest
+          * @return ListCmsInstancesResponse
+         */
+        // Deprecated
         public async Task<ListCmsInstancesResponse> ListCmsInstancesAsync(ListCmsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
