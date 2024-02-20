@@ -355,6 +355,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public int? WriteTimeout { get; set; }
 
+            [NameInMap("XffProto")]
+            [Validation(Required=false)]
+            public bool? XffProto { get; set; }
+
         }
 
         /// <summary>

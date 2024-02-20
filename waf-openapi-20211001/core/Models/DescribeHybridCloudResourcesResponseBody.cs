@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 [Validation(Required=false)]
                 public List<long?> HttpsPorts { get; set; }
 
+                [NameInMap("IPv6Enabled")]
+                [Validation(Required=false)]
+                public bool? IPv6Enabled { get; set; }
+
                 /// <summary>
                 /// Indicates whether IPv6 is supported. Valid values:
                 /// 

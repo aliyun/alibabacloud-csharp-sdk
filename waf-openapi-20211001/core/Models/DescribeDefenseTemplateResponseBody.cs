@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
+            /// <summary>
+            /// The sub-scenario in which the template is used. Valid values:
+            /// 
+            /// *   **web**: The template is a bot management template that is used for website protection.
+            /// *   **app**: The template is a bot management template that is used for app protection.
+            /// *   **basic**: The template is a bot management template that is used for basic protection.
+            /// </summary>
             [NameInMap("DefenseSubScene")]
             [Validation(Required=false)]
             public string DefenseSubScene { get; set; }
