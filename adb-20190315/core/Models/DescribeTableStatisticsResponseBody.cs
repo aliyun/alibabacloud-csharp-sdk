@@ -43,12 +43,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
 
+                [NameInMap("HotDataSize")]
+                [Validation(Required=false)]
+                public long? HotDataSize { get; set; }
+
                 /// <summary>
                 /// The amount of data in indexes. Unit: byte.
                 /// </summary>
                 [NameInMap("IndexSize")]
                 [Validation(Required=false)]
                 public long? IndexSize { get; set; }
+
+                [NameInMap("OtherSize")]
+                [Validation(Required=false)]
+                public long? OtherSize { get; set; }
 
                 /// <summary>
                 /// The number of partitions.
@@ -78,12 +86,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
+                [NameInMap("SpaceRatio")]
+                [Validation(Required=false)]
+                public double? SpaceRatio { get; set; }
+
                 /// <summary>
                 /// The name of the table.
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
+
+                [NameInMap("TotalSize")]
+                [Validation(Required=false)]
+                public long? TotalSize { get; set; }
 
             }
 

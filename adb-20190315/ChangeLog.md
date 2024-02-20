@@ -1,3 +1,16 @@
+2024-02-20 Version: 3.1.3
+- Update API CreateElasticPlan: update param ElasticPlanMonthlyRepeat.
+- Update API CreateElasticPlan: update param ElasticPlanWeeklyRepeat.
+- Update API CreateElasticPlan: update param ResourcePoolName.
+- Update API DescribeAuditLogRecords: update param EndTime.
+- Update API DescribeAuditLogRecords: update param StartTime.
+- Update API DescribeAuditLogRecords: update response param.
+- Update API DescribeDiagnosisRecords: update response param.
+- Update API DescribeTableStatistics: add param Keyword.
+- Update API DescribeTableStatistics: update response param.
+- Update API ModifyElasticPlan: update param ResourcePoolName.
+
+
 2024-02-06 Version: 3.1.2
 - Generated csharp 2019-03-15 for adb.
 
