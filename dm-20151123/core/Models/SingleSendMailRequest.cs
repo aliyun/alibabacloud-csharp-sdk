@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string ToAddress { get; set; }
 
+        [NameInMap("UnSubscribeFilterLevel")]
+        [Validation(Required=false)]
+        public string UnSubscribeFilterLevel { get; set; }
+
+        [NameInMap("UnSubscribeLinkType")]
+        [Validation(Required=false)]
+        public string UnSubscribeLinkType { get; set; }
+
     }
 
 }
