@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<DescribePoliciesV2ResponseBodyPoliciesRules> Rules { get; set; }
             public class DescribePoliciesV2ResponseBodyPoliciesRules : TeaModel {
+                [NameInMap("ArchiveDays")]
+                [Validation(Required=false)]
+                public long? ArchiveDays { get; set; }
+
                 /// <summary>
                 /// This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup type. Only **COMPLETE** may be returned, which indicates full backup.
                 /// </summary>
@@ -183,6 +187,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("Schedule")]
                 [Validation(Required=false)]
                 public string Schedule { get; set; }
+
+                [NameInMap("VaultId")]
+                [Validation(Required=false)]
+                public string VaultId { get; set; }
 
             }
 

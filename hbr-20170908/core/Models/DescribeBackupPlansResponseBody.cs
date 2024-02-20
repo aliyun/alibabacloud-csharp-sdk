@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupPlansResponseBody : TeaModel {
         /// <summary>
-        /// The returned backup plans that meet the specified conditions.
+        /// The queried backup plans.
         /// </summary>
         [NameInMap("BackupPlans")]
         [Validation(Required=false)]
@@ -21,32 +21,35 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<DescribeBackupPlansResponseBodyBackupPlansBackupPlan> BackupPlan { get; set; }
             public class DescribeBackupPlansResponseBodyBackupPlansBackupPlan : TeaModel {
                 /// <summary>
-                /// The ID of the data source group for backup.
+                /// The ID of the data source group.
                 /// </summary>
                 [NameInMap("BackupSourceGroupId")]
                 [Validation(Required=false)]
                 public string BackupSourceGroupId { get; set; }
 
                 /// <summary>
-                /// The backup type. Only **COMPLETE** may be returned, which indicates full backup.
+                /// The backup type. **COMPLETE** indicates full backup.
                 /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.
+                /// This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.
                 /// </summary>
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                /// <summary>
+                /// The configurations of the incremental file synchronization. This parameter is required only for data synchronization.
+                /// </summary>
                 [NameInMap("ChangeListPath")]
                 [Validation(Required=false)]
                 public string ChangeListPath { get; set; }
 
                 /// <summary>
-                /// The ID of a backup client.
+                /// The ID of the backup client.
                 /// </summary>
                 [NameInMap("ClientId")]
                 [Validation(Required=false)]
@@ -60,14 +63,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.
+                /// This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the backup plan was created. The value is a UNIX timestamp. Unit: seconds.
+                /// The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
@@ -143,35 +146,35 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public bool? Disabled { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.
+                /// This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.
                 /// </summary>
                 [NameInMap("Exclude")]
                 [Validation(Required=false)]
                 public string Exclude { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.
+                /// This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.
                 /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.
+                /// This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.
                 /// </summary>
                 [NameInMap("Include")]
                 [Validation(Required=false)]
                 public string Include { get; set; }
 
                 /// <summary>
-                /// The ID of the group to which the instance belongs.
+                /// The ID of the instance group.
                 /// </summary>
                 [NameInMap("InstanceGroupId")]
                 [Validation(Required=false)]
                 public string InstanceGroupId { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
+                /// This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -194,12 +197,15 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? KeepLatestSnapshots { get; set; }
 
+                /// <summary>
+                /// The latest execution job id of plan.
+                /// </summary>
                 [NameInMap("LatestExecuteJobId")]
                 [Validation(Required=false)]
                 public string LatestExecuteJobId { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.
+                /// This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates whether VSS is used to define a source path.
                 /// </summary>
                 [NameInMap("Options")]
                 [Validation(Required=false)]
@@ -228,7 +234,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// The source paths. This parameter is valid only if **SourceType** is set to **ECS_FILE**.
+                /// The source paths. This parameter is valid only when **SourceType** is set to **ECS_FILE**.
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
@@ -255,7 +261,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string PlanName { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the prefix of objects that are backed up.
+                /// This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the prefix of the objects that are backed up.
                 /// </summary>
                 [NameInMap("Prefix")]
                 [Validation(Required=false)]
@@ -287,7 +293,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                         public string ResourceId { get; set; }
 
                         /// <summary>
-                        /// The type of the data source. Only **UDM_DISK** may be returned.
+                        /// The type of the data source. Valid value: **UDM_DISK**.
                         /// </summary>
                         [NameInMap("SourceType")]
                         [Validation(Required=false)]
@@ -298,7 +304,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// The retention period of the backup data. Unit: day.
+                /// The retention period of the backup data. Unit: days.
                 /// </summary>
                 [NameInMap("Retention")]
                 [Validation(Required=false)]
@@ -316,7 +322,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanRulesRule> Rule { get; set; }
                     public class DescribeBackupPlansResponseBodyBackupPlansBackupPlanRulesRule : TeaModel {
                         /// <summary>
-                        /// The backup type. Only **COMPLETE** may be returned, which indicates full backup.
+                        /// The backup type. **COMPLETE** indicates full backup.
                         /// </summary>
                         [NameInMap("BackupType")]
                         [Validation(Required=false)]
@@ -330,7 +336,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                         public string DestinationRegionId { get; set; }
 
                         /// <summary>
-                        /// The retention period of the backup data in remote backup mode. Unit: day.
+                        /// The retention period of the backup data in remote backup mode. Unit: days.
                         /// </summary>
                         [NameInMap("DestinationRetention")]
                         [Validation(Required=false)]
@@ -351,7 +357,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                         public bool? DoCopy { get; set; }
 
                         /// <summary>
-                        /// The retention period of the backup data. Unit: day.
+                        /// The retention period of the backup data. Unit: days.
                         /// </summary>
                         [NameInMap("Retention")]
                         [Validation(Required=false)]
@@ -372,9 +378,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                         public string RuleName { get; set; }
 
                         /// <summary>
-                        /// The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
+                        /// The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
                         /// 
-                        /// *   `startTime`: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.
+                        /// *   `startTime`: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.
                         /// *   `interval`: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
                         /// </summary>
                         [NameInMap("Schedule")]
@@ -386,9 +392,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
+                /// The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
                 /// 
-                /// *   **startTime**: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.
+                /// *   **startTime**: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.
                 /// *   **interval**: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
                 /// </summary>
                 [NameInMap("Schedule")]
@@ -409,11 +415,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.
+                /// This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.
                 /// 
                 /// *   start: the start hour.
                 /// *   end: the end hour.
-                /// *   bandwidth: the bandwidth. Unit: KB/s.
+                /// *   bandwidth: the bandwidth. Unit: KB.
                 /// </summary>
                 [NameInMap("SpeedLimit")]
                 [Validation(Required=false)]
@@ -457,7 +463,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// The time when the backup plan was updated. The value is a UNIX timestamp. Unit: seconds.
+                /// The time when the backup plan was updated. This value is a UNIX timestamp. Unit: seconds.
                 /// </summary>
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
