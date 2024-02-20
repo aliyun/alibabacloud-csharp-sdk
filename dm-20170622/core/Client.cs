@@ -175,6 +175,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             {
                 query["TemplateName"] = request.TemplateName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeFilterLevel))
+            {
+                query["UnSubscribeFilterLevel"] = request.UnSubscribeFilterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeLinkType))
+            {
+                query["UnSubscribeLinkType"] = request.UnSubscribeLinkType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -241,6 +249,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
                 query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeFilterLevel))
+            {
+                query["UnSubscribeFilterLevel"] = request.UnSubscribeFilterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeLinkType))
+            {
+                query["UnSubscribeLinkType"] = request.UnSubscribeLinkType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4035,6 +4051,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             {
                 query["ToAddress"] = request.ToAddress;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeFilterLevel))
+            {
+                query["UnSubscribeFilterLevel"] = request.UnSubscribeFilterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeLinkType))
+            {
+                query["UnSubscribeLinkType"] = request.UnSubscribeLinkType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4117,6 +4141,14 @@ namespace AlibabaCloud.SDK.Dm20170622
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToAddress))
             {
                 query["ToAddress"] = request.ToAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeFilterLevel))
+            {
+                query["UnSubscribeFilterLevel"] = request.UnSubscribeFilterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSubscribeLinkType))
+            {
+                query["UnSubscribeLinkType"] = request.UnSubscribeLinkType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
