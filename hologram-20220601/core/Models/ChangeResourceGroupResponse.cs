@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
-    public class DeleteInstanceResponse : TeaModel {
+    public class ChangeResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteInstanceResponseBody Body { get; set; }
+        public ChangeResourceGroupResponseBody Body { get; set; }
 
     }
 
