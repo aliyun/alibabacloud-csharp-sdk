@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorReportsRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// The pagination token that is used in the request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

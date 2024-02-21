@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// </summary>
         [NameInMap("LimitMemory")]
         [Validation(Required=false)]
-        public string LimitMemory { get; set; }
+        public float? LimitMemory { get; set; }
 
         [NameInMap("MountHostCgroup")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// </summary>
         [NameInMap("RequestMemory")]
         [Validation(Required=false)]
-        public string RequestMemory { get; set; }
+        public float? RequestMemory { get; set; }
 
         /// <summary>
         /// ack的节点污点容忍

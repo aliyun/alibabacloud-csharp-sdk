@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHBaseTablesResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public ListDoctorHBaseTablesResponseBodyDataAnalysis Analysis { get; set; }
             public class ListDoctorHBaseTablesResponseBodyDataAnalysis : TeaModel {
                 /// <summary>
-                /// The partitions that have read hotspot issues.
+                /// The regions that have read hotspot issues.
                 /// </summary>
                 [NameInMap("ReadRequestHotspotRegionList")]
                 [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string ReadRequestUnbalanceSuggestion { get; set; }
 
                 /// <summary>
-                /// The partitions that have read/write hotspot issues.
+                /// The regions that have read/write hotspot issues.
                 /// </summary>
                 [NameInMap("RequestHotspotRegionList")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public int? TableScore { get; set; }
 
                 /// <summary>
-                /// The partitions that have write hotspot issues.
+                /// The regions that have write hotspot issues.
                 /// </summary>
                 [NameInMap("WriteRequestHotspotRegionList")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The number of consecutive days without access to data before the data is considered as cold data.
+                /// The number of consecutive days without access to data before the data is considered as very cold data.
                 /// </summary>
                 [NameInMap("ColdConfigDay")]
                 [Validation(Required=false)]
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The number of consecutive days without access to data before the data is considered as very cold data.
+                /// The number of consecutive days without access to data before the data was considered as very cold data.
                 /// </summary>
                 [NameInMap("FreezeConfigDay")]
                 [Validation(Required=false)]
@@ -563,7 +563,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The number of partitions that are composed of the table.
+                /// The number of regions that host the table.
                 /// </summary>
                 [NameInMap("RegionCount")]
                 [Validation(Required=false)]
@@ -600,7 +600,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The daily increment ratio of the number of partitions.
+                /// The daily increment ratio of the number of regions.
                 /// </summary>
                 [NameInMap("RegionCountDayGrowthRatio")]
                 [Validation(Required=false)]
@@ -859,7 +859,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The number of consecutive days without access to data before the data is considered as warm data.
+                /// The number of consecutive days without access to data before the data is considered as cold data.
                 /// </summary>
                 [NameInMap("WarmConfigDay")]
                 [Validation(Required=false)]
@@ -981,28 +981,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// 本次请求所返回的最大记录条数。
+        /// The maximum number of entries returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 返回读取到的数据位置，空代表数据已经读取完毕。
+        /// The page number of the next page returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 本次请求条件下的数据总量。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

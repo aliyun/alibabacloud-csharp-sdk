@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ConfigFileName { get; set; }
 
             /// <summary>
-            /// The name of the configuration item.
+            /// The key of the configuration item.
             /// </summary>
             [NameInMap("ConfigItemKey")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ConfigItemValue { get; set; }
 
             /// <summary>
-            /// The time when the application was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// The ID of the node group.
+            /// The node group ID.
             /// </summary>
             [NameInMap("NodeGroupId")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// The time when the application was updated.
+            /// The update time.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of pages.
+        /// The total number of pages returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

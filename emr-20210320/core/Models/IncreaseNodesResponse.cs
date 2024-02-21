@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class IncreaseNodesResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public IncreaseNodesResponseBody Body { get; set; }
 
     }

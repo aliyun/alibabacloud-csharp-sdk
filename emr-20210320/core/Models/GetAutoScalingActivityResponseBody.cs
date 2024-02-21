@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The information about the scaling activity.
+        /// </summary>
         [NameInMap("ScalingActivity")]
         [Validation(Required=false)]
         public GetAutoScalingActivityResponseBodyScalingActivity ScalingActivity { get; set; }
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ActivityId { get; set; }
 
             /// <summary>
-            /// The instances corresponding to this scaling activity.
+            /// The instances that correspond to the scaling activity.
             /// </summary>
             [NameInMap("ActivityResults")]
             [Validation(Required=false)]

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetClusterResponseBody : TeaModel {
+        /// <summary>
+        /// The details of the master instance.
+        /// </summary>
         [NameInMap("Cluster")]
         [Validation(Required=false)]
         public Cluster Cluster { get; set; }
 
         /// <summary>
-        /// 请求ID。
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,131 +10,132 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// 应用配置。数组元素个数N的取值范围：1~1000。
+        /// The configurations of the applications. Valid values of N: 1 to 1000.
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// 应用列表。数组元素个数N的取值范围：1~100。
+        /// The applications that you want to add to the cluster. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// 引导脚本。数组元素个数N的取值范围：1~10。
+        /// The array of scripts for the bootstrap actions. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
         public List<Script> BootstrapScripts { get; set; }
 
         /// <summary>
-        /// 幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。
+        /// The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）
+        /// The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// 创建的EMR集群类型。取值范围：
-        /// - DATALAKE：新版数据湖。
-        /// - OLAP：数据分析。
-        /// - DATAFLOW：实时数据流。
-        /// - DATASERVING：数据服务。
-        /// - CUSTOM：自定义集群。
-        /// - HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。
+        /// The type of the cluster. Valid values:
+        /// 
+        /// *   DATALAKE: data lake
+        /// *   OLAP: online analytical processing (OLAP)
+        /// *   DATAFLOW: Dataflow
+        /// *   DATASERVING: DataServing
+        /// *   CUSTOM: a custom hybrid cluster.
+        /// *   HADOOP: the old data lake. We recommend that you use the new data lake.
+        /// 
+        /// If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// 集群中的应用部署模式。取值范围：
-        /// - NORMAL：非高可用部署。集群1个MASTER节点。
-        /// - HA：高可用部署。高可用部署要求至少3个MASTER节点。
+        /// The deployment mode of applications in the cluster. Valid values:
         /// 
-        /// 默认值：NORMAL。
+        /// *   NORMAL: regular mode. A master node is deployed in the cluster.
+        /// *   HA: high availability mode. At least three master nodes are deployed in the cluster.
         /// </summary>
         [NameInMap("DeployMode")]
         [Validation(Required=false)]
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// 节点属性。集群中的ECS节点基础属性。
+        /// The attributes of all Elastic Compute Service (ECS) nodes in the cluster. The basic attributes of all ECS nodes in the cluster.
         /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// 节点组。数组元素个数N的取值范围：1~100。
-        /// <p>
+        /// The array of configurations of the node groups. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<NodeGroupConfig> NodeGroups { get; set; }
 
         /// <summary>
-        /// 集群的付费类型。取值范围：
-        /// - PayAsYouGo：后付费。
-        /// - Subscription：预付费。
+        /// The billing cycle of the instance. Valid values:
         /// 
-        /// 默认值：PayAsYouGo。
+        /// *   PayAsYouGo: pay-as-you-go
+        /// *   Subscription: subscription
+        /// 
+        /// Default value: PayAsYouGo.
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The ID of the region in which you want to create the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// EMR发行版。
+        /// The version of EMR. You can view the EMR release version on the EMR cluster purchase page.
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// 集群所在的企业资源组ID。
+        /// The ID of the resource group to which to assign the ENI.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Kerberos安全模式。取值范围：
-        /// - NORMAL：普通模式，不开启Kerberos模式。
-        /// - KERBEROS：开启Kerberos模式。
+        /// The security mode of the cluster. Valid values:
         /// 
-        /// 默认值：NORMAL
+        /// *   NORMAL: regular mode. Kerberos is not enabled.
+        /// *   KERBEROS: Kerberos mode. Kerberos is enabled.
         /// </summary>
         [NameInMap("SecurityMode")]
         [Validation(Required=false)]
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// 预付费配置。当PaymentType取值Subscription时该参数生效。
+        /// The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// 标签。数组元数个数N的取值范围：0~20。
+        /// The tag that you want to add to the cloud desktop. Valid values of N: 0 to 20.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

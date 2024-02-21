@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public ListDoctorHiveTablesResponseBodyDataAnalysis Analysis { get; set; }
             public class ListDoctorHiveTablesResponseBodyDataAnalysis : TeaModel {
                 /// <summary>
-                /// The score for the distribution of files of different sizes stored in the Hive table.
+                /// The score for the file sizes of the Hive table.
                 /// </summary>
                 [NameInMap("HiveDistributionScore")]
                 [Validation(Required=false)]
                 public int? HiveDistributionScore { get; set; }
 
                 /// <summary>
-                /// The score for the distribution of files stored in different formats in the Hive table.
+                /// The score for the data formats of the Hive table.
                 /// </summary>
                 [NameInMap("HiveFormatScore")]
                 [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// The information from the perspective of formats.
+            /// The table format information.
             /// </summary>
             [NameInMap("Formats")]
             [Validation(Required=false)]
             public List<ListDoctorHiveTablesResponseBodyDataFormats> Formats { get; set; }
             public class ListDoctorHiveTablesResponseBodyDataFormats : TeaModel {
                 /// <summary>
-                /// The daily amount increment of the data in a specific storage format.
+                /// The daily increment of data in the format.
                 /// </summary>
                 [NameInMap("FormatDayGrowthSize")]
                 [Validation(Required=false)]
@@ -75,28 +75,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string FormatName { get; set; }
 
                 /// <summary>
-                /// The proportion of the data in a specific storage format.
+                /// The proportion of the data in the format.
                 /// </summary>
                 [NameInMap("FormatRatio")]
                 [Validation(Required=false)]
                 public float? FormatRatio { get; set; }
 
                 /// <summary>
-                /// The size of storage format-specific data.
+                /// The amount of data in the format.
                 /// </summary>
                 [NameInMap("FormatSize")]
                 [Validation(Required=false)]
                 public long? FormatSize { get; set; }
 
                 /// <summary>
-                /// The day-to-day growth rate of the amount of the data in a specific storage format.
+                /// The day-to-day growth rate of data in the format.
                 /// </summary>
                 [NameInMap("FormatSizeDayGrowthRatio")]
                 [Validation(Required=false)]
                 public float? FormatSizeDayGrowthRatio { get; set; }
 
                 /// <summary>
-                /// The unit of the data size.
+                /// The unit of the amount of data in the format.
                 /// </summary>
                 [NameInMap("FormatSizeUnit")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public ListDoctorHiveTablesResponseBodyDataMetrics Metrics { get; set; }
             public class ListDoctorHiveTablesResponseBodyDataMetrics : TeaModel {
                 /// <summary>
-                /// The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+                /// The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
                 /// </summary>
                 [NameInMap("ColdDataDayGrowthSize")]
                 [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+                /// The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
                 /// </summary>
                 [NameInMap("ColdDataRatio")]
                 [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+                /// The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
                 /// </summary>
                 [NameInMap("ColdDataSize")]
                 [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+                /// The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
                 /// </summary>
                 [NameInMap("ColdDataSizeDayGrowthRatio")]
                 [Validation(Required=false)]
@@ -556,7 +556,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+                /// The daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
                 /// </summary>
                 [NameInMap("HotDataDayGrowthSize")]
                 [Validation(Required=false)]
@@ -593,7 +593,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
+                /// The proportion of hot data. Hot data refers to data that is accessed in previous seven days.
                 /// </summary>
                 [NameInMap("HotDataRatio")]
                 [Validation(Required=false)]
@@ -630,7 +630,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The amount of hot data. Hot data refers to data that is accessed in recent seven days.
+                /// The amount of hot data. Hot data refers to data that is accessed in previous seven days.
                 /// </summary>
                 [NameInMap("HotDataSize")]
                 [Validation(Required=false)]
@@ -667,7 +667,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+                /// The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
                 /// </summary>
                 [NameInMap("HotDataSizeDayGrowthRatio")]
                 [Validation(Required=false)]
@@ -1333,7 +1333,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The daily incremental of the total data volume.
+                /// The daily increment of the total amount of data.
                 /// </summary>
                 [NameInMap("TotalDataDayGrowthSize")]
                 [Validation(Required=false)]
@@ -1407,7 +1407,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The day-to-day growth rate of the total data volume.
+                /// The day-to-day growth rate of the total amount of data.
                 /// </summary>
                 [NameInMap("TotalDataSizeDayGrowthRatio")]
                 [Validation(Required=false)]
@@ -1555,7 +1555,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+                /// The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
                 /// </summary>
                 [NameInMap("WarmDataDayGrowthSize")]
                 [Validation(Required=false)]
@@ -1592,7 +1592,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+                /// The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
                 /// </summary>
                 [NameInMap("WarmDataRatio")]
                 [Validation(Required=false)]
@@ -1629,7 +1629,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+                /// The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
                 /// </summary>
                 [NameInMap("WarmDataSize")]
                 [Validation(Required=false)]
@@ -1666,7 +1666,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+                /// The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
                 /// </summary>
                 [NameInMap("WarmDataSizeDayGrowthRatio")]
                 [Validation(Required=false)]
@@ -1712,7 +1712,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// The table name. The table name must follow the naming rule in Hive. A name in the {database name.table identifier} format uniquely identifies a table.
+            /// The table name. The table name must follow the naming rule in Hive. A name in the {Database name.Table name} format uniquely identifies a table.
             /// </summary>
             [NameInMap("TableName")]
             [Validation(Required=false)]

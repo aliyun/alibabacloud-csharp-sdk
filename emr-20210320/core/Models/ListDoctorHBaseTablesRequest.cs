@@ -10,45 +10,64 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHBaseTablesRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The query date.
+        /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
         public string DateTime { get; set; }
 
         /// <summary>
-        /// 一次获取的最大记录数。取值范围：1~100。
+        /// The maximum number of entries that are returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// Marks the current position to start reading. If this field is empty, the data is read from the beginning.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The field that you use to sort the query results.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   tableSize
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// The order in which you want to sort the query results. Valid value:
+        /// 
+        /// *   ASC: in ascending order
+        /// *   DESC: in descending order
+        /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// 区域ID。
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The table names, which are used to filter the query results.
+        /// </summary>
         [NameInMap("TableNames")]
         [Validation(Required=false)]
         public List<string> TableNames { get; set; }

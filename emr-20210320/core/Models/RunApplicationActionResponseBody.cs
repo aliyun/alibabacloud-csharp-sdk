@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunApplicationActionResponseBody : TeaModel {
         /// <summary>
-        /// 异常节点列表。
+        /// The abnormal nodes.
         /// </summary>
         [NameInMap("AbnInstances")]
         [Validation(Required=false)]
