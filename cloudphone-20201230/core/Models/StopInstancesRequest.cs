@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class StopInstancesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to forcefully stop the instance. Valid values:
+        /// 
+        /// *   true. If you set this parameter to true, cache data that is not written to storage in the instance will be lost after you call this operation, which is similar to the effect of a power-off action.
+        /// *   false (default)
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// The instance IDs. Valid values of N: 1 to 100.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
@@ -25,6 +34,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class ListInstanceTypesRequest : TeaModel {
+        /// <summary>
+        /// The names of the instance types. Valid values of N: 1 to 100.
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public List<string> InstanceType { get; set; }
 
+        /// <summary>
+        /// The instance type family.
+        /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

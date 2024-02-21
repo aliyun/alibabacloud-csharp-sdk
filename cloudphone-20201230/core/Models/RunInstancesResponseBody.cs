@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class RunInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// The IDs of the ECP instances.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public RunInstancesResponseBodyInstanceIds InstanceIds { get; set; }
@@ -19,14 +22,23 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 
         }
 
+        /// <summary>
+        /// The ID of the order.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The price of the ECP resource.
+        /// </summary>
         [NameInMap("TradePrice")]
         [Validation(Required=false)]
         public float? TradePrice { get; set; }

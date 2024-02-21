@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class ListImageSharePermissionResponseBody : TeaModel {
+        /// <summary>
+        /// The list of Alibaba Cloud accounts.
+        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public ListImageSharePermissionResponseBodyAccounts Accounts { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
             [Validation(Required=false)]
             public List<ListImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
             public class ListImageSharePermissionResponseBodyAccountsAccount : TeaModel {
+                /// <summary>
+                /// The ID of the Alibaba Cloud account.
+                /// </summary>
                 [NameInMap("AliyunId")]
                 [Validation(Required=false)]
                 public string AliyunId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

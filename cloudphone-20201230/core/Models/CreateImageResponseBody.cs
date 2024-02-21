@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class CreateImageResponseBody : TeaModel {
+        /// <summary>
+        /// The custom image ID.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

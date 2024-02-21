@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class ListImageSharePermissionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the image that you want to import to the instance.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

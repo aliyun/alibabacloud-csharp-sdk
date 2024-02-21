@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class StartInstancesRequest : TeaModel {
+        /// <summary>
+        /// The instance IDs.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

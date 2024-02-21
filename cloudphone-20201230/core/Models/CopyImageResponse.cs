@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class CopyImageResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CopyImageResponseBody Body { get; set; }
 
     }

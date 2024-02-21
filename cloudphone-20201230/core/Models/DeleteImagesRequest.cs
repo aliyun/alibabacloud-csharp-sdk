@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class DeleteImagesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to forcefully delete the image. Default value: false
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// The image IDs. You can specify up to 100 images.
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

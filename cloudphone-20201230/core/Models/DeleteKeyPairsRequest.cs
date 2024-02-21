@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudphone20201230.Models
 {
     public class DeleteKeyPairsRequest : TeaModel {
+        /// <summary>
+        /// The name of the key pair that the cloud phone uses. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate multiple key pair names with commas (,).
+        /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public List<string> KeyPairName { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Cloudphone20201230.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the key pair that you want to delete.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
