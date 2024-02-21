@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the endpoint connections.
+        /// The endpoint connections.
         /// </summary>
         [NameInMap("Connections")]
         [Validation(Required=false)]
@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// The state of the endpoint connection. Valid values:
             /// 
-            /// *   **Pending**: The endpoint connection is being modified.
-            /// *   **Connecting**: The endpoint connection is being established.
-            /// *   **Connected**: The endpoint connection is established.
+            /// *   **Pending**: The connection is being modified.
+            /// *   **Connecting**: The connection is being established.
+            /// *   **Connected**: The connection is established.
             /// *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
             /// *   **Disconnected**: The endpoint is disconnected from the endpoint service.
-            /// *   **Deleting**: The endpoint connection is being deleted.
-            /// *   **ServiceDeleted**: The corresponding endpoint service is deleted.
+            /// *   **Deleting**: The connection is being deleted.
+            /// *   **ServiceDeleted**: The corresponding endpoint service has been deleted.
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string EndpointVpcId { get; set; }
 
             /// <summary>
-            /// The time when the endpoint connection was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The time when the endpoint connection was modified.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -91,28 +91,28 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// The information about the zones.
+            /// The zones.
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> Zones { get; set; }
             public class ListVpcEndpointConnectionsResponseBodyConnectionsZones : TeaModel {
                 /// <summary>
-                /// The ID of the endpoint elastic network interface (ENI).
+                /// The endpoint ENI ID.
                 /// </summary>
                 [NameInMap("EniId")]
                 [Validation(Required=false)]
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// The ID of the endpoint ENI replaced in smooth migration scenarios.
+                /// The ID of the replaced endpoint ENI in smooth migration scenarios.
                 /// </summary>
                 [NameInMap("ReplacedEniId")]
                 [Validation(Required=false)]
                 public string ReplacedEniId { get; set; }
 
                 /// <summary>
-                /// The ID of the service resource replaced in smooth migration scenarios.
+                /// The ID of the replaced service resource in smooth migration scenarios.
                 /// </summary>
                 [NameInMap("ReplacedResourceId")]
                 [Validation(Required=false)]
@@ -191,9 +191,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The total number of entries returned.
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

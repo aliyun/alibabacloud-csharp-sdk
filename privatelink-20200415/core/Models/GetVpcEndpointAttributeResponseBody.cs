@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// The service state of the endpoint. Valid values:
         /// 
         /// *   **Normal**: The endpoint runs as expected.
-        /// *   **FinacialLocked**: The endpoint is locked due to overdue payments.
+        /// *   **FinancialLocked**: The endpoint is locked due to overdue payments.
         /// </summary>
         [NameInMap("EndpointBusinessStatus")]
         [Validation(Required=false)]
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// Indicates whether zone affinity is enabled. Valid values:
+        /// Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
         /// 
-        /// *   **true**: Zone affinity is enabled.
-        /// *   **false**: Zone affinity is disabled.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]

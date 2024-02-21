@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// The IP address of the endpoint ENI in the zone that you want to add.
+        /// The IP address of the endpoint elastic network interface (ENI) in the zone that you want to add.
         /// </summary>
         [NameInMap("ip")]
         [Validation(Required=false)]

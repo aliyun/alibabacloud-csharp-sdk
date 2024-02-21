@@ -82,9 +82,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.
-        /// 
-        /// The endpoint can be associated with up to 10 security groups.
+        /// The IDs of security groups that are associated with the endpoint elastic network interface (ENI).
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -105,21 +103,21 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags to add to the resource.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcEndpointRequestTag> Tag { get; set; }
         public class CreateVpcEndpointRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The key of the tag to add to the resource.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The value of the tag to add to the resource.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

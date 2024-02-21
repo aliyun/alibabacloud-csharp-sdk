@@ -29,7 +29,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The default bandwidth of the endpoint connection. Valid values: **100** to **10240**. Unit: Mbit/s.
+        /// The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: **3072**.
+        /// 
+        /// Valid values: **100** to **10240**.
+        /// 
+        /// >  You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.
         /// </summary>
         [NameInMap("ConnectBandwidth")]
         [Validation(Required=false)]
@@ -79,10 +83,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? ServiceSupportIPv6 { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable zone affinity. Valid values:
+        /// Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// *   **true** (default)
+        /// *   **false**
         /// </summary>
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]

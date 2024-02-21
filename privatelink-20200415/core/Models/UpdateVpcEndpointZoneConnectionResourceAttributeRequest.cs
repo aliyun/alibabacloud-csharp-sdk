@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The resource allocation mode. You can change the resource allocation mode only if the endpoint connection is in the **Disconnected** state. Valid values:
         /// 
-        /// *   **Auto**: automatically and randomly allocates the service resource. In this mode, the service resource is deleted.
-        /// *   **Mannual**: manually allocates the service resource. If you set the value to Mannual, you must also specify the **ResourceId** and **ResourceType** parameters.
+        /// *   **Auto**: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.
+        /// *   **Manual**: manually allocates service resources. If you set the value to Manual, you must also specify the **ResourceId** and **ResourceType** parameters.
         /// </summary>
         [NameInMap("ResourceAllocateMode")]
         [Validation(Required=false)]
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The migration mode of the service resource. Valid values:
         /// 
-        /// *   **Graceful**: smoothly migrates the service resource in the zone.
-        /// *   **Force**: forcefully migrates the service resource in the zone.
+        /// *   **Graceful**: smooth migration. Service resources in the zone are smoothly migrated.
+        /// *   **Force**: forced migration. Service resources in the zone are forcefully migrated.
         /// 
-        /// > If you want to migrate the service resource, you need to set this parameter. This parameter is available only if the endpoint connection is in the **Connected** state. If you set this parameter, you must also specify the **ResourceId** and **ResourceType** parameters.
+        /// >  You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the **Connected** state. If you specify this parameter, you must also specify the **ResourceId** and **ResourceType** parameters.
         /// </summary>
         [NameInMap("ResourceReplaceMode")]
         [Validation(Required=false)]

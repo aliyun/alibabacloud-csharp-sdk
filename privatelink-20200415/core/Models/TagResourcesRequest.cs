@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token.******** The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -40,39 +40,42 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs. You can specify up to 20 resource IDs.
+        /// The resource IDs. Up to 50 resource IDs are supported.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// The type of resource. Valid values:
+        /// 
+        /// *   **vpcendpoint**: endpoint
+        /// *   **vpcendpointservice**: endpoint service
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the resource.
+        /// The tags to add to the resources.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

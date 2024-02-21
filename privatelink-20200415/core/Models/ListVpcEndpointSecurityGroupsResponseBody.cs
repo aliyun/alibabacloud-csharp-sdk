@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The security groups that are associated with the endpoint.
+        /// The information about the security groups.
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]

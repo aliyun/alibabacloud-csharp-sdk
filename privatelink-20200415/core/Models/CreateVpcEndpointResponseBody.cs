@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// The service state of the endpoint. Valid values:
         /// 
         /// *   **Normal**: The endpoint runs as expected.
-        /// *   **FinacialLocked**: The endpoint is locked due to overdue payments.
+        /// *   **FinancialLocked**: The endpoint is locked due to overdue payments.
         /// </summary>
         [NameInMap("EndpointBusinessStatus")]
         [Validation(Required=false)]

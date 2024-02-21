@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The zones.
+        /// The information about the zones.
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<ListVpcEndpointZonesResponseBodyZones> Zones { get; set; }
         public class ListVpcEndpointZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// The endpoint ENI ID.
+            /// The ID of the endpoint ENI.
             /// </summary>
             [NameInMap("EniId")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// The domain name of the zone.
             /// 
-            /// After the endpoint is connected to the endpoint service, you can access the service resources in the endpoint service by using the domain name of the zone.
+            /// After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.
             /// </summary>
             [NameInMap("ZoneDomain")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// Indicates whether IPv6 is enabled for the endpoint service. Valid values:
+            /// Indicates whether the endpoint service supports IPv6. Valid values:
             /// 
             /// *   **true**
             /// *   **false** (default)
