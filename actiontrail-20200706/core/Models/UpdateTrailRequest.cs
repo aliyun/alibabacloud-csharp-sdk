@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         [Validation(Required=false)]
         public string EventRW { get; set; }
 
+        [NameInMap("MaxComputeProjectArn")]
+        [Validation(Required=false)]
+        public string MaxComputeProjectArn { get; set; }
+
+        [NameInMap("MaxComputeWriteRoleArn")]
+        [Validation(Required=false)]
+        public string MaxComputeWriteRoleArn { get; set; }
+
         /// <summary>
         /// The name of the trail whose configurations you want to update.
         /// 

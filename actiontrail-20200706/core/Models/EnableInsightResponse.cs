@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
-    public class GetGlobalEventsStorageRegionResponse : TeaModel {
+    public class EnableInsightResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetGlobalEventsStorageRegionResponseBody Body { get; set; }
+        public EnableInsightResponseBody Body { get; set; }
 
     }
 

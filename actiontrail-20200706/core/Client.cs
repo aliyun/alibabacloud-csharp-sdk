@@ -207,6 +207,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
             {
                 query["IsOrganizationTrail"] = request.IsOrganizationTrail;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectArn))
+            {
+                query["MaxComputeProjectArn"] = request.MaxComputeProjectArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeWriteRoleArn))
+            {
+                query["MaxComputeWriteRoleArn"] = request.MaxComputeWriteRoleArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -276,6 +284,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOrganizationTrail))
             {
                 query["IsOrganizationTrail"] = request.IsOrganizationTrail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectArn))
+            {
+                query["MaxComputeProjectArn"] = request.MaxComputeProjectArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeWriteRoleArn))
+            {
+                query["MaxComputeWriteRoleArn"] = request.MaxComputeWriteRoleArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -738,6 +754,72 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrailsWithOptionsAsync(request, runtime);
+        }
+
+        public EnableInsightResponse EnableInsightWithOptions(EnableInsightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightType))
+            {
+                query["InsightType"] = request.InsightType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableInsight",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableInsightResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<EnableInsightResponse> EnableInsightWithOptionsAsync(EnableInsightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightType))
+            {
+                query["InsightType"] = request.InsightType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableInsight",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableInsightResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public EnableInsightResponse EnableInsight(EnableInsightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableInsightWithOptions(request, runtime);
+        }
+
+        public async Task<EnableInsightResponse> EnableInsightAsync(EnableInsightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableInsightWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -2067,6 +2149,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
             {
                 query["EventRW"] = request.EventRW;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectArn))
+            {
+                query["MaxComputeProjectArn"] = request.MaxComputeProjectArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeWriteRoleArn))
+            {
+                query["MaxComputeWriteRoleArn"] = request.MaxComputeWriteRoleArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -2128,6 +2218,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventRW))
             {
                 query["EventRW"] = request.EventRW;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectArn))
+            {
+                query["MaxComputeProjectArn"] = request.MaxComputeProjectArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeWriteRoleArn))
+            {
+                query["MaxComputeWriteRoleArn"] = request.MaxComputeWriteRoleArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

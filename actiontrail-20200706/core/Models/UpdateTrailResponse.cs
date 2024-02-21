@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class UpdateTrailResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UpdateTrailResponseBody Body { get; set; }
 
     }
