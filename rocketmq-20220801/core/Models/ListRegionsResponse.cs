@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class ListConsumerGroupSubscriptionsResponse : TeaModel {
+    public class ListRegionsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListConsumerGroupSubscriptionsResponseBody Body { get; set; }
+        public ListRegionsResponseBody Body { get; set; }
 
     }
 

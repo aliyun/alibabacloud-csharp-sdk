@@ -385,6 +385,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public GetInstanceResponseBodyDataNetworkInfoVpcInfo VpcInfo { get; set; }
                 public class GetInstanceResponseBodyDataNetworkInfoVpcInfo : TeaModel {
+                    /// <summary>
+                    /// The ID of the security group with which the instance is associated.
+                    /// </summary>
                     [NameInMap("securityGroupIds")]
                     [Validation(Required=false)]
                     public string SecurityGroupIds { get; set; }
@@ -481,6 +484,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public bool? SupportAutoScaling { get; set; }
 
+                /// <summary>
+                /// Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+                /// </summary>
                 [NameInMap("traceOn")]
                 [Validation(Required=false)]
                 public bool? TraceOn { get; set; }

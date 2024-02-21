@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable auto-renewal. This parameter takes effect only when the PaymentType parameter is set to Subscription.
+        /// Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set PaymentType to Subscription.
         /// 
         /// *   true: enable
         /// *   false: disable
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal cycle of the instance. This parameter takes effect only when the autoRenew parameter is set to true. Unit: months.
+        /// The auto-renewal cycle of the instance. This parameter takes effect only if you set autoRenew to true. Unit: months.
         /// 
         /// Valid values:
         /// 
@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
+        /// <summary>
+        /// The commodity code.
+        /// 
+        /// *   ons_rmqpost_public_intl: pay-as-you-go
+        /// *   ons_rmqsub_public_intl: subscription
+        /// </summary>
         [NameInMap("commodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The information about the network.
+        /// The network configurations.
         /// </summary>
         [NameInMap("networkInfo")]
         [Validation(Required=false)]
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <summary>
                 /// The Internet bandwidth. Unit: MB/s.
                 /// 
-                /// This parameter is required only when the flowOutType parameter is set to payByBandwidth.
+                /// This parameter is required only if you set flowOutType to payByBandwidth.
                 /// 
                 /// Valid values: 1 to 1000.
                 /// </summary>
@@ -69,12 +75,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? FlowOutBandwidth { get; set; }
 
                 /// <summary>
-                /// The metering method for Internet usage.
+                /// The billing method of Internet usage.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   payByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.
-                /// *   uninvolved: N/A. If the Internet access feature is disabled, specify this value for the parameter.
+                /// *   payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.
+                /// *   uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.
                 /// </summary>
                 [NameInMap("flowOutType")]
                 [Validation(Required=false)]
@@ -88,17 +94,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// *   enable
                 /// *   disable
                 /// 
-                /// By default, ApsaraMQ for RocketMQ instances are accessed in VPCs. If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+                /// By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see [Internet access fee](~~427240~~).
                 /// </summary>
                 [NameInMap("internetSpec")]
                 [Validation(Required=false)]
                 public string InternetSpec { get; set; }
 
                 /// <summary>
-                /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only when you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+                /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the instance.
                 /// 
-                /// *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-                /// *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+                /// *   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+                /// *   If configure an IP address whitlist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
                 /// </summary>
                 [NameInMap("ipWhitelist")]
                 [Validation(Required=false)]
@@ -113,23 +119,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public CreateInstanceRequestNetworkInfoVpcInfo VpcInfo { get; set; }
             public class CreateInstanceRequestNetworkInfoVpcInfo : TeaModel {
+                /// <summary>
+                /// The ID of the security group to which the instance belongs.
+                /// </summary>
                 [NameInMap("securityGroupIds")]
                 [Validation(Required=false)]
                 public string SecurityGroupIds { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch with which the instance is associated.
+                /// The ID of the vSwitch with which you want to associate the instance.
                 /// 
-                /// > After you create a ApsaraMQ for RocketMQ instance, you cannot change the vSwitch to which the instance is connected. If you want to change the vSwitch with which a ApsaraMQ for RocketMQ is associated, you must release the instance and purchase a new instance.
+                /// >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.
                 /// </summary>
                 [NameInMap("vSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC with which the instance that you want to create is associated.
+                /// The ID of the VPC in which you want to deploy the instance.
                 /// 
-                /// > After you create a ApsaraMQ for RocketMQ instance, you cannot change the VPC in which the instance is created. If you want to change the VPC with which a ApsaraMQ for RocketMQ is associated, you must release the instance and purchase a new instance.
+                /// >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.
                 /// </summary>
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
@@ -140,11 +149,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The billing method of the instance. ApsaraMQ for RocketMQ supports the subscription and pay-as-you-go billing methods.
+        /// The billing method of the instance. ApsaraMQ for RocketMQ supports the subscription and pay-as-you-go billing methods.
         /// 
         /// Valid values:
         /// 
-        /// *   PayAsYouGo: pay-as-you go. This billing method allows you to use resources before you pay for the resources.
+        /// *   PayAsYouGo: This billing method allows you to use resources before you pay for the resources.
         /// *   Subscription: This billing method allows you to use resources after you pay for the resources.
         /// 
         /// For more information, see [Billing methods](~~427234~~).
@@ -154,7 +163,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// The subscription duration of the instance. This parameter takes effect only when the PaymentType parameter is set to Subscription.
+        /// The subscription duration of the instance. This parameter takes effect only if you set PaymentType to Subscription.
         /// 
         /// Valid values:
         /// 
@@ -178,7 +187,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The information about the instance specification.
+        /// The information about the instance specifications.
         /// </summary>
         [NameInMap("productInfo")]
         [Validation(Required=false)]
@@ -192,18 +201,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// *   true: enable
             /// *   false: disable
             /// 
-            /// After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+            /// After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).
             /// 
-            /// > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).
+            /// >  The elastic TPS feature is supported only by instances of specific editions. For more information, see [Instance editions](~~444715~~).
             /// </summary>
             [NameInMap("autoScaling")]
             [Validation(Required=false)]
             public bool? AutoScaling { get; set; }
 
+            /// <summary>
+            /// The billing method.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   provisioned
+            /// *   ondemand
+            /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. You do not need to configure this parameter.
+            /// </summary>
             [NameInMap("intranetSpec")]
             [Validation(Required=false)]
             public string IntranetSpec { get; set; }
@@ -211,25 +231,27 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <summary>
             /// The retention period of messages. Unit: hours.
             /// 
-            /// For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+            /// For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.
             /// 
-            /// The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+            /// ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).
             /// </summary>
             [NameInMap("messageRetentionTime")]
             [Validation(Required=false)]
             public int? MessageRetentionTime { get; set; }
 
             /// <summary>
-            /// The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+            /// The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see [Instance specifications](~~444715~~).
             /// </summary>
             [NameInMap("msgProcessSpec")]
             [Validation(Required=false)]
             public string MsgProcessSpec { get; set; }
 
             /// <summary>
-            /// The ratio between sent messages and received messages in the instance.
+            /// The proportion of message sending TPS to the messaging TPS on the instance.
             /// 
-            /// Value values: 0.2 to 0.5.
+            /// For example, you create an instance whose peak messaging TPS is specified as 1,000 and the proportion of message sending TPS is specified as 0.8. In this case, the peak message sending TPS is 800 and the peak message receiving TPS is 200 on the instance.
+            /// 
+            /// Valid values: 0 to 1. Default value: 0.5.
             /// </summary>
             [NameInMap("sendReceiveRatio")]
             [Validation(Required=false)]
@@ -238,14 +260,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// The description of the instance.
+        /// The instance description.
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
@@ -260,14 +282,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// *   ultimate: Enterprise Platinum Edition
         /// *   professional: Professional Edition
         /// 
-        /// > After you create a ApsaraMQ for RocketMQ instance, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, and Platinum Edition. For example, an instance of Standard Edition can be upgraded to Professional Edition. However, an instance of Professional Edition cannot be downgraded to Standard Edition.
+        /// >  After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.
         /// </summary>
         [NameInMap("seriesCode")]
         [Validation(Required=false)]
         public string SeriesCode { get; set; }
 
         /// <summary>
-        /// The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
+        /// The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
         /// </summary>
         [NameInMap("serviceCode")]
         [Validation(Required=false)]
@@ -278,12 +300,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// 
         /// Valid values:
         /// 
-        /// *   cluster_ha: Cluster High-availability Edition
+        /// *   cluster_ha: High-availability Cluster Edition
         /// *   single_node: Standalone Edition
         /// 
-        /// If you set the seriesCode parameter to ultimate, you can set this parameter to only cluster_ha.
+        /// If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.
         /// 
-        /// > After you create a ApsaraMQ for RocketMQ instance, you cannot change the sub-category edition of the instance.
+        /// >  After an instance is created, you cannot change the sub-category edition of the instance.
         /// </summary>
         [NameInMap("subSeriesCode")]
         [Validation(Required=false)]

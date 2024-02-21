@@ -84,10 +84,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string PaymentType { get; set; }
 
+                /// <summary>
+                /// The product information of instance.
+                /// </summary>
                 [NameInMap("productInfo")]
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyDataListProductInfo ProductInfo { get; set; }
                 public class ListInstancesResponseBodyDataListProductInfo : TeaModel {
+                    /// <summary>
+                    /// Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+                    /// </summary>
                     [NameInMap("traceOn")]
                     [Validation(Required=false)]
                     public bool? TraceOn { get; set; }
