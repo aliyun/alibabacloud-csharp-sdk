@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifySubscriptionObjectResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ModifySubscriptionObjectResponseBody Body { get; set; }
 
     }

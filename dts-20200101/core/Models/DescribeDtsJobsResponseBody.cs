@@ -363,6 +363,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             }
 
+            /// <summary>
+            /// The environment tag of the DTS instance. Valid values:
+            /// 
+            /// - **normal**
+            /// - **online**
+            /// </summary>
             [NameInMap("DtsBisLabel")]
             [Validation(Required=false)]
             public string DtsBisLabel { get; set; }
@@ -642,7 +648,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 /// <summary>
                 /// Indicates whether full data verification is performed. Valid values:
                 /// -  **true**: yes
-                /// -   **false**: no
+                /// -  **false**: no
                 /// </summary>
                 [NameInMap("FullDataCheck")]
                 [Validation(Required=false)]
@@ -651,7 +657,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 /// <summary>
                 /// Indicates whether incremental data verification is performed. Valid values:
                 /// -  **true**: yes
-                /// -   **false**: no
+                /// -  **false**: no
                 /// </summary>
                 [NameInMap("IncDataCheck")]
                 [Validation(Required=false)]
@@ -1257,44 +1263,84 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                /// <summary>
+                /// The state information about the full data verification task.
+                /// </summary>
                 [NameInMap("FullDataCheckStatus")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus FullDataCheckStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if the task failed.
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// The progress of the full data verification task. Unit: percentage.
+                    /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
+                    /// <summary>
+                    /// The progress of the full data verification task.
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
+                    /// <summary>
+                    /// The state of the full data verification task. Valid values:
+                    /// 
+                    /// - **NotStarted**: The verification is not started. 
+                    /// - **Checking**: The verification is in progress. 
+                    /// - **Failed**: The verification failed. 
+                    /// - **Finished**: The verification is complete.
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                 }
 
+                /// <summary>
+                /// The state information about the incremental data verification task.
+                /// </summary>
                 [NameInMap("IncDataCheckStatus")]
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus IncDataCheckStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus : TeaModel {
+                    /// <summary>
+                    /// The error message returned if the task failed.
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// The progress of the incremental data verification task. Unit: percentage.
+                    /// </summary>
                     [NameInMap("Percent")]
                     [Validation(Required=false)]
                     public string Percent { get; set; }
 
+                    /// <summary>
+                    /// The progress of the incremental data verification task.
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
+                    /// <summary>
+                    /// The state of the incremental data verification task. Valid values:
+                    /// 
+                    /// - **Catched**: The verification is delayed. 
+                    /// - **NotStarted**: The verification is not started. 
+                    /// - **Checking**: The verification is in progress. 
+                    /// - **Failed**: The verification failed.
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -1338,10 +1384,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     [Validation(Required=false)]
                     public bool? DataSynchronization { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether full data verification is performed. Valid values:
+                    /// -  **true**: yes
+                    /// -  **false**: no
+                    /// </summary>
                     [NameInMap("FullDataCheck")]
                     [Validation(Required=false)]
                     public bool? FullDataCheck { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether incremental data verification is performed. Valid values:
+                    /// -  **true**: yes
+                    /// -  **false**: no
+                    /// </summary>
                     [NameInMap("IncDataCheck")]
                     [Validation(Required=false)]
                     public bool? IncDataCheck { get; set; }

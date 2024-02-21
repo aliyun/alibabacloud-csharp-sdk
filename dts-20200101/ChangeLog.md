@@ -1,3 +1,6 @@
+2024-02-21 Version: 1.3.2
+- Generated csharp 2020-01-01 for Dts.
+
 2024-01-04 Version: 1.3.1
 - Generated csharp 2020-01-01 for Dts.
 

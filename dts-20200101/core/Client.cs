@@ -9857,6 +9857,13 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+          *
+          * @param tmpReq ModifyDtsJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDtsJobResponse
+         */
         public ModifyDtsJobResponse ModifyDtsJobWithOptions(ModifyDtsJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9944,6 +9951,13 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+          *
+          * @param tmpReq ModifyDtsJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDtsJobResponse
+         */
         public async Task<ModifyDtsJobResponse> ModifyDtsJobWithOptionsAsync(ModifyDtsJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10031,12 +10045,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<ModifyDtsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+          *
+          * @param request ModifyDtsJobRequest
+          * @return ModifyDtsJobResponse
+         */
         public ModifyDtsJobResponse ModifyDtsJob(ModifyDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDtsJobWithOptions(request, runtime);
         }
 
+        /**
+          * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+          *
+          * @param request ModifyDtsJobRequest
+          * @return ModifyDtsJobResponse
+         */
         public async Task<ModifyDtsJobResponse> ModifyDtsJobAsync(ModifyDtsJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12269,6 +12295,13 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StartMigrationJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+          *
+          * @param request StartReverseWriterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartReverseWriterResponse
+         */
         public StartReverseWriterResponse StartReverseWriterWithOptions(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12300,6 +12333,13 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartReverseWriterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+          *
+          * @param request StartReverseWriterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartReverseWriterResponse
+         */
         public async Task<StartReverseWriterResponse> StartReverseWriterWithOptionsAsync(StartReverseWriterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12331,12 +12371,24 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<StartReverseWriterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+          *
+          * @param request StartReverseWriterRequest
+          * @return StartReverseWriterResponse
+         */
         public StartReverseWriterResponse StartReverseWriter(StartReverseWriterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartReverseWriterWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+          *
+          * @param request StartReverseWriterRequest
+          * @return StartReverseWriterResponse
+         */
         public async Task<StartReverseWriterResponse> StartReverseWriterAsync(StartReverseWriterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DedicatedClusterId { get; set; }
 
+        /// <summary>
+        /// The environment tag of the DTS instance. Valid values:
+        /// 
+        /// - **normal**
+        /// - **online**
+        /// </summary>
         [NameInMap("DtsBisLabel")]
         [Validation(Required=false)]
         public string DtsBisLabel { get; set; }
