@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserConfigsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeCdnUserConfigsResponseBody Body { get; set; }
 
     }

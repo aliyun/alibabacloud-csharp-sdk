@@ -666,6 +666,98 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
+          * >The maximum number of times that each user can call this operation per second is 20.
+          *
+          * @param request BatchDescribeCdnIpInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDescribeCdnIpInfoResponse
+         */
+        public BatchDescribeCdnIpInfoResponse BatchDescribeCdnIpInfoWithOptions(BatchDescribeCdnIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddrList))
+            {
+                query["IpAddrList"] = request.IpAddrList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDescribeCdnIpInfo",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDescribeCdnIpInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * >The maximum number of times that each user can call this operation per second is 20.
+          *
+          * @param request BatchDescribeCdnIpInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDescribeCdnIpInfoResponse
+         */
+        public async Task<BatchDescribeCdnIpInfoResponse> BatchDescribeCdnIpInfoWithOptionsAsync(BatchDescribeCdnIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddrList))
+            {
+                query["IpAddrList"] = request.IpAddrList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDescribeCdnIpInfo",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDescribeCdnIpInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * >The maximum number of times that each user can call this operation per second is 20.
+          *
+          * @param request BatchDescribeCdnIpInfoRequest
+          * @return BatchDescribeCdnIpInfoResponse
+         */
+        public BatchDescribeCdnIpInfoResponse BatchDescribeCdnIpInfo(BatchDescribeCdnIpInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchDescribeCdnIpInfoWithOptions(request, runtime);
+        }
+
+        /**
+          * >The maximum number of times that each user can call this operation per second is 20.
+          *
+          * @param request BatchDescribeCdnIpInfoRequest
+          * @return BatchDescribeCdnIpInfoResponse
+         */
+        public async Task<BatchDescribeCdnIpInfoResponse> BatchDescribeCdnIpInfoAsync(BatchDescribeCdnIpInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchDescribeCdnIpInfoWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * *   You can call this operation up to 30 times per second per account.
           * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
           * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
@@ -3993,6 +4085,104 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCdnDeliverListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeCdnDomainAtoaLogsResponse DescribeCdnDomainAtoaLogsWithOptions(DescribeCdnDomainAtoaLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnDomainAtoaLogs",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnDomainAtoaLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCdnDomainAtoaLogsResponse> DescribeCdnDomainAtoaLogsWithOptionsAsync(DescribeCdnDomainAtoaLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdnDomainAtoaLogs",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCdnDomainAtoaLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeCdnDomainAtoaLogsResponse DescribeCdnDomainAtoaLogs(DescribeCdnDomainAtoaLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCdnDomainAtoaLogsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeCdnDomainAtoaLogsResponse> DescribeCdnDomainAtoaLogsAsync(DescribeCdnDomainAtoaLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCdnDomainAtoaLogsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -12703,6 +12893,106 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainUvDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+          *
+          * @param request DescribeDomainVerifyDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainVerifyDataResponse
+         */
+        public DescribeDomainVerifyDataResponse DescribeDomainVerifyDataWithOptions(DescribeDomainVerifyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
+            {
+                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainVerifyData",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainVerifyDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+          *
+          * @param request DescribeDomainVerifyDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainVerifyDataResponse
+         */
+        public async Task<DescribeDomainVerifyDataResponse> DescribeDomainVerifyDataWithOptionsAsync(DescribeDomainVerifyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
+            {
+                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainVerifyData",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainVerifyDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+          *
+          * @param request DescribeDomainVerifyDataRequest
+          * @return DescribeDomainVerifyDataResponse
+         */
+        public DescribeDomainVerifyDataResponse DescribeDomainVerifyData(DescribeDomainVerifyDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDomainVerifyDataWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+          *
+          * @param request DescribeDomainVerifyDataRequest
+          * @return DescribeDomainVerifyDataResponse
+         */
+        public async Task<DescribeDomainVerifyDataResponse> DescribeDomainVerifyDataAsync(DescribeDomainVerifyDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDomainVerifyDataWithOptionsAsync(request, runtime);
         }
 
         /**

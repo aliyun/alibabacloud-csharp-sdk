@@ -1,3 +1,9 @@
+2024-02-21 Version: 2.3.0
+- Support API BatchDescribeCdnIpInfo.
+- Support API DescribeCdnDomainAtoaLogs.
+- Support API DescribeDomainVerifyData.
+
+
 2023-10-18 Version: 2.2.2
 - Generated csharp 2018-05-10 for Cdn.
 

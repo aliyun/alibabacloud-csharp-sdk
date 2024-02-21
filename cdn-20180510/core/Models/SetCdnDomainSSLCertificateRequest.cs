@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// Specifies whether the certificate is issued in canary releases. If you set this parameter to **staging**, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.
+        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }

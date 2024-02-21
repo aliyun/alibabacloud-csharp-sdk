@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class CheckCdnDomainICPRequest : TeaModel {
+        /// <summary>
+        /// The domain name.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
