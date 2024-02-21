@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Gdb20190903.Models
+{
+    public class DescribeResourceUsageResponseBody : TeaModel {
+        [NameInMap("BackupSize")]
+        [Validation(Required=false)]
+        public long? BackupSize { get; set; }
+
+        [NameInMap("ColdBackupSize")]
+        [Validation(Required=false)]
+        public long? ColdBackupSize { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DataSize")]
+        [Validation(Required=false)]
+        public long? DataSize { get; set; }
+
+        [NameInMap("DiskUsed")]
+        [Validation(Required=false)]
+        public long? DiskUsed { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
+        [NameInMap("LogSize")]
+        [Validation(Required=false)]
+        public long? LogSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
