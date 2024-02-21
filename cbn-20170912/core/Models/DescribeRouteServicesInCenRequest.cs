@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// The ID of the region where the cloud service is deployed.
+        /// The region ID of the cloud service.
         /// 
         /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) that is associated with the cloud service.
+        /// The ID of the VPC associated with the cloud service.
         /// </summary>
         [NameInMap("HostVpcId")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+        /// The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

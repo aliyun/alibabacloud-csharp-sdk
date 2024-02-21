@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the network instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]

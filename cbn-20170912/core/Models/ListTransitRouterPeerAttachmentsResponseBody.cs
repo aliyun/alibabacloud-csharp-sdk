@@ -41,24 +41,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The queried inter-region connections.
+        /// A list of inter-region connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Indicates whether the local Enterprise Edition transit router automatically advertises routes of the inter-region connection to the peer transit router. Valid values:
+            /// Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:
             /// 
-            /// *   **false** (default): no
-            /// *   **true**: yes
+            /// *   **false** (default)
+            /// *   **true**
             /// </summary>
             [NameInMap("AutoPublishRouteEnabled")]
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+            /// The bandwidth value of the inter-region connection. Unit: Mbit/s.
             /// 
             /// *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
             /// *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
@@ -70,9 +70,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The bandwidth allocation method. Valid values:
             /// 
-            /// **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-            /// 
-            /// **DataTransfer**: bills bandwidth based on the pay-by-data-transfer metering method.
+            /// *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+            /// *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
             /// </summary>
             [NameInMap("BandwidthType")]
             [Validation(Required=false)]
@@ -102,9 +101,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The default link type. Valid values:
-            /// - **Gold**
-            /// - **Platinum**
+            /// The default line type.
+            /// 
+            /// *   **Gold** (default)
+            /// *   **Platinum**
             /// </summary>
             [NameInMap("DefaultLinkType")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of the resource to which the transit router is connected. Valid values:
             /// 
-            /// *   **VPC**: VPC
+            /// *   **VPC**: virtual private cloud (VPC)
             /// *   **CCN**: Cloud Connect Network (CCN) instance
             /// *   **VBR**: virtual border router (VBR)
             /// *   **TR**: transit router
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The status of the inter-region connection. Valid values:
             /// 
-            /// *   **Attached**: The inter-region connection is created.
-            /// *   **Attaching**: The inter-region connection is being created on the transit router.
-            /// *   **Detaching**: The inter-region connection is being deleted from the transit router.
-            /// *   **Detached**: The inter-region connection is deleted from the transit router.
+            /// *   **Attached**
+            /// *   **Attaching**
+            /// *   **Detaching**
+            /// *   **Detached**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// A list of tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

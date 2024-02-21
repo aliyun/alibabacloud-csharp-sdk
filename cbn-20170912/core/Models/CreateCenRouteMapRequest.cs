@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenRouteMapRequest : TeaModel {
         /// <summary>
-        /// The match method that is used to match routes against the AS paths. Valid values:
+        /// The match method that is used to match routes based on AS paths. Valid values:
         /// 
-        /// *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.
+        /// *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS path specified in the match condition.
         /// *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
         /// </summary>
         [NameInMap("AsPathMatchMode")]
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
         /// 
-        ///     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
+        /// For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.
         /// 
         /// *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
         /// 
-        ///     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+        /// For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
         /// </summary>
         [NameInMap("CidrMatchMode")]
         [Validation(Required=false)]
         public string CidrMatchMode { get; set; }
 
         /// <summary>
-        /// The match method that is used to match routes based on the community. Valid values:
+        /// The match method that is used to evaluate routes based on the community. Valid values:
         /// 
         /// *   **Include**: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.
         /// *   **Complete**: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to exclude the destination network instance IDs. Valid values:
         /// 
-        /// *   **false** (default value): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+        /// *   **false** (default value): A route meets the match condition if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
         /// *   **true**: A route meets the match condition if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
         /// </summary>
         [NameInMap("DestinationInstanceIdsReverseMatch")]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationRouteTableIds { get; set; }
 
         /// <summary>
-        /// The action to be performed on a route that meets all match conditions. Valid values:
+        /// The action to be performed on a route that meets all the match conditions. Valid values:
         /// 
         /// *   **Permit**: the route is permitted.
         /// *   **Deny**: the route is denied.
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to exclude the source network instance IDs. Valid values:
         /// 
-        /// *   **false** (default value): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+        /// *   **false** (default value): A route meets the match condition if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
         /// *   **true**: A route is a match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
         /// </summary>
         [NameInMap("SourceInstanceIdsReverseMatch")]
@@ -355,11 +355,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
         /// 
-        ///     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
+        /// For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
         /// 
         /// *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
         /// 
-        ///     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.
+        /// For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.
         /// </summary>
         [NameInMap("TransmitDirection")]
         [Validation(Required=false)]

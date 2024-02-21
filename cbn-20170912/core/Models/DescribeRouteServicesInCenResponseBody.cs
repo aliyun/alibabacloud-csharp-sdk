@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteServicesInCenResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the cloud service is deployed.
+                /// The region ID of the cloud service.
                 /// </summary>
                 [NameInMap("HostRegionId")]
                 [Validation(Required=false)]
                 public string HostRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC that is associated with the cloud service.
+                /// The ID of the VPC associated with the cloud service.
                 /// </summary>
                 [NameInMap("HostVpcId")]
                 [Validation(Required=false)]
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The status of the cloud service. Valid values:
                 /// 
-                /// *   **Creating**: The cloud service is being created.
-                /// *   **Active**: The cloud service is available.
-                /// *   **Deleting**: The cloud service is being deleted.
+                /// *   **Creating**
+                /// *   **Active**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenVbrHealthCheckRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account that owns the VBR.
+        /// The ID of the Alibaba Cloud account that owns the VBRs.
         /// </summary>
         [NameInMap("VbrInstanceOwnerId")]
         [Validation(Required=false)]
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VBR is deployed.
+        /// The ID of the region where the VBRs are deployed.
         /// 
         /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>

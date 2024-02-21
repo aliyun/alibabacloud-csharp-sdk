@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The description of the health check.
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -72,13 +72,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// Indicates whether probing is enabled. Valid values:
                 /// 
-                /// *   **true**: yes
+                /// *   **true**: Probing is enabled.
                 /// 
-                ///     If probing is enabled, the system does not switch to another route when the detected route is not reachable.
+                ///         If you enable probing, the system does not switch to another route if the detected route is not reachable.
                 /// 
-                /// *   **false**: no
+                /// *   **false**: Probing is disabled.
                 /// 
-                ///     If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+                ///           If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
                 /// </summary>
                 [NameInMap("HealthCheckOnly")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public int? HealthyThreshold { get; set; }
 
                 /// <summary>
-                /// The ID of the VBR.
+                /// The VBR ID.
                 /// </summary>
                 [NameInMap("VbrInstanceId")]
                 [Validation(Required=false)]

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The new description of the bandwidth plan.
         /// 
-        /// The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+        /// The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The new name of the bandwidth plan.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

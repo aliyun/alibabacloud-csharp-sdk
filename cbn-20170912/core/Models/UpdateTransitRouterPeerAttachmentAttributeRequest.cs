@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+        /// The bandwidth value of the inter-region connection. Unit: Mbit/s.
         /// 
         /// *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
         /// *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
         /// 
-        /// > If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+        /// >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
@@ -60,9 +60,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The default link type. Valid values:
-        /// - **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.
-        /// - **Gold** (default)
+        /// The default line type.
+        /// 
+        /// Valid values: Platinum and Gold.
+        /// 
+        /// Platinum is supported only when BandwidthType is set to DataTransfer.
         /// </summary>
         [NameInMap("DefaultLinkType")]
         [Validation(Required=false)]

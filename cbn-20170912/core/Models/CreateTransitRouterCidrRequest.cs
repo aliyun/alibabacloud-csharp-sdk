@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the CIDR block.
+        /// The description of the transit router CIDR block.
         /// 
-        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The name of the CIDR block.
+        /// The name of the transit router CIDR block.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

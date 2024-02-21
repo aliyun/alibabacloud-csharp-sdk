@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+        /// The bandwidth value of the inter-region connection. Unit: Mbit/s.
+        /// 
+        /// *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
+        /// *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -29,7 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The method that is used to allocate bandwidth to the inter-region connection. Valid values:
         /// 
-        /// **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+        /// *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+        /// *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
         /// </summary>
         [NameInMap("BandwidthType")]
         [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
         /// 
-        /// If this parameter is not set, the system allocates bandwidth that is used for testing purposes to the inter-region connection. The default bandwidth for testing purpose is 1 Kbit/s. You can use the bandwidth to test the connectivity of IPv4 networks.
+        /// *   If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
@@ -63,9 +67,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The default link type. Valid values:
-        /// - **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.
-        /// - **Gold** (default)
+        /// The default line type.
+        /// 
+        /// Valid values: Platinum and Gold.
+        /// 
+        /// Platinum is supported only when BandwidthType is set to DataTransfer.
         /// </summary>
         [NameInMap("DefaultLinkType")]
         [Validation(Required=false)]

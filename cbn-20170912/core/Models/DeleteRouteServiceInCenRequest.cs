@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteRouteServiceInCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the network instance of the cloud service that you want to access is deployed.
-        /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where the cloud service is accessed.
         /// </summary>
         [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
@@ -33,7 +31,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the cloud service is deployed.
+        /// The region ID of the cloud service.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("HostRegionId")]
         [Validation(Required=false)]
