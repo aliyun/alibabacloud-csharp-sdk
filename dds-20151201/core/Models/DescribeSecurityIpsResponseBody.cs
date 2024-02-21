@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Whether to display DAS whitelist information.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the information of IP whitelists.
+        /// The IP addresses in the default whitelist.
         /// </summary>
         [NameInMap("SecurityIpGroups")]
         [Validation(Required=false)]
@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup> SecurityIpGroup { get; set; }
             public class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup : TeaModel {
                 /// <summary>
-                /// The attribute of the IP whitelist. This parameter is empty by default.
+                /// An array that consists of the information of IP whitelists.
                 /// </summary>
                 [NameInMap("SecurityIpGroupAttribute")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupAttribute { get; set; }
 
                 /// <summary>
-                /// The name of the IP whitelist.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("SecurityIpGroupName")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupName { get; set; }
 
                 /// <summary>
-                /// The IP addresses in the whitelist.
+                /// The name of the IP whitelist.
                 /// </summary>
                 [NameInMap("SecurityIpList")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The IP addresses in the default whitelist.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]

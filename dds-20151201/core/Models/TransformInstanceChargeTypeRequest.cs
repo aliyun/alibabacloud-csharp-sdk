@@ -51,7 +51,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// Specifies whether to use coupons. Default value: null. Valid values:
+        /// 
+        /// *   **default** or **null**: uses coupons.
+        /// *   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]

@@ -12,16 +12,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The description of the account.
         /// 
-        /// *   It cannot start with http:// or https://.
-        /// *   It must start with a letter.
-        /// *   It must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   The description must start with a letter and cannot start with http:// or https://.
+        /// *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The name of the account for which you want to modify the description.
+        /// The name of the account whose description is to be modified.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]

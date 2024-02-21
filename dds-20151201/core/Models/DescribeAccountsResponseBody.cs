@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The username of the account.
+        /// The details of the account.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -22,8 +22,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
                 /// The description of the account.
-                /// 
-                /// > This parameter is returned only after you configure the description of the account by calling the [ModifyAccountDescription](~~468391~~) operation.
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The status of the account.
+                /// The status of the account. Valid values:
                 /// 
                 /// *   **Unavailable**
                 /// *   **Available**
@@ -49,18 +47,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The role of the account. Valid values:
                 /// 
-                /// *   **db**: shard
-                /// *   **cs**: Configserver
-                /// *   **mongos**: mongos
-                /// *   **logic:** sharded cluster instance
-                /// *   **normal:** replica set instance
+                /// *   **db**: shard node
+                /// *   **cs**: Configserver node
+                /// *   **mongos**: mongos node
+                /// *   **logic**: sharded cluster instance
+                /// *   **normal**: replica set instance
                 /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]
                 public string CharacterType { get; set; }
 
                 /// <summary>
-                /// The name of the instance to which the account belongs.
+                /// The ID of the instance to which the account belongs.
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]

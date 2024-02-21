@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class RestoreDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup.
+        /// The ID of the backup set.
         /// 
-        /// >  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+        /// > You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]

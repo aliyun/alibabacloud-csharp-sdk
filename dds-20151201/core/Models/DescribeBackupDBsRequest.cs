@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupDBsRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
+        /// The backup ID.
         /// 
-        /// > * You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
-        /// > * You must specify one of the **RestoreTime** and BackupId parameters.
+        /// > 
+        /// 
+        /// *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+        /// 
+        /// *   You must specify one of the **RestoreTime** and BackupId parameters.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -28,14 +31,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+        /// The page number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 30. Valid values: **30**, **50**, and **100**.
+        /// The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -57,10 +60,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
-        /// > * The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
-        /// > * You must specify one of the RestoreTime and **BackupId** parameters.
+        /// > 
+        /// 
+        /// *   The time can be a point in time within the previous seven days. The time must be earlier than the current time, but later than the time when the instance was created.
+        /// 
+        /// *   You must specify one of the RestoreTime and **BackupId** parameters.
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]

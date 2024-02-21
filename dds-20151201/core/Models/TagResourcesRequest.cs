@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The list of resource IDs.
+        /// The details of the tags bound to the instance.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The value of tag.
             /// 
-            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals: 
+            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
             /// 
             /// - **Tag.1.Value** specifies the value of the first tag.
             /// - **Tag.2.Value** specifies the value of the second tag.

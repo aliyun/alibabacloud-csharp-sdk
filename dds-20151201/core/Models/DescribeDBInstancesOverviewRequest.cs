@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:
+        /// The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
         /// 
         /// *   [Standalone instance types](~~311407~~)
         /// *   [Replica set instance types](~~311410~~)
@@ -40,8 +40,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the instance for which you want to query the overview information.
         /// 
-        /// > * If you do not specify this parameter, the overview information of all instances under this account is queried.
-        /// > * Separate the instance IDs with commas (,).
+        /// > 
+        /// 
+        /// *   If you do not specify this parameter, the overview information of all instances within this account is queried.
+        /// 
+        /// *   Separate the instance IDs with commas (,).
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -55,13 +58,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// The category of the instance. Valid values:
+        /// The architecture of the instance. Valid values:
         /// 
-        /// - **sharding**: sharded cluster instance
-        /// - **replicate**: replica set or standalone instance
+        /// *   **sharding**: sharded cluster instance
+        /// *   **replicate**: replica set or standalone instance
         /// 
-        /// > * To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
-        /// > * If you do not specify this parameter, the overview information of all instances under this account is queried.
+        /// > 
+        /// 
+        /// *   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
+        /// 
+        /// *   If you do not specify this parameter, the overview information of all instances within this account is queried.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -70,8 +76,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **Classic**
-        /// *   **VPC**
+        /// *   **Classic**: classic network
+        /// *   **VPC**: Virtual Private Cloud (VPC)
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+        /// The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -108,21 +114,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// The ID of the vSwitch to which the instance is connected.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// The ID of the VPC in which the instance is deployed.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The zone ID of the instance.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The information of the instance.
+        /// The details of the instance.
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance : TeaModel {
                 /// <summary>
-                /// Indicates whether performance burst is enabled for the ESSD AutoPL disk.
+                /// 是否已开启突发
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **PrePaid**: subscription
-                /// *   **PostPaid**: pay-as-you-go
+                /// *   **PrePaid**: subscription.
+                /// *   **PostPaid**: pay-as-you-go.
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The information of the Configserver nodes.
+                /// The details of the Configserver nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ConfigserverList")]
                 [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string NodeId { get; set; }
 
                         /// <summary>
-                        /// The storage capacity of the Configserver node. Unit: GB.
+                        /// The storage capacity of the Configserver node.
                         /// </summary>
                         [NameInMap("NodeStorage")]
                         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CurrentKernelVersion { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -164,11 +164,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// 
                 /// *   **all_completed**: All orders are being produced or complete.
                 /// *   **order_unpaid**: The instance has unpaid orders.
-                /// *   **order_wait_for_produce**: Orders are being delivered for production.
+                /// *   **order_wait_for_produce**: Order are being delivered for production.
                 /// 
-                /// >  The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete the production.
-                /// > *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
-                /// > *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
+                /// > The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete an order.
+                /// 
+                /// *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
+                /// *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
                 /// </summary>
                 [NameInMap("DBInstanceOrderStatus")]
                 [Validation(Required=false)]
@@ -177,8 +178,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// Indicates whether release protection is enabled for the instance. Valid values:
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// *   **true**: Release protection is enabled.
+                /// *   **false** Release protection is disabled.
                 /// </summary>
                 [NameInMap("DBInstanceReleaseProtection")]
                 [Validation(Required=false)]
@@ -201,8 +202,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The architecture of the instance. Valid values:
                 /// 
-                /// *   **replicate**: replica set instance
-                /// *   **sharding**: sharded cluster instance
+                /// *   **replicate**: replica set instance.
+                /// *   **sharding**: sharded cluster instance.
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
@@ -216,14 +217,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether disk encryption is enabled.
+                /// 是否开启云盘加密
                 /// </summary>
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// The Key Management Service (KMS) key used for disk encryption.
+                /// 云盘加密对应的kms-key
                 /// </summary>
                 [NameInMap("EncryptionKey")]
                 [Validation(Required=false)]
@@ -237,7 +238,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// The database engine version of the instance. Valid values:
                 /// 
                 /// *   **6.0**
                 /// *   **5.0**
@@ -252,7 +253,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The time when the subscription instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
                 /// 
-                /// >  This parameter is returned if the instance is a subscription instance.
+                /// > This parameter is returned if the instance is a subscription instance.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -264,9 +265,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **cn-hangzhou-g**: Hangzhou Zone G
                 /// *   **cn-hangzhou-h**: Hangzhou Zone H
                 /// *   **cn-hangzhou-i**: Hangzhou Zone I
-                /// *   **cn-hongkong-b**: Hongkong Zone B
-                /// *   **cn-hongkong-c**: Hongkong Zone C
-                /// *   **cn-hongkong-d**: Hongkong Zone D
+                /// *   **cn-hongkong-b**: Hong Kong Zone B
+                /// *   **cn-hongkong-c**: Hong Kong Zone C
+                /// *   **cn-hongkong-d**: Hong Kong Zone D
                 /// *   **cn-wulanchabu-a**: Ulanqab Zone A
                 /// *   **cn-wulanchabu-b**: Ulanqab Zone B
                 /// *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -280,8 +281,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **eu-central-1b**: Frankfurt Zone B
                 /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
-                /// > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-                /// > *   This parameter is returned only if you use the China site (aliyun.com).
+                /// > 
+                /// 
+                /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
+                /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("HiddenZoneId")]
                 [Validation(Required=false)]
@@ -290,10 +294,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The kind code of the instance. Valid values:
                 /// 
-                /// *   **0**: physical machine
-                /// *   **1**: Elastic Compute Service (ECS) instance
-                /// *   **2**: Docker cluster
-                /// *   **18**: Kubernetes cluster
+                /// *   **0**: physical machine.
+                /// *   **1**: Elastic Compute Service (ECS) instance.
+                /// *   **2**: Docker cluster.
+                /// *   **18**: Kubernetes cluster.
                 /// </summary>
                 [NameInMap("KindCode")]
                 [Validation(Required=false)]
@@ -312,8 +316,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **Unlock**: The instance is not locked.
                 /// *   **ManualLock**: The instance is manually locked.
                 /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-                /// *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
-                /// *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
+                /// *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+                /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
                 /// *   **Released**: The instance is released.
                 /// </summary>
                 [NameInMap("LockMode")]
@@ -349,16 +353,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? MaxIOPS { get; set; }
 
                 /// <summary>
-                /// The maximum MBPS of the instance, Unit: MB/s.
+                /// 实例的最大云盘吞吐量，单位MB/s。
                 /// </summary>
                 [NameInMap("MaxMBPS")]
                 [Validation(Required=false)]
                 public int? MaxMBPS { get; set; }
 
                 /// <summary>
-                /// The information of the mongos nodes.
+                /// The details of the mongos nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("MongosList")]
                 [Validation(Required=false)]
@@ -427,7 +431,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The VPC ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCId")]
                         [Validation(Required=false)]
@@ -436,7 +440,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The vSwitch ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VSwitchId")]
                         [Validation(Required=false)]
@@ -456,8 +460,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**: classic network
-                /// *   **VPC**: VPC
+                /// *   **Classic**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -469,14 +473,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **mongodb**
                 /// *   **dynamodb**
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ProtocolType")]
                 [Validation(Required=false)]
                 public string ProtocolType { get; set; }
 
                 /// <summary>
-                /// The provisioned performance of the ESSD AutoPL disk.
+                /// 预配置性能
                 /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]
@@ -497,9 +501,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The logical ID of the replica set instance.
+                /// The logical ID of the replica instance.
                 /// 
-                /// >  ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica set instances.
+                /// > ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.
                 /// </summary>
                 [NameInMap("ReplacateId")]
                 [Validation(Required=false)]
@@ -508,16 +512,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The name of the replica set instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicaSetName")]
                 [Validation(Required=false)]
                 public string ReplicaSetName { get; set; }
 
                 /// <summary>
-                /// The information of the replica set instance.
+                /// The details of the replica set instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicaSets")]
                 [Validation(Required=false)]
@@ -544,8 +548,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The network type of the instance. Valid values:
                         /// 
-                        /// *   **Classic**: classic network
-                        /// *   **VPC**: VPC
+                        /// *   **Classic**: classic network.
+                        /// *   **VPC**: VPC.
                         /// </summary>
                         [NameInMap("NetworkType")]
                         [Validation(Required=false)]
@@ -564,7 +568,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The instance ID.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCCloudInstanceId")]
                         [Validation(Required=false)]
@@ -573,7 +577,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The VPC ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCId")]
                         [Validation(Required=false)]
@@ -582,7 +586,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The vSwitch ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is virtual private cloud (VPC).
+                        /// > This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).
                         /// </summary>
                         [NameInMap("VSwitchId")]
                         [Validation(Required=false)]
@@ -595,16 +599,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The number of nodes in the instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicationFactor")]
                 [Validation(Required=false)]
                 public string ReplicationFactor { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the instance belongs.
+                /// The ID of the resource group.
                 /// 
-                /// >  This parameter is returned only if you use the China site (aliyun.com).
+                /// > This parameter is returned only if you use the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -616,9 +620,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **cn-hangzhou-g**: Hangzhou Zone G
                 /// *   **cn-hangzhou-h**: Hangzhou Zone H
                 /// *   **cn-hangzhou-i**: Hangzhou Zone I
-                /// *   **cn-hongkong-b**: Hongkong Zone B
-                /// *   **cn-hongkong-c**: Hongkong Zone C
-                /// *   **cn-hongkong-d**: Hongkong Zone D
+                /// *   **cn-hongkong-b**: Hong Kong Zone B
+                /// *   **cn-hongkong-c**: Hong Kong Zone C
+                /// *   **cn-hongkong-d**: Hong Kong Zone D
                 /// *   **cn-wulanchabu-a**: Ulanqab Zone A
                 /// *   **cn-wulanchabu-b**: Ulanqab Zone B
                 /// *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -632,17 +636,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **eu-central-1b**: Frankfurt Zone B
                 /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
-                /// > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-                /// > *   This parameter is returned only if you use the China site (aliyun.com).
+                /// > 
+                /// 
+                /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
+                /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
                 [Validation(Required=false)]
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// The information of the shard nodes.
+                /// The details of the shard nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ShardList")]
                 [Validation(Required=false)]
@@ -667,7 +674,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public int? MaxConnections { get; set; }
 
                         /// <summary>
-                        /// The maximum  MBPS of the shard node, Unit: MB/s.
+                        /// shard节点的最大云盘吞吐量。
                         /// </summary>
                         [NameInMap("MaxDiskMbps")]
                         [Validation(Required=false)]
@@ -702,7 +709,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string NodeId { get; set; }
 
                         /// <summary>
-                        /// The storage capacity of the shard node. Unit: GB.
+                        /// The storage capacity of the shard node.
                         /// </summary>
                         [NameInMap("NodeStorage")]
                         [Validation(Required=false)]
@@ -743,14 +750,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
-                /// **cloud_essd1**: ESSD PL1 **cloud_essd2**: ESSD PL2 **cloud_essd3**: ESSD PL3 **local_ssd**: local SSD **cloud_essd_dbfs_s**: DBFS disk
+                /// **cloud_essd1**: PL1 ESSD. **cloud_essd2**: PL2. ESSD. **cloud_essd3**: PL3 ESSD. **local_ssd**: local SSD.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The progress of data synchronization in percentage. When you are changing the configurations of the instance, you must synchronize the data of the instance. You can obtain the data synchronization progress based on the value returned for this parameter.
+                /// 数据同步进度百分比。当实例处在变配中时，需要进行数据同步等操作，可以通过该字段判断同步进度。
                 /// </summary>
                 [NameInMap("SyncPercent")]
                 [Validation(Required=false)]
@@ -768,14 +775,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The tag key of the instance.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The tag value of the instance.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -786,10 +793,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the cluster backup mode is enabled. Valid values:
+                /// 是否使用集群备份模式。取值说明：
                 /// 
-                /// *   **true**: The cluster backup mode is enabled.
-                /// *   **false**: The cluster backup mode is disabled.
+                /// - **true**：启用集群备份模式。
+                /// - **false**未启用集群备份模式。
                 /// </summary>
                 [NameInMap("UseClusterBackup")]
                 [Validation(Required=false)]
@@ -798,7 +805,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The instance ID.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VPCCloudInstanceIds")]
                 [Validation(Required=false)]
@@ -807,7 +814,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The VPC ID of the instance.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
@@ -816,25 +823,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The vSwitch ID of the instance.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// Indicates whether password-free access within the VPC is enabled. Valid values:
+                /// Indicates whether password-free access over VPC is enabled. Valid values:
                 /// 
-                /// *   **Open**: Password-free access within the VPC is enabled.
-                /// *   **Close**: Password-free access within the VPC is disabled, and you must use a password for access.
-                /// *   **NotSupport**: Password-free access within the VPC is not supported.
+                /// *   **Open**: Password-free access over VPC is enabled.
+                /// *   **Close**: Password-free access over VPC is disabled, and you must use a password for access.
+                /// *   **NotSupport**: Password-free access over VPC is not supported.
                 /// </summary>
                 [NameInMap("VpcAuthMode")]
                 [Validation(Required=false)]
                 public string VpcAuthMode { get; set; }
 
                 /// <summary>
-                /// The ID of the zone in which the instance resides.
+                /// The zone ID of the instance.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

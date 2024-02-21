@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// Details about backup sets.
+        /// The details of the backup sets.
         /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+                /// The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The internal download URL of the backup set.
                 /// 
-                /// >  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.
+                /// > You can use this URL to download the backup set from on the Elastic Compute Service (ECS) instance which is on the same network as the ApsaraDB for MongoDB instance.
                 /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupIntranetDownloadURL { get; set; }
 
                 /// <summary>
-                /// The backup method. Valid values:
+                /// The method that is used to generate the backup set. Valid values:
                 /// 
                 /// *   **Snapshot**
                 /// *   **Physical**
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupMethod { get; set; }
 
                 /// <summary>
-                /// The backup mode.
+                /// The backup mode of the backup set. Valid values:
                 /// 
-                /// *   **Automated**: automatic backup
-                /// *   **Manual**: manual backup
+                /// *   **Automated**:
+                /// *   **Manual**
                 /// </summary>
                 [NameInMap("BackupMode")]
                 [Validation(Required=false)]
@@ -86,27 +86,27 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public long? BackupSize { get; set; }
 
                 /// <summary>
-                /// The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+                /// The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the backup. Valid values:
+                /// The status of the backup task. Valid values:
                 /// 
-                /// *   **Success**: The backup task is successful.
-                /// *   **Failed**: The backup task failed.
+                /// *   **Success**
+                /// *   **Failed**
                 /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The backup method.
+                /// The backup type. Valid values:
                 /// 
-                /// *   **FullBackup**: a full backup
-                /// *   **IncrementalBackup**: an incremental backup
+                /// *   **FullBackup**
+                /// *   **IncrementalBackup**
                 /// </summary>
                 [NameInMap("BackupType")]
                 [Validation(Required=false)]
@@ -117,28 +117,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries returned per page. Valid values:
+        /// 
+        /// *   **30** (default)
+        /// *   **50**
+        /// *   **100**
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of backup sets that were returned.
+        /// The total number of backup sets.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

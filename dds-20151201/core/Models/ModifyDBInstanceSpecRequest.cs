@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   **true**: enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.
+        /// *   **true** (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.
         /// *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.
         /// </summary>
         [NameInMap("AutoPay")]
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// The time when the changed configurations take effect. Default value: Immediately. Valid values:
+        /// The time when the changed configurations take effect. Valid values:
         /// 
-        /// *   **Immediately**: The configurations immediately take effect.
+        /// *   **Immediately** (default): The configurations immediately take effect.
         /// *   **MaintainTime**: The configurations take effect during the maintenance window of the instance.
         /// </summary>
         [NameInMap("EffectiveTime")]
@@ -73,19 +73,37 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// Additional parameter
+        /// The additional parameter.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   async
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   sync
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ExtraParam")]
         [Validation(Required=false)]
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// The type of the configuration change. Default value: DOWNGRADE. Valid values:
+        /// The type of the configuration change. Valid values:
         /// 
         /// *   **UPGRADE**
-        /// *   **DOWNGRADE**
+        /// *   **DOWNGRADE** (default)
         /// 
-        /// > This parameter can be configured only when the billing method of the instance is subscription.
+        /// >  This parameter can be configured only when the billing method of the instance is subscription.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -113,10 +131,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The number of nodes in the instance.
         /// 
-        /// *   Valid values of replica set instances: **3**, **5**, and **7**
-        /// *   Valid values of standalone instances: **1**
+        /// *   Valid values for replica set instances: **3**, **5**, and **7**
+        /// *   Valid values for standalone instances: **1**
         /// 
-        /// > This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
+        /// >  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
         /// </summary>
         [NameInMap("ReplicationFactor")]
         [Validation(Required=false)]

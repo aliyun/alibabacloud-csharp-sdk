@@ -23,12 +23,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
-        /// <summary>
-        /// Specifies whether to delete the instance. Valid values:
-        /// 
-        /// *   **false**: queries the details of running instances.
-        /// *   **true**: queries the details of deleted instances.
-        /// </summary>
         [NameInMap("IsDelete")]
         [Validation(Required=false)]
         public bool? IsDelete { get; set; }

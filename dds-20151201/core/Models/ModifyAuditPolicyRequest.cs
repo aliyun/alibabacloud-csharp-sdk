@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AuditLogSwitchSource { get; set; }
 
         /// <summary>
-        /// Specifies whether the audit log feature is enabled. Valid values:
+        /// Specifies whether to enable the audit log feature. Valid values:
         /// 
         /// *   **enable**
         /// *   **disabled**
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The type of the audit log feature. Valid values:
         /// 
-        /// *   **Trial**: the free trial edition
-        /// *   **Standard**: the official edition
+        /// *   **Trail**: free trial edition.
+        /// *   **Standard**: official edition.
         /// 
-        /// >  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.
+        /// > The default value is **Trail**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to **Standard**.
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSecurityIpsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// com.aliyun.abs.dds.service.v20151201.domain.GetDdsSecurityIpsRequest
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Whether to display DAS whitelist information.
+        /// The operation that you want to perform. Set the value to **DescribeSecurityIps**.
         /// </summary>
         [NameInMap("ShowHDMIps")]
         [Validation(Required=false)]

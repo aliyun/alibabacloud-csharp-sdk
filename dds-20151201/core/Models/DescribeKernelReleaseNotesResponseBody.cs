@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeKernelReleaseNotesResponseBody : TeaModel {
         /// <summary>
-        /// The list of version release notes.
+        /// The list of the version release notes.
         /// </summary>
         [NameInMap("ReleaseNotes")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string KernelVersion { get; set; }
 
                 /// <summary>
-                /// Publishes the log.
+                /// The release notes.
                 /// </summary>
                 [NameInMap("ReleaseNote")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

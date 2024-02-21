@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyGlobalSecurityIPGroupRelationRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the IP whitelist template.
+        /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
         public string GlobalSecurityGroupId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

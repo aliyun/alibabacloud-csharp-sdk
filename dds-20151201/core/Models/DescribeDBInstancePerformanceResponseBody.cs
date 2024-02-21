@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// The end of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// Details about the performance metrics.
+        /// The details of performance metrics.
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
                 /// <summary>
-                /// The performance metric.
+                /// The performance metrics that are returned.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// Details about the performance metric values.
+                /// The details of the performance metric values.
                 /// </summary>
                 [NameInMap("PerformanceValues")]
                 [Validation(Required=false)]
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.
+                /// The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &).
                 /// 
-                /// For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.
+                /// For example, if you query disk space usage, the returned value of the **ValueFormat** parameter is **ins_size\&data_size\&log_size**.
                 /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+        /// The beginning of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// The account for which you want to reset the password. Set the value to **root**.
+        /// The account whose password needs to be reset. Set the value to **root**.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -27,18 +27,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// The role of the instance. Valid values:
+        /// 实例的角色类型，取值说明
         /// 
-        /// *   db: a shard node.
-        /// *   cs: a Configserver node.
-        /// *   mongos: a mongos node.
+        /// 
+        /// - 当实例类型为分片集群时，charactertype为必选； 取值为db 和cs。
+        /// - 当实例类型为副本集时，charactertype 可为空或传入normal。
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
