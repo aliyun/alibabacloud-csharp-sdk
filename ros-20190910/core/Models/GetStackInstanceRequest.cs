@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackInstanceRequest : TeaModel {
+        [NameInMap("OutputOption")]
+        [Validation(Required=false)]
+        public string OutputOption { get; set; }
+
         /// <summary>
         /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>

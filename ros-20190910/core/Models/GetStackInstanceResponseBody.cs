@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
+            [NameInMap("Outputs")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Outputs { get; set; }
+
             /// <summary>
             /// The parameters that are used to override specific parameters.
             /// </summary>
