@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-        /// 
-        /// For more information about sample requests, see the **"Examples"** section of this topic.
+        /// The query token that is returned in this call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// ListTagResources
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// WB269094
+        /// The list of tags that are added to the Anti-DDoS Origin instance.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -36,18 +34,30 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
+                /// <summary>
+                /// The ID of the Anti-DDoS Origin instance.
+                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
+                /// <summary>
+                /// The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                /// <summary>
+                /// The key of the tag that is added to the instance.
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// The value of the tag that is added to the instance.
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

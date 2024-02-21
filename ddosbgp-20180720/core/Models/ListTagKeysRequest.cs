@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group.
+        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// The number of entries to return on each page. Valid values: 1 to **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid value: **INSTANCE**.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to **50**. Default value: **10**.
+        /// The type of the resource. Valid value: **INSTANCE**.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

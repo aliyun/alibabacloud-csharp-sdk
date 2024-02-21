@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AddIpResponseBody : TeaModel {
         /// <summary>
-        /// Adds IP addresses to an Anti-DDoS Origin Enterprise instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

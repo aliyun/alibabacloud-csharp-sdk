@@ -9,14 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class GetSlsOpenStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+        /// Indicates whether Log Service was activated. Valid values:
         /// 
-        /// For more information about sample requests, see the **"Examples"** section of this topic.
+        /// *   **true**: Log Service was activated.
+        /// *   **false**: Log Service was not activated.
         /// </summary>
         [NameInMap("SlsOpenStatus")]
         [Validation(Required=false)]

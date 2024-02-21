@@ -10,25 +10,34 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ModifyRemarkRequest : TeaModel {
         /// <summary>
-        /// Adds remarks for a specific Anti-DDoS Origin instance.
+        /// The ID of the Anti-DDoS Origin instance for which you want to add remarks.
+        /// 
+        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// 
+        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ModifyRemark
+        /// The remarks for the Anti-DDoS Origin instance.
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// WB269094
+        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+        /// 
+        /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

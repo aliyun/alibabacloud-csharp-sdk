@@ -150,6 +150,108 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             return await AddIpWithOptionsAsync(request, runtime);
         }
 
+        public AttachAssetGroupToInstanceResponse AttachAssetGroupToInstanceWithOptions(AttachAssetGroupToInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachAssetGroupToInstanceShrinkRequest request = new AttachAssetGroupToInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetGroupList))
+            {
+                request.AssetGroupListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetGroupList, "AssetGroupList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetGroupListShrink))
+            {
+                query["AssetGroupList"] = request.AssetGroupListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachAssetGroupToInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AttachAssetGroupToInstanceResponse> AttachAssetGroupToInstanceWithOptionsAsync(AttachAssetGroupToInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachAssetGroupToInstanceShrinkRequest request = new AttachAssetGroupToInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetGroupList))
+            {
+                request.AssetGroupListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetGroupList, "AssetGroupList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetGroupListShrink))
+            {
+                query["AssetGroupList"] = request.AssetGroupListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachAssetGroupToInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AttachAssetGroupToInstanceResponse AttachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachAssetGroupToInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<AttachAssetGroupToInstanceResponse> AttachAssetGroupToInstanceAsync(AttachAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachAssetGroupToInstanceWithOptionsAsync(request, runtime);
+        }
+
         public CheckAccessLogAuthResponse CheckAccessLogAuthWithOptions(CheckAccessLogAuthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -225,9 +327,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-          * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-          * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CheckGrantRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -257,9 +359,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-          * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-          * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CheckGrantRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -289,9 +391,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-          * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-          * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CheckGrantRequest
           * @return CheckGrantResponse
@@ -303,9 +405,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-          * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-          * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request CheckGrantRequest
           * @return CheckGrantResponse
@@ -753,8 +855,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the Anti-DDoS Origin Enterprise instance.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+          * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
           *
           * @param request DeleteIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -800,8 +901,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the Anti-DDoS Origin Enterprise instance.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+          * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
           *
           * @param request DeleteIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -847,8 +947,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the Anti-DDoS Origin Enterprise instance.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+          * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
           *
           * @param request DeleteIpRequest
           * @return DeleteIpResponse
@@ -860,8 +959,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the Anti-DDoS Origin Enterprise instance.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+          * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
           *
           * @param request DeleteIpRequest
           * @return DeleteIpResponse
@@ -954,8 +1052,222 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             return await DeleteSchedruleOnDemandWithOptionsAsync(request, runtime);
         }
 
+        public DescribeAssetGroupResponse DescribeAssetGroupWithOptions(DescribeAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetGroup",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeAssetGroupResponse> DescribeAssetGroupWithOptionsAsync(DescribeAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetGroup",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeAssetGroupResponse DescribeAssetGroup(DescribeAssetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAssetGroupWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAssetGroupResponse> DescribeAssetGroupAsync(DescribeAssetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAssetGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeAssetGroupToInstanceResponse DescribeAssetGroupToInstanceWithOptions(DescribeAssetGroupToInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetGroupToInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeAssetGroupToInstanceResponse> DescribeAssetGroupToInstanceWithOptionsAsync(DescribeAssetGroupToInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAssetGroupToInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeAssetGroupToInstanceResponse DescribeAssetGroupToInstance(DescribeAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAssetGroupToInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAssetGroupToInstanceResponse> DescribeAssetGroupToInstanceAsync(DescribeAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAssetGroupToInstanceWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDdosEventRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1017,7 +1329,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDdosEventRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1079,7 +1393,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDdosEventRequest
           * @return DescribeDdosEventResponse
@@ -1091,7 +1407,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeDdosEventRequest
           * @return DescribeDdosEventResponse
@@ -1103,7 +1421,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+          * ## Usage notes
+          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
           *
           * @param request DescribeExcpetionCountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1141,7 +1460,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+          * ## Usage notes
+          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
           *
           * @param request DescribeExcpetionCountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1179,7 +1499,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+          * ## Usage notes
+          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
           *
           * @param request DescribeExcpetionCountRequest
           * @return DescribeExcpetionCountResponse
@@ -1191,7 +1512,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+          * ## Usage notes
+          * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
           *
           * @param request DescribeExcpetionCountRequest
           * @return DescribeExcpetionCountResponse
@@ -1203,10 +1525,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The status of the instance. Valid values:
-          * *   **1**: normal
-          * *   **2**: expired
-          * *   **3**: released
+          * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1288,10 +1609,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The status of the instance. Valid values:
-          * *   **1**: normal
-          * *   **2**: expired
-          * *   **3**: released
+          * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1373,10 +1693,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The status of the instance. Valid values:
-          * *   **1**: normal
-          * *   **2**: expired
-          * *   **3**: released
+          * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceListRequest
           * @return DescribeInstanceListResponse
@@ -1388,10 +1707,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The status of the instance. Valid values:
-          * *   **1**: normal
-          * *   **2**: expired
-          * *   **3**: released
+          * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceListRequest
           * @return DescribeInstanceListResponse
@@ -1485,7 +1803,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the resource group.
+          * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
           *
           * @param request DescribeOnDemandDdosEventRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1547,7 +1865,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the resource group.
+          * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
           *
           * @param request DescribeOnDemandDdosEventRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1609,7 +1927,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the resource group.
+          * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
           *
           * @param request DescribeOnDemandDdosEventRequest
           * @return DescribeOnDemandDdosEventResponse
@@ -1621,7 +1939,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the resource group.
+          * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
           *
           * @param request DescribeOnDemandDdosEventRequest
           * @return DescribeOnDemandDdosEventResponse
@@ -1863,7 +2181,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribePackIpListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1925,7 +2245,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribePackIpListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1987,7 +2309,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribePackIpListRequest
           * @return DescribePackIpListResponse
@@ -1999,7 +2323,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The number of entries to return on each page.
+          * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribePackIpListRequest
           * @return DescribePackIpListResponse
@@ -2085,8 +2411,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The bandwidth of attack traffic. Unit: bit/s.
-          * >  This parameter is returned only if attack traffic exists.
+          * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+          * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+          * ## Limits
+          * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeTrafficRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2152,8 +2480,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The bandwidth of attack traffic. Unit: bit/s.
-          * >  This parameter is returned only if attack traffic exists.
+          * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+          * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+          * ## Limits
+          * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeTrafficRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2219,8 +2549,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The bandwidth of attack traffic. Unit: bit/s.
-          * >  This parameter is returned only if attack traffic exists.
+          * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+          * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+          * ## Limits
+          * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeTrafficRequest
           * @return DescribeTrafficResponse
@@ -2232,8 +2564,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The bandwidth of attack traffic. Unit: bit/s.
-          * >  This parameter is returned only if attack traffic exists.
+          * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+          * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+          * ## Limits
+          * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeTrafficRequest
           * @return DescribeTrafficResponse
@@ -2242,6 +2576,108 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTrafficWithOptionsAsync(request, runtime);
+        }
+
+        public DettachAssetGroupToInstanceResponse DettachAssetGroupToInstanceWithOptions(DettachAssetGroupToInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DettachAssetGroupToInstanceShrinkRequest request = new DettachAssetGroupToInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetGroupList))
+            {
+                request.AssetGroupListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetGroupList, "AssetGroupList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetGroupListShrink))
+            {
+                query["AssetGroupList"] = request.AssetGroupListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DettachAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DettachAssetGroupToInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DettachAssetGroupToInstanceResponse> DettachAssetGroupToInstanceWithOptionsAsync(DettachAssetGroupToInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DettachAssetGroupToInstanceShrinkRequest request = new DettachAssetGroupToInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetGroupList))
+            {
+                request.AssetGroupListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetGroupList, "AssetGroupList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetGroupListShrink))
+            {
+                query["AssetGroupList"] = request.AssetGroupListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DettachAssetGroupToInstance",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DettachAssetGroupToInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DettachAssetGroupToInstanceResponse DettachAssetGroupToInstance(DettachAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DettachAssetGroupToInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<DettachAssetGroupToInstanceResponse> DettachAssetGroupToInstanceAsync(DettachAssetGroupToInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DettachAssetGroupToInstanceWithOptionsAsync(request, runtime);
         }
 
         public GetSlsOpenStatusResponse GetSlsOpenStatusWithOptions(GetSlsOpenStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2499,8 +2935,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the region where the Anti-DDoS Origin instance resides.
-          * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+          * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2554,8 +2989,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the region where the Anti-DDoS Origin instance resides.
-          * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+          * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2609,8 +3043,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the region where the Anti-DDoS Origin instance resides.
-          * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+          * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -2622,8 +3055,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of the region where the Anti-DDoS Origin instance resides.
-          * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+          * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -2635,7 +3067,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **ModifyRemark**.
+          * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request ModifyRemarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2681,7 +3115,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **ModifyRemark**.
+          * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request ModifyRemarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2727,7 +3163,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **ModifyRemark**.
+          * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request ModifyRemarkRequest
           * @return ModifyRemarkResponse
@@ -2739,7 +3177,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The operation that you want to perform. Set the value to **ModifyRemark**.
+          * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request ModifyRemarkRequest
           * @return ModifyRemarkResponse
@@ -2907,8 +3347,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+          * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request TagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2958,8 +3399,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+          * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request TagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3009,8 +3451,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+          * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request TagResourcesRequest
           * @return TagResourcesResponse
@@ -3022,8 +3465,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
-          * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+          * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request TagResourcesRequest
           * @return TagResourcesResponse

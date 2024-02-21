@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CheckAccessLogAuthResponseBody : TeaModel {
         /// <summary>
-        /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+        /// Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:
         /// 
-        /// For more information about sample requests, see the **"Examples"** section of this topic.
+        /// *   **true**: Anti-DDoS Origin was authorized.
+        /// *   **false**: Anti-DDoS Origin was not authorized.
         /// </summary>
         [NameInMap("AccessLogAuth")]
         [Validation(Required=false)]
         public bool? AccessLogAuth { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

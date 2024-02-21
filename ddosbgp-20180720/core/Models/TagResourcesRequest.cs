@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+        /// The ID of the region where the Anti-DDoS Origin instance resides.
         /// 
-        /// For more information about sample requests, see the **"Examples"** section of this topic.
+        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **TagResources**.
+        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+        /// 
+        /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// Adds tags to Anti-DDoS Origin instances.
+        /// The type of the resource to which you want to add tags. Set the value to **INSTANCE**, which indicates instances.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -41,12 +43,19 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// WB269094
+            /// The key of the tag to add.
+            /// 
+            /// >  If the specified key does not exist, a key is created.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag to add.
+            /// 
+            /// >  If the specified value does not exist, a value is created.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

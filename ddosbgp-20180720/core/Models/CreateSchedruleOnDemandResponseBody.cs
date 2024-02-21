@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CreateSchedruleOnDemandResponseBody : TeaModel {
         /// <summary>
-        /// Creates a scheduling rule for an on-demand instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

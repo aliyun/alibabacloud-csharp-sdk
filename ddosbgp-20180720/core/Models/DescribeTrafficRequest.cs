@@ -10,26 +10,30 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficRequest : TeaModel {
         /// <summary>
-        /// The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.
+        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// If you do not specify this parameter, the current system time is used as the end time.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// The type of the traffic statistics to query. Valid values:
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// *   **max**: the peak traffic within the specified interval
+        /// *   **avg**: the average traffic within the specified interval
         /// </summary>
         [NameInMap("FlowType")]
         [Validation(Required=false)]
         public string FlowType { get; set; }
 
         /// <summary>
-        /// The type of the traffic statistics to query. Valid values:
+        /// The ID of the Anti-DDoS Origin instance to query.
         /// 
-        /// *   **max**: the peak traffic within the specified interval
-        /// *   **avg**: the average traffic within the specified interval
+        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// 
+        /// If you specify an on-demand instance, you must configure the **Interval** parameter.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -43,43 +47,41 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// The packet forwarding rate of attack traffic. Unit: packets per second.
+        /// The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.
         /// 
-        /// >  This parameter is returned only if attack traffic exists.
+        /// >  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](~~118701~~) operation to query all protected objects of the Anti-DDoS Origin instance.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeTraffic**.
+        /// The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.
         /// </summary>
         [NameInMap("Ipnet")]
         [Validation(Required=false)]
         public string Ipnet { get; set; }
 
         /// <summary>
-        /// The bandwidth of the total traffic. Unit: Kbit/s.
+        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// 
+        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Anti-DDoS Origin instance to query.
+        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
-        /// 
-        /// If you specify an on-demand instance, you must configure the **Interval** parameter.
+        /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-        /// 
-        /// If you do not specify this parameter, the current system time is used as the end time.
+        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

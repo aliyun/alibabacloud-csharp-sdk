@@ -10,30 +10,31 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListOpenedAccessLogInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Anti-DDoS Origin instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
-        /// 
-        /// *   **true**: Log analysis was enabled.
-        /// *   **false**: Log analysis was disabled.
+        /// The configuration of log analysis for the Anti-DDoS Origin instance.
         /// </summary>
         [NameInMap("SlsConfigStatus")]
         [Validation(Required=false)]
         public List<ListOpenedAccessLogInstancesResponseBodySlsConfigStatus> SlsConfigStatus { get; set; }
         public class ListOpenedAccessLogInstancesResponseBodySlsConfigStatus : TeaModel {
+            /// <summary>
+            /// Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
+            /// 
+            /// *   **true**: Log analysis was enabled.
+            /// *   **false**: Log analysis was disabled.
+            /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-            /// 
-            /// For more information about sample requests, see the **"Examples"** section of this topic.
+            /// The ID of the Anti-DDoS Origin instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The configuration of log analysis for the Anti-DDoS Origin instance.
+        /// The number of the Anti-DDoS Origin instances for which log analysis was enabled.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

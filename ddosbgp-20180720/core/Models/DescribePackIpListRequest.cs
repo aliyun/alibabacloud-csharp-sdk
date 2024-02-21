@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribePackIpListRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+        /// The ID of the Anti-DDoS Origin instance to query.
         /// 
-        /// If you do not specify this parameter, the instance belongs to the default resource group.
+        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The protected IP address to query.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
+        /// <summary>
+        /// The ID of the member.
+        /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribePackIpList**.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
+
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// The type of the cloud asset to which the protected IP address to query belongs. Valid values:
@@ -44,31 +54,23 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// *   **EIP**: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.
         /// *   **WAF**: a Web Application Firewall (WAF) instance.
         /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// The protected IP address to query.
-        /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
         public string ProductName { get; set; }
 
         /// <summary>
-        /// The list of IP addresses that are protected by the Anti-DDoS Origin instance.
+        /// The ID of the region where the Anti-DDoS Origin instance resides.
+        /// 
+        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The type of the cloud asset to which the IP address belongs. Valid values:
+        /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
         /// 
-        /// *   **ECS**: an ECS instance.
-        /// *   **SLB**: an CLB instance.
-        /// *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
-        /// *   **WAF**: a WAF instance.
+        /// If you do not specify this parameter, the instance belongs to the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,52 +10,66 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOnDemandInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// The details of the on-demand instance.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeOnDemandInstanceStatusResponseBodyInstances> Instances { get; set; }
         public class DescribeOnDemandInstanceStatusResponseBodyInstances : TeaModel {
             /// <summary>
-            /// WB269094
+            /// The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:
+            /// 
+            /// *   **region**: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see **Codes of data centers outside the Chinese mainland**.
+            /// *   **declared**: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.
             /// </summary>
             [NameInMap("Declared")]
             [Validation(Required=false)]
             public string Declared { get; set; }
 
+            /// <summary>
+            /// The description of the on-demand instance.
+            /// 
+            /// >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
+            /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
 
             /// <summary>
-            /// DescribeOnDemandInstanceStatus
+            /// The ID of the on-demand instance.
+            /// 
+            /// >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+            /// The mode used to start the on-demand instance. Valid values:
             /// 
-            /// For more information about sample requests, see the **"Examples"** section of this topic.
+            /// *   **manual**: The instance is manually started.
+            /// *   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
+            /// <summary>
+            /// The CIDR block of the on-demand instance.
+            /// </summary>
             [NameInMap("Net")]
             [Validation(Required=false)]
             public string Net { get; set; }
 
             /// <summary>
-            /// DescribeOnDemandInstanceStatus
+            /// The number of the autonomous system (AS). Set the value to **0**, which indicates that AS is disabled.
             /// </summary>
             [NameInMap("RegistedAs")]
             [Validation(Required=false)]
             public string RegistedAs { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The ID of the Alibaba Cloud account.
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
@@ -64,7 +78,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// The CIDR block of the on-demand instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

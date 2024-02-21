@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ConfigSchedruleOnDemandResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ConfigSchedruleOnDemandResponseBody Body { get; set; }
 
     }
