@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateInstanceResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
     }

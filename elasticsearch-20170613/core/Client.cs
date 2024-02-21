@@ -4752,6 +4752,62 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetRegionConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        public GetRegionalInstanceConfigResponse GetRegionalInstanceConfigWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegionalInstanceConfig",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/regions/instance-config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRegionalInstanceConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetRegionalInstanceConfigResponse> GetRegionalInstanceConfigWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegionalInstanceConfig",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/regions/instance-config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRegionalInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetRegionalInstanceConfigResponse GetRegionalInstanceConfig()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRegionalInstanceConfigWithOptions(headers, runtime);
+        }
+
+        public async Task<GetRegionalInstanceConfigResponse> GetRegionalInstanceConfigAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRegionalInstanceConfigWithOptionsAsync(headers, runtime);
+        }
+
         public GetSuggestShrinkableNodesResponse GetSuggestShrinkableNodesWithOptions(string InstanceId, GetSuggestShrinkableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
