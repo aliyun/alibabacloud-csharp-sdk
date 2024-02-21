@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public bool? AutoPayOrder { get; set; }
 
+        [NameInMap("ClickhouseConf")]
+        [Validation(Required=false)]
+        public string ClickhouseConf { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

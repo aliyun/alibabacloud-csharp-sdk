@@ -17,20 +17,57 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowClusterAllHostsResponseBodyHostListHost> Host { get; set; }
             public class ListFlowClusterAllHostsResponseBodyHostListHost : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
                 public int? Cpu { get; set; }
+
+                [NameInMap("HostId")]
+                [Validation(Required=false)]
                 public string HostId { get; set; }
+
+                [NameInMap("HostInstanceId")]
+                [Validation(Required=false)]
                 public string HostInstanceId { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
                 public int? Memory { get; set; }
+
+                [NameInMap("PrivateIp")]
+                [Validation(Required=false)]
                 public string PrivateIp { get; set; }
+
+                [NameInMap("PublicIp")]
+                [Validation(Required=false)]
                 public string PublicIp { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
                 public string Role { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
                 public string SerialNumber { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

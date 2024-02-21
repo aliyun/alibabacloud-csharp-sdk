@@ -60,6 +60,7 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("NeedRestartComponentNameList")]
             [Validation(Required=false)]
             public DescribeClusterServiceResponseBodyServiceInfoNeedRestartComponentNameList NeedRestartComponentNameList { get; set; }
@@ -69,6 +70,7 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public List<string> Service { get; set; }
 
             }
+
             [NameInMap("NeedRestartHostIdList")]
             [Validation(Required=false)]
             public DescribeClusterServiceResponseBodyServiceInfoNeedRestartHostIdList NeedRestartHostIdList { get; set; }
@@ -78,12 +80,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public List<string> Service { get; set; }
 
             }
+
             [NameInMap("NeedRestartInfo")]
             [Validation(Required=false)]
             public string NeedRestartInfo { get; set; }
+
             [NameInMap("NeedRestartNum")]
             [Validation(Required=false)]
             public int? NeedRestartNum { get; set; }
+
             [NameInMap("ServiceActionList")]
             [Validation(Required=false)]
             public DescribeClusterServiceResponseBodyServiceInfoServiceActionList ServiceActionList { get; set; }
@@ -115,16 +120,20 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
             [NameInMap("ServiceStatus")]
             [Validation(Required=false)]
             public string ServiceStatus { get; set; }
+
             [NameInMap("ServiceVersion")]
             [Validation(Required=false)]
             public string ServiceVersion { get; set; }
-        };
+
+        }
 
     }
 

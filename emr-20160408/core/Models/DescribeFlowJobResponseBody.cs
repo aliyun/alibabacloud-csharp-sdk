@@ -93,10 +93,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeFlowJobResponseBodyResourceListResource> Resource { get; set; }
             public class DescribeFlowJobResponseBodyResourceListResource : TeaModel {
+                [NameInMap("Alias")]
+                [Validation(Required=false)]
                 public string Alias { get; set; }
+
+                [NameInMap("Path")]
+                [Validation(Required=false)]
                 public string Path { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RetryInterval")]
         [Validation(Required=false)]

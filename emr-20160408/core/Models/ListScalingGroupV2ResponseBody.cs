@@ -17,16 +17,41 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListScalingGroupV2ResponseBodyItemsItem> Item { get; set; }
             public class ListScalingGroupV2ResponseBodyItemsItem : TeaModel {
+                [NameInMap("ActiveStatus")]
+                [Validation(Required=false)]
                 public string ActiveStatus { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("HostGroupBizId")]
+                [Validation(Required=false)]
                 public string HostGroupBizId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ScalingGroupId")]
+                [Validation(Required=false)]
                 public string ScalingGroupId { get; set; }
+
+                [NameInMap("ScalingInMode")]
+                [Validation(Required=false)]
                 public string ScalingInMode { get; set; }
+
+                [NameInMap("ScalingMaxSize")]
+                [Validation(Required=false)]
                 public int? ScalingMaxSize { get; set; }
+
+                [NameInMap("ScalingMinSize")]
+                [Validation(Required=false)]
                 public int? ScalingMinSize { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]

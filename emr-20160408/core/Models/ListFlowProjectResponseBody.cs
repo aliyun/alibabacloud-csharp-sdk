@@ -25,14 +25,33 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowProjectResponseBodyProjectsProject> Project { get; set; }
             public class ListFlowProjectResponseBodyProjectsProject : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public long? GmtModified { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

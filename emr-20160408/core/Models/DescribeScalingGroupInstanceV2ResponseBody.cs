@@ -48,12 +48,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
             public string DataDiskCategory { get; set; }
+
             [NameInMap("DataDiskCount")]
             [Validation(Required=false)]
             public int? DataDiskCount { get; set; }
+
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public int? DataDiskSize { get; set; }
+
             [NameInMap("InstanceTypeList")]
             [Validation(Required=false)]
             public DescribeScalingGroupInstanceV2ResponseBodyScalingConfigInstanceTypeList InstanceTypeList { get; set; }
@@ -63,9 +66,11 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public List<string> InstanceType { get; set; }
 
             }
+
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
+
             [NameInMap("SpotPriceLimits")]
             [Validation(Required=false)]
             public DescribeScalingGroupInstanceV2ResponseBodyScalingConfigSpotPriceLimits SpotPriceLimits { get; set; }
@@ -85,16 +90,20 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("SpotStrategy")]
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
+
             [NameInMap("SysDiskCategory")]
             [Validation(Required=false)]
             public string SysDiskCategory { get; set; }
+
             [NameInMap("SysDiskSize")]
             [Validation(Required=false)]
             public int? SysDiskSize { get; set; }
-        };
+
+        }
 
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
@@ -108,8 +117,16 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRule> ScalingRule { get; set; }
             public class DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRule : TeaModel {
+                [NameInMap("AdjustmentType")]
+                [Validation(Required=false)]
                 public string AdjustmentType { get; set; }
+
+                [NameInMap("AdjustmentValue")]
+                [Validation(Required=false)]
                 public int? AdjustmentValue { get; set; }
+
+                [NameInMap("CloudWatchTrigger")]
+                [Validation(Required=false)]
                 public DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRuleCloudWatchTrigger CloudWatchTrigger { get; set; }
                 public class DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRuleCloudWatchTrigger : TeaModel {
                     [NameInMap("ComparisonOperator")]
@@ -145,16 +162,49 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public string Unit { get; set; }
 
                 }
+
+                [NameInMap("Cooldown")]
+                [Validation(Required=false)]
                 public int? Cooldown { get; set; }
+
+                [NameInMap("EssScalingRuleId")]
+                [Validation(Required=false)]
                 public string EssScalingRuleId { get; set; }
+
+                [NameInMap("LaunchExpirationTime")]
+                [Validation(Required=false)]
                 public int? LaunchExpirationTime { get; set; }
+
+                [NameInMap("LaunchTime")]
+                [Validation(Required=false)]
                 public string LaunchTime { get; set; }
+
+                [NameInMap("RecurrenceEndTime")]
+                [Validation(Required=false)]
                 public string RecurrenceEndTime { get; set; }
+
+                [NameInMap("RecurrenceType")]
+                [Validation(Required=false)]
                 public string RecurrenceType { get; set; }
+
+                [NameInMap("RecurrenceValue")]
+                [Validation(Required=false)]
                 public string RecurrenceValue { get; set; }
+
+                [NameInMap("RuleCategory")]
+                [Validation(Required=false)]
                 public string RuleCategory { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("ScalingGroupId")]
+                [Validation(Required=false)]
                 public long? ScalingGroupId { get; set; }
+
+                [NameInMap("SchedulerTrigger")]
+                [Validation(Required=false)]
                 public DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRuleSchedulerTrigger SchedulerTrigger { get; set; }
                 public class DescribeScalingGroupInstanceV2ResponseBodyScalingRuleListScalingRuleSchedulerTrigger : TeaModel {
                     [NameInMap("LaunchExpirationTime")]
@@ -178,11 +228,22 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public string RecurrenceValue { get; set; }
 
                 }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TimeoutWithGrace")]
+                [Validation(Required=false)]
                 public long? TimeoutWithGrace { get; set; }
+
+                [NameInMap("WithGrace")]
+                [Validation(Required=false)]
                 public bool? WithGrace { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TimeoutWithGrace")]
         [Validation(Required=false)]

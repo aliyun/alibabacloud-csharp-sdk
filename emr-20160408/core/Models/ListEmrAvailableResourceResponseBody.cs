@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfo> EmrZoneInfo { get; set; }
             public class ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfo : TeaModel {
+                [NameInMap("EmrResourceInfoList")]
+                [Validation(Required=false)]
                 public ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoList EmrResourceInfoList { get; set; }
                 public class ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoList : TeaModel {
                     [NameInMap("EmrResourceInfo")]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                             [Validation(Required=false)]
                             public List<ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResource> SupportedResource { get; set; }
                             public class ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResource : TeaModel {
+                                [NameInMap("EmrInstanceType")]
+                                [Validation(Required=false)]
                                 public ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResourceEmrInstanceType EmrInstanceType { get; set; }
                                 public class ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResourceEmrInstanceType : TeaModel {
                                     [NameInMap("BaselineCredit")]
@@ -98,8 +102,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                                     public int? MemorySize { get; set; }
 
                                 }
+
+                                [NameInMap("Max")]
+                                [Validation(Required=false)]
                                 public int? Max { get; set; }
+
+                                [NameInMap("Min")]
+                                [Validation(Required=false)]
                                 public int? Min { get; set; }
+
+                                [NameInMap("SupportNodeTypeList")]
+                                [Validation(Required=false)]
                                 public ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResourceSupportNodeTypeList SupportNodeTypeList { get; set; }
                                 public class ListEmrAvailableResourceResponseBodyEmrZoneInfoListEmrZoneInfoEmrResourceInfoListEmrResourceInfoSupportedResourceListSupportedResourceSupportNodeTypeList : TeaModel {
                                     [NameInMap("SupportNodeType")]
@@ -107,10 +120,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                                     public List<string> SupportNodeType { get; set; }
 
                                 }
+
+                                [NameInMap("Unit")]
+                                [Validation(Required=false)]
                                 public string Unit { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
                                 public string Value { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -119,9 +140,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

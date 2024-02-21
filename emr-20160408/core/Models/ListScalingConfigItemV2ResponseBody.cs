@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListScalingConfigItemV2ResponseBodyItemsItem> Item { get; set; }
             public class ListScalingConfigItemV2ResponseBodyItemsItem : TeaModel {
+                [NameInMap("ConfigItemInformation")]
+                [Validation(Required=false)]
                 public string ConfigItemInformation { get; set; }
+
+                [NameInMap("ConfigItemType")]
+                [Validation(Required=false)]
                 public string ConfigItemType { get; set; }
+
+                [NameInMap("ScalingConfigItemBizId")]
+                [Validation(Required=false)]
                 public string ScalingConfigItemBizId { get; set; }
+
+                [NameInMap("ScalingGroupBizId")]
+                [Validation(Required=false)]
                 public string ScalingGroupBizId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]

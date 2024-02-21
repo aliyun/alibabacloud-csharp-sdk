@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeFlowProjectClusterSettingResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeFlowProjectClusterSettingResponseBody Body { get; set; }
 
     }

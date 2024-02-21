@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("DecommissionTimeout")]
+        [Validation(Required=false)]
+        public int? DecommissionTimeout { get; set; }
+
+        [NameInMap("EnableGracefulDecommission")]
+        [Validation(Required=false)]
+        public bool? EnableGracefulDecommission { get; set; }
+
         [NameInMap("HostGroupId")]
         [Validation(Required=false)]
         public string HostGroupId { get; set; }
@@ -24,6 +32,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ReleaseNumber")]
+        [Validation(Required=false)]
+        public int? ReleaseNumber { get; set; }
 
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]

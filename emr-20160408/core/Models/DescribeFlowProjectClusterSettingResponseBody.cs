@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("Host")]
             [Validation(Required=false)]
             public List<string> Host { get; set; }
-        };
+
+        }
 
         [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
@@ -53,7 +54,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("Queue")]
             [Validation(Required=false)]
             public List<string> Queue { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -66,7 +68,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("User")]
             [Validation(Required=false)]
             public List<string> User { get; set; }
-        };
+
+        }
 
     }
 

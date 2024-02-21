@@ -29,7 +29,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfo> TemplateInfo { get; set; }
             public class ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfo : TeaModel {
+                [NameInMap("AllowNotebook")]
+                [Validation(Required=false)]
                 public bool? AllowNotebook { get; set; }
+
+                [NameInMap("BootstrapActionList")]
+                [Validation(Required=false)]
                 public ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoBootstrapActionList BootstrapActionList { get; set; }
                 public class ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoBootstrapActionList : TeaModel {
                     [NameInMap("BootstrapAction")]
@@ -51,7 +56,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("ClusterType")]
+                [Validation(Required=false)]
                 public string ClusterType { get; set; }
+
+                [NameInMap("ConfigList")]
+                [Validation(Required=false)]
                 public ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoConfigList ConfigList { get; set; }
                 public class ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoConfigList : TeaModel {
                     [NameInMap("Config")]
@@ -85,13 +96,37 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("Configurations")]
+                [Validation(Required=false)]
                 public string Configurations { get; set; }
+
+                [NameInMap("CreateSource")]
+                [Validation(Required=false)]
                 public string CreateSource { get; set; }
+
+                [NameInMap("DepositType")]
+                [Validation(Required=false)]
                 public string DepositType { get; set; }
+
+                [NameInMap("EasEnable")]
+                [Validation(Required=false)]
                 public bool? EasEnable { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public long? GmtModified { get; set; }
+
+                [NameInMap("HighAvailabilityEnable")]
+                [Validation(Required=false)]
                 public bool? HighAvailabilityEnable { get; set; }
+
+                [NameInMap("HostGroupList")]
+                [Validation(Required=false)]
                 public ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoHostGroupList HostGroupList { get; set; }
                 public class ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoHostGroupList : TeaModel {
                     [NameInMap("HostGroup")]
@@ -153,21 +188,69 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("InitCustomHiveMetaDb")]
+                [Validation(Required=false)]
                 public bool? InitCustomHiveMetaDb { get; set; }
+
+                [NameInMap("InstanceGeneration")]
+                [Validation(Required=false)]
                 public string InstanceGeneration { get; set; }
+
+                [NameInMap("IoOptimized")]
+                [Validation(Required=false)]
                 public bool? IoOptimized { get; set; }
+
+                [NameInMap("IsOpenPublicIp")]
+                [Validation(Required=false)]
                 public bool? IsOpenPublicIp { get; set; }
+
+                [NameInMap("KeyPairName")]
+                [Validation(Required=false)]
                 public string KeyPairName { get; set; }
+
+                [NameInMap("LogEnable")]
+                [Validation(Required=false)]
                 public bool? LogEnable { get; set; }
+
+                [NameInMap("LogPath")]
+                [Validation(Required=false)]
                 public string LogPath { get; set; }
+
+                [NameInMap("MachineType")]
+                [Validation(Required=false)]
                 public string MachineType { get; set; }
+
+                [NameInMap("MasterNodeTotal")]
+                [Validation(Required=false)]
                 public int? MasterNodeTotal { get; set; }
+
+                [NameInMap("MetaStoreConf")]
+                [Validation(Required=false)]
                 public string MetaStoreConf { get; set; }
+
+                [NameInMap("MetaStoreType")]
+                [Validation(Required=false)]
                 public string MetaStoreType { get; set; }
+
+                [NameInMap("NetType")]
+                [Validation(Required=false)]
                 public string NetType { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
+
+                [NameInMap("SecurityGroupName")]
+                [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }
+
+                [NameInMap("SoftwareInfoList")]
+                [Validation(Required=false)]
                 public ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoSoftwareInfoList SoftwareInfoList { get; set; }
                 public class ListClusterTemplatesResponseBodyTemplateInfoListTemplateInfoSoftwareInfoList : TeaModel {
                     [NameInMap("SoftwareInfo")]
@@ -175,17 +258,49 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> SoftwareInfo { get; set; }
 
                 }
+
+                [NameInMap("SshEnable")]
+                [Validation(Required=false)]
                 public bool? SshEnable { get; set; }
+
+                [NameInMap("TemplateName")]
+                [Validation(Required=false)]
                 public string TemplateName { get; set; }
+
+                [NameInMap("UseCustomHiveMetaDb")]
+                [Validation(Required=false)]
                 public bool? UseCustomHiveMetaDb { get; set; }
+
+                [NameInMap("UseLocalMetaDb")]
+                [Validation(Required=false)]
                 public bool? UseLocalMetaDb { get; set; }
+
+                [NameInMap("UserDefinedEmrEcsRole")]
+                [Validation(Required=false)]
                 public string UserDefinedEmrEcsRole { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
                 public string UserId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                /// <summary>
+                /// VPC ID。
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

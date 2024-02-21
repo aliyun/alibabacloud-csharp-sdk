@@ -97,12 +97,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeFlowResponseBodyParentFlowListParentFlow> ParentFlow { get; set; }
             public class DescribeFlowResponseBodyParentFlowListParentFlow : TeaModel {
+                [NameInMap("ParentFlowId")]
+                [Validation(Required=false)]
                 public string ParentFlowId { get; set; }
+
+                [NameInMap("ParentFlowName")]
+                [Validation(Required=false)]
                 public string ParentFlowName { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public string ProjectId { get; set; }
+
+                [NameInMap("ProjectName")]
+                [Validation(Required=false)]
                 public string ProjectName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Periodic")]
         [Validation(Required=false)]

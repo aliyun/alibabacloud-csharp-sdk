@@ -17,22 +17,65 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterServiceConfigHistoryResponseBodyConfigHistoryListConfigHistory> ConfigHistory { get; set; }
             public class ListClusterServiceConfigHistoryResponseBodyConfigHistoryListConfigHistory : TeaModel {
+                [NameInMap("Applied")]
+                [Validation(Required=false)]
                 public bool? Applied { get; set; }
+
+                [NameInMap("Author")]
+                [Validation(Required=false)]
                 public string Author { get; set; }
+
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("ConfigFileName")]
+                [Validation(Required=false)]
                 public string ConfigFileName { get; set; }
+
+                [NameInMap("ConfigItemName")]
+                [Validation(Required=false)]
                 public string ConfigItemName { get; set; }
+
+                [NameInMap("ConfigVersion")]
+                [Validation(Required=false)]
                 public string ConfigVersion { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("HostGroupId")]
+                [Validation(Required=false)]
                 public string HostGroupId { get; set; }
+
+                [NameInMap("HostGroupName")]
+                [Validation(Required=false)]
                 public string HostGroupName { get; set; }
+
+                [NameInMap("HostInstanceId")]
+                [Validation(Required=false)]
                 public string HostInstanceId { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("NewValue")]
+                [Validation(Required=false)]
                 public string NewValue { get; set; }
+
+                [NameInMap("OldValue")]
+                [Validation(Required=false)]
                 public string OldValue { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

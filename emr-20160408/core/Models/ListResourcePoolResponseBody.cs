@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListResourcePoolResponseBodyPoolInfoListPoolInfo> PoolInfo { get; set; }
             public class ListResourcePoolResponseBodyPoolInfoListPoolInfo : TeaModel {
+                [NameInMap("EcmResourcePool")]
+                [Validation(Required=false)]
                 public ListResourcePoolResponseBodyPoolInfoListPoolInfoEcmResourcePool EcmResourcePool { get; set; }
                 public class ListResourcePoolResponseBodyPoolInfoListPoolInfoEcmResourcePool : TeaModel {
                     [NameInMap("Active")]
@@ -56,6 +58,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public string YarnSiteConfig { get; set; }
 
                 }
+
+                [NameInMap("EcmResourcePoolConfigList")]
+                [Validation(Required=false)]
                 public ListResourcePoolResponseBodyPoolInfoListPoolInfoEcmResourcePoolConfigList EcmResourcePoolConfigList { get; set; }
                 public class ListResourcePoolResponseBodyPoolInfoListPoolInfoEcmResourcePoolConfigList : TeaModel {
                     [NameInMap("EcmResourcePoolConfig")]
@@ -93,6 +98,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("QueueList")]
+                [Validation(Required=false)]
                 public ListResourcePoolResponseBodyPoolInfoListPoolInfoQueueList QueueList { get; set; }
                 public class ListResourcePoolResponseBodyPoolInfoListPoolInfoQueueList : TeaModel {
                     [NameInMap("Queue")]
@@ -107,15 +115,37 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                             [Validation(Required=false)]
                             public List<ListResourcePoolResponseBodyPoolInfoListPoolInfoQueueListQueueEcmResourcePoolConfigListEcmResourcePoolConfig> EcmResourcePoolConfig { get; set; }
                             public class ListResourcePoolResponseBodyPoolInfoListPoolInfoQueueListQueueEcmResourcePoolConfigListEcmResourcePoolConfig : TeaModel {
+                                [NameInMap("Category")]
+                                [Validation(Required=false)]
                                 public string Category { get; set; }
+
+                                [NameInMap("ConfigKey")]
+                                [Validation(Required=false)]
                                 public string ConfigKey { get; set; }
+
+                                [NameInMap("ConfigType")]
+                                [Validation(Required=false)]
                                 public string ConfigType { get; set; }
+
+                                [NameInMap("ConfigValue")]
+                                [Validation(Required=false)]
                                 public string ConfigValue { get; set; }
+
+                                [NameInMap("Id")]
+                                [Validation(Required=false)]
                                 public long? Id { get; set; }
+
+                                [NameInMap("Note")]
+                                [Validation(Required=false)]
                                 public string Note { get; set; }
+
+                                [NameInMap("Status")]
+                                [Validation(Required=false)]
                                 public string Status { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("EcmResourceQueue")]
                         [Validation(Required=false)]
@@ -124,37 +154,51 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                             [NameInMap("Id")]
                             [Validation(Required=false)]
                             public long? Id { get; set; }
+
                             [NameInMap("Leaf")]
                             [Validation(Required=false)]
                             public bool? Leaf { get; set; }
+
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
+
                             [NameInMap("ParentQueueId")]
                             [Validation(Required=false)]
                             public long? ParentQueueId { get; set; }
+
+                            /// <summary>
+                            /// QualifiedName。
+                            /// </summary>
                             [NameInMap("QualifiedName")]
                             [Validation(Required=false)]
                             public string QualifiedName { get; set; }
+
                             [NameInMap("QueueType")]
                             [Validation(Required=false)]
                             public string QueueType { get; set; }
+
                             [NameInMap("ResourcePoolId")]
                             [Validation(Required=false)]
                             public long? ResourcePoolId { get; set; }
+
                             [NameInMap("Status")]
                             [Validation(Required=false)]
                             public string Status { get; set; }
+
                             [NameInMap("UserId")]
                             [Validation(Required=false)]
                             public string UserId { get; set; }
-                        };
+
+                        }
 
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("Header")]
             [Validation(Required=false)]
             public List<string> Header { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -34,7 +35,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowNodeSqlResultResponseBodyRowListRow> Row { get; set; }
             public class ListFlowNodeSqlResultResponseBodyRowListRow : TeaModel {
+                [NameInMap("RowIndex")]
+                [Validation(Required=false)]
                 public int? RowIndex { get; set; }
+
+                [NameInMap("RowItemList")]
+                [Validation(Required=false)]
                 public ListFlowNodeSqlResultResponseBodyRowListRowRowItemList RowItemList { get; set; }
                 public class ListFlowNodeSqlResultResponseBodyRowListRowRowItemList : TeaModel {
                     [NameInMap("rowItem")]
@@ -42,8 +48,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> RowItem { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
     }
 

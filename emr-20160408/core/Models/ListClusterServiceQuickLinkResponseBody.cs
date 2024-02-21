@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterServiceQuickLinkResponseBodyQuickLinkListQuickLink> QuickLink { get; set; }
             public class ListClusterServiceQuickLinkResponseBodyQuickLinkListQuickLink : TeaModel {
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public string Port { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
                 public string Protocol { get; set; }
+
+                [NameInMap("QuickLinkAddress")]
+                [Validation(Required=false)]
                 public string QuickLinkAddress { get; set; }
+
+                [NameInMap("ServiceDisplayName")]
+                [Validation(Required=false)]
                 public string ServiceDisplayName { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("Applied")]
             [Validation(Required=false)]
             public string Applied { get; set; }
+
             [NameInMap("Author")]
             [Validation(Required=false)]
             public string Author { get; set; }
+
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
+
             [NameInMap("ConfigValueList")]
             [Validation(Required=false)]
             public DescribeClusterServiceConfigResponseBodyConfigConfigValueList ConfigValueList { get; set; }
@@ -42,12 +45,29 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         [Validation(Required=false)]
                         public List<DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValueConfigItemValueListConfigItemValue> ConfigItemValue { get; set; }
                         public class DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValueConfigItemValueListConfigItemValue : TeaModel {
+                            [NameInMap("Description")]
+                            [Validation(Required=false)]
                             public string Description { get; set; }
+
+                            [NameInMap("IsCustom")]
+                            [Validation(Required=false)]
                             public bool? IsCustom { get; set; }
+
+                            [NameInMap("ItemName")]
+                            [Validation(Required=false)]
                             public string ItemName { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
                             public string Value { get; set; }
+
+                            [NameInMap("ValueScope")]
+                            [Validation(Required=false)]
+                            public string ValueScope { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("ConfigName")]
                     [Validation(Required=false)]
@@ -64,12 +84,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("ConfigVersion")]
             [Validation(Required=false)]
             public string ConfigVersion { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("PropertyInfoList")]
             [Validation(Required=false)]
             public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoList PropertyInfoList { get; set; }
@@ -97,10 +120,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         [NameInMap("EffectType")]
                         [Validation(Required=false)]
                         public string EffectType { get; set; }
+
                         [NameInMap("InvokeServiceName")]
                         [Validation(Required=false)]
                         public string InvokeServiceName { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("FileName")]
                     [Validation(Required=false)]
@@ -117,7 +142,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         [NameInMap("propertyType")]
                         [Validation(Required=false)]
                         public List<string> PropertyType { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("PropertyValueAttributes")]
                     [Validation(Required=false)]
@@ -146,28 +172,36 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                             }
 
                         }
+
                         [NameInMap("Hidden")]
                         [Validation(Required=false)]
                         public bool? Hidden { get; set; }
+
                         [NameInMap("IncrememtStep")]
                         [Validation(Required=false)]
                         public string IncrememtStep { get; set; }
+
                         [NameInMap("Maximum")]
                         [Validation(Required=false)]
                         public string Maximum { get; set; }
+
                         [NameInMap("Mimimum")]
                         [Validation(Required=false)]
                         public string Mimimum { get; set; }
+
                         [NameInMap("ReadOnly")]
                         [Validation(Required=false)]
                         public bool? ReadOnly { get; set; }
+
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
+
                         [NameInMap("Unit")]
                         [Validation(Required=false)]
                         public string Unit { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
@@ -180,10 +214,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,12 +17,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask> ClusterOperationHostTask { get; set; }
             public class ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask : TeaModel {
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
                 public string Percentage { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TaskId")]
+                [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                [NameInMap("TaskName")]
+                [Validation(Required=false)]
                 public string TaskName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

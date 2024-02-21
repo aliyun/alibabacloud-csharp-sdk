@@ -25,30 +25,44 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     [Validation(Required=false)]
                     public List<DescribeClusterV2ResponseBodyClusterInfoAccessInfoZKLinksZKLink> ZKLink { get; set; }
                     public class DescribeClusterV2ResponseBodyClusterInfoAccessInfoZKLinksZKLink : TeaModel {
+                        [NameInMap("Link")]
+                        [Validation(Required=false)]
                         public string Link { get; set; }
+
+                        [NameInMap("Port")]
+                        [Validation(Required=false)]
                         public string Port { get; set; }
+
                     }
-                };
+
+                }
 
             }
+
             [NameInMap("AutoScalingAllowed")]
             [Validation(Required=false)]
             public bool? AutoScalingAllowed { get; set; }
+
             [NameInMap("AutoScalingByLoadAllowed")]
             [Validation(Required=false)]
             public bool? AutoScalingByLoadAllowed { get; set; }
+
             [NameInMap("AutoScalingEnable")]
             [Validation(Required=false)]
             public bool? AutoScalingEnable { get; set; }
+
             [NameInMap("AutoScalingSpotWithLimitAllowed")]
             [Validation(Required=false)]
             public bool? AutoScalingSpotWithLimitAllowed { get; set; }
+
             [NameInMap("AutoScalingVersion")]
             [Validation(Required=false)]
             public string AutoScalingVersion { get; set; }
+
             [NameInMap("AutoScalingWithGraceAllowed")]
             [Validation(Required=false)]
             public bool? AutoScalingWithGraceAllowed { get; set; }
+
             [NameInMap("BootstrapActionList")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoBootstrapActionList BootstrapActionList { get; set; }
@@ -72,39 +86,59 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("BootstrapFailed")]
             [Validation(Required=false)]
             public bool? BootstrapFailed { get; set; }
+
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
+
             [NameInMap("Configurations")]
             [Validation(Required=false)]
             public string Configurations { get; set; }
+
             [NameInMap("CoreNodeInService")]
             [Validation(Required=false)]
             public int? CoreNodeInService { get; set; }
+
             [NameInMap("CoreNodeTotal")]
             [Validation(Required=false)]
             public int? CoreNodeTotal { get; set; }
+
             [NameInMap("CreateResource")]
             [Validation(Required=false)]
             public string CreateResource { get; set; }
+
             [NameInMap("CreateType")]
             [Validation(Required=false)]
             public string CreateType { get; set; }
+
+            [NameInMap("DataDiskEncrypted")]
+            [Validation(Required=false)]
+            public bool? DataDiskEncrypted { get; set; }
+
+            [NameInMap("DataDiskKMSKeyId")]
+            [Validation(Required=false)]
+            public string DataDiskKMSKeyId { get; set; }
+
             [NameInMap("DepositType")]
             [Validation(Required=false)]
             public string DepositType { get; set; }
+
             [NameInMap("EasEnable")]
             [Validation(Required=false)]
             public bool? EasEnable { get; set; }
+
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public long? ExpiredTime { get; set; }
+
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public string ExtraInfo { get; set; }
+
             [NameInMap("FailReason")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoFailReason FailReason { get; set; }
@@ -122,9 +156,11 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public string RequestId { get; set; }
 
             }
+
             [NameInMap("GatewayClusterIds")]
             [Validation(Required=false)]
             public string GatewayClusterIds { get; set; }
+
             [NameInMap("GatewayClusterInfoList")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoGatewayClusterInfoList GatewayClusterInfoList { get; set; }
@@ -148,9 +184,11 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("HighAvailabilityEnable")]
             [Validation(Required=false)]
             public bool? HighAvailabilityEnable { get; set; }
+
             [NameInMap("HostGroupList")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoHostGroupList HostGroupList { get; set; }
@@ -235,7 +273,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         [Validation(Required=false)]
                         public List<DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNode> Node { get; set; }
                         public class DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNode : TeaModel {
+                            [NameInMap("CreateTime")]
+                            [Validation(Required=false)]
                             public string CreateTime { get; set; }
+
+                            [NameInMap("DaemonInfos")]
+                            [Validation(Required=false)]
                             public DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNodeDaemonInfos DaemonInfos { get; set; }
                             public class DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNodeDaemonInfos : TeaModel {
                                 [NameInMap("DaemonInfo")]
@@ -249,6 +292,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                                 }
 
                             }
+
+                            [NameInMap("DiskInfos")]
+                            [Validation(Required=false)]
                             public DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNodeDiskInfos DiskInfos { get; set; }
                             public class DescribeClusterV2ResponseBodyClusterInfoHostGroupListHostGroupNodesNodeDiskInfos : TeaModel {
                                 [NameInMap("DiskInfo")]
@@ -278,16 +324,42 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                                 }
 
                             }
+
+                            [NameInMap("EmrExpiredTime")]
+                            [Validation(Required=false)]
                             public string EmrExpiredTime { get; set; }
+
+                            [NameInMap("ExpiredTime")]
+                            [Validation(Required=false)]
                             public string ExpiredTime { get; set; }
+
+                            [NameInMap("InnerIp")]
+                            [Validation(Required=false)]
                             public string InnerIp { get; set; }
+
+                            [NameInMap("InstanceId")]
+                            [Validation(Required=false)]
                             public string InstanceId { get; set; }
+
+                            [NameInMap("PubIp")]
+                            [Validation(Required=false)]
                             public string PubIp { get; set; }
+
+                            [NameInMap("Status")]
+                            [Validation(Required=false)]
                             public string Status { get; set; }
+
+                            [NameInMap("SupportIpV6")]
+                            [Validation(Required=false)]
                             public bool? SupportIpV6 { get; set; }
+
+                            [NameInMap("ZoneId")]
+                            [Validation(Required=false)]
                             public string ZoneId { get; set; }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("Period")]
                     [Validation(Required=false)]
@@ -296,6 +368,7 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
+
             [NameInMap("HostPoolInfo")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoHostPoolInfo HostPoolInfo { get; set; }
@@ -309,57 +382,75 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public string HpName { get; set; }
 
             }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
             [NameInMap("InstanceGeneration")]
             [Validation(Required=false)]
             public string InstanceGeneration { get; set; }
+
             [NameInMap("IoOptimized")]
             [Validation(Required=false)]
             public bool? IoOptimized { get; set; }
+
             [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
             public string K8sClusterId { get; set; }
+
             [NameInMap("LocalMetaDb")]
             [Validation(Required=false)]
             public bool? LocalMetaDb { get; set; }
+
             [NameInMap("LogEnable")]
             [Validation(Required=false)]
             public bool? LogEnable { get; set; }
+
             [NameInMap("LogPath")]
             [Validation(Required=false)]
             public string LogPath { get; set; }
+
             [NameInMap("MachineType")]
             [Validation(Required=false)]
             public string MachineType { get; set; }
+
             [NameInMap("MasterNodeInService")]
             [Validation(Required=false)]
             public int? MasterNodeInService { get; set; }
+
             [NameInMap("MasterNodeTotal")]
             [Validation(Required=false)]
             public int? MasterNodeTotal { get; set; }
+
             [NameInMap("MetaStoreType")]
             [Validation(Required=false)]
             public string MetaStoreType { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("NetType")]
             [Validation(Required=false)]
             public string NetType { get; set; }
+
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
             [NameInMap("RelateClusterId")]
             [Validation(Required=false)]
             public string RelateClusterId { get; set; }
+
             [NameInMap("RelateClusterInfo")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoRelateClusterInfo RelateClusterInfo { get; set; }
@@ -381,21 +472,27 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public string Status { get; set; }
 
             }
+
             [NameInMap("ResizeDiskEnable")]
             [Validation(Required=false)]
             public bool? ResizeDiskEnable { get; set; }
+
             [NameInMap("RunningTime")]
             [Validation(Required=false)]
             public int? RunningTime { get; set; }
+
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+
             [NameInMap("SecurityGroupName")]
             [Validation(Required=false)]
             public string SecurityGroupName { get; set; }
+
             [NameInMap("ShowSoftwareInterface")]
             [Validation(Required=false)]
             public bool? ShowSoftwareInterface { get; set; }
+
             [NameInMap("SoftwareInfo")]
             [Validation(Required=false)]
             public DescribeClusterV2ResponseBodyClusterInfoSoftwareInfo SoftwareInfo { get; set; }
@@ -416,46 +513,76 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     [Validation(Required=false)]
                     public List<DescribeClusterV2ResponseBodyClusterInfoSoftwareInfoSoftwaresSoftware> Software { get; set; }
                     public class DescribeClusterV2ResponseBodyClusterInfoSoftwareInfoSoftwaresSoftware : TeaModel {
+                        [NameInMap("DisplayName")]
+                        [Validation(Required=false)]
                         public string DisplayName { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
                         public string Name { get; set; }
+
+                        [NameInMap("OnlyDisplay")]
+                        [Validation(Required=false)]
                         public bool? OnlyDisplay { get; set; }
+
+                        [NameInMap("StartTpe")]
+                        [Validation(Required=false)]
                         public int? StartTpe { get; set; }
+
+                        [NameInMap("Version")]
+                        [Validation(Required=false)]
                         public string Version { get; set; }
+
                     }
-                };
+
+                }
 
             }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
             [NameInMap("StopTime")]
             [Validation(Required=false)]
             public long? StopTime { get; set; }
+
             [NameInMap("TaskNodeInService")]
             [Validation(Required=false)]
             public int? TaskNodeInService { get; set; }
+
             [NameInMap("TaskNodeTotal")]
             [Validation(Required=false)]
             public int? TaskNodeTotal { get; set; }
+
             [NameInMap("UserDefinedEmrEcsRole")]
             [Validation(Required=false)]
             public string UserDefinedEmrEcsRole { get; set; }
+
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
+
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
+            /// <summary>
+            /// VPC ID。
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

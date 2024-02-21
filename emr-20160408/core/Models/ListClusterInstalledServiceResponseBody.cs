@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledService> ClusterInstalledService { get; set; }
             public class ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledService : TeaModel {
+                [NameInMap("ServiceActionList")]
+                [Validation(Required=false)]
                 public ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionList ServiceActionList { get; set; }
                 public class ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionList : TeaModel {
                     [NameInMap("ServiceAction")]
@@ -46,19 +48,54 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("ServiceDisplayName")]
+                [Validation(Required=false)]
                 public string ServiceDisplayName { get; set; }
+
+                [NameInMap("ServiceEcmVersion")]
+                [Validation(Required=false)]
                 public string ServiceEcmVersion { get; set; }
+
+                [NameInMap("ServiceName")]
+                [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
+                [NameInMap("ServiceVersion")]
+                [Validation(Required=false)]
                 public string ServiceVersion { get; set; }
+
+                [NameInMap("State")]
+                [Validation(Required=false)]
                 public string State { get; set; }
+
+                [NameInMap("abnormalNum")]
+                [Validation(Required=false)]
                 public int? AbnormalNum { get; set; }
+
+                [NameInMap("comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("needRestartNum")]
+                [Validation(Required=false)]
                 public int? NeedRestartNum { get; set; }
+
+                [NameInMap("notStartedNum")]
+                [Validation(Required=false)]
                 public int? NotStartedNum { get; set; }
+
+                [NameInMap("onlyClient")]
+                [Validation(Required=false)]
                 public bool? OnlyClient { get; set; }
+
+                [NameInMap("serviceStatus")]
+                [Validation(Required=false)]
                 public string ServiceStatus { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -33,14 +33,33 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowProjectUserResponseBodyUsersUser> User { get; set; }
             public class ListFlowProjectUserResponseBodyUsersUser : TeaModel {
+                [NameInMap("AccountUserId")]
+                [Validation(Required=false)]
                 public string AccountUserId { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public long? GmtModified { get; set; }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=false)]
                 public string OwnerId { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public string ProjectId { get; set; }
+
+                [NameInMap("UserName")]
+                [Validation(Required=false)]
                 public string UserName { get; set; }
+
             }
-        };
+
+        }
 
     }
 

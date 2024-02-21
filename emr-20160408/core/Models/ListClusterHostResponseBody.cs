@@ -17,9 +17,20 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterHostResponseBodyHostListHost> Host { get; set; }
             public class ListClusterHostResponseBodyHostListHost : TeaModel {
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
                 public int? Cpu { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DiskList")]
+                [Validation(Required=false)]
                 public ListClusterHostResponseBodyHostListHostDiskList DiskList { get; set; }
                 public class ListClusterHostResponseBodyHostListHostDiskList : TeaModel {
                     [NameInMap("Disk")]
@@ -61,24 +72,74 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("EmrExpiredTime")]
+                [Validation(Required=false)]
                 public string EmrExpiredTime { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public long? ExpiredTime { get; set; }
+
+                [NameInMap("HostGroupId")]
+                [Validation(Required=false)]
                 public string HostGroupId { get; set; }
+
+                [NameInMap("HostInstanceId")]
+                [Validation(Required=false)]
                 public string HostInstanceId { get; set; }
+
+                [NameInMap("HostName")]
+                [Validation(Required=false)]
                 public string HostName { get; set; }
+
+                [NameInMap("InstanceStatus")]
+                [Validation(Required=false)]
                 public string InstanceStatus { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
                 public int? Memory { get; set; }
+
+                [NameInMap("PrivateIp")]
+                [Validation(Required=false)]
                 public string PrivateIp { get; set; }
+
+                [NameInMap("PublicIp")]
+                [Validation(Required=false)]
                 public string PublicIp { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
                 public string Role { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
                 public string SerialNumber { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SupportIpV6")]
+                [Validation(Required=false)]
                 public bool? SupportIpV6 { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

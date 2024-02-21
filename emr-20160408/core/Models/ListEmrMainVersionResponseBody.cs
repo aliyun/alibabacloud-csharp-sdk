@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersion> EmrMainVersion { get; set; }
             public class ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersion : TeaModel {
+                [NameInMap("ClusterTypeInfoList")]
+                [Validation(Required=false)]
                 public ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeInfoList ClusterTypeInfoList { get; set; }
                 public class ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeInfoList : TeaModel {
                     [NameInMap("ClusterTypeInfo")]
@@ -35,18 +37,40 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                             [Validation(Required=false)]
                             public List<ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeInfoListClusterTypeInfoServiceInfoListServiceInfo> ServiceInfo { get; set; }
                             public class ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeInfoListClusterTypeInfoServiceInfoListServiceInfo : TeaModel {
+                                [NameInMap("Display")]
+                                [Validation(Required=false)]
                                 public bool? Display { get; set; }
+
+                                [NameInMap("Mandatory")]
+                                [Validation(Required=false)]
                                 public bool? Mandatory { get; set; }
+
+                                [NameInMap("ServiceDisplayName")]
+                                [Validation(Required=false)]
                                 public string ServiceDisplayName { get; set; }
+
+                                [NameInMap("ServiceDisplayVersion")]
+                                [Validation(Required=false)]
                                 public string ServiceDisplayVersion { get; set; }
+
+                                [NameInMap("ServiceName")]
+                                [Validation(Required=false)]
                                 public string ServiceName { get; set; }
+
+                                [NameInMap("ServiceVersion")]
+                                [Validation(Required=false)]
                                 public string ServiceVersion { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("ClusterTypeWhiteUserList")]
+                [Validation(Required=false)]
                 public ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeWhiteUserList ClusterTypeWhiteUserList { get; set; }
                 public class ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionClusterTypeWhiteUserList : TeaModel {
                     [NameInMap("ClusterTypeWhiteUser")]
@@ -64,14 +88,41 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
+                [NameInMap("Display")]
+                [Validation(Required=false)]
                 public bool? Display { get; set; }
+
+                [NameInMap("EcmVersion")]
+                [Validation(Required=false)]
                 public bool? EcmVersion { get; set; }
+
+                [NameInMap("EmrVersion")]
+                [Validation(Required=false)]
                 public string EmrVersion { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("PublishType")]
+                [Validation(Required=false)]
                 public string PublishType { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("StackName")]
+                [Validation(Required=false)]
                 public string StackName { get; set; }
+
+                [NameInMap("StackVersion")]
+                [Validation(Required=false)]
                 public string StackVersion { get; set; }
+
+                [NameInMap("WhiteUserList")]
+                [Validation(Required=false)]
                 public ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionWhiteUserList WhiteUserList { get; set; }
                 public class ListEmrMainVersionResponseBodyEmrMainVersionListEmrMainVersionWhiteUserList : TeaModel {
                     [NameInMap("WhiteUser")]
@@ -79,8 +130,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> WhiteUser { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

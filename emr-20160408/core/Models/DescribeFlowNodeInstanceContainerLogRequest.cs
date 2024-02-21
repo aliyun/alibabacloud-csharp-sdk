@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// Conintainer ID。
+        /// </summary>
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
         public string ContainerId { get; set; }

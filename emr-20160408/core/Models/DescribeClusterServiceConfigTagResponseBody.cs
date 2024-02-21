@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTag> ConfigTag { get; set; }
             public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTag : TeaModel {
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
                 public string Tag { get; set; }
+
+                [NameInMap("TagDesc")]
+                [Validation(Required=false)]
                 public string TagDesc { get; set; }
+
+                [NameInMap("ValueList")]
+                [Validation(Required=false)]
                 public DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueList ValueList { get; set; }
                 public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueList : TeaModel {
                     [NameInMap("Value")]
@@ -36,8 +44,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,15 +17,37 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterOperationResponseBodyClusterOperationListClusterOperation> ClusterOperation { get; set; }
             public class ListClusterOperationResponseBodyClusterOperationListClusterOperation : TeaModel {
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
                 public string Comment { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
                 public string Duration { get; set; }
+
+                [NameInMap("OperationId")]
+                [Validation(Required=false)]
                 public string OperationId { get; set; }
+
+                [NameInMap("OperationName")]
+                [Validation(Required=false)]
                 public string OperationName { get; set; }
+
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
                 public string Percentage { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

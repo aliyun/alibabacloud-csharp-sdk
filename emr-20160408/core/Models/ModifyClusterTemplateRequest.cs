@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Configurations { get; set; }
 
+        [NameInMap("DataDiskEncrypted")]
+        [Validation(Required=false)]
+        public bool? DataDiskEncrypted { get; set; }
+
+        [NameInMap("DataDiskKMSKeyId")]
+        [Validation(Required=false)]
+        public string DataDiskKMSKeyId { get; set; }
+
         [NameInMap("DepositType")]
         [Validation(Required=false)]
         public string DepositType { get; set; }
@@ -293,6 +301,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// VPC ID。
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

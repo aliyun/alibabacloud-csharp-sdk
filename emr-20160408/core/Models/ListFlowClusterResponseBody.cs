@@ -17,10 +17,24 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowClusterResponseBodyClustersClusterInfo> ClusterInfo { get; set; }
             public class ListFlowClusterResponseBodyClustersClusterInfo : TeaModel {
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("CreateResource")]
+                [Validation(Required=false)]
                 public string CreateResource { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
                 public long? ExpiredTime { get; set; }
+
+                [NameInMap("FailReason")]
+                [Validation(Required=false)]
                 public ListFlowClusterResponseBodyClustersClusterInfoFailReason FailReason { get; set; }
                 public class ListFlowClusterResponseBodyClustersClusterInfoFailReason : TeaModel {
                     [NameInMap("ErrorCode")]
@@ -36,11 +50,29 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public string RequestId { get; set; }
 
                 }
+
+                [NameInMap("HasUncompletedOrder")]
+                [Validation(Required=false)]
                 public bool? HasUncompletedOrder { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("K8sClusterId")]
+                [Validation(Required=false)]
                 public string K8sClusterId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("OrderList")]
+                [Validation(Required=false)]
                 public string OrderList { get; set; }
+
+                [NameInMap("OrderTaskInfo")]
+                [Validation(Required=false)]
                 public ListFlowClusterResponseBodyClustersClusterInfoOrderTaskInfo OrderTaskInfo { get; set; }
                 public class ListFlowClusterResponseBodyClustersClusterInfoOrderTaskInfo : TeaModel {
                     [NameInMap("CurrentCount")]
@@ -56,12 +88,26 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public int? TargetCount { get; set; }
 
                 }
+
+                [NameInMap("Period")]
+                [Validation(Required=false)]
                 public int? Period { get; set; }
+
+                [NameInMap("RunningTime")]
+                [Validation(Required=false)]
                 public int? RunningTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

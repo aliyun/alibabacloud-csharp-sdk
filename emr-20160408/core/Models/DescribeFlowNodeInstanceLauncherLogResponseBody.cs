@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeFlowNodeInstanceLauncherLogResponseBodyLogEntrysLogEntry> LogEntry { get; set; }
             public class DescribeFlowNodeInstanceLauncherLogResponseBodyLogEntrysLogEntry : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
                 public string Content { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

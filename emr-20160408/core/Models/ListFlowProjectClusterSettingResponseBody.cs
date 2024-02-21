@@ -17,12 +17,32 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSetting> ClusterSetting { get; set; }
             public class ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSetting : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
                 public string ClusterName { get; set; }
+
+                [NameInMap("DefaultQueue")]
+                [Validation(Required=false)]
                 public string DefaultQueue { get; set; }
+
+                [NameInMap("DefaultUser")]
+                [Validation(Required=false)]
                 public string DefaultUser { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
                 public long? GmtModified { get; set; }
+
+                [NameInMap("HostList")]
+                [Validation(Required=false)]
                 public ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingHostList HostList { get; set; }
                 public class ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingHostList : TeaModel {
                     [NameInMap("Host")]
@@ -30,8 +50,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> Host { get; set; }
 
                 }
+
+                [NameInMap("K8sClusterId")]
+                [Validation(Required=false)]
                 public string K8sClusterId { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
                 public string ProjectId { get; set; }
+
+                [NameInMap("QueueList")]
+                [Validation(Required=false)]
                 public ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingQueueList QueueList { get; set; }
                 public class ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingQueueList : TeaModel {
                     [NameInMap("Queue")]
@@ -39,6 +68,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> Queue { get; set; }
 
                 }
+
+                [NameInMap("UserList")]
+                [Validation(Required=false)]
                 public ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingUserList UserList { get; set; }
                 public class ListFlowProjectClusterSettingResponseBodyClusterSettingsClusterSettingUserList : TeaModel {
                     [NameInMap("User")]
@@ -46,8 +78,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public List<string> User { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
