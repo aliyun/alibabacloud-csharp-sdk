@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The parameters that you want to configure for the scenario.
+        /// The preference parameters of the resource scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The source resources.
         /// 
-        /// If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.
+        /// If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.
         /// 
         /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
         /// </summary>

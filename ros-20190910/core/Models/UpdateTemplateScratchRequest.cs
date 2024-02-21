@@ -51,18 +51,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string LogicalIdStrategy { get; set; }
 
         /// <summary>
-        /// The parameters that you want to configure for the scenario.
+        /// The preference parameters of the resource scenario.
         /// </summary>
         [NameInMap("PreferenceParameters")]
         [Validation(Required=false)]
         public List<UpdateTemplateScratchRequestPreferenceParameters> PreferenceParameters { get; set; }
         public class UpdateTemplateScratchRequestPreferenceParameters : TeaModel {
             /// <summary>
-            /// The name of the parameter.
+            /// The parameter name.
             /// 
             /// For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.
             /// 
-            /// > - PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.
+            /// >- PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.
             /// > - If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
             /// </summary>
             [NameInMap("ParameterKey")]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.
+            /// The parameter value. The value of ParameterValue varies based on the value of ParameterKey.
             /// 
-            /// For more information about the valid values of ParameterValue, see the "**Additional information about request parameters**" section of this topic.
+            /// For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.
             /// 
             /// >  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.
             /// </summary>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The source resources.
         /// 
-        /// If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.
+        /// If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.
         /// 
         /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
         /// </summary>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public Dictionary<string, object> ResourceTags { get; set; }
 
             /// <summary>
-            /// The filters for resource types.
+            /// The resource types for filtering resources.
             /// </summary>
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]

@@ -32,6 +32,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public DeleteStackInstancesRequestDeploymentTargets DeploymentTargets { get; set; }
         public class DeleteStackInstancesRequestDeploymentTargets : TeaModel {
+            /// <summary>
+            /// The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
+            /// 
+            /// > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).
+            /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }

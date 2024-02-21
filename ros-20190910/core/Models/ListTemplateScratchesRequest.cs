@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateScratchId { get; set; }
 
         /// <summary>
-        /// The type of the scenario. Valid values:
+        /// The type of the resource scenario. Valid values:
         /// 
         /// *   ArchitectureReplication: resource replication
         /// *   ArchitectureDetection: resource detection
