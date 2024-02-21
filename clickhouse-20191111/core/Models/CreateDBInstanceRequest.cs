@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         /// <summary>
         /// The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.
         /// 

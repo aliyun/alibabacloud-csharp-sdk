@@ -38,7 +38,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The column by which the query results are sorted.
+        /// Sorting by the specified column name. Valid values:
+        /// 
+        /// *   elapsed: the cumulative execution time
+        /// *   written_rows: the number of written rows
+        /// *   read_rows: the number of read rows
+        /// *   memory_usage: the memory usage
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]

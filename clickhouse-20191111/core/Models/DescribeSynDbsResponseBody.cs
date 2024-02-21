@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<DescribeSynDbsResponseBodySynDbs> SynDbs { get; set; }
         public class DescribeSynDbsResponseBodySynDbs : TeaModel {
             /// <summary>
-            /// *   If the value **true** is returned for the **SynStatus** parameter, this parameter is not returned.
-            /// *   If the value **false** is returned for the **SynStatus** parameter, the system returns the ErrorMsg parameter that provides the cause why the data synchronization failed.
+            /// *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
+            /// *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]

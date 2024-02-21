@@ -397,10 +397,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public int? SupportBackup { get; set; }
 
             /// <summary>
-            /// Indicates whether the cluster supports an HTTP port. Valid values:
+            /// Indicates whether HTTPS ports are supported. Valid values:
             /// 
-            /// *   **true**: An HTTP port is supported.
-            /// *   **false**: An HTTP port is not supported.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("SupportHttpsPort")]
             [Validation(Required=false)]
@@ -490,6 +490,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
+            /// <summary>
+            /// The list of vSwitch IDs in multi-zone clusters.
+            /// </summary>
             [NameInMap("ZoneIdVswitchMap")]
             [Validation(Required=false)]
             public Dictionary<string, object> ZoneIdVswitchMap { get; set; }

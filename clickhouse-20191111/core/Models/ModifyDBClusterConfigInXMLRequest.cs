@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// The configuration parameters whose settings you want to modify. You can call the [DescribeDBClusterConfigInXML](~~452210~~) operation to query configuration parameters, and modify the settings of the returned configuration parameters.
         /// 
-        /// >  You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.
+        /// > You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

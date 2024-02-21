@@ -1238,6 +1238,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetID))
             {
                 query["BackupSetID"] = request.BackupSetID;
@@ -1377,6 +1381,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetID))
             {
                 query["BackupSetID"] = request.BackupSetID;
