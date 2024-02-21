@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The time interval （seconds） between data retrieval points.
+        /// The time interval (seconds) between data retrieval points.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

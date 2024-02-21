@@ -45,12 +45,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? IOPSPercent { get; set; }
 
             /// <summary>
-            /// The read bandwidth of the disk. Unit: Mbit/s.
+            /// The read bandwidth of the disk. Unit: MByte/s.
             /// </summary>
             [NameInMap("ReadBPS")]
             [Validation(Required=false)]
             public long? ReadBPS { get; set; }
 
+            /// <summary>
+            /// Read IO block size. Unit: Bytes
+            /// </summary>
             [NameInMap("ReadBlockSize")]
             [Validation(Required=false)]
             public long? ReadBlockSize { get; set; }
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public long? ReadIOPS { get; set; }
 
+            /// <summary>
+            /// Read IO latency. Unit:  microsecond
+            /// </summary>
             [NameInMap("ReadLatency")]
             [Validation(Required=false)]
             public long? ReadLatency { get; set; }
@@ -74,12 +80,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// The write bandwidth of the disk. Unit: Mbit/s.
+            /// The write bandwidth of the disk. Unit: MByte/s.
             /// </summary>
             [NameInMap("WriteBPS")]
             [Validation(Required=false)]
             public long? WriteBPS { get; set; }
 
+            /// <summary>
+            /// Write IO block size. Unit: Bytes
+            /// </summary>
             [NameInMap("WriteBlockSize")]
             [Validation(Required=false)]
             public long? WriteBlockSize { get; set; }
@@ -91,6 +100,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public long? WriteIOPS { get; set; }
 
+            /// <summary>
+            /// Write IO latency. Unit: microsecond
+            /// </summary>
             [NameInMap("WriteLatency")]
             [Validation(Required=false)]
             public long? WriteLatency { get; set; }
