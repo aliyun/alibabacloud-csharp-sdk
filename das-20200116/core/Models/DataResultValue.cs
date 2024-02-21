@@ -1,0 +1,38 @@
+/**
+ *
+ */
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.DAS20200116.Models
+{
+    public class DataResultValue : TeaModel {
+        /// <summary>
+        /// The SQL ID.
+        /// </summary>
+        [NameInMap("sqlId")]
+        [Validation(Required=false)]
+        public string SqlId { get; set; }
+
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
+        [NameInMap("instanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// The number of failed executions.
+        /// </summary>
+        [NameInMap("count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
+    }
+
+}
