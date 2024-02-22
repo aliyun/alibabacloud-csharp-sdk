@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string AlertStatus { get; set; }
 
+        [NameInMap("Arn")]
+        [Validation(Required=false)]
+        public string Arn { get; set; }
+
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]
         public Dictionary<string, object> CustomLabels { get; set; }
@@ -35,6 +43,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
+
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
 
         [NameInMap("Expression")]
         [Validation(Required=false)]
@@ -81,6 +93,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public float? UnitFactor { get; set; }
 
         }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
         [NameInMap("ResourceInfo")]
         [Validation(Required=false)]

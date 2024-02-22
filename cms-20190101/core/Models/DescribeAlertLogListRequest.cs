@@ -17,18 +17,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroup { get; set; }
 
         /// <summary>
-        /// The end timestamp of the alert logs to be queried. Unit: milliseconds.
+        /// The end timestamp of the alert logs to be queried.
+        /// 
+        /// Unit: milliseconds.
+        /// 
+        /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.
+        /// 
+        /// >  The time period between the start time specified by `StartTime` and end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The type of the alert event. Valid values:
+        /// 
+        /// *   TRIGGERED: The alert is triggered.
+        /// *   RESOLVED: The alert is resolved.
+        /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
+        /// The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
         /// 
         /// *   `product`: aggregates data by cloud service.
         /// *   `level`: aggregates data by alert level.
@@ -76,28 +88,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The namespace of the cloud service.
         /// 
-        /// > For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+        /// >  For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// The page number.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// The number of entries per page.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The abbreviation of the cloud service name.
+        /// The abbreviation of the service name.
+        /// 
+        /// For information about how to obtain the abbreviation of a cloud service name, see [DescribeProductsOfActiveMetricRule](~~114930~~).
         /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
@@ -108,7 +126,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// The ID of the alert rule.
+        /// 
+        /// For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -143,12 +163,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string SendStatus { get; set; }
 
+        /// <summary>
+        /// The type of the alert rule. Valid value: METRIC. This value indicates an alert rule for time series metrics.
+        /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// The start timestamp of the alert logs to be queried. Unit: milliseconds.
+        /// The start timestamp of the alert logs to be queried.
+        /// 
+        /// Unit: milliseconds.
+        /// 
+        /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.
+        /// 
+        /// >  The time period between the start time specified by `StartTime` and the end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

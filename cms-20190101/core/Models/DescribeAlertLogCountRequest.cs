@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
         /// 
-        /// >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
+        /// >  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The type of the alert event. Valid values:
+        /// 
+        /// *   TRIGGERED: The alert is triggered.
+        /// *   RESOLVED: The alert is resolved.
+        /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
@@ -119,6 +125,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the alert rule.
+        /// 
+        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
@@ -166,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
         /// 
-        /// >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
+        /// >  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

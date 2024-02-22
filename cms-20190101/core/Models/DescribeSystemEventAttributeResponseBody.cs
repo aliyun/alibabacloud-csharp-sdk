@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// The details of the system event.
+        /// The details of the event.
         /// </summary>
         [NameInMap("SystemEvents")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent> SystemEvent { get; set; }
             public class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent : TeaModel {
                 /// <summary>
-                /// The details of the system event.
+                /// The details of the event.
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -69,25 +69,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The instance name.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The level of the system event. Valid values:
+                /// The severity level of the alert. Valid values:
                 /// 
-                /// *   CRITICAL: critical
-                /// *   WARN: warning
-                /// *   INFO: information
+                /// *   CRITICAL
+                /// *   WARN
+                /// *   INFO
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The name of the system event.
+                /// The event name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -101,28 +101,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The status of the system event.
+                /// The status of the event.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The timestamp when the system event occurred.
+                /// The time when the event occurred. The value is a timestamp.
                 /// 
                 /// Unit: milliseconds.
                 /// </summary>

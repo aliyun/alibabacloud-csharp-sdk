@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<DescribeAlertLogListResponseBodyAlertLogList> AlertLogList { get; set; }
         public class DescribeAlertLogListResponseBodyAlertLogList : TeaModel {
             /// <summary>
-            /// The timestamp that was generated when the alert was triggered. Unit: milliseconds.
+            /// The timestamp that was generated when the alert was triggered.
+            /// 
+            /// Unit: milliseconds.
             /// </summary>
             [NameInMap("AlertTime")]
             [Validation(Required=false)]
@@ -44,50 +46,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string BlackListUUID { get; set; }
 
-            /// <summary>
-            /// The TradeManager IDs of the alert contacts.
-            /// 
-            /// > This parameter is valid only on the China site (aliyun.com).
-            /// </summary>
             [NameInMap("ContactALIIWWList")]
             [Validation(Required=false)]
             public List<string> ContactALIIWWList { get; set; }
 
-            /// <summary>
-            /// The DingTalk chatbots of the alert contacts.
-            /// </summary>
             [NameInMap("ContactDingList")]
             [Validation(Required=false)]
             public List<string> ContactDingList { get; set; }
 
-            /// <summary>
-            /// The alert contact groups.
-            /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public List<string> ContactGroups { get; set; }
 
-            /// <summary>
-            /// The email addresses of the alert contacts.
-            /// </summary>
             [NameInMap("ContactMailList")]
             [Validation(Required=false)]
             public List<string> ContactMailList { get; set; }
 
-            /// <summary>
-            /// The phone numbers of the alert contacts that receive alert phone calls.
-            /// 
-            /// > This parameter is valid only on the China site (aliyun.com).
-            /// </summary>
             [NameInMap("ContactOnCallList")]
             [Validation(Required=false)]
             public List<string> ContactOnCallList { get; set; }
 
-            /// <summary>
-            /// The phone numbers of the alert contacts that receive alert text messages.
-            /// 
-            /// > This parameter is valid only on the China site (aliyun.com).
-            /// </summary>
             [NameInMap("ContactSMSList")]
             [Validation(Required=false)]
             public List<string> ContactSMSList { get; set; }
@@ -115,9 +93,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
-            /// <summary>
-            /// The webhook URLs of the alert contacts.
-            /// </summary>
             [NameInMap("DingdingWebhookList")]
             [Validation(Required=false)]
             public List<string> DingdingWebhookList { get; set; }
@@ -132,14 +107,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The description of the alert rule.
                 /// 
-                /// > The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
+                /// >  The content of the alert rule. This parameter indicates the conditions that trigger an alert.
                 /// </summary>
                 [NameInMap("Expression")]
                 [Validation(Required=false)]
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// The severity level and notification methods of the alert. Valid values:
+                /// The alert level and the methods that are used to send alert notifications. Valid values:
                 /// 
                 /// *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
                 /// *   OK: No alert is generated.
@@ -216,7 +191,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The severity level and notification methods of the alert. Valid values:
+            /// The alert level and the methods that are used to send alert notifications. Valid values:
             /// 
             /// *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
             /// *   OK: No alert is generated.
@@ -288,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The details of the alert notification method.
+            /// The details about the sending results of alert notifications.
             /// </summary>
             [NameInMap("SendDetail")]
             [Validation(Required=false)]
@@ -357,9 +332,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public bool? Success { get; set; }
 
-                        /// <summary>
-                        /// The queried resources.
-                        /// </summary>
                         [NameInMap("notifyTargetList")]
                         [Validation(Required=false)]
                         public List<string> NotifyTargetList { get; set; }
@@ -390,7 +362,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The category of the alert notification method. Valid values:
                 /// 
-                /// *   Mail: email
+                /// *   MAIL: email
                 /// *   ALIIM: TradeManager
                 /// *   SMS: text message
                 /// *   CALL: phone call
@@ -402,7 +374,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The alert notification methods.
+                /// The notification object corresponding to the alert notification method.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

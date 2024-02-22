@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorTaskRequest : TeaModel {
+        /// <summary>
+        /// The tags of the metric.
+        /// 
+        /// >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+        /// </summary>
         [NameInMap("AttachLabels")]
         [Validation(Required=false)]
         public List<CreateHybridMonitorTaskRequestAttachLabels> AttachLabels { get; set; }
@@ -29,11 +34,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        [NameInMap("CloudAccessId")]
+        [Validation(Required=false)]
+        public List<string> CloudAccessId { get; set; }
+
         /// <summary>
-        /// The interval at which metrics are collected. Valid values:
+        /// The collection period of the metric. Valid values:
         /// 
         /// *   15
-        /// *   60 (default value)
+        /// *   60 (default)
         /// 
         /// Unit: seconds.
         /// 
@@ -85,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The configurations of the logs that are imported from Log Service.
+        /// The configurations of the logs that are imported from Simple Log Service.
         /// 
         /// >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
         /// </summary>
@@ -94,21 +103,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig { get; set; }
         public class CreateHybridMonitorTaskRequestSLSProcessConfig : TeaModel {
             /// <summary>
-            /// The extended fields that specify the results of basic operations that are performed on aggregation results.
+            /// The extended fields that specify the results of basic operations performed on aggregation results.
             /// </summary>
             [NameInMap("Express")]
             [Validation(Required=false)]
             public List<CreateHybridMonitorTaskRequestSLSProcessConfigExpress> Express { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigExpress : TeaModel {
                 /// <summary>
-                /// The alias of the extended field that specifies the result of basic operations that are performed on aggregation results.
+                /// The alias of the extended field that specifies the result of basic operations performed on aggregation results.
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The extended field that specifies the result of basic operations that are performed on aggregation results.
+                /// The extended field that specifies the result of basic operations performed on aggregation results.
                 /// </summary>
                 [NameInMap("Express")]
                 [Validation(Required=false)]
@@ -117,21 +126,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The conditions that are used to filter logs imported from Log Service.
+            /// The conditions that are used to filter logs imported from Simple Log Service.
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public CreateHybridMonitorTaskRequestSLSProcessConfigFilter Filter { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigFilter : TeaModel {
                 /// <summary>
-                /// The conditions that are used to filter logs imported from Log Service.
+                /// The conditions that are used to filter logs imported from Simple Log Service.
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
                 public List<CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters> Filters { get; set; }
                 public class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters : TeaModel {
                     /// <summary>
-                    /// The method that is used to filter logs imported from Log Service. Valid values:
+                    /// The method that is used to filter logs imported from Simple Log Service. Valid values:
                     /// 
                     /// *   `contain`: contains
                     /// *   `notContain`: does not contain
@@ -147,14 +156,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// The name of the key that is used to filter logs imported from Log Service.
+                    /// The name of the key that is used to filter logs imported from Simple Log Service.
                     /// </summary>
                     [NameInMap("SLSKeyName")]
                     [Validation(Required=false)]
                     public string SLSKeyName { get; set; }
 
                     /// <summary>
-                    /// The value of the key that is used to filter logs imported from Log Service.
+                    /// The value of the key that is used to filter logs imported from Simple Log Service.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// The relationship between multiple filter conditions. Valid values:
                 /// 
-                /// *   and (default value): Logs are processed only if all filter conditions are met.
+                /// *   and (default): Logs are processed only if all filter conditions are met.
                 /// *   or: Logs are processed if one of the filter conditions is met.
                 /// </summary>
                 [NameInMap("Relation")]
@@ -189,7 +198,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// The name of the key that is used to aggregate logs imported from Log Service.
+                /// The name of the key that is used to aggregate logs imported from Simple Log Service.
                 /// </summary>
                 [NameInMap("SLSKeyName")]
                 [Validation(Required=false)]
@@ -197,26 +206,61 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
+            /// <summary>
+            /// The method that is used to aggregate logs imported from Simple Log Service.
+            /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public List<CreateHybridMonitorTaskRequestSLSProcessConfigStatistics> Statistics { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigStatistics : TeaModel {
+                /// <summary>
+                /// The alias of the aggregation result.
+                /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
+                /// <summary>
+                /// The function that is used to aggregate the log data of a statistical period. Valid values:
+                /// 
+                /// *   count: counts the number.
+                /// *   sum: calculates the total value.
+                /// *   avg: calculates the average value.
+                /// *   max: calculates the maximum value.
+                /// *   min: calculates the minimum value.
+                /// *   value: collects samples within the statistical period.
+                /// *   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.
+                /// *   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.
+                /// *   distinct: calculates the number of unique values of the specified field within a statistical period.
+                /// *   distribution: calculates the number of logs that meet a specified condition within the statistical period.
+                /// *   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.
+                /// </summary>
                 [NameInMap("Function")]
                 [Validation(Required=false)]
                 public string Function { get; set; }
 
+                /// <summary>
+                /// The value of the function that is used to aggregate logs imported from Simple Log Service.
+                /// 
+                /// *   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.
+                /// *   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.
+                /// </summary>
                 [NameInMap("Parameter1")]
                 [Validation(Required=false)]
                 public string Parameter1 { get; set; }
 
+                /// <summary>
+                /// The value of the function that is used to aggregate logs imported from Simple Log Service.
+                /// 
+                /// >  This parameter is required only if the `Function` parameter is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.
+                /// </summary>
                 [NameInMap("Parameter2")]
                 [Validation(Required=false)]
                 public string Parameter2 { get; set; }
 
+                /// <summary>
+                /// The name of the key that is used to aggregate logs imported from Simple Log Service.
+                /// </summary>
                 [NameInMap("SLSKeyName")]
                 [Validation(Required=false)]
                 public string SLSKeyName { get; set; }
@@ -228,7 +272,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// The ID of the member account.
         /// 
-        /// If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
+        /// If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
         /// 
         /// >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
         /// </summary>
@@ -249,17 +293,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// The name of the metric import task.
         /// 
         /// *   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.
-        /// *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.
+        /// *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Simple Log Service.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:
+        /// The type of the metric import task. Valid values:
         /// 
-        /// *   aliyun_fc: creates a metric import task for an Alibaba Cloud service
-        /// *   aliyun_sls: creates a metric for logs imported from Log Service
+        /// *   aliyun_fc: metric import tasks for Alibaba Cloud services.
+        /// *   aliyun_sls: metrics for logs imported from Simple Log Service.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
@@ -273,26 +317,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// 
         /// The following code shows a sample configuration file:
         /// 
-        /// ```
-        /// 
-        /// products:
-        /// - namespace: acs_ecs_dashboard
-        ///   metric_info:
-        ///   - metric_list:
-        ///     - cpu_total
-        ///     - cpu_idle
-        ///     - diskusage_utilization
-        ///     - CPUUtilization
-        ///     - DiskReadBPS
-        ///     - InternetOut
-        ///     - IntranetOut
-        ///     - cpu_system
-        /// - namespace: acs_rds_dashboard
-        ///   metric_info:
-        ///   - metric_list:
-        ///     - MySQL_QPS
-        ///     - MySQL_TPS
-        /// ```
+        ///     products:
+        ///     - namespace: acs_ecs_dashboard
+        ///       metric_info:
+        ///       - metric_list:
+        ///         - cpu_total
+        ///         - cpu_idle
+        ///         - diskusage_utilization
+        ///         - CPUUtilization
+        ///         - DiskReadBPS
+        ///         - InternetOut
+        ///         - IntranetOut
+        ///         - cpu_system
+        ///     - namespace: acs_rds_dashboard
+        ///       metric_info:
+        ///       - metric_list:
+        ///         - MySQL_QPS
+        ///         - MySQL_TPS
         /// 
         /// >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
         /// </summary>

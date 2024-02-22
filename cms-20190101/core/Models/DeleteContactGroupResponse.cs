@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteContactGroupResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteContactGroupResponseBody Body { get; set; }
 
     }

@@ -1,3 +1,9 @@
+2024-02-22 Version: 2.0.12
+- Update API CreateHybridMonitorTask: add param CloudAccessId.
+- Update API CreateHybridMonitorTask: update param TaskType.
+- Update API DescribeMetricData: update response param.
+
+
 2023-12-13 Version: 2.0.11
 - Generated csharp 2019-01-01 for Cms.
 

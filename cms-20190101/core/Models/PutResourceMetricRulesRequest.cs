@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesRequest : TeaModel {
+        /// <summary>
+        /// The threshold-triggered alert rules.
+        /// 
+        /// Valid values of N: 1 to 500.
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<PutResourceMetricRulesRequestRules> Rules { get; set; }
@@ -110,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.
+            /// The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.
             /// 
             /// Valid values of N: 1 to 500.
             /// 
@@ -139,7 +144,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EmailSubject { get; set; }
 
             /// <summary>
-            /// The interval at which the alert rule is executed.
+            /// The interval at which alerts are triggered based on the alert rule.
             /// 
             /// Unit: seconds.
             /// 
@@ -151,19 +156,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Interval { get; set; }
 
+            /// <summary>
+            /// If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.
+            /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<PutResourceMetricRulesRequestRulesLabels> Labels { get; set; }
             public class PutResourceMetricRulesRequestRulesLabels : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// 
                 /// >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
                 /// </summary>
@@ -174,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// The name of the metric.
+            /// The metric name.
             /// 
             /// Valid values of N: 1 to 500.
             /// 
@@ -198,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// The method that is used to handle alerts when no monitoring data is found. Valid values:
             /// 
-            /// *   KEEP_LAST_STATE (default value): No operation is performed.
+            /// *   KEEP_LAST_STATE (default): No operation is performed.
             /// *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
             /// *   OK: The status is considered normal.
             /// 
@@ -231,7 +239,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Period { get; set; }
 
             /// <summary>
-            /// The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
+            /// The information about the resource. Example: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` or `[{"userId":"100931896542****"}]`.
             /// 
             /// Valid values of N: 1 to 500.
             /// 
@@ -248,7 +256,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
             /// 
-            /// >  If you specify a new ID, you create a threshold-triggered alert rule.
+            /// >  If you specify a new ID, a threshold-triggered alert rule is created.
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
@@ -261,14 +269,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// 
             /// You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
             /// 
-            /// >  If you specify a new name, you create a threshold-triggered alert rule.
+            /// >  If you specify a new name, a threshold-triggered alert rule is created.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The mute period during which new alerts are not sent even if the trigger conditions are met.
+            /// The mute period during which new alert notifications are not sent even if the trigger conditions are met.
             /// 
             /// Unit: seconds. Default value: 86400.
             /// 

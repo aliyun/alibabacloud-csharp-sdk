@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
+
         [NameInMap("PushingSetting")]
         [Validation(Required=false)]
         public NotificationStrategyPushingSetting PushingSetting { get; set; }

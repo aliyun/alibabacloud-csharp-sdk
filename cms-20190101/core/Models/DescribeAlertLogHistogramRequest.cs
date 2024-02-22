@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The type of the alert event. Valid values:
+        /// 
+        /// *   TRIGGERED: The alert is triggered.
+        /// *   RESOLVED: The alert is resolved.
+        /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
@@ -119,6 +125,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the alert rule.
+        /// 
+        /// For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }

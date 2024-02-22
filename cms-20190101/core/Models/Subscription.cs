@@ -35,9 +35,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
         [NameInMap("Relation")]
         [Validation(Required=false)]
