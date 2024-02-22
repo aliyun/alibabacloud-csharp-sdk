@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
+        [NameInMap("AiCreatingTime")]
+        [Validation(Required=false)]
+        public string AiCreatingTime { get; set; }
+
         /// <summary>
         /// The information status of the AI node. Valid values:
         /// 
@@ -218,6 +222,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("MemorySize")]
             [Validation(Required=false)]
             public string MemorySize { get; set; }
+
+            [NameInMap("RemoteMemorySize")]
+            [Validation(Required=false)]
+            public string RemoteMemorySize { get; set; }
 
             /// <summary>
             /// Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:
