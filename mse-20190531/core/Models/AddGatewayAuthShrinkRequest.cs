@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Jwks { get; set; }
 
         /// <summary>
-        /// The URL that is used to log on to the IDaaS instance. For more information, see [OAuth2.0 Application User Manual](https://help.aliyun.com/document_detail/193871.html).
+        /// The URL that is used to log on to the IDaaS instance.
         /// </summary>
         [NameInMap("LoginUrl")]
         [Validation(Required=false)]

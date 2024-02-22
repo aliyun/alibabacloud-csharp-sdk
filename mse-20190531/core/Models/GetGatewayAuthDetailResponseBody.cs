@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             [NameInMap("ScopesList")]
             [Validation(Required=false)]
-            public List<string> ScopesList { get; set; }
+            public string ScopesList { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
