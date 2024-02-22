@@ -3527,6 +3527,126 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CommonApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
+        public CooperatorFlightBillSettlementQueryResponse CooperatorFlightBillSettlementQueryWithOptions(CooperatorFlightBillSettlementQueryRequest request, CooperatorFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
+            {
+                query["cooperator_id"] = request.CooperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CooperatorFlightBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/cooperator-flight/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CooperatorFlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CooperatorFlightBillSettlementQueryResponse> CooperatorFlightBillSettlementQueryWithOptionsAsync(CooperatorFlightBillSettlementQueryRequest request, CooperatorFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
+            {
+                query["cooperator_id"] = request.CooperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CooperatorFlightBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/cooperator-flight/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CooperatorFlightBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CooperatorFlightBillSettlementQueryResponse CooperatorFlightBillSettlementQuery(CooperatorFlightBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CooperatorFlightBillSettlementQueryHeaders headers = new CooperatorFlightBillSettlementQueryHeaders();
+            return CooperatorFlightBillSettlementQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CooperatorFlightBillSettlementQueryResponse> CooperatorFlightBillSettlementQueryAsync(CooperatorFlightBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CooperatorFlightBillSettlementQueryHeaders headers = new CooperatorFlightBillSettlementQueryHeaders();
+            return await CooperatorFlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
+        }
+
         public CooperatorHotelBillSettlementQueryResponse CooperatorHotelBillSettlementQueryWithOptions(CooperatorHotelBillSettlementQueryRequest request, CooperatorHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
