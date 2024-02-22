@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Bailian20230601.Models
 {
     public class ListFineTuneJobsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListFineTuneJobsResponseBody Body { get; set; }
 
     }
