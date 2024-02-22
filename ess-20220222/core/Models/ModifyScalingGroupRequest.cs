@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ScalingGroupName { get; set; }
 
+        [NameInMap("ScalingPolicy")]
+        [Validation(Required=false)]
+        public string ScalingPolicy { get; set; }
+
         /// <summary>
         /// The allocation policy of preemptible instances. You can use this parameter to individually specify the allocation policy of preemptible instances. This parameter takes effect only when you set the `MultiAZPolicy` parameter to `COMPOSABLE`. Valid values:
         /// 
