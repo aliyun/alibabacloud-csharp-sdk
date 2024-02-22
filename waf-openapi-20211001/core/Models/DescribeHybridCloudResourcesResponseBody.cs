@@ -132,16 +132,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public bool? IPv6Enabled { get; set; }
 
                 /// <summary>
-                /// Indicates whether IPv6 is supported. Valid values:
-                /// 
-                /// *   **true**
-                /// *   **false**
-                /// </summary>
-                [NameInMap("Ipv6Enabled")]
-                [Validation(Required=false)]
-                public bool? Ipv6Enabled { get; set; }
-
-                /// <summary>
                 /// The type of the protection resource. Valid values:
                 /// 
                 /// *   **share:** shared cluster.
