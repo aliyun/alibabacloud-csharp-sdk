@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public GetInstanceListResponseBodyInstanceList InstanceList { get; set; }
@@ -33,17 +21,44 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
             [Validation(Required=false)]
             public List<GetInstanceListResponseBodyInstanceListInstanceVO> InstanceVO { get; set; }
             public class GetInstanceListResponseBodyInstanceListInstanceVO : TeaModel {
-                public string VpcId { get; set; }
-                public string VSwitchId { get; set; }
-                public long? ExpiredTime { get; set; }
-                public int? DeployType { get; set; }
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
-                public string SslEndPoint { get; set; }
-                public string InstanceId { get; set; }
-                public string Name { get; set; }
-                public int? ServiceStatus { get; set; }
+
+                [NameInMap("DeployType")]
+                [Validation(Required=false)]
+                public int? DeployType { get; set; }
+
+                [NameInMap("EndPoint")]
+                [Validation(Required=false)]
                 public string EndPoint { get; set; }
+
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
+                public long? ExpiredTime { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ServiceStatus")]
+                [Validation(Required=false)]
+                public int? ServiceStatus { get; set; }
+
+                [NameInMap("SslEndPoint")]
+                [Validation(Required=false)]
+                public string SslEndPoint { get; set; }
+
+                [NameInMap("UpgradeServiceDetailInfo")]
+                [Validation(Required=false)]
                 public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo UpgradeServiceDetailInfo { get; set; }
                 public class GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo : TeaModel {
                     [NameInMap("UpgradeServiceDetailInfoVO")]
@@ -57,8 +72,36 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
                     }
 
                 }
+
+                /// <summary>
+                /// VSwitch ID。
+                /// </summary>
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                /// <summary>
+                /// VPC ID。
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

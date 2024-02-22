@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
 {
     public class DeleteTopicResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DeleteTopicResponseBody Body { get; set; }
 
     }

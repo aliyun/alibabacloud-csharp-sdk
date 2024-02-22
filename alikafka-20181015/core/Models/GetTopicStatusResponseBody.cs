@@ -29,12 +29,10 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
         [Validation(Required=false)]
         public GetTopicStatusResponseBodyTopicStatus TopicStatus { get; set; }
         public class GetTopicStatusResponseBodyTopicStatus : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("LastTimeStamp")]
             [Validation(Required=false)]
             public long? LastTimeStamp { get; set; }
+
             [NameInMap("OffsetTable")]
             [Validation(Required=false)]
             public GetTopicStatusResponseBodyTopicStatusOffsetTable OffsetTable { get; set; }
@@ -43,14 +41,6 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
                 [Validation(Required=false)]
                 public List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> OffsetTable { get; set; }
                 public class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable : TeaModel {
-                    [NameInMap("Partition")]
-                    [Validation(Required=false)]
-                    public int? Partition { get; set; }
-
-                    [NameInMap("MinOffset")]
-                    [Validation(Required=false)]
-                    public long? MinOffset { get; set; }
-
                     [NameInMap("LastUpdateTimestamp")]
                     [Validation(Required=false)]
                     public long? LastUpdateTimestamp { get; set; }
@@ -59,6 +49,14 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
                     [Validation(Required=false)]
                     public long? MaxOffset { get; set; }
 
+                    [NameInMap("MinOffset")]
+                    [Validation(Required=false)]
+                    public long? MinOffset { get; set; }
+
+                    [NameInMap("Partition")]
+                    [Validation(Required=false)]
+                    public int? Partition { get; set; }
+
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
@@ -66,7 +64,12 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
                 }
 
             }
-        };
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
+
+        }
 
     }
 

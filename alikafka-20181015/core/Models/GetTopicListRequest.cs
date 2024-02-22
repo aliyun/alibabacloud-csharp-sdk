@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20181015.Models
 {
     public class GetTopicListRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -13,6 +13,30 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        [NameInMap("ConsumerList")]
+        [Validation(Required=false)]
+        public GetConsumerListResponseBodyConsumerList ConsumerList { get; set; }
+        public class GetConsumerListResponseBodyConsumerList : TeaModel {
+            [NameInMap("ConsumerVO")]
+            [Validation(Required=false)]
+            public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
+            public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
+                [NameInMap("ConsumerId")]
+                [Validation(Required=false)]
+                public string ConsumerId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +48,6 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ConsumerList")]
-        [Validation(Required=false)]
-        public GetConsumerListResponseBodyConsumerList ConsumerList { get; set; }
-        public class GetConsumerListResponseBodyConsumerList : TeaModel {
-            [NameInMap("ConsumerVO")]
-            [Validation(Required=false)]
-            public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
-            public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
-                public string ConsumerId { get; set; }
-                public string InstanceId { get; set; }
-                public string RegionId { get; set; }
-            }
-        };
 
     }
 

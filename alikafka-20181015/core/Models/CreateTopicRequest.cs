@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Alikafka20181015.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Topic")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Topic { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Topic")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Topic { get; set; }
 
     }
 
