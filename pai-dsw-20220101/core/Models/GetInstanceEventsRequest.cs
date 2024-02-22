@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class GetTokenResponse : TeaModel {
-        [NameInMap("headers")]
+    public class GetInstanceEventsRequest : TeaModel {
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("MaxEventsNum")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public int? MaxEventsNum { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public GetTokenResponseBody Body { get; set; }
+        public string StartTime { get; set; }
 
     }
 

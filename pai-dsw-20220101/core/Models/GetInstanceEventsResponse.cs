@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class CreateInstanceShutdownTimerResponse : TeaModel {
+    public class GetInstanceEventsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateInstanceShutdownTimerResponseBody Body { get; set; }
+        public GetInstanceEventsResponseBody Body { get; set; }
 
     }
 
