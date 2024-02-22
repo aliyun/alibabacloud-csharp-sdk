@@ -1475,6 +1475,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["FeaturePriority"] = request.FeaturePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreItemId))
+            {
+                body["FeatureStoreItemId"] = request.FeatureStoreItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreModelId))
+            {
+                body["FeatureStoreModelId"] = request.FeatureStoreModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectId))
+            {
+                body["FeatureStoreProjectId"] = request.FeatureStoreProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectName))
+            {
+                body["FeatureStoreProjectName"] = request.FeatureStoreProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreSeqFeatureView))
+            {
+                body["FeatureStoreSeqFeatureView"] = request.FeatureStoreSeqFeatureView;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreUserId))
+            {
+                body["FeatureStoreUserId"] = request.FeatureStoreUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FgJarVersion))
             {
                 body["FgJarVersion"] = request.FgJarVersion;
@@ -1526,6 +1550,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseFeatureStore))
+            {
+                body["UseFeatureStore"] = request.UseFeatureStore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdField))
             {
@@ -1599,6 +1627,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["FeaturePriority"] = request.FeaturePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreItemId))
+            {
+                body["FeatureStoreItemId"] = request.FeatureStoreItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreModelId))
+            {
+                body["FeatureStoreModelId"] = request.FeatureStoreModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectId))
+            {
+                body["FeatureStoreProjectId"] = request.FeatureStoreProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectName))
+            {
+                body["FeatureStoreProjectName"] = request.FeatureStoreProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreSeqFeatureView))
+            {
+                body["FeatureStoreSeqFeatureView"] = request.FeatureStoreSeqFeatureView;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreUserId))
+            {
+                body["FeatureStoreUserId"] = request.FeatureStoreUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FgJarVersion))
             {
                 body["FgJarVersion"] = request.FgJarVersion;
@@ -1650,6 +1702,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseFeatureStore))
+            {
+                body["UseFeatureStore"] = request.UseFeatureStore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdField))
             {
@@ -4293,6 +4349,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -4308,6 +4368,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 query["SceneId"] = request.SceneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4337,6 +4401,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -4352,6 +4420,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 query["SceneId"] = request.SceneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7597,6 +7669,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["FeaturePriority"] = request.FeaturePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreItemId))
+            {
+                body["FeatureStoreItemId"] = request.FeatureStoreItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreModelId))
+            {
+                body["FeatureStoreModelId"] = request.FeatureStoreModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectId))
+            {
+                body["FeatureStoreProjectId"] = request.FeatureStoreProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectName))
+            {
+                body["FeatureStoreProjectName"] = request.FeatureStoreProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreSeqFeatureView))
+            {
+                body["FeatureStoreSeqFeatureView"] = request.FeatureStoreSeqFeatureView;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreUserId))
+            {
+                body["FeatureStoreUserId"] = request.FeatureStoreUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FgJarVersion))
             {
                 body["FgJarVersion"] = request.FgJarVersion;
@@ -7612,6 +7708,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUseFeatureStore))
+            {
+                body["IsUseFeatureStore"] = request.IsUseFeatureStore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdField))
             {
@@ -7721,6 +7821,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["FeaturePriority"] = request.FeaturePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreItemId))
+            {
+                body["FeatureStoreItemId"] = request.FeatureStoreItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreModelId))
+            {
+                body["FeatureStoreModelId"] = request.FeatureStoreModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectId))
+            {
+                body["FeatureStoreProjectId"] = request.FeatureStoreProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreProjectName))
+            {
+                body["FeatureStoreProjectName"] = request.FeatureStoreProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreSeqFeatureView))
+            {
+                body["FeatureStoreSeqFeatureView"] = request.FeatureStoreSeqFeatureView;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureStoreUserId))
+            {
+                body["FeatureStoreUserId"] = request.FeatureStoreUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FgJarVersion))
             {
                 body["FgJarVersion"] = request.FgJarVersion;
@@ -7736,6 +7860,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUseFeatureStore))
+            {
+                body["IsUseFeatureStore"] = request.IsUseFeatureStore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdField))
             {

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
+
+        [NameInMap("SortBy")]
+        [Validation(Required=false)]
+        public string SortBy { get; set; }
 
     }
 

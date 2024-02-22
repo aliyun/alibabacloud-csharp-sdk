@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public bool? CanDelete { get; set; }
 
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        [NameInMap("GmtImportedTime")]
+        [Validation(Required=false)]
+        public string GmtImportedTime { get; set; }
+
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
@@ -62,6 +70,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
+
+        [NameInMap("TableMetaId")]
+        [Validation(Required=false)]
+        public string TableMetaId { get; set; }
 
         [NameInMap("TableName")]
         [Validation(Required=false)]

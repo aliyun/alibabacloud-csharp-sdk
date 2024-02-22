@@ -49,6 +49,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string FeaturePriority { get; set; }
 
+            [NameInMap("FeatureStoreItemId")]
+            [Validation(Required=false)]
+            public string FeatureStoreItemId { get; set; }
+
+            [NameInMap("FeatureStoreModelId")]
+            [Validation(Required=false)]
+            public string FeatureStoreModelId { get; set; }
+
+            [NameInMap("FeatureStoreProjectId")]
+            [Validation(Required=false)]
+            public string FeatureStoreProjectId { get; set; }
+
+            [NameInMap("FeatureStoreProjectName")]
+            [Validation(Required=false)]
+            public string FeatureStoreProjectName { get; set; }
+
+            [NameInMap("FeatureStoreSeqFeatureView")]
+            [Validation(Required=false)]
+            public string FeatureStoreSeqFeatureView { get; set; }
+
+            [NameInMap("FeatureStoreUserId")]
+            [Validation(Required=false)]
+            public string FeatureStoreUserId { get; set; }
+
             [NameInMap("FgJarVersion")]
             [Validation(Required=false)]
             public string FgJarVersion { get; set; }
@@ -132,6 +156,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("UseFeatureStore")]
+            [Validation(Required=false)]
+            public string UseFeatureStore { get; set; }
 
             [NameInMap("UserIdField")]
             [Validation(Required=false)]

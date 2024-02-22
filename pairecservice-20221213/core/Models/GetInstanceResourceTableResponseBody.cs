@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public bool? IsDimensionField { get; set; }
 
+            [NameInMap("IsPartitionField")]
+            [Validation(Required=false)]
+            public bool? IsPartitionField { get; set; }
+
             [NameInMap("Meaning")]
             [Validation(Required=false)]
             public string Meaning { get; set; }

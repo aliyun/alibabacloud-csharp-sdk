@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public bool? CanDelete { get; set; }
 
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }

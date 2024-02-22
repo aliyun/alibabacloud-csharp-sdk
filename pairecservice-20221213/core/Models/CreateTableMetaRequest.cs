@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public List<CreateTableMetaRequestFields> Fields { get; set; }
         public class CreateTableMetaRequestFields : TeaModel {
+            [NameInMap("DataType")]
+            [Validation(Required=false)]
+            public string DataType { get; set; }
+
             [NameInMap("IsDimensionField")]
             [Validation(Required=false)]
             public bool? IsDimensionField { get; set; }
+
+            [NameInMap("IsPartitionField")]
+            [Validation(Required=false)]
+            public string IsPartitionField { get; set; }
 
             [NameInMap("Meaning")]
             [Validation(Required=false)]
