@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public CreateCategoryResponseBodyCategory Category { get; set; }
         public class CreateCategoryResponseBodyCategory : TeaModel {
+            [NameInMap("BizCode")]
+            [Validation(Required=false)]
+            public string BizCode { get; set; }
+
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public long? CategoryId { get; set; }

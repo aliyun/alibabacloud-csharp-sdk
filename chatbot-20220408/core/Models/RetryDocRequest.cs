@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class ListCategoryRequest : TeaModel {
+    public class RetryDocRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        [NameInMap("KnowledgeType")]
+        [NameInMap("KnowledgeId")]
         [Validation(Required=false)]
-        public int? KnowledgeType { get; set; }
-
-        [NameInMap("ParentCategoryId")]
-        [Validation(Required=false)]
-        public long? ParentCategoryId { get; set; }
+        public long? KnowledgeId { get; set; }
 
     }
 

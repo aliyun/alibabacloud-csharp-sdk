@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        [NameInMap("BizCode")]
+        [Validation(Required=false)]
+        public string BizCode { get; set; }
+
+        [NameInMap("KnowledgeType")]
+        [Validation(Required=false)]
+        public int? KnowledgeType { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

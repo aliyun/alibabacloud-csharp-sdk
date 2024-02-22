@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class UpdateCategoryRequest : TeaModel {
+    public class DescribeDocRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        [NameInMap("BizCode")]
+        [NameInMap("KnowledgeId")]
         [Validation(Required=false)]
-        public string BizCode { get; set; }
+        public long? KnowledgeId { get; set; }
 
-        [NameInMap("CategoryId")]
+        [NameInMap("ShowDetail")]
         [Validation(Required=false)]
-        public long? CategoryId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public bool? ShowDetail { get; set; }
 
     }
 
