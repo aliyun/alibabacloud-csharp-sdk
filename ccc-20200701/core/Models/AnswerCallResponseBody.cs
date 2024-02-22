@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public string Destination { get; set; }
 
+                    [NameInMap("Index")]
+                    [Validation(Required=false)]
+                    public long? Index { get; set; }
+
                     [NameInMap("JobId")]
                     [Validation(Required=false)]
                     public string JobId { get; set; }
