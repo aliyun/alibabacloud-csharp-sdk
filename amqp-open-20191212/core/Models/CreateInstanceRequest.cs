@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public int? QueueCapacity { get; set; }
 
+        /// <summary>
+        /// autoRenew和renewStatus都是续费方式，当两个同时填写时，以renewStatus为准
+        /// </summary>
         [NameInMap("RenewStatus")]
         [Validation(Required=false)]
         public string RenewStatus { get; set; }
