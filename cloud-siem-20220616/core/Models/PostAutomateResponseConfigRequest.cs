@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostAutomateResponseConfigRequest : TeaModel {
         /// <summary>
-        /// The configuration of the action that is performed after the rule is hit. The value is in JSON format.
+        /// The action configuration of the automated response rule. The value is in the JSON format.
         /// </summary>
         [NameInMap("ActionConfig")]
         [Validation(Required=false)]
         public string ActionConfig { get; set; }
 
         /// <summary>
-        /// The action that is performed after the rule is hit. Separate multiple values with commas (,). Valid values:
+        /// The type of the handling action. Multiple types are separated by commas (,). Valid values:
         /// 
-        /// *   doPlaybook: Execute a playbook.
-        /// *   changeEventStatus: Change the event status.
-        /// *   changeThreatLevel: Change the threat level of the event.
+        /// *   **doPlaybook**: runs the playbook.
+        /// *   **changeEventStatus**: changes the event status.
+        /// *   **changeThreatLevel**: changes the threat level of the event.
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// The rule type. Valid values:
+        /// The type of the automated response rule. Valid values:
         /// 
-        /// *   event
-        /// *   alert
+        /// *   **event**
+        /// *   **alert**
         /// </summary>
         [NameInMap("AutoResponseType")]
         [Validation(Required=false)]
         public string AutoResponseType { get; set; }
 
         /// <summary>
-        /// The trigger condition of the rule. The value is in JSON format.
+        /// The trigger condition of the automated response rule. The value is in the JSON format.
         /// </summary>
         [NameInMap("ExecutionCondition")]
         [Validation(Required=false)]
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+        /// The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions inside China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// *   **cn-hangzhou**: Your assets reside in regions in China.
+        /// *   **ap-southeast-1**: Your assets reside in regions outside China.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

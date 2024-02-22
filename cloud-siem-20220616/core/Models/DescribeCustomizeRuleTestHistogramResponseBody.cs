@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The return value for the request.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

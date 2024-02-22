@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// The total number of entries.
+                /// The total number of logs.
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// The log.
+            /// The content of the log.
             /// </summary>
             [NameInMap("ResponseData")]
             [Validation(Required=false)]

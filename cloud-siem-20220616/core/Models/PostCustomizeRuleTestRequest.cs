@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The simulation data for the testing. This parameter is available only when TestType is set to simulate.
+        /// The simulation data for the test. This parameter is available only when TestType is set to simulate.
         /// </summary>
         [NameInMap("SimulatedData")]
         [Validation(Required=false)]
         public string SimulatedData { get; set; }
 
         /// <summary>
-        /// The testing type. Valid values:
+        /// The test type. Valid values:
         /// 
         /// *   simulate: simulation data test
         /// *   business: business data test

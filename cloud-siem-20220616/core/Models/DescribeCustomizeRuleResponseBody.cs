@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The return value for the request.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeMds { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account in SIEM.
+            /// The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.
             /// </summary>
             [NameInMap("Aliuid")]
             [Validation(Required=false)]
             public long? Aliuid { get; set; }
 
             /// <summary>
-            /// The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
+            /// The extended information about event generation. If **eventTransferType** is set to **allToSingle**, a value is returned for EventTransferExt. The return value indicates the length and time unit of the alert aggregation window. The HTML escape characters are reversed.
             /// </summary>
             [NameInMap("EventTransferExt")]
             [Validation(Required=false)]
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The event generation method. Valid values:
             /// 
-            /// *   default: The default method is used.
-            /// *   singleToSingle: The system generates an event for each alert.
-            /// *   allToSingle: The system generates an event for alerts within a period of time.
+            /// *   **default**: The default method is used.
+            /// *   **singleToSingle**: The system generates an event for each alert.
+            /// *   **allToSingle**: The system generates an event for alerts within a period of time.
             /// </summary>
             [NameInMap("EventTransferType")]
             [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleThreshold { get; set; }
 
             /// <summary>
-            /// The type of the rule. Valid values:
+            /// The rule type. Valid values:
             /// 
             /// *   predefine
             /// *   customize
@@ -176,22 +176,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The rule status. Valid values:
             /// 
-            /// *   0: The rule is in the initial state.
-            /// *   10: The simulation data is tested.
-            /// *   15: The business data is being tested.
-            /// *   20: The business data test ends.
-            /// *   100: The rule takes effect.
+            /// *   **0**: the initial status.
+            /// *   **10**: The simulation data is tested.
+            /// *   **15**: The business data is being tested.
+            /// *   **20**: The business data test ends.
+            /// *   **100**: The rule takes effect.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The risk level. Valid values:
+            /// The threat level. Valid values:
             /// 
-            /// *   serious: high
-            /// *   suspicious: medium
-            /// *   remind: low
+            /// *   **serious**: high risk
+            /// *   **suspicious**: medium risk
+            /// *   **remind**: low risk
             /// </summary>
             [NameInMap("ThreatLevel")]
             [Validation(Required=false)]
@@ -216,8 +216,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

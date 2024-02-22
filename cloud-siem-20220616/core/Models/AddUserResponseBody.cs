@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the Alibaba Cloud account is added to the threat analysis feature.
+        /// Indicates whether the cloud account is added to the threat analysis feature.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

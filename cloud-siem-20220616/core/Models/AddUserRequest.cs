@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// The ID of the cloud account.
         /// </summary>
         [NameInMap("AddedUserId")]
         [Validation(Required=false)]

@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The search statement or the analytic statement. For more information, see [Log search overview](https://help.aliyun.com/zh/sls/user-guide/log-analysis-overview?spm=a2c4g.11186623.0.i1#t13103.html) and [Log analysis overview](https://help.aliyun.com/zh/sls/user-guide/search-syntax?spm=a2c4g.11186623.0.i0#concept-tnd-1jq-zdb).
+        /// The search statement or the analytic statement. For more information, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+        /// The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
-        /// *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
+        /// *   cn-hangzhou: Your assets reside in regions in China.
+        /// *   ap-southeast-1: Your assets reside in regions outside China.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
