@@ -9,26 +9,59 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateCertificateRequestRequest : TeaModel {
+        /// <summary>
+        /// The domain name that you want to bind to the certificate. You can specify only one domain name.
+        /// 
+        /// > The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// The email address of the applicant.
+        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
+        /// <summary>
+        /// The phone number of the applicant.
+        /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
 
+        /// <summary>
+        /// The specifications of the certificate. Valid values:
+        /// 
+        /// *   **digicert-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial. This is the default value.
+        /// *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.
+        /// *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
+        /// *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
+        /// *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.
+        /// *   **globalsign-dv-1-personal**: GlobalSign single-domain DV certificate.
+        /// *   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// The name of the applicant.
+        /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        /// <summary>
+        /// The verification method of the domain name ownership. Valid values:
+        /// 
+        /// *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.
+        /// *   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.
+        /// 
+        /// For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).
+        /// </summary>
         [NameInMap("ValidateType")]
         [Validation(Required=false)]
         public string ValidateType { get; set; }

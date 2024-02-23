@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CreateWHCertificateWithExtensionResponse : TeaModel {
+    public class GetCertWarehouseQuotaResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public CreateWHCertificateWithExtensionResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public GetCertWarehouseQuotaResponseBody Body { get; set; }
 
     }
 

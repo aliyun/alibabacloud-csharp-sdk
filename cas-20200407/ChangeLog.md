@@ -1,3 +1,6 @@
+2024-02-23 Version: 1.0.9
+- Generated csharp 2020-04-07 for cas.
+
 2022-11-03 Version: 1.0.8
 - Support encrypt and decrypt.
 

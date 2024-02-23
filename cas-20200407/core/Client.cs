@@ -23,7 +23,6 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 {"cn-hangzhou", "cas.aliyuncs.com"},
                 {"ap-northeast-2-pop", "cas.aliyuncs.com"},
-                {"ap-southeast-1", "cas.aliyuncs.com"},
                 {"ap-southeast-3", "cas.aliyuncs.com"},
                 {"ap-southeast-5", "cas.aliyuncs.com"},
                 {"cn-beijing", "cas.aliyuncs.com"},
@@ -45,6 +44,7 @@ namespace AlibabaCloud.SDK.Cas20200407
                 {"cn-hongkong", "cas.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "cas.aliyuncs.com"},
                 {"cn-huhehaote", "cas.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "cas.aliyuncs.com"},
                 {"cn-north-2-gov-1", "cas.aliyuncs.com"},
                 {"cn-qingdao", "cas.aliyuncs.com"},
                 {"cn-qingdao-nebula", "cas.aliyuncs.com"},
@@ -60,7 +60,9 @@ namespace AlibabaCloud.SDK.Cas20200407
                 {"cn-shenzhen-st4-d01", "cas.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "cas.aliyuncs.com"},
                 {"cn-wuhan", "cas.aliyuncs.com"},
+                {"cn-wulanchabu", "cas.aliyuncs.com"},
                 {"cn-yushanfang", "cas.aliyuncs.com"},
+                {"cn-zhangbei", "cas.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "cas.aliyuncs.com"},
                 {"cn-zhangjiakou", "cas.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "cas.aliyuncs.com"},
@@ -89,6 +91,13 @@ namespace AlibabaCloud.SDK.Cas20200407
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * Revokes an issued certificate and cancels the application order of the certificate.
+          *
+          * @param request CancelCertificateForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelCertificateForPackageRequestResponse
+         */
         public CancelCertificateForPackageRequestResponse CancelCertificateForPackageRequestWithOptions(CancelCertificateForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -116,6 +125,13 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CancelCertificateForPackageRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Revokes an issued certificate and cancels the application order of the certificate.
+          *
+          * @param request CancelCertificateForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelCertificateForPackageRequestResponse
+         */
         public async Task<CancelCertificateForPackageRequestResponse> CancelCertificateForPackageRequestWithOptionsAsync(CancelCertificateForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -143,18 +159,40 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CancelCertificateForPackageRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Revokes an issued certificate and cancels the application order of the certificate.
+          *
+          * @param request CancelCertificateForPackageRequestRequest
+          * @return CancelCertificateForPackageRequestResponse
+         */
         public CancelCertificateForPackageRequestResponse CancelCertificateForPackageRequest(CancelCertificateForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelCertificateForPackageRequestWithOptions(request, runtime);
         }
 
+        /**
+          * Revokes an issued certificate and cancels the application order of the certificate.
+          *
+          * @param request CancelCertificateForPackageRequestRequest
+          * @return CancelCertificateForPackageRequestResponse
+         */
         public async Task<CancelCertificateForPackageRequestResponse> CancelCertificateForPackageRequestAsync(CancelCertificateForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCertificateForPackageRequestWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+          * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+          * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+          * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+          *
+          * @param request CancelOrderRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelOrderRequestResponse
+         */
         public CancelOrderRequestResponse CancelOrderRequestWithOptions(CancelOrderRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -182,6 +220,16 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CancelOrderRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+          * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+          * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+          * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+          *
+          * @param request CancelOrderRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelOrderRequestResponse
+         */
         public async Task<CancelOrderRequestResponse> CancelOrderRequestWithOptionsAsync(CancelOrderRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -209,18 +257,45 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CancelOrderRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+          * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+          * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+          * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+          *
+          * @param request CancelOrderRequestRequest
+          * @return CancelOrderRequestResponse
+         */
         public CancelOrderRequestResponse CancelOrderRequest(CancelOrderRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelOrderRequestWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+          * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+          * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+          * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+          *
+          * @param request CancelOrderRequestRequest
+          * @return CancelOrderRequestResponse
+         */
         public async Task<CancelOrderRequestResponse> CancelOrderRequestAsync(CancelOrderRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelOrderRequestWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+          * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+          *
+          * @param request CreateCertificateForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateForPackageRequestResponse
+         */
         public CreateCertificateForPackageRequestResponse CreateCertificateForPackageRequestWithOptions(CreateCertificateForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -276,6 +351,15 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateForPackageRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+          * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+          *
+          * @param request CreateCertificateForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateForPackageRequestResponse
+         */
         public async Task<CreateCertificateForPackageRequestResponse> CreateCertificateForPackageRequestWithOptionsAsync(CreateCertificateForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -331,18 +415,44 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateForPackageRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+          * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+          *
+          * @param request CreateCertificateForPackageRequestRequest
+          * @return CreateCertificateForPackageRequestResponse
+         */
         public CreateCertificateForPackageRequestResponse CreateCertificateForPackageRequest(CreateCertificateForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCertificateForPackageRequestWithOptions(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+          * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+          * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+          *
+          * @param request CreateCertificateForPackageRequestRequest
+          * @return CreateCertificateForPackageRequestResponse
+         */
         public async Task<CreateCertificateForPackageRequestResponse> CreateCertificateForPackageRequestAsync(CreateCertificateForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCertificateForPackageRequestWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+          *
+          * @param request CreateCertificateRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateRequestResponse
+         */
         public CreateCertificateRequestResponse CreateCertificateRequestWithOptions(CreateCertificateRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -390,6 +500,16 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+          *
+          * @param request CreateCertificateRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateRequestResponse
+         */
         public async Task<CreateCertificateRequestResponse> CreateCertificateRequestWithOptionsAsync(CreateCertificateRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -437,18 +557,46 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+          *
+          * @param request CreateCertificateRequestRequest
+          * @return CreateCertificateRequestResponse
+         */
         public CreateCertificateRequestResponse CreateCertificateRequest(CreateCertificateRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCertificateRequestWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+          *
+          * @param request CreateCertificateRequestRequest
+          * @return CreateCertificateRequestResponse
+         */
         public async Task<CreateCertificateRequestResponse> CreateCertificateRequestAsync(CreateCertificateRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCertificateRequestWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+          *
+          * @param request CreateCertificateWithCsrRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateWithCsrRequestResponse
+         */
         public CreateCertificateWithCsrRequestResponse CreateCertificateWithCsrRequestWithOptions(CreateCertificateWithCsrRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -496,6 +644,16 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateWithCsrRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+          *
+          * @param request CreateCertificateWithCsrRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCertificateWithCsrRequestResponse
+         */
         public async Task<CreateCertificateWithCsrRequestResponse> CreateCertificateWithCsrRequestWithOptionsAsync(CreateCertificateWithCsrRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -543,202 +701,34 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<CreateCertificateWithCsrRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+          *
+          * @param request CreateCertificateWithCsrRequestRequest
+          * @return CreateCertificateWithCsrRequestResponse
+         */
         public CreateCertificateWithCsrRequestResponse CreateCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCertificateWithCsrRequestWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+          * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+          * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+          * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+          *
+          * @param request CreateCertificateWithCsrRequestRequest
+          * @return CreateCertificateWithCsrRequestResponse
+         */
         public async Task<CreateCertificateWithCsrRequestResponse> CreateCertificateWithCsrRequestAsync(CreateCertificateWithCsrRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCertificateWithCsrRequestWithOptionsAsync(request, runtime);
-        }
-
-        public CreateWHCertificateWithExtensionResponse CreateWHCertificateWithExtensionWithOptions(CreateWHCertificateWithExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AfterTime))
-            {
-                query["AfterTime"] = request.AfterTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlgorithmKeySize))
-            {
-                query["AlgorithmKeySize"] = request.AlgorithmKeySize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendCrl))
-            {
-                query["AppendCrl"] = request.AppendCrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicConstraintsCritical))
-            {
-                query["BasicConstraintsCritical"] = request.BasicConstraintsCritical;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
-            {
-                query["BeforeTime"] = request.BeforeTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
-            {
-                query["CertType"] = request.CertType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
-            {
-                query["CommonName"] = request.CommonName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
-            {
-                query["CountryCode"] = request.CountryCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsrPemString))
-            {
-                query["CsrPemString"] = request.CsrPemString;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
-            {
-                query["Locality"] = request.Locality;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
-            {
-                query["Organization"] = request.Organization;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
-            {
-                query["OrganizationUnit"] = request.OrganizationUnit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
-            {
-                query["ParentIdentifier"] = request.ParentIdentifier;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sans))
-            {
-                query["Sans"] = request.Sans;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
-            {
-                query["State"] = request.State;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateWHCertificateWithExtension",
-                Version = "2020-04-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateWHCertificateWithExtensionResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateWHCertificateWithExtensionResponse> CreateWHCertificateWithExtensionWithOptionsAsync(CreateWHCertificateWithExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AfterTime))
-            {
-                query["AfterTime"] = request.AfterTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlgorithmKeySize))
-            {
-                query["AlgorithmKeySize"] = request.AlgorithmKeySize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
-            {
-                query["AliasName"] = request.AliasName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendCrl))
-            {
-                query["AppendCrl"] = request.AppendCrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicConstraintsCritical))
-            {
-                query["BasicConstraintsCritical"] = request.BasicConstraintsCritical;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
-            {
-                query["BeforeTime"] = request.BeforeTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
-            {
-                query["CertType"] = request.CertType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
-            {
-                query["CommonName"] = request.CommonName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
-            {
-                query["CountryCode"] = request.CountryCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsrPemString))
-            {
-                query["CsrPemString"] = request.CsrPemString;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
-            {
-                query["Locality"] = request.Locality;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
-            {
-                query["Organization"] = request.Organization;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
-            {
-                query["OrganizationUnit"] = request.OrganizationUnit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
-            {
-                query["ParentIdentifier"] = request.ParentIdentifier;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sans))
-            {
-                query["Sans"] = request.Sans;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
-            {
-                query["State"] = request.State;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateWHCertificateWithExtension",
-                Version = "2020-04-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateWHCertificateWithExtensionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateWHCertificateWithExtensionResponse CreateWHCertificateWithExtension(CreateWHCertificateWithExtensionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateWHCertificateWithExtensionWithOptions(request, runtime);
-        }
-
-        public async Task<CreateWHCertificateWithExtensionResponse> CreateWHCertificateWithExtensionAsync(CreateWHCertificateWithExtensionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateWHCertificateWithExtensionWithOptionsAsync(request, runtime);
         }
 
         public CreateWHClientCertificateResponse CreateWHClientCertificateWithOptions(CreateWHClientCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -761,6 +751,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["CommonName"] = request.CommonName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
+            {
+                query["Country"] = request.Country;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
                 query["Csr"] = request.Csr;
@@ -768,6 +762,26 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Immediately))
+            {
+                query["Immediately"] = request.Immediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
+            {
+                query["Locality"] = request.Locality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                query["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
+            {
+                query["Organization"] = request.Organization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
+            {
+                query["OrganizationUnit"] = request.OrganizationUnit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
             {
@@ -780,6 +794,14 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanValue))
             {
                 query["SanValue"] = request.SanValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Years))
+            {
+                query["Years"] = request.Years;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -820,6 +842,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["CommonName"] = request.CommonName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
+            {
+                query["Country"] = request.Country;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
                 query["Csr"] = request.Csr;
@@ -827,6 +853,26 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Immediately))
+            {
+                query["Immediately"] = request.Immediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
+            {
+                query["Locality"] = request.Locality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                query["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
+            {
+                query["Organization"] = request.Organization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
+            {
+                query["OrganizationUnit"] = request.OrganizationUnit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
             {
@@ -839,6 +885,14 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SanValue))
             {
                 query["SanValue"] = request.SanValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Years))
+            {
+                query["Years"] = request.Years;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -961,6 +1015,15 @@ namespace AlibabaCloud.SDK.Cas20200407
             return await DecryptWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete a certificate application order only in the following scenarios:
+          * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+          *
+          * @param request DeleteCertificateRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCertificateRequestResponse
+         */
         public DeleteCertificateRequestResponse DeleteCertificateRequestWithOptions(DeleteCertificateRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -988,6 +1051,15 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<DeleteCertificateRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete a certificate application order only in the following scenarios:
+          * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+          *
+          * @param request DeleteCertificateRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCertificateRequestResponse
+         */
         public async Task<DeleteCertificateRequestResponse> DeleteCertificateRequestWithOptionsAsync(DeleteCertificateRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1015,12 +1087,28 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<DeleteCertificateRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete a certificate application order only in the following scenarios:
+          * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+          *
+          * @param request DeleteCertificateRequestRequest
+          * @return DeleteCertificateRequestResponse
+         */
         public DeleteCertificateRequestResponse DeleteCertificateRequest(DeleteCertificateRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCertificateRequestWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete a certificate application order only in the following scenarios:
+          * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+          * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+          *
+          * @param request DeleteCertificateRequestRequest
+          * @return DeleteCertificateRequestResponse
+         */
         public async Task<DeleteCertificateRequestResponse> DeleteCertificateRequestAsync(DeleteCertificateRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1093,6 +1181,106 @@ namespace AlibabaCloud.SDK.Cas20200407
             return await DeletePCACertWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteUserCertificateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserCertificateResponse
+         */
+        public DeleteUserCertificateResponse DeleteUserCertificateWithOptions(DeleteUserCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserCertificate",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteUserCertificateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserCertificateResponse
+         */
+        public async Task<DeleteUserCertificateResponse> DeleteUserCertificateWithOptionsAsync(DeleteUserCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserCertificate",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteUserCertificateRequest
+          * @return DeleteUserCertificateResponse
+         */
+        public DeleteUserCertificateResponse DeleteUserCertificate(DeleteUserCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteUserCertificateWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteUserCertificateRequest
+          * @return DeleteUserCertificateResponse
+         */
+        public async Task<DeleteUserCertificateResponse> DeleteUserCertificateAsync(DeleteUserCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteUserCertificateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+          * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+          *
+          * @param request DescribeCertificateStateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCertificateStateResponse
+         */
         public DescribeCertificateStateResponse DescribeCertificateStateWithOptions(DescribeCertificateStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1120,6 +1308,14 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<DescribeCertificateStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+          * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+          *
+          * @param request DescribeCertificateStateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCertificateStateResponse
+         */
         public async Task<DescribeCertificateStateResponse> DescribeCertificateStateWithOptionsAsync(DescribeCertificateStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1147,12 +1343,26 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<DescribeCertificateStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+          * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+          *
+          * @param request DescribeCertificateStateRequest
+          * @return DescribeCertificateStateResponse
+         */
         public DescribeCertificateStateResponse DescribeCertificateState(DescribeCertificateStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCertificateStateWithOptions(request, runtime);
         }
 
+        /**
+          * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+          * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+          *
+          * @param request DescribeCertificateStateRequest
+          * @return DescribeCertificateStateResponse
+         */
         public async Task<DescribeCertificateStateResponse> DescribeCertificateStateAsync(DescribeCertificateStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1315,10 +1525,169 @@ namespace AlibabaCloud.SDK.Cas20200407
             return await EncryptWithOptionsAsync(request, runtime);
         }
 
+        public GetCertWarehouseQuotaResponse GetCertWarehouseQuotaWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCertWarehouseQuota",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCertWarehouseQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCertWarehouseQuotaResponse> GetCertWarehouseQuotaWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCertWarehouseQuota",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCertWarehouseQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCertWarehouseQuotaResponse GetCertWarehouseQuota()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCertWarehouseQuotaWithOptions(runtime);
+        }
+
+        public async Task<GetCertWarehouseQuotaResponse> GetCertWarehouseQuotaAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCertWarehouseQuotaWithOptionsAsync(runtime);
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetUserCertificateDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetUserCertificateDetailResponse
+         */
+        public GetUserCertificateDetailResponse GetUserCertificateDetailWithOptions(GetUserCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertFilter))
+            {
+                query["CertFilter"] = request.CertFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserCertificateDetail",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserCertificateDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetUserCertificateDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetUserCertificateDetailResponse
+         */
+        public async Task<GetUserCertificateDetailResponse> GetUserCertificateDetailWithOptionsAsync(GetUserCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertFilter))
+            {
+                query["CertFilter"] = request.CertFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserCertificateDetail",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserCertificateDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetUserCertificateDetailRequest
+          * @return GetUserCertificateDetailResponse
+         */
+        public GetUserCertificateDetailResponse GetUserCertificateDetail(GetUserCertificateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserCertificateDetailWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetUserCertificateDetailRequest
+          * @return GetUserCertificateDetailResponse
+         */
+        public async Task<GetUserCertificateDetailResponse> GetUserCertificateDetailAsync(GetUserCertificateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserCertificateDetailWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListCertRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCertResponse
+         */
         public ListCertResponse ListCertWithOptions(ListCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -1330,6 +1699,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
                 query["ShowSize"] = request.ShowSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -1358,10 +1731,21 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<ListCertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListCertRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCertResponse
+         */
         public async Task<ListCertResponse> ListCertWithOptionsAsync(ListCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -1373,6 +1757,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
                 query["ShowSize"] = request.ShowSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -1401,12 +1789,24 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<ListCertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListCertRequest
+          * @return ListCertResponse
+         */
         public ListCertResponse ListCert(ListCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCertWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListCertRequest
+          * @return ListCertResponse
+         */
         public async Task<ListCertResponse> ListCertAsync(ListCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1511,6 +1911,15 @@ namespace AlibabaCloud.SDK.Cas20200407
             return await ListCertWarehouseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListUserCertificateOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserCertificateOrderResponse
+         */
         public ListUserCertificateOrderResponse ListUserCertificateOrderWithOptions(ListUserCertificateOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1526,6 +1935,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
                 query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
@@ -1554,6 +1967,15 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<ListUserCertificateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListUserCertificateOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserCertificateOrderResponse
+         */
         public async Task<ListUserCertificateOrderResponse> ListUserCertificateOrderWithOptionsAsync(ListUserCertificateOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1569,6 +1991,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
                 query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
@@ -1597,18 +2023,42 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<ListUserCertificateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListUserCertificateOrderRequest
+          * @return ListUserCertificateOrderResponse
+         */
         public ListUserCertificateOrderResponse ListUserCertificateOrder(ListUserCertificateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserCertificateOrderWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListUserCertificateOrderRequest
+          * @return ListUserCertificateOrderResponse
+         */
         public async Task<ListUserCertificateOrderResponse> ListUserCertificateOrderAsync(ListUserCertificateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserCertificateOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+          * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+          *
+          * @param request RenewCertificateOrderForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewCertificateOrderForPackageRequestResponse
+         */
         public RenewCertificateOrderForPackageRequestResponse RenewCertificateOrderForPackageRequestWithOptions(RenewCertificateOrderForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1640,6 +2090,14 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<RenewCertificateOrderForPackageRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+          * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+          *
+          * @param request RenewCertificateOrderForPackageRequestRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewCertificateOrderForPackageRequestResponse
+         */
         public async Task<RenewCertificateOrderForPackageRequestResponse> RenewCertificateOrderForPackageRequestWithOptionsAsync(RenewCertificateOrderForPackageRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1671,12 +2129,26 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<RenewCertificateOrderForPackageRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+          * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+          *
+          * @param request RenewCertificateOrderForPackageRequestRequest
+          * @return RenewCertificateOrderForPackageRequestResponse
+         */
         public RenewCertificateOrderForPackageRequestResponse RenewCertificateOrderForPackageRequest(RenewCertificateOrderForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewCertificateOrderForPackageRequestWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+          * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+          *
+          * @param request RenewCertificateOrderForPackageRequestRequest
+          * @return RenewCertificateOrderForPackageRequestResponse
+         */
         public async Task<RenewCertificateOrderForPackageRequestResponse> RenewCertificateOrderForPackageRequestAsync(RenewCertificateOrderForPackageRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1839,6 +2311,13 @@ namespace AlibabaCloud.SDK.Cas20200407
             return await SignWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The unique identifier of the certificate.
+          *
+          * @param request UploadPCACertRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadPCACertResponse
+         */
         public UploadPCACertResponse UploadPCACertWithOptions(UploadPCACertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1878,6 +2357,13 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<UploadPCACertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The unique identifier of the certificate.
+          *
+          * @param request UploadPCACertRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadPCACertResponse
+         */
         public async Task<UploadPCACertResponse> UploadPCACertWithOptionsAsync(UploadPCACertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1917,16 +2403,176 @@ namespace AlibabaCloud.SDK.Cas20200407
             return TeaModel.ToObject<UploadPCACertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The unique identifier of the certificate.
+          *
+          * @param request UploadPCACertRequest
+          * @return UploadPCACertResponse
+         */
         public UploadPCACertResponse UploadPCACert(UploadPCACertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UploadPCACertWithOptions(request, runtime);
         }
 
+        /**
+          * The unique identifier of the certificate.
+          *
+          * @param request UploadPCACertRequest
+          * @return UploadPCACertResponse
+         */
         public async Task<UploadPCACertResponse> UploadPCACertAsync(UploadPCACertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UploadPCACertWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UploadUserCertificateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadUserCertificateResponse
+         */
+        public UploadUserCertificateResponse UploadUserCertificateWithOptions(UploadUserCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
+            {
+                query["Cert"] = request.Cert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCert))
+            {
+                query["EncryptCert"] = request.EncryptCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptPrivateKey))
+            {
+                query["EncryptPrivateKey"] = request.EncryptPrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignCert))
+            {
+                query["SignCert"] = request.SignCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignPrivateKey))
+            {
+                query["SignPrivateKey"] = request.SignPrivateKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadUserCertificate",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadUserCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UploadUserCertificateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UploadUserCertificateResponse
+         */
+        public async Task<UploadUserCertificateResponse> UploadUserCertificateWithOptionsAsync(UploadUserCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
+            {
+                query["Cert"] = request.Cert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCert))
+            {
+                query["EncryptCert"] = request.EncryptCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptPrivateKey))
+            {
+                query["EncryptPrivateKey"] = request.EncryptPrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignCert))
+            {
+                query["SignCert"] = request.SignCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignPrivateKey))
+            {
+                query["SignPrivateKey"] = request.SignPrivateKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadUserCertificate",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadUserCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UploadUserCertificateRequest
+          * @return UploadUserCertificateResponse
+         */
+        public UploadUserCertificateResponse UploadUserCertificate(UploadUserCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadUserCertificateWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UploadUserCertificateRequest
+          * @return UploadUserCertificateResponse
+         */
+        public async Task<UploadUserCertificateResponse> UploadUserCertificateAsync(UploadUserCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadUserCertificateWithOptionsAsync(request, runtime);
         }
 
         public VerifyResponse VerifyWithOptions(VerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

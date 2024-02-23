@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CancelOrderRequestResponseBody : TeaModel {
+    public class DeleteUserCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the certificate.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("CertId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? CertId { get; set; }
 
     }
 

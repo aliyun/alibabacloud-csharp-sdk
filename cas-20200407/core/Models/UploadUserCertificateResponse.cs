@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class SignResponse : TeaModel {
+    public class UploadUserCertificateResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SignResponseBody Body { get; set; }
+        public UploadUserCertificateResponseBody Body { get; set; }
 
     }
 

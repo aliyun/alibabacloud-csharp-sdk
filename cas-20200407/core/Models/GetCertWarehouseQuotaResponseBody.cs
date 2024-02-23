@@ -8,13 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CancelOrderRequestResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class GetCertWarehouseQuotaResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalQuota")]
+        [Validation(Required=false)]
+        public long? TotalQuota { get; set; }
+
+        [NameInMap("UseCount")]
+        [Validation(Required=false)]
+        public long? UseCount { get; set; }
 
     }
 

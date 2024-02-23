@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CancelOrderRequestResponseBody : TeaModel {
+    public class DeleteUserCertificateResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>
