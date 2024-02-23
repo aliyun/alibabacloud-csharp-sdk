@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public int? IncreaseNodeCount { get; set; }
 
+        [NameInMap("MinIncreaseNodeCount")]
+        [Validation(Required=false)]
+        public int? MinIncreaseNodeCount { get; set; }
+
         /// <summary>
         /// The ID of the node group. The target node group to which you want to scale out the cluster.
         /// </summary>

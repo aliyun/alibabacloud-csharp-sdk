@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public MetricsTrigger MetricsTrigger { get; set; }
 
+        [NameInMap("MinAdjustmentValue")]
+        [Validation(Required=false)]
+        public int? MinAdjustmentValue { get; set; }
+
         /// <summary>
         /// 规则名称。
         /// </summary>

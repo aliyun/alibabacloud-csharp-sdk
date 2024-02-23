@@ -344,6 +344,114 @@ namespace AlibabaCloud.SDK.Emr20210320
         }
 
         /**
+          * Currently we only support taihao platform
+          *
+          * @param request CreateReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReportResponse
+         */
+        public CreateReportResponse CreateReportWithOptions(CreateReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectTimestamp))
+            {
+                query["SelectTimestamp"] = request.SelectTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReport",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * Currently we only support taihao platform
+          *
+          * @param request CreateReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReportResponse
+         */
+        public async Task<CreateReportResponse> CreateReportWithOptionsAsync(CreateReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectTimestamp))
+            {
+                query["SelectTimestamp"] = request.SelectTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReport",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * Currently we only support taihao platform
+          *
+          * @param request CreateReportRequest
+          * @return CreateReportResponse
+         */
+        public CreateReportResponse CreateReport(CreateReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateReportWithOptions(request, runtime);
+        }
+
+        /**
+          * Currently we only support taihao platform
+          *
+          * @param request CreateReportRequest
+          * @return CreateReportResponse
+         */
+        public async Task<CreateReportResponse> CreateReportAsync(CreateReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateReportWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * 缩容节点。
           *
           * @param request DecreaseNodesRequest
@@ -1043,6 +1151,106 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetClusterWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * 获取集群克隆详情。
+          *
+          * @param request GetClusterCloneMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetClusterCloneMetaResponse
+         */
+        public GetClusterCloneMetaResponse GetClusterCloneMetaWithOptions(GetClusterCloneMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterCloneMeta",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterCloneMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * 获取集群克隆详情。
+          *
+          * @param request GetClusterCloneMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetClusterCloneMetaResponse
+         */
+        public async Task<GetClusterCloneMetaResponse> GetClusterCloneMetaWithOptionsAsync(GetClusterCloneMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterCloneMeta",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterCloneMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * 获取集群克隆详情。
+          *
+          * @param request GetClusterCloneMetaRequest
+          * @return GetClusterCloneMetaResponse
+         */
+        public GetClusterCloneMetaResponse GetClusterCloneMeta(GetClusterCloneMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetClusterCloneMetaWithOptions(request, runtime);
+        }
+
+        /**
+          * 获取集群克隆详情。
+          *
+          * @param request GetClusterCloneMetaRequest
+          * @return GetClusterCloneMetaResponse
+         */
+        public async Task<GetClusterCloneMetaResponse> GetClusterCloneMetaAsync(GetClusterCloneMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetClusterCloneMetaWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -2861,13 +3069,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetOperationWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * 扩容节点。
-          *
-          * @param request IncreaseNodesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return IncreaseNodesResponse
-         */
         public IncreaseNodesResponse IncreaseNodesWithOptions(IncreaseNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2887,6 +3088,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncreaseNodeCount))
             {
                 query["IncreaseNodeCount"] = request.IncreaseNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinIncreaseNodeCount))
+            {
+                query["MinIncreaseNodeCount"] = request.MinIncreaseNodeCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
@@ -2923,13 +3128,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<IncreaseNodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 扩容节点。
-          *
-          * @param request IncreaseNodesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return IncreaseNodesResponse
-         */
         public async Task<IncreaseNodesResponse> IncreaseNodesWithOptionsAsync(IncreaseNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2949,6 +3147,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncreaseNodeCount))
             {
                 query["IncreaseNodeCount"] = request.IncreaseNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinIncreaseNodeCount))
+            {
+                query["MinIncreaseNodeCount"] = request.MinIncreaseNodeCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
@@ -2985,24 +3187,12 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<IncreaseNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 扩容节点。
-          *
-          * @param request IncreaseNodesRequest
-          * @return IncreaseNodesResponse
-         */
         public IncreaseNodesResponse IncreaseNodes(IncreaseNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return IncreaseNodesWithOptions(request, runtime);
         }
 
-        /**
-          * 扩容节点。
-          *
-          * @param request IncreaseNodesRequest
-          * @return IncreaseNodesResponse
-         */
         public async Task<IncreaseNodesResponse> IncreaseNodesAsync(IncreaseNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
