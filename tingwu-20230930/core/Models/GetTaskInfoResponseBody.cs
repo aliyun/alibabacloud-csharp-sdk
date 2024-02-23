@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public GetTaskInfoResponseBodyData Data { get; set; }
         public class GetTaskInfoResponseBodyData : TeaModel {
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public GetTaskInfoResponseBodyDataResult Result { get; set; }
