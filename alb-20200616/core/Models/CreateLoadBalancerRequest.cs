@@ -152,14 +152,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestTag> Tag { get; set; }
         public class CreateLoadBalancerRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -174,31 +183,37 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zones and the vSwitches. You must specify at least two zones.
+        /// The zones and the vSwitches in the zones. You must specify at least two zones.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
+            /// <summary>
+            /// 公网实例绑定的EIP实例ID。至少需要添加2个可用区，最多支持添加10个可用区。
+            /// </summary>
             [NameInMap("AllocationId")]
             [Validation(Required=false)]
             public string AllocationId { get; set; }
 
+            /// <summary>
+            /// The private IPv4 address. You must add at least two zones. You can add a maximum of 10 zones.
+            /// </summary>
             [NameInMap("IntranetAddress")]
             [Validation(Required=false)]
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.
+            /// The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.
+            /// The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.
             /// 
-            /// You can call the [DescribeZones](~~36064~~) operation to query the zones of the ALB instance.
+            /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

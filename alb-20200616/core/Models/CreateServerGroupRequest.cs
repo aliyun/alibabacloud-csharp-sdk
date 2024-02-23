@@ -20,6 +20,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConnectionDrainConfig")]
+        [Validation(Required=false)]
+        public CreateServerGroupRequestConnectionDrainConfig ConnectionDrainConfig { get; set; }
+        public class CreateServerGroupRequestConnectionDrainConfig : TeaModel {
+            [NameInMap("ConnectionDrainEnabled")]
+            [Validation(Required=false)]
+            public bool? ConnectionDrainEnabled { get; set; }
+
+            [NameInMap("ConnectionDrainTimeout")]
+            [Validation(Required=false)]
+            public int? ConnectionDrainTimeout { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
@@ -38,14 +52,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// The HTTP status codes that are used to determine whether the backend server passes the health check.
+            /// The HTTP status codes that are used to indicate whether the backend server passes the health check.
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
             public List<string> HealthCheckCodes { get; set; }
 
             /// <summary>
-            /// The port that you want to use for health checks on backend servers.
+            /// The backend port that is used for health checks.
             /// 
             /// Valid values: **0** to **65535**.
             /// 
@@ -56,36 +70,36 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// Indicates whether the health check feature is enabled. Valid values:
+            /// Specifies whether to enable the health check feature. Valid values:
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// *   **true**: enables the health check feature.
+            /// *   **false**: disables the health check feature.
             /// 
-            /// > If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.
+            /// >  If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// The domain name that is used for health checks. The domain name must meet the following requirements:
+            /// The domain name that is used for health checks. The domain name meets the following requirements:
             /// 
-            /// *   The domain name must be 1 to 80 characters in length.
-            /// *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-            /// *   It must contain at least one period (.) but cannot start or end with a period (.).
-            /// *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
-            /// *   The domain name cannot start or end with a hyphen (-).
+            /// *   The domain name is 1 to 80 characters in length.
+            /// *   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).
+            /// *   The domain name contains at least one period (.) but does not start or end with a period (.).
+            /// *   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).
+            /// *   The domain name does not start or end with a hyphen (-).
             /// 
-            /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
             /// </summary>
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
 
             /// <summary>
-            /// The HTTP version. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.
+            /// The version of the HTTP protocol. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.
             /// 
-            /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
             /// </summary>
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
@@ -106,10 +120,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The HTTP method that is used for health checks. Valid values:
             /// 
             /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-            /// *   **POST**: gRPC health checks automatically use the POST method.
-            /// *   **HEAD**: By default, HTTP health checks use the HEAD method.
+            /// *   **POST**: By default, gRPC health checks use the POST method.
+            /// *   **HEAD**: HTTP and HTTPS health checks in listeners use the HEAD method by default.
             /// 
-            /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
             /// </summary>
             [NameInMap("HealthCheckMethod")]
             [Validation(Required=false)]
@@ -120,7 +134,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
             /// 
-            /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+            /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
@@ -129,29 +143,32 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The protocol that is used for health checks. Valid values:
             /// 
-            /// *   **HTTP**: To perform HTTP health checks, Application Load Balancer (ALB) sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-            /// *   **HTTPS**: To perform HTTPS health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-            /// *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+            /// *   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.
+            /// *   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.
+            /// *   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
+            /// *   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+            /// 
+            /// >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// Specify the timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.
+            /// The timeout period for a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.
             /// 
             /// Valid values: **1** to **300**.
             /// 
             /// Default value: **5**.
             /// 
-            /// > If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.
+            /// >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.
             /// </summary>
             [NameInMap("HealthCheckTimeout")]
             [Validation(Required=false)]
             public int? HealthCheckTimeout { get; set; }
 
             /// <summary>
-            /// The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+            /// The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.
             /// 
             /// Valid values: **2** to **10**.
             /// 
@@ -162,7 +179,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+            /// The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.
             /// 
             /// Valid values: **2** to **10**.
             /// 
@@ -217,7 +234,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The type of server group. Valid values:
         /// 
-        /// *   **Instance** (default): allows you to add servers by specifying **Ecs**, **Ens**, or **Eci**.
+        /// *   **Instance** (default): allows you to add servers by specifying **Ecs**, **Eni**, or **Eci**.
         /// *   **Ip**: allows you to add servers by specifying IP addresses.
         /// *   **Fc**: allows you to add servers by specifying functions of Function Compute.
         /// </summary>
@@ -231,6 +248,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("SlowStartConfig")]
+        [Validation(Required=false)]
+        public CreateServerGroupRequestSlowStartConfig SlowStartConfig { get; set; }
+        public class CreateServerGroupRequestSlowStartConfig : TeaModel {
+            [NameInMap("SlowStartDuration")]
+            [Validation(Required=false)]
+            public int? SlowStartDuration { get; set; }
+
+            [NameInMap("SlowStartEnabled")]
+            [Validation(Required=false)]
+            public bool? SlowStartEnabled { get; set; }
+
+        }
 
         /// <summary>
         /// The configuration of session persistence.
@@ -296,14 +327,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        /// <summary>
+        /// The tag.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateServerGroupRequestTag> Tag { get; set; }
         public class CreateServerGroupRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. The tag key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. The tag value can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -311,21 +351,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The setting of consistent hashing based on URLs.
+        /// The configuration of consistent hashing based on URLs.
         /// </summary>
         [NameInMap("UchConfig")]
         [Validation(Required=false)]
         public CreateServerGroupRequestUchConfig UchConfig { get; set; }
         public class CreateServerGroupRequestUchConfig : TeaModel {
             /// <summary>
-            /// Type
+            /// The type of the parameter.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The setting of consistent hashing.
+            /// The parameter value for consistent hashing.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -333,6 +373,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        /// <summary>
+        /// Specifies whether to enable persistent TCP connections.
+        /// </summary>
         [NameInMap("UpstreamKeepaliveEnabled")]
         [Validation(Required=false)]
         public bool? UpstreamKeepaliveEnabled { get; set; }

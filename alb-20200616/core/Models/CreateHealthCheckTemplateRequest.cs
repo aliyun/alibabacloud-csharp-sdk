@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -31,11 +31,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The interval at which health checks are performed.
-        /// 
-        /// Valid values: **1 to 50**.
-        /// 
-        /// Default value: **2**.
+        /// The HTTP status codes that are used to indicate whether the backend server passes the health check.
         /// </summary>
         [NameInMap("HealthCheckCodes")]
         [Validation(Required=false)]
@@ -160,14 +156,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public int? HealthyThreshold { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateHealthCheckTemplateRequestTag> Tag { get; set; }
         public class CreateHealthCheckTemplateRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

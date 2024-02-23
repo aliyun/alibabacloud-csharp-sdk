@@ -32,10 +32,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<CreateRulesResponseBodyRuleIds> RuleIds { get; set; }
         public class CreateRulesResponseBodyRuleIds : TeaModel {
+            /// <summary>
+            /// The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.
+            /// 
+            /// > The priorities of the forwarding rules created for the same listener must be unique.
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// The forwarding rule ID.
+            /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public string RuleId { get; set; }

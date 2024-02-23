@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclsRequest : TeaModel {
         /// <summary>
-        /// The ACL IDs.
+        /// The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public List<string> AclIds { get; set; }
 
         /// <summary>
-        /// The ACL names. You can specify up to 10 ACL names in each request.
+        /// The names of the network ACLs. You can specify at most 10 network ACL names in each request.
         /// </summary>
         [NameInMap("AclNames")]
         [Validation(Required=false)]
@@ -31,30 +31,39 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// The token that is used for the next query. Valid values:
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The resource group ID. You can filter the results based on the specified ID.
+        /// The ID of the resource group. You can filter the query results based on the specified ID.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAclsRequestTag> Tag { get; set; }
         public class ListAclsRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

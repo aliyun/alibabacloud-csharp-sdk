@@ -494,28 +494,28 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The match conditions of the forwarding rule.
+        /// The match condition of the forwarding rule.
         /// </summary>
         [NameInMap("RuleConditions")]
         [Validation(Required=false)]
         public List<UpdateRuleAttributeRequestRuleConditions> RuleConditions { get; set; }
         public class UpdateRuleAttributeRequestRuleConditions : TeaModel {
             /// <summary>
-            /// The configurations of the cookies.
+            /// The configuration of the cookie.
             /// </summary>
             [NameInMap("CookieConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsCookieConfig CookieConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsCookieConfig : TeaModel {
                 /// <summary>
-                /// The configurations of the cookies.
+                /// The configuration of the cookie.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues : TeaModel {
                     /// <summary>
-                    /// The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+                    /// The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -556,14 +556,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The configurations of the host.
+            /// The configurations of the hosts.
             /// </summary>
             [NameInMap("HostConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsHostConfig HostConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsHostConfig : TeaModel {
                 /// <summary>
-                /// The hostname.
+                /// The hostnames.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -588,14 +588,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The configurations of the URLs.
+            /// The configurations of the paths.
             /// </summary>
             [NameInMap("PathConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsPathConfig PathConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsPathConfig : TeaModel {
                 /// <summary>
-                /// The path.
+                /// The paths.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -611,14 +611,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfig : TeaModel {
                 /// <summary>
-                /// The query strings.
+                /// The query string.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues : TeaModel {
                     /// <summary>
-                    /// They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+                    /// They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -635,39 +635,26 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             }
 
+            /// <summary>
+            /// The configuration of the header.
+            /// </summary>
             [NameInMap("ResponseHeaderConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig ResponseHeaderConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig : TeaModel {
+                /// <summary>
+                /// The key of the header.
+                /// 
+                /// *   The key must be 1 to 40 characters in length.
+                /// *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+                /// *   Cookie and Host are not supported.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-            [NameInMap("ResponseStatusCodeConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig ResponseStatusCodeConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-            /// <summary>
-            /// The configuration of the source IP-based forwarding rule. You can add at most five source IP-based forwarding rules.
-            /// </summary>
-            [NameInMap("SourceIpConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsSourceIpConfig : TeaModel {
                 /// <summary>
-                /// The IP addresses or CIDR blocks.
+                /// The values of the header.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -676,15 +663,49 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The type of the forwarding rule. You can specify at most seven types. Valid values:
+            /// The configurations of the response status codes.
+            /// </summary>
+            [NameInMap("ResponseStatusCodeConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig ResponseStatusCodeConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig : TeaModel {
+                /// <summary>
+                /// The response status codes.
+                /// </summary>
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+
+            }
+
+            /// <summary>
+            /// The configuration of the source IP addresses based on which user traffic is matched. You can add at most five source IP-based forwarding rules.
+            /// </summary>
+            [NameInMap("SourceIpConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsSourceIpConfig : TeaModel {
+                /// <summary>
+                /// The IP address or CIDR block based on which user traffic is matched. You can specify multiple IP addresses or CIDR blocks.
+                /// </summary>
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+
+            }
+
+            /// <summary>
+            /// The type of the forwarding rule. You can specify up to seven types. Valid values:
             /// 
-            /// *   **Host**: Requests are distributed based on hosts.
-            /// *   **Path**: Requests are distributed based on paths.
-            /// *   **Header**: Requests are distributed based on HTTP headers.
-            /// *   **QueryString**: Requests are distributed based on query strings.
-            /// *   **Method**: Requests are distributed based on request methods.
-            /// *   **Cookie**: Requests are distributed based on cookies.
+            /// *   **Host**: Requests are forwarded based on hosts.
+            /// *   **Path**: Requests are forwarded based on paths.
+            /// *   **Header**: Requests are forwarded based on HTTP headers.
+            /// *   **QueryString**: Requests are forwarded based on query strings.
+            /// *   **Method**: Requests are forwarded based on request methods.
+            /// *   **Cookie**: Requests are forwarded based on cookies.
             /// *   **SourceIp**: Requests are distributed based on source IP addresses.
+            /// *   **ResponseHeader**: Requests are forwarded based on HTTP response headers.
+            /// *   **ResponseStatusCode**: Requests are forwarded based on response status codes.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

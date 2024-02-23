@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The endpoint of the region.
+            /// The endpoint of region service.
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

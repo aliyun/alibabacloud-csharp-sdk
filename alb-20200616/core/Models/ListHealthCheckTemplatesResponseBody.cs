@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplates> HealthCheckTemplates { get; set; }
         public class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates : TeaModel {
             /// <summary>
-            /// The status code.
+            /// The HTTP status codes.
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// Valid values: \*\* 0 to 65535\*\*.
             /// 
-            /// Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.
+            /// Default value: **0**. This value indicates that the port on a backend server is used for health checks.
             /// </summary>
             [NameInMap("HealthCheckConnectPort")]
             [Validation(Required=false)]
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The domain name that is used for health checks. Valid values:
             /// 
-            /// **$SERVER_IP** (default): the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) uses the private IP addresses of backend servers for health checks.
+            /// **$SERVER_IP** (default): the private IP addresses of backend servers. If HealthCheckHost is not specified or set to $SERVER_IP, SLB uses the private IP addresses of backend servers for health checks.
             /// 
             /// **domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).
             /// 
-            /// > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+            /// >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.
             /// </summary>
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// 
             /// Default value: **HTTP 1.1**.
             /// 
-            /// > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+            /// >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.
             /// </summary>
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
@@ -68,13 +68,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// The method that you want to use for the health check. Valid values:
+            /// The HTTP method that is used for health checks. Valid values:
             /// 
-            /// *   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.
+            /// *   **HEAD** (default): By default, HTTP health checks use the HEAD method.
             /// *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-            /// *   **POST**: gRPC health checks automatically use the POST method.
+            /// *   **POST**: By default, gRPC health checks use the POST method.
             /// 
-            /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+            /// >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **gRPC**.
             /// </summary>
             [NameInMap("HealthCheckMethod")]
             [Validation(Required=false)]
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// The protocol that you want to use for health checks. Valid values:
+            /// The protocol that is used for health checks. Valid values:
             /// 
-            /// *   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-            /// *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-            /// *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+            /// *   **HTTP** (default): The SLB instance sends HEAD or GET requests to a backend server to simulate access from a browser and check whether the backend server is healthy.
+            /// *   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
+            /// *   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
@@ -117,20 +117,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckTemplateName { get; set; }
 
             /// <summary>
-            /// The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check.
+            /// The timeout period for a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the backend server fails the health check.
             /// 
             /// Valid values: **1 to 300**. Unit: seconds.
             /// 
             /// Default value: **5**.
             /// 
-            /// > If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.
+            /// >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.
             /// </summary>
             [NameInMap("HealthCheckTimeout")]
             [Validation(Required=false)]
             public int? HealthCheckTimeout { get; set; }
 
             /// <summary>
-            /// The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
+            /// The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.
             /// 
             /// Valid values: **2 to 10**.
             /// 
@@ -140,14 +140,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public int? HealthyThreshold { get; set; }
 
+            /// <summary>
+            /// The tags.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags> Tags { get; set; }
             public class ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -155,7 +164,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
+            /// The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.
             /// 
             /// Valid values: **2 to 10**.
             /// 

@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<string> ServerGroupNames { get; set; }
 
+        [NameInMap("ServerGroupType")]
+        [Validation(Required=false)]
+        public string ServerGroupType { get; set; }
+
         /// <summary>
         /// The tags that are added to the server group. You can specify up to 10 tags in each call.
         /// </summary>

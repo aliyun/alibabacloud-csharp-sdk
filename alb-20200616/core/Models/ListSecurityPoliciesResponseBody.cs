@@ -47,19 +47,22 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public List<string> Ciphers { get; set; }
 
+            /// <summary>
+            /// The time when the resource was created.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The resource group ID.
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The security policy ID.
+            /// The ID of the security policy.
             /// </summary>
             [NameInMap("SecurityPolicyId")]
             [Validation(Required=false)]
@@ -89,14 +92,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public List<string> TLSVersions { get; set; }
 
+            /// <summary>
+            /// The tags.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListSecurityPoliciesResponseBodySecurityPoliciesTags> Tags { get; set; }
             public class ListSecurityPoliciesResponseBodySecurityPoliciesTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

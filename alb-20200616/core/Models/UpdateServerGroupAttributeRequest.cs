@@ -20,6 +20,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConnectionDrainConfig")]
+        [Validation(Required=false)]
+        public UpdateServerGroupAttributeRequestConnectionDrainConfig ConnectionDrainConfig { get; set; }
+        public class UpdateServerGroupAttributeRequestConnectionDrainConfig : TeaModel {
+            [NameInMap("ConnectionDrainEnabled")]
+            [Validation(Required=false)]
+            public bool? ConnectionDrainEnabled { get; set; }
+
+            [NameInMap("ConnectionDrainTimeout")]
+            [Validation(Required=false)]
+            public int? ConnectionDrainTimeout { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
@@ -209,6 +223,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        [NameInMap("SlowStartConfig")]
+        [Validation(Required=false)]
+        public UpdateServerGroupAttributeRequestSlowStartConfig SlowStartConfig { get; set; }
+        public class UpdateServerGroupAttributeRequestSlowStartConfig : TeaModel {
+            [NameInMap("SlowStartDuration")]
+            [Validation(Required=false)]
+            public int? SlowStartDuration { get; set; }
+
+            [NameInMap("SlowStartEnabled")]
+            [Validation(Required=false)]
+            public bool? SlowStartEnabled { get; set; }
+
+        }
+
         /// <summary>
         /// The configuration of session persistence.
         /// </summary>
@@ -267,20 +295,32 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        /// <summary>
+        /// The setting of consistent hashing based on URLs.
+        /// </summary>
         [NameInMap("UchConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestUchConfig UchConfig { get; set; }
         public class UpdateServerGroupAttributeRequestUchConfig : TeaModel {
+            /// <summary>
+            /// The type of the parameter.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// The setting of consistent hashing.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// Specifies whether to enable persistent TCP connections.
+        /// </summary>
         [NameInMap("UpstreamKeepaliveEnabled")]
         [Validation(Required=false)]
         public bool? UpstreamKeepaliveEnabled { get; set; }
