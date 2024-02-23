@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotTaskCallDetailRequest : TeaModel {
+        /// <summary>
+        /// The called number.
+        /// </summary>
         [NameInMap("Callee")]
         [Validation(Required=false)]
         public string Callee { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The timestamp of the time at which the call details you want to query.
+        /// </summary>
         [NameInMap("QueryDate")]
         [Validation(Required=false)]
         public long? QueryDate { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

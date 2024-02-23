@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class StopCallInConfigRequest : TeaModel {
+        /// <summary>
+        /// The China 400 number from which the inbound call to be stopped is transferred.
+        /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]
         public string Number { get; set; }

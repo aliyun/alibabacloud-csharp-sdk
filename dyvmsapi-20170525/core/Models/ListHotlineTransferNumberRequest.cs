@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ListHotlineTransferNumberRequest : TeaModel {
+        /// <summary>
+        /// The China 400 number.
+        /// </summary>
         [NameInMap("HotlineNumber")]
         [Validation(Required=false)]
         public string HotlineNumber { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The page number. Default value: **1**.
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 1 to 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
+        /// </summary>
         [NameInMap("QualificationId")]
         [Validation(Required=false)]
         public string QualificationId { get; set; }

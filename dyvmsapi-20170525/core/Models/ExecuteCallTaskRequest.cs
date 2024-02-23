@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ExecuteCallTaskRequest : TeaModel {
+        /// <summary>
+        /// The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.
+        /// 
+        /// > You can leave this parameter empty.
+        /// </summary>
         [NameInMap("FireTime")]
         [Validation(Required=false)]
         public string FireTime { get; set; }
@@ -25,10 +30,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The task state. Valid values:
+        /// 
+        /// *   **RUNNING**
+        /// *   **STOP**
+        /// *   **CANCEL**
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The task ID. You can call the [CreateCallTask](~~CreateCallTask~~) operation to obtain the task ID.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

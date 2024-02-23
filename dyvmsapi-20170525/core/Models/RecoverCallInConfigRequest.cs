@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class RecoverCallInConfigRequest : TeaModel {
+        /// <summary>
+        /// The China 400 number that is used to transfer the inbound call.
+        /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]
         public string Number { get; set; }

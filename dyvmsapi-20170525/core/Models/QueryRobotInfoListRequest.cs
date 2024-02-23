@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotInfoListRequest : TeaModel {
+        /// <summary>
+        /// The review state. Valid values:
+        /// 
+        /// *   **CONFIGURABLE**
+        /// *   **AUDITING**
+        /// *   **AUDITPASS**
+        /// *   **AUDITFAIL**
+        /// </summary>
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]
         public string AuditStatus { get; set; }

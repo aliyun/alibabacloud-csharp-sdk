@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class CreateCallTaskResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateCallTaskResponseBody Body { get; set; }
 
     }

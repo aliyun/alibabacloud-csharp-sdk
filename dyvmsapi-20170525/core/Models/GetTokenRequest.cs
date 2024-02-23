@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The token type.
+        /// </summary>
         [NameInMap("TokenType")]
         [Validation(Required=false)]
         public string TokenType { get; set; }

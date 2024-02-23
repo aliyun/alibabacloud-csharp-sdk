@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SendVerificationRequest : TeaModel {
+        /// <summary>
+        /// The business type. Set the value to **CONTACT**.
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
@@ -25,10 +28,16 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The mobile phone number that receives the SMS verification code.
+        /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
 
+        /// <summary>
+        /// The mode of sending the SMS verification code. Set the value to **SMS**.
+        /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]
         public string VerifyType { get; set; }
