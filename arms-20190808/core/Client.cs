@@ -2676,6 +2676,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["ManagedType"] = request.ManagedType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusInstanceId))
+            {
+                query["PrometheusInstanceId"] = request.PrometheusInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2734,6 +2738,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
             {
                 query["ManagedType"] = request.ManagedType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusInstanceId))
+            {
+                query["PrometheusInstanceId"] = request.PrometheusInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

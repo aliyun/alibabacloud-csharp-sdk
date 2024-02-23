@@ -117,6 +117,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                [NameInMap("CustomVPCSetting")]
+                [Validation(Required=false)]
+                public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting CustomVPCSetting { get; set; }
+                public class GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting : TeaModel {
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                    [NameInMap("SecureGroupId")]
+                    [Validation(Required=false)]
+                    public string SecureGroupId { get; set; }
+
+                    [NameInMap("VSwitchId")]
+                    [Validation(Required=false)]
+                    public string VSwitchId { get; set; }
+
+                    [NameInMap("VpcId")]
+                    [Validation(Required=false)]
+                    public string VpcId { get; set; }
+
+                }
+
                 /// <summary>
                 /// The IP version. Valid values:
                 /// 

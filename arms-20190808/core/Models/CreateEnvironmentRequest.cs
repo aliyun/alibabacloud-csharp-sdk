@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ManagedType { get; set; }
 
+        [NameInMap("PrometheusInstanceId")]
+        [Validation(Required=false)]
+        public string PrometheusInstanceId { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>
