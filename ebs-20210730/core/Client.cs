@@ -1488,6 +1488,106 @@ namespace AlibabaCloud.SDK.Ebs20210730
         }
 
         /**
+          * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+          *
+          * @param request DeleteDiskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskResponse
+         */
+        public DeleteDiskResponse DeleteDiskWithOptions(DeleteDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskId))
+            {
+                query["DiskId"] = request.DiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDisk",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+          *
+          * @param request DeleteDiskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDiskResponse
+         */
+        public async Task<DeleteDiskResponse> DeleteDiskWithOptionsAsync(DeleteDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskId))
+            {
+                query["DiskId"] = request.DiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDisk",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+          *
+          * @param request DeleteDiskRequest
+          * @return DeleteDiskResponse
+         */
+        public DeleteDiskResponse DeleteDisk(DeleteDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDiskWithOptions(request, runtime);
+        }
+
+        /**
+          * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+          *
+          * @param request DeleteDiskRequest
+          * @return DeleteDiskResponse
+         */
+        public async Task<DeleteDiskResponse> DeleteDiskAsync(DeleteDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDiskWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * ## [](#)Usage notes
           * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
           * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.
