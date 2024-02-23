@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ListClusterTypesResponseBodyData> Data { get; set; }
         public class ListClusterTypesResponseBodyData : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
             /// <summary>
             /// The type of the MSE engine that can be activated.
             /// </summary>
