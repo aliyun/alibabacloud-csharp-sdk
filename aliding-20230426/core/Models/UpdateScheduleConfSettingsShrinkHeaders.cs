@@ -8,20 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class AddAttendeeHeaders : TeaModel {
+    public class UpdateScheduleConfSettingsShrinkHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         [NameInMap("AccountContext")]
         [Validation(Required=false)]
-        public AddAttendeeHeadersAccountContext AccountContext { get; set; }
-        public class AddAttendeeHeadersAccountContext : TeaModel {
-            [NameInMap("accountId")]
-            [Validation(Required=false)]
-            public string AccountId { get; set; }
-
-        }
+        public string AccountContextShrink { get; set; }
 
     }
 

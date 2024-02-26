@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class QueryScheduleConferenceRequest : TeaModel {
+    public class GetRelatedWorkspacesRequest : TeaModel {
+        [NameInMap("IncludeRecent")]
+        [Validation(Required=false)]
+        public bool? IncludeRecent { get; set; }
+
         [NameInMap("TenantContext")]
         [Validation(Required=false)]
-        public QueryScheduleConferenceRequestTenantContext TenantContext { get; set; }
-        public class QueryScheduleConferenceRequestTenantContext : TeaModel {
+        public GetRelatedWorkspacesRequestTenantContext TenantContext { get; set; }
+        public class GetRelatedWorkspacesRequestTenantContext : TeaModel {
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
         }
-
-        [NameInMap("scheduleConferenceId")]
-        [Validation(Required=false)]
-        public string ScheduleConferenceId { get; set; }
 
     }
 

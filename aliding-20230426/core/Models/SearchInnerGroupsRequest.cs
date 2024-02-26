@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class QueryScheduleConferenceShrinkRequest : TeaModel {
-        [NameInMap("TenantContext")]
+    public class SearchInnerGroupsRequest : TeaModel {
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string TenantContextShrink { get; set; }
+        public int? MaxResults { get; set; }
 
-        [NameInMap("scheduleConferenceId")]
+        [NameInMap("SearchKey")]
         [Validation(Required=false)]
-        public string ScheduleConferenceId { get; set; }
+        public string SearchKey { get; set; }
 
     }
 
