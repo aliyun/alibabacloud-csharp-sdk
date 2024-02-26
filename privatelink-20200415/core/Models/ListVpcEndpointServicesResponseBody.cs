@@ -217,6 +217,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

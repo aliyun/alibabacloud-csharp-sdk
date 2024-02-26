@@ -649,9 +649,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ResourceId"] = request.ResourceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
-                query["ResourceRegionId"] = request.ResourceRegionId;
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -684,9 +684,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ResourceId"] = request.ResourceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
-                query["ResourceRegionId"] = request.ResourceRegionId;
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -78,6 +78,13 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// The type of the service resource. Valid values:
+            /// 
+            /// *   **slb**: Classic Load Balancer (CLB) instance
+            /// *   **alb**: Application Load Balancer (ALB) instance
+            /// *   **nlb**: Network Load Balancer (NLB) instance
+            /// </summary>
             [NameInMap("ServiceResourceType")]
             [Validation(Required=false)]
             public string ServiceResourceType { get; set; }

@@ -24,11 +24,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource group.
+        /// The type of resource. Valid values:
+        /// 
+        /// *   **vpcendpoint**: endpoint
+        /// *   **vpcendpointservice**: endpoint service
         /// </summary>
-        [NameInMap("ResourceRegionId")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string ResourceRegionId { get; set; }
+        public string ResourceType { get; set; }
 
     }
 
