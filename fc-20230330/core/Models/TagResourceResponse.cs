@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourceResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
     }

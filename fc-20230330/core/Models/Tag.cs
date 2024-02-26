@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class PutLayerACLResponse : TeaModel {
-        [NameInMap("headers")]
+    public class Tag : TeaModel {
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Key { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public string Value { get; set; }
 
     }
 

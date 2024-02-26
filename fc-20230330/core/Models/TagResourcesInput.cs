@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class InvokeFunctionResponse : TeaModel {
-        [NameInMap("headers")]
+    public class TagResourcesInput : TeaModel {
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public List<string> ResourceId { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public string ResourceType { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public Stream Body { get; set; }
+        public List<Tag> Tag { get; set; }
 
     }
 

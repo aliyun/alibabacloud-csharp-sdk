@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutConcurrencyConfigRequest : TeaModel {
+        /// <summary>
+        /// The concurrency configurations.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public PutConcurrencyInput Body { get; set; }

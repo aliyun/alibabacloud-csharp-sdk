@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListAliasesResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListAliasesOutput Body { get; set; }
 
     }
