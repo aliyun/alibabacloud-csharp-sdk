@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class UpgradePostPayOrderRequest : TeaModel {
+    public class UpgradePostPayOrderShrinkRequest : TeaModel {
         /// <summary>
         /// The disk size. Unit: GB.
         /// 
@@ -90,17 +90,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
-        public UpgradePostPayOrderRequestServerlessConfig ServerlessConfig { get; set; }
-        public class UpgradePostPayOrderRequestServerlessConfig : TeaModel {
-            [NameInMap("ReservedPublishCapacity")]
-            [Validation(Required=false)]
-            public long? ReservedPublishCapacity { get; set; }
-
-            [NameInMap("ReservedSubscribeCapacity")]
-            [Validation(Required=false)]
-            public long? ReservedSubscribeCapacity { get; set; }
-
-        }
+        public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
         /// The edition of the instance. Valid values:

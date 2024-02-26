@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeSaslUsersResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeSaslUsersResponseBody Body { get; set; }
 
     }

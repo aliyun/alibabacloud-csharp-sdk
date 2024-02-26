@@ -3930,13 +3930,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
           *
-          * @param request UpgradePostPayOrderRequest
+          * @param tmpReq UpgradePostPayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return UpgradePostPayOrderResponse
          */
-        public UpgradePostPayOrderResponse UpgradePostPayOrderWithOptions(UpgradePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpgradePostPayOrderResponse UpgradePostPayOrderWithOptions(UpgradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradePostPayOrderShrinkRequest request = new UpgradePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
@@ -3969,6 +3975,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
             {
@@ -4000,13 +4010,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
           *
-          * @param request UpgradePostPayOrderRequest
+          * @param tmpReq UpgradePostPayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return UpgradePostPayOrderResponse
          */
-        public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderWithOptionsAsync(UpgradePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderWithOptionsAsync(UpgradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradePostPayOrderShrinkRequest request = new UpgradePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
@@ -4039,6 +4055,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
             {
