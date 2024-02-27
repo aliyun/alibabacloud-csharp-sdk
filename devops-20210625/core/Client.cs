@@ -14629,6 +14629,92 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await ListTestCaseFieldsWithOptionsAsync(organizationId, request, headers, runtime);
         }
 
+        public ListUserDrawRecordByPkResponse ListUserDrawRecordByPkWithOptions(ListUserDrawRecordByPkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunPk))
+            {
+                query["aliyunPk"] = request.AliyunPk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrawGroup))
+            {
+                query["drawGroup"] = request.DrawGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrawPoolName))
+            {
+                query["drawPoolName"] = request.DrawPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserDrawRecordByPk",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/listUserDrawRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserDrawRecordByPkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListUserDrawRecordByPkResponse> ListUserDrawRecordByPkWithOptionsAsync(ListUserDrawRecordByPkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunPk))
+            {
+                query["aliyunPk"] = request.AliyunPk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrawGroup))
+            {
+                query["drawGroup"] = request.DrawGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrawPoolName))
+            {
+                query["drawPoolName"] = request.DrawPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserDrawRecordByPk",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/listUserDrawRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserDrawRecordByPkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListUserDrawRecordByPkResponse ListUserDrawRecordByPk(ListUserDrawRecordByPkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListUserDrawRecordByPkWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListUserDrawRecordByPkResponse> ListUserDrawRecordByPkAsync(ListUserDrawRecordByPkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListUserDrawRecordByPkWithOptionsAsync(request, headers, runtime);
+        }
+
         public ListUserKeysResponse ListUserKeysWithOptions(ListUserKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
