@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public GetApplicationResponseBodyData Data { get; set; }
         public class GetApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// The description of the application.
+            /// App ID
             /// </summary>
             [NameInMap("ApplicationId")]
             [Validation(Required=false)]
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             }
 
             /// <summary>
-            /// The URL of the application topology image.
+            /// The time when the app was created
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The message returned for the request.
+            /// Application description
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             public string ImageURL { get; set; }
 
             /// <summary>
-            /// The URL of the image in the database.
+            /// App name
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The service code.
+                /// Product code
                 /// </summary>
                 [NameInMap("ResourceCode")]
                 [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             }
 
             /// <summary>
-            /// 1411182597819805/topo-MCEXDI5EL2OM10NY.json
+            /// The ID of the resource group to which the app belongs
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// CADT application
+            /// The ID of the template associated with the application
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -321,39 +321,14 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         }
 
         /// <summary>
-        /// Possible application states:
-        /// 
-        /// *   Creating: The application is being created.
-        /// *   Modified: The application has been modified.
-        /// *   Verifying: The application is being verified.
-        /// *   Verified_Failure: The application failed to pass the verification.
-        /// *   Verified_Success: The application has passed the verification.
-        /// *   Valuating: Fees are being calculated for the application.
-        /// *   Valuating_Failure: Fees failed to be calculated for the application.
-        /// *   Valuating_Success: Fees are calculated for the application.
-        /// *   Deploying: The application is being deployed.
-        /// *   Deployed_Failure: The application failed to be deployed.
-        /// *   Partially_Deployed_Success: Some resources of the application are deployed.
-        /// *   Deployed_Success: The application is deployed.
-        /// *   Destroying: The application is being released.
-        /// *   Delayed_Destroy: The application release is delayed.
-        /// *   Destroyed_Failure: The application failed to be released.
-        /// *   Partially_Destroyed_Success: Some resources of the application are released.
-        /// *   Destroyed_Success: The application is released.
-        /// *   Revised: The application architecture is adjusted.
-        /// *   Verifying_In_Revision: The application resources are being verified during architecture adjustment.
-        /// *   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.
-        /// *   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.
-        /// *   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.
-        /// *   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.
-        /// *   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.
+        /// Reason for the request failure
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the application.
+        /// Request ID
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
