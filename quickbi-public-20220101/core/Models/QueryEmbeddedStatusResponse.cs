@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryEmbeddedStatusResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public QueryEmbeddedStatusResponseBody Body { get; set; }
 
     }

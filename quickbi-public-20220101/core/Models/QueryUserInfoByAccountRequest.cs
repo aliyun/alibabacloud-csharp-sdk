@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string Account { get; set; }
 
+        [NameInMap("ParentAccountName")]
+        [Validation(Required=false)]
+        public string ParentAccountName { get; set; }
+
     }
 
 }

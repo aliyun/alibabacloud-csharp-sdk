@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string NickName { get; set; }
 
+        [NameInMap("RoleIds")]
+        [Validation(Required=false)]
+        public string RoleIds { get; set; }
+
         /// <summary>
         /// The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
         /// </summary>

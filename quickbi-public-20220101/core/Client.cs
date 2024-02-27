@@ -375,9 +375,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["UserType"] = request.UserType;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                body["RoleIds"] = request.RoleIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -418,9 +424,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["UserType"] = request.UserType;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                body["RoleIds"] = request.RoleIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4969,6 +4981,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["Account"] = request.Account;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentAccountName))
+            {
+                query["ParentAccountName"] = request.ParentAccountName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4995,6 +5011,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Account))
             {
                 query["Account"] = request.Account;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentAccountName))
+            {
+                query["ParentAccountName"] = request.ParentAccountName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6433,6 +6453,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["NickName"] = request.NickName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                query["RoleIds"] = request.RoleIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -6475,6 +6499,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NickName))
             {
                 query["NickName"] = request.NickName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                query["RoleIds"] = request.RoleIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            [NameInMap("RoleIdList")]
+            [Validation(Required=false)]
+            public List<long?> RoleIdList { get; set; }
+
             /// <summary>
             /// The UserID in the Quick BI.
             /// </summary>

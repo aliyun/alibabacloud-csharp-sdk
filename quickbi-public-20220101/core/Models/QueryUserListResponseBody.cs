@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string NickName { get; set; }
 
+                [NameInMap("RoleIdList")]
+                [Validation(Required=false)]
+                public List<long?> RoleIdList { get; set; }
+
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
