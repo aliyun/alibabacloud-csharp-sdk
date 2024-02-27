@@ -48,12 +48,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("FileSystemType")]
+                [Validation(Required=false)]
+                public string FileSystemType { get; set; }
+
                 /// <summary>
                 /// The number of mount targets to which the permission group is attached.
                 /// </summary>
                 [NameInMap("MountTargetCount")]
                 [Validation(Required=false)]
                 public int? MountTargetCount { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
                 /// <summary>
                 /// The total number of rules in the permission group.

@@ -20,12 +20,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeAccessRulesResponseBodyAccessRulesAccessRule> AccessRule { get; set; }
             public class DescribeAccessRulesResponseBodyAccessRulesAccessRule : TeaModel {
+                [NameInMap("AccessGroupName")]
+                [Validation(Required=false)]
+                public string AccessGroupName { get; set; }
+
                 /// <summary>
                 /// The ID of the rule.
                 /// </summary>
                 [NameInMap("AccessRuleId")]
                 [Validation(Required=false)]
                 public string AccessRuleId { get; set; }
+
+                [NameInMap("FileSystemType")]
+                [Validation(Required=false)]
+                public string FileSystemType { get; set; }
 
                 /// <summary>
                 /// The IPv6 address or CIDR block of the authorized object.
@@ -56,6 +64,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("RWAccess")]
                 [Validation(Required=false)]
                 public string RWAccess { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
                 /// <summary>
                 /// The IP address or CIDR block of the authorized object.
