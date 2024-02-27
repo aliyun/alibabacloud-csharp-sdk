@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCreditInfoRequest : TeaModel {
+        /// <summary>
+        /// Sub Account UID
+        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public long? Uid { get; set; }

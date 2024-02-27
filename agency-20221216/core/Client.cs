@@ -356,6 +356,14 @@ namespace AlibabaCloud.SDK.Agency20221216
             return await CustomerQuotaRecordListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+          * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+          *
+          * @param request DeductOutstandingBalanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeductOutstandingBalanceResponse
+         */
         public DeductOutstandingBalanceResponse DeductOutstandingBalanceWithOptions(DeductOutstandingBalanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -387,6 +395,14 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<DeductOutstandingBalanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+          * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+          *
+          * @param request DeductOutstandingBalanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeductOutstandingBalanceResponse
+         */
         public async Task<DeductOutstandingBalanceResponse> DeductOutstandingBalanceWithOptionsAsync(DeductOutstandingBalanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -418,18 +434,40 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<DeductOutstandingBalanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+          * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+          *
+          * @param request DeductOutstandingBalanceRequest
+          * @return DeductOutstandingBalanceResponse
+         */
         public DeductOutstandingBalanceResponse DeductOutstandingBalance(DeductOutstandingBalanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeductOutstandingBalanceWithOptions(request, runtime);
         }
 
+        /**
+          * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+          * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+          *
+          * @param request DeductOutstandingBalanceRequest
+          * @return DeductOutstandingBalanceResponse
+         */
         public async Task<DeductOutstandingBalanceResponse> DeductOutstandingBalanceAsync(DeductOutstandingBalanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeductOutstandingBalanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditEndUserStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditEndUserStatusResponse
+         */
         public EditEndUserStatusResponse EditEndUserStatusWithOptions(EditEndUserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -453,6 +491,14 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditEndUserStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditEndUserStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditEndUserStatusResponse
+         */
         public async Task<EditEndUserStatusResponse> EditEndUserStatusWithOptionsAsync(EditEndUserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -476,18 +522,40 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditEndUserStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditEndUserStatusRequest
+          * @return EditEndUserStatusResponse
+         */
         public EditEndUserStatusResponse EditEndUserStatus(EditEndUserStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EditEndUserStatusWithOptions(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditEndUserStatusRequest
+          * @return EditEndUserStatusResponse
+         */
         public async Task<EditEndUserStatusResponse> EditEndUserStatusAsync(EditEndUserStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EditEndUserStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditNewBuyStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditNewBuyStatusResponse
+         */
         public EditNewBuyStatusResponse EditNewBuyStatusWithOptions(EditNewBuyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -519,6 +587,14 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditNewBuyStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditNewBuyStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditNewBuyStatusResponse
+         */
         public async Task<EditNewBuyStatusResponse> EditNewBuyStatusWithOptionsAsync(EditNewBuyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -550,18 +626,40 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditNewBuyStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditNewBuyStatusRequest
+          * @return EditNewBuyStatusResponse
+         */
         public EditNewBuyStatusResponse EditNewBuyStatus(EditNewBuyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EditNewBuyStatusWithOptions(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditNewBuyStatusRequest
+          * @return EditNewBuyStatusResponse
+         */
         public async Task<EditNewBuyStatusResponse> EditNewBuyStatusAsync(EditNewBuyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EditNewBuyStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditZeroCreditShutdownRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditZeroCreditShutdownResponse
+         */
         public EditZeroCreditShutdownResponse EditZeroCreditShutdownWithOptions(EditZeroCreditShutdownRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -593,6 +691,14 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditZeroCreditShutdownResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditZeroCreditShutdownRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EditZeroCreditShutdownResponse
+         */
         public async Task<EditZeroCreditShutdownResponse> EditZeroCreditShutdownWithOptionsAsync(EditZeroCreditShutdownRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -624,18 +730,39 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<EditZeroCreditShutdownResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditZeroCreditShutdownRequest
+          * @return EditZeroCreditShutdownResponse
+         */
         public EditZeroCreditShutdownResponse EditZeroCreditShutdown(EditZeroCreditShutdownRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EditZeroCreditShutdownWithOptions(request, runtime);
         }
 
+        /**
+          * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+          * **This content is only published on the international site. **
+          *
+          * @param request EditZeroCreditShutdownRequest
+          * @return EditZeroCreditShutdownResponse
+         */
         public async Task<EditZeroCreditShutdownResponse> EditZeroCreditShutdownAsync(EditZeroCreditShutdownRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EditZeroCreditShutdownWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request ExportCustomerQuotaRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportCustomerQuotaRecordResponse
+         */
         public ExportCustomerQuotaRecordResponse ExportCustomerQuotaRecordWithOptions(ExportCustomerQuotaRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -679,6 +806,13 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<ExportCustomerQuotaRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request ExportCustomerQuotaRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportCustomerQuotaRecordResponse
+         */
         public async Task<ExportCustomerQuotaRecordResponse> ExportCustomerQuotaRecordWithOptionsAsync(ExportCustomerQuotaRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -722,12 +856,24 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<ExportCustomerQuotaRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request ExportCustomerQuotaRecordRequest
+          * @return ExportCustomerQuotaRecordResponse
+         */
         public ExportCustomerQuotaRecordResponse ExportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportCustomerQuotaRecordWithOptions(request, runtime);
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request ExportCustomerQuotaRecordRequest
+          * @return ExportCustomerQuotaRecordResponse
+         */
         public async Task<ExportCustomerQuotaRecordResponse> ExportCustomerQuotaRecordAsync(ExportCustomerQuotaRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1138,6 +1284,13 @@ namespace AlibabaCloud.SDK.Agency20221216
             return await GetUnassociatedCustomerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The current API request rate for the Cloud Product has not been disclosed.
+          *
+          * @param request InviteSubAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InviteSubAccountResponse
+         */
         public InviteSubAccountResponse InviteSubAccountWithOptions(InviteSubAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1165,6 +1318,13 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<InviteSubAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The current API request rate for the Cloud Product has not been disclosed.
+          *
+          * @param request InviteSubAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InviteSubAccountResponse
+         */
         public async Task<InviteSubAccountResponse> InviteSubAccountWithOptionsAsync(InviteSubAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1192,18 +1352,37 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<InviteSubAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The current API request rate for the Cloud Product has not been disclosed.
+          *
+          * @param request InviteSubAccountRequest
+          * @return InviteSubAccountResponse
+         */
         public InviteSubAccountResponse InviteSubAccount(InviteSubAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InviteSubAccountWithOptions(request, runtime);
         }
 
+        /**
+          * The current API request rate for the Cloud Product has not been disclosed.
+          *
+          * @param request InviteSubAccountRequest
+          * @return InviteSubAccountResponse
+         */
         public async Task<InviteSubAccountResponse> InviteSubAccountAsync(InviteSubAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InviteSubAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The current API request rate for cloud products has not been disclosed.
+          *
+          * @param request ListCountriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCountriesResponse
+         */
         public ListCountriesResponse ListCountriesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1222,6 +1401,13 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<ListCountriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The current API request rate for cloud products has not been disclosed.
+          *
+          * @param request ListCountriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCountriesResponse
+         */
         public async Task<ListCountriesResponse> ListCountriesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1240,18 +1426,35 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<ListCountriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The current API request rate for cloud products has not been disclosed.
+          *
+          * @return ListCountriesResponse
+         */
         public ListCountriesResponse ListCountries()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCountriesWithOptions(runtime);
         }
 
+        /**
+          * The current API request rate for cloud products has not been disclosed.
+          *
+          * @return ListCountriesResponse
+         */
         public async Task<ListCountriesResponse> ListCountriesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCountriesWithOptionsAsync(runtime);
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request QuotaListExportPagedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QuotaListExportPagedResponse
+         */
         public QuotaListExportPagedResponse QuotaListExportPagedWithOptions(QuotaListExportPagedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1275,6 +1478,13 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<QuotaListExportPagedResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request QuotaListExportPagedRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QuotaListExportPagedResponse
+         */
         public async Task<QuotaListExportPagedResponse> QuotaListExportPagedWithOptionsAsync(QuotaListExportPagedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1298,12 +1508,24 @@ namespace AlibabaCloud.SDK.Agency20221216
             return TeaModel.ToObject<QuotaListExportPagedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request QuotaListExportPagedRequest
+          * @return QuotaListExportPagedResponse
+         */
         public QuotaListExportPagedResponse QuotaListExportPaged(QuotaListExportPagedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QuotaListExportPagedWithOptions(request, runtime);
         }
 
+        /**
+          * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+          *
+          * @param request QuotaListExportPagedRequest
+          * @return QuotaListExportPagedResponse
+         */
         public async Task<QuotaListExportPagedResponse> QuotaListExportPagedAsync(QuotaListExportPagedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

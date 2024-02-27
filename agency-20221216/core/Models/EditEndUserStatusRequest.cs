@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class EditEndUserStatusRequest : TeaModel {
+        /// <summary>
+        /// Shutdown Status</br>
+        /// 
+        /// - postPayFreeze, the account have been blocked</br>
+        /// 
+        /// - postPayThaw, the account have been unlocked</br>
+        /// </summary>
         [NameInMap("CreditStatus")]
         [Validation(Required=false)]
         public string CreditStatus { get; set; }
 
         /// <summary>
-        /// uid
+        /// UID
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

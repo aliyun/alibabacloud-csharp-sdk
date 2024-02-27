@@ -10,13 +10,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetMonthlyBillRequest : TeaModel {
         /// <summary>
-        /// Bill Owner type.
-        /// 
-        ///  Value range:
-        /// 
-        /// 1: Master account 
-        /// 
-        /// 2: Sub account
+        /// Bill Owner type. Value Range:</br>
+        /// 1: Master account</br>
+        /// 2: Sub account</br>
         /// </summary>
         [NameInMap("BillOwner")]
         [Validation(Required=false)]
@@ -25,23 +21,15 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// <summary>
         /// Value Range:
         /// 
-        /// MonthlyInvoice
-        /// 
-        /// MonthRefundInvoice
-        /// 
-        /// MonthlySummary
-        /// 
-        /// MonthlyInstanceAddAdjustBill 
-        /// 
-        /// MonthlyInstanceRefundBill
-        /// 
-        /// MonthlyAddAdjustInvoce
-        /// 
-        /// MonthlyRefundAdjustInvoce 
-        /// 
-        /// MonthlyInstanceConsumeV2 
-        /// 
-        /// MarginReportV2
+        /// - MonthlyInvoice
+        /// - MonthRefundInvoice
+        /// - MonthlySummary
+        /// - MonthlyInstanceAddAdjustBill 
+        /// - MonthlyInstanceRefundBill
+        /// - MonthlyAddAdjustInvoce
+        /// - MonthlyRefundAdjustInvoce 
+        /// - MonthlyInstanceConsumeV2 
+        /// - MarginReportV2
         /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]

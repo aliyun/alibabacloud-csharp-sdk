@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetDailyBillRequest : TeaModel {
+        /// <summary>
+        /// Bill Owner type. Value Range:</br>
+        /// 1: Master account</br>
+        /// 2: Sub account</br>
+        /// </summary>
         [NameInMap("BillOwner")]
         [Validation(Required=false)]
         public string BillOwner { get; set; }
 
+        /// <summary>
+        /// BillType. Value Range:</br>
+        /// 
+        /// - DailyOrder(Deprecated)
+        /// - DailyBill (Deprecated)
+        /// - DailyInstanceBill (Deprecated)
+        /// - DailyInstanceBillV2
+        /// </summary>
         [NameInMap("BillType")]
         [Validation(Required=false)]
         public string BillType { get; set; }

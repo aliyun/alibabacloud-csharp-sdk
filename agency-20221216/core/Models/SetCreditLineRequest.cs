@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class SetCreditLineRequest : TeaModel {
+        /// <summary>
+        /// New Credit Line
+        /// </summary>
         [NameInMap("CreditLine")]
         [Validation(Required=false)]
         public string CreditLine { get; set; }
 
+        /// <summary>
+        /// The UID of Sub Account.
+        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public long? Uid { get; set; }

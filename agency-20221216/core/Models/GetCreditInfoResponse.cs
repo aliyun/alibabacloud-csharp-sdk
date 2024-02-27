@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCreditInfoResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetCreditInfoResponseBody Body { get; set; }
 
     }

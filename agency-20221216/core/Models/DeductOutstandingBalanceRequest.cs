@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class DeductOutstandingBalanceRequest : TeaModel {
+        /// <summary>
+        /// The Deducted Credit to be offset.
+        /// </summary>
         [NameInMap("DeductAmount")]
         [Validation(Required=false)]
         public string DeductAmount { get; set; }
 
+        /// <summary>
+        /// Account UID of Distribution Customer.
+        /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public long? Uid { get; set; }
