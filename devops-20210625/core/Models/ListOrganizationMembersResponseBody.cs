@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            [NameInMap("jobNumber")]
+            [Validation(Required=false)]
+            public string JobNumber { get; set; }
+
             [NameInMap("joinTime")]
             [Validation(Required=false)]
             public long? JoinTime { get; set; }
