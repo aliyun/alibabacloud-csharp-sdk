@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
+            [NameInMap("Usage")]
+            [Validation(Required=false)]
+            public string Usage { get; set; }
+
         }
 
         [NameInMap("Output")]
