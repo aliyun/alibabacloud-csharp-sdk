@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
                     /// *   Submit: submits the plan.
                     /// *   Cancel: cancels the plan.
                     /// *   Approve: approves the plan.
-                    /// *   reject: rejectes the plan.
+                    /// *   reject: rejects the plan.
                     /// </summary>
                     [NameInMap("ApprovalAction")]
                     [Validation(Required=false)]
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             /// <summary>
             /// Indicates whether the product version is visible to end users. Valid values:
             /// 
-            /// *   true (defaut)
+            /// *   true (default)
             /// *   false
             /// </summary>
             [NameInMap("Active")]

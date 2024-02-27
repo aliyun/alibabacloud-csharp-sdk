@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             [Validation(Required=false)]
             public string ProviderName { get; set; }
 
+            [NameInMap("TemplateType")]
+            [Validation(Required=false)]
+            public string TemplateType { get; set; }
+
         }
 
         /// <summary>

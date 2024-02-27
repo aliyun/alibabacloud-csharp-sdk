@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class CreateProductResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateProductResponseBody Body { get; set; }
 
     }

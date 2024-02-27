@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The logs of the product instance.
+            /// The logs of the instance.
             /// </summary>
             [NameInMap("Log")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             }
 
             /// <summary>
-            /// The input parameters of the template.
+            /// The parameters that are specified in the template.
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
@@ -210,14 +210,27 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// The custom tags.
+            /// </summary>
             [NameInMap("TaskTags")]
             [Validation(Required=false)]
             public List<GetTaskResponseBodyTaskDetailTaskTags> TaskTags { get; set; }
             public class GetTaskResponseBodyTaskDetailTaskTags : TeaModel {
+                /// <summary>
+                /// The custom tag key.
+                /// 
+                /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The custom tag value.
+                /// 
+                /// The value must be 1 to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

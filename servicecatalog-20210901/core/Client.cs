@@ -706,6 +706,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
             {
                 body["ProviderName"] = request.ProviderName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                body["TemplateType"] = request.TemplateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -761,6 +765,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderName))
             {
                 body["ProviderName"] = request.ProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                body["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
