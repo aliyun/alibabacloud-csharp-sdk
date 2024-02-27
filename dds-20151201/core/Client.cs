@@ -938,7 +938,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Creates or clones an ApsaraDB for MongoDB replica set instance.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
+          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
+          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
           *
           * @param request CreateDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1124,7 +1126,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Creates or clones an ApsaraDB for MongoDB replica set instance.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
+          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
+          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
           *
           * @param request CreateDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1310,7 +1314,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Creates or clones an ApsaraDB for MongoDB replica set instance.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
+          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
+          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
           *
           * @param request CreateDBInstanceRequest
           * @return CreateDBInstanceResponse
@@ -1322,7 +1328,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Creates or clones an ApsaraDB for MongoDB replica set instance.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
+          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
+          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
           *
           * @param request CreateDBInstanceRequest
           * @return CreateDBInstanceResponse
@@ -10791,6 +10799,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighFrequencyBackupRetention))
+            {
+                query["HighFrequencyBackupRetention"] = request.HighFrequencyBackupRetention;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogBackupRetentionPeriod))
             {
                 query["LogBackupRetentionPeriod"] = request.LogBackupRetentionPeriod;
@@ -10818,10 +10830,6 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotBackupType))
             {
@@ -10866,6 +10874,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighFrequencyBackupRetention))
+            {
+                query["HighFrequencyBackupRetention"] = request.HighFrequencyBackupRetention;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogBackupRetentionPeriod))
             {
                 query["LogBackupRetentionPeriod"] = request.LogBackupRetentionPeriod;
@@ -10893,10 +10905,6 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotBackupType))
             {

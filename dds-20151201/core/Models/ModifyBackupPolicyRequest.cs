@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? EnableBackupLog { get; set; }
 
+        [NameInMap("HighFrequencyBackupRetention")]
+        [Validation(Required=false)]
+        public long? HighFrequencyBackupRetention { get; set; }
+
         /// <summary>
         /// The number of days for which log backups are retained. Default value: 7.
         /// 
@@ -107,10 +111,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
         /// <summary>
         /// The snapshot backup type. Default value: Standard. Valid values:

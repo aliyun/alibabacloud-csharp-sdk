@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public int? EnableBackupLog { get; set; }
 
+        [NameInMap("HighFrequencyBackupRetention")]
+        [Validation(Required=false)]
+        public string HighFrequencyBackupRetention { get; set; }
+
         /// <summary>
         /// The number of days for which log backups are retained. Valid values: 7 to 730.
         /// </summary>

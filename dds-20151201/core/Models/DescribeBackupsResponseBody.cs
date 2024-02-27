@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string BackupIntranetDownloadURL { get; set; }
 
+                [NameInMap("BackupJobId")]
+                [Validation(Required=false)]
+                public long? BackupJobId { get; set; }
+
                 /// <summary>
                 /// The method that is used to generate the backup set. Valid values:
                 /// 

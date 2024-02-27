@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// Whether to display DAS whitelist information.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IP addresses in the default whitelist.
+        /// An array that consists of the information of IP whitelists.
         /// </summary>
         [NameInMap("SecurityIpGroups")]
         [Validation(Required=false)]
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup> SecurityIpGroup { get; set; }
             public class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup : TeaModel {
                 /// <summary>
-                /// An array that consists of the information of IP whitelists.
+                /// The attribute of the IP address whitelist.
                 /// </summary>
                 [NameInMap("SecurityIpGroupAttribute")]
                 [Validation(Required=false)]
                 public string SecurityIpGroupAttribute { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The name of the IP whitelist.
                 /// </summary>
                 [NameInMap("SecurityIpGroupName")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The IP addresses in the default whitelist.
         /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]
