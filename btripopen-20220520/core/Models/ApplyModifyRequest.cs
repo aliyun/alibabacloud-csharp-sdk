@@ -102,6 +102,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("hotel_intl_citys")]
+            [Validation(Required=false)]
+            public List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
+            public class ApplyModifyRequestExternalTravelerStandardHotelIntlCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
             /// <summary>
             /// 超级经济舱折扣。1到10的整数
             /// </summary>
@@ -380,6 +398,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestTravelerStandardHotelCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
+            [NameInMap("hotel_intl_citys")]
+            [Validation(Required=false)]
+            public List<ApplyModifyRequestTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
+            public class ApplyModifyRequestTravelerStandardHotelIntlCitys : TeaModel {
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }

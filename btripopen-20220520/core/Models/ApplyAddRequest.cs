@@ -102,6 +102,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("hotel_intl_citys")]
+            [Validation(Required=false)]
+            public List<ApplyAddRequestExternalTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
+            public class ApplyAddRequestExternalTravelerStandardHotelIntlCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
             [NameInMap("international_flight_cabins")]
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
@@ -382,6 +400,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyAddRequestTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyAddRequestTravelerStandardHotelCitys : TeaModel {
+                [NameInMap("city_code")]
+                [Validation(Required=false)]
+                public string CityCode { get; set; }
+
+                [NameInMap("city_name")]
+                [Validation(Required=false)]
+                public string CityName { get; set; }
+
+                [NameInMap("fee")]
+                [Validation(Required=false)]
+                public long? Fee { get; set; }
+
+            }
+
+            [NameInMap("hotel_intl_citys")]
+            [Validation(Required=false)]
+            public List<ApplyAddRequestTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
+            public class ApplyAddRequestTravelerStandardHotelIntlCitys : TeaModel {
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }

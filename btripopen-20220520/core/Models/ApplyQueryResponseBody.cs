@@ -142,6 +142,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("hotel_intl_citys")]
+                [Validation(Required=false)]
+                public List<ApplyQueryResponseBodyModuleExternalTravelerListHotelIntlCitys> HotelIntlCitys { get; set; }
+                public class ApplyQueryResponseBodyModuleExternalTravelerListHotelIntlCitys : TeaModel {
+                    [NameInMap("city_code")]
+                    [Validation(Required=false)]
+                    public string CityCode { get; set; }
+
+                    [NameInMap("city_name")]
+                    [Validation(Required=false)]
+                    public string CityName { get; set; }
+
+                    [NameInMap("fee")]
+                    [Validation(Required=false)]
+                    public long? Fee { get; set; }
+
+                }
+
                 [NameInMap("premium_economy_discount")]
                 [Validation(Required=false)]
                 public int? PremiumEconomyDiscount { get; set; }
@@ -396,6 +414,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<ApplyQueryResponseBodyModuleTravelerListHotelCitys> HotelCitys { get; set; }
                 public class ApplyQueryResponseBodyModuleTravelerListHotelCitys : TeaModel {
+                    [NameInMap("city_code")]
+                    [Validation(Required=false)]
+                    public string CityCode { get; set; }
+
+                    [NameInMap("city_name")]
+                    [Validation(Required=false)]
+                    public string CityName { get; set; }
+
+                    [NameInMap("fee")]
+                    [Validation(Required=false)]
+                    public long? Fee { get; set; }
+
+                }
+
+                [NameInMap("hotel_intl_citys")]
+                [Validation(Required=false)]
+                public List<ApplyQueryResponseBodyModuleTravelerListHotelIntlCitys> HotelIntlCitys { get; set; }
+                public class ApplyQueryResponseBodyModuleTravelerListHotelIntlCitys : TeaModel {
                     [NameInMap("city_code")]
                     [Validation(Required=false)]
                     public string CityCode { get; set; }
