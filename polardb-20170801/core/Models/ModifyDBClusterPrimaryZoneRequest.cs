@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
+        [NameInMap("ZoneType")]
+        [Validation(Required=false)]
+        public string ZoneType { get; set; }
+
     }
 
 }

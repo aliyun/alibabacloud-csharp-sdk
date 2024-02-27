@@ -7371,7 +7371,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          * The release note of the kernel version.
           *
           * @param request DescribeDBClusterVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7425,7 +7425,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          * The release note of the kernel version.
           *
           * @param request DescribeDBClusterVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7479,7 +7479,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          * The release note of the kernel version.
           *
           * @param request DescribeDBClusterVersionRequest
           * @return DescribeDBClusterVersionResponse
@@ -7491,7 +7491,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-          * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+          * The release note of the kernel version.
           *
           * @param request DescribeDBClusterVersionRequest
           * @return DescribeDBClusterVersionResponse
@@ -14814,6 +14814,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ZoneId"] = request.ZoneId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneType))
+            {
+                query["ZoneType"] = request.ZoneType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14884,6 +14888,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneType))
+            {
+                query["ZoneType"] = request.ZoneType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
