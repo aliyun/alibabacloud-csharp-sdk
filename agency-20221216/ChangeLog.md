@@ -1,3 +1,7 @@
+2024-02-27 Version: 1.2.0
+- Support API ListCouponUsage.
+
+
 2024-02-27 Version: 1.1.1
 - Generated csharp 2022-12-16 for Agency.
 
