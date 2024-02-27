@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> VSwitchIds { get; set; }
+
         /// <summary>
         /// The ID of the virtual private cloud (VPC) in which you want to deploy the instance.
         /// </summary>

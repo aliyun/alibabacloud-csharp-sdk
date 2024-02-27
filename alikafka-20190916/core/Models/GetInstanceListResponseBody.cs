@@ -34,6 +34,84 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string AllConfig { get; set; }
 
+                [NameInMap("ConfluentConfig")]
+                [Validation(Required=false)]
+                public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig ConfluentConfig { get; set; }
+                public class GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig : TeaModel {
+                    [NameInMap("ConnectCU")]
+                    [Validation(Required=false)]
+                    public int? ConnectCU { get; set; }
+
+                    [NameInMap("ConnectReplica")]
+                    [Validation(Required=false)]
+                    public int? ConnectReplica { get; set; }
+
+                    [NameInMap("ControlCenterCU")]
+                    [Validation(Required=false)]
+                    public int? ControlCenterCU { get; set; }
+
+                    [NameInMap("ControlCenterReplica")]
+                    [Validation(Required=false)]
+                    public int? ControlCenterReplica { get; set; }
+
+                    [NameInMap("ControlCenterStorage")]
+                    [Validation(Required=false)]
+                    public int? ControlCenterStorage { get; set; }
+
+                    [NameInMap("KafkaCU")]
+                    [Validation(Required=false)]
+                    public int? KafkaCU { get; set; }
+
+                    [NameInMap("KafkaReplica")]
+                    [Validation(Required=false)]
+                    public int? KafkaReplica { get; set; }
+
+                    [NameInMap("KafkaRestProxyCU")]
+                    [Validation(Required=false)]
+                    public int? KafkaRestProxyCU { get; set; }
+
+                    [NameInMap("KafkaRestProxyReplica")]
+                    [Validation(Required=false)]
+                    public int? KafkaRestProxyReplica { get; set; }
+
+                    [NameInMap("KafkaStorage")]
+                    [Validation(Required=false)]
+                    public int? KafkaStorage { get; set; }
+
+                    [NameInMap("KsqlCU")]
+                    [Validation(Required=false)]
+                    public int? KsqlCU { get; set; }
+
+                    [NameInMap("KsqlReplica")]
+                    [Validation(Required=false)]
+                    public int? KsqlReplica { get; set; }
+
+                    [NameInMap("KsqlStorage")]
+                    [Validation(Required=false)]
+                    public int? KsqlStorage { get; set; }
+
+                    [NameInMap("SchemaRegistryCU")]
+                    [Validation(Required=false)]
+                    public int? SchemaRegistryCU { get; set; }
+
+                    [NameInMap("SchemaRegistryReplica")]
+                    [Validation(Required=false)]
+                    public int? SchemaRegistryReplica { get; set; }
+
+                    [NameInMap("ZooKeeperCU")]
+                    [Validation(Required=false)]
+                    public int? ZooKeeperCU { get; set; }
+
+                    [NameInMap("ZooKeeperReplica")]
+                    [Validation(Required=false)]
+                    public int? ZooKeeperReplica { get; set; }
+
+                    [NameInMap("ZooKeeperStorage")]
+                    [Validation(Required=false)]
+                    public int? ZooKeeperStorage { get; set; }
+
+                }
+
                 /// <summary>
                 /// The time when the instance was created. Unit: milliseconds.
                 /// </summary>

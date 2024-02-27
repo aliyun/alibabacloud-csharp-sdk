@@ -8,84 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class CreatePrePayOrderRequest : TeaModel {
+    public class CreatePrePayOrderShrinkRequest : TeaModel {
         [NameInMap("ConfluentConfig")]
         [Validation(Required=false)]
-        public CreatePrePayOrderRequestConfluentConfig ConfluentConfig { get; set; }
-        public class CreatePrePayOrderRequestConfluentConfig : TeaModel {
-            [NameInMap("ConnectCU")]
-            [Validation(Required=false)]
-            public int? ConnectCU { get; set; }
-
-            [NameInMap("ConnectReplica")]
-            [Validation(Required=false)]
-            public int? ConnectReplica { get; set; }
-
-            [NameInMap("ControlCenterCU")]
-            [Validation(Required=false)]
-            public int? ControlCenterCU { get; set; }
-
-            [NameInMap("ControlCenterReplica")]
-            [Validation(Required=false)]
-            public int? ControlCenterReplica { get; set; }
-
-            [NameInMap("ControlCenterStorage")]
-            [Validation(Required=false)]
-            public int? ControlCenterStorage { get; set; }
-
-            [NameInMap("KafkaCU")]
-            [Validation(Required=false)]
-            public int? KafkaCU { get; set; }
-
-            [NameInMap("KafkaReplica")]
-            [Validation(Required=false)]
-            public int? KafkaReplica { get; set; }
-
-            [NameInMap("KafkaRestProxyCU")]
-            [Validation(Required=false)]
-            public int? KafkaRestProxyCU { get; set; }
-
-            [NameInMap("KafkaRestProxyReplica")]
-            [Validation(Required=false)]
-            public int? KafkaRestProxyReplica { get; set; }
-
-            [NameInMap("KafkaStorage")]
-            [Validation(Required=false)]
-            public int? KafkaStorage { get; set; }
-
-            [NameInMap("KsqlCU")]
-            [Validation(Required=false)]
-            public int? KsqlCU { get; set; }
-
-            [NameInMap("KsqlReplica")]
-            [Validation(Required=false)]
-            public int? KsqlReplica { get; set; }
-
-            [NameInMap("KsqlStorage")]
-            [Validation(Required=false)]
-            public int? KsqlStorage { get; set; }
-
-            [NameInMap("SchemaRegistryCU")]
-            [Validation(Required=false)]
-            public int? SchemaRegistryCU { get; set; }
-
-            [NameInMap("SchemaRegistryReplica")]
-            [Validation(Required=false)]
-            public int? SchemaRegistryReplica { get; set; }
-
-            [NameInMap("ZooKeeperCU")]
-            [Validation(Required=false)]
-            public int? ZooKeeperCU { get; set; }
-
-            [NameInMap("ZooKeeperReplica")]
-            [Validation(Required=false)]
-            public int? ZooKeeperReplica { get; set; }
-
-            [NameInMap("ZooKeeperStorage")]
-            [Validation(Required=false)]
-            public int? ZooKeeperStorage { get; set; }
-
-        }
+        public string ConfluentConfigShrink { get; set; }
 
         /// <summary>
         /// The deployment mode of the instance. Valid values:
@@ -191,8 +117,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreatePrePayOrderRequestTag> Tag { get; set; }
-        public class CreatePrePayOrderRequestTag : TeaModel {
+        public List<CreatePrePayOrderShrinkRequestTag> Tag { get; set; }
+        public class CreatePrePayOrderShrinkRequestTag : TeaModel {
             /// <summary>
             /// The key of tag N.
             /// 

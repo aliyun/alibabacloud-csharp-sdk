@@ -597,14 +597,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
           * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
           * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
           *
-          * @param request CreatePrePayOrderRequest
+          * @param tmpReq CreatePrePayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreatePrePayOrderResponse
          */
-        public CreatePrePayOrderResponse CreatePrePayOrderWithOptions(CreatePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreatePrePayOrderResponse CreatePrePayOrderWithOptions(CreatePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePrePayOrderShrinkRequest request = new CreatePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployType))
             {
                 query["DeployType"] = request.DeployType;
@@ -676,14 +686,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
           * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
           * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
           *
-          * @param request CreatePrePayOrderRequest
+          * @param tmpReq CreatePrePayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreatePrePayOrderResponse
          */
-        public async Task<CreatePrePayOrderResponse> CreatePrePayOrderWithOptionsAsync(CreatePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreatePrePayOrderResponse> CreatePrePayOrderWithOptionsAsync(CreatePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePrePayOrderShrinkRequest request = new CreatePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployType))
             {
                 query["DeployType"] = request.DeployType;
@@ -3020,6 +3040,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["VSwitchId"] = request.VSwitchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
+            {
+                query["VSwitchIds"] = request.VSwitchIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -3129,6 +3153,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
+            {
+                query["VSwitchIds"] = request.VSwitchIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -4196,14 +4224,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
           *
-          * @param request UpgradePrePayOrderRequest
+          * @param tmpReq UpgradePrePayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return UpgradePrePayOrderResponse
          */
-        public UpgradePrePayOrderResponse UpgradePrePayOrderWithOptions(UpgradePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpgradePrePayOrderResponse UpgradePrePayOrderWithOptions(UpgradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradePrePayOrderShrinkRequest request = new UpgradePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
                 query["DiskSize"] = request.DiskSize;
@@ -4227,6 +4265,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
             {
@@ -4266,14 +4308,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
           *
-          * @param request UpgradePrePayOrderRequest
+          * @param tmpReq UpgradePrePayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return UpgradePrePayOrderResponse
          */
-        public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderWithOptionsAsync(UpgradePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderWithOptionsAsync(UpgradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradePrePayOrderShrinkRequest request = new UpgradePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
                 query["DiskSize"] = request.DiskSize;
@@ -4297,6 +4349,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
             {
