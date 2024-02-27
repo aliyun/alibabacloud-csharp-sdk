@@ -13,6 +13,21 @@
 - Support API ModifyExpressConnectTrafficQosRule.
 
 
+2024-02-27 Version: 6.4.0
+- Support API CreateExpressConnectTrafficQos.
+- Support API CreateExpressConnectTrafficQosQueue.
+- Support API CreateExpressConnectTrafficQosRule.
+- Support API DeleteExpressConnectTrafficQos.
+- Support API DeleteExpressConnectTrafficQosQueue.
+- Support API DeleteExpressConnectTrafficQosRule.
+- Support API DescribeExpressConnectTrafficQos.
+- Support API DescribeExpressConnectTrafficQosQueue.
+- Support API DescribeExpressConnectTrafficQosRule.
+- Support API ModifyExpressConnectTrafficQos.
+- Support API ModifyExpressConnectTrafficQosQueue.
+- Support API ModifyExpressConnectTrafficQosRule.
+
+
 2024-02-01 Version: 6.3.3
 - Update API CreatePublicIpAddressPooladd SecurityProtectionTypes param.
 - Update API DescribePhysicalConnectionsupdate response param.
