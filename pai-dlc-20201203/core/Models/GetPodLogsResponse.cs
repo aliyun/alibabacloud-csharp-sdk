@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetPodLogsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetPodLogsResponseBody Body { get; set; }
 
     }
