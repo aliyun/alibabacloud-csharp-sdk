@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public string Portrait { get; set; }
 
+            [NameInMap("Preview")]
+            [Validation(Required=false)]
+            public string Preview { get; set; }
+
             [NameInMap("SupportedResolutions")]
             [Validation(Required=false)]
             public QueryAvatarResponseBodyDataSupportedResolutions SupportedResolutions { get; set; }

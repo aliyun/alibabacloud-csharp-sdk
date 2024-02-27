@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
     public class Create2dAvatarResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Create2dAvatarResponseBody Body { get; set; }
 
     }
