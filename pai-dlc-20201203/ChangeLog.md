@@ -8,6 +8,11 @@
 - Update API ListJobSanityCheckResults: update param JobId.
 
 
+2024-02-27 Version: 1.5.4
+- Update API GetJobSanityCheckResult: update param JobId.
+- Update API ListJobSanityCheckResults: update param JobId.
+
+
 2024-01-24 Version: 1.5.3
 - Generated csharp 2020-12-03 for pai-dlc.
 
