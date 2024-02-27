@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteTableListResponseBody : TeaModel {
         /// <summary>
-        /// The page number.
+        /// The ID of the route table.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// The type of the cloud resource with which the route table is associated. Valid values:
+        /// 
+        /// *   **VSwitch**: vSwitch
+        /// *   **Gateway**: IPv4 gateway
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the vRouter to which the route table belongs.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed information about the route tables.
+        /// The description of the route table.
         /// </summary>
         [NameInMap("RouterTableList")]
         [Validation(Required=false)]
@@ -42,24 +45,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListType> RouterTableListType { get; set; }
             public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType : TeaModel {
                 /// <summary>
-                /// The type of the cloud resource with which the route table is associated. Valid values:
-                /// 
-                /// *   **VSwitch**: a vSwitch
-                /// *   **Gateway**: an IPv4 gateway
+                /// The tags.
                 /// </summary>
                 [NameInMap("AssociateType")]
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
                 /// <summary>
-                /// The time when the route table was created.
+                /// The type of the router to which the route table belongs. Valid values:
+                /// 
+                /// *   **VRouter**
+                /// *   **VBR**
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the route table.
+                /// The information about the vSwitches.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -79,25 +82,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the route table belongs.
+                /// The value of tag N added to the resource.
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the route table belongs.
+                /// The detailed information about the IPv4 gateway.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// Whether to receive the propagation routes. Valid Values:
+                /// 
+                /// *   **True**: The propagation route is received.
+                /// 
+                /// *   **False**: The propagation route is not received.
+                /// </summary>
                 [NameInMap("RoutePropagationEnable")]
                 [Validation(Required=false)]
                 public bool? RoutePropagationEnable { get; set; }
 
                 /// <summary>
-                /// The ID of the route table.
+                /// The key of tag N added to the resource.
                 /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
@@ -111,45 +121,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RouteTableName { get; set; }
 
                 /// <summary>
-                /// The type of the route table. Valid values:
-                /// 
-                /// *   **Custom**
-                /// *   **System**
+                /// The ID of the vSwitch.
                 /// </summary>
                 [NameInMap("RouteTableType")]
                 [Validation(Required=false)]
                 public string RouteTableType { get; set; }
 
                 /// <summary>
-                /// The ID of the router to which the route table belongs.
+                /// The tag added to the route table.
                 /// </summary>
                 [NameInMap("RouterId")]
                 [Validation(Required=false)]
                 public string RouterId { get; set; }
 
                 /// <summary>
-                /// The type of the router to which the route table belongs. Valid values:
-                /// 
-                /// *   **VRouter**
-                /// *   **VBR**
+                /// The detailed information about the IPv4 gateway.
                 /// </summary>
                 [NameInMap("RouterType")]
                 [Validation(Required=false)]
                 public string RouterType { get; set; }
 
                 /// <summary>
-                /// The status of the route table. Valid values:
-                /// 
-                /// *   **Pending**
-                /// *   **Available**
-                /// *   **Deleting**
+                /// The name of the route table.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tag added to the route table.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -160,14 +160,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag> Tag { get; set; }
                     public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N added to the resource.
+                        /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+                        /// 
+                        /// The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N added to the resource.
+                        /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+                        /// 
+                        /// The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -178,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The information about the vSwitches.
+                /// The vSwitch IDs.
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -191,7 +195,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ID of the VPC to which the route table belongs.
+                /// The ID of the resource group to which the route table belongs.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -202,7 +206,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The ID of the Alibaba Cloud account to which the route table belongs.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

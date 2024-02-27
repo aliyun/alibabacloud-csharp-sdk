@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string PrefixListDescription { get; set; }
 
+        /// <summary>
+        /// The CIDR block information specified in the prefix list.
+        /// </summary>
         [NameInMap("PrefixListEntries")]
         [Validation(Required=false)]
         public List<CreateVpcPrefixListRequestPrefixListEntries> PrefixListEntries { get; set; }
@@ -119,14 +122,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcPrefixListRequestTag> Tag { get; set; }
         public class CreateVpcPrefixListRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

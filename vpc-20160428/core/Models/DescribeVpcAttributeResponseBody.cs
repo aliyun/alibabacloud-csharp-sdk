@@ -30,16 +30,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
+                /// The ID of the account to which the CEN instance belongs.
                 /// </summary>
                 [NameInMap("CenOwnerId")]
                 [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
 
                 /// <summary>
-                /// The status of the CEN instance to which the VPC is attached.
+                /// The status of the CEN instance.
                 /// 
-                /// **Attached** is returned only if the VPC is attached to a CEN instance.
+                /// **Attached** is returned only when the VPC is attached to a CEN instance.
                 /// </summary>
                 [NameInMap("CenStatus")]
                 [Validation(Required=false)]
@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The propagation source associated with the VPC.
+        /// </summary>
         [NameInMap("AssociatedPropagationSources")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyAssociatedPropagationSources AssociatedPropagationSources { get; set; }
@@ -57,22 +60,46 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> AssociatedPropagationSources { get; set; }
             public class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources : TeaModel {
+                /// <summary>
+                /// Indicates whether to propagate the routes of the VPC.
+                /// </summary>
                 [NameInMap("RoutePropagated")]
                 [Validation(Required=false)]
                 public bool? RoutePropagated { get; set; }
 
+                /// <summary>
+                /// The instance ID of the propagation source.
+                /// </summary>
                 [NameInMap("SourceInstanceId")]
                 [Validation(Required=false)]
                 public string SourceInstanceId { get; set; }
 
+                /// <summary>
+                /// The ID of the account to which the propagation source belongs.
+                /// </summary>
                 [NameInMap("SourceOwnerId")]
                 [Validation(Required=false)]
                 public long? SourceOwnerId { get; set; }
 
+                /// <summary>
+                /// The type of the propagation source. Valid values:
+                /// 
+                /// - **CEN**
+                /// - **VPN**
+                /// - **TR**
+                /// - **ECR**
+                /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
+                /// <summary>
+                /// The status indicating whether the propagation source is attached to the VPC. Valid values:
+                /// 
+                /// - **Attaching**
+                /// - **Attached**
+                /// - **Detaching**
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -110,14 +137,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType> CloudResourceSetType { get; set; }
             public class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType : TeaModel {
                 /// <summary>
-                /// The number of resources deployed in the VPC.
+                /// The number of resources in the VPC.
                 /// </summary>
                 [NameInMap("ResourceCount")]
                 [Validation(Required=false)]
                 public int? ResourceCount { get; set; }
 
                 /// <summary>
-                /// The type of resources deployed in the VPC. Valid values:
+                /// The type of resource deployed in the VPC. Valid values: Valid values:
                 /// 
                 /// *   **VSwitch**
                 /// *   **VRouter**
@@ -197,14 +224,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Ipv6CidrBlock { get; set; }
 
                 /// <summary>
-                /// The type of the IPv6 CIDR block. Valid values:
+                /// The IPv6 CIDR block type of the VPC. Valid values:
                 /// 
                 /// *   **BGP** (default)
                 /// *   **ChinaMobile**
                 /// *   **ChinaUnicom**
                 /// *   **ChinaTelecom**
                 /// 
-                /// >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+                /// >  If you are allowed to use single-ISP bandwidth, valid values are **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**
                 /// </summary>
                 [NameInMap("Ipv6Isp")]
                 [Validation(Required=false)]
@@ -297,14 +324,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpcAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpcAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The key of tag N added to the resource.
+                /// The key of tag N.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag N added to the resource.
+                /// The value of tag N.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

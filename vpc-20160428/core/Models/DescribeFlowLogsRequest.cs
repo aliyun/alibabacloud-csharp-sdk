@@ -123,6 +123,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The list of tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeFlowLogsRequestTags> Tags { get; set; }

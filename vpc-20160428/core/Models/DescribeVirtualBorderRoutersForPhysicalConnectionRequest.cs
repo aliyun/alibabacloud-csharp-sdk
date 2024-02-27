@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest : TeaModel {
         /// <summary>
-        /// 25425
+        /// The filter keys.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> Filter { get; set; }
         public class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter : TeaModel {
             /// <summary>
-            /// The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
+            /// The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
             /// 
             /// *   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.
             /// *   **VbrId**: filter VBRs by ID.
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
+            /// The filter value for the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

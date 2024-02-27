@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// 
+        /// *   **true**: performs a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -54,6 +60,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string EntryType { get; set; }
 
+            /// <summary>
+            /// The IP version. Valid values:
+            /// 
+            /// *   **IPv4** (default)
+            /// *   **IPv6**
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -77,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// The rule action that determines whether to allow outbound traffic. Valid values:
+            /// The action to be performed on network traffic that matches the rule. Valid values:
             /// 
             /// *   **accept**
             /// *   **drop**
@@ -97,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// The protocol type. Valid values:
+            /// The protocol. Valid values:
             /// 
             /// *   **icmp**
             /// *   **gre**
@@ -134,6 +146,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string EntryType { get; set; }
 
+            /// <summary>
+            /// The IP version. Valid values:
+            /// 
+            /// *   **IPv4** (default)
+            /// *   **IPv6**
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -157,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// The rule action that determines whether to allow inbound requests. Valid values:
+            /// The action to be performed on network traffic that matches the rule. Valid values:
             /// 
             /// *   **accept**
             /// *   **drop**
@@ -177,7 +195,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// The protocol type. Valid values:
+            /// The protocol. Valid values:
             /// 
             /// *   **icmp**
             /// *   **gre**

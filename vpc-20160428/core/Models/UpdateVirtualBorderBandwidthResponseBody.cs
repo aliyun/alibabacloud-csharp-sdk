@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateVirtualBorderBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// The error code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the maximum bandwidth value is updated.
+        /// Indicates whether the operation is successful. Valid values:
         /// 
         /// *   **true**
         /// *   **false**

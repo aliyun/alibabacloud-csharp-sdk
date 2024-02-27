@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeHaVipsResponseBodyHaVipsHaVip> HaVip { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsHaVip : TeaModel {
                 /// <summary>
-                /// The elastic IP address (EIP) associated with the HAVIP.
+                /// The list of EIPs associated with the HAVIP.
                 /// </summary>
                 [NameInMap("AssociatedEipAddresses")]
                 [Validation(Required=false)]
@@ -36,15 +36,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The type of the instance with which the HAVIP is associated. Valid values:
                 /// 
-                /// *   **EcsInstance**: an ECS instance
-                /// *   **NetworkInterface**: an ENI
+                /// *   **EcsInstance**: Elastic Compute Service (ECS) instance
+                /// *   **NetworkInterface**: elastic network interface (ENI)
                 /// </summary>
                 [NameInMap("AssociatedInstanceType")]
                 [Validation(Required=false)]
                 public string AssociatedInstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the instance with which the HAVIP is associated.
+                /// The information about the instance associated with the HAVIP.
                 /// </summary>
                 [NameInMap("AssociatedInstances")]
                 [Validation(Required=false)]
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the HAVIP. Valid values:
                 /// 
-                /// *   **Creating**
-                /// *   **Available**
+                /// *   **Creating**: The server group is being created.
+                /// *   **Available**: The FULLNAT entry is available.
                 /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of tags.
+                /// The tag list.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeHaVipsResponseBodyHaVipsHaVipTagsTag> Tag { get; set; }
                     public class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of tag N added to the resource.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -178,28 +178,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

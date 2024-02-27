@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcPrefixListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned.
+        /// The number of entries.
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public long? Count { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the prefix list.
+            /// The prefix list ID.
             /// </summary>
             [NameInMap("PrefixListId")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The type of the associated resource. Valid values:
             /// 
-            /// *   **vpcRouteTable** :VPC route table.
+            /// *   **vpcRouteTable**: virtual private cloud (VPC) route table.
             /// *   **trRouteTable**: route table of a transit router.
             /// </summary>
             [NameInMap("ResourceType")]
@@ -102,14 +102,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

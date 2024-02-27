@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+                /// The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The IP version. Valid values:
                 /// 
-                /// *   **IPv4**
-                /// *   **IPv6**
+                /// *   **ipv4**
+                /// *   **ipv6**
                 /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// The information about the next hop.
+                /// The information about the next hops.
                 /// </summary>
                 [NameInMap("NextHops")]
                 [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// *   **0**: unavailable
                         /// *   **1**: available
                         /// 
-                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// >  This parameter is returned when the next hop type is set to **RouterInterface**.
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string NextHopId { get; set; }
 
                         /// <summary>
-                        /// The region ID of the next hop.
+                        /// The ID of the region where the next hop is deployed.
                         /// 
-                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// >  This parameter is returned when the next hop type is set to **RouterInterface**.
                         /// </summary>
                         [NameInMap("NextHopRegionId")]
                         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo NextHopRelatedInfo { get; set; }
                         public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo : TeaModel {
                             /// <summary>
-                            /// The ID of the instance associated with the next hop.
+                            /// The ID of the instance that is associated with the next hop.
                             /// </summary>
                             [NameInMap("InstanceId")]
                             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                             public string InstanceType { get; set; }
 
                             /// <summary>
-                            /// The region ID of the instance associated with the next hop.
+                            /// The region ID of the instance associated with the next hop. Valid values:
                             /// </summary>
                             [NameInMap("RegionId")]
                             [Validation(Required=false)]
@@ -144,11 +144,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The type of the next hop. Valid values:
                         /// 
-                        /// *   **Instance**: an ECS instance
-                        /// *   **HaVip**: an HAVIP
+                        /// *   **Instance**: an Elastic Compute Service (ECS) instance
+                        /// *   **HaVip**: a high-availability virtual IP address (HAVIP)
                         /// *   **VpnGateway**: a VPN gateway
                         /// *   **NatGateway**: a NAT gateway
-                        /// *   **NetworkInterface**: a secondary ENI
+                        /// *   **NetworkInterface**: a secondary elastic network interface (ENI)
                         /// *   **RouterInterface**: a router interface
                         /// *   **IPv6Gateway**: an IPv6 gateway
                         /// *   **Attachment**: a transit router
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The weight of the route.
                         /// 
-                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// >  This parameter is returned when the next hop type is set to **RouterInterface**.
                         /// </summary>
                         [NameInMap("Weight")]
                         [Validation(Required=false)]
@@ -170,6 +170,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The route origin. Valid values：
+                /// * **RoutePropagation**: The route is created by a dynamic propagation source.
+                /// * **SystemCreate**: The route is created by the system.
+                /// * **CustomCreate**: The route is created by a user.
+                /// </summary>
                 [NameInMap("Origin")]
                 [Validation(Required=false)]
                 public string Origin { get; set; }
@@ -205,11 +211,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ServiceType { get; set; }
 
                 /// <summary>
-                /// The status of the route. Valid values:
+                /// The route status. Valid values:
                 /// 
                 /// *   **Pending**
                 /// *   **Available**
-                /// *   **Modifying**
+                /// *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

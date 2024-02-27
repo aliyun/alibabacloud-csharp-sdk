@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The resource group ID.
         /// 
         /// For more information about resource group, see [What is Resource Management?](~~94475~~)
         /// </summary>
@@ -165,25 +165,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag list.
+        /// The tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateVirtualBorderRouterRequestTags> Tags { get; set; }
         public class CreateVirtualBorderRouterRequestTags : TeaModel {
             /// <summary>
-            /// The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+            /// The tag key. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. You can specify at most 20 tag values. It can be an empty string.
+            /// The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

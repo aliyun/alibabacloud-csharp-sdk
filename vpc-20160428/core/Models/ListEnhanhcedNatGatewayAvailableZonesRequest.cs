@@ -19,14 +19,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The filter information. You can specify a filter key and a filter value.
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListEnhanhcedNatGatewayAvailableZonesRequestFilter> Filter { get; set; }
         public class ListEnhanhcedNatGatewayAvailableZonesRequestFilter : TeaModel {
+            /// <summary>
+            /// The filter key. Only **PrivateLinkEnabled** is supported.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the filter key.
+            /// 
+            /// >  If the filter key is set to **PrivateLinkEnabled**, you must specify a filter value. Valid values: **true** and **false**.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

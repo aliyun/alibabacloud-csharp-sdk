@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable the traffic mirror session. Valid values:
         /// 
-        /// *   **false** (default): does not enable the traffic mirror session.
+        /// *   **false**: does not enable the traffic mirror session.
         /// *   **true**: enables the traffic mirror session.
         /// </summary>
         [NameInMap("Enabled")]
@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags of the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTrafficMirrorSessionsRequestTags> Tags { get; set; }
@@ -106,6 +109,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string TrafficMirrorFilterId { get; set; }
 
+        /// <summary>
+        /// The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.
+        /// </summary>
         [NameInMap("TrafficMirrorSessionIds")]
         [Validation(Required=false)]
         public List<string> TrafficMirrorSessionIds { get; set; }

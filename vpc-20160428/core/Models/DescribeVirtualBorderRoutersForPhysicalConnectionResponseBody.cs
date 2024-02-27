@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BandwidthStatus { get; set; }
 
                 /// <summary>
-                /// The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).
+                /// The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
                 /// </summary>
                 [NameInMap("CircuitCode")]
                 [Validation(Required=false)]
@@ -118,19 +118,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalIpv6GatewayIp { get; set; }
 
                 /// <summary>
-                /// The status of the VBR that is associated with the Express Connect circuit. Valid values:
+                /// The status of the VBR associated with the Express Connect circuit. Valid values:
                 /// 
-                /// *   **Normal**: The VBR is running as expected.
-                /// *   **FinancialLocked**: The VBR is locked due to overdue payments.
+                /// *   **Normal**
+                /// *   **FinancialLocked**
                 /// </summary>
                 [NameInMap("PConnVbrBussinessStatus")]
                 [Validation(Required=false)]
                 public string PConnVbrBussinessStatus { get; set; }
 
                 /// <summary>
-                /// The billing method of the VBR that is associated with the Express Connect circuit. Valid values:
+                /// The billing method of the VBR. Valid values:
                 /// 
-                /// *   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
+                /// *   **PrePaid**: subscription. If you choose this billing method, make sure that your Apsara Stack account supports balance payments or credit payments.
                 /// *   **PostPaid**: pay-as-you-go.
                 /// </summary>
                 [NameInMap("PConnVbrChargeType")]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PConnVbrChargeType { get; set; }
 
                 /// <summary>
-                /// The time when the VBR that is associated with the Express Connect circuit expires.
+                /// The time when the VBR associated with the Express Connect circuit expires.
                 /// </summary>
                 [NameInMap("PConnVbrExpireTime")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The IPv6 address of the gateway device on the user side.
                 /// 
-                /// This parameter is required if you create a VBR for the owner of the Express Connect circuit. You can leave this parameter empty if you create a VBR for other Alibaba Cloud accounts.
+                /// This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.
                 /// </summary>
                 [NameInMap("PeerIpv6GatewayIp")]
                 [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PeeringIpv6SubnetMask { get; set; }
 
                 /// <summary>
-                /// The subnet mask for the IPv4 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
+                /// The subnet mask of the IPv4 addresses configured on the user side and Alibaba Cloud side.
                 /// 
                 /// The two IPv4 addresses must fall within the same subnet.
                 /// </summary>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PeeringSubnetMask { get; set; }
 
                 /// <summary>
-                /// The time when the status of the VBR last changed from Terminated to Active.
+                /// The last time when the status of the VBR changed from Terminated to Active.
                 /// </summary>
                 [NameInMap("RecoveryTime")]
                 [Validation(Required=false)]
@@ -188,26 +188,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The status of the VBR. Valid values:
                 /// 
-                /// *   **Unconfirmed**: The VBR is pending confirmation from other users.
-                /// *   **Active**: The VBR is normal.
-                /// *   **Terminating**: The VBR is being disabled.
-                /// *   **Terminated**: The VBR is disabled.
-                /// *   **Recovering**: The VBR is being recovered.
-                /// *   **Deleting**: The VBR is being deleted.
+                /// *   **unconfirmed**
+                /// *   **active**
+                /// *   **terminating**
+                /// *   **terminated**
+                /// *   **recovering**
+                /// *   **deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time when the VBR was last disabled.
+                /// The last time when the VBR was disabled.
                 /// </summary>
                 [NameInMap("TerminationTime")]
                 [Validation(Required=false)]
                 public string TerminationTime { get; set; }
 
                 /// <summary>
-                /// The type of the VBR.
+                /// The VBR type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -223,14 +223,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The ID of the Alibaba Cloud account to which the VBR belongs.
                 /// 
-                /// If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is left empty.
+                /// If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.
                 /// </summary>
                 [NameInMap("VbrOwnerUid")]
                 [Validation(Required=false)]
                 public long? VbrOwnerUid { get; set; }
 
                 /// <summary>
-                /// The virtual local area network (VLAN) ID of the VBR.
+                /// The VLAN ID of the VBR.
                 /// </summary>
                 [NameInMap("VlanId")]
                 [Validation(Required=false)]

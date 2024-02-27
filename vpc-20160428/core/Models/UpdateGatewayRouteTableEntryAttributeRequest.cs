@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// The ID of the gateway route table that you want to modify.
+        /// </summary>
         [NameInMap("GatewayRouteTableId")]
         [Validation(Required=false)]
         public string GatewayRouteTableId { get; set; }

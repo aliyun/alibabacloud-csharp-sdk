@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpcPrefixListRequest : TeaModel {
+        /// <summary>
+        /// The information about CIDR blocks to be added to the prefix list.
+        /// </summary>
         [NameInMap("AddPrefixListEntry")]
         [Validation(Required=false)]
         public List<ModifyVpcPrefixListRequestAddPrefixListEntry> AddPrefixListEntry { get; set; }
@@ -101,6 +104,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The information about CIDR blocks to be deleted to the prefix list.
+        /// </summary>
         [NameInMap("RemovePrefixListEntry")]
         [Validation(Required=false)]
         public List<ModifyVpcPrefixListRequestRemovePrefixListEntry> RemovePrefixListEntry { get; set; }

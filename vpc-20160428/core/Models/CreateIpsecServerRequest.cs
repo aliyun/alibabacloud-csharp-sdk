@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IkeConfig { get; set; }
 
         /// <summary>
-        /// The IPsec server name.
+        /// The name of the IPsec server.
         /// 
-        /// The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 100 characters in length.
         /// </summary>
         [NameInMap("IpSecServerName")]
         [Validation(Required=false)]
@@ -109,7 +109,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Psk { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable pre-shared key authentication. If you set the value to **true**, pre-shared key authentication is enabled.
+        /// Indicates whether pre-shared key authentication is enabled. If you set the value to **true**, pre-shared key authentication is enabled.
+        /// 
+        /// >  This parameter is required.
         /// </summary>
         [NameInMap("PskEnabled")]
         [Validation(Required=false)]

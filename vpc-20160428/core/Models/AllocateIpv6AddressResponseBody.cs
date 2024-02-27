@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6AddressResponseBody : TeaModel {
+        /// <summary>
+        /// The IPv6 address.
+        /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public string Ipv6Address { get; set; }
 
+        /// <summary>
+        /// The ID of the IPv6 address.
+        /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

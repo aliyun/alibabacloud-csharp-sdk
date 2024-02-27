@@ -50,15 +50,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// Indicates whether the traffic mirror session was enabled.
             /// 
-            /// *   **false**: the traffic mirror session was disabled. This is the default value.
-            /// *   **true**: the traffic mirror session was enabled.
+            /// *   **false** 
+            /// *   **true**
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// The maximum transmission unit (MTU).
+            /// The maximum transmission unit.
             /// </summary>
             [NameInMap("PacketLength")]
             [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the mirrored traffic belongs.
+            /// The ID of the resource group to which the traffic mirror session belongs.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The list of tags.
+            /// The tag list.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// The ID of the traffic mirror filter.
+            /// The ID of the filter.
             /// </summary>
             [NameInMap("TrafficMirrorFilterId")]
             [Validation(Required=false)]
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The status of the traffic mirror session.
             /// 
-            /// *   **Normal**: active
-            /// *   **FinancialLocked**: locked due to overdue payments
+            /// *   **Normal**
+            /// *   **FinancialLocked**
             /// </summary>
             [NameInMap("TrafficMirrorSessionBusinessStatus")]
             [Validation(Required=false)]
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorSessionStatus { get; set; }
 
             /// <summary>
-            /// The ID of the mirror source.
+            /// The ID of the traffic mirror source.
             /// </summary>
             [NameInMap("TrafficMirrorSourceIds")]
             [Validation(Required=false)]
             public List<string> TrafficMirrorSourceIds { get; set; }
 
             /// <summary>
-            /// The ID of the mirror destination.
+            /// The ID of the traffic mirror destination.
             /// </summary>
             [NameInMap("TrafficMirrorTargetId")]
             [Validation(Required=false)]
@@ -170,8 +170,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The type of the traffic mirror destination. Valid values:
             /// 
-            /// *   **NetworkInterface**: an ENI
-            /// *   **SLB**: an internal-facing SLB instance
+            /// *   **NetworkInterface**: an elastic network interface (ENI)
+            /// *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
             /// </summary>
             [NameInMap("TrafficMirrorTargetType")]
             [Validation(Required=false)]

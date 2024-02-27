@@ -7804,6 +7804,492 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await CreateExpressCloudConnectionWithOptionsAsync(request, runtime);
         }
 
+        public CreateExpressConnectTrafficQosResponse CreateExpressConnectTrafficQosWithOptions(CreateExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
+            {
+                query["QosDescription"] = request.QosDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosName))
+            {
+                query["QosName"] = request.QosName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateExpressConnectTrafficQosResponse> CreateExpressConnectTrafficQosWithOptionsAsync(CreateExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
+            {
+                query["QosDescription"] = request.QosDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosName))
+            {
+                query["QosName"] = request.QosName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateExpressConnectTrafficQosResponse CreateExpressConnectTrafficQos(CreateExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateExpressConnectTrafficQosWithOptions(request, runtime);
+        }
+
+        public async Task<CreateExpressConnectTrafficQosResponse> CreateExpressConnectTrafficQosAsync(CreateExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateExpressConnectTrafficQosWithOptionsAsync(request, runtime);
+        }
+
+        public CreateExpressConnectTrafficQosQueueResponse CreateExpressConnectTrafficQosQueueWithOptions(CreateExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthPercent))
+            {
+                query["BandwidthPercent"] = request.BandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueDescription))
+            {
+                query["QueueDescription"] = request.QueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueType))
+            {
+                query["QueueType"] = request.QueueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateExpressConnectTrafficQosQueueResponse> CreateExpressConnectTrafficQosQueueWithOptionsAsync(CreateExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthPercent))
+            {
+                query["BandwidthPercent"] = request.BandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueDescription))
+            {
+                query["QueueDescription"] = request.QueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueType))
+            {
+                query["QueueType"] = request.QueueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateExpressConnectTrafficQosQueueResponse CreateExpressConnectTrafficQosQueue(CreateExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateExpressConnectTrafficQosQueueWithOptions(request, runtime);
+        }
+
+        public async Task<CreateExpressConnectTrafficQosQueueResponse> CreateExpressConnectTrafficQosQueueAsync(CreateExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateExpressConnectTrafficQosQueueWithOptionsAsync(request, runtime);
+        }
+
+        public CreateExpressConnectTrafficQosRuleResponse CreateExpressConnectTrafficQosRuleWithOptions(CreateExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstCidr))
+            {
+                query["DstCidr"] = request.DstCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIPv6Cidr))
+            {
+                query["DstIPv6Cidr"] = request.DstIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPortRange))
+            {
+                query["DstPortRange"] = request.DstPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchDscp))
+            {
+                query["MatchDscp"] = request.MatchDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemarkingDscp))
+            {
+                query["RemarkingDscp"] = request.RemarkingDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCidr))
+            {
+                query["SrcCidr"] = request.SrcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIPv6Cidr))
+            {
+                query["SrcIPv6Cidr"] = request.SrcIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPortRange))
+            {
+                query["SrcPortRange"] = request.SrcPortRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateExpressConnectTrafficQosRuleResponse> CreateExpressConnectTrafficQosRuleWithOptionsAsync(CreateExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstCidr))
+            {
+                query["DstCidr"] = request.DstCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIPv6Cidr))
+            {
+                query["DstIPv6Cidr"] = request.DstIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPortRange))
+            {
+                query["DstPortRange"] = request.DstPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchDscp))
+            {
+                query["MatchDscp"] = request.MatchDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemarkingDscp))
+            {
+                query["RemarkingDscp"] = request.RemarkingDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCidr))
+            {
+                query["SrcCidr"] = request.SrcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIPv6Cidr))
+            {
+                query["SrcIPv6Cidr"] = request.SrcIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPortRange))
+            {
+                query["SrcPortRange"] = request.SrcPortRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExpressConnectTrafficQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateExpressConnectTrafficQosRuleResponse CreateExpressConnectTrafficQosRule(CreateExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateExpressConnectTrafficQosRuleWithOptions(request, runtime);
+        }
+
+        public async Task<CreateExpressConnectTrafficQosRuleResponse> CreateExpressConnectTrafficQosRuleAsync(CreateExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateExpressConnectTrafficQosRuleWithOptionsAsync(request, runtime);
+        }
+
         public CreateFailoverTestJobResponse CreateFailoverTestJobWithOptions(CreateFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7959,7 +8445,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+          * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
           * *   If the flow log is in the **Activating** state, the flow log is being created.
           * *   If the flow log is in the **Active** state, the flow log is created and started.
           *
@@ -8055,7 +8541,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+          * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
           * *   If the flow log is in the **Activating** state, the flow log is being created.
           * *   If the flow log is in the **Active** state, the flow log is created and started.
           *
@@ -8151,7 +8637,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+          * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
           * *   If the flow log is in the **Activating** state, the flow log is being created.
           * *   If the flow log is in the **Active** state, the flow log is created and started.
           *
@@ -8165,7 +8651,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+          * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
           * *   If the flow log is in the **Activating** state, the flow log is being created.
           * *   If the flow log is in the **Active** state, the flow log is created and started.
           *
@@ -9746,10 +10232,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+          * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-          * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
           *
           * @param request CreateIpsecServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9828,10 +10315,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+          * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-          * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
           *
           * @param request CreateIpsecServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9910,10 +10398,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+          * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-          * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
           *
           * @param request CreateIpsecServerRequest
           * @return CreateIpsecServerResponse
@@ -9926,10 +10415,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
           * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+          * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+          * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
           *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-          * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
           *
           * @param request CreateIpsecServerRequest
           * @return CreateIpsecServerResponse
@@ -12805,7 +13295,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -12962,7 +13451,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -13119,7 +13607,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -13138,7 +13625,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)
           * When you call this operation, take note of the following limits:
           * *   You can create only one pair of interfaces to be connected between two routers.
           * *   You can create a maximum of five router interfaces for a router.
@@ -15149,7 +15635,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **active** state by default.
+          * After you create a VBR, the VBR is in the **active** state.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15267,7 +15753,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **active** state by default.
+          * After you create a VBR, the VBR is in the **active** state.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15385,7 +15871,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **active** state by default.
+          * After you create a VBR, the VBR is in the **active** state.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @return CreateVirtualBorderRouterResponse
@@ -15397,7 +15883,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * When you create a VBR, the VBR is in the **active** state by default.
+          * After you create a VBR, the VBR is in the **active** state.
           *
           * @param request CreateVirtualBorderRouterRequest
           * @return CreateVirtualBorderRouterResponse
@@ -15848,6 +16334,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await CreateVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+          *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+          *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+          * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+          *
+          * @param request CreateVpcGatewayEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcGatewayEndpointResponse
+         */
         public CreateVpcGatewayEndpointResponse CreateVpcGatewayEndpointWithOptions(CreateVpcGatewayEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15927,6 +16423,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<CreateVpcGatewayEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+          *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+          *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+          * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+          *
+          * @param request CreateVpcGatewayEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcGatewayEndpointResponse
+         */
         public async Task<CreateVpcGatewayEndpointResponse> CreateVpcGatewayEndpointWithOptionsAsync(CreateVpcGatewayEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16006,12 +16512,30 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<CreateVpcGatewayEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+          *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+          *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+          * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+          *
+          * @param request CreateVpcGatewayEndpointRequest
+          * @return CreateVpcGatewayEndpointResponse
+         */
         public CreateVpcGatewayEndpointResponse CreateVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVpcGatewayEndpointWithOptions(request, runtime);
         }
 
+        /**
+          * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+          *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+          *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+          * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+          *
+          * @param request CreateVpcGatewayEndpointRequest
+          * @return CreateVpcGatewayEndpointResponse
+         */
         public async Task<CreateVpcGatewayEndpointResponse> CreateVpcGatewayEndpointAsync(CreateVpcGatewayEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16019,7 +16543,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+          * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
           *
           * @param request CreateVpcPrefixListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16105,7 +16629,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+          * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
           *
           * @param request CreateVpcPrefixListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16191,7 +16715,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+          * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
           *
           * @param request CreateVpcPrefixListRequest
           * @return CreateVpcPrefixListResponse
@@ -16203,7 +16727,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+          * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
           *
           * @param request CreateVpcPrefixListRequest
           * @return CreateVpcPrefixListResponse
@@ -18630,6 +19154,372 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDhcpOptionsSetWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteExpressConnectTrafficQosResponse DeleteExpressConnectTrafficQosWithOptions(DeleteExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosResponse> DeleteExpressConnectTrafficQosWithOptionsAsync(DeleteExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteExpressConnectTrafficQosResponse DeleteExpressConnectTrafficQos(DeleteExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteExpressConnectTrafficQosWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosResponse> DeleteExpressConnectTrafficQosAsync(DeleteExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteExpressConnectTrafficQosWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteExpressConnectTrafficQosQueueResponse DeleteExpressConnectTrafficQosQueueWithOptions(DeleteExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosQueueResponse> DeleteExpressConnectTrafficQosQueueWithOptionsAsync(DeleteExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteExpressConnectTrafficQosQueueResponse DeleteExpressConnectTrafficQosQueue(DeleteExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteExpressConnectTrafficQosQueueWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosQueueResponse> DeleteExpressConnectTrafficQosQueueAsync(DeleteExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteExpressConnectTrafficQosQueueWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteExpressConnectTrafficQosRuleResponse DeleteExpressConnectTrafficQosRuleWithOptions(DeleteExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosRuleResponse> DeleteExpressConnectTrafficQosRuleWithOptionsAsync(DeleteExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectTrafficQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteExpressConnectTrafficQosRuleResponse DeleteExpressConnectTrafficQosRule(DeleteExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteExpressConnectTrafficQosRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteExpressConnectTrafficQosRuleResponse> DeleteExpressConnectTrafficQosRuleAsync(DeleteExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteExpressConnectTrafficQosRuleWithOptionsAsync(request, runtime);
         }
 
         public DeleteFailoverTestJobResponse DeleteFailoverTestJobWithOptions(DeleteFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -24078,7 +24968,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
           * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+          * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24139,7 +25029,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
           * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+          * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24200,7 +25090,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
           * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+          * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @return DeleteVirtualBorderRouterResponse
@@ -24215,7 +25105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * Before you call this operation, take note of the following limits:
           * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
           * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-          * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+          * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
           *
           * @param request DeleteVirtualBorderRouterRequest
           * @return DeleteVirtualBorderRouterResponse
@@ -27372,6 +28262,412 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEipSegmentWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeExpressConnectTrafficQosResponse DescribeExpressConnectTrafficQosWithOptions(DescribeExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosIdList))
+            {
+                query["QosIdList"] = request.QosIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosNameList))
+            {
+                query["QosNameList"] = request.QosNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosResponse> DescribeExpressConnectTrafficQosWithOptionsAsync(DescribeExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosIdList))
+            {
+                query["QosIdList"] = request.QosIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosNameList))
+            {
+                query["QosNameList"] = request.QosNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeExpressConnectTrafficQosResponse DescribeExpressConnectTrafficQos(DescribeExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeExpressConnectTrafficQosWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosResponse> DescribeExpressConnectTrafficQosAsync(DescribeExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeExpressConnectTrafficQosWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeExpressConnectTrafficQosQueueResponse DescribeExpressConnectTrafficQosQueueWithOptions(DescribeExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueIdList))
+            {
+                query["QueueIdList"] = request.QueueIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueNameList))
+            {
+                query["QueueNameList"] = request.QueueNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosQueueResponse> DescribeExpressConnectTrafficQosQueueWithOptionsAsync(DescribeExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueIdList))
+            {
+                query["QueueIdList"] = request.QueueIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueNameList))
+            {
+                query["QueueNameList"] = request.QueueNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeExpressConnectTrafficQosQueueResponse DescribeExpressConnectTrafficQosQueue(DescribeExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeExpressConnectTrafficQosQueueWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosQueueResponse> DescribeExpressConnectTrafficQosQueueAsync(DescribeExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeExpressConnectTrafficQosQueueWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeExpressConnectTrafficQosRuleResponse DescribeExpressConnectTrafficQosRuleWithOptions(DescribeExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIdList))
+            {
+                query["RuleIdList"] = request.RuleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
+            {
+                query["RuleNameList"] = request.RuleNameList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosRuleResponse> DescribeExpressConnectTrafficQosRuleWithOptionsAsync(DescribeExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIdList))
+            {
+                query["RuleIdList"] = request.RuleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
+            {
+                query["RuleNameList"] = request.RuleNameList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressConnectTrafficQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeExpressConnectTrafficQosRuleResponse DescribeExpressConnectTrafficQosRule(DescribeExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeExpressConnectTrafficQosRuleWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeExpressConnectTrafficQosRuleResponse> DescribeExpressConnectTrafficQosRuleAsync(DescribeExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeExpressConnectTrafficQosRuleWithOptionsAsync(request, runtime);
         }
 
         public DescribeFailoverTestJobResponse DescribeFailoverTestJobWithOptions(DescribeFailoverTestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -31061,7 +32357,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -31164,7 +32459,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -31267,7 +32561,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -31280,7 +32573,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)References
           * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
           *
           * @param request DescribeRouteEntryListRequest
@@ -44132,6 +45424,516 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await ModifyExpressCloudConnectionBandwidthWithOptionsAsync(request, runtime);
         }
 
+        public ModifyExpressConnectTrafficQosResponse ModifyExpressConnectTrafficQosWithOptions(ModifyExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PconnIdList))
+            {
+                query["PconnIdList"] = request.PconnIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
+            {
+                query["QosDescription"] = request.QosDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosName))
+            {
+                query["QosName"] = request.QosName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosResponse> ModifyExpressConnectTrafficQosWithOptionsAsync(ModifyExpressConnectTrafficQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PconnIdList))
+            {
+                query["PconnIdList"] = request.PconnIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
+            {
+                query["QosDescription"] = request.QosDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosName))
+            {
+                query["QosName"] = request.QosName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQos",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyExpressConnectTrafficQosResponse ModifyExpressConnectTrafficQos(ModifyExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyExpressConnectTrafficQosWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosResponse> ModifyExpressConnectTrafficQosAsync(ModifyExpressConnectTrafficQosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyExpressConnectTrafficQosWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyExpressConnectTrafficQosQueueResponse ModifyExpressConnectTrafficQosQueueWithOptions(ModifyExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthPercent))
+            {
+                query["BandwidthPercent"] = request.BandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueDescription))
+            {
+                query["QueueDescription"] = request.QueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosQueueResponse> ModifyExpressConnectTrafficQosQueueWithOptionsAsync(ModifyExpressConnectTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthPercent))
+            {
+                query["BandwidthPercent"] = request.BandwidthPercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueDescription))
+            {
+                query["QueueDescription"] = request.QueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQosQueue",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyExpressConnectTrafficQosQueueResponse ModifyExpressConnectTrafficQosQueue(ModifyExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyExpressConnectTrafficQosQueueWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosQueueResponse> ModifyExpressConnectTrafficQosQueueAsync(ModifyExpressConnectTrafficQosQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyExpressConnectTrafficQosQueueWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyExpressConnectTrafficQosRuleResponse ModifyExpressConnectTrafficQosRuleWithOptions(ModifyExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstCidr))
+            {
+                query["DstCidr"] = request.DstCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIPv6Cidr))
+            {
+                query["DstIPv6Cidr"] = request.DstIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPortRange))
+            {
+                query["DstPortRange"] = request.DstPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchDscp))
+            {
+                query["MatchDscp"] = request.MatchDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemarkingDscp))
+            {
+                query["RemarkingDscp"] = request.RemarkingDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCidr))
+            {
+                query["SrcCidr"] = request.SrcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIPv6Cidr))
+            {
+                query["SrcIPv6Cidr"] = request.SrcIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPortRange))
+            {
+                query["SrcPortRange"] = request.SrcPortRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosRuleResponse> ModifyExpressConnectTrafficQosRuleWithOptionsAsync(ModifyExpressConnectTrafficQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstCidr))
+            {
+                query["DstCidr"] = request.DstCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIPv6Cidr))
+            {
+                query["DstIPv6Cidr"] = request.DstIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPortRange))
+            {
+                query["DstPortRange"] = request.DstPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchDscp))
+            {
+                query["MatchDscp"] = request.MatchDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosId))
+            {
+                query["QosId"] = request.QosId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
+            {
+                query["QueueId"] = request.QueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemarkingDscp))
+            {
+                query["RemarkingDscp"] = request.RemarkingDscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCidr))
+            {
+                query["SrcCidr"] = request.SrcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIPv6Cidr))
+            {
+                query["SrcIPv6Cidr"] = request.SrcIPv6Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPortRange))
+            {
+                query["SrcPortRange"] = request.SrcPortRange;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectTrafficQosRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectTrafficQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyExpressConnectTrafficQosRuleResponse ModifyExpressConnectTrafficQosRule(ModifyExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyExpressConnectTrafficQosRuleWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyExpressConnectTrafficQosRuleResponse> ModifyExpressConnectTrafficQosRuleAsync(ModifyExpressConnectTrafficQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyExpressConnectTrafficQosRuleWithOptionsAsync(request, runtime);
+        }
+
         /**
           * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
           *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
@@ -47911,7 +49713,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
           * >  You cannot modify the specification of a router interface that has overdue payments.
           *
@@ -47975,7 +49776,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
           * >  You cannot modify the specification of a router interface that has overdue payments.
           *
@@ -48039,7 +49839,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
           * >  You cannot modify the specification of a router interface that has overdue payments.
           *
@@ -48053,7 +49852,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * ## [](#)Description
           * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
           * >  You cannot modify the specification of a router interface that has overdue payments.
           *
@@ -49891,10 +51689,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+          * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
           *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
           *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
           * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
           *
           * @param request ModifyVpcPrefixListRequest
@@ -49977,10 +51775,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+          * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
           *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
           *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
           * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
           *
           * @param request ModifyVpcPrefixListRequest
@@ -50063,10 +51861,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+          * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
           *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
           *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
           * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
           *
           * @param request ModifyVpcPrefixListRequest
@@ -50079,10 +51877,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+          * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
           *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
           *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+          *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
           * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
           *
           * @param request ModifyVpcPrefixListRequest
@@ -52555,7 +54353,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+          * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -52616,7 +54414,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+          * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -52677,7 +54475,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+          * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -52692,7 +54490,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+          * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
           * When you call this operation, take note of the following items:
           * *   Only the owner of the Express Connect circuit can call this operation.
           * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -55379,7 +57177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+          * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -55438,7 +57236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+          * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -55497,7 +57295,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+          * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest
@@ -55510,7 +57308,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+          * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
           * >  Only the owner of an Express Connect circuit can call this operation.
           *
           * @param request TerminateVirtualBorderRouterRequest

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcPrefixListAssociationsRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

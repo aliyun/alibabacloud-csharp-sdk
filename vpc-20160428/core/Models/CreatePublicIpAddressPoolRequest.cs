@@ -111,6 +111,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The editions of Anti-DDoS.
+        /// - If you do not specify this parameter, Anti-DDoS Origin Basic is used.
+        /// - If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.
+        /// </summary>
         [NameInMap("SecurityProtectionTypes")]
         [Validation(Required=false)]
         public List<string> SecurityProtectionTypes { get; set; }

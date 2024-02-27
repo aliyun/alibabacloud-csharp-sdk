@@ -9,14 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHaVipsRequest : TeaModel {
+        /// <summary>
+        /// The details of the filter condition.
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeHaVipsRequestFilter> Filter { get; set; }
         public class DescribeHaVipsRequestFilter : TeaModel {
             /// <summary>
-            /// The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**.
-            /// 
-            /// The following filter keys are supported:
+            /// The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**. The following filter keys are supported:
             /// 
             /// *   **VpcId**: virtual private cloud (VPC) ID
             /// *   **VSwitchId**: vSwitch ID
@@ -32,6 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the filter key. Valid values of **N**: **1 to 5**.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -47,21 +51,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the HAVIP belongs.
+        /// The region ID of the HAVIP.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -84,23 +88,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tag list.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeHaVipsRequestTags> Tags { get; set; }
         public class DescribeHaVipsRequestTags : TeaModel {
             /// <summary>
-            /// The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
+            /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. You can specify at most 20 tag values. It can be an empty string.
+            /// The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

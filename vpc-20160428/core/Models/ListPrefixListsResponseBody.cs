@@ -105,6 +105,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string PrefixListStatus { get; set; }
 
+            /// <summary>
+            /// The type of the prefix list.
+            /// </summary>
             [NameInMap("PrefixListType")]
             [Validation(Required=false)]
             public string PrefixListType { get; set; }
