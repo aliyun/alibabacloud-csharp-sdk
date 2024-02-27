@@ -18681,7 +18681,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-          * This operation is phased out. Use the DescribeDBInstances operation instead.
+          * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18745,7 +18745,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-          * This operation is phased out. Use the DescribeDBInstances operation instead.
+          * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18809,7 +18809,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-          * This operation is phased out. Use the DescribeDBInstances operation instead.
+          * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @return DescribeDBInstancesAsCsvResponse
@@ -18823,7 +18823,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-          * This operation is phased out. Use the DescribeDBInstances operation instead.
+          * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @return DescribeDBInstancesAsCsvResponse
@@ -37254,6 +37254,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["CAType"] = request.CAType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 query["ClientCACert"] = request.ClientCACert;
@@ -37289,6 +37293,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassWord))
+            {
+                query["PassWord"] = request.PassWord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationACL))
             {
@@ -37364,6 +37372,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["CAType"] = request.CAType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 query["ClientCACert"] = request.ClientCACert;
@@ -37399,6 +37411,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassWord))
+            {
+                query["PassWord"] = request.PassWord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationACL))
             {

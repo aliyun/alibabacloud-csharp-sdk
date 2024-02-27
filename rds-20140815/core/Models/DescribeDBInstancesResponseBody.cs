@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance states](~~26315~~).
+                /// The instance status. For more information, see [Instance statuses](~~26315~~).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster.
+                /// The ID of the dedicated cluster to which the instances belong.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string GeneralGroupName { get; set; }
 
                 /// <summary>
-                /// The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance.
+                /// The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.
                 /// </summary>
                 [NameInMap("GuardDBInstanceId")]
                 [Validation(Required=false)]
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The ID of the primary instance. If the value of this parameter is null, the instance is a primary instance.
+                /// The ID of the primary instance. If this parameter is null, the instance is a primary instance.
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// An array that consists of the IDs of the read-only instances that are attached to the instance. This parameter is returned only when the instance is a primary instance and has read-only instances.
+                /// The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.
                 /// </summary>
                 [NameInMap("ReadOnlyDBInstanceIds")]
                 [Validation(Required=false)]
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIdsReadOnlyDBInstanceId> ReadOnlyDBInstanceId { get; set; }
                     public class DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIdsReadOnlyDBInstanceId : TeaModel {
                         /// <summary>
-                        /// The ID of the read-only instance.
+                        /// The read-only instance ID.
                         /// </summary>
                         [NameInMap("DBInstanceId")]
                         [Validation(Required=false)]
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? SwitchWeight { get; set; }
 
                 /// <summary>
-                /// The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance.
+                /// The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance attached.
                 /// </summary>
                 [NameInMap("TempDBInstanceId")]
                 [Validation(Required=false)]
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Tips { get; set; }
 
                 /// <summary>
-                /// The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
+                /// The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
                 /// 
                 /// *   **1**: The instance is normal.
                 /// *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
@@ -411,14 +411,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// The ID of the instance. This parameter is returned only when the instance resides in a VPC.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The virtual private cloud (VPC) ID of the instance.
+                /// The virtual private cloud (VPC) ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

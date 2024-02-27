@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
+        /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the resource group ID.
+        /// The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

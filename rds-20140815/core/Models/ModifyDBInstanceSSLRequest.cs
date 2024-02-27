@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string CAType { get; set; }
 
+        [NameInMap("Certificate")]
+        [Validation(Required=false)]
+        public string Certificate { get; set; }
+
         /// <summary>
         /// The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to **1**.
         /// </summary>
@@ -79,6 +83,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~). Valid values:
+        /// 
+        /// *   **1**: enables the feature.
+        /// *   **0**: disables the feature.
+        /// </summary>
         [NameInMap("ForceEncryption")]
         [Validation(Required=false)]
         public string ForceEncryption { get; set; }
@@ -90,6 +100,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PassWord")]
+        [Validation(Required=false)]
+        public string PassWord { get; set; }
 
         /// <summary>
         /// The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
@@ -135,6 +149,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ServerKey { get; set; }
 
+        /// <summary>
+        /// The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).
+        /// </summary>
         [NameInMap("TlsVersion")]
         [Validation(Required=false)]
         public string TlsVersion { get; set; }

@@ -24,7 +24,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.
+        /// The type of the database proxy instance. Valid values:
+        /// 
+        /// *   common: the general-purpose database proxy
+        /// *   exclusive: the dedicated database proxy
         /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
