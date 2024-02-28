@@ -914,6 +914,174 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkPrometheusParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSinkSinkPrometheusParameters SinkPrometheusParameters { get; set; }
+            public class CreateEventStreamingRequestSinkSinkPrometheusParameters : TeaModel {
+                [NameInMap("AuthorizationType")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType AuthorizationType { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Data")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersData Data { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersData : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType NetworkType { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Password")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersPassword Password { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersPassword : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId SecurityGroupId { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("URL")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersURL URL { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersURL : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersUsername Username { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersUsername : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId VSwitchId { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkPrometheusParametersVpcId VpcId { get; set; }
+                public class CreateEventStreamingRequestSinkSinkPrometheusParametersVpcId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The parameters that are configured if you specify the event target as Message Queue for RabbitMQ.
             /// </summary>
@@ -1800,21 +1968,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateEventStreamingRequestSource Source { get; set; }
         public class CreateEventStreamingRequestSource : TeaModel {
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Data Transmission Service (DTS).
+            /// The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.
             /// </summary>
             [NameInMap("SourceDTSParameters")]
             [Validation(Required=false)]
             public CreateEventStreamingRequestSourceSourceDTSParameters SourceDTSParameters { get; set; }
             public class CreateEventStreamingRequestSourceSourceDTSParameters : TeaModel {
                 /// <summary>
-                /// The URL and port number of the data subscription channel.
+                /// The URL and port number of the change tracking instance.
                 /// </summary>
                 [NameInMap("BrokerUrl")]
                 [Validation(Required=false)]
                 public string BrokerUrl { get; set; }
 
                 /// <summary>
-                /// The consumer offset. It is the timestamp that indicates when the SDK client consumes the first data record.
+                /// The UNIX timestamp that is generated when the SDK client consumes the first data record.
                 /// </summary>
                 [NameInMap("InitCheckPoint")]
                 [Validation(Required=false)]
@@ -1842,7 +2010,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// The topic to which you want to subscribe by using the data subscription channel.
+                /// The name of the tracked topic of the change tracking instance.
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
@@ -1858,28 +2026,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Message Queue for Apache Kafka.
+            /// The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.
             /// </summary>
             [NameInMap("SourceKafkaParameters")]
             [Validation(Required=false)]
             public CreateEventStreamingRequestSourceSourceKafkaParameters SourceKafkaParameters { get; set; }
             public class CreateEventStreamingRequestSourceSourceKafkaParameters : TeaModel {
                 /// <summary>
-                /// The ID of the consumer group that subscribes to the topic.
+                /// The group ID of the consumer that subscribes to the topic.
                 /// </summary>
                 [NameInMap("ConsumerGroup")]
                 [Validation(Required=false)]
                 public string ConsumerGroup { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the Message Queue for Apache Kafka instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The network type. Default value: Default. The value PublicNetwork specifies virtual private clouds (VPCs).
+                /// The network setting. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("Network")]
                 [Validation(Required=false)]
@@ -1893,7 +2061,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string OffsetReset { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the Message Queue for Apache Kafka instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -1920,6 +2088,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string VSwitchIds { get; set; }
 
+                [NameInMap("ValueDataType")]
+                [Validation(Required=false)]
+                public string ValueDataType { get; set; }
+
                 /// <summary>
                 /// The VPC ID.
                 /// </summary>
@@ -1930,7 +2102,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Message Service (MNS).
+            /// The parameters that are configured if you specify Message Service (MNS) as the event source.
             /// </summary>
             [NameInMap("SourceMNSParameters")]
             [Validation(Required=false)]
@@ -1944,14 +2116,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public bool? IsBase64Decode { get; set; }
 
                 /// <summary>
-                /// The queue name.
+                /// The name of the MNS queue.
                 /// </summary>
                 [NameInMap("QueueName")]
                 [Validation(Required=false)]
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the MNS queue resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -1960,28 +2132,32 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Message Queue for MQTT.
+            /// The parameters that are configured if you specify Message Queue for MQTT as the event source.
             /// </summary>
             [NameInMap("SourceMQTTParameters")]
             [Validation(Required=false)]
             public CreateEventStreamingRequestSourceSourceMQTTParameters SourceMQTTParameters { get; set; }
             public class CreateEventStreamingRequestSourceSourceMQTTParameters : TeaModel {
+                [NameInMap("BodyDataType")]
+                [Validation(Required=false)]
+                public string BodyDataType { get; set; }
+
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the Message Queue for MQTT instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the Message Queue for MQTT instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The topic in which messages are stored.
+                /// The topic from which messages are sent.
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
@@ -2008,7 +2184,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Message Queue for RabbitMQ.
+            /// The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.
             /// </summary>
             [NameInMap("SourceRabbitMQParameters")]
             [Validation(Required=false)]
@@ -2022,21 +2198,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the queue on the Message Queue for RabbitMQ instance.
+                /// The queue name of the Message Queue for RabbitMQ instance.
                 /// </summary>
                 [NameInMap("QueueName")]
                 [Validation(Required=false)]
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// The region ID. You can call the [describeregions](~~62010~~) operation to query the most recent region list.
+                /// The ID of the region where the Message Queue for RabbitMQ instance resides. You can call the [DescribeRegions](~~62010~~) operation to query the most recent region list.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The name of the vhost of the Message Queue for RabbitMQ instance.
+                /// The vhost name of the Message Queue for RabbitMQ instance.
                 /// </summary>
                 [NameInMap("VirtualHostName")]
                 [Validation(Required=false)]
@@ -2045,7 +2221,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Message Queue for Apache RocketMQ.
+            /// The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.
             /// </summary>
             [NameInMap("SourceRocketMQParameters")]
             [Validation(Required=false)]
@@ -2059,14 +2235,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// The SQL statement that is used to filter messages.
+                /// The SQL statement that you want to use to filter messages.
                 /// </summary>
                 [NameInMap("FilterSql")]
                 [Validation(Required=false)]
                 public string FilterSql { get; set; }
 
                 /// <summary>
-                /// The message filter type.
+                /// The method that you want to use to filter messages.
                 /// </summary>
                 [NameInMap("FilterType")]
                 [Validation(Required=false)]
@@ -2087,14 +2263,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string InstanceEndpoint { get; set; }
 
                 /// <summary>
-                /// The region where the Message Queue for Apache RocketMQ instance resides.
+                /// The ID of the Message Queue for Apache RocketMQ instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// The network type of the Message Queue for Apache RocketMQ instance. Valid values:
                 /// 
                 /// *   PublicNetwork
                 /// *   PrivateNetwork
@@ -2111,7 +2287,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string InstancePassword { get; set; }
 
                 /// <summary>
-                /// The security group ID of the instance.
+                /// The security group ID of the Message Queue for Apache RocketMQ instance.
                 /// </summary>
                 [NameInMap("InstanceSecurityGroupId")]
                 [Validation(Required=false)]
@@ -2132,14 +2308,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string InstanceUsername { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the instance.
+                /// The vSwitch ID of the Message Queue for Apache RocketMQ instance.
                 /// </summary>
                 [NameInMap("InstanceVSwitchIds")]
                 [Validation(Required=false)]
                 public string InstanceVSwitchIds { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the instance.
+                /// The VPC ID of the Message Queue for Apache RocketMQ instance.
                 /// </summary>
                 [NameInMap("InstanceVpcId")]
                 [Validation(Required=false)]
@@ -2153,11 +2329,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Network { get; set; }
 
                 /// <summary>
-                /// The offset from which message consumption starts. Valid values:
+                /// The offset from which messages are consumed. Valid values:
                 /// 
-                /// *   CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset.
-                /// *   CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset.
-                /// *   CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time.
+                /// *   CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.
+                /// *   CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.
+                /// *   CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.
                 /// 
                 /// Default value: CONSUME_FROM_LAST_OFFSET.
                 /// </summary>
@@ -2166,21 +2342,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Offset { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the Message Queue for Apache RocketMQ instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The security group of the cross-border task.
+                /// The security group ID of the cross-border task.
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// The tag that is used to filter messages.
+                /// The tag that you want to use to filter messages.
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
@@ -2217,35 +2393,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The parameters that are configured if you specify the event source as Simple Log Service.
+            /// The parameters that are configured if you specify Log Service as the event source.
             /// </summary>
             [NameInMap("SourceSLSParameters")]
             [Validation(Required=false)]
             public CreateEventStreamingRequestSourceSourceSLSParameters SourceSLSParameters { get; set; }
             public class CreateEventStreamingRequestSourceSourceSLSParameters : TeaModel {
                 /// <summary>
-                /// The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
+                /// The consumer offset. The value begin specifies the earliest offset, and the value end specifies the latest offset. You can also specify a time in seconds to start consumption.
                 /// </summary>
                 [NameInMap("ConsumePosition")]
                 [Validation(Required=false)]
                 public string ConsumePosition { get; set; }
 
                 /// <summary>
-                /// The Simple Log Service Logstore.
+                /// The Log Service Logstore.
                 /// </summary>
                 [NameInMap("LogStore")]
                 [Validation(Required=false)]
                 public string LogStore { get; set; }
 
                 /// <summary>
-                /// The Simple Log Service project.
+                /// The Log Service project.
                 /// </summary>
                 [NameInMap("Project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
-                /// The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
+                /// The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
                 /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]

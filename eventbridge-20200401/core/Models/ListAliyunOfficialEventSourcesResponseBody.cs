@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListAliyunOfficialEventSourcesResponseBody : TeaModel {
         /// <summary>
-        /// The returned response code. The value Success indicates that the request is successful.
+        /// The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public ListAliyunOfficialEventSourcesResponseBodyData Data { get; set; }
         public class ListAliyunOfficialEventSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the event source to which the queried event type belongs.
+            /// The event sources.
             /// </summary>
             [NameInMap("EventSourceList")]
             [Validation(Required=false)]
@@ -45,21 +45,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public float? Ctime { get; set; }
 
                 /// <summary>
-                /// The description of the queried event source.
+                /// The description of the event source.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the event source to which the queried event type belongs.
+                /// The name of the event source to which the event type belongs.
                 /// </summary>
                 [NameInMap("EventBusName")]
                 [Validation(Required=false)]
                 public string EventBusName { get; set; }
 
                 /// <summary>
-                /// The queried event types.
+                /// The event types.
                 /// </summary>
                 [NameInMap("EventTypes")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string EventSourceName { get; set; }
 
                     /// <summary>
-                    /// The name of the group to which the queried event type belongs.
+                    /// The name of the group to which the event type belongs.
                     /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
                     public string GroupName { get; set; }
 
                     /// <summary>
-                    /// The full name of the queried event type.
+                    /// The full name of the event type.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The short name of the queried event type.
+                    /// The short name of the event type.
                     /// </summary>
                     [NameInMap("ShortName")]
                     [Validation(Required=false)]
@@ -95,26 +95,29 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                /// <summary>
+                /// The full name of the event source.
+                /// </summary>
                 [NameInMap("FullName")]
                 [Validation(Required=false)]
                 public string FullName { get; set; }
 
                 /// <summary>
-                /// The name of the queried event source.
+                /// The name of the event source.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the queried event source. Valid value: Activated.
+                /// The status of the event source. Valid value: Activated.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The type of the queried event source.
+                /// The type of the event source.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values: true and false.
+        /// Indicates whether the operation is successful. If the operation is successful, the value true is returned.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

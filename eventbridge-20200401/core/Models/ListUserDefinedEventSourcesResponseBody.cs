@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters SourceKafkaParameters { get; set; }
                 public class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters : TeaModel {
                     /// <summary>
-                    /// The ID of the consumer group that subscribes to the topic.
+                    /// The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.
                     /// </summary>
                     [NameInMap("ConsumerGroup")]
                     [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public int? MaximumTasks { get; set; }
 
                     /// <summary>
-                    /// The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
+                    /// The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
@@ -187,14 +187,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string OffsetReset { get; set; }
 
                     /// <summary>
-                    /// The region ID.
+                    /// The ID of the region where the Message Queue for Apache Kafka instance resides.
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The security group ID.
+                    /// The ID of the security group to which the Message Queue for Apache Kafka instance belongs.
                     /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Topic { get; set; }
 
                     /// <summary>
-                    /// The vSwitch ID.
+                    /// The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.
                     /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// The VPC ID.
+                    /// The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.
                     /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string QueueName { get; set; }
 
                     /// <summary>
-                    /// The region where the MNS queue resides.
+                    /// The ID of the region where the MNS queue resides.
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string GroupId { get; set; }
 
                     /// <summary>
-                    /// The instance endpoint.
+                    /// The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
                     /// </summary>
                     [NameInMap("InstanceEndpoint")]
                     [Validation(Required=false)]
@@ -326,21 +326,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// The network that is used by the Message Queue for Apache RocketMQ instance.
+                    /// The type of network over which the Message Queue for Apache RocketMQ instance is accessed.
                     /// </summary>
                     [NameInMap("InstanceNetwork")]
                     [Validation(Required=false)]
                     public string InstanceNetwork { get; set; }
 
                     /// <summary>
-                    /// The instance password.
+                    /// The password that is used to access the Message Queue for Apache RocketMQ instance.
                     /// </summary>
                     [NameInMap("InstancePassword")]
                     [Validation(Required=false)]
                     public string InstancePassword { get; set; }
 
                     /// <summary>
-                    /// The security group ID.
+                    /// The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.
                     /// </summary>
                     [NameInMap("InstanceSecurityGroupId")]
                     [Validation(Required=false)]
@@ -354,21 +354,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// The instance username.
+                    /// The username that is used to access the Message Queue for Apache RocketMQ instance.
                     /// </summary>
                     [NameInMap("InstanceUsername")]
                     [Validation(Required=false)]
                     public string InstanceUsername { get; set; }
 
                     /// <summary>
-                    /// The vSwitch ID.
+                    /// The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.
                     /// </summary>
                     [NameInMap("InstanceVSwitchIds")]
                     [Validation(Required=false)]
                     public string InstanceVSwitchIds { get; set; }
 
                     /// <summary>
-                    /// The virtual private cloud (VPC) ID.
+                    /// The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.
                     /// </summary>
                     [NameInMap("InstanceVpcId")]
                     [Validation(Required=false)]
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Offset { get; set; }
 
                     /// <summary>
-                    /// The region where the Message Queue for Apache RocketMQ instance resides.
+                    /// The ID of the region where the Message Queue for Apache RocketMQ instance resides.
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters SourceSLSParameters { get; set; }
                 public class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters : TeaModel {
                     /// <summary>
-                    /// The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
+                    /// The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.
                     /// </summary>
                     [NameInMap("ConsumePosition")]
                     [Validation(Required=false)]
@@ -475,6 +475,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string TimeZone { get; set; }
 
+                    /// <summary>
+                    /// The JSON string.
+                    /// </summary>
                     [NameInMap("UserData")]
                     [Validation(Required=false)]
                     public string UserData { get; set; }
@@ -496,6 +499,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Type { get; set; }
 
             }
+
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
 
         }
 

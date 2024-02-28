@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -1349,7 +1349,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// The event provider.
+            /// The event provider, which is also known as the event source.
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -1475,6 +1475,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
+
+                    [NameInMap("ValueDataType")]
+                    [Validation(Required=false)]
+                    public string ValueDataType { get; set; }
 
                     /// <summary>
                     /// The ID of the virtual private cloud (VPC).

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// The maximum number of returned entries in a call.
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]

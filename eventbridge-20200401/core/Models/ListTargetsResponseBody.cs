@@ -12,9 +12,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <summary>
         /// The returned response code. Valid values:
         /// 
-        ///     Success: The request is successful. 
-        /// 
-        ///     Other codes: The request failed. For more information about error codes, see Error codes.
+        /// *   Success: The request is successful.
+        /// *   Other codes: The request failed. For a list of error codes, see Error codes.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -35,12 +34,15 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The name of the event rule.
+            /// The event targets.
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public List<ListTargetsResponseBodyDataTargets> Targets { get; set; }
             public class ListTargetsResponseBodyDataTargets : TeaModel {
+                /// <summary>
+                /// The endpoint of the event target.
+                /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
@@ -49,40 +51,67 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string ErrorsTolerance { get; set; }
 
+                /// <summary>
+                /// The name of the event bus.
+                /// </summary>
                 [NameInMap("EventBusName")]
                 [Validation(Required=false)]
                 public string EventBusName { get; set; }
 
+                /// <summary>
+                /// The ID of the event target.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// The parameters that are configured for the event target.
+                /// </summary>
                 [NameInMap("ParamList")]
                 [Validation(Required=false)]
                 public List<ListTargetsResponseBodyDataTargetsParamList> ParamList { get; set; }
                 public class ListTargetsResponseBodyDataTargetsParamList : TeaModel {
+                    /// <summary>
+                    /// The format that is used by the event target parameter.
+                    /// </summary>
                     [NameInMap("Form")]
                     [Validation(Required=false)]
                     public string Form { get; set; }
 
+                    /// <summary>
+                    /// The resource parameter of the event target.
+                    /// </summary>
                     [NameInMap("ResourceKey")]
                     [Validation(Required=false)]
                     public string ResourceKey { get; set; }
 
+                    /// <summary>
+                    /// The template that is used by the event target parameter.
+                    /// </summary>
                     [NameInMap("Template")]
                     [Validation(Required=false)]
                     public string Template { get; set; }
 
+                    /// <summary>
+                    /// The value of the event target parameter.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The name of the event rule.
+                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
+                /// <summary>
+                /// The type of the event target. For more information, see [Event target parameters](~~183698~~).
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -115,9 +144,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <summary>
         /// Indicates whether the request is successful. Valid values:
         /// 
-        ///     true: The request is successful. 
-        /// 
-        ///     false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

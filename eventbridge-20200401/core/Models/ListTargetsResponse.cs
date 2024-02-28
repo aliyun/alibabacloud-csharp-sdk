@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListTargetsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListTargetsResponseBody Body { get; set; }
 
     }
