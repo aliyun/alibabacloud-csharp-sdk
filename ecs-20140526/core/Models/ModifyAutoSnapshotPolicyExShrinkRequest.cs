@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class ModifyAutoSnapshotPolicyExRequest : TeaModel {
+    public class ModifyAutoSnapshotPolicyExShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>
@@ -18,35 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
-        public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration : TeaModel {
-            [NameInMap("Arn")]
-            [Validation(Required=false)]
-            public List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> Arn { get; set; }
-            public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn : TeaModel {
-                [NameInMap("AssumeRoleFor")]
-                [Validation(Required=false)]
-                public long? AssumeRoleFor { get; set; }
-
-                [NameInMap("RoleType")]
-                [Validation(Required=false)]
-                public string RoleType { get; set; }
-
-                [NameInMap("Rolearn")]
-                [Validation(Required=false)]
-                public string Rolearn { get; set; }
-
-            }
-
-            [NameInMap("Encrypted")]
-            [Validation(Required=false)]
-            public bool? Encrypted { get; set; }
-
-            [NameInMap("KMSKeyId")]
-            [Validation(Required=false)]
-            public string KMSKeyId { get; set; }
-
-        }
+        public string CopyEncryptionConfigurationShrink { get; set; }
 
         /// <summary>
         /// The destination region to which to copy the snapshot. You can specify only a single destination region.

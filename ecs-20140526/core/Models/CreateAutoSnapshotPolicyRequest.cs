@@ -21,6 +21,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
+        [NameInMap("CopyEncryptionConfiguration")]
+        [Validation(Required=false)]
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
+        public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration : TeaModel {
+            [NameInMap("Arn")]
+            [Validation(Required=false)]
+            public List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> Arn { get; set; }
+            public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn : TeaModel {
+                [NameInMap("AssumeRoleFor")]
+                [Validation(Required=false)]
+                public long? AssumeRoleFor { get; set; }
+
+                [NameInMap("RoleType")]
+                [Validation(Required=false)]
+                public string RoleType { get; set; }
+
+                [NameInMap("Rolearn")]
+                [Validation(Required=false)]
+                public string Rolearn { get; set; }
+
+            }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public bool? Encrypted { get; set; }
+
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to enable cross-region replication for snapshots.
         /// 

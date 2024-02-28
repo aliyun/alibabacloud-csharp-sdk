@@ -48,6 +48,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? CopiedSnapshotsRetentionDays { get; set; }
 
+                [NameInMap("CopyEncryptionConfiguration")]
+                [Validation(Required=false)]
+                public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
+                public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration : TeaModel {
+                    [NameInMap("Encrypted")]
+                    [Validation(Required=false)]
+                    public bool? Encrypted { get; set; }
+
+                    [NameInMap("KMSKeyId")]
+                    [Validation(Required=false)]
+                    public string KMSKeyId { get; set; }
+
+                }
+
                 /// <summary>
                 /// The state of the automatic snapshot policy. Valid values:
                 /// 

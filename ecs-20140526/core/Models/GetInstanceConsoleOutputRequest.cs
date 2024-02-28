@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class GetInstanceConsoleOutputRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,10 +24,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to remove formatting symbols from the returned command output. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("RemoveSymbols")]
         [Validation(Required=false)]
         public bool? RemoveSymbols { get; set; }

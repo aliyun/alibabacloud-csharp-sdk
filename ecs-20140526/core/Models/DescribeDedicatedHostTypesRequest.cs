@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostTypesRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The dedicated host type. For more information, see [Dedicated host types](~~68564~~).
         /// </summary>
         [NameInMap("DedicatedHostType")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ECS instance family supported by the dedicated host type.
+        /// The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the dedicated host type.
+        /// The ECS instance family supported by the dedicated host type.
         /// </summary>
         [NameInMap("SupportedInstanceTypeFamily")]
         [Validation(Required=false)]

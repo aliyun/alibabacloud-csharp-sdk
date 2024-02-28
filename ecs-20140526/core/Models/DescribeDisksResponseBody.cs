@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDisksResponseBody : TeaModel {
         /// <summary>
-        /// The details of the cloud disks or local disks.
+        /// Details about the cloud disks or local disks.
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDisksResponseBodyDisksDisk> Disk { get; set; }
             public class DescribeDisksResponseBodyDisksDisk : TeaModel {
                 /// <summary>
-                /// The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+                /// The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.
                 /// </summary>
                 [NameInMap("AttachedTime")]
                 [Validation(Required=false)]
                 public string AttachedTime { get; set; }
 
                 /// <summary>
-                /// The attachment information of the cloud disk. The value is an array that consists of the `Attachment` values. However, this value is not returned when you query Shared Block Storage devices.
+                /// The attachment information about the cloud disk. The value is an array that consists of the `Attachment` values. This value is not returned when you query Shared Block Storage devices.
                 /// </summary>
                 [NameInMap("Attachments")]
                 [Validation(Required=false)]
@@ -39,21 +39,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskAttachmentsAttachment> Attachment { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskAttachmentsAttachment : TeaModel {
                         /// <summary>
-                        /// The time when the disk was attached, which is displayed in UTC.
+                        /// The time when the disk was attached. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("AttachedTime")]
                         [Validation(Required=false)]
                         public string AttachedTime { get; set; }
 
                         /// <summary>
-                        /// The device name.
+                        /// The device name of the disk.
                         /// </summary>
                         [NameInMap("Device")]
                         [Validation(Required=false)]
                         public string Device { get; set; }
 
                         /// <summary>
-                        /// The ID of the instance to which the disk was attached.
+                        /// The ID of the instance to which the disk is attached.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
@@ -64,35 +64,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the automatic snapshot policy that is applied to the cloud disk.
+                /// The ID of the automatic snapshot policy that is applied to the disk.
                 /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
 
                 /// <summary>
-                /// This parameter is currently only available to select users and unavailable for general users.
+                /// This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("BdfId")]
                 [Validation(Required=false)]
                 public string BdfId { get; set; }
 
                 /// <summary>
-                /// This parameter is unavailable for public use.
+                /// Indicates whether the performance burst feature is enabled. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// 
+                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
 
                 /// <summary>
-                /// The disk category. Valid values:
+                /// The category of the disk. Valid values:
                 /// 
                 /// *   cloud: basic disk
                 /// *   cloud_efficiency: ultra disk
                 /// *   cloud_ssd: standard SSD
                 /// *   cloud_essd: ESSD
+                /// *   cloud_auto: ESSD AutoPL disk
                 /// *   local_ssd_pro: I/O-intensive local disk
                 /// *   local_hdd_pro: throughput-intensive local disk
+                /// *   cloud_essd_entry: ESSD Entry disk
                 /// *   ephemeral: retired local disk
                 /// *   ephemeral_ssd: retired local SSD
                 /// </summary>
@@ -108,55 +115,55 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the automatic snapshots of the cloud disk are deleted after the disk is released. Valid values:
+                /// Indicates whether the automatic snapshots of the disk are deleted when the disk is released. Valid values:
                 /// 
-                /// *   true
-                /// *   false
+                /// *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
+                /// *   false: The automatic snapshots of the cloud disk are retained when the disk is released.
                 /// 
-                /// Snapshots that are created by calling the [CreateSnapshot](~~25524~~) operation or by using the Elastic Compute Service (ECS) console are retained and not affected by this parameter.
+                /// Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](~~25524~~) operation are retained and not affected by this parameter.
                 /// </summary>
                 [NameInMap("DeleteAutoSnapshot")]
                 [Validation(Required=false)]
                 public bool? DeleteAutoSnapshot { get; set; }
 
                 /// <summary>
-                /// Indicates whether the cloud disk is released when its associated instance is released. Valid values:
+                /// Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:
                 /// 
-                /// *   true: The cloud disk is released when its associated instance is released.
-                /// *   false: The cloud disk is retained when its associated instance is released.
+                /// *   true: The disk is released when the instance to which the disk is attached is released.
+                /// *   false: The disk is retained when the instance to which the disk is attached is released.
                 /// </summary>
                 [NameInMap("DeleteWithInstance")]
                 [Validation(Required=false)]
                 public bool? DeleteWithInstance { get; set; }
 
                 /// <summary>
-                /// The disk description.
+                /// The description of the disk.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the cloud disk was last detached.
+                /// The time when the disk was last detached.
                 /// </summary>
                 [NameInMap("DetachedTime")]
                 [Validation(Required=false)]
                 public string DetachedTime { get; set; }
 
                 /// <summary>
-                /// The device name of the disk on its associated instance. Example: /dev/xvdb. Take note of the following items:
+                /// The device name of the disk on the instance to which the disk is attached. Example: /dev/xvdb. Take note of the following items:
                 /// 
                 /// *   This parameter has a value only when the `Status` value is `In_use`.
-                /// *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
+                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
                 /// 
-                /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+                /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
                 /// </summary>
                 [NameInMap("Device")]
                 [Validation(Required=false)]
                 public string Device { get; set; }
 
                 /// <summary>
-                /// The disk billing method. Valid values:
+                /// The billing method of the disk. Valid values:
                 /// 
                 /// *   PrePaid: subscription
                 /// *   PostPaid: pay-as-you-go
@@ -166,28 +173,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DiskChargeType { get; set; }
 
                 /// <summary>
-                /// The disk ID.
+                /// The ID of the disk.
                 /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// The disk name.
+                /// The name of the disk.
                 /// </summary>
                 [NameInMap("DiskName")]
                 [Validation(Required=false)]
                 public string DiskName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
+                /// Indicates whether the automatic snapshot policy feature is enabled for the disk.
                 /// </summary>
                 [NameInMap("EnableAutoSnapshot")]
                 [Validation(Required=false)]
                 public bool? EnableAutoSnapshot { get; set; }
 
                 /// <summary>
-                /// Indicates whether an automatic snapshot policy is configured for the cloud disk.
+                /// Indicates whether an automatic snapshot policy is applied to the disk.
                 /// </summary>
                 [NameInMap("EnableAutomatedSnapshotPolicy")]
                 [Validation(Required=false)]
@@ -208,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The maximum number of IOPS.
+                /// The maximum number of read/write IOPS of the disk.
                 /// </summary>
                 [NameInMap("IOPS")]
                 [Validation(Required=false)]
@@ -222,31 +229,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? IOPSRead { get; set; }
 
                 /// <summary>
-                /// The maximum number of write operations per second.
+                /// The maximum number of write IOPS of the disk.
                 /// </summary>
                 [NameInMap("IOPSWrite")]
                 [Validation(Required=false)]
                 public int? IOPSWrite { get; set; }
 
                 /// <summary>
-                /// The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk is created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
+                /// The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk was created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the disk was attached. Take note of the following items:
+                /// The ID of the instance to which the disk is attached. Take note of the following items:
                 /// 
                 /// *   This parameter has a value only when the `Status` value is `In_use`.
-                /// *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
+                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the KMS key that is used by the cloud disk.
+                /// The ID of the Key Management Service (KMS) key that is used for the disk.
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
@@ -271,7 +278,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> MountInstance { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance : TeaModel {
                         /// <summary>
-                        /// The time when the cloud disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
+                        /// The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
                         /// </summary>
                         [NameInMap("AttachedTime")]
                         [Validation(Required=false)]
@@ -285,7 +292,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Device { get; set; }
 
                         /// <summary>
-                        /// The ID of the instance to which the disk was attached.
+                        /// The ID of the instance to which the disk is attached.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
@@ -296,7 +303,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the multi-attach feature is enabled for the cloud disk.
+                /// Indicates whether the multi-attach feature is enabled for the disk.
                 /// </summary>
                 [NameInMap("MultiAttach")]
                 [Validation(Required=false)]
@@ -325,19 +332,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The performance level of the enhanced SSD (ESSD). Valid values:
+                /// The performance level of the ESSD. Valid values:
                 /// 
-                /// *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-                /// *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
-                /// *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
-                /// *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
+                /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+                /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+                /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+                /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
                 /// </summary>
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// Indicates whether the disk is removable.
+                /// Specifies whether the disk is removable.
                 /// </summary>
                 [NameInMap("Portable")]
                 [Validation(Required=false)]
@@ -351,7 +358,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// This parameter is unavailable for public use.
+                /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
+                /// 
+                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
                 /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]
@@ -372,7 +381,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The disk serial number.
+                /// The serial number of the disk.
                 /// </summary>
                 [NameInMap("SerialNumber")]
                 [Validation(Required=false)]
@@ -386,9 +395,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot that was used to create the cloud disk.
+                /// The ID of the snapshot that was used to create the disk.
                 /// 
-                /// This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
+                /// This parameter is empty unless the disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
                 /// </summary>
                 [NameInMap("SourceSnapshotId")]
                 [Validation(Required=false)]
@@ -409,14 +418,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.
+                /// The ID of the dedicated block storage cluster to which the disk belongs. If your disk belongs to the public block storage cluster, an empty value is returned.
                 /// </summary>
                 [NameInMap("StorageClusterId")]
                 [Validation(Required=false)]
                 public string StorageClusterId { get; set; }
 
                 /// <summary>
-                /// The storage set ID.
+                /// The ID of the storage set.
                 /// </summary>
                 [NameInMap("StorageSetId")]
                 [Validation(Required=false)]
@@ -459,22 +468,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The amount of data transferred per second. Unit: MB/s.
+                /// The amount of data that is transferred per second. Unit: MB/s.
                 /// </summary>
                 [NameInMap("Throughput")]
                 [Validation(Required=false)]
                 public int? Throughput { get; set; }
 
+                /// <summary>
+                /// The amount of data that is read by the system per second. Unit: MB/s.
+                /// </summary>
                 [NameInMap("ThroughputRead")]
                 [Validation(Required=false)]
                 public int? ThroughputRead { get; set; }
 
+                /// <summary>
+                /// The amount of data that is written by the system per second. Unit: MB/s.
+                /// </summary>
                 [NameInMap("ThroughputWrite")]
                 [Validation(Required=false)]
                 public int? ThroughputWrite { get; set; }
 
                 /// <summary>
-                /// The disk type. Valid values:
+                /// The type of the disk. Valid values:
                 /// 
                 /// *   system: system disk
                 /// *   data: data disk
@@ -484,7 +499,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The ID of the zone to which the cloud disk or local disk belongs.
+                /// The zone ID of the disk.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
