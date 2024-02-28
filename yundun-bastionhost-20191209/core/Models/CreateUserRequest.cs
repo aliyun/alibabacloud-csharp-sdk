@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        [NameInMap("LanguageStatus")]
+        [Validation(Required=false)]
+        public string LanguageStatus { get; set; }
+
         /// <summary>
         /// The mobile phone number of the user that you want to add.
         /// </summary>

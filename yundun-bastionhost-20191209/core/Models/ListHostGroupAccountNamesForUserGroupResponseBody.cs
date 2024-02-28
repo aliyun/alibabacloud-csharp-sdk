@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupAccountNamesForUserGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The names of host accounts returned.
+        /// </summary>
         [NameInMap("HostAccountNames")]
         [Validation(Required=false)]
         public List<string> HostAccountNames { get; set; }
 
         /// <summary>
-        /// ListHostGroupAccountNamesForUserGroup
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

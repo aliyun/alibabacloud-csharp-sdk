@@ -10,44 +10,36 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AddUsersToGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).
+        /// The ID of the bastion host for which you want to add users to the user group.
         /// 
-        /// >  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.
+        /// > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// The region ID of the bastion host for which you want to add users to the user group.
+        /// 
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The return code that indicates whether the call was successful. Valid values:
+        /// The ID of the user group to which you want to add users.
         /// 
-        /// *   **OK**: The call was successful.
-        /// 
-        /// *   **UNEXPECTED**: An unknown error occurred.
-        /// 
-        /// *   **INVALID_ARGUMENT**: A request parameter is invalid.
-        /// 
-        /// > Make sure that the request parameters are valid and call the operation again.
-        /// 
-        /// *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-        /// 
-        /// > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
-        /// 
-        /// *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+        /// > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
         public string UserGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).
+        /// 
+        /// > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

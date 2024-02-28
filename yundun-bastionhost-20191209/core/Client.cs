@@ -380,7 +380,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * #
+          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
+          * # Limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request AddUsersToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -426,7 +429,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * #
+          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
+          * # Limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request AddUsersToGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -472,7 +478,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * #
+          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
+          * # Limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request AddUsersToGroupRequest
           * @return AddUsersToGroupResponse
@@ -484,7 +493,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * #
+          * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
+          * # Limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request AddUsersToGroupRequest
           * @return AddUsersToGroupResponse
@@ -1679,6 +1691,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageStatus))
+            {
+                query["LanguageStatus"] = request.LanguageStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
                 query["Mobile"] = request.Mobile;
@@ -1775,6 +1795,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageStatus))
+            {
+                query["LanguageStatus"] = request.LanguageStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
@@ -2200,8 +2228,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-          * For more information about sample requests, see the "Examples" section of this topic.
+          * ## Usage notes
+          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2243,8 +2274,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-          * For more information about sample requests, see the "Examples" section of this topic.
+          * ## Usage notes
+          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2286,8 +2320,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-          * For more information about sample requests, see the "Examples" section of this topic.
+          * ## Usage notes
+          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostAccountRequest
           * @return DeleteHostAccountResponse
@@ -2299,8 +2336,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-          * For more information about sample requests, see the "Examples" section of this topic.
+          * ## Usage notes
+          * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+          * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DeleteHostAccountRequest
           * @return DeleteHostAccountResponse
@@ -6730,7 +6770,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * The ID of the request.
+          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
+          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
           *
           * @param request ModifyHostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6796,7 +6837,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * The ID of the request.
+          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
+          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
           *
           * @param request ModifyHostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6862,7 +6904,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * The ID of the request.
+          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
+          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
           *
           * @param request ModifyHostRequest
           * @return ModifyHostResponse
@@ -6874,7 +6917,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * The ID of the request.
+          * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
+          * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
           *
           * @param request ModifyHostRequest
           * @return ModifyHostResponse
@@ -7989,6 +8033,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageStatus))
+            {
+                query["LanguageStatus"] = request.LanguageStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
                 query["Mobile"] = request.Mobile;
@@ -8067,6 +8119,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageStatus))
+            {
+                query["LanguageStatus"] = request.LanguageStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
             {
@@ -8401,6 +8461,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await RejectApproveCommandWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request RejectOperationTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RejectOperationTicketResponse
+         */
         public RejectOperationTicketResponse RejectOperationTicketWithOptions(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8436,6 +8504,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectOperationTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request RejectOperationTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RejectOperationTicketResponse
+         */
         public async Task<RejectOperationTicketResponse> RejectOperationTicketWithOptionsAsync(RejectOperationTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8471,12 +8547,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<RejectOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request RejectOperationTicketRequest
+          * @return RejectOperationTicketResponse
+         */
         public RejectOperationTicketResponse RejectOperationTicket(RejectOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RejectOperationTicketWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request RejectOperationTicketRequest
+          * @return RejectOperationTicketResponse
+         */
         public async Task<RejectOperationTicketResponse> RejectOperationTicketAsync(RejectOperationTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8574,7 +8664,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
+          * ## QPS limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request RemoveUsersFromGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8620,7 +8712,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
+          * ## QPS limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request RemoveUsersFromGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8666,7 +8760,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
+          * ## QPS limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request RemoveUsersFromGroupRequest
           * @return RemoveUsersFromGroupResponse
@@ -8678,7 +8774,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         }
 
         /**
-          * This parameter is deprecated.
+          * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
+          * ## QPS limit
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request RemoveUsersFromGroupRequest
           * @return RemoveUsersFromGroupResponse

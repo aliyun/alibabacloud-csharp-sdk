@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteHostAccountRequest : TeaModel {
         /// <summary>
-        /// DeleteHostAccount
+        /// The ID of the host account that you want to remove.
+        /// 
+        /// >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
         /// </summary>
         [NameInMap("HostAccountId")]
         [Validation(Required=false)]
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// DeleteHostAccount
+        /// The ID of the bastion host from which you want to remove the host account.
+        /// 
+        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// WB01014029
+        /// The region ID of the bastion host from which you want to remove the host account.
+        /// 
+        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
