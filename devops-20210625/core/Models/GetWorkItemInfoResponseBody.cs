@@ -181,6 +181,24 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public List<string> Tag { get; set; }
 
+            [NameInMap("tagDetails")]
+            [Validation(Required=false)]
+            public List<GetWorkItemInfoResponseBodyWorkitemTagDetails> TagDetails { get; set; }
+            public class GetWorkItemInfoResponseBodyWorkitemTagDetails : TeaModel {
+                [NameInMap("color")]
+                [Validation(Required=false)]
+                public string Color { get; set; }
+
+                [NameInMap("identifier")]
+                [Validation(Required=false)]
+                public string Identifier { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             [NameInMap("tracker")]
             [Validation(Required=false)]
             public List<string> Tracker { get; set; }
