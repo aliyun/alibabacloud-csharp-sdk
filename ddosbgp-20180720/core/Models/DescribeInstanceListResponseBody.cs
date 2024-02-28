@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public List<DescribeInstanceListResponseBodyInstanceList> InstanceList { get; set; }
         public class DescribeInstanceListResponseBodyInstanceList : TeaModel {
+            [NameInMap("AutoProtectCondition")]
+            [Validation(Required=false)]
+            public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition AutoProtectCondition { get; set; }
+            public class DescribeInstanceListResponseBodyInstanceListAutoProtectCondition : TeaModel {
+                [NameInMap("Events")]
+                [Validation(Required=false)]
+                public List<string> Events { get; set; }
+
+            }
+
             /// <summary>
             /// Indicates whether auto-renewal is enabled for the instance. Valid values:
             /// 

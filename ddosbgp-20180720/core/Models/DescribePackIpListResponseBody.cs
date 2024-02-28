@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public string MemberUid { get; set; }
 
+            [NameInMap("NsmStatus")]
+            [Validation(Required=false)]
+            public int? NsmStatus { get; set; }
+
             /// <summary>
             /// The type of the cloud asset to which the IP address belongs. Valid values:
             /// 
