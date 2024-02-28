@@ -3875,6 +3875,96 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return await DescribeReplicaGroupDrillsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeSolutionInstanceConfigurationResponse DescribeSolutionInstanceConfigurationWithOptions(DescribeSolutionInstanceConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                query["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSolutionInstanceConfiguration",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSolutionInstanceConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeSolutionInstanceConfigurationResponse> DescribeSolutionInstanceConfigurationWithOptionsAsync(DescribeSolutionInstanceConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                query["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSolutionInstanceConfiguration",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSolutionInstanceConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeSolutionInstanceConfigurationResponse DescribeSolutionInstanceConfiguration(DescribeSolutionInstanceConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSolutionInstanceConfigurationWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSolutionInstanceConfigurationResponse> DescribeSolutionInstanceConfigurationAsync(DescribeSolutionInstanceConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSolutionInstanceConfigurationWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ## [](#)Usage notes
           * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
