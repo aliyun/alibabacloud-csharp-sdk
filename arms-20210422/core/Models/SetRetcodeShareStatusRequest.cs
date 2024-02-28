@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string Pid { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public bool? Status { get; set; }
