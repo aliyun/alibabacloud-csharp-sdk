@@ -23481,6 +23481,152 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeInstanceLinkedWhitelistTemplateWithOptionsAsync(request, runtime);
         }
 
+        public DescribeKmsAssociateResourcesResponse DescribeKmsAssociateResourcesWithOptions(DescribeKmsAssociateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceId))
+            {
+                query["KmsResourceId"] = request.KmsResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceRegionId))
+            {
+                query["KmsResourceRegionId"] = request.KmsResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceType))
+            {
+                query["KmsResourceType"] = request.KmsResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceUser))
+            {
+                query["KmsResourceUser"] = request.KmsResourceUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKmsAssociateResources",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKmsAssociateResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeKmsAssociateResourcesResponse> DescribeKmsAssociateResourcesWithOptionsAsync(DescribeKmsAssociateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceId))
+            {
+                query["KmsResourceId"] = request.KmsResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceRegionId))
+            {
+                query["KmsResourceRegionId"] = request.KmsResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceType))
+            {
+                query["KmsResourceType"] = request.KmsResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsResourceUser))
+            {
+                query["KmsResourceUser"] = request.KmsResourceUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKmsAssociateResources",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKmsAssociateResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeKmsAssociateResourcesResponse DescribeKmsAssociateResources(DescribeKmsAssociateResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeKmsAssociateResourcesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeKmsAssociateResourcesResponse> DescribeKmsAssociateResourcesAsync(DescribeKmsAssociateResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeKmsAssociateResourcesWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ### [](#)Supported database engines
           * *   MySQL
