@@ -20,19 +20,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
+        /// Specifies whether to enable auto-renewal for the instance. Valid values:
         /// 
         /// *   **true**: enables auto-renewal.
-        /// *   **false**: disables auto-renewal.
+        /// *   **false** (default): disables auto-renewal.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.
+        /// The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.
         /// 
-        /// > This parameter is required only if the **AutoRenew** parameter is set to **true**.
+        /// >  This parameter is required if the **AutoRenew** parameter is set to **true**.
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The new billing method. Valid values:
         /// 
-        /// *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.
-        /// *   **PostPaid**: pay-as-you-go.
+        /// *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.
+        /// *   **PostPaid**: pay-as-you-go
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]

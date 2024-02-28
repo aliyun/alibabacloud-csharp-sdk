@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:
         /// 
-        /// *   **logic**: The instance is a cluster or read/write splitting instance.
+        /// *   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.
         /// *   **normal**: The instance is a standard master-replica instance.
         /// </summary>
         [NameInMap("CharacterType")]
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeParameterTemplates**.
+        /// The database engine that is run on the instance. Set the value to **Redis**.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine that is run on the instance. The value **Redis** is returned for this parameter.
+        /// The major version that is run on the instance. Valid values: **2.8**, **4.0**, and **5.0**.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// r-bp1zxszhcgatnx****
+        /// The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the IDs of instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -49,7 +49,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the IDs of instances.
+        /// The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~ListResourceGroups~~) operation to query the IDs of resource groups.
+        /// 
+        /// >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

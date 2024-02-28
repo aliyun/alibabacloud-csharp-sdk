@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// Backup files ID of cluster instance.
+        /// The backup set ID.
         /// </summary>
         [NameInMap("ClusterBackupId")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// The coupon code. Default value: `default`.
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
@@ -201,8 +201,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The node type. Valid values:
         /// 
+        /// *   **MASTER_SLAVE**: high availability (master-replica)
         /// *   **STAND_ALONE**: standalone
-        /// *   **MASTER_SLAVE** (default): high availability (master-replica)
+        /// *   **double**: master-replica
+        /// *   **single**: standalone
+        /// 
+        /// >  To create a cloud-native instance, set this parameter to **MASTER_SLAVE** or **STAND_ALONE**. To create a classic instance, set this parameter to **double** or **single**.
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -217,7 +221,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Parameter template ID.
+        /// The parameter template ID, which must be globally unique.
         /// </summary>
         [NameInMap("ParamGroupId")]
         [Validation(Required=false)]

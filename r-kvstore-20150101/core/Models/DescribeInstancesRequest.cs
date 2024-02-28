@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ArchitectureType { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// The billing method. Valid values:
         /// 
         /// *   **PrePaid**: subscription
         /// *   **PostPaid**: pay-as-you-go
@@ -33,15 +33,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The edition of the instance. Valid values:
         /// 
-        /// *   **Community**: Community Edition
-        /// *   **Enterprise**: Enhance Edition (Tair)
+        /// *   **Community**: ApsaraDB for Redis Community Edition
+        /// *   **Enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)
         /// </summary>
         [NameInMap("EditionType")]
         [Validation(Required=false)]
         public string EditionType { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
+        /// The engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   1.0
+        /// *   2.8
+        /// *   4.0
+        /// *   5.0
+        /// *   6.0
+        /// *   7.0
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -75,9 +84,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The IDs of the instances that you want to query.
         /// 
-        /// > If you specify multiple instance IDs, separate these IDs with commas (,).
+        /// >  If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -120,10 +129,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// The network type. Valid values:
         /// 
-        /// *   **CLASSIC**: classic network
-        /// *   **VPC**: Virtual Private Cloud (VPC)
+        /// *   **CLASSIC**
+        /// *   **VPC**
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -138,14 +147,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**. Default value: **1**.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -203,16 +212,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeInstancesRequestTag> Tag { get; set; }
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. A tag is a key-value pair.
+            /// The tag key. A tag is a key-value pair.
             /// 
-            /// > A maximum of five key-value pairs can be specified at a time.
+            /// >  A maximum of five key-value pairs can be specified at a time.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. A tag is a key-value pair.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

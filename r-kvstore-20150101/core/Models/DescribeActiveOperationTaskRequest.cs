@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// The time when the O\&M task was created. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+        /// Specifies whether to return the historical tasks. Default value: 0. Valid values:
+        /// 
+        /// *   **0**: returns the current task.
+        /// *   **1**: returns the historical tasks.
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -39,7 +42,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the O\&M task.
+        /// The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// 
+        /// > A value of **all** indicates all region IDs.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -58,7 +63,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The type of the O&M task. Valid values:
+        /// 
+        /// *   **rds_apsaradb_ha**: master-replica switchover
+        /// *   **rds_apsaradb_transfer**: instance migration
+        /// *   **rds_apsaradb_upgrade**: minor version update
+        /// *   **all**: all types
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

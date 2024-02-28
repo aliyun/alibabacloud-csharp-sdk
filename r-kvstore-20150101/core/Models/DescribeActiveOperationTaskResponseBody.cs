@@ -10,49 +10,49 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// The O\&M tasks of the instance.
+        /// Details of O\&M tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTaskResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTaskResponseBodyItems : TeaModel {
             /// <summary>
-            /// The time when the O\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The engine type of the instance. The return value is **Redis**.
+            /// The database type of the instance. The return value is **Redis**.
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The deadline before which the time to perform the O\&M task can be modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The deadline before which the time to preform the O&M task can be modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
             /// </summary>
             [NameInMap("Deadline")]
             [Validation(Required=false)]
             public string Deadline { get; set; }
 
             /// <summary>
-            /// The ID of the O\&M task.
+            /// The ID of the O&M task.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// The ID of the ApsaraDB for Redis instance.
+            /// The ID of the instance.
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
             public string InsName { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -66,25 +66,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string PrepareInterval { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The region ID of the instance.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\&M task was preformed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The state of the O\&M task. Valid values:
+            /// The state of the O&M task. Valid values:
             /// 
             /// *   **2**: The task is waiting for users to specify a switchover time.
             /// *   **3**: The task is waiting to be performed.
-            /// *   **4**: The task is being performed. If the task is in this state, the [ModifyActiveOperationTask](~~197384~~) operation cannot be called to modify the scheduled switchover time.
+            /// *   **4**: The task is being performed. If the task is in this state, the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation cannot be called to modify the scheduled switchover time.
             /// *   **5**: The task is performed.
             /// *   **6**: The task fails.
             /// *   **7**: The task is canceled.
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// The time when the switchover operation was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// The type of the task. Valid values:
             /// 
-            /// *   **rds_apsaradb_ha**: primary/secondary switchover
+            /// *   **rds_apsaradb_ha**: master-replica switchover
             /// *   **rds_apsaradb_transfer**: instance migration
             /// *   **rds_apsaradb_upgrade**: minor version update
             /// *   **all**: all types
@@ -115,30 +115,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The number of the page to return. It must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The maximum number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The time when the O\&M task was executed. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which pending events belong. You can call the [DescribeRegions](~~61012~~) operation to query the region IDs.
-        /// 
-        /// >  A value of **all** indicates all region IDs.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the instances.
+        /// Details about the instances.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The architecture of the instance. Default value: NULL. Valid values:
                 /// 
-                /// *   **cluster**: The instance is a cluster instance.
-                /// *   **standard**: The instance is a standard instance.
-                /// *   **rwsplit**: The instance is a read/write splitting instance.
-                /// *   **NULL**: The instance can be a cluster, standard, or read/write splitting instance.
+                /// *   **cluster**: cluster architecture
+                /// *   **standard**: standard architecture
+                /// *   **rwsplit**: read/write splitting architecture
+                /// *   **NULL**: all of the preceding architectures
                 /// </summary>
                 [NameInMap("ArchitectureType")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// The connection mode of the instance. Valid values:
                 /// 
                 /// *   **Standard**: standard mode
-                /// *   **Safe**: proxy mode
+                /// *   **Safe**: database proxy mode
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The edition of the instance. Valid values:
                 /// 
-                /// *   **Community**: Community Edition
-                /// *   **Enterprise**: Enhance Edition (Tair)
+                /// *   **Community**: ApsaraDB for Redis Community Edition
+                /// *   **Enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)
                 /// </summary>
                 [NameInMap("EditionType")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
+                /// The engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The ID of the distributed instance.
                 /// 
-                /// > This parameter is returned only when the instance is a child instance of a distributed instance.
+                /// >  This parameter is returned only if the instance is a child instance of a distributed instance.
                 /// </summary>
                 [NameInMap("GlobalInstanceId")]
                 [Validation(Required=false)]
@@ -144,15 +144,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:
                 /// 
-                /// *   **true**: Your Alibaba Cloud account has pending orders for renewal and configuration change.
-                /// *   **false**: Your Alibaba Cloud account does not have pending orders for renewal and configuration change.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("HasRenewChangeOrder")]
                 [Validation(Required=false)]
                 public bool? HasRenewChangeOrder { get; set; }
 
                 /// <summary>
-                /// The instance class of the instance.
+                /// The instance class.
                 /// </summary>
                 [NameInMap("InstanceClass")]
                 [Validation(Required=false)]
@@ -182,13 +182,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// *   **Flushing**: The instance is being released.
                 /// *   **Released**: The instance is released.
                 /// *   **Transforming**: The billing method of the instance is being changed.
-                /// *   **Unavailable**: The instance is suspended.
+                /// *   **Unavailable**: The instance is unavailable.
                 /// *   **Error**: The instance failed to be created.
                 /// *   **Migrating**: The instance is being migrated.
                 /// *   **BackupRecovering**: The instance is being restored from a backup.
                 /// *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
                 /// *   **NetworkModifying**: The network type of the instance is being changed.
-                /// *   **SSLModifying**: The SSL certificate of the instance is being changed.
+                /// *   **SSLModifying**: The SSL configurations of the instance are being changed.
                 /// *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
                 /// </summary>
                 [NameInMap("InstanceStatus")]
@@ -209,8 +209,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether the instance is managed by ApsaraDB RDS. Valid values:
                 /// 
-                /// *   **true**: The instance is managed by ApsaraDB RDS.
-                /// *   **false**: The instance is not managed by ApsaraDB RDS.
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("IsRds")]
                 [Validation(Required=false)]
@@ -219,8 +219,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **CLASSIC**: classic network
-                /// *   **VPC**: VPC
+                /// *   **CLASSIC**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -230,14 +230,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// The node type. Valid values:
                 /// 
                 /// *   **double**: The instance contains a master node and a replica node.
-                /// *   **single**: The instance contains only a master node. This node type is phrased out.
+                /// *   **single**: The instance contains only a master node. This node type is phased out.
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The plan type of the instance. Valid values:
+                /// The plan type. Valid values:
                 /// 
                 /// *   **standard**: standard plan
                 /// *   **customized**: custom plan
@@ -247,37 +247,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string PackageType { get; set; }
 
                 /// <summary>
-                /// The port number of the instance.
+                /// The service port of the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public long? Port { get; set; }
 
                 /// <summary>
-                /// The private IP address of the instance.
+                /// The private IP address.
                 /// 
-                /// > This parameter is not returned when the instance is deployed in the classic network.
+                /// >  This parameter is not returned when the instance is deployed in the classic network.
                 /// </summary>
                 [NameInMap("PrivateIp")]
                 [Validation(Required=false)]
                 public string PrivateIp { get; set; }
 
                 /// <summary>
-                /// The expected maximum queries per second (QPS).
+                /// The number of queries per second (QPS).
                 /// </summary>
                 [NameInMap("QPS")]
                 [Validation(Required=false)]
                 public long? QPS { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The logical ID of the replica instance.
+                /// The logical ID of the distributed instance.
                 /// </summary>
                 [NameInMap("ReplacateId")]
                 [Validation(Required=false)]
@@ -293,30 +293,32 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The ID of the secondary zone.
                 /// 
-                /// > If multiple zones are returned for **ZoneId** such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.
+                /// >  If multiple zones are returned for **ZoneId**, such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
                 [Validation(Required=false)]
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// The shard class for the instance.
+                /// The shard class. For more information about shard classes, see [Overview](~~26350~~).
+                /// 
+                /// >  The overall performance of a cluster instance is calculated by multiplying the class of a single shard (ShardClass) by the number of shards (ShardCount).
                 /// </summary>
                 [NameInMap("ShardClass")]
                 [Validation(Required=false)]
                 public string ShardClass { get; set; }
 
                 /// <summary>
-                /// The number of data shards in the instance.
+                /// The number of data shards in the cluster instance.
                 /// 
-                /// > This parameter is returned only when the instance is a cluster instance that uses cloud disks.
+                /// >  This parameter is returned only for cloud-native cluster instances or read/write splitting instances.
                 /// </summary>
                 [NameInMap("ShardCount")]
                 [Validation(Required=false)]
                 public int? ShardCount { get; set; }
 
                 /// <summary>
-                /// Details of the tags.
+                /// Details about the tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -345,7 +347,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The username that is used to connect to the instance. By default, the username that is named after the instance ID is returned.
+                /// The username used to connect to the instance. By default, a username named after the instance ID is included.
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -359,14 +361,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The ID of the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

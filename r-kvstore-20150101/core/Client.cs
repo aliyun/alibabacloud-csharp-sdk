@@ -1945,8 +1945,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
+          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
           *
           * @param request CreateInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2033,8 +2033,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
+          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
           *
           * @param request CreateInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2121,8 +2121,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
+          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
           *
           * @param request CreateInstancesRequest
           * @return CreateInstancesResponse
@@ -2135,8 +2135,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
+          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
           *
           * @param request CreateInstancesRequest
           * @return CreateInstancesResponse
@@ -3340,9 +3340,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Specifies whether to return the historical tasks. Valid values:
-          * *   **0**: returns the current task. This is the default value.
-          * *   **1**: returns the historical tasks.
+          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
           *
           * @param request DescribeActiveOperationTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3412,9 +3410,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Specifies whether to return the historical tasks. Valid values:
-          * *   **0**: returns the current task. This is the default value.
-          * *   **1**: returns the historical tasks.
+          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
           *
           * @param request DescribeActiveOperationTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3484,9 +3480,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Specifies whether to return the historical tasks. Valid values:
-          * *   **0**: returns the current task. This is the default value.
-          * *   **1**: returns the historical tasks.
+          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
           *
           * @param request DescribeActiveOperationTaskRequest
           * @return DescribeActiveOperationTaskResponse
@@ -3498,9 +3492,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Specifies whether to return the historical tasks. Valid values:
-          * *   **0**: returns the current task. This is the default value.
-          * *   **1**: returns the historical tasks.
+          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
           *
           * @param request DescribeActiveOperationTaskRequest
           * @return DescribeActiveOperationTaskResponse
@@ -5135,6 +5127,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeDBInstanceNetInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > Only instances that use cloud disks support this operation.
+          *
+          * @param request DescribeDBNodeDirectVipInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBNodeDirectVipInfoResponse
+         */
         public DescribeDBNodeDirectVipInfoResponse DescribeDBNodeDirectVipInfoWithOptions(DescribeDBNodeDirectVipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5178,6 +5177,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > Only instances that use cloud disks support this operation.
+          *
+          * @param request DescribeDBNodeDirectVipInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBNodeDirectVipInfoResponse
+         */
         public async Task<DescribeDBNodeDirectVipInfoResponse> DescribeDBNodeDirectVipInfoWithOptionsAsync(DescribeDBNodeDirectVipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5221,12 +5227,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > Only instances that use cloud disks support this operation.
+          *
+          * @param request DescribeDBNodeDirectVipInfoRequest
+          * @return DescribeDBNodeDirectVipInfoResponse
+         */
         public DescribeDBNodeDirectVipInfoResponse DescribeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBNodeDirectVipInfoWithOptions(request, runtime);
         }
 
+        /**
+          * > Only instances that use cloud disks support this operation.
+          *
+          * @param request DescribeDBNodeDirectVipInfoRequest
+          * @return DescribeDBNodeDirectVipInfoResponse
+         */
         public async Task<DescribeDBNodeDirectVipInfoResponse> DescribeDBNodeDirectVipInfoAsync(DescribeDBNodeDirectVipInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8204,7 +8222,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * An array that consists of the details about the parameters returned.
+          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
           *
           * @param request DescribeParameterTemplatesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8274,7 +8292,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * An array that consists of the details about the parameters returned.
+          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
           *
           * @param request DescribeParameterTemplatesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8344,7 +8362,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * An array that consists of the details about the parameters returned.
+          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
           *
           * @param request DescribeParameterTemplatesRequest
           * @return DescribeParameterTemplatesResponse
@@ -8356,7 +8374,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * An array that consists of the details about the parameters returned.
+          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
           *
           * @param request DescribeParameterTemplatesRequest
           * @return DescribeParameterTemplatesResponse
@@ -10662,7 +10680,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
+          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
           *
           * @param request InitializeKvstorePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10716,7 +10734,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
+          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
           *
           * @param request InitializeKvstorePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10770,7 +10788,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
+          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
           *
           * @param request InitializeKvstorePermissionRequest
           * @return InitializeKvstorePermissionResponse
@@ -10782,7 +10800,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
+          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
           *
           * @param request InitializeKvstorePermissionRequest
           * @return InitializeKvstorePermissionResponse

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyGlobalSecurityIPGroupRelationRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the IP whitelist template.
+        /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
         public string GlobalSecurityGroupId { get; set; }
@@ -25,10 +31,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

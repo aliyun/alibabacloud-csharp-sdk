@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDBNodeDirectVipInfoRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
