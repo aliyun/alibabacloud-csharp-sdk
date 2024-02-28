@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AllowPartialBuy { get; set; }
 
+        [NameInMap("AntiRansomwareService")]
+        [Validation(Required=false)]
+        public int? AntiRansomwareService { get; set; }
+
         /// <summary>
         /// Indicates whether the application whitelist feature is enabled. Valid values:
         /// 

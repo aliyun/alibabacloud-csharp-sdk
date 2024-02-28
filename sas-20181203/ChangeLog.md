@@ -1,3 +1,11 @@
+2024-02-28 Version: 2.24.1
+- Update API DescribeExposedInstanceCriteria: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedInstanceDetail: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedInstanceList: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedStatisticsDetail: add param ResourceDirectoryAccountId.
+- Update API DescribeVersionConfig: update response param.
+
+
 2024-01-31 Version: 2.24.0
 - Support API DeleteVulAutoRepairConfig.
 - Update API DescribeSuspEventDetailupdate Lang param.

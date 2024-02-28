@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceCriteriaRequest : TeaModel {
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public string ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// The value of the search condition. Fuzzy match is supported.
         /// </summary>
