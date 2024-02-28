@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ManagedType { get; set; }
 
+        /// <summary>
+        /// the ID of prometheus instance bound to the environment. If not provided, please call the InitEnvironment interface to complete the initialization of the storage instance.
+        /// </summary>
         [NameInMap("PrometheusInstanceId")]
         [Validation(Required=false)]
         public string PrometheusInstanceId { get; set; }

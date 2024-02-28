@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenXtraceDefaultSLRRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

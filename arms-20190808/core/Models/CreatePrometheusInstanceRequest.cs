@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public int? Duration { get; set; }
+
         /// <summary>
         /// The ID of the Grafana dedicated instance. This parameter is available if you set ClusterType to ecs.
         /// </summary>

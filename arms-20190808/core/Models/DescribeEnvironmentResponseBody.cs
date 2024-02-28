@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string BindVpcCidr { get; set; }
 
+            [NameInMap("DbInstanceStatus")]
+            [Validation(Required=false)]
+            public string DbInstanceStatus { get; set; }
+
             /// <summary>
             /// The ID of the environment instance.
             /// </summary>

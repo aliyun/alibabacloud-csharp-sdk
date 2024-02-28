@@ -4336,6 +4336,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["ClusterType"] = request.ClusterType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                query["Duration"] = request.Duration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaInstanceId))
             {
                 query["GrafanaInstanceId"] = request.GrafanaInstanceId;
@@ -4406,6 +4410,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                query["Duration"] = request.Duration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaInstanceId))
             {
