@@ -6946,6 +6946,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {
                 query["Key"] = request.Key;
@@ -7002,6 +7006,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {

@@ -73,6 +73,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string IsEqual { get; set; }
 
+                [NameInMap("IsInstancePolarDBKey")]
+                [Validation(Required=false)]
+                public string IsInstancePolarDBKey { get; set; }
+
+                [NameInMap("IsInstanceRdsKey")]
+                [Validation(Required=false)]
+                public string IsInstanceRdsKey { get; set; }
+
+                [NameInMap("IsPolarDBKey")]
+                [Validation(Required=false)]
+                public string IsPolarDBKey { get; set; }
+
+                [NameInMap("IsRdsKey")]
+                [Validation(Required=false)]
+                public string IsRdsKey { get; set; }
+
                 /// <summary>
                 /// The description of the parameter of the current cluster.
                 /// </summary>
