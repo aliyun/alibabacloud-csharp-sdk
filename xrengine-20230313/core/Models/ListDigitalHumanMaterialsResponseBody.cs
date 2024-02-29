@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("SortOrder")]
+            [Validation(Required=false)]
+            public int? SortOrder { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
