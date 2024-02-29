@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        [NameInMap("ExperimentConfig")]
+        [Validation(Required=false)]
+        public CreateTrainingJobRequestExperimentConfig ExperimentConfig { get; set; }
+        public class CreateTrainingJobRequestExperimentConfig : TeaModel {
+            [NameInMap("ExperimentId")]
+            [Validation(Required=false)]
+            public string ExperimentId { get; set; }
+
+        }
+
         [NameInMap("HyperParameters")]
         [Validation(Required=false)]
         public List<CreateTrainingJobRequestHyperParameters> HyperParameters { get; set; }

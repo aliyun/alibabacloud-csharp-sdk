@@ -512,6 +512,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 body["ComputeResource"] = request.ComputeResource;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentConfig))
+            {
+                body["ExperimentConfig"] = request.ExperimentConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperParameters))
             {
                 body["HyperParameters"] = request.HyperParameters;
@@ -603,6 +607,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResource))
             {
                 body["ComputeResource"] = request.ComputeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentConfig))
+            {
+                body["ExperimentConfig"] = request.ExperimentConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperParameters))
             {

@@ -77,6 +77,20 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        [NameInMap("ExperimentConfig")]
+        [Validation(Required=false)]
+        public GetTrainingJobResponseBodyExperimentConfig ExperimentConfig { get; set; }
+        public class GetTrainingJobResponseBodyExperimentConfig : TeaModel {
+            [NameInMap("ExperimentId")]
+            [Validation(Required=false)]
+            public string ExperimentId { get; set; }
+
+            [NameInMap("ExperimentName")]
+            [Validation(Required=false)]
+            public string ExperimentName { get; set; }
+
+        }
+
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
