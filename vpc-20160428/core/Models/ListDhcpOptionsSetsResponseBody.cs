@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The DNS server IP address.
+                /// The IP address of the DNS server.
                 /// </summary>
                 [NameInMap("DomainNameServers")]
                 [Validation(Required=false)]
@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group to which the DHCP options set belongs.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -101,23 +104,32 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The status of the DHCP options set. Valid values:
             /// 
-            /// *   **Available**: available
-            /// *   **InUse**: in use
-            /// *   **Pending**: being configured
-            /// *   **Deleted**: deleted
+            /// *   **Available**
+            /// *   **InUse**
+            /// *   **Pending**
+            /// *   **Deleted**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The tag list.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags> Tags { get; set; }
             public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags : TeaModel {
+                /// <summary>
+                /// The key of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The value of tag N added to the resource.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -127,22 +139,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If **NextToken** is empty, it indicates that no next query is to be sent.
-        /// *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+        /// *   If **NextToken** is empty, no next page exists.
+        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The number of entries.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }
