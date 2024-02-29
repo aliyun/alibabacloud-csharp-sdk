@@ -400,6 +400,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("RollbackFailedRootReason")]
+        [Validation(Required=false)]
+        public string RollbackFailedRootReason { get; set; }
+
         /// <summary>
         /// The ID of the root stack. This parameter is returned if the specified stack is a nested stack.
         /// </summary>
