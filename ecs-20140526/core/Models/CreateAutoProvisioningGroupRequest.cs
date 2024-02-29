@@ -878,6 +878,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateAutoProvisioningGroupRequestTag> Tag { get; set; }
+        public class CreateAutoProvisioningGroupRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
         /// 

@@ -79,6 +79,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeAutoProvisioningGroupsRequestTag> Tag { get; set; }
+        public class DescribeAutoProvisioningGroupsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

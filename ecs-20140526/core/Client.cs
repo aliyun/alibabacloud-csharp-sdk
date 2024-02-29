@@ -5680,6 +5680,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["SystemDiskConfig"] = request.SystemDiskConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminateInstances))
             {
                 query["TerminateInstances"] = request.TerminateInstances;
@@ -5841,6 +5845,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskConfig))
             {
                 query["SystemDiskConfig"] = request.SystemDiskConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminateInstances))
             {
@@ -20147,6 +20155,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -20213,6 +20225,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -43771,23 +43787,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyAutoSnapshotPolicyWithOptionsAsync(request, runtime);
         }
 
-        public ModifyAutoSnapshotPolicyExResponse ModifyAutoSnapshotPolicyExWithOptions(ModifyAutoSnapshotPolicyExRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyAutoSnapshotPolicyExResponse ModifyAutoSnapshotPolicyExWithOptions(ModifyAutoSnapshotPolicyExRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ModifyAutoSnapshotPolicyExShrinkRequest request = new ModifyAutoSnapshotPolicyExShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CopyEncryptionConfiguration))
-            {
-                request.CopyEncryptionConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CopyEncryptionConfiguration, "CopyEncryptionConfiguration", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopiedSnapshotsRetentionDays))
             {
                 query["CopiedSnapshotsRetentionDays"] = request.CopiedSnapshotsRetentionDays;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyEncryptionConfigurationShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyEncryptionConfiguration))
             {
-                query["CopyEncryptionConfiguration"] = request.CopyEncryptionConfigurationShrink;
+                query["CopyEncryptionConfiguration"] = request.CopyEncryptionConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCrossRegionCopy))
             {
@@ -43852,23 +43862,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyAutoSnapshotPolicyExResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyAutoSnapshotPolicyExResponse> ModifyAutoSnapshotPolicyExWithOptionsAsync(ModifyAutoSnapshotPolicyExRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyAutoSnapshotPolicyExResponse> ModifyAutoSnapshotPolicyExWithOptionsAsync(ModifyAutoSnapshotPolicyExRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ModifyAutoSnapshotPolicyExShrinkRequest request = new ModifyAutoSnapshotPolicyExShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CopyEncryptionConfiguration))
-            {
-                request.CopyEncryptionConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CopyEncryptionConfiguration, "CopyEncryptionConfiguration", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopiedSnapshotsRetentionDays))
             {
                 query["CopiedSnapshotsRetentionDays"] = request.CopiedSnapshotsRetentionDays;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyEncryptionConfigurationShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyEncryptionConfiguration))
             {
-                query["CopyEncryptionConfiguration"] = request.CopyEncryptionConfigurationShrink;
+                query["CopyEncryptionConfiguration"] = request.CopyEncryptionConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCrossRegionCopy))
             {
