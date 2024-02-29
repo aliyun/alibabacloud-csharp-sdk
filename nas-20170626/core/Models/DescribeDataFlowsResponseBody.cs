@@ -175,6 +175,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceStorage { get; set; }
 
                 /// <summary>
+                /// 源端存储内的访问路径。
+                /// </summary>
+                [NameInMap("SourceStoragePath")]
+                [Validation(Required=false)]
+                public string SourceStoragePath { get; set; }
+
+                /// <summary>
                 /// The dataflow status. Valid values:
                 /// 
                 /// *   Starting: The dataflow is being created or enabled.

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConflictPolicy")]
+        [Validation(Required=false)]
+        public string ConflictPolicy { get; set; }
+
         /// <summary>
         /// The dataflow ID.
         /// </summary>

@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        [NameInMap("FileSystemPath")]
+        [Validation(Required=false)]
+        public string FileSystemPath { get; set; }
+
         /// <summary>
         /// The fileset ID.
         /// </summary>
@@ -134,6 +138,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("SourceStorage")]
         [Validation(Required=false)]
         public string SourceStorage { get; set; }
+
+        [NameInMap("SourceStoragePath")]
+        [Validation(Required=false)]
+        public string SourceStoragePath { get; set; }
 
         /// <summary>
         /// The maximum dataflow throughput. Unit: MB/s. Valid values:

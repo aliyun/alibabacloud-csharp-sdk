@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeDataFlowTasksResponseBodyTaskInfoTask> Task { get; set; }
             public class DescribeDataFlowTasksResponseBodyTaskInfoTask : TeaModel {
+                [NameInMap("ConflictPolicy")]
+                [Validation(Required=false)]
+                public string ConflictPolicy { get; set; }
+
                 /// <summary>
                 /// The time when the task was created.
                 /// </summary>
@@ -46,6 +50,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public string DataType { get; set; }
+
+                [NameInMap("Directory")]
+                [Validation(Required=false)]
+                public string Directory { get; set; }
 
                 /// <summary>
                 /// The time when the task ended.
