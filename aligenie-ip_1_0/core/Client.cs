@@ -8265,6 +8265,102 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return await PageGetHotelRoomDevicesWithOptionsAsync(request, headers, runtime);
         }
 
+        public PmsEventReportResponse PmsEventReportWithOptions(PmsEventReportRequest request, PmsEventReportHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                body["Payload"] = request.Payload;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PmsEventReport",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/pmsEventReport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PmsEventReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PmsEventReportResponse> PmsEventReportWithOptionsAsync(PmsEventReportRequest request, PmsEventReportHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                body["Payload"] = request.Payload;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PmsEventReport",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/pmsEventReport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PmsEventReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PmsEventReportResponse PmsEventReport(PmsEventReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PmsEventReportHeaders headers = new PmsEventReportHeaders();
+            return PmsEventReportWithOptions(request, headers, runtime);
+        }
+
+        public async Task<PmsEventReportResponse> PmsEventReportAsync(PmsEventReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PmsEventReportHeaders headers = new PmsEventReportHeaders();
+            return await PmsEventReportWithOptionsAsync(request, headers, runtime);
+        }
+
         public PushHotelMessageResponse PushHotelMessageWithOptions(PushHotelMessageRequest tmpReq, PushHotelMessageHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetWelcomeTextAndMusicResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetWelcomeTextAndMusicResponseBody Body { get; set; }
 
     }

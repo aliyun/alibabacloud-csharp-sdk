@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
-    public class RoomCheckOutResponse : TeaModel {
+    public class PmsEventReportResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RoomCheckOutResponseBody Body { get; set; }
+        public PmsEventReportResponseBody Body { get; set; }
 
     }
 
