@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public UpdateDIJobRequestJobSettings JobSettings { get; set; }
         public class UpdateDIJobRequestJobSettings : TeaModel {
+            [NameInMap("ChannelSettings")]
+            [Validation(Required=false)]
+            public string ChannelSettings { get; set; }
+
             [NameInMap("ColumnDataTypeSettings")]
             [Validation(Required=false)]
             public List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> ColumnDataTypeSettings { get; set; }
@@ -32,6 +36,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("SourceDataType")]
                 [Validation(Required=false)]
                 public string SourceDataType { get; set; }
+
+            }
+
+            [NameInMap("CycleScheduleSettings")]
+            [Validation(Required=false)]
+            public UpdateDIJobRequestJobSettingsCycleScheduleSettings CycleScheduleSettings { get; set; }
+            public class UpdateDIJobRequestJobSettingsCycleScheduleSettings : TeaModel {
+                [NameInMap("ScheduleParameters")]
+                [Validation(Required=false)]
+                public string ScheduleParameters { get; set; }
 
             }
 

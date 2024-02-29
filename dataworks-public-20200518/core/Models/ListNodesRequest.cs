@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        [NameInMap("SchedulerType")]
+        [Validation(Required=false)]
+        public string SchedulerType { get; set; }
+
     }
 
 }

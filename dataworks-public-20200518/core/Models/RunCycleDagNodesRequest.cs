@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunCycleDagNodesRequest : TeaModel {
+        [NameInMap("AlertNoticeType")]
+        [Validation(Required=false)]
+        public string AlertNoticeType { get; set; }
+
+        [NameInMap("AlertType")]
+        [Validation(Required=false)]
+        public string AlertType { get; set; }
+
         /// <summary>
         /// The time when the node started to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
         /// </summary>
@@ -22,6 +30,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("BizEndTime")]
         [Validation(Required=false)]
         public string BizEndTime { get; set; }
+
+        [NameInMap("ConcurrentRuns")]
+        [Validation(Required=false)]
+        public int? ConcurrentRuns { get; set; }
 
         /// <summary>
         /// The data timestamp at which data is no longer backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.

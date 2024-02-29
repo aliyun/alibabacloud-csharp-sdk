@@ -8416,6 +8416,72 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GenerateDISyncTaskConfigForUpdatingWithOptionsAsync(request, runtime);
         }
 
+        public GetAlertMessageResponse GetAlertMessageWithOptions(GetAlertMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertId))
+            {
+                body["AlertId"] = request.AlertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlertMessage",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAlertMessageResponse> GetAlertMessageWithOptionsAsync(GetAlertMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertId))
+            {
+                body["AlertId"] = request.AlertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlertMessage",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAlertMessageResponse GetAlertMessage(GetAlertMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAlertMessageWithOptions(request, runtime);
+        }
+
+        public async Task<GetAlertMessageResponse> GetAlertMessageAsync(GetAlertMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAlertMessageWithOptionsAsync(request, runtime);
+        }
+
         public GetBaselineResponse GetBaselineWithOptions(GetBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18780,6 +18846,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerType))
+            {
+                body["SchedulerType"] = request.SchedulerType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -18834,6 +18904,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerType))
+            {
+                body["SchedulerType"] = request.SchedulerType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21821,6 +21895,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertNoticeType))
+            {
+                body["AlertNoticeType"] = request.AlertNoticeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
+            {
+                body["AlertType"] = request.AlertType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizBeginTime))
             {
                 body["BizBeginTime"] = request.BizBeginTime;
@@ -21828,6 +21910,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizEndTime))
             {
                 body["BizEndTime"] = request.BizEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrentRuns))
+            {
+                body["ConcurrentRuns"] = request.ConcurrentRuns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndBizDate))
             {
@@ -21899,6 +21985,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertNoticeType))
+            {
+                body["AlertNoticeType"] = request.AlertNoticeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
+            {
+                body["AlertType"] = request.AlertType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizBeginTime))
             {
                 body["BizBeginTime"] = request.BizBeginTime;
@@ -21906,6 +22000,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizEndTime))
             {
                 body["BizEndTime"] = request.BizEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConcurrentRuns))
+            {
+                body["ConcurrentRuns"] = request.ConcurrentRuns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndBizDate))
             {

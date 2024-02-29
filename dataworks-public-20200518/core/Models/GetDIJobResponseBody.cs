@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public GetDIJobResponseBodyDataJobSettings JobSettings { get; set; }
             public class GetDIJobResponseBodyDataJobSettings : TeaModel {
+                [NameInMap("ChannelSettings")]
+                [Validation(Required=false)]
+                public string ChannelSettings { get; set; }
+
                 [NameInMap("ColumnDataTypeSettings")]
                 [Validation(Required=false)]
                 public List<GetDIJobResponseBodyDataJobSettingsColumnDataTypeSettings> ColumnDataTypeSettings { get; set; }
@@ -70,6 +74,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("SourceDataType")]
                     [Validation(Required=false)]
                     public string SourceDataType { get; set; }
+
+                }
+
+                [NameInMap("CycleScheduleSettings")]
+                [Validation(Required=false)]
+                public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings CycleScheduleSettings { get; set; }
+                public class GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings : TeaModel {
+                    [NameInMap("CycleMigrationType")]
+                    [Validation(Required=false)]
+                    public string CycleMigrationType { get; set; }
+
+                    [NameInMap("ScheduleParameters")]
+                    [Validation(Required=false)]
+                    public string ScheduleParameters { get; set; }
 
                 }
 

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
-        public int? EntityId { get; set; }
+        public long? EntityId { get; set; }
 
         /// <summary>
         /// The error message returned.

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ListRefDISyncTasksResponse : TeaModel {
+    public class GetAlertMessageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListRefDISyncTasksResponseBody Body { get; set; }
+        public GetAlertMessageResponseBody Body { get; set; }
 
     }
 

@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
-                public int? EntityId { get; set; }
+                public long? EntityId { get; set; }
 
                 /// <summary>
                 /// The expected value.
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public int? Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
                 /// The partition filter expression.
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </summary>
                 [NameInMap("RuleCheckerRelationId")]
                 [Validation(Required=false)]
-                public int? RuleCheckerRelationId { get; set; }
+                public long? RuleCheckerRelationId { get; set; }
 
                 /// <summary>
                 /// The name of the monitoring rule.
