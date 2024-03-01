@@ -403,6 +403,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ItemId { get; set; }
 
+                [NameInMap("item_type")]
+                [Validation(Required=false)]
+                public string ItemType { get; set; }
+
                 [NameInMap("shopping_item_map")]
                 [Validation(Required=false)]
                 public Dictionary<string, ModuleGroupItemShoppingItemMapValue> ShoppingItemMap { get; set; }
