@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
         [Validation(Required=false)]
         public long? Cost { get; set; }
 
+        [NameInMap("deductScene")]
+        [Validation(Required=false)]
+        public string DeductScene { get; set; }
+
         [NameInMap("extraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }

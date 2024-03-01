@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
 {
-    public class ActualDeductResourceResponse : TeaModel {
+    public class ActualDeductResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
 {
-    public class ActualDeductResourceResponse : TeaModel {
+    public class ExpectDeductResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ActualDeductResourceResult Body { get; set; }
+        public ExpectDeductResourceResult Body { get; set; }
 
     }
 
