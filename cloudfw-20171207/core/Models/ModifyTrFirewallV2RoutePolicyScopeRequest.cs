@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("ShouldRecover")]
+        [Validation(Required=false)]
+        public string ShouldRecover { get; set; }
+
         [NameInMap("SrcCandidateList")]
         [Validation(Required=false)]
         public List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> SrcCandidateList { get; set; }

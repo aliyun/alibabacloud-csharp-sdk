@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **EIP**: the EIP
         /// *   **EniEIP**: the EIP of an elastic network interface (ENI)
         /// *   **NatEIP**: the EIP of a NAT gateway
-        /// *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
-        /// *   **SlbPublicIP**: the public IP address of an SLB instance
+        /// *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance
+        /// *   **SlbPublicIP**: the public IP address of an SLB instance or a CLB instance
         /// *   **NatPublicIP**: the public IP address of a NAT gateway
         /// *   **HAVIP**: the high-availability virtual IP address (HAVIP)
         /// </summary>

@@ -116,6 +116,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        /// <summary>
+        /// The recurrence type for the access control policy to take effect. Valid values:
+        /// 
+        /// *   **Permanent** (default): The policy always takes effect.
+        /// *   **None**: The policy takes effect for only once.
+        /// *   **Daily**: The policy takes effect on a daily basis.
+        /// *   **Weekly**: The policy takes effect on a weekly basis.
+        /// *   **Monthly**: The policy takes effect on a monthly basis.
+        /// </summary>
         [NameInMap("RepeatType")]
         [Validation(Required=false)]
         public string RepeatType { get; set; }

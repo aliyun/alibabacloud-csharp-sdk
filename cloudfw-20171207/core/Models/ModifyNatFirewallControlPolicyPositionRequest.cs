@@ -16,6 +16,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
+        /// <summary>
+        /// The direction of the traffic to which the access control policy applies.
+        /// 
+        /// *   Set the value to **out**.
+        /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }

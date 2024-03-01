@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationIPResponseBody : TeaModel {
         /// <summary>
-        /// The destination IP addresses in outbound connections.
+        /// The IP addresses in outbound connections.
         /// </summary>
         [NameInMap("DstIPList")]
         [Validation(Required=false)]
@@ -19,24 +19,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether an access control policy is configured. Valid values:
             /// 
-            /// *   **Uncovered**: No access control policies are configured.
-            /// *   **FullCoverage**: An access control policy is configured.
+            /// *   **Uncovered**: no
+            /// *   **FullCoverage**: yes
             /// </summary>
             [NameInMap("AclCoverage")]
             [Validation(Required=false)]
             public string AclCoverage { get; set; }
 
             /// <summary>
-            /// The suggestion in an access control policy.
+            /// The suggestion to configure an access control policy.
             /// </summary>
             [NameInMap("AclRecommendDetail")]
             [Validation(Required=false)]
             public string AclRecommendDetail { get; set; }
 
             /// <summary>
-            /// The state of the access control policy. Valid values:
+            /// The status of the access control policy. Valid values:
             /// 
-            /// *   **Normal**: healthy
+            /// *   **normal**: healthy
             /// *   **Abnormal**: unhealthy
             /// </summary>
             [NameInMap("AclStatus")]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// An array that consists of application ports.
+            /// The application ports.
             /// </summary>
             [NameInMap("ApplicationPortList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> ApplicationPortList { get; set; }
             public class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList : TeaModel {
                 /// <summary>
-                /// The application type in the access control policy. Valid values:
+                /// The application type used in the access control policy. Valid values:
                 /// 
                 /// *   **FTP**
                 /// *   **HTTP**
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// *   **SSL**
                 /// *   **VNC**
                 /// 
-                /// >  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
+                /// >  The value of this parameter depends on the value of the Proto parameter. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
                 /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
                 public string ApplicationName { get; set; }
 
                 /// <summary>
-                /// The port of the application.
+                /// The application port.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryClassId { get; set; }
 
             /// <summary>
-            /// The ID of the service to which the destination IP address belongs. Valid values:
+            /// The ID of the service type. Valid values:
             /// 
             /// *   **Aliyun**: Alibaba Cloud services
             /// *   **NotAliyun**: third-party services
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// The type of the service to which the destination IP address belongs. Valid values:
             /// 
             /// *   **Alibaba Cloud services**
-            /// *   **third-party services**
+            /// *   **Third-party services**
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// The destination IP address in the outbound connection that is initiated to access a domain name.
+            /// The destination IP addresses in outbound connections.
             /// </summary>
             [NameInMap("DstIP")]
             [Validation(Required=false)]
@@ -155,8 +155,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether an access control policy is configured. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HasAcl")]
             [Validation(Required=false)]
@@ -165,8 +165,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether an access control policy is recommended. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("HasAclRecommend")]
             [Validation(Required=false)]
@@ -182,8 +182,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether the destination IP address is added to a whitelist. Valid values:
             /// 
-            /// *   **true**: added
-            /// *   **false**: not added
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("IsMarkNormal")]
             [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The total volume of traffic. Unit: bytes.
+            /// The total traffic. Unit: bytes
             /// </summary>
             [NameInMap("TotalBytes")]
             [Validation(Required=false)]

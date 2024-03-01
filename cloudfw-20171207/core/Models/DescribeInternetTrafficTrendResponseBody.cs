@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Time { get; set; }
 
             /// <summary>
-            /// The total inbound and outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+            /// The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.
             /// </summary>
             [NameInMap("TotalBps")]
             [Validation(Required=false)]

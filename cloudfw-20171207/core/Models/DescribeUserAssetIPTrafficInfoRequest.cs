@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The language of the content within the response. Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
+        /// *   **zh** (default): Chinese
         /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The point in time to query. The value is a UNIX timestamp. Unit: seconds.
+        /// The time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// </summary>
         [NameInMap("TrafficTime")]
         [Validation(Required=false)]

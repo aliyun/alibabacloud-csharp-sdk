@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The details about the access control policy.
+        /// The information about the access control policies.
         /// </summary>
         [NameInMap("Policys")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclAction { get; set; }
 
             /// <summary>
-            /// The unique ID of the access control policy.
+            /// The UUID of the access control policy.
             /// </summary>
             [NameInMap("AclUuid")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// The type of the application that the access control policy supports. Valid values:
+            /// The application type supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:
             /// 
             /// *   **FTP**
             /// *   **HTTP**
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// The names of applications.
+            /// The application names.
             /// </summary>
             [NameInMap("ApplicationNameList")]
             [Validation(Required=false)]
             public List<string> ApplicationNameList { get; set; }
 
             /// <summary>
-            /// The time at which the access control policy was created.
+            /// The time when the access control policy was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestPortType { get; set; }
 
             /// <summary>
-            /// The destination address in the access control policy. The value of this parameter depends on the value of the DestinationType parameter. Valid values:
+            /// The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:
             /// 
             /// *   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
             /// *   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.
@@ -165,10 +165,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The type of the destination address in the access control policy. Valid values:
             /// 
-            /// *   **net**: destination CIDR block
-            /// *   **group**: destination address book
-            /// *   **domain**: destination domain name
-            /// *   **location**: destination location
+            /// *   **net**: CIDR block
+            /// *   **group**: address book
+            /// *   **domain**: domain name
+            /// *   **location**: location
             /// </summary>
             [NameInMap("DestinationType")]
             [Validation(Required=false)]
@@ -192,18 +192,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DnsResult { get; set; }
 
             /// <summary>
-            /// The timestamp of the DNS resolution result. The value is a UNIX timestamp. Unit: seconds.
+            /// The time when the Domain Name System (DNS) resolution was performed. The value is a timestamp. Unit: seconds.
             /// </summary>
             [NameInMap("DnsResultTime")]
             [Validation(Required=false)]
             public long? DnsResultTime { get; set; }
 
+            /// <summary>
+            /// The time when the access control policy stops taking effect. The value is a timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+            /// 
+            /// >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+            /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The timestamp when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
+            /// The time when the access control policy was last hit. The value is a timestamp. Unit: seconds.
             /// </summary>
             [NameInMap("HitLastTime")]
             [Validation(Required=false)]
@@ -217,7 +222,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? HitTimes { get; set; }
 
             /// <summary>
-            /// The IP version of the address in the access control policy. Valid values:
+            /// The IP version used in the access control policy. Valid values:
             /// 
             /// *   **4**: IPv4
             /// *   **6**: IPv6
@@ -227,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpVersion { get; set; }
 
             /// <summary>
-            /// The time at which the access control policy was modified.
+            /// The time when the access control policy was modified.
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
@@ -236,14 +241,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The priority of the access control policy.
             /// 
-            /// The priority value starts from 1. A small priority value indicates a high priority.
+            /// The priority value starts from 1. A smaller priority value indicates a higher priority.
             /// </summary>
             [NameInMap("Order")]
             [Validation(Required=false)]
             public int? Order { get; set; }
 
             /// <summary>
-            /// The type of the protocol in the access control policy. Valid values:
+            /// The protocol type in the access control policy. Valid values:
             /// 
             /// *   **ANY**
             /// *   **TCP**
@@ -255,27 +260,58 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
+            /// The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
             /// 
-            /// *   **true**: The access control policy is enabled.
-            /// *   **false**: The access control policy is disabled.
+            /// *   **true**: enabled
+            /// *   **false**: disabled
             /// </summary>
             [NameInMap("Release")]
             [Validation(Required=false)]
             public string Release { get; set; }
 
+            /// <summary>
+            /// The days of a week or of a month on which the access control policy takes effect.
+            /// 
+            /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, this parameter is left empty. Example: \[].
+            /// *   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].
+            /// 
+            /// >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
+            /// 
+            /// *   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].
+            /// 
+            /// >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
+            /// </summary>
             [NameInMap("RepeatDays")]
             [Validation(Required=false)]
             public List<long?> RepeatDays { get; set; }
 
+            /// <summary>
+            /// The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+            /// 
+            /// >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+            /// </summary>
             [NameInMap("RepeatEndTime")]
             [Validation(Required=false)]
             public string RepeatEndTime { get; set; }
 
+            /// <summary>
+            /// The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+            /// 
+            /// >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
+            /// </summary>
             [NameInMap("RepeatStartTime")]
             [Validation(Required=false)]
             public string RepeatStartTime { get; set; }
 
+            /// <summary>
+            /// The recurrence type based on which the access control policy takes effect. Valid values:
+            /// 
+            /// *   **Permanent** (default): The policy always takes effect.
+            /// *   **None**: The policy takes effect for only once.
+            /// *   **Daily**: The policy takes effect on a daily basis.
+            /// *   **Weekly**: The policy takes effect on a weekly basis.
+            /// *   **Monthly**: The policy takes effect on a monthly basis.
+            /// </summary>
             [NameInMap("RepeatType")]
             [Validation(Required=false)]
             public string RepeatType { get; set; }
@@ -314,23 +350,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The type of the source address in the access control policy. Valid values:
             /// 
-            /// *   **net**: source CIDR block
-            /// *   **group**: source address book
-            /// *   **location**: source location
+            /// *   **net**: CIDR block
+            /// *   **group**: address book
+            /// *   **location**: location
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
             /// <summary>
-            /// The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy.
-            /// 
-            /// Quota that is consumed by an access control policy = Number of source CIDR blocks × Number of destination CIDR blocks, destination locations, or IP addresses that are resolved from destination domain names × Number of applications × Number of ports.
+            /// The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.
             /// </summary>
             [NameInMap("SpreadCnt")]
             [Validation(Required=false)]
             public int? SpreadCnt { get; set; }
 
+            /// <summary>
+            /// The time when the access control policy starts to take effect. The value is a timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+            /// 
+            /// >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
+            /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }

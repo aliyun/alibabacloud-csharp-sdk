@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallPolicyBackUpAssociationListRequest : TeaModel {
+        [NameInMap("CandidateList")]
+        [Validation(Required=false)]
+        public List<DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList> CandidateList { get; set; }
+        public class DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList : TeaModel {
+            [NameInMap("CandidateId")]
+            [Validation(Required=false)]
+            public string CandidateId { get; set; }
+
+            [NameInMap("CandidateType")]
+            [Validation(Required=false)]
+            public string CandidateType { get; set; }
+
+        }
+
         /// <summary>
         /// The instance ID of the VPC firewall.
         /// </summary>

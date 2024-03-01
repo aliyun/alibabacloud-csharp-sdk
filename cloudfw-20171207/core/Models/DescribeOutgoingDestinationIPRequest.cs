@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The language of the content within the response. Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
+        /// *   **zh** (default): Chinese
         /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the queried information. Valid values:
+        /// The method that is used to sort the results. Valid values:
         /// 
         /// *   **asc**: the ascending order.
-        /// *   **desc**: the descending order. This is the default value.
+        /// *   **desc** (default): the descending order.
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// The field based on which you want to sort the queried information. Valid values:
+        /// The field based on which you want to sort the query results. Valid values:
         /// 
-        /// *   **SessionCount**: the number of requests. This is the default value.
+        /// *   **SessionCount** (default): the number of requests.
         /// *   **TotalBytes**: the total volume of traffic.
         /// </summary>
         [NameInMap("Sort")]

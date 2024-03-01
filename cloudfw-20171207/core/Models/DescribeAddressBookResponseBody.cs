@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:
             /// 
-            /// * **1**: yes
-            /// * **0**: no
+            /// *   **1**: yes
+            /// *   **0**: no
             /// </summary>
             [NameInMap("AutoAddTagEcs")]
             [Validation(Required=false)]
@@ -57,19 +57,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The type of the address book. Valid values:
             /// 
-            /// * **ip**: IP address book
-            /// * **domain**: domain address book
-            /// * **port**: port address book
-            /// * **tag**: ECS tag-based address book
-            /// * **allCloud**: cloud service address book
-            /// * **threat**: threat intelligence address book
+            /// *   **ip**: IP address book
+            /// *   **domain**: domain address book
+            /// *   **port**: port address book
+            /// *   **tag**: ECS tag-based address book
+            /// *   **allCloud**: cloud service address book
+            /// *   **threat**: threat intelligence address book
             /// </summary>
             [NameInMap("GroupType")]
             [Validation(Required=false)]
             public string GroupType { get; set; }
 
             /// <summary>
-            /// The unique ID of the address book.
+            /// The UUID of the address book.
             /// </summary>
             [NameInMap("GroupUuid")]
             [Validation(Required=false)]
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The logical relationship among ECS tags. Valid values:
             /// 
-            /// * **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
-            /// * **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
+            /// *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
+            /// *   **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
             /// </summary>
             [NameInMap("TagRelation")]
             [Validation(Required=false)]
@@ -118,21 +118,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The page number of the current page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public string PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAclGroupListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the policy group.
+        /// The information about the policy groups.
         /// </summary>
         [NameInMap("AclGroupList")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// 
             ///     Example: cen-ervw0g12b5jbw\*\*\*\*
             /// 
-            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.
+            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.
             /// 
             ///     Example: vfw-a42bbb7b887148c9\*\*\*\*
             /// </summary>
@@ -37,16 +37,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// The name of the policy group. Valid values:
             /// 
             /// *   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.
-            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.
+            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.
             /// </summary>
             [NameInMap("AclGroupName")]
             [Validation(Required=false)]
             public string AclGroupName { get; set; }
 
+            /// <summary>
+            /// The number of access control policies in the policy group.
+            /// </summary>
             [NameInMap("AclRuleCount")]
             [Validation(Required=false)]
             public int? AclRuleCount { get; set; }
 
+            /// <summary>
+            /// 是否是默认防火墙。取值：
+            /// - **true**：是默认防火墙。
+            /// - **false**：不是默认防火墙。
+            /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }

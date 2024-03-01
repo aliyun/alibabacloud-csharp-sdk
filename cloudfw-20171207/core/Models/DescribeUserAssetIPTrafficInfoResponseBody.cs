@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserAssetIPTrafficInfoResponseBody : TeaModel {
         /// <summary>
-        /// The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InBps { get; set; }
 
         /// <summary>
-        /// The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).
+        /// The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).
         /// </summary>
         [NameInMap("InPps")]
         [Validation(Required=false)]
         public long? InPps { get; set; }
 
         /// <summary>
-        /// The number of new connections.
+        /// The new connection creation rate.
         /// </summary>
         [NameInMap("NewConn")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? OutBps { get; set; }
 
         /// <summary>
-        /// The network throughput, which indicates the outbound packet rate. Unit: pps.
+        /// The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.
         /// </summary>
         [NameInMap("OutPps")]
         [Validation(Required=false)]
         public long? OutPps { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? SessionCount { get; set; }
 
         /// <summary>
-        /// The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

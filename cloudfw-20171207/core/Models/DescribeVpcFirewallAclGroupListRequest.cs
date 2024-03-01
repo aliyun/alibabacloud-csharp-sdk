@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **notconfigured**: VPC firewalls are not configured.
         /// *   **configured**: VPC firewalls are configured.
-        /// *   If this parameter is left empty, all policy groups of access control policies are queried.
+        /// *   If you do not specify this parameter, the access control policies of all VPC firewalls are queried.
         /// </summary>
         [NameInMap("FirewallConfigureStatus")]
         [Validation(Required=false)]
