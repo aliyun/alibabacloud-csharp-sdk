@@ -217,6 +217,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP ApiHTTP { get; set; }
             public class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP : TeaModel {
+                [NameInMap("CheckCert")]
+                [Validation(Required=false)]
+                public bool? CheckCert { get; set; }
+
                 /// <summary>
                 /// The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.
                 /// </summary>

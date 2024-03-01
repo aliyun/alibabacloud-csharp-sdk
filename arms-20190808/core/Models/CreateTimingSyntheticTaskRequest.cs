@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP ApiHTTP { get; set; }
             public class CreateTimingSyntheticTaskRequestMonitorConfApiHTTP : TeaModel {
+                [NameInMap("CheckCert")]
+                [Validation(Required=false)]
+                public bool? CheckCert { get; set; }
+
                 [NameInMap("ConnectTimeout")]
                 [Validation(Required=false)]
                 public long? ConnectTimeout { get; set; }
