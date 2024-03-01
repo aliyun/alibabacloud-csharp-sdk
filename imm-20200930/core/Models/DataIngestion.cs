@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            [NameInMap("MNS")]
+            [Validation(Required=false)]
+            public MNS MNS { get; set; }
+
+            [NameInMap("RocketMQ")]
+            [Validation(Required=false)]
+            public RocketMQ RocketMQ { get; set; }
+
             [NameInMap("Topic")]
             [Validation(Required=false)]
             public string Topic { get; set; }
