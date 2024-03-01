@@ -137,6 +137,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("RichTextDescription")]
+        [Validation(Required=false)]
+        public CreateEventRequestRichTextDescription RichTextDescription { get; set; }
+        public class CreateEventRequestRichTextDescription : TeaModel {
+            [NameInMap("text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+        }
+
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }

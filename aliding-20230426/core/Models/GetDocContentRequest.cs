@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("userToken")]
+        [Validation(Required=false)]
+        public string UserToken { get; set; }
+
     }
 
 }

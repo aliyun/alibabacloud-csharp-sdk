@@ -190,6 +190,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("richTextDescription")]
+        [Validation(Required=false)]
+        public CreateEventResponseBodyRichTextDescription RichTextDescription { get; set; }
+        public class CreateEventResponseBodyRichTextDescription : TeaModel {
+            [NameInMap("text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+        }
+
         [NameInMap("start")]
         [Validation(Required=false)]
         public CreateEventResponseBodyStart Start { get; set; }

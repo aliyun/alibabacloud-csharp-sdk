@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RemindersShrink { get; set; }
 
+        [NameInMap("RichTextDescription")]
+        [Validation(Required=false)]
+        public string RichTextDescriptionShrink { get; set; }
+
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }
