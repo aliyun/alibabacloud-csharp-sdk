@@ -25,10 +25,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public long? LogLength { get; set; }
 
+        /// <summary>
+        /// The log offset.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
