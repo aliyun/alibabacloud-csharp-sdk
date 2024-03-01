@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string UUID { get; set; }
 
+        [NameInMap("VoteConfigs")]
+        [Validation(Required=false)]
+        public Dictionary<string, CreateTaskDetailVoteInfo> VoteConfigs { get; set; }
+
     }
 
 }

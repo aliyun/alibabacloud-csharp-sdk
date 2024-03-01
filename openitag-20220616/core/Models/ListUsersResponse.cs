@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class ListUsersResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListUsersResponseBody Body { get; set; }
 
     }
