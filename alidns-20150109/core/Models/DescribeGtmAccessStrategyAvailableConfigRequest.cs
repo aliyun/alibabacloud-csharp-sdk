@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAccessStrategyAvailableConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the GTM instance for which you want to query the available configurations of the current access policy.
+        /// The ID of the Global Traffic Manager (GTM) instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language used by the user.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

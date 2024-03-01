@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// 域名名称。
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// 语言。
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// 用户端IP。
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

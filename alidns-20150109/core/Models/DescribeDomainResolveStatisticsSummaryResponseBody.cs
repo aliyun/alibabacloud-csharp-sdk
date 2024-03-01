@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainResolveStatisticsSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page. Maximum value: **100**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<DescribeDomainResolveStatisticsSummaryResponseBodyStatistics> Statistics { get; set; }
         public class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics : TeaModel {
             /// <summary>
-            /// The number of resolution requests.
+            /// The number of DNS requests.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
@@ -52,7 +52,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The instance type. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
+            /// The type of the domain name. Valid values:
+            /// 
+            /// *   PUBLIC: hosted public domain name
+            /// *   CACHE: cache-accelerated domain name
             /// </summary>
             [NameInMap("DomainType")]
             [Validation(Required=false)]

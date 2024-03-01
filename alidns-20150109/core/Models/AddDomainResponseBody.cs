@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainResponseBody : TeaModel {
         /// <summary>
-        /// The Domain Name System (DNS) servers that resolve the domain name.
+        /// The Domain Name System (DNS) servers configured for the domain name.
         /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PunyCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

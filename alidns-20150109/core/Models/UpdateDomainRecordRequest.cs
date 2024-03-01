@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDomainRecordRequest : TeaModel {
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The resolution line. Default value: **default**.
+        /// The DNS resolution line. Default value: **default**.
+        /// 
+        /// For more information, see
+        /// 
+        /// [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
         /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
 
         /// <summary>
-        /// The priority of an MX-type DNS record. Valid values: `[1,50]`.
+        /// The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.
         /// 
         /// This parameter must be specified if the type of the DNS record is MX.
         /// </summary>
@@ -33,9 +37,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? Priority { get; set; }
 
         /// <summary>
-        /// The host record.
+        /// The hostname.
         /// 
-        /// For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
+        /// For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
@@ -49,14 +53,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// The TTL of the resolution. Default value: 600. Unit: seconds.
+        /// The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds.
+        /// 
+        /// For more information, see
+        /// 
+        /// [TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).
         /// </summary>
         [NameInMap("TTL")]
         [Validation(Required=false)]
         public long? TTL { get; set; }
 
         /// <summary>
-        /// The type of the DNS record.
+        /// The type of the DNS record. For more information, see
+        /// 
+        /// [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// The value of the DNS record.
+        /// The record value.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

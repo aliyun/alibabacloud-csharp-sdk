@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of query volume records.
+        /// The statistics on the Domain Name System (DNS) requests.
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic : TeaModel {
                 /// <summary>
-                /// The number of queries.
+                /// The number of DNS requests.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
@@ -55,6 +55,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
+                /// <summary>
+                /// The type of the domain name. The parameter value is not case-sensitive. Valid values:
+                /// 
+                /// PUBLIC (default): hosted public domain name
+                /// 
+                /// CACHE: cache-accelerated domain name
+                /// </summary>
                 [NameInMap("DomainType")]
                 [Validation(Required=false)]
                 public string DomainType { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainBackupRequest : TeaModel {
         /// <summary>
-        /// The domain name for which you want to create a backup task.
+        /// The domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

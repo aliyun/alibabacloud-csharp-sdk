@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The function verified by using the TXT record. Valid values:
+        /// The feature verified by using the TXT record. Valid values:
         /// 
-        /// *   ADD_SUBDOMAIN
+        /// *   ADD_SUB_DOMAIN
         /// *   RETRIEVAL
         /// </summary>
         [NameInMap("Type")]

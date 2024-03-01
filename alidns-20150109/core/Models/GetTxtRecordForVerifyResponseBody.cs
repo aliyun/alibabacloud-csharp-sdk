@@ -19,21 +19,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The host record.
+        /// The hostname.
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
         public string RR { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The value of the DNS record.
+        /// The record value.
         /// 
         /// >  The validity period is three days.
         /// </summary>

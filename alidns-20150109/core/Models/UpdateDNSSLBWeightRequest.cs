@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDNSSLBWeightRequest : TeaModel {
         /// <summary>
-        /// The language of the domain name.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// The IP address of the client that you use to change the weight.
+        /// The IP address of the client.
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// The updated weight of the DNS record. Valid values: `1 to 100`.
+        /// The weight of the DNS record that you want to specify. Valid values: `1 to 100`.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

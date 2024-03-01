@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDomainRecordStatusRequest : TeaModel {
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// The status of the DNS record. Valid values:
+        /// The state of the DNS record. Valid values:
         /// 
-        /// *   **Enable**: enables resolution.
-        /// *   **Disable**: suspends resolution.
+        /// *   **Enable**: enables the DNS record.
+        /// *   **Disable**: disables the DNS record.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

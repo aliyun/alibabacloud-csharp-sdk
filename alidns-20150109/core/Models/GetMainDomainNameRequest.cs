@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class GetMainDomainNameRequest : TeaModel {
         /// <summary>
-        /// The input string. The string can be up to 128 characters in length.
+        /// The string. The string can be up to 128 characters in length.
         /// </summary>
         [NameInMap("InputString")]
         [Validation(Required=false)]
         public string InputString { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The returned DNS records.
+        /// The returned Domain Name System (DNS) records.
         /// </summary>
         [NameInMap("DomainRecords")]
         [Validation(Required=false)]
@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainRecordsResponseBodyDomainRecordsRecord> Record { get; set; }
             public class DescribeDomainRecordsResponseBodyDomainRecordsRecord : TeaModel {
+                /// <summary>
+                /// The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
+                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The description of the DNS record.
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time-to-live (TTL) of the cached data. Unit: seconds.
+                /// The time-to-live (TTL) of the cached DNS record. Unit: seconds.
                 /// </summary>
                 [NameInMap("TTL")]
                 [Validation(Required=false)]
@@ -94,6 +97,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
+                /// </summary>
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }

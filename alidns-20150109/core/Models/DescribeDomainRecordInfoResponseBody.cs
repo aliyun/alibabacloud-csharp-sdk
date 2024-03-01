@@ -38,35 +38,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The resolution line.
+        /// The DNS resolution line.
         /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public string Line { get; set; }
 
         /// <summary>
-        /// The lock status of the DNS record. Valid values: true and false.
+        /// The lock state of the DNS record. Valid values: **true and false**.
         /// </summary>
         [NameInMap("Locked")]
         [Validation(Required=false)]
         public bool? Locked { get; set; }
 
         /// <summary>
-        /// The priority of the MX-type DNS record.
+        /// The priority of the mail exchanger (MX) record.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
         /// <summary>
-        /// The punycode is only returned for Chinese domain names.
+        /// The Punycode for the domain name. This parameter is returned only for Chinese domain names.
         /// </summary>
         [NameInMap("PunyCode")]
         [Validation(Required=false)]
         public string PunyCode { get; set; }
 
         /// <summary>
-        /// The host record.
+        /// The hostname.
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
@@ -80,28 +80,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// The remark of the DNS record.
+        /// The description of your DNS record.
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the DNS record. Valid values: Enable and Disable.
+        /// The state of the DNS records. Valid values: **Enable and Disable**.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The TTL of the resolution.
+        /// The time-to-live (TTL) of the DNS record.
         /// </summary>
         [NameInMap("TTL")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// The value of the DNS record.
+        /// The record value.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDomainInfoResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeDomainInfoResponseBodyRecordLinesRecordLine : TeaModel {
                 /// <summary>
-                /// The code of the parent line. This parameter is left empty if the line has no parent line.
+                /// The code of the parent line. This parameter is not returned if the line has no parent line.
                 /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
@@ -208,6 +208,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public bool? SlaveDns { get; set; }
 
+        /// <summary>
+        /// Indicates whether the queried domain name is a hosted subdomain name. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public bool? SubDomain { get; set; }

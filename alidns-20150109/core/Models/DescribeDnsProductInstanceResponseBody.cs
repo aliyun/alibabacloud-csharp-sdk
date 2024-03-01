@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// The auto-renewal status of the instance. Valid values:
+        /// 
+        /// *   **true**: Auto-renewal is enabled.
+        /// *   **false**: Auto-renewal is disabled.
+        /// </summary>
         [NameInMap("AutoRenewal")]
         [Validation(Required=false)]
         public bool? AutoRenewal { get; set; }

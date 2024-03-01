@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordInfoRequest : TeaModel {
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The ID of the DNS record.
         /// 
-        /// This parameter is returned when you add a DNS record or when you query the list of DNS records.
+        /// This parameter is returned when you add a DNS record or when you query a list of DNS records.
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

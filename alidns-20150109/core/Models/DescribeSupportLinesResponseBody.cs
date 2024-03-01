@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesResponseBody : TeaModel {
         /// <summary>
-        /// The list of Alibaba Cloud DNS lines.
+        /// 云解析线路列表。
         /// </summary>
         [NameInMap("RecordLines")]
         [Validation(Required=false)]
@@ -21,28 +21,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeSupportLinesResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeSupportLinesResponseBodyRecordLinesRecordLine : TeaModel {
                 /// <summary>
-                /// The code of the parent line. Leave it blank if there is no parent line.
+                /// 2021-12-06T02:47:26.000+0000
                 /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
                 /// <summary>
-                /// The code of the child line.
+                /// 子线路Code。
                 /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
                 /// <summary>
-                /// The name of the parent line.
+                /// 父线路展示名称。
                 /// </summary>
                 [NameInMap("LineDisplayName")]
                 [Validation(Required=false)]
                 public string LineDisplayName { get; set; }
 
                 /// <summary>
-                /// The name of the child line.
+                /// 子线路展示名称。
                 /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

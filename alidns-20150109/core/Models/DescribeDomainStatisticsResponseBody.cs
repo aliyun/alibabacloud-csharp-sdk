@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The DNS requests.
+        /// The statistics on the Domain Name System (DNS) requests.
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -34,12 +34,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
+                /// <summary>
+                /// The domain name.
+                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The statistical timestamp. Unit: milliseconds. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]

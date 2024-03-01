@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The list of domain names queried by this operation.
+        /// The domain names.
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -21,22 +21,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeDomainsResponseBodyDomainsDomain> Domain { get; set; }
             public class DescribeDomainsResponseBodyDomainsDomain : TeaModel {
                 /// <summary>
-                /// Indicates whether the domain name is an Alibaba Cloud HiChina domain name.
+                /// Indicates whether the domain name was registered in Alibaba Cloud.
                 /// </summary>
                 [NameInMap("AliDomain")]
                 [Validation(Required=false)]
                 public bool? AliDomain { get; set; }
 
+                /// <summary>
+                /// The time when the domain name was added.
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// The list of DNS servers of the domain name in the DNS system.
+                /// The names of the DNS servers configured for the domain name.
                 /// </summary>
                 [NameInMap("DnsServers")]
                 [Validation(Required=false)]
@@ -81,14 +87,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The expiration time of the instance.
+                /// The time when the Alibaba Cloud DNS instance expires.
                 /// </summary>
                 [NameInMap("InstanceEndTime")]
                 [Validation(Required=false)]
                 public string InstanceEndTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance expired.
+                /// Indicates whether the Alibaba Cloud DNS instance expires.
                 /// </summary>
                 [NameInMap("InstanceExpired")]
                 [Validation(Required=false)]
@@ -102,14 +108,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The punycode is returned for Chinese domain names and is left blank for English domain names.
+                /// The Punycode for the domain name. This parameter is returned only for Chinese domain names.
                 /// </summary>
                 [NameInMap("PunyCode")]
                 [Validation(Required=false)]
                 public string PunyCode { get; set; }
 
                 /// <summary>
-                /// The number of DNS records of the domain name.
+                /// The number of Domain Name System (DNS) records added for the domain name.
                 /// </summary>
                 [NameInMap("RecordCount")]
                 [Validation(Required=false)]
@@ -123,23 +129,29 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string RegistrantEmail { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The description of the domain name.
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group to which the domain name belongs.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Indicates whether to query the starmark of the domain name.
+                /// Indicates whether the domain name was added to favorites.
                 /// </summary>
                 [NameInMap("Starmark")]
                 [Validation(Required=false)]
                 public bool? Starmark { get; set; }
 
+                /// <summary>
+                /// The tags added to the resource.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeDomainsResponseBodyDomainsDomainTags Tags { get; set; }
@@ -148,10 +160,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     [Validation(Required=false)]
                     public List<DescribeDomainsResponseBodyDomainsDomainTagsTag> Tag { get; set; }
                     public class DescribeDomainsResponseBodyDomainsDomainTagsTag : TeaModel {
+                        /// <summary>
+                        /// The key of the tag added to the resource.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The value of the tag added to the resource.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -161,14 +179,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The version code of the Alibaba Cloud DNS instance.
+                /// The edition code of Alibaba Cloud DNS.
                 /// </summary>
                 [NameInMap("VersionCode")]
                 [Validation(Required=false)]
                 public string VersionCode { get; set; }
 
                 /// <summary>
-                /// The version name of the Alibaba Cloud DNS instance.
+                /// The edition of Alibaba Cloud DNS.
                 /// </summary>
                 [NameInMap("VersionName")]
                 [Validation(Required=false)]

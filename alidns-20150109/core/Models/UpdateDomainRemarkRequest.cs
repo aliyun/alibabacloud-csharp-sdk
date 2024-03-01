@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDomainRemarkRequest : TeaModel {
         /// <summary>
-        /// The domain name in Alibaba Cloud DNS.
+        /// The domain name that already exists in Alibaba Cloud DNS.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSubDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The list of DNS records returned.
+        /// The returned DNS records.
         /// </summary>
         [NameInMap("DomainRecords")]
         [Validation(Required=false)]
@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The resolution line.
+                /// The DNS resolution line.
                 /// </summary>
                 [NameInMap("Line")]
                 [Validation(Required=false)]
                 public string Line { get; set; }
 
                 /// <summary>
-                /// Indicates whether the DNS record is locked.
+                /// The lock status of the DNS record.
                 /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
 
                 /// <summary>
-                /// The priority of the MX record.
+                /// The priority of the mail exchanger (MX) record.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The Time-to-Live (TTL) of the DNS record.
+                /// The time-to-live (TTL) of the DNS record.
                 /// </summary>
                 [NameInMap("TTL")]
                 [Validation(Required=false)]
@@ -109,28 +109,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of DNS records returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

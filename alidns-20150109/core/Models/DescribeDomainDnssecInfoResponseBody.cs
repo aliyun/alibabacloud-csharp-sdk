@@ -10,73 +10,73 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainDnssecInfoResponseBody : TeaModel {
         /// <summary>
-        /// The algorithm configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The algorithm type. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// The digest configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The digest. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }
 
         /// <summary>
-        /// The digest type configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The digest type. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("DigestType")]
         [Validation(Required=false)]
         public string DigestType { get; set; }
 
         /// <summary>
-        /// The domain name that is queried.
+        /// The domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The DS record. This parameter is returned if DNSSEC is enabled.
+        /// The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("DsRecord")]
         [Validation(Required=false)]
         public string DsRecord { get; set; }
 
         /// <summary>
-        /// The flag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The flag. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("Flags")]
         [Validation(Required=false)]
         public string Flags { get; set; }
 
         /// <summary>
-        /// The key tag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The key tag. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("KeyTag")]
         [Validation(Required=false)]
         public string KeyTag { get; set; }
 
         /// <summary>
-        /// The public key for a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+        /// The public key. This parameter is returned if DNSSEC is enabled.
         /// </summary>
         [NameInMap("PublicKey")]
         [Validation(Required=false)]
         public string PublicKey { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether DNSSEC is enabled for the specified domain name.
+        /// The state of the DNSSEC. Valid values:
         /// 
-        /// *   ON: DNSSEC is enabled.
-        /// *   OFF: DNSSEC is disabled.
+        /// *   ON
+        /// *   OFF
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

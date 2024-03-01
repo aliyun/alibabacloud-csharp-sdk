@@ -792,8 +792,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * You can check whether a domain name is valid based on the following topic:
-          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          * For more information about how to check whether a domain name is valid, see
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
           *
           * @param request AddDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -839,8 +839,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * You can check whether a domain name is valid based on the following topic:
-          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          * For more information about how to check whether a domain name is valid, see
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
           *
           * @param request AddDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -886,8 +886,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * You can check whether a domain name is valid based on the following topic:
-          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          * For more information about how to check whether a domain name is valid, see
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
           *
           * @param request AddDomainRequest
           * @return AddDomainResponse
@@ -899,8 +899,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * You can check whether a domain name is valid based on the following topic:
-          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          * For more information about how to check whether a domain name is valid, see
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
           *
           * @param request AddDomainRequest
           * @return AddDomainResponse
@@ -1677,6 +1677,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await AddGtmRecoveryPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+          *
+          * @param request BindInstanceDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BindInstanceDomainsResponse
+         */
         public BindInstanceDomainsResponse BindInstanceDomainsWithOptions(BindInstanceDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1712,6 +1720,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<BindInstanceDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+          *
+          * @param request BindInstanceDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BindInstanceDomainsResponse
+         */
         public async Task<BindInstanceDomainsResponse> BindInstanceDomainsWithOptionsAsync(BindInstanceDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1747,18 +1763,39 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<BindInstanceDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+          *
+          * @param request BindInstanceDomainsRequest
+          * @return BindInstanceDomainsResponse
+         */
         public BindInstanceDomainsResponse BindInstanceDomains(BindInstanceDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindInstanceDomainsWithOptions(request, runtime);
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+          *
+          * @param request BindInstanceDomainsRequest
+          * @return BindInstanceDomainsResponse
+         */
         public async Task<BindInstanceDomainsResponse> BindInstanceDomainsAsync(BindInstanceDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BindInstanceDomainsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+          *
+          * @param request ChangeDomainGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeDomainGroupResponse
+         */
         public ChangeDomainGroupResponse ChangeDomainGroupWithOptions(ChangeDomainGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1794,6 +1831,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ChangeDomainGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+          *
+          * @param request ChangeDomainGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeDomainGroupResponse
+         */
         public async Task<ChangeDomainGroupResponse> ChangeDomainGroupWithOptionsAsync(ChangeDomainGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1829,12 +1873,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ChangeDomainGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+          *
+          * @param request ChangeDomainGroupRequest
+          * @return ChangeDomainGroupResponse
+         */
         public ChangeDomainGroupResponse ChangeDomainGroup(ChangeDomainGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeDomainGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+          *
+          * @param request ChangeDomainGroupRequest
+          * @return ChangeDomainGroupResponse
+         */
         public async Task<ChangeDomainGroupResponse> ChangeDomainGroupAsync(ChangeDomainGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2499,14 +2555,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteDnsGtmAddressPoolWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-          *
-          * @param request DeleteDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDomainResponse
-         */
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2538,14 +2586,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-          *
-          * @param request DeleteDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDomainResponse
-         */
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2577,26 +2617,12 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-          *
-          * @param request DeleteDomainRequest
-          * @return DeleteDomainResponse
-         */
         public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainWithOptions(request, runtime);
         }
 
-        /**
-          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-          *
-          * @param request DeleteDomainRequest
-          * @return DeleteDomainResponse
-         */
         public async Task<DeleteDomainResponse> DeleteDomainAsync(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2604,7 +2630,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          * >  The default group cannot be deleted.
           *
           * @param request DeleteDomainGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2642,7 +2668,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          * >  The default group cannot be deleted.
           *
           * @param request DeleteDomainGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2680,7 +2706,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          * >  The default group cannot be deleted.
           *
           * @param request DeleteDomainGroupRequest
           * @return DeleteDomainGroupResponse
@@ -2692,7 +2718,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          * >  The default group cannot be deleted.
           *
           * @param request DeleteDomainGroupRequest
           * @return DeleteDomainGroupResponse
@@ -3214,7 +3240,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * **Before you call this operation, make sure that the batch operation task is complete.
+          * Before you call this operation, make sure that the batch operation task is complete.
           *
           * @param request DescribeBatchResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3268,7 +3294,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * **Before you call this operation, make sure that the batch operation task is complete.
+          * Before you call this operation, make sure that the batch operation task is complete.
           *
           * @param request DescribeBatchResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3322,7 +3348,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * **Before you call this operation, make sure that the batch operation task is complete.
+          * Before you call this operation, make sure that the batch operation task is complete.
           *
           * @param request DescribeBatchResultDetailRequest
           * @return DescribeBatchResultDetailResponse
@@ -3334,7 +3360,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * **Before you call this operation, make sure that the batch operation task is complete.
+          * Before you call this operation, make sure that the batch operation task is complete.
           *
           * @param request DescribeBatchResultDetailRequest
           * @return DescribeBatchResultDetailResponse
@@ -8449,6 +8475,128 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeInstanceDomainsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeInternetDnsLogsResponse DescribeInternetDnsLogsWithOptions(DescribeInternetDnsLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCondition))
+            {
+                query["QueryCondition"] = request.QueryCondition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetDnsLogs",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetDnsLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeInternetDnsLogsResponse> DescribeInternetDnsLogsWithOptionsAsync(DescribeInternetDnsLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCondition))
+            {
+                query["QueryCondition"] = request.QueryCondition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetDnsLogs",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetDnsLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeInternetDnsLogsResponse DescribeInternetDnsLogs(DescribeInternetDnsLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInternetDnsLogsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInternetDnsLogsResponse> DescribeInternetDnsLogsAsync(DescribeInternetDnsLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInternetDnsLogsWithOptionsAsync(request, runtime);
+        }
+
         public DescribeIspFlushCacheInstancesResponse DescribeIspFlushCacheInstancesWithOptions(DescribeIspFlushCacheInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10939,6 +11087,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await ExecuteGtmRecoveryPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about the difference between primary domain names and subdomain names, see
+          * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+          *
+          * @param request GetMainDomainNameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMainDomainNameResponse
+         */
         public GetMainDomainNameResponse GetMainDomainNameWithOptions(GetMainDomainNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10970,6 +11126,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<GetMainDomainNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about the difference between primary domain names and subdomain names, see
+          * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+          *
+          * @param request GetMainDomainNameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMainDomainNameResponse
+         */
         public async Task<GetMainDomainNameResponse> GetMainDomainNameWithOptionsAsync(GetMainDomainNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11001,12 +11165,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<GetMainDomainNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about the difference between primary domain names and subdomain names, see
+          * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+          *
+          * @param request GetMainDomainNameRequest
+          * @return GetMainDomainNameResponse
+         */
         public GetMainDomainNameResponse GetMainDomainName(GetMainDomainNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMainDomainNameWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about the difference between primary domain names and subdomain names, see
+          * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+          *
+          * @param request GetMainDomainNameRequest
+          * @return GetMainDomainNameResponse
+         */
         public async Task<GetMainDomainNameResponse> GetMainDomainNameAsync(GetMainDomainNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11507,6 +11685,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await MoveGtmResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+          *
+          * @param request OperateBatchDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OperateBatchDomainResponse
+         */
         public OperateBatchDomainResponse OperateBatchDomainWithOptions(OperateBatchDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11542,6 +11727,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<OperateBatchDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+          *
+          * @param request OperateBatchDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OperateBatchDomainResponse
+         */
         public async Task<OperateBatchDomainResponse> OperateBatchDomainWithOptionsAsync(OperateBatchDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11577,12 +11769,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<OperateBatchDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+          *
+          * @param request OperateBatchDomainRequest
+          * @return OperateBatchDomainResponse
+         */
         public OperateBatchDomainResponse OperateBatchDomain(OperateBatchDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OperateBatchDomainWithOptions(request, runtime);
         }
 
+        /**
+          * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+          *
+          * @param request OperateBatchDomainRequest
+          * @return OperateBatchDomainResponse
+         */
         public async Task<OperateBatchDomainResponse> OperateBatchDomainAsync(OperateBatchDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11975,6 +12179,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await ResumePdnsServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+          *
+          * @param request RetrieveDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RetrieveDomainResponse
+         */
         public RetrieveDomainResponse RetrieveDomainWithOptions(RetrieveDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12006,6 +12217,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<RetrieveDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+          *
+          * @param request RetrieveDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RetrieveDomainResponse
+         */
         public async Task<RetrieveDomainResponse> RetrieveDomainWithOptionsAsync(RetrieveDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12037,12 +12255,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<RetrieveDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+          *
+          * @param request RetrieveDomainRequest
+          * @return RetrieveDomainResponse
+         */
         public RetrieveDomainResponse RetrieveDomain(RetrieveDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RetrieveDomainWithOptions(request, runtime);
         }
 
+        /**
+          * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+          *
+          * @param request RetrieveDomainRequest
+          * @return RetrieveDomainResponse
+         */
         public async Task<RetrieveDomainResponse> RetrieveDomainAsync(RetrieveDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13115,6 +13345,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await TransferDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+          *
+          * @param request UnbindInstanceDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindInstanceDomainsResponse
+         */
         public UnbindInstanceDomainsResponse UnbindInstanceDomainsWithOptions(UnbindInstanceDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13150,6 +13388,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UnbindInstanceDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+          *
+          * @param request UnbindInstanceDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindInstanceDomainsResponse
+         */
         public async Task<UnbindInstanceDomainsResponse> UnbindInstanceDomainsWithOptionsAsync(UnbindInstanceDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13185,12 +13431,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UnbindInstanceDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+          *
+          * @param request UnbindInstanceDomainsRequest
+          * @return UnbindInstanceDomainsResponse
+         */
         public UnbindInstanceDomainsResponse UnbindInstanceDomains(UnbindInstanceDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindInstanceDomainsWithOptions(request, runtime);
         }
 
+        /**
+          * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+          * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+          *
+          * @param request UnbindInstanceDomainsRequest
+          * @return UnbindInstanceDomainsResponse
+         */
         public async Task<UnbindInstanceDomainsResponse> UnbindInstanceDomainsAsync(UnbindInstanceDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13378,8 +13638,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request UpdateCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13425,8 +13685,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request UpdateCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13472,8 +13732,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request UpdateCustomLineRequest
           * @return UpdateCustomLineResponse
@@ -13485,8 +13745,8 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
           *
           * @param request UpdateCustomLineRequest
           * @return UpdateCustomLineResponse

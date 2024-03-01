@@ -16,39 +16,47 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The type of the domain name. The parameter value is not case-sensitive. Valid values:
+        /// 
+        /// *   PUBLIC (default): hosted public domain name
+        /// *   CACHE: cache-accelerated domain name
+        /// </summary>
         [NameInMap("DomainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+        /// The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
         /// 
-        /// The default value is the day when you perform the operation.
+        /// The default value is the day when you query the data.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The language.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The DNS record.
-        /// 
-        /// The host record. For example, to resolve `www.dns-exmaple.com`, you must set Rr to www.
+        /// The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.
         /// </summary>
         [NameInMap("Rr")]
         [Validation(Required=false)]
         public string Rr { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+        /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
         /// 
-        /// You can only query DNS records of the last 90 days.
+        /// You can only query the DNS records within the last 90 days.``
+        /// 
+        /// If the time range is less than or equal to seven days, data is returned on an hourly basis.````
+        /// 
+        /// If the time range is greater than seven days, data is returned on a daily basis.````
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

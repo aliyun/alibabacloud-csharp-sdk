@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeTransferDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The list of domain names that were transferred between accounts.
+        /// The domain names that were transferred between accounts.
         /// </summary>
         [NameInMap("DomainTransfers")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer> DomainTransfer { get; set; }
             public class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer : TeaModel {
                 /// <summary>
-                /// The time when the task for transferring domain names was created.
+                /// The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp representing when the task for transferring domain names was created.
+                /// The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The ID of the user from which the domain name was transferred.
+                /// The user ID from which the domain name was transferred.
                 /// </summary>
                 [NameInMap("FromUserId")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The ID of the user to which the domain name was transferred.
+                /// The user ID to which the domain name was transferred.
                 /// </summary>
                 [NameInMap("TargetUserId")]
                 [Validation(Required=false)]
@@ -67,28 +67,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number. Pages start from page **1**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page. Valid values: 1 to 100. Default value: 20.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of domain names.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
