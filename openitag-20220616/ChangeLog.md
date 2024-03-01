@@ -1,3 +1,6 @@
+2024-03-01 Version: 1.0.3
+- Generated csharp 2022-06-16 for OpenITag.
+
 2024-03-01 Version: 1.0.2
 - Generated csharp 2022-06-16 for OpenITag.
 
