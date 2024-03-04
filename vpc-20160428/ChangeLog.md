@@ -1,3 +1,20 @@
+2024-03-04 Version: 6.6.0
+- Support API CreateExpressConnectTrafficQos.
+- Support API CreateExpressConnectTrafficQosQueue.
+- Support API CreateExpressConnectTrafficQosRule.
+- Support API DeleteExpressConnectTrafficQos.
+- Support API DeleteExpressConnectTrafficQosQueue.
+- Support API DeleteExpressConnectTrafficQosRule.
+- Support API Describe95Traffic.
+- Support API DescribeExpressConnectTrafficQos.
+- Support API DescribeExpressConnectTrafficQosQueue.
+- Support API DescribeExpressConnectTrafficQosRule.
+- Support API ModifyExpressConnectTrafficQos.
+- Support API ModifyExpressConnectTrafficQosQueue.
+- Support API ModifyExpressConnectTrafficQosRule.
+- Update API CreatePublicIpAddressPool: update response param.
+
+
 2024-02-29 Version: 6.5.0
 - Support API CreateExpressConnectTrafficQos.
 - Support API CreateExpressConnectTrafficQosQueue.

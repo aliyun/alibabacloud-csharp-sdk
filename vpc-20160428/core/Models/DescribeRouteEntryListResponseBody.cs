@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The route origin. Valid values：
+                /// The route origin. Valid values:
                 /// * **RoutePropagation**: The route is created by a dynamic propagation source.
                 /// * **SystemCreate**: The route is created by the system.
                 /// * **CustomCreate**: The route is created by a user.
