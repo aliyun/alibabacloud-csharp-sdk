@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            [NameInMap("Premium")]
+            [Validation(Required=false)]
+            public bool? Premium { get; set; }
+
             [NameInMap("Price")]
             [Validation(Required=false)]
             public double? Price { get; set; }

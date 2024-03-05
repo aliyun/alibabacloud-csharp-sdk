@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class RecordDemandResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public RecordDemandResponseBody Body { get; set; }
 
     }

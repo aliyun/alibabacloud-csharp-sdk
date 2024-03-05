@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class CheckDomainStatusResponse : TeaModel {
+    public class SubmitPurchaseInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CheckDomainStatusResponseBody Body { get; set; }
+        public SubmitPurchaseInfoResponseBody Body { get; set; }
 
     }
 
