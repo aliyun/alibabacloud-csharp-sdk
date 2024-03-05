@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
 {
     public class AllowResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public AllowResponseBody Body { get; set; }
 
     }

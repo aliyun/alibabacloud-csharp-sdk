@@ -17,6 +17,36 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
             [Validation(Required=false)]
             public List<string> AllowedUids { get; set; }
 
+            [NameInMap("accountType")]
+            [Validation(Required=false)]
+            public int? AccountType { get; set; }
+
+            [NameInMap("allMultiAccountUids")]
+            [Validation(Required=false)]
+            public List<VerifyResponseBodyDataAllMultiAccountUids> AllMultiAccountUids { get; set; }
+            public class VerifyResponseBodyDataAllMultiAccountUids : TeaModel {
+                [NameInMap("accountId")]
+                [Validation(Required=false)]
+                public string AccountId { get; set; }
+
+                [NameInMap("displayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+            }
+
+            [NameInMap("code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("multiAccountsAllow")]
+            [Validation(Required=false)]
+            public int? MultiAccountsAllow { get; set; }
+
         }
 
         [NameInMap("RequestId")]
