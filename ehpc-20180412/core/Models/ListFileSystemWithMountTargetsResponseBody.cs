@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public int? BandWidth { get; set; }
 
                 /// <summary>
-                /// The capacity of the file system. Unit: GiB.
+                /// The capacity of the file system. Unit: GiB
                 /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public int? Capacity { get; set; }
 
                 /// <summary>
-                /// The time at which the file system is created.
+                /// The time when the file system was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -49,15 +49,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string Destription { get; set; }
 
                 /// <summary>
-                /// Specifies whether to encrypt the data in the file system.
+                /// Indicates whether data in the file system is encrypted.
                 /// 
-                /// You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.
+                /// You can use keys that are hosted by Key Management Service (KMS) to encrypt the data in a file system. When you read and write the encrypted data, the data is automatically decrypted.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   0 (default): The data in the file system is not encrypted.
-                /// *   1: NAS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.
-                /// *   2: KMS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.
+                /// *   0 (default): does not encrypt the data in the file system.
+                /// *   1: encrypts data in the file system by using a NAS-managed key. This parameter is valid only if the FileSystemType parameter is set to standard or extreme.
+                /// *   2: A KMS-managed key is used to encrypt the data in the file system. This parameter is valid only if the FileSystemType parameter is set to extreme.
                 /// </summary>
                 [NameInMap("EncryptType")]
                 [Validation(Required=false)]
@@ -71,23 +71,23 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string FileSystemId { get; set; }
 
                 /// <summary>
-                /// The type of the file system. Valid values:
+                /// The type of the file system.
                 /// 
-                /// *   standard: general-purpose NAS. extreme: Extreme NAS.
+                /// *   Valid values: standard (General-purpose NAS file systems) and extreme (Extreme NAS file systems).
                 /// </summary>
                 [NameInMap("FileSystemType")]
                 [Validation(Required=false)]
                 public string FileSystemType { get; set; }
 
                 /// <summary>
-                /// The used storage of the NAS file system. Unit: byte.
+                /// The used capacity of the NAS file system. Unit: bytes.
                 /// </summary>
                 [NameInMap("MeteredSize")]
                 [Validation(Required=false)]
                 public int? MeteredSize { get; set; }
 
                 /// <summary>
-                /// The mount targets.
+                /// The list of mount targets.
                 /// </summary>
                 [NameInMap("MountTargetList")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         /// 
                         /// Valid values:
                         /// 
-                        /// *   true: ueses the default permission group. If you use the default permission group, access from all IP addresses are allowed. The default permission group and the permission rules in the default permission group cannot be deleted.
+                        /// *   true: uses the default permission group. If the permission group is the default one, all IP addresses are allowed to access the permission group, and users cannot delete the group and its rules.
                         /// *   false: does not use the default permission group.
                         /// </summary>
                         [NameInMap("AccessGroup")]
@@ -110,28 +110,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         public string AccessGroup { get; set; }
 
                         /// <summary>
-                        /// The domain where the mount target resides.
+                        /// The domain in which the mount target resides.
                         /// </summary>
                         [NameInMap("MountTargetDomain")]
                         [Validation(Required=false)]
                         public string MountTargetDomain { get; set; }
 
                         /// <summary>
-                        /// The network type of the cluster. Valid values:
+                        /// The network type. Valid values:
                         /// 
-                        /// *   vpc: Virtual Private Cloud (VPC)
-                        /// *   classic: the classic network
+                        /// *   vpc
+                        /// *   classic
                         /// </summary>
                         [NameInMap("NetworkType")]
                         [Validation(Required=false)]
                         public string NetworkType { get; set; }
 
                         /// <summary>
-                        /// The status of the mount target. Valid values:
+                        /// The state of the mount target. Valid values:
                         /// 
                         /// *   Active: The mount target is available.
                         /// *   Inactive: The mount target is unavailable.
-                        /// *   Pending: The mount target is being created or modified.
+                        /// *   Pending: The mount target is pending to be used.
                         /// *   Deleting: The mount target is being deleted.
                         /// </summary>
                         [NameInMap("Status")]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The protocol type of the file system. Valid values:
                 /// 
-                /// *   NFS- SMB
+                /// *   NFS-SMB
                 /// </summary>
                 [NameInMap("ProtocolType")]
                 [Validation(Required=false)]
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// *   Running: The file system is available.
                 /// *   Stopped: The file system is unavailable.
                 /// *   Extending: The file system is being scaled out.
-                /// *   Stopping: The file system is being disabled.
+                /// *   Stopping: The file system is being stopped.
                 /// *   Deleting: The file system is being deleted.
                 /// </summary>
                 [NameInMap("Status")]
@@ -211,14 +211,15 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The storage type of the file system.
                 /// 
-                /// *   Valid values when FileSystemType is set to standard: Capacity and Performance. Valid values when FileSystemType is set to extreme: standard and advance.
+                /// *   Valid values if FileSystemType is set to standard: Capacity and Performance.
+                /// *   Valid values if FileSystemType is set to extreme: standard and advance.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The VPC ID of the node.
+                /// The ID of the VPC.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

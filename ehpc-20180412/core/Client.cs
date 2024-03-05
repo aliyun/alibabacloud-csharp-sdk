@@ -2849,14 +2849,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await GetAccountingReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-          *
-          * @param request GetAutoScaleConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetAutoScaleConfigResponse
-         */
         public GetAutoScaleConfigResponse GetAutoScaleConfigWithOptions(GetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2880,14 +2872,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-          *
-          * @param request GetAutoScaleConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetAutoScaleConfigResponse
-         */
         public async Task<GetAutoScaleConfigResponse> GetAutoScaleConfigWithOptionsAsync(GetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2911,26 +2895,12 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-          *
-          * @param request GetAutoScaleConfigRequest
-          * @return GetAutoScaleConfigResponse
-         */
         public GetAutoScaleConfigResponse GetAutoScaleConfig(GetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAutoScaleConfigWithOptions(request, runtime);
         }
 
-        /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-          *
-          * @param request GetAutoScaleConfigRequest
-          * @return GetAutoScaleConfigResponse
-         */
         public async Task<GetAutoScaleConfigResponse> GetAutoScaleConfigAsync(GetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

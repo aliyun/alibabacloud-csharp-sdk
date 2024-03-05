@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The configuration of the array job.
         /// 
-        /// >  The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.
+        /// >  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.
         /// </summary>
         [NameInMap("ArrayProperties")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public long? IndexEnd { get; set; }
 
             /// <summary>
-            /// The starting value of the array job index. Valid values: 0 to 4999.
+            /// The start value of the array job index. Valid values: 0 to 4999.
             /// </summary>
             [NameInMap("IndexStart")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             /// <summary>
             /// The interval of the array job index.
             /// 
-            /// >  If the IndexStart of the array job is set to 1, IndexEnd is set to 5, and IndexStep is set to 2, the array job contains three subtasks. The subtask indexes are 1, 3, and 5.
+            /// >  If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.
             /// </summary>
             [NameInMap("IndexStep")]
             [Validation(Required=false)]
@@ -74,21 +74,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The value of the environment variable for the container.
+            /// The environment variable of the container.
             /// </summary>
             [NameInMap("EnvironmentVar")]
             [Validation(Required=false)]
             public List<SubmitServerlessJobRequestContainerEnvironmentVar> EnvironmentVar { get; set; }
             public class SubmitServerlessJobRequestContainerEnvironmentVar : TeaModel {
-                /// <summary>
-                /// The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_). The name cannot start with a digit. Specify the name in the \[0-9a-zA-Z] format.
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value can be up to 256 characters in length.
+                /// The value of the environment variable for the container. The value must be 0 to 256 characters in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -111,25 +108,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// The data volumes that are mounted to the container.
+            /// The data volumes mounted to the container.
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
             public List<SubmitServerlessJobRequestContainerVolumeMount> VolumeMount { get; set; }
             public class SubmitServerlessJobRequestContainerVolumeMount : TeaModel {
-                /// <summary>
-                /// The driver type when you use the FlexVolume plug-in to mount the volume. Valid values:
-                /// 
-                /// *   alicloud/nas: a NAS driver.
-                /// *   alicloud/oss: an OSS driver.
-                /// </summary>
                 [NameInMap("FlexVolumeDriver")]
                 [Validation(Required=false)]
                 public string FlexVolumeDriver { get; set; }
 
-                /// <summary>
-                /// The options when you set the Type parameter to FlexVolume. Each option is a key-value pair in a JSON string.
-                /// </summary>
                 [NameInMap("FlexVolumeOptions")]
                 [Validation(Required=false)]
                 public string FlexVolumeOptions { get; set; }
@@ -137,7 +125,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 /// <summary>
                 /// The directory to which the volume is mounted.
                 /// 
-                /// >  The data stored in this directory is overwritten by the data on the volume. Specify the parameter with caution.
+                /// > The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.
                 /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
@@ -209,8 +197,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         /// <summary>
         /// The name of the serverless job.
-        /// 
-        /// >  The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -237,40 +223,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
-        /// <summary>
-        /// The retry policy for the serverless job.
-        /// </summary>
         [NameInMap("RetryStrategy")]
         [Validation(Required=false)]
         public SubmitServerlessJobRequestRetryStrategy RetryStrategy { get; set; }
         public class SubmitServerlessJobRequestRetryStrategy : TeaModel {
-            /// <summary>
-            /// The number of retries for the serverless job. Valid values: 1 to 10.
-            /// </summary>
             [NameInMap("Attempts")]
             [Validation(Required=false)]
             public int? Attempts { get; set; }
 
-            /// <summary>
-            /// The list of retry rules for the serverless job. You can specify up to 10 rules.
-            /// </summary>
             [NameInMap("EvaluateOnExit")]
             [Validation(Required=false)]
             public List<SubmitServerlessJobRequestRetryStrategyEvaluateOnExit> EvaluateOnExit { get; set; }
             public class SubmitServerlessJobRequestRetryStrategyEvaluateOnExit : TeaModel {
-                /// <summary>
-                /// The action that you want to take on the job. Valid values:
-                /// 
-                /// *   Retry: The job starts a retry when a specific exit code is hit.
-                /// *   Exit: The job exits when a specific exit code is hit.
-                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
-                /// <summary>
-                /// The job exit code, which is used together with the Action parameter as a job retry rule. Valid values: 0 to 255.
-                /// </summary>
                 [NameInMap("OnExitCode")]
                 [Validation(Required=false)]
                 public string OnExitCode { get; set; }

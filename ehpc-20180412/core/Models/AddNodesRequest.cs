@@ -221,6 +221,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        /// <summary>
+        /// The information about Domain Name System (DNS) settings.
+        /// </summary>
         [NameInMap("DnsConfig")]
         [Validation(Required=false)]
         public string DnsConfig { get; set; }

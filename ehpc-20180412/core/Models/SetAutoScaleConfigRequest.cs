@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? ComputeEnableHt { get; set; }
 
+        /// <summary>
+        /// The Domain Name System (DNS) settings.
+        /// </summary>
         [NameInMap("DnsConfig")]
         [Validation(Required=false)]
         public string DnsConfig { get; set; }
@@ -140,6 +143,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<SetAutoScaleConfigRequestQueues> Queues { get; set; }
         public class SetAutoScaleConfigRequestQueues : TeaModel {
+            /// <summary>
+            /// Automatic Configuration of the Minimum Node Number for Each Scale-out.
+            /// If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.
+            /// </summary>
             [NameInMap("AutoMinNodesPerCycle")]
             [Validation(Required=false)]
             public bool? AutoMinNodesPerCycle { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddNodesResponseBody : TeaModel {
+        /// <summary>
+        /// The instance IDs.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public AddNodesResponseBodyInstanceIds InstanceIds { get; set; }

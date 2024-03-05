@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeClusterRequest : TeaModel {
         /// <summary>
-        /// The type of the protocol that is used by the file system. Valid values:
-        /// 
-        /// *   nfs
-        /// *   smb
+        /// The cluster ID. You can call the [ListClusters](~~87116~~) operation to query the list of clusters in a region.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

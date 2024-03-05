@@ -327,6 +327,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? TargetCapacity { get; set; }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
         /// <summary>
         /// The details of the zones. You can specify up to 10 zones.
         /// </summary>

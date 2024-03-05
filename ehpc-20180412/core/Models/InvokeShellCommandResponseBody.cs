@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
+        /// <summary>
+        /// The list of IDs of the instances on which you want to run the command.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public InvokeShellCommandResponseBodyInstanceIds InstanceIds { get; set; }
