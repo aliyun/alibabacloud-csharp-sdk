@@ -453,6 +453,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["RenewalDurationUnit"] = request.RenewalDurationUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
+            {
+                query["ServerlessChargeType"] = request.ServerlessChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
                 query["StorageSize"] = request.StorageSize;
@@ -547,6 +551,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewalDurationUnit))
             {
                 query["RenewalDurationUnit"] = request.RenewalDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
+            {
+                query["ServerlessChargeType"] = request.ServerlessChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {

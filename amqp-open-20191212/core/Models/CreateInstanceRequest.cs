@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string RenewalDurationUnit { get; set; }
 
+        [NameInMap("ServerlessChargeType")]
+        [Validation(Required=false)]
+        public string ServerlessChargeType { get; set; }
+
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public int? StorageSize { get; set; }
