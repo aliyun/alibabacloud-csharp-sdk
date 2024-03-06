@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetClientKeyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the client key.
+        /// </summary>
         [NameInMap("ClientKeyId")]
         [Validation(Required=false)]
         public string ClientKeyId { get; set; }

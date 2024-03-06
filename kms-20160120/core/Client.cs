@@ -1273,6 +1273,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await CertificatePublicKeyVerifyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Limits
+          * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+          *
+          * @param request ConnectKmsInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConnectKmsInstanceResponse
+         */
         public ConnectKmsInstanceResponse ConnectKmsInstanceWithOptions(ConnectKmsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1316,6 +1324,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ConnectKmsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Limits
+          * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+          *
+          * @param request ConnectKmsInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConnectKmsInstanceResponse
+         */
         public async Task<ConnectKmsInstanceResponse> ConnectKmsInstanceWithOptionsAsync(ConnectKmsInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1359,12 +1375,26 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ConnectKmsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Limits
+          * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+          *
+          * @param request ConnectKmsInstanceRequest
+          * @return ConnectKmsInstanceResponse
+         */
         public ConnectKmsInstanceResponse ConnectKmsInstance(ConnectKmsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConnectKmsInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Limits
+          * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+          *
+          * @param request ConnectKmsInstanceRequest
+          * @return ConnectKmsInstanceResponse
+         */
         public async Task<ConnectKmsInstanceResponse> ConnectKmsInstanceAsync(ConnectKmsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1479,6 +1509,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await CreateAliasWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+          * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateApplicationAccessPointResponse
+         */
         public CreateApplicationAccessPointResponse CreateApplicationAccessPointWithOptions(CreateApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1518,6 +1559,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateApplicationAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+          * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateApplicationAccessPointResponse
+         */
         public async Task<CreateApplicationAccessPointResponse> CreateApplicationAccessPointWithOptionsAsync(CreateApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1557,12 +1609,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateApplicationAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+          * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateApplicationAccessPointRequest
+          * @return CreateApplicationAccessPointResponse
+         */
         public CreateApplicationAccessPointResponse CreateApplicationAccessPoint(CreateApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateApplicationAccessPointWithOptions(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+          * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateApplicationAccessPointRequest
+          * @return CreateApplicationAccessPointResponse
+         */
         public async Task<CreateApplicationAccessPointResponse> CreateApplicationAccessPointAsync(CreateApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1701,6 +1773,19 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await CreateCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+          * ### Precautions
+          * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+          *
+          * @param request CreateClientKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClientKeyResponse
+         */
         public CreateClientKeyResponse CreateClientKeyWithOptions(CreateClientKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1740,6 +1825,19 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateClientKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+          * ### Precautions
+          * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+          *
+          * @param request CreateClientKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClientKeyResponse
+         */
         public async Task<CreateClientKeyResponse> CreateClientKeyWithOptionsAsync(CreateClientKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1779,12 +1877,36 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateClientKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+          * ### Precautions
+          * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+          *
+          * @param request CreateClientKeyRequest
+          * @return CreateClientKeyResponse
+         */
         public CreateClientKeyResponse CreateClientKey(CreateClientKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateClientKeyWithOptions(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+          * ### Precautions
+          * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+          *
+          * @param request CreateClientKeyRequest
+          * @return CreateClientKeyResponse
+         */
         public async Task<CreateClientKeyResponse> CreateClientKeyAsync(CreateClientKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1792,21 +1914,7 @@ namespace AlibabaCloud.SDK.Kms20160120
         }
 
         /**
-          * A CMK can be symmetric or asymmetric. Symmetric CMKs are used to generate data keys that can be used to encrypt large amounts of data. You can also use symmetric CMKs to encrypt small volume of data that is less than 6 KB. For more information, see [GenerateDataKey](https://www.alibabacloud.com/help/en/key-management-service/latest/generatedatakey). Asymmetric CMKs are used to encrypt data, decrypt data, generate digital signatures, and verify digital signatures. However, you cannot use asymmetric CMKs to generate data keys.  
-          * The following table describes different types of CMKs and the operations that are supported by the CMKs. 
-          * | CMK category | CMK type | Description | Encryption and decryption | Signature generation and verification |
-          * | ------------ | -------- | ----------- | ------------------------- | ------------------------------------- |
-          * | Symmetric CMK | Aliyun_AES_256 | An advanced Encryption Standard (AES) CMK with a length of 256 bits. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_128 | An AES CMK with a length of 128 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_192 | An AES CMK with a length of 192 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_SM4 | SM4 CMK. | Yes | No |
-          * | Asymmetric CMK | RSA_2048 | Rivest-Shamir-Adleman (RSA) CMK with a length of 2,048 bits. | Supported | Supported |
-          * | Asymmetric CMK | RSA_3072 | RSA CMK with a length of 3,072 bits. | Supported | Supported |
-          * | Asymmetric CMK | EC_P256 | National Institute of Standards and Technology (NIST)-recommended elliptic curve P-256 (secp256r1). | Not supported | Supported |
-          * | Asymmetric CMK | EC_P256K | Standards for Efficient Cryptography Group (SECG) elliptic curve secp256k1 | Not supported | Supported |
-          * | Asymmetric CMK | EC_SM2 | 256-bit elliptic curves over the prime field that is defined in GB/T 32918. | Supported | Supported |
-          * > - If the value of the KeySpec parameter that is used to create a symmetric CMK is prefixed with `Aliyun_`, a standard cryptographic algorithm is used, but non-standard ciphertext is generated. An asymmetric CMK can be used to generate standard ciphertext or signatures.
-          * > - You can use an RSA CMK to perform one of the two types of operations: encrypt and decrypt data, and generate and verify signatures. You cannot use the RSA CMK to perform both two types of operations.
+          * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
           *
           * @param request CreateKeyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1872,21 +1980,7 @@ namespace AlibabaCloud.SDK.Kms20160120
         }
 
         /**
-          * A CMK can be symmetric or asymmetric. Symmetric CMKs are used to generate data keys that can be used to encrypt large amounts of data. You can also use symmetric CMKs to encrypt small volume of data that is less than 6 KB. For more information, see [GenerateDataKey](https://www.alibabacloud.com/help/en/key-management-service/latest/generatedatakey). Asymmetric CMKs are used to encrypt data, decrypt data, generate digital signatures, and verify digital signatures. However, you cannot use asymmetric CMKs to generate data keys.  
-          * The following table describes different types of CMKs and the operations that are supported by the CMKs. 
-          * | CMK category | CMK type | Description | Encryption and decryption | Signature generation and verification |
-          * | ------------ | -------- | ----------- | ------------------------- | ------------------------------------- |
-          * | Symmetric CMK | Aliyun_AES_256 | An advanced Encryption Standard (AES) CMK with a length of 256 bits. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_128 | An AES CMK with a length of 128 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_192 | An AES CMK with a length of 192 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_SM4 | SM4 CMK. | Yes | No |
-          * | Asymmetric CMK | RSA_2048 | Rivest-Shamir-Adleman (RSA) CMK with a length of 2,048 bits. | Supported | Supported |
-          * | Asymmetric CMK | RSA_3072 | RSA CMK with a length of 3,072 bits. | Supported | Supported |
-          * | Asymmetric CMK | EC_P256 | National Institute of Standards and Technology (NIST)-recommended elliptic curve P-256 (secp256r1). | Not supported | Supported |
-          * | Asymmetric CMK | EC_P256K | Standards for Efficient Cryptography Group (SECG) elliptic curve secp256k1 | Not supported | Supported |
-          * | Asymmetric CMK | EC_SM2 | 256-bit elliptic curves over the prime field that is defined in GB/T 32918. | Supported | Supported |
-          * > - If the value of the KeySpec parameter that is used to create a symmetric CMK is prefixed with `Aliyun_`, a standard cryptographic algorithm is used, but non-standard ciphertext is generated. An asymmetric CMK can be used to generate standard ciphertext or signatures.
-          * > - You can use an RSA CMK to perform one of the two types of operations: encrypt and decrypt data, and generate and verify signatures. You cannot use the RSA CMK to perform both two types of operations.
+          * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
           *
           * @param request CreateKeyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1952,21 +2046,7 @@ namespace AlibabaCloud.SDK.Kms20160120
         }
 
         /**
-          * A CMK can be symmetric or asymmetric. Symmetric CMKs are used to generate data keys that can be used to encrypt large amounts of data. You can also use symmetric CMKs to encrypt small volume of data that is less than 6 KB. For more information, see [GenerateDataKey](https://www.alibabacloud.com/help/en/key-management-service/latest/generatedatakey). Asymmetric CMKs are used to encrypt data, decrypt data, generate digital signatures, and verify digital signatures. However, you cannot use asymmetric CMKs to generate data keys.  
-          * The following table describes different types of CMKs and the operations that are supported by the CMKs. 
-          * | CMK category | CMK type | Description | Encryption and decryption | Signature generation and verification |
-          * | ------------ | -------- | ----------- | ------------------------- | ------------------------------------- |
-          * | Symmetric CMK | Aliyun_AES_256 | An advanced Encryption Standard (AES) CMK with a length of 256 bits. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_128 | An AES CMK with a length of 128 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_192 | An AES CMK with a length of 192 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_SM4 | SM4 CMK. | Yes | No |
-          * | Asymmetric CMK | RSA_2048 | Rivest-Shamir-Adleman (RSA) CMK with a length of 2,048 bits. | Supported | Supported |
-          * | Asymmetric CMK | RSA_3072 | RSA CMK with a length of 3,072 bits. | Supported | Supported |
-          * | Asymmetric CMK | EC_P256 | National Institute of Standards and Technology (NIST)-recommended elliptic curve P-256 (secp256r1). | Not supported | Supported |
-          * | Asymmetric CMK | EC_P256K | Standards for Efficient Cryptography Group (SECG) elliptic curve secp256k1 | Not supported | Supported |
-          * | Asymmetric CMK | EC_SM2 | 256-bit elliptic curves over the prime field that is defined in GB/T 32918. | Supported | Supported |
-          * > - If the value of the KeySpec parameter that is used to create a symmetric CMK is prefixed with `Aliyun_`, a standard cryptographic algorithm is used, but non-standard ciphertext is generated. An asymmetric CMK can be used to generate standard ciphertext or signatures.
-          * > - You can use an RSA CMK to perform one of the two types of operations: encrypt and decrypt data, and generate and verify signatures. You cannot use the RSA CMK to perform both two types of operations.
+          * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
           *
           * @param request CreateKeyRequest
           * @return CreateKeyResponse
@@ -1978,21 +2058,7 @@ namespace AlibabaCloud.SDK.Kms20160120
         }
 
         /**
-          * A CMK can be symmetric or asymmetric. Symmetric CMKs are used to generate data keys that can be used to encrypt large amounts of data. You can also use symmetric CMKs to encrypt small volume of data that is less than 6 KB. For more information, see [GenerateDataKey](https://www.alibabacloud.com/help/en/key-management-service/latest/generatedatakey). Asymmetric CMKs are used to encrypt data, decrypt data, generate digital signatures, and verify digital signatures. However, you cannot use asymmetric CMKs to generate data keys.  
-          * The following table describes different types of CMKs and the operations that are supported by the CMKs. 
-          * | CMK category | CMK type | Description | Encryption and decryption | Signature generation and verification |
-          * | ------------ | -------- | ----------- | ------------------------- | ------------------------------------- |
-          * | Symmetric CMK | Aliyun_AES_256 | An advanced Encryption Standard (AES) CMK with a length of 256 bits. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_128 | An AES CMK with a length of 128 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_AES_192 | An AES CMK with a length of 192 bits. Only Dedicated KMS supports this CMK type. | Yes | No |
-          * | Symmetric CMK | Aliyun_SM4 | SM4 CMK. | Yes | No |
-          * | Asymmetric CMK | RSA_2048 | Rivest-Shamir-Adleman (RSA) CMK with a length of 2,048 bits. | Supported | Supported |
-          * | Asymmetric CMK | RSA_3072 | RSA CMK with a length of 3,072 bits. | Supported | Supported |
-          * | Asymmetric CMK | EC_P256 | National Institute of Standards and Technology (NIST)-recommended elliptic curve P-256 (secp256r1). | Not supported | Supported |
-          * | Asymmetric CMK | EC_P256K | Standards for Efficient Cryptography Group (SECG) elliptic curve secp256k1 | Not supported | Supported |
-          * | Asymmetric CMK | EC_SM2 | 256-bit elliptic curves over the prime field that is defined in GB/T 32918. | Supported | Supported |
-          * > - If the value of the KeySpec parameter that is used to create a symmetric CMK is prefixed with `Aliyun_`, a standard cryptographic algorithm is used, but non-standard ciphertext is generated. An asymmetric CMK can be used to generate standard ciphertext or signatures.
-          * > - You can use an RSA CMK to perform one of the two types of operations: encrypt and decrypt data, and generate and verify signatures. You cannot use the RSA CMK to perform both two types of operations.
+          * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
           *
           * @param request CreateKeyRequest
           * @return CreateKeyResponse
@@ -2111,6 +2177,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await CreateKeyVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkRuleResponse
+         */
         public CreateNetworkRuleResponse CreateNetworkRuleWithOptions(CreateNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2150,6 +2227,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateNetworkRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkRuleResponse
+         */
         public async Task<CreateNetworkRuleResponse> CreateNetworkRuleWithOptionsAsync(CreateNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2189,18 +2277,49 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateNetworkRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateNetworkRuleRequest
+          * @return CreateNetworkRuleResponse
+         */
         public CreateNetworkRuleResponse CreateNetworkRule(CreateNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNetworkRuleWithOptions(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreateNetworkRuleRequest
+          * @return CreateNetworkRuleResponse
+         */
         public async Task<CreateNetworkRuleResponse> CreateNetworkRuleAsync(CreateNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNetworkRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreatePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyResponse
+         */
         public CreatePolicyResponse CreatePolicyWithOptions(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2248,6 +2367,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreatePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreatePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePolicyResponse
+         */
         public async Task<CreatePolicyResponse> CreatePolicyWithOptionsAsync(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2295,12 +2425,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreatePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreatePolicyRequest
+          * @return CreatePolicyResponse
+         */
         public CreatePolicyResponse CreatePolicy(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePolicyWithOptions(request, runtime);
         }
 
+        /**
+          * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+          * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+          * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+          * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+          * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+          *
+          * @param request CreatePolicyRequest
+          * @return CreatePolicyResponse
+         */
         public async Task<CreatePolicyResponse> CreatePolicyAsync(CreatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2667,6 +2817,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteAliasWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+          *
+          * @param request DeleteApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteApplicationAccessPointResponse
+         */
         public DeleteApplicationAccessPointResponse DeleteApplicationAccessPointWithOptions(DeleteApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2694,6 +2851,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteApplicationAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+          *
+          * @param request DeleteApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteApplicationAccessPointResponse
+         */
         public async Task<DeleteApplicationAccessPointResponse> DeleteApplicationAccessPointWithOptionsAsync(DeleteApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2721,12 +2885,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteApplicationAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+          *
+          * @param request DeleteApplicationAccessPointRequest
+          * @return DeleteApplicationAccessPointResponse
+         */
         public DeleteApplicationAccessPointResponse DeleteApplicationAccessPoint(DeleteApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteApplicationAccessPointWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+          *
+          * @param request DeleteApplicationAccessPointRequest
+          * @return DeleteApplicationAccessPointResponse
+         */
         public async Task<DeleteApplicationAccessPointResponse> DeleteApplicationAccessPointAsync(DeleteApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2829,6 +3005,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+          *
+          * @param request DeleteClientKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteClientKeyResponse
+         */
         public DeleteClientKeyResponse DeleteClientKeyWithOptions(DeleteClientKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2856,6 +3039,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteClientKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+          *
+          * @param request DeleteClientKeyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteClientKeyResponse
+         */
         public async Task<DeleteClientKeyResponse> DeleteClientKeyWithOptionsAsync(DeleteClientKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2883,12 +3073,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteClientKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+          *
+          * @param request DeleteClientKeyRequest
+          * @return DeleteClientKeyResponse
+         */
         public DeleteClientKeyResponse DeleteClientKey(DeleteClientKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteClientKeyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+          *
+          * @param request DeleteClientKeyRequest
+          * @return DeleteClientKeyResponse
+         */
         public async Task<DeleteClientKeyResponse> DeleteClientKeyAsync(DeleteClientKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2995,6 +3197,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteKeyMaterialWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeleteNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNetworkRuleResponse
+         */
         public DeleteNetworkRuleResponse DeleteNetworkRuleWithOptions(DeleteNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3022,6 +3231,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteNetworkRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeleteNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNetworkRuleResponse
+         */
         public async Task<DeleteNetworkRuleResponse> DeleteNetworkRuleWithOptionsAsync(DeleteNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3049,18 +3265,37 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteNetworkRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeleteNetworkRuleRequest
+          * @return DeleteNetworkRuleResponse
+         */
         public DeleteNetworkRuleResponse DeleteNetworkRule(DeleteNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkRuleWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeleteNetworkRuleRequest
+          * @return DeleteNetworkRuleResponse
+         */
         public async Task<DeleteNetworkRuleResponse> DeleteNetworkRuleAsync(DeleteNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNetworkRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeletePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeletePolicyResponse
+         */
         public DeletePolicyResponse DeletePolicyWithOptions(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3088,6 +3323,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeletePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeletePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeletePolicyResponse
+         */
         public async Task<DeletePolicyResponse> DeletePolicyWithOptionsAsync(DeletePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3115,12 +3357,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeletePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeletePolicyRequest
+          * @return DeletePolicyResponse
+         */
         public DeletePolicyResponse DeletePolicy(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeletePolicyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+          *
+          * @param request DeletePolicyRequest
+          * @return DeletePolicyResponse
+         */
         public async Task<DeletePolicyResponse> DeletePolicyAsync(DeletePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3769,6 +4023,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DescribePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegionsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3787,6 +4049,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3805,12 +4075,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+          *
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+          *
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7727,6 +8009,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await TagResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can add multiple tags to multiple keys or multiple secrets at a time.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7766,6 +8055,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can add multiple tags to multiple keys or multiple secrets at a time.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7805,12 +8101,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can add multiple tags to multiple keys or multiple secrets at a time.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * You can add multiple tags to multiple keys or multiple secrets at a time.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7941,6 +8249,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UntagResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+          * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7984,6 +8300,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+          * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8027,12 +8351,26 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+          * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+          * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8113,6 +8451,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateAliasWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+          *
+          * @param request UpdateApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateApplicationAccessPointResponse
+         */
         public UpdateApplicationAccessPointResponse UpdateApplicationAccessPointWithOptions(UpdateApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8148,6 +8493,13 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateApplicationAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+          *
+          * @param request UpdateApplicationAccessPointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateApplicationAccessPointResponse
+         */
         public async Task<UpdateApplicationAccessPointResponse> UpdateApplicationAccessPointWithOptionsAsync(UpdateApplicationAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8183,12 +8535,24 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateApplicationAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+          *
+          * @param request UpdateApplicationAccessPointRequest
+          * @return UpdateApplicationAccessPointResponse
+         */
         public UpdateApplicationAccessPointResponse UpdateApplicationAccessPoint(UpdateApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateApplicationAccessPointWithOptions(request, runtime);
         }
 
+        /**
+          * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+          *
+          * @param request UpdateApplicationAccessPointRequest
+          * @return UpdateApplicationAccessPointResponse
+         */
         public async Task<UpdateApplicationAccessPointResponse> UpdateApplicationAccessPointAsync(UpdateApplicationAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8395,6 +8759,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateKeyDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+          * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+          * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+          *
+          * @param request UpdateKmsInstanceBindVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateKmsInstanceBindVpcResponse
+         */
         public UpdateKmsInstanceBindVpcResponse UpdateKmsInstanceBindVpcWithOptions(UpdateKmsInstanceBindVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8418,6 +8791,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateKmsInstanceBindVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+          * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+          * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+          *
+          * @param request UpdateKmsInstanceBindVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateKmsInstanceBindVpcResponse
+         */
         public async Task<UpdateKmsInstanceBindVpcResponse> UpdateKmsInstanceBindVpcWithOptionsAsync(UpdateKmsInstanceBindVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8441,18 +8823,42 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateKmsInstanceBindVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+          * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+          * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+          *
+          * @param request UpdateKmsInstanceBindVpcRequest
+          * @return UpdateKmsInstanceBindVpcResponse
+         */
         public UpdateKmsInstanceBindVpcResponse UpdateKmsInstanceBindVpc(UpdateKmsInstanceBindVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateKmsInstanceBindVpcWithOptions(request, runtime);
         }
 
+        /**
+          * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+          * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+          * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+          *
+          * @param request UpdateKmsInstanceBindVpcRequest
+          * @return UpdateKmsInstanceBindVpcResponse
+         */
         public async Task<UpdateKmsInstanceBindVpcResponse> UpdateKmsInstanceBindVpcAsync(UpdateKmsInstanceBindVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateKmsInstanceBindVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+          * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+          *
+          * @param request UpdateNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNetworkRuleResponse
+         */
         public UpdateNetworkRuleResponse UpdateNetworkRuleWithOptions(UpdateNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8488,6 +8894,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateNetworkRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+          * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+          *
+          * @param request UpdateNetworkRuleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateNetworkRuleResponse
+         */
         public async Task<UpdateNetworkRuleResponse> UpdateNetworkRuleWithOptionsAsync(UpdateNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8523,18 +8937,40 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateNetworkRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+          * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+          *
+          * @param request UpdateNetworkRuleRequest
+          * @return UpdateNetworkRuleResponse
+         */
         public UpdateNetworkRuleResponse UpdateNetworkRule(UpdateNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNetworkRuleWithOptions(request, runtime);
         }
 
+        /**
+          * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+          * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+          *
+          * @param request UpdateNetworkRuleRequest
+          * @return UpdateNetworkRuleResponse
+         */
         public async Task<UpdateNetworkRuleResponse> UpdateNetworkRuleAsync(UpdateNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateNetworkRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+          * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+          *
+          * @param request UpdatePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdatePolicyResponse
+         */
         public UpdatePolicyResponse UpdatePolicyWithOptions(UpdatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8578,6 +9014,14 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdatePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+          * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+          *
+          * @param request UpdatePolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdatePolicyResponse
+         */
         public async Task<UpdatePolicyResponse> UpdatePolicyWithOptionsAsync(UpdatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8621,12 +9065,26 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdatePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+          * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+          *
+          * @param request UpdatePolicyRequest
+          * @return UpdatePolicyResponse
+         */
         public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdatePolicyWithOptions(request, runtime);
         }
 
+        /**
+          * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+          * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+          *
+          * @param request UpdatePolicyRequest
+          * @return UpdatePolicyResponse
+         */
         public async Task<UpdatePolicyResponse> UpdatePolicyAsync(UpdatePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeApplicationAccessPointRequest : TeaModel {
+        /// <summary>
+        /// The name of the AAP that you want to query.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

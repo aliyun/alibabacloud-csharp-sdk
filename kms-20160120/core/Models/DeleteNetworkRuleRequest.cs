@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteNetworkRuleRequest : TeaModel {
+        /// <summary>
+        /// The name of the network access rule that you want to delete.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

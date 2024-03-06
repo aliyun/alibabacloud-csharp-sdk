@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetKmsInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the KMS instance that you want to query.
+        /// </summary>
         [NameInMap("KmsInstanceId")]
         [Validation(Required=false)]
         public string KmsInstanceId { get; set; }
