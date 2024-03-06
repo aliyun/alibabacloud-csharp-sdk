@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            [NameInMap("time")]
+            [Validation(Required=false)]
+            public long? Time { get; set; }
+
             [NameInMap("username")]
             [Validation(Required=false)]
             public string Username { get; set; }

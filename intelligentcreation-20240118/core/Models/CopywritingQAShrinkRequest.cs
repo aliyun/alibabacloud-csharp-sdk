@@ -13,8 +13,13 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        [NameInMap("histories")]
+        [Validation(Required=false)]
+        public string HistoriesShrink { get; set; }
+
         [NameInMap("history")]
         [Validation(Required=false)]
+        [Obsolete]
         public string HistoryShrink { get; set; }
 
         [NameInMap("question")]

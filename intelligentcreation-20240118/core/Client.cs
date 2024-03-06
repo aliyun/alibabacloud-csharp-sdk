@@ -162,6 +162,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Histories))
+            {
+                request.HistoriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Histories, "histories", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
             {
                 request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
@@ -170,6 +174,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoriesShrink))
+            {
+                query["histories"] = request.HistoriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
             {
@@ -216,6 +224,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Histories))
+            {
+                request.HistoriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Histories, "histories", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
             {
                 request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
@@ -224,6 +236,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoriesShrink))
+            {
+                query["histories"] = request.HistoriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
             {

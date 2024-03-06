@@ -13,8 +13,23 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        [NameInMap("histories")]
+        [Validation(Required=false)]
+        public List<CopywritingQARequestHistories> Histories { get; set; }
+        public class CopywritingQARequestHistories : TeaModel {
+            [NameInMap("bot")]
+            [Validation(Required=false)]
+            public string Bot { get; set; }
+
+            [NameInMap("user")]
+            [Validation(Required=false)]
+            public string User { get; set; }
+
+        }
+
         [NameInMap("history")]
         [Validation(Required=false)]
+        [Obsolete]
         public CopywritingQARequestHistory History { get; set; }
         public class CopywritingQARequestHistory : TeaModel {
             [NameInMap("bot")]
