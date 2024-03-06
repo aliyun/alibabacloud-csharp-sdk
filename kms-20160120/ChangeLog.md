@@ -1,3 +1,6 @@
+2024-03-06 Version: 1.1.3
+- Generated csharp 2016-01-20 for Kms.
+
 2024-03-06 Version: 1.1.2
 - Generated csharp 2016-01-20 for Kms.
 
