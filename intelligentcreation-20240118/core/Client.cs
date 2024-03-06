@@ -157,6 +157,128 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             return await ActualDeductResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        public CopywritingQAResponse CopywritingQAWithOptions(CopywritingQARequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
+            {
+                request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
+            {
+                query["history"] = request.HistoryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                query["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                query["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountId))
+            {
+                query["subAccountId"] = request.SubAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopywritingQA",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQA",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopywritingQAResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CopywritingQAResponse> CopywritingQAWithOptionsAsync(CopywritingQARequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
+            {
+                request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
+            {
+                query["history"] = request.HistoryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                query["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                query["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountId))
+            {
+                query["subAccountId"] = request.SubAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopywritingQA",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQA",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopywritingQAResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CopywritingQAResponse CopywritingQA(CopywritingQARequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CopywritingQAWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CopywritingQAResponse> CopywritingQAAsync(CopywritingQARequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CopywritingQAWithOptionsAsync(request, headers, runtime);
+        }
+
         public DirectDeductResourceResponse DirectDeductResourceWithOptions(DirectDeductResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -481,6 +603,112 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetRemainResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        public SubmitBulletQuestionsResponse SubmitBulletQuestionsWithOptions(SubmitBulletQuestionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBulletQuestionsShrinkRequest request = new SubmitBulletQuestionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Questions))
+            {
+                request.QuestionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Questions, "questions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuestionsShrink))
+            {
+                query["questions"] = request.QuestionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
+            {
+                query["roomId"] = request.RoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountId))
+            {
+                query["subAccountId"] = request.SubAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBulletQuestions",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBulletQuestionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitBulletQuestionsResponse> SubmitBulletQuestionsWithOptionsAsync(SubmitBulletQuestionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBulletQuestionsShrinkRequest request = new SubmitBulletQuestionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Questions))
+            {
+                request.QuestionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Questions, "questions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["accountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuestionsShrink))
+            {
+                query["questions"] = request.QuestionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
+            {
+                query["roomId"] = request.RoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountId))
+            {
+                query["subAccountId"] = request.SubAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBulletQuestions",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBulletQuestionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitBulletQuestionsResponse SubmitBulletQuestions(SubmitBulletQuestionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitBulletQuestionsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SubmitBulletQuestionsResponse> SubmitBulletQuestionsAsync(SubmitBulletQuestionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitBulletQuestionsWithOptionsAsync(request, headers, runtime);
         }
 
     }
