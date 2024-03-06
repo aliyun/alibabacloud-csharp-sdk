@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
         [Validation(Required=false)]
         public GetSummaryDataResponseBodyData Data { get; set; }
         public class GetSummaryDataResponseBodyData : TeaModel {
+            [NameInMap("AircraftConsumptionConversion")]
+            [Validation(Required=false)]
+            public string AircraftConsumptionConversion { get; set; }
+
+            [NameInMap("CarConsumptionConversion")]
+            [Validation(Required=false)]
+            public string CarConsumptionConversion { get; set; }
+
             [NameInMap("LastMonthConsumptionConversion")]
             [Validation(Required=false)]
             public string LastMonthConsumptionConversion { get; set; }
@@ -40,6 +48,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
             [NameInMap("TotalCarbonConsumptionConversion")]
             [Validation(Required=false)]
             public string TotalCarbonConsumptionConversion { get; set; }
+
+            [NameInMap("TreeConsumptionConversion")]
+            [Validation(Required=false)]
+            public string TreeConsumptionConversion { get; set; }
 
         }
 

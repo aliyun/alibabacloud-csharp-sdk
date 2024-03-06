@@ -85,9 +85,15 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             return await AllowWithOptionsAsync(runtime);
         }
 
-        public GetSummaryDataResponse GetSummaryDataWithOptions(GetSummaryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetSummaryDataResponse GetSummaryDataWithOptions(GetSummaryDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSummaryDataShrinkRequest request = new GetSummaryDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Uids))
+            {
+                request.UidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Uids, "Uids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -100,6 +106,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
+            {
+                query["Uids"] = request.UidsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -120,9 +130,15 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             return TeaModel.ToObject<GetSummaryDataResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetSummaryDataResponse> GetSummaryDataWithOptionsAsync(GetSummaryDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetSummaryDataResponse> GetSummaryDataWithOptionsAsync(GetSummaryDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSummaryDataShrinkRequest request = new GetSummaryDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Uids))
+            {
+                request.UidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Uids, "Uids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -135,6 +151,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
+            {
+                query["Uids"] = request.UidsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
