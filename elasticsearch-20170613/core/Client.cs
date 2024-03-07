@@ -4186,6 +4186,156 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DiagnoseInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        public DisableKibanaPvlNetworkResponse DisableKibanaPvlNetworkWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/disable-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DisableKibanaPvlNetworkResponse> DisableKibanaPvlNetworkWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/disable-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DisableKibanaPvlNetworkResponse DisableKibanaPvlNetwork(string InstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableKibanaPvlNetworkWithOptions(InstanceId, headers, runtime);
+        }
+
+        public async Task<DisableKibanaPvlNetworkResponse> DisableKibanaPvlNetworkAsync(string InstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableKibanaPvlNetworkWithOptionsAsync(InstanceId, headers, runtime);
+        }
+
+        public EnableKibanaPvlNetworkResponse EnableKibanaPvlNetworkWithOptions(string InstanceId, EnableKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
+            {
+                body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
+            {
+                body["securityGroups"] = request.SecurityGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsZone))
+            {
+                body["vSwitchIdsZone"] = request.VSwitchIdsZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["vpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/enable-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<EnableKibanaPvlNetworkResponse> EnableKibanaPvlNetworkWithOptionsAsync(string InstanceId, EnableKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
+            {
+                body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
+            {
+                body["securityGroups"] = request.SecurityGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsZone))
+            {
+                body["vSwitchIdsZone"] = request.VSwitchIdsZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["vpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/enable-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public EnableKibanaPvlNetworkResponse EnableKibanaPvlNetwork(string InstanceId, EnableKibanaPvlNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableKibanaPvlNetworkWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        public async Task<EnableKibanaPvlNetworkResponse> EnableKibanaPvlNetworkAsync(string InstanceId, EnableKibanaPvlNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableKibanaPvlNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
         public EstimatedLogstashRestartTimeResponse EstimatedLogstashRestartTimeWithOptions(string InstanceId, EstimatedLogstashRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8204,6 +8354,62 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListKibanaPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        public ListKibanaPvlNetworkResponse ListKibanaPvlNetworkWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/get-kibana-private",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListKibanaPvlNetworkResponse> ListKibanaPvlNetworkWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/get-kibana-private",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListKibanaPvlNetworkResponse ListKibanaPvlNetwork(string InstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKibanaPvlNetworkWithOptions(InstanceId, headers, runtime);
+        }
+
+        public async Task<ListKibanaPvlNetworkResponse> ListKibanaPvlNetworkAsync(string InstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKibanaPvlNetworkWithOptionsAsync(InstanceId, headers, runtime);
         }
 
         public ListLogstashResponse ListLogstashWithOptions(ListLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14024,6 +14230,96 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateInstanceSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        public UpdateKibanaPvlNetworkResponse UpdateKibanaPvlNetworkWithOptions(string InstanceId, UpdateKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PvlId))
+            {
+                query["pvlId"] = request.PvlId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
+            {
+                body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
+            {
+                body["securityGroups"] = request.SecurityGroups;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateKibanaPvlNetworkResponse> UpdateKibanaPvlNetworkWithOptionsAsync(string InstanceId, UpdateKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PvlId))
+            {
+                query["pvlId"] = request.PvlId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
+            {
+                body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
+            {
+                body["securityGroups"] = request.SecurityGroups;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKibanaPvlNetwork",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/update-kibana-private",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateKibanaPvlNetworkResponse UpdateKibanaPvlNetwork(string InstanceId, UpdateKibanaPvlNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateKibanaPvlNetworkWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        public async Task<UpdateKibanaPvlNetworkResponse> UpdateKibanaPvlNetworkAsync(string InstanceId, UpdateKibanaPvlNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateKibanaPvlNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
         public UpdateKibanaSettingsResponse UpdateKibanaSettingsWithOptions(string InstanceId, UpdateKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
