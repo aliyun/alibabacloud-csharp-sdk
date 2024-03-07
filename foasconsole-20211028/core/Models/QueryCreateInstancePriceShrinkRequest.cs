@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class QueryCreateInstancePriceShrinkRequest : TeaModel {
+        [NameInMap("ArchitectureType")]
+        [Validation(Required=false)]
+        public string ArchitectureType { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -20,6 +24,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
+
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
+        [NameInMap("Ha")]
+        [Validation(Required=false)]
+        public bool? Ha { get; set; }
+
+        [NameInMap("HaResourceSpec")]
+        [Validation(Required=false)]
+        public string HaResourceSpecShrink { get; set; }
 
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -44,6 +60,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public string StorageShrink { get; set; }
+
+        [NameInMap("UsePromotionCode")]
+        [Validation(Required=false)]
+        public bool? UsePromotionCode { get; set; }
 
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

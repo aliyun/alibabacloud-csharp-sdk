@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeNamespacesShrinkRequest : TeaModel {
+        [NameInMap("Ha")]
+        [Validation(Required=false)]
+        public bool? Ha { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

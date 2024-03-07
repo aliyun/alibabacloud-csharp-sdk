@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeInstancesRequest : TeaModel {
+        [NameInMap("ArchitectureType")]
+        [Validation(Required=false)]
+        public string ArchitectureType { get; set; }
+
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]

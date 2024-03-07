@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class CreateInstanceRequest : TeaModel {
+        [NameInMap("ArchitectureType")]
+        [Validation(Required=false)]
+        public string ArchitectureType { get; set; }
+
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -21,9 +25,43 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
+        [NameInMap("Ha")]
+        [Validation(Required=false)]
+        public bool? Ha { get; set; }
+
+        [NameInMap("HaResourceSpec")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestHaResourceSpec HaResourceSpec { get; set; }
+        public class CreateInstanceRequestHaResourceSpec : TeaModel {
+            [NameInMap("Cpu")]
+            [Validation(Required=false)]
+            public int? Cpu { get; set; }
+
+            [NameInMap("MemoryGB")]
+            [Validation(Required=false)]
+            public int? MemoryGB { get; set; }
+
+        }
+
+        [NameInMap("HaVSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> HaVSwitchIds { get; set; }
+
+        [NameInMap("HaZoneId")]
+        [Validation(Required=false)]
+        public string HaZoneId { get; set; }
+
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("MonitorType")]
+        [Validation(Required=false)]
+        public string MonitorType { get; set; }
 
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -36,6 +74,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceSpec")]
         [Validation(Required=false)]
@@ -66,6 +108,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
         }
+
+        [NameInMap("UsePromotionCode")]
+        [Validation(Required=false)]
+        public bool? UsePromotionCode { get; set; }
 
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

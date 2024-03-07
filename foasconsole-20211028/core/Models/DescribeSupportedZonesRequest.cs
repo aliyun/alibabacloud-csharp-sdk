@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeSupportedZonesRequest : TeaModel {
+        [NameInMap("ArchitectureType")]
+        [Validation(Required=false)]
+        public string ArchitectureType { get; set; }
+
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

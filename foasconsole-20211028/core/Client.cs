@@ -160,6 +160,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
@@ -173,6 +181,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchitectureType))
+            {
+                body["ArchitectureType"] = request.ArchitectureType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -185,9 +197,33 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["Duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["Extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorType))
+            {
+                body["MonitorType"] = request.MonitorType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
             {
@@ -201,6 +237,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["Region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecShrink))
             {
                 body["ResourceSpec"] = request.ResourceSpecShrink;
@@ -208,6 +248,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsShrink))
             {
@@ -245,6 +289,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
@@ -258,6 +310,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchitectureType))
+            {
+                body["ArchitectureType"] = request.ArchitectureType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -270,9 +326,33 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["Duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["Extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorType))
+            {
+                body["MonitorType"] = request.MonitorType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
             {
@@ -286,6 +366,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["Region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecShrink))
             {
                 body["ResourceSpec"] = request.ResourceSpecShrink;
@@ -293,6 +377,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsShrink))
             {
@@ -347,6 +435,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -392,6 +484,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -939,16 +1035,48 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+          *
+          * @param tmpReq ModifyPrepayInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPrepayInstanceSpecResponse
+         */
+        // Deprecated
         public ModifyPrepayInstanceSpecResponse ModifyPrepayInstanceSpecWithOptions(ModifyPrepayInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyPrepayInstanceSpecShrinkRequest request = new ModifyPrepayInstanceSpecShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -980,16 +1108,48 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyPrepayInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+          *
+          * @param tmpReq ModifyPrepayInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPrepayInstanceSpecResponse
+         */
+        // Deprecated
         public async Task<ModifyPrepayInstanceSpecResponse> ModifyPrepayInstanceSpecWithOptionsAsync(ModifyPrepayInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyPrepayInstanceSpecShrinkRequest request = new ModifyPrepayInstanceSpecShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -1021,18 +1181,40 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyPrepayInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+          *
+          * @param request ModifyPrepayInstanceSpecRequest
+          * @return ModifyPrepayInstanceSpecResponse
+         */
+        // Deprecated
         public ModifyPrepayInstanceSpecResponse ModifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPrepayInstanceSpecWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+          *
+          * @param request ModifyPrepayInstanceSpecRequest
+          * @return ModifyPrepayInstanceSpecResponse
+         */
+        // Deprecated
         public async Task<ModifyPrepayInstanceSpecResponse> ModifyPrepayInstanceSpecAsync(ModifyPrepayInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPrepayInstanceSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+          *
+          * @param tmpReq ModifyPrepayNamespaceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPrepayNamespaceSpecResponse
+         */
+        // Deprecated
         public ModifyPrepayNamespaceSpecResponse ModifyPrepayNamespaceSpecWithOptions(ModifyPrepayNamespaceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1078,6 +1260,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyPrepayNamespaceSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+          *
+          * @param tmpReq ModifyPrepayNamespaceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPrepayNamespaceSpecResponse
+         */
+        // Deprecated
         public async Task<ModifyPrepayNamespaceSpecResponse> ModifyPrepayNamespaceSpecWithOptionsAsync(ModifyPrepayNamespaceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1123,12 +1313,26 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyPrepayNamespaceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+          *
+          * @param request ModifyPrepayNamespaceSpecRequest
+          * @return ModifyPrepayNamespaceSpecResponse
+         */
+        // Deprecated
         public ModifyPrepayNamespaceSpecResponse ModifyPrepayNamespaceSpec(ModifyPrepayNamespaceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPrepayNamespaceSpecWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+          *
+          * @param request ModifyPrepayNamespaceSpecRequest
+          * @return ModifyPrepayNamespaceSpecResponse
+         */
+        // Deprecated
         public async Task<ModifyPrepayNamespaceSpecResponse> ModifyPrepayNamespaceSpecAsync(ModifyPrepayNamespaceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1258,6 +1462,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryCreateInstancePriceShrinkRequest request = new QueryCreateInstancePriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
@@ -1271,6 +1479,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchitectureType))
+            {
+                body["ArchitectureType"] = request.ArchitectureType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -1282,6 +1494,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["Extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -1306,6 +1530,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsShrink))
             {
@@ -1343,6 +1571,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryCreateInstancePriceShrinkRequest request = new QueryCreateInstancePriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
@@ -1356,6 +1588,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchitectureType))
+            {
+                body["ArchitectureType"] = request.ArchitectureType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -1367,6 +1603,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["Extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -1391,6 +1639,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdsShrink))
             {
@@ -1440,11 +1692,35 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryModifyInstancePriceShrinkRequest request = new QueryModifyInstancePriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -1481,11 +1757,35 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryModifyInstancePriceShrinkRequest request = new QueryModifyInstancePriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
             {
                 request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaZoneId))
+            {
+                body["HaZoneId"] = request.HaZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;

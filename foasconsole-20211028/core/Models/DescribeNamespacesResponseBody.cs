@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            [NameInMap("Ha")]
+            [Validation(Required=false)]
+            public bool? Ha { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
@@ -46,6 +50,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
+
+                [NameInMap("Cu")]
+                [Validation(Required=false)]
+                public float? Cu { get; set; }
 
                 [NameInMap("MemoryGB")]
                 [Validation(Required=false)]
