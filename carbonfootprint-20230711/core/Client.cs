@@ -187,13 +187,23 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             return await GetSummaryDataWithOptionsAsync(request, runtime);
         }
 
-        public QueryCarbonTrackResponse QueryCarbonTrackWithOptions(QueryCarbonTrackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryCarbonTrackResponse QueryCarbonTrackWithOptions(QueryCarbonTrackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryCarbonTrackShrinkRequest request = new QueryCarbonTrackShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Uids))
+            {
+                request.UidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Uids, "Uids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRDAccount))
+            {
+                query["FilterRDAccount"] = request.FilterRDAccount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
             {
@@ -202,6 +212,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
+            {
+                query["Uids"] = request.UidsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -222,13 +236,23 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             return TeaModel.ToObject<QueryCarbonTrackResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<QueryCarbonTrackResponse> QueryCarbonTrackWithOptionsAsync(QueryCarbonTrackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryCarbonTrackResponse> QueryCarbonTrackWithOptionsAsync(QueryCarbonTrackRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryCarbonTrackShrinkRequest request = new QueryCarbonTrackShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Uids))
+            {
+                request.UidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Uids, "Uids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRDAccount))
+            {
+                query["FilterRDAccount"] = request.FilterRDAccount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
             {
@@ -237,6 +261,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
+            {
+                query["Uids"] = request.UidsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
 {
-    public class QueryCarbonTrackRequest : TeaModel {
+    public class QueryCarbonTrackShrinkRequest : TeaModel {
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
 
         [NameInMap("Uids")]
         [Validation(Required=false)]
-        public List<string> Uids { get; set; }
+        public string UidsShrink { get; set; }
 
     }
 
