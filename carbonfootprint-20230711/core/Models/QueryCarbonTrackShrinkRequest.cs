@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("TopNum")]
+        [Validation(Required=false)]
+        public int? TopNum { get; set; }
+
         [NameInMap("Uids")]
         [Validation(Required=false)]
         public string UidsShrink { get; set; }

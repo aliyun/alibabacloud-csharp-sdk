@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["TopNum"] = request.TopNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
             {
                 query["Uids"] = request.UidsShrink;
@@ -261,6 +265,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["TopNum"] = request.TopNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
             {
