@@ -1,3 +1,7 @@
+2024-03-08 Version: 1.3.0
+- Support API ListCouponUsage.
+
+
 2024-02-27 Version: 1.2.0
 - Support API ListCouponUsage.
 
