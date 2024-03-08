@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            [NameInMap("EnableVad")]
-            [Validation(Required=false)]
-            public bool? EnableVad { get; set; }
-
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
             public List<string> LayoutIds { get; set; }

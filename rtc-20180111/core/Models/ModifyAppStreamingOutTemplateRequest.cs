@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public ModifyAppStreamingOutTemplateRequestStreamingOutTemplate StreamingOutTemplate { get; set; }
         public class ModifyAppStreamingOutTemplateRequestStreamingOutTemplate : TeaModel {
-            [NameInMap("EnableVad")]
-            [Validation(Required=false)]
-            public bool? EnableVad { get; set; }
-
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
             public List<string> LayoutIds { get; set; }

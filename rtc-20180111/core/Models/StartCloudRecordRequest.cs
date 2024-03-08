@@ -35,14 +35,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             /// </summary>
             [NameInMap("PaneId")]
             [Validation(Required=false)]
-            public string PaneId { get; set; }
-
-            /// <summary>
-            /// source
-            /// </summary>
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
+            public int? PaneId { get; set; }
 
             /// <summary>
             /// sourceType
