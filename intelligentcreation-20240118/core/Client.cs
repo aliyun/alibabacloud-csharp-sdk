@@ -295,6 +295,66 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             return await CopywritingQAWithOptionsAsync(request, headers, runtime);
         }
 
+        public CopywritingQAV1Response CopywritingQAV1WithOptions(CopywritingQAV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopywritingQAV1",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQAV1",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopywritingQAV1Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CopywritingQAV1Response> CopywritingQAV1WithOptionsAsync(CopywritingQAV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopywritingQAV1",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQAV1",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopywritingQAV1Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CopywritingQAV1Response CopywritingQAV1(CopywritingQAV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CopywritingQAV1WithOptions(request, headers, runtime);
+        }
+
+        public async Task<CopywritingQAV1Response> CopywritingQAV1Async(CopywritingQAV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CopywritingQAV1WithOptionsAsync(request, headers, runtime);
+        }
+
         public DirectDeductResourceResponse DirectDeductResourceWithOptions(DirectDeductResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -725,6 +785,66 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SubmitBulletQuestionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public SubmitBulletQuestionsV1Response SubmitBulletQuestionsV1WithOptions(SubmitBulletQuestionsV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBulletQuestionsV1",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestionsV1",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBulletQuestionsV1Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitBulletQuestionsV1Response> SubmitBulletQuestionsV1WithOptionsAsync(SubmitBulletQuestionsV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBulletQuestionsV1",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestionsV1",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBulletQuestionsV1Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitBulletQuestionsV1Response SubmitBulletQuestionsV1(SubmitBulletQuestionsV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitBulletQuestionsV1WithOptions(request, headers, runtime);
+        }
+
+        public async Task<SubmitBulletQuestionsV1Response> SubmitBulletQuestionsV1Async(SubmitBulletQuestionsV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitBulletQuestionsV1WithOptionsAsync(request, headers, runtime);
         }
 
     }
