@@ -307,6 +307,92 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828
             return await GetHpoTrialWithOptionsAsync(ExperimentId, TrialId, headers, runtime);
         }
 
+        public ListHpoExperimentLogsResponse ListHpoExperimentLogsWithOptions(string ExperimentId, ListHpoExperimentLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogName))
+            {
+                query["LogName"] = request.LogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoExperimentLogs",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoExperimentLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListHpoExperimentLogsResponse> ListHpoExperimentLogsWithOptionsAsync(string ExperimentId, ListHpoExperimentLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogName))
+            {
+                query["LogName"] = request.LogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoExperimentLogs",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoExperimentLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListHpoExperimentLogsResponse ListHpoExperimentLogs(string ExperimentId, ListHpoExperimentLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListHpoExperimentLogsWithOptions(ExperimentId, request, headers, runtime);
+        }
+
+        public async Task<ListHpoExperimentLogsResponse> ListHpoExperimentLogsAsync(string ExperimentId, ListHpoExperimentLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListHpoExperimentLogsWithOptionsAsync(ExperimentId, request, headers, runtime);
+        }
+
         public ListHpoExperimentsResponse ListHpoExperimentsWithOptions(ListHpoExperimentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -463,6 +549,118 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListHpoExperimentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListHpoTrialCommandsResponse ListHpoTrialCommandsWithOptions(string ExperimentId, string TrialId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoTrialCommands",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/trial/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrialId) + "/commands",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoTrialCommandsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListHpoTrialCommandsResponse> ListHpoTrialCommandsWithOptionsAsync(string ExperimentId, string TrialId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoTrialCommands",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/trial/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrialId) + "/commands",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoTrialCommandsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListHpoTrialCommandsResponse ListHpoTrialCommands(string ExperimentId, string TrialId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListHpoTrialCommandsWithOptions(ExperimentId, TrialId, headers, runtime);
+        }
+
+        public async Task<ListHpoTrialCommandsResponse> ListHpoTrialCommandsAsync(string ExperimentId, string TrialId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListHpoTrialCommandsWithOptionsAsync(ExperimentId, TrialId, headers, runtime);
+        }
+
+        public ListHpoTrialLogNamesResponse ListHpoTrialLogNamesWithOptions(string ExperimentId, string TrialId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoTrialLogNames",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/trial/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrialId) + "/lognames",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoTrialLogNamesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListHpoTrialLogNamesResponse> ListHpoTrialLogNamesWithOptionsAsync(string ExperimentId, string TrialId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHpoTrialLogNames",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/trial/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrialId) + "/lognames",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHpoTrialLogNamesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListHpoTrialLogNamesResponse ListHpoTrialLogNames(string ExperimentId, string TrialId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListHpoTrialLogNamesWithOptions(ExperimentId, TrialId, headers, runtime);
+        }
+
+        public async Task<ListHpoTrialLogNamesResponse> ListHpoTrialLogNamesAsync(string ExperimentId, string TrialId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListHpoTrialLogNamesWithOptionsAsync(ExperimentId, TrialId, headers, runtime);
         }
 
         public ListHpoTrialLogsResponse ListHpoTrialLogsWithOptions(string ExperimentId, string TrialId, ListHpoTrialLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -847,6 +1045,108 @@ namespace AlibabaCloud.SDK.PaiAutoML20220828
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopHpoTrialsWithOptionsAsync(ExperimentId, request, headers, runtime);
+        }
+
+        public UpdateHpoExperimentResponse UpdateHpoExperimentWithOptions(string ExperimentId, UpdateHpoExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpoExperimentConfiguration))
+            {
+                body["HpoExperimentConfiguration"] = request.HpoExperimentConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHpoExperiment",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHpoExperimentResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateHpoExperimentResponse> UpdateHpoExperimentWithOptionsAsync(string ExperimentId, UpdateHpoExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpoExperimentConfiguration))
+            {
+                body["HpoExperimentConfiguration"] = request.HpoExperimentConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHpoExperiment",
+                Version = "2022-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/api/automl/v1/hpo/experiment/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ExperimentId) + "/update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHpoExperimentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateHpoExperimentResponse UpdateHpoExperiment(string ExperimentId, UpdateHpoExperimentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateHpoExperimentWithOptions(ExperimentId, request, headers, runtime);
+        }
+
+        public async Task<UpdateHpoExperimentResponse> UpdateHpoExperimentAsync(string ExperimentId, UpdateHpoExperimentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateHpoExperimentWithOptionsAsync(ExperimentId, request, headers, runtime);
         }
 
     }
