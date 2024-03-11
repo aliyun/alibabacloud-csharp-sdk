@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeChannelJoinInfoResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeChannelJoinInfoResponseBody Body { get; set; }
 
     }

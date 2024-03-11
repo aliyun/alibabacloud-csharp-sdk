@@ -48,31 +48,40 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
                 [NameInMap("PubAudio")]
                 [Validation(Required=false)]
                 public long? PubAudio { get; set; }
+
                 [NameInMap("PubVideo360")]
                 [Validation(Required=false)]
                 public long? PubVideo360 { get; set; }
+
                 [NameInMap("PubVideo720")]
                 [Validation(Required=false)]
                 public long? PubVideo720 { get; set; }
+
                 [NameInMap("PubVideoScreenShare")]
                 [Validation(Required=false)]
                 public long? PubVideoScreenShare { get; set; }
+
                 [NameInMap("SubAudio")]
                 [Validation(Required=false)]
                 public long? SubAudio { get; set; }
+
                 [NameInMap("SubVideo1080")]
                 [Validation(Required=false)]
                 public long? SubVideo1080 { get; set; }
+
                 [NameInMap("SubVideo360")]
                 [Validation(Required=false)]
                 public long? SubVideo360 { get; set; }
+
                 [NameInMap("SubVideo720")]
                 [Validation(Required=false)]
                 public long? SubVideo720 { get; set; }
+
                 [NameInMap("SubVideoScreenShare")]
                 [Validation(Required=false)]
                 public long? SubVideoScreenShare { get; set; }
-            };
+
+            }
 
             [NameInMap("Duration")]
             [Validation(Required=false)]

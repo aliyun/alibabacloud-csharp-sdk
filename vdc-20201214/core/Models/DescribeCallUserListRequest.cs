@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeCallUserListRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
