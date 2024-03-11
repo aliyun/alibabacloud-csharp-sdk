@@ -34,11 +34,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         /// The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567\*\*\*\*.
         /// 
         /// For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+        /// 
+        /// >  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }
 
+        /// <summary>
+        /// The validity period of the message. Unit: seconds.
+        /// </summary>
         [NameInMap("ValidityPeriod")]
         [Validation(Required=false)]
         public long? ValidityPeriod { get; set; }

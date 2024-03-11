@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string ConversionRate { get; set; }
 
         /// <summary>
-        /// Timestamp of the conversion rate observation should be a Unix timestamp, millisecond-level long integer.
+        /// Timestamp of the conversion rate observation should be a Unix timestamp, a millisecond-level long integer.
         /// 
         /// >  If this field is not specified: the current timestamp is the default.
         /// </summary>
