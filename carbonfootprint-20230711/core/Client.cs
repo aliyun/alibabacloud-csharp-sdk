@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             {
                 query["Uids"] = request.UidsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCode))
+            {
+                query["UseCode"] = request.UseCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -273,6 +277,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidsShrink))
             {
                 query["Uids"] = request.UidsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCode))
+            {
+                query["UseCode"] = request.UseCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

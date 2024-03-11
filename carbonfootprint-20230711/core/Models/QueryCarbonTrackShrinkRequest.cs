@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.CarbonFootprint20230711.Models
         [Validation(Required=false)]
         public string UidsShrink { get; set; }
 
+        [NameInMap("UseCode")]
+        [Validation(Required=false)]
+        public int? UseCode { get; set; }
+
     }
 
 }
