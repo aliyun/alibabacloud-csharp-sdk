@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCloudDriveServiceRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        /// <summary>
+        /// The business type.
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
+
+        [NameInMap("CdsChargeType")]
+        [Validation(Required=false)]
+        public string CdsChargeType { get; set; }
 
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -44,6 +59,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string OfficeSiteType { get; set; }
 
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public long? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>
@@ -51,9 +74,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The solution ID.
+        /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]
         public string SolutionId { get; set; }
+
+        [NameInMap("UserCount")]
+        [Validation(Required=false)]
+        public long? UserCount { get; set; }
 
         [NameInMap("UserMaxSize")]
         [Validation(Required=false)]

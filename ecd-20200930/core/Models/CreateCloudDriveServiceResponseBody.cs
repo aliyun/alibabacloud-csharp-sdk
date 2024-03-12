@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         /// <summary>
         /// The maximum capacity of each instance in Cloud Drive Service. Unit: GiB
         /// </summary>
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OfficeSiteType")]
         [Validation(Required=false)]
         public string OfficeSiteType { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
         /// <summary>
         /// The ID of the request.

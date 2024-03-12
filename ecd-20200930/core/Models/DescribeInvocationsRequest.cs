@@ -87,9 +87,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InvokeStatus { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Default value: 100.
+        /// *   Valid values: 1 to 50.
+        /// *   Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

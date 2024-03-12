@@ -2514,7 +2514,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
           * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
           *     **
-          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
           * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
@@ -2628,7 +2628,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
           * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
           *     **
-          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
           * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
@@ -2742,7 +2742,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
           * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
           *     **
-          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
           * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
@@ -2758,7 +2758,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
           * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
           *     **
-          *     **Note**If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
+          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
           * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
@@ -3510,9 +3510,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsChargeType))
+            {
+                query["CdsChargeType"] = request.CdsChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
@@ -3542,6 +3554,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteType"] = request.OfficeSiteType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3549,6 +3569,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
             {
                 query["SolutionId"] = request.SolutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCount))
+            {
+                query["UserCount"] = request.UserCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
             {
@@ -3577,9 +3601,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsChargeType))
+            {
+                query["CdsChargeType"] = request.CdsChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
@@ -3609,6 +3645,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteType"] = request.OfficeSiteType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3616,6 +3660,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
             {
                 query["SolutionId"] = request.SolutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCount))
+            {
+                query["UserCount"] = request.UserCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaxSize))
             {
@@ -8183,7 +8231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The version of the client.
+          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
           *
           * @param request DescribeClientEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8269,7 +8317,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The version of the client.
+          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
           *
           * @param request DescribeClientEventsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8355,7 +8403,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The version of the client.
+          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
           *
           * @param request DescribeClientEventsRequest
           * @return DescribeClientEventsResponse
@@ -8367,7 +8415,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The version of the client.
+          * You can audit the operation logs of regular users to improve security. The operation logs record events such as desktop startup, shutdown, and session disconnection.
           *
           * @param request DescribeClientEventsRequest
           * @return DescribeClientEventsResponse
@@ -17533,9 +17581,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
           * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17597,9 +17646,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
           * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17661,9 +17711,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
           * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -17675,9 +17726,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
           * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
           * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
+          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -21850,7 +21902,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you call this operation, make sure that the following operations are performed:
           * *   The data that you want to retain in the disk is backed up.
           *     **
-          *     **Note**The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
+          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
           * *   The cloud desktop whose disk you want to restore is stopped.
           *
           * @param request ResetSnapshotRequest
@@ -21892,7 +21944,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you call this operation, make sure that the following operations are performed:
           * *   The data that you want to retain in the disk is backed up.
           *     **
-          *     **Note**The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
+          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
           * *   The cloud desktop whose disk you want to restore is stopped.
           *
           * @param request ResetSnapshotRequest
@@ -21934,7 +21986,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you call this operation, make sure that the following operations are performed:
           * *   The data that you want to retain in the disk is backed up.
           *     **
-          *     **Note**The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
+          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
           * *   The cloud desktop whose disk you want to restore is stopped.
           *
           * @param request ResetSnapshotRequest
@@ -21950,7 +22002,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
           * Before you call this operation, make sure that the following operations are performed:
           * *   The data that you want to retain in the disk is backed up.
           *     **
-          *     **Note**The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
+          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
           * *   The cloud desktop whose disk you want to restore is stopped.
           *
           * @param request ResetSnapshotRequest
@@ -23207,7 +23259,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The ID of the execution.
+          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
           *
           * @param request StopInvocationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23249,7 +23301,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The ID of the execution.
+          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
           *
           * @param request StopInvocationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23291,7 +23343,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The ID of the execution.
+          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
           *
           * @param request StopInvocationRequest
           * @return StopInvocationResponse
@@ -23303,7 +23355,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The ID of the execution.
+          * When you stop a one-time execution of a command, the command continues to run on the cloud desktops where it has started to run, and will not run on the cloud desktops where it has not started to run.
           *
           * @param request StopInvocationRequest
           * @return StopInvocationResponse

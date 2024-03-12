@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoResponseBody : TeaModel {
         /// <summary>
-        /// The details about the cloud desktops.
+        /// Details of the cloud desktops.
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopInfoResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopInfoResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// The connection status of the end user. Valid values:
+            /// The connection status of the user. Valid values:
             /// 
             /// *   Connected
             /// *   Disconnected
@@ -27,37 +27,37 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The current version of the cloud desktop.
+            /// The current image version of the cloud desktop.
             /// </summary>
             [NameInMap("CurrentAppVersion")]
             [Validation(Required=false)]
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// The cloud desktop ID.
+            /// The ID of the cloud desktop.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The status of the cloud desktop. Valid values:
+            /// The state of the cloud desktop. Valid values:
             /// 
-            /// *   Pending
-            /// *   Starting
-            /// *   Running
-            /// *   Stopping
-            /// *   Stopped
-            /// *   Expired
-            /// *   Deleted
-            /// *   Failed
+            /// *   Pending: The cloud desktop is being created.
+            /// *   Starting: The cloud desktop is being started.
+            /// *   Running: The cloud desktop is running.
+            /// *   Stopping: The cloud desktop is being stopped.
+            /// *   Stopped: The cloud desktop is stopped.
+            /// *   Expired: The cloud desktop is expired.
+            /// *   Deleted: The cloud desktop is deleted.
+            /// *   Failed: Failed to create the cloud desktop.
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The flag that is used to manage the cloud desktop.
+            /// The information about flags that are used to manage cloud desktops.
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
