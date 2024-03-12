@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public CreateTaskResponseBodyData Data { get; set; }
         public class CreateTaskResponseBodyData : TeaModel {
+            [NameInMap("MeetingJoinUrl")]
+            [Validation(Required=false)]
+            public string MeetingJoinUrl { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
