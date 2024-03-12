@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string TargetServer { get; set; }
 
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
+
     }
 
 }
