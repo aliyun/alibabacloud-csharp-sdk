@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
-    public class ListEnrolledAccountsRequest : TeaModel {
+    public class ListAccountFactoryBaselinesRequest : TeaModel {
         /// <summary>
         /// The maximum number of entries to return on each page.
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// RegionId
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
-    public class GetEnrolledAccountRequest : TeaModel {
+    public class GetAccountFactoryBaselineRequest : TeaModel {
         /// <summary>
-        /// The account ID.
+        /// The baseline ID.
         /// </summary>
-        [NameInMap("AccountUid")]
+        [NameInMap("BaselineId")]
         [Validation(Required=false)]
-        public long? AccountUid { get; set; }
+        public string BaselineId { get; set; }
 
         /// <summary>
         /// The region ID.

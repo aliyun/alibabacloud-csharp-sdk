@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class EnrollAccountResponseBody : TeaModel {
         /// <summary>
-        /// 注册账号ID
+        /// The account ID.
         /// </summary>
         [NameInMap("AccountUid")]
         [Validation(Required=false)]
         public long? AccountUid { get; set; }
 
         /// <summary>
-        /// 请求ID
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

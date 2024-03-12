@@ -10,56 +10,70 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEnrolledAccountsResponseBody : TeaModel {
         /// <summary>
-        /// 账号列表
+        /// The accounts.
         /// </summary>
         [NameInMap("EnrolledAccounts")]
         [Validation(Required=false)]
         public List<ListEnrolledAccountsResponseBodyEnrolledAccounts> EnrolledAccounts { get; set; }
         public class ListEnrolledAccountsResponseBodyEnrolledAccounts : TeaModel {
             /// <summary>
-            /// 账号ID
+            /// The account ID.
             /// </summary>
             [NameInMap("AccountUid")]
             [Validation(Required=false)]
             public long? AccountUid { get; set; }
 
             /// <summary>
-            /// 创建时间
+            /// The baseline ID.
+            /// </summary>
+            [NameInMap("BaselineId")]
+            [Validation(Required=false)]
+            public string BaselineId { get; set; }
+
+            /// <summary>
+            /// The time at which the account was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// 账号显示名称
+            /// The display name of the account.
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// 父资源夹ID
+            /// The ID of the parent folder.
             /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
             /// <summary>
-            /// 结算账号ID
+            /// The ID of the billing account.
             /// </summary>
             [NameInMap("PayerAccountUid")]
             [Validation(Required=false)]
             public long? PayerAccountUid { get; set; }
 
             /// <summary>
-            /// 创建状态
+            /// The creation status of the account. Valid values:
+            /// 
+            /// *   Pending: The account is waiting to be created.
+            /// *   Running: The account is being created.
+            /// *   Finished: The account is created.
+            /// *   Failed: The account failed to be created.
+            /// *   Scheduling: The account is being scheduled.
+            /// *   ScheduleFailed: The account failed to be scheduled.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// 更新时间
+            /// The time when the information about the account was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -68,14 +82,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         }
 
         /// <summary>
-        /// 查询返回结果下一页的令牌
+        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 请求ID
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

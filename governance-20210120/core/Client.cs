@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Governance20210120
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+          *
+          * @param request EnrollAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnrollAccountResponse
+         */
         public EnrollAccountResponse EnrollAccountWithOptions(EnrollAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountUid))
             {
                 query["AccountUid"] = request.AccountUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineItems))
             {
@@ -68,6 +80,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellAccountType))
+            {
+                query["ResellAccountType"] = request.ResellAccountType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -88,6 +104,14 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<EnrollAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+          *
+          * @param request EnrollAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnrollAccountResponse
+         */
         public async Task<EnrollAccountResponse> EnrollAccountWithOptionsAsync(EnrollAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -99,6 +123,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountUid))
             {
                 query["AccountUid"] = request.AccountUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineItems))
             {
@@ -120,6 +148,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellAccountType))
+            {
+                query["ResellAccountType"] = request.ResellAccountType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -139,16 +171,104 @@ namespace AlibabaCloud.SDK.Governance20210120
             return TeaModel.ToObject<EnrollAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+          *
+          * @param request EnrollAccountRequest
+          * @return EnrollAccountResponse
+         */
         public EnrollAccountResponse EnrollAccount(EnrollAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnrollAccountWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+          * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+          *
+          * @param request EnrollAccountRequest
+          * @return EnrollAccountResponse
+         */
         public async Task<EnrollAccountResponse> EnrollAccountAsync(EnrollAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnrollAccountWithOptionsAsync(request, runtime);
+        }
+
+        public GetAccountFactoryBaselineResponse GetAccountFactoryBaselineWithOptions(GetAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccountFactoryBaseline",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccountFactoryBaselineResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaselineWithOptionsAsync(GetAccountFactoryBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaselineId))
+            {
+                query["BaselineId"] = request.BaselineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccountFactoryBaseline",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccountFactoryBaselineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAccountFactoryBaselineResponse GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAccountFactoryBaselineWithOptions(request, runtime);
+        }
+
+        public async Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaselineAsync(GetAccountFactoryBaselineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAccountFactoryBaselineWithOptionsAsync(request, runtime);
         }
 
         public GetEnrolledAccountResponse GetEnrolledAccountWithOptions(GetEnrolledAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -223,6 +343,88 @@ namespace AlibabaCloud.SDK.Governance20210120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEnrolledAccountWithOptionsAsync(request, runtime);
+        }
+
+        public ListAccountFactoryBaselinesResponse ListAccountFactoryBaselinesWithOptions(ListAccountFactoryBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccountFactoryBaselines",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccountFactoryBaselinesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAccountFactoryBaselinesResponse> ListAccountFactoryBaselinesWithOptionsAsync(ListAccountFactoryBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccountFactoryBaselines",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccountFactoryBaselinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAccountFactoryBaselinesResponse ListAccountFactoryBaselines(ListAccountFactoryBaselinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAccountFactoryBaselinesWithOptions(request, runtime);
+        }
+
+        public async Task<ListAccountFactoryBaselinesResponse> ListAccountFactoryBaselinesAsync(ListAccountFactoryBaselinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAccountFactoryBaselinesWithOptionsAsync(request, runtime);
         }
 
         public ListEnrolledAccountsResponse ListEnrolledAccountsWithOptions(ListEnrolledAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

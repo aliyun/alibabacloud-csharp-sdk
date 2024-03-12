@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
-    public class EnrollAccountResponse : TeaModel {
+    public class GetAccountFactoryBaselineResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public EnrollAccountResponseBody Body { get; set; }
+        public GetAccountFactoryBaselineResponseBody Body { get; set; }
 
     }
 
