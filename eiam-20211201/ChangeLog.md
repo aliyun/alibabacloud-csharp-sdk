@@ -1,3 +1,7 @@
+2024-03-12 Version: 1.3.3
+- Update API GetUser: update response param.
+
+
 2024-01-02 Version: 1.3.2
 - Generated csharp 2021-12-01 for Eiam.
 

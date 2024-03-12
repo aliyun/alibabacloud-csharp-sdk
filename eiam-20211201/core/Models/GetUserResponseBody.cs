@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string PhoneRegion { get; set; }
 
+            [NameInMap("PreferredLanguage")]
+            [Validation(Required=false)]
+            public string PreferredLanguage { get; set; }
+
             /// <summary>
             /// The ID of the primary organizational unit to which the account belongs.
             /// </summary>

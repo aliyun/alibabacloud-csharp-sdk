@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateUserResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UpdateUserResponseBody Body { get; set; }
 
     }
