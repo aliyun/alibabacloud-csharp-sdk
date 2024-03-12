@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ExtendClusterResponseBody Body { get; set; }
 
     }
