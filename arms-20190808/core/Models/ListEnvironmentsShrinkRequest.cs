@@ -10,18 +10,59 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentsShrinkRequest : TeaModel {
         /// <summary>
-        /// Name of Addon.
+        /// The add-on name. You must specify at least one of the AddonName and EnvironmentType parameters.
         /// </summary>
         [NameInMap("AddonName")]
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
+        /// <summary>
+        /// 绑定的资源ID。
+        /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// Environment type, AddonName or EnvironmentType must be at least one.
+        /// The environment type. You must specify at least one of the AddonName and EnvironmentType parameters.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   CS
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Container Service for Kubernetes (ACK)
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ECS
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Elastic Compute Service (ECS)
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Cloud
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     cloud service
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EnvironmentType")]
         [Validation(Required=false)]
@@ -42,7 +83,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Resource tag list.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentsResponseBody : TeaModel {
         /// <summary>
-        /// Status code: 200 indicates success.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListEnvironmentsResponseBodyData Data { get; set; }
         public class ListEnvironmentsResponseBodyData : TeaModel {
             /// <summary>
-            /// Environment list.
+            /// The queried environments.
             /// </summary>
             [NameInMap("Environments")]
             [Validation(Required=false)]
             public List<ListEnvironmentsResponseBodyDataEnvironments> Environments { get; set; }
             public class ListEnvironmentsResponseBodyDataEnvironments : TeaModel {
                 /// <summary>
-                /// Addon list.
+                /// The queried add-ons.
                 /// </summary>
                 [NameInMap("Addons")]
                 [Validation(Required=false)]
                 public List<ListEnvironmentsResponseBodyDataEnvironmentsAddons> Addons { get; set; }
                 public class ListEnvironmentsResponseBodyDataEnvironmentsAddons : TeaModel {
                     /// <summary>
-                    /// Alias of Addon.
+                    /// The alias of the add-on.
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// Description of Addon.
+                    /// The description of the add-on.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Icon of Addon.
+                    /// The URL of the icon.
                     /// </summary>
                     [NameInMap("Icon")]
                     [Validation(Required=false)]
                     public string Icon { get; set; }
 
                     /// <summary>
-                    /// Name of Addon.
+                    /// The name of the add-on.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -68,98 +68,102 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// Id of the resource to be bound.
+                /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
                 /// </summary>
                 [NameInMap("BindResourceId")]
                 [Validation(Required=false)]
                 public string BindResourceId { get; set; }
 
                 /// <summary>
-                /// Profile of the resource to be bound.
+                /// The profile of the resource.
                 /// </summary>
                 [NameInMap("BindResourceProfile")]
                 [Validation(Required=false)]
                 public string BindResourceProfile { get; set; }
 
                 /// <summary>
-                /// Type of the resource to be bound.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("BindResourceType")]
                 [Validation(Required=false)]
                 public string BindResourceType { get; set; }
 
                 /// <summary>
-                /// Bound Vpc IP Cidr.
+                /// The CIDR block that is bound to the VPC.
                 /// </summary>
                 [NameInMap("BindVpcCidr")]
                 [Validation(Required=false)]
                 public string BindVpcCidr { get; set; }
 
                 /// <summary>
-                /// Create time.
+                /// The time when the VPC was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// Created User ID.
+                /// The ID of the user that created the VPC.
                 /// </summary>
                 [NameInMap("CreatedUserId")]
                 [Validation(Required=false)]
                 public string CreatedUserId { get; set; }
 
                 /// <summary>
-                /// Environment ID.
+                /// The ID of the environment instance.
                 /// </summary>
                 [NameInMap("EnvironmentId")]
                 [Validation(Required=false)]
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// Environment name.
+                /// The name of the environment.
                 /// </summary>
                 [NameInMap("EnvironmentName")]
                 [Validation(Required=false)]
                 public string EnvironmentName { get; set; }
 
                 /// <summary>
-                /// Environment type.
+                /// The type of the environment. Valid values:
+                /// 
+                /// *   CS: Container Service for Kubernetes (ACK)
+                /// *   ECS: Elastic Compute Service (ECS)
+                /// *   Cloud: cloud service
                 /// </summary>
                 [NameInMap("EnvironmentType")]
                 [Validation(Required=false)]
                 public string EnvironmentType { get; set; }
 
                 /// <summary>
-                /// Featyre list.
+                /// The features.
                 /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
                 public List<ListEnvironmentsResponseBodyDataEnvironmentsFeatures> Features { get; set; }
                 public class ListEnvironmentsResponseBodyDataEnvironmentsFeatures : TeaModel {
                     /// <summary>
-                    /// Alias of Feature.
+                    /// The alias of the feature.
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// Description of Feature.
+                    /// The description of the feature.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Icon address.
+                    /// The URL of the feature icon.
                     /// </summary>
                     [NameInMap("Icon")]
                     [Validation(Required=false)]
                     public string Icon { get; set; }
 
                     /// <summary>
-                    /// Name of Feature.
+                    /// The name of the feature.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -168,60 +172,66 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// Grafana datasource UID.
+                /// The unique ID of the Grafana data source.
                 /// </summary>
                 [NameInMap("GrafanaDatasourceUid")]
                 [Validation(Required=false)]
                 public string GrafanaDatasourceUid { get; set; }
 
                 /// <summary>
-                /// Grafana folder title.
+                /// The name of the Grafana directory.
                 /// </summary>
                 [NameInMap("GrafanaFolderTitle")]
                 [Validation(Required=false)]
                 public string GrafanaFolderTitle { get; set; }
 
                 /// <summary>
-                /// Grafana folder UID.
+                /// The unique ID of the Grafana directory.
                 /// </summary>
                 [NameInMap("GrafanaFolderUid")]
                 [Validation(Required=false)]
                 public string GrafanaFolderUid { get; set; }
 
                 /// <summary>
-                /// Latest Release create time.
+                /// The time when the add-on was last created.
                 /// </summary>
                 [NameInMap("LatestReleaseCreateTime")]
                 [Validation(Required=false)]
                 public string LatestReleaseCreateTime { get; set; }
 
+                /// <summary>
+                /// type of managed: 
+                /// - none: not managed. default value of prometheus for ACK.
+                /// - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
+                /// - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+                /// </summary>
                 [NameInMap("ManagedType")]
                 [Validation(Required=false)]
                 public string ManagedType { get; set; }
 
                 /// <summary>
-                /// Prometheus ID.
+                /// The ID of the Prometheus service.
                 /// </summary>
                 [NameInMap("PrometheusId")]
                 [Validation(Required=false)]
                 public long? PrometheusId { get; set; }
 
                 /// <summary>
-                /// Prometheus instance ID.
+                /// The ID of the Prometheus instance.
                 /// </summary>
                 [NameInMap("PrometheusInstanceId")]
                 [Validation(Required=false)]
                 public string PrometheusInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Number of Release.
+                /// The number of installed add-ons.
                 /// </summary>
                 [NameInMap("ReleaseCount")]
                 [Validation(Required=false)]
@@ -235,21 +245,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tags of the environment resource.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListEnvironmentsResponseBodyDataEnvironmentsTags> Tags { get; set; }
                 public class ListEnvironmentsResponseBodyDataEnvironmentsTags : TeaModel {
                     /// <summary>
-                    /// Tag key.
+                    /// The tag key.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// Tag value.
+                    /// The tag value.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -258,7 +268,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// User ID.
+                /// The user ID.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -267,7 +277,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// The total number of returned entries.
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -283,17 +293,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   `true`
-        /// *   `false`
+        /// Indicates whether the request was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

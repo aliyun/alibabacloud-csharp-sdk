@@ -10,70 +10,70 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvironmentFeatureResponseBody : TeaModel {
         /// <summary>
-        /// Status code: 200 indicates success.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The return data.
+        /// The returned struct.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeEnvironmentFeatureResponseBodyData Data { get; set; }
         public class DescribeEnvironmentFeatureResponseBodyData : TeaModel {
             /// <summary>
-            /// Feature Installation information.
+            /// The installation information of the feature.
             /// </summary>
             [NameInMap("Feature")]
             [Validation(Required=false)]
             public DescribeEnvironmentFeatureResponseBodyDataFeature Feature { get; set; }
             public class DescribeEnvironmentFeatureResponseBodyDataFeature : TeaModel {
                 /// <summary>
-                /// Alias of Feature.
+                /// The alias of the feature.
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// Config of Feature.
+                /// The configuration of the feature.
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Config { get; set; }
 
                 /// <summary>
-                /// Description of Feature.
+                /// The description of the feature.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Environment ID.
+                /// The environment ID.
                 /// </summary>
                 [NameInMap("EnvironmentId")]
                 [Validation(Required=false)]
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// Icon address.
+                /// The URL of the icon.
                 /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// Lanuage.
+                /// The language.
                 /// </summary>
                 [NameInMap("Language")]
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
                 /// <summary>
-                /// This is the latest version of Feature.
+                /// The latest version number.
                 /// </summary>
                 [NameInMap("LatestVersion")]
                 [Validation(Required=false)]
@@ -84,21 +84,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? Managed { get; set; }
 
                 /// <summary>
-                /// Name of Feature.
+                /// The name of the feature.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Installation status of Feature.
+                /// The status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Version of Feature.
+                /// The version number.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -107,35 +107,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Running status of the Feature.
+            /// The status of the feature.
             /// </summary>
             [NameInMap("FeatureStatus")]
             [Validation(Required=false)]
             public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus FeatureStatus { get; set; }
             public class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus : TeaModel {
                 /// <summary>
-                /// Feature container list.
+                /// The containers of the feature.
                 /// </summary>
                 [NameInMap("FeatureContainers")]
                 [Validation(Required=false)]
                 public List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> FeatureContainers { get; set; }
                 public class DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers : TeaModel {
                     /// <summary>
-                    /// Container parameters.
+                    /// The container parameters.
                     /// </summary>
                     [NameInMap("Args")]
                     [Validation(Required=false)]
                     public List<string> Args { get; set; }
 
                     /// <summary>
-                    /// Container image.
+                    /// The image of the container.
                     /// </summary>
                     [NameInMap("Image")]
                     [Validation(Required=false)]
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// Name of the container.
+                    /// The name of the container.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -144,24 +144,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// K8s resource name of the Feature.
+                /// The Kubernetes resource name of the feature.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Namespace.
+                /// The namespace.
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// Running status.
-                /// - Success: Running normal
-                /// - Failed: Running exception
-                /// - Not Found: Not installed
+                /// The status of the agent. Valid values:
+                /// 
+                /// *   Success: The agent is running.
+                /// *   Failed: The agent failed to run.
+                /// *   Not Found: The agent is not installed.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -172,24 +173,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
-        /// 
-        /// *   `true`: successful
-        /// *   `false`: failed
+        /// Indicates whether the request was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

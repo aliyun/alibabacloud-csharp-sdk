@@ -10,14 +10,32 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvironmentFeatureRequest : TeaModel {
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// Name of Feature.
+        /// The name of the feature.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   app-agent-pilot
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   metric-agent
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("FeatureName")]
         [Validation(Required=false)]
