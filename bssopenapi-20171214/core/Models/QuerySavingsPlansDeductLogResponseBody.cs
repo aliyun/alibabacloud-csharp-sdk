@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string BillModule { get; set; }
 
+                [NameInMap("BillingCycle")]
+                [Validation(Required=false)]
+                public string BillingCycle { get; set; }
+
+                [NameInMap("BillingOfficialPrice")]
+                [Validation(Required=false)]
+                public string BillingOfficialPrice { get; set; }
+
                 /// <summary>
                 /// The service for which the fee is deducted.
                 /// </summary>
@@ -65,6 +73,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string DeductRate { get; set; }
 
+                [NameInMap("DeductedOfficialPrice")]
+                [Validation(Required=false)]
+                public string DeductedOfficialPrice { get; set; }
+
                 /// <summary>
                 /// The discount used for the current deduction.
                 /// </summary>
@@ -86,9 +98,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("InstanceSpec")]
+                [Validation(Required=false)]
+                public string InstanceSpec { get; set; }
+
+                [NameInMap("InstanceTypeFamily")]
+                [Validation(Required=false)]
+                public string InstanceTypeFamily { get; set; }
+
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
 
                 /// <summary>
                 /// The type of the savings plan. Valid values:

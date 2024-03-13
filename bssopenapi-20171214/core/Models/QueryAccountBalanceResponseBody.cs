@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public string MybankCreditAmount { get; set; }
 
+            [NameInMap("QuotaLimit")]
+            [Validation(Required=false)]
+            public string QuotaLimit { get; set; }
+
         }
 
         /// <summary>

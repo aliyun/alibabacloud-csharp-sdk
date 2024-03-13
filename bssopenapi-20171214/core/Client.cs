@@ -2361,6 +2361,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipCode))
+            {
+                query["PipCode"] = request.PipCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
@@ -2444,6 +2448,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipCode))
+            {
+                query["PipCode"] = request.PipCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
@@ -4985,7 +4993,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
           * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request InquiryPriceRefundInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5033,7 +5041,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
           * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request InquiryPriceRefundInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5081,7 +5089,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
           * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request InquiryPriceRefundInstanceRequest
           * @return InquiryPriceRefundInstanceResponse
@@ -5095,7 +5103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
           * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request InquiryPriceRefundInstanceRequest
           * @return InquiryPriceRefundInstanceResponse
@@ -5473,7 +5481,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * ##
           * Before you call this operation, take note of the following items:
           * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
           * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -5542,7 +5549,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * ##
           * Before you call this operation, take note of the following items:
           * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
           * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -5611,7 +5617,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * ##
           * Before you call this operation, take note of the following items:
           * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
           * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -5626,7 +5631,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * ##
           * Before you call this operation, take note of the following items:
           * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
           * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -9449,7 +9453,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
           * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request RefundInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9501,7 +9505,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
           * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request RefundInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9553,7 +9557,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
           * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request RefundInstanceRequest
           * @return RefundInstanceResponse
@@ -9567,7 +9571,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /**
           * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
           * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
           *
           * @param request RefundInstanceRequest
           * @return RefundInstanceResponse
@@ -9579,8 +9583,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * A value of true indicates that the execution is complete.
-          * A value of false indicates that an error occurs during the execution.
+          * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
           *
           * @param request ReleaseInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9638,8 +9641,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * A value of true indicates that the execution is complete.
-          * A value of false indicates that an error occurs during the execution.
+          * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
           *
           * @param request ReleaseInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9697,8 +9699,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * A value of true indicates that the execution is complete.
-          * A value of false indicates that an error occurs during the execution.
+          * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
           *
           * @param request ReleaseInstanceRequest
           * @return ReleaseInstanceResponse
@@ -9710,8 +9711,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * A value of true indicates that the execution is complete.
-          * A value of false indicates that an error occurs during the execution.
+          * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
           *
           * @param request ReleaseInstanceRequest
           * @return ReleaseInstanceResponse
@@ -10138,128 +10138,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await RenewResourcePackageWithOptionsAsync(request, runtime);
         }
 
-        public SaveUserCreditResponse SaveUserCreditWithOptions(SaveUserCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidExpiration))
-            {
-                query["AvoidExpiration"] = request.AvoidExpiration;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidNotification))
-            {
-                query["AvoidNotification"] = request.AvoidNotification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidPrepaidExpiration))
-            {
-                query["AvoidPrepaidExpiration"] = request.AvoidPrepaidExpiration;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidPrepaidNotification))
-            {
-                query["AvoidPrepaidNotification"] = request.AvoidPrepaidNotification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditType))
-            {
-                query["CreditType"] = request.CreditType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditValue))
-            {
-                query["CreditValue"] = request.CreditValue;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
-            {
-                query["Operator"] = request.Operator;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SaveUserCredit",
-                Version = "2017-12-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SaveUserCreditResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<SaveUserCreditResponse> SaveUserCreditWithOptionsAsync(SaveUserCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidExpiration))
-            {
-                query["AvoidExpiration"] = request.AvoidExpiration;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidNotification))
-            {
-                query["AvoidNotification"] = request.AvoidNotification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidPrepaidExpiration))
-            {
-                query["AvoidPrepaidExpiration"] = request.AvoidPrepaidExpiration;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvoidPrepaidNotification))
-            {
-                query["AvoidPrepaidNotification"] = request.AvoidPrepaidNotification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditType))
-            {
-                query["CreditType"] = request.CreditType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditValue))
-            {
-                query["CreditValue"] = request.CreditValue;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
-            {
-                query["Operator"] = request.Operator;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SaveUserCredit",
-                Version = "2017-12-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SaveUserCreditResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public SaveUserCreditResponse SaveUserCredit(SaveUserCreditRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SaveUserCreditWithOptions(request, runtime);
-        }
-
-        public async Task<SaveUserCreditResponse> SaveUserCreditAsync(SaveUserCreditRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SaveUserCreditWithOptionsAsync(request, runtime);
-        }
-
         public SetAllExpirationDayResponse SetAllExpirationDayWithOptions(SetAllExpirationDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10332,200 +10210,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetAllExpirationDayWithOptionsAsync(request, runtime);
-        }
-
-        public SetCreditLabelActionResponse SetCreditLabelActionWithOptions(SetCreditLabelActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
-            {
-                query["ActionType"] = request.ActionType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearCycle))
-            {
-                query["ClearCycle"] = request.ClearCycle;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
-            {
-                query["CreditAmount"] = request.CreditAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrencyCode))
-            {
-                query["CurrencyCode"] = request.CurrencyCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DailyCycle))
-            {
-                query["DailyCycle"] = request.DailyCycle;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedAddSettleLabel))
-            {
-                query["IsNeedAddSettleLabel"] = request.IsNeedAddSettleLabel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedAdjustCreditAccount))
-            {
-                query["IsNeedAdjustCreditAccount"] = request.IsNeedAdjustCreditAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedSaveNotifyRule))
-            {
-                query["IsNeedSaveNotifyRule"] = request.IsNeedSaveNotifyRule;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedSetCreditAmount))
-            {
-                query["IsNeedSetCreditAmount"] = request.IsNeedSetCreditAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedNotice))
-            {
-                query["NeedNotice"] = request.NeedNotice;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewCreateMode))
-            {
-                query["NewCreateMode"] = request.NewCreateMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
-            {
-                query["Operator"] = request.Operator;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteCode))
-            {
-                query["SiteCode"] = request.SiteCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
-            {
-                query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetCreditLabelAction",
-                Version = "2017-12-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetCreditLabelActionResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<SetCreditLabelActionResponse> SetCreditLabelActionWithOptionsAsync(SetCreditLabelActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
-            {
-                query["ActionType"] = request.ActionType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearCycle))
-            {
-                query["ClearCycle"] = request.ClearCycle;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
-            {
-                query["CreditAmount"] = request.CreditAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrencyCode))
-            {
-                query["CurrencyCode"] = request.CurrencyCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DailyCycle))
-            {
-                query["DailyCycle"] = request.DailyCycle;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedAddSettleLabel))
-            {
-                query["IsNeedAddSettleLabel"] = request.IsNeedAddSettleLabel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedAdjustCreditAccount))
-            {
-                query["IsNeedAdjustCreditAccount"] = request.IsNeedAdjustCreditAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedSaveNotifyRule))
-            {
-                query["IsNeedSaveNotifyRule"] = request.IsNeedSaveNotifyRule;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsNeedSetCreditAmount))
-            {
-                query["IsNeedSetCreditAmount"] = request.IsNeedSetCreditAmount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedNotice))
-            {
-                query["NeedNotice"] = request.NeedNotice;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewCreateMode))
-            {
-                query["NewCreateMode"] = request.NewCreateMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
-            {
-                query["Operator"] = request.Operator;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteCode))
-            {
-                query["SiteCode"] = request.SiteCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
-            {
-                query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetCreditLabelAction",
-                Version = "2017-12-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetCreditLabelActionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public SetCreditLabelActionResponse SetCreditLabelAction(SetCreditLabelActionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SetCreditLabelActionWithOptions(request, runtime);
-        }
-
-        public async Task<SetCreditLabelActionResponse> SetCreditLabelActionAsync(SetCreditLabelActionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SetCreditLabelActionWithOptionsAsync(request, runtime);
         }
 
         public SetRenewalResponse SetRenewalWithOptions(SetRenewalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

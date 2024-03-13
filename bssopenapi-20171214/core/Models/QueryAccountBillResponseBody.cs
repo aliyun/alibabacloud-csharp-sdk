@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     /// <summary>
                     /// The code of the service.
                     /// 
-                    /// >A value is returned only if the **IsGroupByProduct** parameter is set to true.
+                    /// > A value is returned only if the **IsGroupByProduct** parameter is set to true.
                     /// </summary>
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
