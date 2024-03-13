@@ -1,3 +1,10 @@
+2024-03-13 Version: 4.1.1
+- Update API DetectFace: update param MaxFaceNumber.
+- Update API QueryFaceImageTemplate: add param PageNo.
+- Update API QueryFaceImageTemplate: add param PageSize.
+- Update API QueryFaceImageTemplate: update response param.
+
+
 2023-11-14 Version: 4.1.0
 - Generated csharp 2019-12-30 for facebody.
 

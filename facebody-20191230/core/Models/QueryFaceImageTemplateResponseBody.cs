@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
             }
 
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public long? Total { get; set; }
+
         }
 
         [NameInMap("RequestId")]

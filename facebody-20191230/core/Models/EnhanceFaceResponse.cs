@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class EnhanceFaceResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public EnhanceFaceResponseBody Body { get; set; }
 
     }

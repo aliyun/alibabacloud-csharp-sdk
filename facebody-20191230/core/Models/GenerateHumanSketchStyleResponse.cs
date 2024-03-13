@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GenerateHumanSketchStyleResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GenerateHumanSketchStyleResponseBody Body { get; set; }
 
     }

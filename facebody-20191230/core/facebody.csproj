@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Facebody20191230</AssemblyName>
-    <Version>4.1.0</Version>
+    <Version>4.1.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud facebody (20191230) SDK Library for .NET</Description>
@@ -46,7 +46,7 @@
     <PackageReference Include="AlibabaCloud.OSSUtil" Version="0.0.3"/>
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
     <PackageReference Include="AlibabaCloud.DarabonbaNumber" Version="1.0.3"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.6"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.8"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.1"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.1.2"/>
