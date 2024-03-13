@@ -239,6 +239,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ReservedPublishCapacity")]
+                [Validation(Required=false)]
+                public int? ReservedPublishCapacity { get; set; }
+
+                [NameInMap("ReservedSubscribeCapacity")]
+                [Validation(Required=false)]
+                public int? ReservedSubscribeCapacity { get; set; }
+
                 /// <summary>
                 /// The resource group ID.
                 /// </summary>

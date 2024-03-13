@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DeleteAclRequest : TeaModel {
         /// <summary>
-        /// The type of operation allowed by the ACL. Valid values:
+        /// The operation type. Valid values:
         /// 
         /// *   **Write**
         /// *   **Read**

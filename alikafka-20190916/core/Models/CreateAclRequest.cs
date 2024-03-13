@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateAclRequest : TeaModel {
         /// <summary>
-        /// The type of operation allowed by the ACL. Valid values:
+        /// The operation type. Valid values:
         /// 
-        /// *   **Write**: data writes.
-        /// *   **Read**: data reads.
-        /// *   **Describe**: reads of **transaction IDs**.
-        /// *   **IdempotentWrite**: idempotent data writes to **clusters**.
+        /// *   **Write**: data writes
+        /// *   **Read**: data reads
+        /// *   **Describe**: reads of transaction IDs****
+        /// *   **IdempotentWrite**: idempotent data writes to clusters****
         /// </summary>
         [NameInMap("AclOperationType")]
         [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The resource type. Valid values:
         /// 
-        /// *   **Topic**: topic
-        /// *   **Group**: consumer group
-        /// *   **Cluster**: cluster
+        /// *   **Topic**
+        /// *   **Group**
+        /// *   **Cluster**
         /// *   **TransactionalId**: transaction
         /// </summary>
         [NameInMap("AclResourceType")]
