@@ -9,6 +9,17 @@
 - Update API ScaleWithAdjustment: add param LifecycleHookContext.
 
 
+2024-03-13 Version: 1.4.0
+- Support API ApplyEciScalingConfiguration.
+- Support API DescribeEciScalingConfigurationDetail.
+- Support API DescribeScalingGroupDetail.
+- Support API ModifyInstanceAttribute.
+- Update API DescribeScalingActivities: update response param.
+- Update API ModifyScalingGroup: add param ScalingPolicy.
+- Update API ScaleWithAdjustment: add param ActivityMetadata.
+- Update API ScaleWithAdjustment: add param LifecycleHookContext.
+
+
 2024-02-28 Version: 1.3.0
 - Support API ApplyEciScalingConfiguration.
 - Support API DescribeEciScalingConfigurationDetail.
