@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **Memcache**
         /// *   **SSL**
         /// 
-        /// >  The value ANY** indicates all types of applications.
+        /// >  The value *ANY* indicates all types of applications.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **UDP**
         /// *   **ICMP**
         /// 
-        /// >  The value ANY** indicates all types of applications.
+        /// >  The value *ANY* indicates all types of applications.
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]

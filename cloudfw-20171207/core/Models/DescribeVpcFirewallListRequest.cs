@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// Default value: **10**.**** Maximum value: **50**.
+        /// Default value: **10**. Maximum value: **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

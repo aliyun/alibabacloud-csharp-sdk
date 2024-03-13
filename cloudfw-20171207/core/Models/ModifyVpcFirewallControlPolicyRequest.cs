@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// Valid values:
         /// 
-        /// *   ANY
+        /// *   ANY: all application types
         /// *   FTP
         /// *   HTTP
         /// *   HTTPS
@@ -51,7 +51,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   MongoDB
         /// *   Memcache
         /// *   SSL
-        /// *   ANY: all application types
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
