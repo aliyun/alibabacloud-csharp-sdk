@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public string Interval { get; set; }
+
         /// <summary>
         /// The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see [Performance parameters](~~141787~~).
         /// 
