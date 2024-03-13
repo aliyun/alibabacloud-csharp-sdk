@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeScalingActivitiesResponseBodyScalingActivities> ScalingActivities { get; set; }
         public class DescribeScalingActivitiesResponseBodyScalingActivities : TeaModel {
+            [NameInMap("ActivityMetadata")]
+            [Validation(Required=false)]
+            public string ActivityMetadata { get; set; }
+
             /// <summary>
             /// The total number of instances that were manually added to the scaling group after the scaling activity was complete.
             /// </summary>
@@ -120,6 +124,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
+
+            [NameInMap("LifecycleHookContext")]
+            [Validation(Required=false)]
+            public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext LifecycleHookContext { get; set; }
+            public class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext : TeaModel {
+                [NameInMap("DisableLifecycleHook")]
+                [Validation(Required=false)]
+                public bool? DisableLifecycleHook { get; set; }
+
+                [NameInMap("IgnoredLifecycleHookIds")]
+                [Validation(Required=false)]
+                public List<string> IgnoredLifecycleHookIds { get; set; }
+
+            }
 
             /// <summary>
             /// The execution progress of the scaling activity.
@@ -212,6 +230,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("TotalCapacity")]
             [Validation(Required=false)]
             public string TotalCapacity { get; set; }
+
+            [NameInMap("TriggerSourceId")]
+            [Validation(Required=false)]
+            public string TriggerSourceId { get; set; }
+
+            [NameInMap("TriggerSourceType")]
+            [Validation(Required=false)]
+            public string TriggerSourceType { get; set; }
 
         }
 

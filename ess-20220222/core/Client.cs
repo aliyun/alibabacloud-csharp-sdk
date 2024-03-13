@@ -12335,11 +12335,19 @@ namespace AlibabaCloud.SDK.Ess20220222
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ScaleWithAdjustmentShrinkRequest request = new ScaleWithAdjustmentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LifecycleHookContext))
+            {
+                request.LifecycleHookContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifecycleHookContext, "LifecycleHookContext", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Overrides))
             {
                 request.OverridesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Overrides, "Overrides", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityMetadata))
+            {
+                query["ActivityMetadata"] = request.ActivityMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdjustmentType))
             {
                 query["AdjustmentType"] = request.AdjustmentType;
@@ -12351,6 +12359,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleHookContextShrink))
+            {
+                query["LifecycleHookContext"] = request.LifecycleHookContextShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAdjustmentMagnitude))
             {
@@ -12414,11 +12426,19 @@ namespace AlibabaCloud.SDK.Ess20220222
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ScaleWithAdjustmentShrinkRequest request = new ScaleWithAdjustmentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LifecycleHookContext))
+            {
+                request.LifecycleHookContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifecycleHookContext, "LifecycleHookContext", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Overrides))
             {
                 request.OverridesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Overrides, "Overrides", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityMetadata))
+            {
+                query["ActivityMetadata"] = request.ActivityMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdjustmentType))
             {
                 query["AdjustmentType"] = request.AdjustmentType;
@@ -12430,6 +12450,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleHookContextShrink))
+            {
+                query["LifecycleHookContext"] = request.LifecycleHookContextShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAdjustmentMagnitude))
             {

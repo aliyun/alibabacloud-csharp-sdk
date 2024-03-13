@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ScaleWithAdjustmentRequest : TeaModel {
+        [NameInMap("ActivityMetadata")]
+        [Validation(Required=false)]
+        public string ActivityMetadata { get; set; }
+
         /// <summary>
         /// The type of the scaling policy. Valid values:
         /// 
@@ -37,6 +41,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("LifecycleHookContext")]
+        [Validation(Required=false)]
+        public ScaleWithAdjustmentRequestLifecycleHookContext LifecycleHookContext { get; set; }
+        public class ScaleWithAdjustmentRequestLifecycleHookContext : TeaModel {
+            [NameInMap("DisableLifecycleHook")]
+            [Validation(Required=false)]
+            public bool? DisableLifecycleHook { get; set; }
+
+            [NameInMap("IgnoredLifecycleHookIds")]
+            [Validation(Required=false)]
+            public List<string> IgnoredLifecycleHookIds { get; set; }
+
+        }
 
         /// <summary>
         /// The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the `AdjustmentType` parameter to `PercentChangeInCapacity`.
