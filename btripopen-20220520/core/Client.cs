@@ -14027,6 +14027,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["isv_name"] = request.IsvName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedShareFlight))
             {
                 query["need_share_flight"] = request.NeedShareFlight;
@@ -14126,6 +14130,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["isv_name"] = request.IsvName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedShareFlight))
             {
                 query["need_share_flight"] = request.NeedShareFlight;
@@ -14221,6 +14229,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["isv_name"] = request.IsvName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
             {
                 query["supplier_code"] = request.SupplierCode;
@@ -14269,6 +14281,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
                 query["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierCode))
             {
@@ -14350,6 +14366,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
                 query["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedShareFlight))
             {
@@ -14433,6 +14453,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
             {
                 query["isv_name"] = request.IsvName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedShareFlight))
             {

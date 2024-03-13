@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        [NameInMap("language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         [NameInMap("need_share_flight")]
         [Validation(Required=false)]
         public bool? NeedShareFlight { get; set; }
