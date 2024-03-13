@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string AppKeyId { get; set; }
 
+        [NameInMap("AuthCode")]
+        [Validation(Required=false)]
+        public string AuthCode { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

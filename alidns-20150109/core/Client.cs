@@ -9071,6 +9071,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AppKeyId"] = request.AppKeyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -9101,6 +9105,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKeyId))
             {
                 query["AppKeyId"] = request.AppKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {

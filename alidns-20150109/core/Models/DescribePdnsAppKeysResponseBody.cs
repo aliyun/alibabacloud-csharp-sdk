@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
+            [NameInMap("CreateTimestamp")]
+            [Validation(Required=false)]
+            public long? CreateTimestamp { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
