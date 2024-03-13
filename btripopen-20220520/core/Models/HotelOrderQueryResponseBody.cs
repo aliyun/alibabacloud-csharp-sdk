@@ -194,6 +194,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ItineraryId { get; set; }
 
+                [NameInMap("occupant_type")]
+                [Validation(Required=false)]
+                public int? OccupantType { get; set; }
+
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
