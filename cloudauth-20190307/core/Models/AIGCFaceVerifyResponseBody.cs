@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public AIGCFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class AIGCFaceVerifyResponseBodyResultObject : TeaModel {
+            [NameInMap("CertifyId")]
+            [Validation(Required=false)]
+            public string CertifyId { get; set; }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public string Result { get; set; }
