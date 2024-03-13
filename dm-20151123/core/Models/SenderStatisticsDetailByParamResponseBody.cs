@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                [NameInMap("Subject")]
+                [Validation(Required=false)]
+                public string Subject { get; set; }
+
                 [NameInMap("ToAddress")]
                 [Validation(Required=false)]
                 public string ToAddress { get; set; }
