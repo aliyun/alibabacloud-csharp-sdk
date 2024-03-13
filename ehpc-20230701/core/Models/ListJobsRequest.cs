@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [Validation(Required=false)]
         public ListJobsRequestFilter Filter { get; set; }
         public class ListJobsRequestFilter : TeaModel {
+            [NameInMap("JobId")]
+            [Validation(Required=false)]
+            public string JobId { get; set; }
+
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }

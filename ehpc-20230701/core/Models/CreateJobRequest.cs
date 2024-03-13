@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
                         [Validation(Required=false)]
                         public string PrologScript { get; set; }
 
+                        [NameInMap("Script")]
+                        [Validation(Required=false)]
+                        public string Script { get; set; }
+
                     }
 
                 }

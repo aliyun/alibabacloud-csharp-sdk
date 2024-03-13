@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
             [NameInMap("ExecutorCount")]
             [Validation(Required=false)]
             public int? ExecutorCount { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
             [Validation(Required=false)]
             public string OwnerUid { get; set; }
 
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
             [NameInMap("TaskCount")]
             [Validation(Required=false)]
             public int? TaskCount { get; set; }
+
+            [NameInMap("TaskSustainable")]
+            [Validation(Required=false)]
+            public bool? TaskSustainable { get; set; }
 
         }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [Validation(Required=false)]
         public GetJobResponseBodyJobInfo JobInfo { get; set; }
         public class GetJobResponseBodyJobInfo : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             [NameInMap("DeploymentPolicy")]
             [Validation(Required=false)]
             public GetJobResponseBodyJobInfoDeploymentPolicy DeploymentPolicy { get; set; }
@@ -33,6 +37,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
 
             }
 
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
             [NameInMap("JobDescription")]
             [Validation(Required=false)]
             public string JobDescription { get; set; }
@@ -44,6 +52,14 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("Tasks")]
             [Validation(Required=false)]
@@ -158,6 +174,10 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
                             [NameInMap("PrologScript")]
                             [Validation(Required=false)]
                             public string PrologScript { get; set; }
+
+                            [NameInMap("Script")]
+                            [Validation(Required=false)]
+                            public string Script { get; set; }
 
                         }
 
