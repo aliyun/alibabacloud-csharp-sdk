@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
+        [NameInMap("DesktopGroupIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopGroupIds { get; set; }
+
         /// <summary>
         /// The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
         /// </summary>
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResetScope")]
+        [Validation(Required=false)]
+        public string ResetScope { get; set; }
 
         /// <summary>
         /// The type of the disk that you want to reset.
