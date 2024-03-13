@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 
             }
 
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public long? Total { get; set; }
+
         }
 
         [NameInMap("RequestId")]
