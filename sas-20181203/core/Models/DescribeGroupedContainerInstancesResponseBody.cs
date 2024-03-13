@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedContainerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the container assets returned.
+        /// The information about the container.
         /// </summary>
         [NameInMap("GroupedContainerInstanceList")]
         [Validation(Required=false)]
         public List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> GroupedContainerInstanceList { get; set; }
         public class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList : TeaModel {
             /// <summary>
-            /// The number of alerts that are detected from the current pod, application, namespace, or cluster.
+            /// The number of alerts that are detected for the current pod, application, namespace, or cluster.
             /// </summary>
             [NameInMap("AlarmCount")]
             [Validation(Required=false)]
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// The application name.
+            /// The name of the application.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The cluster ID.
+            /// The ID of the cluster.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **Kubernetes**: dedicated Kubernetes cluster.
             /// *   **ManagedKubernetes**: standard managed cluster (edge cluster).
-            /// *   **Ask**: standard serverless cluster.
+            /// *   **Ask**: serverless Kubernetes (ASK) cluster.
             /// </summary>
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The timestamp generated when the cluster was created. Unit: milliseconds.
+            /// The time when the cluster was created. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -68,15 +68,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **running**: The cluster is running.
             /// *   **stopped**: The cluster is stopped.
             /// *   **deleted**: The cluster is deleted.
-            /// *   **delete_failed**: The cluster fails to be deleted.
-            /// *   **failed**: The cluster fails to be created.
+            /// *   **delete_failed**: The cluster failed to be deleted.
+            /// *   **failed**: The cluster failed to be created.
             /// </summary>
             [NameInMap("CusterState")]
             [Validation(Required=false)]
             public string CusterState { get; set; }
 
             /// <summary>
-            /// The number of baseline risks that are detected on the current pod, application, namespace, or cluster.
+            /// The number of baseline risks that are detected for the current pod, application, namespace, or cluster.
             /// </summary>
             [NameInMap("HcCount")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HostIp { get; set; }
 
             /// <summary>
-            /// The image of the container.
+            /// The container image.
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// The number of pods, applications, clusters, or namespaces that is returned.
+            /// The number of pods, applications, clusters, or namespaces.
             /// </summary>
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The ID of the server instance.
+            /// The ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -167,14 +167,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PodIp { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the instance resides.
+            /// The region ID of the instance.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The number of potential risky instances.
+            /// The number of at-risk instances.
             /// </summary>
             [NameInMap("RiskInstanceCount")]
             [Validation(Required=false)]
@@ -201,16 +201,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskStatus { get; set; }
 
+            /// <summary>
+            /// Indicates whether the synchronization of cluster audit logs is enabled. Valid values:
+            /// 
+            /// *   **0**: disabled.
+            /// *   **1**: enabled.
+            /// </summary>
             [NameInMap("SyncOpen")]
             [Validation(Required=false)]
             public int? SyncOpen { get; set; }
 
+            /// <summary>
+            /// The status of the synchronization of cluster audit logs. Valid values:
+            /// 
+            /// *   **0**: The synchronization failed.
+            /// *   **1**: The synchronization is successful.
+            /// </summary>
             [NameInMap("SyncStatus")]
             [Validation(Required=false)]
             public int? SyncStatus { get; set; }
 
             /// <summary>
-            /// The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.
+            /// The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.
             /// </summary>
             [NameInMap("VulCount")]
             [Validation(Required=false)]

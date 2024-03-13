@@ -323,6 +323,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Cmdline"] = request.Cmdline;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
             {
                 query["FilePath"] = request.FilePath;
@@ -409,6 +413,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cmdline))
             {
                 query["Cmdline"] = request.Cmdline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
             {
@@ -48689,6 +48697,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Cmdline"] = request.Cmdline;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
             {
                 query["FilePath"] = request.FilePath;
@@ -48779,6 +48791,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cmdline))
             {
                 query["Cmdline"] = request.Cmdline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
             {

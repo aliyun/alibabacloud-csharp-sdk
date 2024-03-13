@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceDetailResponseBody : TeaModel {
         /// <summary>
-        /// The list of exposure details of the server.
+        /// The exposure details about the server.
         /// </summary>
         [NameInMap("ExposedChains")]
         [Validation(Required=false)]
         public List<DescribeExposedInstanceDetailResponseBodyExposedChains> ExposedChains { get; set; }
         public class DescribeExposedInstanceDetailResponseBodyExposedChains : TeaModel {
             /// <summary>
-            /// The details of all vulnerabilities on the server.
+            /// The information about all vulnerabilities on the server.
             /// </summary>
             [NameInMap("AllVulList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// *   **later**: medium
                 /// *   **nntf**: low
                 /// 
-                /// > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+                /// >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
                 /// </summary>
                 [NameInMap("Necessity")]
                 [Validation(Required=false)]
@@ -53,12 +53,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The type of the vulnerability. Valid values:
                 /// 
-                /// *   **cve**: Linux software vulnerability
-                /// *   **sys**: Windows system vulnerability
-                /// *   **cms**: Web-CMS vulnerability
-                /// *   **app**: application vulnerability
-                /// *   **emg**: urgent vulnerability
-                /// *   **sca**: middleware vulnerability
+                /// *   **cve**: Linux software vulnerabilities
+                /// *   **sys**: Windows system vulnerabilities
+                /// *   **cms**: Web-CMS vulnerabilities
+                /// *   **app**: application vulnerabilities
+                /// *   **emg**: urgent vulnerabilities
+                /// *   **sca**: middleware vulnerabilities
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureComponent { get; set; }
 
             /// <summary>
-            /// The IP address that is exposed.
+            /// The public IP address.
             /// </summary>
             [NameInMap("ExposureIp")]
             [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureType { get; set; }
 
             /// <summary>
-            /// The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.
+            /// The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
             /// 
-            /// *   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.
-            /// *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.
+            /// *   If the value of the ExposureType parameter is **INTERNET_IP**, the value of this parameter is an empty string.
+            /// *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
             /// *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
             /// *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
             /// </summary>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupNo { get; set; }
 
             /// <summary>
-            /// The instance ID of the server.
+            /// The ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// *   **later**: medium
                 /// *   **nntf**: low
                 /// 
-                /// > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+                /// >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
                 /// </summary>
                 [NameInMap("Necessity")]
                 [Validation(Required=false)]
@@ -190,12 +190,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The type of the vulnerability. Valid values:
                 /// 
-                /// *   **cve**: Linux software vulnerability
-                /// *   **sys**: Windows system vulnerability
-                /// *   **cms**: Web-CMS vulnerability
-                /// *   **app**: application vulnerability
-                /// *   **emg**: urgent vulnerability
-                /// *   **sca**: middleware vulnerability
+                /// *   **cve**: Linux software vulnerabilities
+                /// *   **sys**: Windows system vulnerabilities
+                /// *   **cms**: Web-CMS vulnerabilities
+                /// *   **app**: application vulnerabilities
+                /// *   **emg**: urgent vulnerabilities
+                /// *   **sca**: middleware vulnerabilities
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The region in which the server resides.
             /// 
-            /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+            /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

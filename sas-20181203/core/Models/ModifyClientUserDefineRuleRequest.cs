@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Cmdline { get; set; }
 
         /// <summary>
+        /// The domain name.
+        /// </summary>
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
+        /// <summary>
         /// The file path.
         /// </summary>
         [NameInMap("FilePath")]
