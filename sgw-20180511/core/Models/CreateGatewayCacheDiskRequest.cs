@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        [NameInMap("PerformanceLevel")]
+        [Validation(Required=false)]
+        public string PerformanceLevel { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

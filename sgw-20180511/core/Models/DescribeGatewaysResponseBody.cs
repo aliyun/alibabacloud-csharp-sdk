@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
                 [Validation(Required=false)]
                 public string GatewayVersion { get; set; }
 
+                [NameInMap("HighAvailability")]
+                [Validation(Required=false)]
+                public bool? HighAvailability { get; set; }
+
                 [NameInMap("InnerIp")]
                 [Validation(Required=false)]
                 public string InnerIp { get; set; }
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("UntrustedEnvInstanceType")]
+                [Validation(Required=false)]
+                public string UntrustedEnvInstanceType { get; set; }
 
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

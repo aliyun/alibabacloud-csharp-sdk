@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
 {
     public class AddTagsToGatewayResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public AddTagsToGatewayResponseBody Body { get; set; }
 
     }

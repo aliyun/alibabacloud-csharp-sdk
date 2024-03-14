@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [Validation(Required=false)]
         public string ResourceRegionId { get; set; }
 
+        [NameInMap("SecondaryVSwitchId")]
+        [Validation(Required=false)]
+        public string SecondaryVSwitchId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -52,6 +56,14 @@ namespace AlibabaCloud.SDK.Sgw20180511.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("UntrustedEnvId")]
+        [Validation(Required=false)]
+        public string UntrustedEnvId { get; set; }
+
+        [NameInMap("UntrustedEnvInstanceType")]
+        [Validation(Required=false)]
+        public string UntrustedEnvInstanceType { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
