@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// The domain name resolution method of the access control policy. By default, the access control policy is enabled after the policy is created. Valid values:
+        /// The domain name resolution method of the access control policy. Valid values:
         /// 
         /// *   **0**: fully qualified domain name (FQDN)-based resolution
         /// *   **1**: Domain Name System (DNS)-based dynamic resolution

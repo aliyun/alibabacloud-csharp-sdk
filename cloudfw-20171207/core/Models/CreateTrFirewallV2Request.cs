@@ -92,6 +92,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentMasterCidr { get; set; }
 
+        /// <summary>
+        /// The primary zone for the vSwitch.
+        /// </summary>
         [NameInMap("TrAttachmentMasterZone")]
         [Validation(Required=false)]
         public string TrAttachmentMasterZone { get; set; }
@@ -103,6 +106,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentSlaveCidr { get; set; }
 
+        /// <summary>
+        /// The secondary zone for the vSwitch.
+        /// </summary>
         [NameInMap("TrAttachmentSlaveZone")]
         [Validation(Required=false)]
         public string TrAttachmentSlaveZone { get; set; }

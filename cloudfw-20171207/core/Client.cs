@@ -726,6 +726,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        public BatchDeleteVpcFirewallControlPolicyResponse BatchDeleteVpcFirewallControlPolicyWithOptions(BatchDeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuidList))
+            {
+                query["AclUuidList"] = request.AclUuidList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
+            {
+                query["VpcFirewallId"] = request.VpcFirewallId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteVpcFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteVpcFirewallControlPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BatchDeleteVpcFirewallControlPolicyResponse> BatchDeleteVpcFirewallControlPolicyWithOptionsAsync(BatchDeleteVpcFirewallControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclUuidList))
+            {
+                query["AclUuidList"] = request.AclUuidList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallId))
+            {
+                query["VpcFirewallId"] = request.VpcFirewallId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteVpcFirewallControlPolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteVpcFirewallControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BatchDeleteVpcFirewallControlPolicyResponse BatchDeleteVpcFirewallControlPolicy(BatchDeleteVpcFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchDeleteVpcFirewallControlPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<BatchDeleteVpcFirewallControlPolicyResponse> BatchDeleteVpcFirewallControlPolicyAsync(BatchDeleteVpcFirewallControlPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchDeleteVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
+        }
+
         public CreateDownloadTaskResponse CreateDownloadTaskWithOptions(CreateDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2346,6 +2420,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DeleteControlPolicyTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete file download tasks and delete the files.
+          * **
+          * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
+          *
+          * @param request DeleteDownloadTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDownloadTaskResponse
+         */
         public DeleteDownloadTaskResponse DeleteDownloadTaskWithOptions(DeleteDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2377,6 +2460,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteDownloadTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete file download tasks and delete the files.
+          * **
+          * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
+          *
+          * @param request DeleteDownloadTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDownloadTaskResponse
+         */
         public async Task<DeleteDownloadTaskResponse> DeleteDownloadTaskWithOptionsAsync(DeleteDownloadTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2408,12 +2500,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return TeaModel.ToObject<DeleteDownloadTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to delete file download tasks and delete the files.
+          * **
+          * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
+          *
+          * @param request DeleteDownloadTaskRequest
+          * @return DeleteDownloadTaskResponse
+         */
         public DeleteDownloadTaskResponse DeleteDownloadTask(DeleteDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDownloadTaskWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to delete file download tasks and delete the files.
+          * **
+          * **Warning** Both tasks and involved files are deleted. You can no longer download the involved files by using the download links. This operation is irreversible. Proceed with caution.
+          *
+          * @param request DeleteDownloadTaskRequest
+          * @return DeleteDownloadTaskResponse
+         */
         public async Task<DeleteDownloadTaskResponse> DeleteDownloadTaskAsync(DeleteDownloadTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
