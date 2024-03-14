@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagKeysResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListTagKeysResponseBody Body { get; set; }
 
     }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// >  Only `cn-hangzhou` is supported.
+        /// > Only `cn-hangzhou` is supported.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The tag keys and values list.
+        /// The information about the tags.
         /// </summary>
         [NameInMap("TagKeyValueParamList")]
         [Validation(Required=false)]
         public List<CreateTagsRequestTagKeyValueParamList> TagKeyValueParamList { get; set; }
         public class CreateTagsRequestTagKeyValueParamList : TeaModel {
             /// <summary>
-            /// The description of the tag key.
+            /// The description of the key for tag N.
             /// 
             /// Valid values of N: 1 to 10.
             /// </summary>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// The key of tag N.
             /// 
-            /// The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// 
             /// Valid values of N: 1 to 10.
             /// </summary>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values list.
+            /// The information about the tag value.
             /// </summary>
             [NameInMap("TagValueParamList")]
             [Validation(Required=false)]
             public List<CreateTagsRequestTagKeyValueParamListTagValueParamList> TagValueParamList { get; set; }
             public class CreateTagsRequestTagKeyValueParamListTagValueParamList : TeaModel {
                 /// <summary>
-                /// The description of the tag value.
+                /// The description of the value for tag N.
                 /// 
                 /// Valid values of N: 1 to 10.
                 /// </summary>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N.
                 /// 
-                /// The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+                /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. 
                 /// 
                 /// Valid values of N: 1 to 10.
                 /// </summary>

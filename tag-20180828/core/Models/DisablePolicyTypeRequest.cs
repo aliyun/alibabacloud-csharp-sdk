@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DisablePolicyTypeRequest : TeaModel {
+        [NameInMap("OpenType")]
+        [Validation(Required=false)]
+        public string OpenType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

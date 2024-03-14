@@ -422,6 +422,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
           *
           * @param request CreatePolicyRequest
@@ -488,6 +489,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
           *
           * @param request CreatePolicyRequest
@@ -554,6 +556,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
           *
           * @param request CreatePolicyRequest
@@ -566,6 +569,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * This topic provides an example on how to call the API operation to create a tag policy named `test`. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the `CostCenter:Beijing` or `CostCenter:Shanghai` tag is added are compliant and other resources are not compliant.
           *
           * @param request CreatePolicyRequest
@@ -578,6 +582,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
           * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
           *
@@ -629,6 +634,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
           * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
           *
@@ -680,6 +686,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
           * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
           *
@@ -693,6 +700,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
+          * ###
           * A preset tag is a tag that you create in advance and is available for the resources in all regions. You can create preset tags in the stage of tag planning and add them to specific resources in the stage of tag implementation. When you create a preset tag, you can specify only the tag key. You can specify a tag value in the future.
           * This topic provides an example on how to call the API operation to create a preset tag whose tag key is `Environment` to indicate the business environment.
           *
@@ -1219,6 +1227,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1266,6 +1278,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1325,6 +1341,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1372,6 +1392,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1990,6 +2014,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -2044,6 +2072,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenType))
+            {
+                query["OpenType"] = request.OpenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -2772,7 +2804,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
-          * This topic provides an example on how to call the API operation to query the resource types supported by tags.
+          * ### [](#)Call examples
+          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
+          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
+          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
           *
           * @param request ListSupportResourceTypesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2842,7 +2877,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
-          * This topic provides an example on how to call the API operation to query the resource types supported by tags.
+          * ### [](#)Call examples
+          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
+          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
+          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
           *
           * @param request ListSupportResourceTypesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2912,7 +2950,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
-          * This topic provides an example on how to call the API operation to query the resource types supported by tags.
+          * ### [](#)Call examples
+          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
+          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
+          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
           *
           * @param request ListSupportResourceTypesRequest
           * @return ListSupportResourceTypesResponse
@@ -2924,7 +2965,10 @@ namespace AlibabaCloud.SDK.Tag20180828
         }
 
         /**
-          * This topic provides an example on how to call the API operation to query the resource types supported by tags.
+          * ### [](#)Call examples
+          * *   Query a list of resource types supported by TagResources or UntagResources. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D).
+          * *   Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D).
+          * *   Query a list of resource types that support createdby tags. For more information, see [Example](https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG\\&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22CREATED_BY_TAG_CONSOLE_SUPPORT%22%7D).
           *
           * @param request ListSupportResourceTypesRequest
           * @return ListSupportResourceTypesResponse

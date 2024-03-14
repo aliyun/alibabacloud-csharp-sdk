@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class CreatePolicyRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to perform a dry run for the request. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   false: The system performs the related operation based on the parameter settings in the request. This is the default value.
-        /// *   true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.
+        /// *   false (default): performs a dry run and performs the actual request.
+        /// *   true: performs only a dry run.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

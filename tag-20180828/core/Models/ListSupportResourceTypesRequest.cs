@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// The service code. This parameter specifies a filter condition for the query.
         /// 
-        /// For more information about service codes, see [Services that work with Tag](~~171455~~).
+        /// This parameter is obtained from the response.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// For more information about the region ID, see [Endpoints](~~170112~~).
+        /// For more information about region IDs, see [Endpoints](~~2330902~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// The resource type. This parameter specifies a filter condition for the query.
         /// 
-        /// For more information about resource types, see [Services that work with Tag](~~171455~~).
+        /// This parameter is obtained from the response.
         /// </summary>
         [NameInMap("ResourceTye")]
         [Validation(Required=false)]
@@ -76,6 +76,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 
         /// <summary>
         /// The code of the tag-related capability item. This parameter specifies a filter condition for the query.
+        /// 
+        /// For more information, see **Tag-related capability items**.
         /// </summary>
         [NameInMap("SupportCode")]
         [Validation(Required=false)]
