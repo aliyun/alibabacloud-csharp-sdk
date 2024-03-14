@@ -48,16 +48,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// The type of the next hop. Valid values:
+        /// The next hop type. Valid values:
         /// 
-        /// *   **Instance** (default): an Elastic Compute Service (ECS) instance
+        /// *   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.
         /// *   **HaVip**: a high-availability virtual IP address (HAVIP).
-        /// *   **VpnGateway**: a VPN gateway
-        /// *   **NatGateway**: a NAT gateway
-        /// *   **NetworkInterface**: a secondary elastic network interface (ENI)
-        /// *   **RouterInterface**: a router interface
-        /// *   **IPv6Gateway**: an IPv6 gateway
-        /// *   **Attachment**: a transit router
+        /// *   **VpnGateway**: a VPN gateway.
+        /// *   **NatGateway**: a NAT gateway.
+        /// *   **NetworkInterface**: a secondary elastic network interface (ENI).
+        /// *   **RouterInterface**: a router interface.
+        /// *   **IPv6Gateway**: an IPv6 gateway.
+        /// *   **Attachment**: a transit router.
+        /// *   **Ipv4Gateway**: an IPv4 gateway.
+        /// *   **GatewayEndpoint**: a gateway endpoint.
+        /// *   **CenBasic**: CEN does not support transit routers.
+        /// *   **Ecr**: Express Connect Router (ECR).
         /// </summary>
         [NameInMap("NextHopType")]
         [Validation(Required=false)]
@@ -117,10 +121,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The route type. Valid values:
         /// 
-        /// *   **Custom**
-        /// *   **System**
-        /// *   **BGP**
-        /// *   **CEN**
+        /// *   **Custom**: custom routes.
+        /// *   **System**: system routes.
+        /// *   **BGP**: BGP routes.
+        /// *   **CEN**: Cloud Enterprise Network (CEN) routes.
+        /// *   **ECR**: Express Connect Router (ECR) routes.
         /// </summary>
         [NameInMap("RouteEntryType")]
         [Validation(Required=false)]

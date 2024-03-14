@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
         /// <summary>
         /// The tag list.
         /// </summary>

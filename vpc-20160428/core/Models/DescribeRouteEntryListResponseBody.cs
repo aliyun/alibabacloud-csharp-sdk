@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+                /// The time when the route was modified. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The IP version. Valid values:
+                /// The IP version. Valid values: Valid values:
                 /// 
                 /// *   **ipv4**
                 /// *   **ipv6**
@@ -142,16 +142,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         }
 
                         /// <summary>
-                        /// The type of the next hop. Valid values:
+                        /// The next hop type. Valid values:
                         /// 
-                        /// *   **Instance**: an Elastic Compute Service (ECS) instance
-                        /// *   **HaVip**: a high-availability virtual IP address (HAVIP)
-                        /// *   **VpnGateway**: a VPN gateway
-                        /// *   **NatGateway**: a NAT gateway
-                        /// *   **NetworkInterface**: a secondary elastic network interface (ENI)
-                        /// *   **RouterInterface**: a router interface
-                        /// *   **IPv6Gateway**: an IPv6 gateway
-                        /// *   **Attachment**: a transit router
+                        /// *   **Instance**: an ECS instance.
+                        /// *   **HaVip**: an HAVIP.
+                        /// *   **VpnGateway**: a VPN gateway.
+                        /// *   **NatGateway**: a NAT gateway.
+                        /// *   **NetworkInterface**: a secondary ENI.
+                        /// *   **RouterInterface**: a router interface.
+                        /// *   **IPv6Gateway**: an IPv6 gateway.
+                        /// *   **Attachment**: a transit router.
+                        /// *   **Ipv4Gateway**: an IPv4 gateway.
+                        /// *   **GatewayEndpoint**: a gateway endpoint.
+                        /// *   **CenBasic**: CEN does not support transit routers.
+                        /// *   **Ecr**: ECR.
                         /// </summary>
                         [NameInMap("NextHopType")]
                         [Validation(Required=false)]
@@ -188,7 +192,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RouteEntryId { get; set; }
 
                 /// <summary>
-                /// The route name.
+                /// The name of the route.
                 /// </summary>
                 [NameInMap("RouteEntryName")]
                 [Validation(Required=false)]
@@ -215,7 +219,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// 
                 /// *   **Pending**
                 /// *   **Available**
-                /// *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
+                /// *   **Modifying**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -224,10 +228,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The route type. Valid values:
                 /// 
-                /// *   **Custom**
-                /// *   **System**
-                /// *   **BGP**
-                /// *   **CEN**
+                /// *   **Custom**: custom routes.
+                /// *   **System**: system routes.
+                /// *   **BGP**: BGP routes.
+                /// *   **CEN**: CEN routes.
+                /// *   **ECR**: ECR routes.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

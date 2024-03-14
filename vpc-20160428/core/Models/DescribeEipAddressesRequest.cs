@@ -216,6 +216,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string SegmentInstanceId { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
         /// <summary>
         /// The state of the EIP. Valid values:
         /// 

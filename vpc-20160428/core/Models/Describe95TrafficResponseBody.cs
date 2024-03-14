@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? Bandwidth { get; set; }
 
             /// <summary>
-            /// The daily peak bandwidth. Unit: Mbit/s. For more information, see [Daily peak bandwidth](~~89729~~).
+            /// The daily peak bandwidth. Unit: Mbit/s.
+            /// <props="china"> For more information, see [Daily peak bandwidth](~~89729~~).</props>
             /// </summary>
             [NameInMap("FifthPeakBandwidth")]
             [Validation(Required=false)]

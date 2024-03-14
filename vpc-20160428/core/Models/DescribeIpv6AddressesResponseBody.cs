@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("ServiceManaged")]
+                [Validation(Required=false)]
+                public int? ServiceManaged { get; set; }
+
                 /// <summary>
                 /// The status of the IPv6 address.
                 /// 

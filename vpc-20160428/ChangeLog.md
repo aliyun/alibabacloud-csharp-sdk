@@ -1,3 +1,25 @@
+2024-03-14 Version: 6.7.0
+- Support API CreateExpressConnectTrafficQos.
+- Support API CreateExpressConnectTrafficQosQueue.
+- Support API CreateExpressConnectTrafficQosRule.
+- Support API DeleteExpressConnectTrafficQos.
+- Support API DeleteExpressConnectTrafficQosQueue.
+- Support API DeleteExpressConnectTrafficQosRule.
+- Support API Describe95Traffic.
+- Support API DescribeExpressConnectTrafficQos.
+- Support API DescribeExpressConnectTrafficQosQueue.
+- Support API DescribeExpressConnectTrafficQosRule.
+- Support API ModifyExpressConnectTrafficQos.
+- Support API ModifyExpressConnectTrafficQosQueue.
+- Support API ModifyExpressConnectTrafficQosRule.
+- Update API AddPublicIpAddressPoolCidrBlock: update response param.
+- Update API CreatePublicIpAddressPool: update response param.
+- Update API DescribeEipAddresses: add param ServiceManaged.
+- Update API DescribeIpv6Addresses: add param ServiceManaged.
+- Update API DescribeIpv6Addresses: update response param.
+- Update API DescribePublicIpAddress: update response param.
+
+
 2024-03-04 Version: 6.6.0
 - Support API CreateExpressConnectTrafficQos.
 - Support API CreateExpressConnectTrafficQosQueue.
