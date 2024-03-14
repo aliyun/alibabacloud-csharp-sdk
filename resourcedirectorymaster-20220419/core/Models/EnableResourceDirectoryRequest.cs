@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class EnableResourceDirectoryRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// 
+        /// *   **true**: performs only a dry run.
+        /// *   **false** (default): performs a dry run and performs the actual request.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

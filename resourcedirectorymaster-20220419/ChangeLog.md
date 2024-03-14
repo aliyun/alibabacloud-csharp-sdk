@@ -1,3 +1,10 @@
+2024-03-14 Version: 2.0.3
+- Update API CreateResourceAccount: add param DryRun.
+- Update API ListAccounts: update response param.
+- Update API ListAccountsForParent: update response param.
+- Update API UpdateAccount: add param DryRun.
+
+
 2023-12-21 Version: 2.0.2
 - Generated csharp 2022-04-19 for ResourceDirectoryMaster.
 

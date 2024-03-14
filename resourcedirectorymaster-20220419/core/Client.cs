@@ -1115,6 +1115,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             {
                 query["DisplayName"] = request.DisplayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
                 query["ParentFolderId"] = request.ParentFolderId;
@@ -1169,6 +1173,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
             {
@@ -1956,7 +1964,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The ID of the request.
+          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
+          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
           *
           * @param request DisableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1981,7 +1990,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The ID of the request.
+          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
+          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
           *
           * @param request DisableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2006,7 +2016,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The ID of the request.
+          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
+          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
           *
           * @return DisableControlPolicyResponse
          */
@@ -2017,7 +2028,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The ID of the request.
+          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
+          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
           *
           * @return DisableControlPolicyResponse
          */
@@ -5652,6 +5664,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             {
                 query["AccountId"] = request.AccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewAccountType))
             {
                 query["NewAccountType"] = request.NewAccountType;
@@ -5695,6 +5711,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewAccountType))
             {

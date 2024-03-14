@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                [NameInMap("DeletionStatus")]
+                [Validation(Required=false)]
+                public string DeletionStatus { get; set; }
+
                 /// <summary>
                 /// The display name of the member.
                 /// </summary>
