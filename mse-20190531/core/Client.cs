@@ -4520,9 +4520,19 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await CreateOrUpdateSwimmingLaneWithOptionsAsync(request, runtime);
         }
 
-        public CreateOrUpdateSwimmingLaneGroupResponse CreateOrUpdateSwimmingLaneGroupWithOptions(CreateOrUpdateSwimmingLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateOrUpdateSwimmingLaneGroupResponse CreateOrUpdateSwimmingLaneGroupWithOptions(CreateOrUpdateSwimmingLaneGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneGroupShrinkRequest request = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Paths))
+            {
+                request.PathsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Paths, "Paths", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RouteIds))
+            {
+                request.RouteIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RouteIds, "RouteIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -4531,6 +4541,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
             {
                 query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryModel))
+            {
+                query["CanaryModel"] = request.CanaryModel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbGrayEnable))
             {
@@ -4560,6 +4574,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Namespace"] = request.Namespace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathsShrink))
+            {
+                query["Paths"] = request.PathsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordCanaryDetail))
             {
                 query["RecordCanaryDetail"] = request.RecordCanaryDetail;
@@ -4567,6 +4585,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIdsShrink))
+            {
+                query["RouteIds"] = request.RouteIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -4591,9 +4613,19 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<CreateOrUpdateSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateOrUpdateSwimmingLaneGroupResponse> CreateOrUpdateSwimmingLaneGroupWithOptionsAsync(CreateOrUpdateSwimmingLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateOrUpdateSwimmingLaneGroupResponse> CreateOrUpdateSwimmingLaneGroupWithOptionsAsync(CreateOrUpdateSwimmingLaneGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneGroupShrinkRequest request = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Paths))
+            {
+                request.PathsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Paths, "Paths", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RouteIds))
+            {
+                request.RouteIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RouteIds, "RouteIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -4602,6 +4634,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
             {
                 query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryModel))
+            {
+                query["CanaryModel"] = request.CanaryModel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbGrayEnable))
             {
@@ -4631,6 +4667,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Namespace"] = request.Namespace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathsShrink))
+            {
+                query["Paths"] = request.PathsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordCanaryDetail))
             {
                 query["RecordCanaryDetail"] = request.RecordCanaryDetail;
@@ -4638,6 +4678,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIdsShrink))
+            {
+                query["RouteIds"] = request.RouteIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {

@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppIds { get; set; }
 
+            [NameInMap("CanaryModel")]
+            [Validation(Required=false)]
+            public int? CanaryModel { get; set; }
+
             [NameInMap("EntryApp")]
             [Validation(Required=false)]
             public string EntryApp { get; set; }
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
+            [NameInMap("Paths")]
+            [Validation(Required=false)]
+            public string Paths { get; set; }
 
             [NameInMap("RecordCanaryDetail")]
             [Validation(Required=false)]

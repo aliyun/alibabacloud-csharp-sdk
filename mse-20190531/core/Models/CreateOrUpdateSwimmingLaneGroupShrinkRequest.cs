@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateOrUpdateSwimmingLaneGroupRequest : TeaModel {
+    public class CreateOrUpdateSwimmingLaneGroupShrinkRequest : TeaModel {
         /// <summary>
         /// The language of the response. Valid values:
         /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("Paths")]
         [Validation(Required=false)]
-        public List<string> Paths { get; set; }
+        public string PathsShrink { get; set; }
 
         /// <summary>
         /// Specifies whether to record request details.
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("RouteIds")]
         [Validation(Required=false)]
-        public List<long?> RouteIds { get; set; }
+        public string RouteIdsShrink { get; set; }
 
         /// <summary>
         /// The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.

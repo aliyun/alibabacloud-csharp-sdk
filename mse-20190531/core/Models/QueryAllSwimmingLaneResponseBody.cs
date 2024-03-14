@@ -80,6 +80,54 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            [NameInMap("GatewaySwimmingLaneRoute")]
+            [Validation(Required=false)]
+            public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute GatewaySwimmingLaneRoute { get; set; }
+            public class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute : TeaModel {
+                [NameInMap("CanaryModel")]
+                [Validation(Required=false)]
+                public int? CanaryModel { get; set; }
+
+                [NameInMap("Conditions")]
+                [Validation(Required=false)]
+                public List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> Conditions { get; set; }
+                public class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions : TeaModel {
+                    [NameInMap("Cond")]
+                    [Validation(Required=false)]
+                    public string Cond { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("GatewayId")]
+                [Validation(Required=false)]
+                public long? GatewayId { get; set; }
+
+                [NameInMap("GatewayUniqueId")]
+                [Validation(Required=false)]
+                public string GatewayUniqueId { get; set; }
+
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
+                public int? Percentage { get; set; }
+
+                [NameInMap("RouteIdList")]
+                [Validation(Required=false)]
+                public List<long?> RouteIdList { get; set; }
+
+            }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }

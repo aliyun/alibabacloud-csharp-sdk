@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson GatewaySwimmingLaneRouteJson { get; set; }
         public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson : TeaModel {
+            [NameInMap("CanaryModel")]
+            [Validation(Required=false)]
+            public int? CanaryModel { get; set; }
+
             /// <summary>
             /// The matching conditions.
             /// </summary>
@@ -166,6 +170,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("GatewayUniqueId")]
             [Validation(Required=false)]
             public string GatewayUniqueId { get; set; }
+
+            [NameInMap("Percentage")]
+            [Validation(Required=false)]
+            public int? Percentage { get; set; }
 
             /// <summary>
             /// The route IDs.
