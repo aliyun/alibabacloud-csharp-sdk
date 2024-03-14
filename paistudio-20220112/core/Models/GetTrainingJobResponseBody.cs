@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public long? Duration { get; set; }
+
         [NameInMap("ExperimentConfig")]
         [Validation(Required=false)]
         public GetTrainingJobResponseBodyExperimentConfig ExperimentConfig { get; set; }
