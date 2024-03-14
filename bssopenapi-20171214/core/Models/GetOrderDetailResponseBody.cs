@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string Currency { get; set; }
 
+                    [NameInMap("ExtendInfos")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> ExtendInfos { get; set; }
+
                     /// <summary>
                     /// The instance IDs.
                     /// </summary>
