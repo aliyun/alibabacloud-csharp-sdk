@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string EnableHiveAccess { get; set; }
 
+            [NameInMap("EnableServerless")]
+            [Validation(Required=false)]
+            public bool? EnableServerless { get; set; }
+
             /// <summary>
             /// The list of endpoints.
             /// </summary>
