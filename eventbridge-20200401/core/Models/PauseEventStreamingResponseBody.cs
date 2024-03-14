@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public bool? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// The error message that is returned if the request failed.
