@@ -849,6 +849,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public DescribeApiHistoryResponseBodyServiceConfigOssConfig OssConfig { get; set; }
             public class DescribeApiHistoryResponseBodyServiceConfigOssConfig : TeaModel {
+                /// <summary>
+                /// The operation options on OSS. Valid values:
+                /// 
+                /// *   GetObject
+                /// *   PostObject
+                /// *   DeleteObject
+                /// *   PutObject
+                /// *   HeadObject
+                /// *   GetObjectMeta
+                /// *   AppendObject
+                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
@@ -860,6 +871,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
+                /// <summary>
+                /// The stored object or folder path.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -1043,11 +1057,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The environment to which the API is published.
+        /// The environment in which the API is requested. Valid values:
         /// 
-        /// *   **RELEASE**
-        /// *   **PRE: the pre-release environment**
-        /// *   **TEST.
+        /// *   **RELEASE**: the production environment
+        /// *   **PRE**: the pre-release environment
+        /// *   **TEST**: the test environment
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]
@@ -1113,8 +1127,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// Specifies whether to make the API public. Valid values:
         /// 
-        /// *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-        /// *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+        /// *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
+        /// *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

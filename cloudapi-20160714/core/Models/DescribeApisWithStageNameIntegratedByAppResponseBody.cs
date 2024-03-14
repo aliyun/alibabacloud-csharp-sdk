@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The request HTTP method for the API.
+                /// The request HTTP method of the API.
                 /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
@@ -79,15 +79,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 /// <summary>
                 /// The authorizer. Valid values:
                 /// 
-                /// *   **PROVIDER:**: the API owner
-                /// *   **CONSUMER:**: the API caller
+                /// *   **PROVIDER:** the API owner
+                /// *   **CONSUMER:** the API caller
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// The API request path.
+                /// The request path of the API.
                 /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
@@ -111,18 +111,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

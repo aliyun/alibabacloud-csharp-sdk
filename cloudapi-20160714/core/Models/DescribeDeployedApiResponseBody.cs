@@ -511,14 +511,23 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// Specifies whether a subnode exists.
+                /// </summary>
                 [NameInMap("HasChild")]
                 [Validation(Required=false)]
                 public bool? HasChild { get; set; }
 
+                /// <summary>
+                /// The ID of the result.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// The primary key of the result.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -530,14 +539,23 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public bool? Mandatory { get; set; }
 
+                /// <summary>
+                /// The name of the result.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The ID of the parent node.
+                /// </summary>
                 [NameInMap("Pid")]
                 [Validation(Required=false)]
                 public string Pid { get; set; }
 
+                /// <summary>
+                /// The type of the result.
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -940,8 +958,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// Specifies whether to make the API public. Valid values:
         /// 
-        /// *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-        /// *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+        /// *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
+        /// *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

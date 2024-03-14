@@ -5891,7 +5891,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
+          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
           * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
           * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
           * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
@@ -5940,7 +5940,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
+          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
           * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
           * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
           * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
@@ -5989,7 +5989,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
+          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
           * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
           * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
           * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
@@ -6004,7 +6004,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
+          * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
           * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
           * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
           * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
@@ -15275,7 +15275,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
           * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
           * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
           * *   You can query tags of the same type or different types in a single operation.
-          * *   You can query all your user tags and visible system tags.
+          * *   You can query all your user types and visible system tags.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15329,7 +15329,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
           * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
           * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
           * *   You can query tags of the same type or different types in a single operation.
-          * *   You can query all your user tags and visible system tags.
+          * *   You can query all your user types and visible system tags.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15383,7 +15383,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
           * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
           * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
           * *   You can query tags of the same type or different types in a single operation.
-          * *   You can query all your user tags and visible system tags.
+          * *   You can query all your user types and visible system tags.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -15403,7 +15403,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
           * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
           * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
           * *   You can query tags of the same type or different types in a single operation.
-          * *   You can query all your user tags and visible system tags.
+          * *   You can query all your user types and visible system tags.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -15457,10 +15457,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["BackendId"] = request.BackendId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConstantParameters))
-            {
-                query["ConstantParameters"] = request.ConstantParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -15468,14 +15464,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableInternet))
             {
                 query["DisableInternet"] = request.DisableInternet;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCodeSamples))
-            {
-                query["ErrorCodeSamples"] = request.ErrorCodeSamples;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
-            {
-                query["FailResultSample"] = request.FailResultSample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceNonceCheck))
             {
@@ -15493,21 +15481,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["RequestConfig"] = request.RequestConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParameters))
-            {
-                query["RequestParameters"] = request.RequestParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultBodyModel))
             {
                 query["ResultBodyModel"] = request.ResultBodyModel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultDescriptions))
-            {
-                query["ResultDescriptions"] = request.ResultDescriptions;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
-            {
-                query["ResultSample"] = request.ResultSample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
             {
@@ -15521,18 +15497,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["ServiceConfig"] = request.ServiceConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
-            {
-                query["ServiceParameters"] = request.ServiceParameters;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParametersMap))
-            {
-                query["ServiceParametersMap"] = request.ServiceParametersMap;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemParameters))
-            {
-                query["SystemParameters"] = request.SystemParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
             {
                 query["Visibility"] = request.Visibility;
@@ -15541,9 +15505,47 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["WebSocketApiType"] = request.WebSocketApiType;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConstantParameters))
+            {
+                body["ConstantParameters"] = request.ConstantParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCodeSamples))
+            {
+                body["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
+            {
+                body["FailResultSample"] = request.FailResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParameters))
+            {
+                body["RequestParameters"] = request.RequestParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultDescriptions))
+            {
+                body["ResultDescriptions"] = request.ResultDescriptions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
+            {
+                body["ResultSample"] = request.ResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParametersMap))
+            {
+                body["ServiceParametersMap"] = request.ServiceParametersMap;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemParameters))
+            {
+                body["SystemParameters"] = request.SystemParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -15603,10 +15605,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["BackendId"] = request.BackendId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConstantParameters))
-            {
-                query["ConstantParameters"] = request.ConstantParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -15614,14 +15612,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableInternet))
             {
                 query["DisableInternet"] = request.DisableInternet;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCodeSamples))
-            {
-                query["ErrorCodeSamples"] = request.ErrorCodeSamples;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
-            {
-                query["FailResultSample"] = request.FailResultSample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceNonceCheck))
             {
@@ -15639,21 +15629,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["RequestConfig"] = request.RequestConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParameters))
-            {
-                query["RequestParameters"] = request.RequestParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultBodyModel))
             {
                 query["ResultBodyModel"] = request.ResultBodyModel;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultDescriptions))
-            {
-                query["ResultDescriptions"] = request.ResultDescriptions;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
-            {
-                query["ResultSample"] = request.ResultSample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
             {
@@ -15667,18 +15645,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["ServiceConfig"] = request.ServiceConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
-            {
-                query["ServiceParameters"] = request.ServiceParameters;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParametersMap))
-            {
-                query["ServiceParametersMap"] = request.ServiceParametersMap;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemParameters))
-            {
-                query["SystemParameters"] = request.SystemParameters;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
             {
                 query["Visibility"] = request.Visibility;
@@ -15687,9 +15653,47 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["WebSocketApiType"] = request.WebSocketApiType;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConstantParameters))
+            {
+                body["ConstantParameters"] = request.ConstantParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCodeSamples))
+            {
+                body["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
+            {
+                body["FailResultSample"] = request.FailResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestParameters))
+            {
+                body["RequestParameters"] = request.RequestParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultDescriptions))
+            {
+                body["ResultDescriptions"] = request.ResultDescriptions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
+            {
+                body["ResultSample"] = request.ResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParametersMap))
+            {
+                body["ServiceParametersMap"] = request.ServiceParametersMap;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemParameters))
+            {
+                body["SystemParameters"] = request.SystemParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

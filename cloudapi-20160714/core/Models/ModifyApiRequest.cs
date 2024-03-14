@@ -63,9 +63,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
-        /// <summary>
-        /// The parameters of API requests sent by API Gateway to the backend service.
-        /// </summary>
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public string ConstantParameters { get; set; }
@@ -89,16 +86,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? DisableInternet { get; set; }
 
-        /// <summary>
-        /// The returned description of the API.
-        /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
         public string ErrorCodeSamples { get; set; }
 
-        /// <summary>
-        /// The sample error codes returned by the backend service.
-        /// </summary>
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
         public string FailResultSample { get; set; }
@@ -137,9 +128,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestConfig { get; set; }
 
-        /// <summary>
-        /// System parameter
-        /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
         public string RequestParameters { get; set; }
@@ -152,16 +140,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ResultBodyModel { get; set; }
 
-        /// <summary>
-        /// The configuration items of the third-party OpenID Connect authentication method.
-        /// </summary>
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
         public string ResultDescriptions { get; set; }
 
-        /// <summary>
-        /// The sample error response from the backend service.
-        /// </summary>
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
         public string ResultSample { get; set; }
@@ -184,23 +166,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
 
-        /// <summary>
-        /// The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
-        /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public string ServiceParameters { get; set; }
 
-        /// <summary>
-        /// The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.
-        /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
         public string ServiceParametersMap { get; set; }
 
-        /// <summary>
-        /// Constant parameter
-        /// </summary>
         [NameInMap("SystemParameters")]
         [Validation(Required=false)]
         public string SystemParameters { get; set; }

@@ -1,3 +1,18 @@
+2024-03-14 Version: 3.6.1
+- Update API CreateInstance: update param HttpsPolicy.
+- Update API DescribeApi: update response param.
+- Update API ModifyApi: update param ConstantParameters.
+- Update API ModifyApi: update param ErrorCodeSamples.
+- Update API ModifyApi: update param FailResultSample.
+- Update API ModifyApi: update param RequestParameters.
+- Update API ModifyApi: update param ResultDescriptions.
+- Update API ModifyApi: update param ResultSample.
+- Update API ModifyApi: update param ServiceParameters.
+- Update API ModifyApi: update param ServiceParametersMap.
+- Update API ModifyApi: update param SystemParameters.
+- Update API ModifyApiConfiguration: update param Visibility.
+
+
 2024-01-25 Version: 3.6.0
 - Update Tea.
 

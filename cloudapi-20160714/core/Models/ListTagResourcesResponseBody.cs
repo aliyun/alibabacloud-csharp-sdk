@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The token that determines the start point of the next query.
         /// 
-        /// A NextToken value of \*\*-1\*\* indicates that a next query does not exist.
+        /// A NextToken value of -1 indicates that a next query does not exist.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
