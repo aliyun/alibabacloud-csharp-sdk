@@ -8,39 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetApmDataRequest : TeaModel {
+    public class ListScriptsRequest : TeaModel {
         /// <summary>
-        /// 集群ID。非必传参数。
+        /// 集群ID。
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("ComponentName")]
+        /// <summary>
+        /// 一次获取的最大记录数。取值范围：1~100。
+        /// </summary>
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string ComponentName { get; set; }
-
-        [NameInMap("Language")]
-        [Validation(Required=false)]
-        public string Language { get; set; }
-
-        [NameInMap("Provider")]
-        [Validation(Required=false)]
-        public string Provider { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// 标记当前开始读取的位置，置空表示从头开始。
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 区域ID。
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 如果存在clusterId，从Cluster中获取该值，如果clusterId为空，用户显式指定
+        /// 集群脚本类型。
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("ScriptType")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string ScriptType { get; set; }
 
     }
 
