@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20230701.Models
 {
     public class DeleteJobsRequest : TeaModel {
+        [NameInMap("ExecutorIds")]
+        [Validation(Required=false)]
+        public List<string> ExecutorIds { get; set; }
+
         [NameInMap("JobSpec")]
         [Validation(Required=false)]
         public List<DeleteJobsRequestJobSpec> JobSpec { get; set; }

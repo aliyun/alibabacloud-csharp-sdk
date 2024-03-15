@@ -270,11 +270,19 @@ namespace AlibabaCloud.SDK.EHPC20230701
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutorIds))
+            {
+                request.ExecutorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutorIds, "ExecutorIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
             {
                 request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorIdsShrink))
+            {
+                query["ExecutorIds"] = request.ExecutorIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
             {
                 query["JobSpec"] = request.JobSpecShrink;
@@ -303,11 +311,19 @@ namespace AlibabaCloud.SDK.EHPC20230701
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutorIds))
+            {
+                request.ExecutorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutorIds, "ExecutorIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobSpec))
             {
                 request.JobSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobSpec, "JobSpec", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorIdsShrink))
+            {
+                query["ExecutorIds"] = request.ExecutorIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecShrink))
             {
                 query["JobSpec"] = request.JobSpecShrink;
@@ -473,6 +489,100 @@ namespace AlibabaCloud.SDK.EHPC20230701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobWithOptionsAsync(request, runtime);
+        }
+
+        public ListExecutorsResponse ListExecutorsWithOptions(ListExecutorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListExecutorsShrinkRequest request = new ListExecutorsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExecutors",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExecutorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListExecutorsResponse> ListExecutorsWithOptionsAsync(ListExecutorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListExecutorsShrinkRequest request = new ListExecutorsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExecutors",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExecutorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListExecutorsResponse ListExecutors(ListExecutorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListExecutorsWithOptions(request, runtime);
+        }
+
+        public async Task<ListExecutorsResponse> ListExecutorsAsync(ListExecutorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListExecutorsWithOptionsAsync(request, runtime);
         }
 
         public ListImagesResponse ListImagesWithOptions(ListImagesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
