@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string Format { get; set; }
 
+            [NameInMap("MultipleStreamsEnabled")]
+            [Validation(Required=false)]
+            public bool? MultipleStreamsEnabled { get; set; }
+
             [NameInMap("ProgressiveCallbacksEnabled")]
             [Validation(Required=false)]
             public bool? ProgressiveCallbacksEnabled { get; set; }
@@ -120,6 +124,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranscription Transcription { get; set; }
             public class CreateTaskRequestParametersTranscription : TeaModel {
+                [NameInMap("AdditionalStreamOutputLevel")]
+                [Validation(Required=false)]
+                public int? AdditionalStreamOutputLevel { get; set; }
+
                 [NameInMap("AudioEventDetectionEnabled")]
                 [Validation(Required=false)]
                 public bool? AudioEventDetectionEnabled { get; set; }
@@ -152,6 +160,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranslation Translation { get; set; }
             public class CreateTaskRequestParametersTranslation : TeaModel {
+                [NameInMap("AdditionalStreamOutputLevel")]
+                [Validation(Required=false)]
+                public int? AdditionalStreamOutputLevel { get; set; }
+
                 [NameInMap("OutputLevel")]
                 [Validation(Required=false)]
                 public int? OutputLevel { get; set; }
