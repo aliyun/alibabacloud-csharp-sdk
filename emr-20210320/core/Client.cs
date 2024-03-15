@@ -757,13 +757,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetAutoScalingActivityWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * 获取弹性伸缩策略信息。
-          *
-          * @param request GetAutoScalingPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetAutoScalingPolicyResponse
-         */
         public GetAutoScalingPolicyResponse GetAutoScalingPolicyWithOptions(GetAutoScalingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -799,13 +792,6 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetAutoScalingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 获取弹性伸缩策略信息。
-          *
-          * @param request GetAutoScalingPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetAutoScalingPolicyResponse
-         */
         public async Task<GetAutoScalingPolicyResponse> GetAutoScalingPolicyWithOptionsAsync(GetAutoScalingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -841,24 +827,12 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetAutoScalingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 获取弹性伸缩策略信息。
-          *
-          * @param request GetAutoScalingPolicyRequest
-          * @return GetAutoScalingPolicyResponse
-         */
         public GetAutoScalingPolicyResponse GetAutoScalingPolicy(GetAutoScalingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAutoScalingPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * 获取弹性伸缩策略信息。
-          *
-          * @param request GetAutoScalingPolicyRequest
-          * @return GetAutoScalingPolicyResponse
-         */
         public async Task<GetAutoScalingPolicyResponse> GetAutoScalingPolicyAsync(GetAutoScalingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
