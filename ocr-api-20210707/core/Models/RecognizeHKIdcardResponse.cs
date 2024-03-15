@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeHKIdcardResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public RecognizeHKIdcardResponseBody Body { get; set; }
 
     }

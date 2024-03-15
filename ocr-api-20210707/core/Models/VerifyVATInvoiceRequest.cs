@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string InvoiceDate { get; set; }
 
+        [NameInMap("InvoiceKind")]
+        [Validation(Required=false)]
+        public int? InvoiceKind { get; set; }
+
         [NameInMap("InvoiceNo")]
         [Validation(Required=false)]
         public string InvoiceNo { get; set; }

@@ -5907,6 +5907,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             {
                 query["InvoiceDate"] = request.InvoiceDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceKind))
+            {
+                query["InvoiceKind"] = request.InvoiceKind;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceNo))
             {
                 query["InvoiceNo"] = request.InvoiceNo;
@@ -5949,6 +5953,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDate))
             {
                 query["InvoiceDate"] = request.InvoiceDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceKind))
+            {
+                query["InvoiceKind"] = request.InvoiceKind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceNo))
             {
