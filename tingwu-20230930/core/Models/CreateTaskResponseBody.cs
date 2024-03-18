@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string TaskKey { get; set; }
 
+            [NameInMap("TaskStatus")]
+            [Validation(Required=false)]
+            public string TaskStatus { get; set; }
+
         }
 
         [NameInMap("Message")]

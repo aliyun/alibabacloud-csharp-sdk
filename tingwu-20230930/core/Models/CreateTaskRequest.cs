@@ -62,6 +62,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? AutoChaptersEnabled { get; set; }
 
+            [NameInMap("ExtraParams")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersExtraParams ExtraParams { get; set; }
+            public class CreateTaskRequestParametersExtraParams : TeaModel {
+                [NameInMap("NfixEnabled")]
+                [Validation(Required=false)]
+                public bool? NfixEnabled { get; set; }
+
+            }
+
             [NameInMap("MeetingAssistance")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersMeetingAssistance MeetingAssistance { get; set; }
