@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
+                [NameInMap("ProtocolAlpnProtocol")]
+                [Validation(Required=false)]
+                public int? ProtocolAlpnProtocol { get; set; }
+
                 [NameInMap("RequestBody")]
                 [Validation(Required=false)]
                 public CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody RequestBody { get; set; }

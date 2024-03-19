@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string EnvironmentType { get; set; }
 
+        [NameInMap("FeePackage")]
+        [Validation(Required=false)]
+        public string FeePackage { get; set; }
+
         /// <summary>
         /// type of managed: 
         /// - none: not managed. default value of prometheus for ACK.
