@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class QueueInfo : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("CodeType")]
+        [Validation(Required=false)]
+        public string CodeType { get; set; }
+
+        [NameInMap("GmtDequeuedTime")]
+        [Validation(Required=false)]
+        public string GmtDequeuedTime { get; set; }
+
         [NameInMap("GmtEnqueuedTime")]
         [Validation(Required=false)]
         public string GmtEnqueuedTime { get; set; }
@@ -16,6 +28,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("GmtPositionModifiedTime")]
         [Validation(Required=false)]
         public string GmtPositionModifiedTime { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("Position")]
         [Validation(Required=false)]
@@ -32,6 +48,26 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
+
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public ResourceAmount Resource { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("SubStatus")]
+        [Validation(Required=false)]
+        public string SubStatus { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
         [NameInMap("WorkloadId")]
         [Validation(Required=false)]

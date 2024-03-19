@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
-    public class ListQuotasResponseBody : TeaModel {
-        [NameInMap("Quotas")]
+    public class WorkspaceSpecs : TeaModel {
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public List<Quota> Quotas { get; set; }
+        public string Product { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Specs")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<WorkspaceSpec> Specs { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 
