@@ -697,6 +697,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedRotate))
+            {
+                query["NeedRotate"] = request.NeedRotate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 query["Url"] = request.Url;
@@ -726,6 +730,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedRotate))
+            {
+                query["NeedRotate"] = request.NeedRotate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
             {
                 query["Url"] = request.Url;

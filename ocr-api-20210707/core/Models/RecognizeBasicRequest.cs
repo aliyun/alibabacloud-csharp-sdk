@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeBasicRequest : TeaModel {
+        [NameInMap("NeedRotate")]
+        [Validation(Required=false)]
+        public bool? NeedRotate { get; set; }
+
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
