@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Phase { get; set; }
 
+        [NameInMap("ServiceRole")]
+        [Validation(Required=false)]
+        public string ServiceRole { get; set; }
+
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
@@ -81,6 +85,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public DataIngestionStatistic Statistic { get; set; }
         public class DataIngestionStatistic : TeaModel {
+            [NameInMap("SkipFiles")]
+            [Validation(Required=false)]
+            public long? SkipFiles { get; set; }
+
             [NameInMap("SubmitFailure")]
             [Validation(Required=false)]
             public long? SubmitFailure { get; set; }
