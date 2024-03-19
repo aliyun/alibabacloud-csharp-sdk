@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }
 
+        [NameInMap("target")]
+        [Validation(Required=false)]
+        public string Target { get; set; }
+
         /// <summary>
         /// The check method.
         /// </summary>

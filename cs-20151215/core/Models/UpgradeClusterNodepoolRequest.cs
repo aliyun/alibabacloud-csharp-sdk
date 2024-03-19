@@ -23,6 +23,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
+        [NameInMap("node_names")]
+        [Validation(Required=false)]
+        public List<string> NodeNames { get; set; }
+
+        [NameInMap("rolling_policy")]
+        [Validation(Required=false)]
+        public UpgradeClusterNodepoolRequestRollingPolicy RollingPolicy { get; set; }
+        public class UpgradeClusterNodepoolRequestRollingPolicy : TeaModel {
+            [NameInMap("batch_interval")]
+            [Validation(Required=false)]
+            public int? BatchInterval { get; set; }
+
+            [NameInMap("max_parallelism")]
+            [Validation(Required=false)]
+            public int? MaxParallelism { get; set; }
+
+            [NameInMap("pause_policy")]
+            [Validation(Required=false)]
+            public string PausePolicy { get; set; }
+
+        }
+
         /// <summary>
         /// The runtime type. Valid values: containerd and docker.
         /// </summary>

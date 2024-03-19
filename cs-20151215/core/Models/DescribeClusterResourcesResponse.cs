@@ -100,6 +100,46 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            [NameInMap("associated_object")]
+            [Validation(Required=false)]
+            public DescribeClusterResourcesResponseBodyAssociatedObject AssociatedObject { get; set; }
+            public class DescribeClusterResourcesResponseBodyAssociatedObject : TeaModel {
+                [NameInMap("kind")]
+                [Validation(Required=false)]
+                public string Kind { get; set; }
+
+                [NameInMap("namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            [NameInMap("delete_behavior")]
+            [Validation(Required=false)]
+            public DescribeClusterResourcesResponseBodyDeleteBehavior DeleteBehavior { get; set; }
+            public class DescribeClusterResourcesResponseBodyDeleteBehavior : TeaModel {
+                [NameInMap("delete_by_default")]
+                [Validation(Required=false)]
+                public bool? DeleteByDefault { get; set; }
+
+                [NameInMap("changeable")]
+                [Validation(Required=false)]
+                public bool? Changeable { get; set; }
+
+            }
+
+            [NameInMap("creator_type")]
+            [Validation(Required=false)]
+            public string CreatorType { get; set; }
+
+            [NameInMap("extra_info")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> ExtraInfo { get; set; }
+
         }
 
     }
