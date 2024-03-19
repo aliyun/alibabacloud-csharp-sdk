@@ -1,3 +1,7 @@
+2024-03-19 Version: 1.1.0
+- Support API UploadRecommendationData.
+
+
 2024-03-19 Version: 1.0.3
 - Update API CheckInstanceResources: update param InstanceId.
 - Update API CheckInstanceResources: update param body.
