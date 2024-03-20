@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstanceSpecsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// id of request
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The specifications of the instances.
+        /// List
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInstanceSpecsResponseBodyResult> Result { get; set; }
         public class ListInstanceSpecsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The number of CPU cores.
+            /// None
             /// </summary>
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// The maximum storage space of a searcher worker.
+            /// 单数据节点存储空间最大值
             /// </summary>
             [NameInMap("maxDisk")]
             [Validation(Required=false)]
             public int? MaxDisk { get; set; }
 
             /// <summary>
-            /// The memory size. Unit: GB.
+            /// Unit: GB
             /// </summary>
             [NameInMap("mem")]
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
             /// <summary>
-            /// The minimum storage space of a searcher worker.
+            /// 单数据节点存储空间最小值
             /// </summary>
             [NameInMap("minDisk")]
             [Validation(Required=false)]

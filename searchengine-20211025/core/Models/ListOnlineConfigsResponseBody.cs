@@ -23,10 +23,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public List<ListOnlineConfigsResponseBodyResult> Result { get; set; }
         public class ListOnlineConfigsResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The configuration information
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
+            /// <summary>
+            /// The name of the index
+            /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }

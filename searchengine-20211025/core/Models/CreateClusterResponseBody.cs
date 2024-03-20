@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// id of request
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// The result returned
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

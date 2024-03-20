@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterOfflineConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the request
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the request.
+        /// The result
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

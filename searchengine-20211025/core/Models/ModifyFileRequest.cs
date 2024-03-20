@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyFileRequest : TeaModel {
         /// <summary>
-        /// The parameters in the request body
+        /// The content of the file.
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// auditing
+        /// The data partition. This parameter is required if the dataSourceType parameter is set to odps.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]
         public int? Partition { get; set; }
 
         /// <summary>
-        /// ha-cn-tl32m2c4u01@ha-cn-tl32m2c4u01_00@bj_vpc_domain_1@automobile_vector@index_config_edit
+        /// The name of the file in the full path
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

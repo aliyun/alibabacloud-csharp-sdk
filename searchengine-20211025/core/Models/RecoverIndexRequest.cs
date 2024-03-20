@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class RecoverIndexRequest : TeaModel {
         /// <summary>
-        /// buildDeployId
+        /// The ID of the index deployed in offline mode.
         /// </summary>
         [NameInMap("buildDeployId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// generation
+        /// The primary key of generation.
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]

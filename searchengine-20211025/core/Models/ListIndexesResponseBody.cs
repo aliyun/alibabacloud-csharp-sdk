@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the indexes.
+        /// The index list.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListIndexesResponseBodyResult> Result { get; set; }
         public class ListIndexesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The content of the index.
+            /// schema JSON
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -38,76 +38,91 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// The information about the data source.
+            /// 数据源相关信息
             /// </summary>
             [NameInMap("dataSourceInfo")]
             [Validation(Required=false)]
             public ListIndexesResponseBodyResultDataSourceInfo DataSourceInfo { get; set; }
             public class ListIndexesResponseBodyResultDataSourceInfo : TeaModel {
                 /// <summary>
-                /// Indicates whether the automatic full indexing feature is enabled.
+                /// 是否开启自动全量
                 /// </summary>
                 [NameInMap("autoBuildIndex")]
                 [Validation(Required=false)]
                 public bool? AutoBuildIndex { get; set; }
 
                 /// <summary>
-                /// The configuration of MaxCompute data sources.
+                /// odps 数据源配置
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public ListIndexesResponseBodyResultDataSourceInfoConfig Config { get; set; }
                 public class ListIndexesResponseBodyResultDataSourceInfoConfig : TeaModel {
+                    /// <summary>
+                    /// odps数据源ak
+                    /// </summary>
                     [NameInMap("accessKey")]
                     [Validation(Required=false)]
                     public string AccessKey { get; set; }
 
+                    /// <summary>
+                    /// odps数据源ak secret
+                    /// </summary>
                     [NameInMap("accessSecret")]
                     [Validation(Required=false)]
                     public string AccessSecret { get; set; }
 
+                    /// <summary>
+                    /// oss命名空间
+                    /// </summary>
                     [NameInMap("bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
 
                     /// <summary>
-                    /// A parameter related to MaxCompute.
+                    /// odps相关
                     /// </summary>
                     [NameInMap("endpoint")]
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
                     /// <summary>
-                    /// A parameter related to SARO.
+                    /// saro相关
                     /// </summary>
                     [NameInMap("namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// A parameter related to OSS.
+                    /// oss数据源相关
                     /// </summary>
                     [NameInMap("ossPath")]
                     [Validation(Required=false)]
                     public string OssPath { get; set; }
 
+                    /// <summary>
+                    /// 数据分片
+                    /// </summary>
                     [NameInMap("partition")]
                     [Validation(Required=false)]
                     public string Partition { get; set; }
 
                     /// <summary>
-                    /// A parameter related to Apsara File Storage for HDFS.
+                    /// hdfs相关
                     /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// odps数据源项目名称
+                    /// </summary>
                     [NameInMap("project")]
                     [Validation(Required=false)]
                     public string Project { get; set; }
 
                     /// <summary>
-                    /// A parameter related to SARO and MaxCompute.
+                    /// saro、odps相关
                     /// </summary>
                     [NameInMap("table")]
                     [Validation(Required=false)]
@@ -116,37 +131,43 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The offline deployment name of the data source.
+                /// 离线部署
                 /// </summary>
                 [NameInMap("domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The name of the data source.
+                /// 数据源名
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of resources used for data update.
+                /// 数据更新资源数
                 /// </summary>
                 [NameInMap("processPartitionCount")]
                 [Validation(Required=false)]
                 public int? ProcessPartitionCount { get; set; }
 
                 /// <summary>
-                /// The configuration of SARO data sources.
+                /// saro数据源配置
                 /// </summary>
                 [NameInMap("saroConfig")]
                 [Validation(Required=false)]
                 public ListIndexesResponseBodyResultDataSourceInfoSaroConfig SaroConfig { get; set; }
                 public class ListIndexesResponseBodyResultDataSourceInfoSaroConfig : TeaModel {
+                    /// <summary>
+                    /// saro数据源的namespace
+                    /// </summary>
                     [NameInMap("namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
+                    /// <summary>
+                    /// saro数据表名称
+                    /// </summary>
                     [NameInMap("tableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
@@ -154,7 +175,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
+                /// 数据源类型 (odps, swift, saro, oss, unKnow)
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -163,49 +184,49 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The remarks.
+            /// 备注
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The deployment name of the index.
+            /// The name of the data center where the data source is deployed.
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The last time when full data in the index was updated.
+            /// 全量切换时间
             /// </summary>
             [NameInMap("fullUpdateTime")]
             [Validation(Required=false)]
             public string FullUpdateTime { get; set; }
 
             /// <summary>
-            /// The version of the data.
+            /// 全量版本  即：索引版本
             /// </summary>
             [NameInMap("fullVersion")]
             [Validation(Required=false)]
             public long? FullVersion { get; set; }
 
             /// <summary>
-            /// The last time when incremental data in the index was updated.
+            /// 增量更新时间
             /// </summary>
             [NameInMap("incUpdateTime")]
             [Validation(Required=false)]
             public string IncUpdateTime { get; set; }
 
             /// <summary>
-            /// The index size.
+            /// 索引大小
             /// </summary>
             [NameInMap("indexSize")]
             [Validation(Required=false)]
             public long? IndexSize { get; set; }
 
             /// <summary>
-            /// The status of the index. Valid values: NEW and PUBLISH.
+            /// NEW, PUBLISH
             /// </summary>
             [NameInMap("indexStatus")]
             [Validation(Required=false)]
@@ -219,49 +240,49 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The number of shards.
+            /// 数据分片
             /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public int? Partition { get; set; }
 
             /// <summary>
-            /// The information about the versions.
+            /// The list of version information.
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<ListIndexesResponseBodyResultVersions> Versions { get; set; }
             public class ListIndexesResponseBodyResultVersions : TeaModel {
                 /// <summary>
-                /// The description of the version.
+                /// The description.
                 /// </summary>
                 [NameInMap("desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// The information about the files.
+                /// The list of file names.
                 /// </summary>
                 [NameInMap("files")]
                 [Validation(Required=false)]
                 public List<ListIndexesResponseBodyResultVersionsFiles> Files { get; set; }
                 public class ListIndexesResponseBodyResultVersionsFiles : TeaModel {
                     /// <summary>
-                    /// The full path of the file.
+                    /// The name of the directory for the index.
                     /// </summary>
                     [NameInMap("fullPathName")]
                     [Validation(Required=false)]
                     public string FullPathName { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the file is a directory.
+                    /// Indicates whether a directory exists.
                     /// </summary>
                     [NameInMap("isDir")]
                     [Validation(Required=false)]
                     public bool? IsDir { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the file is a template.
+                    /// Indicates whether it is a template.
                     /// </summary>
                     [NameInMap("isTemplate")]
                     [Validation(Required=false)]
@@ -284,21 +305,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The status of the version. Valid values: drafting, used, unused, and trash.
+                /// The state of the version. Valid values: drafting, used, unused and trash. drafting indicates that the version is a draft, used indicates that the version is used online, unused indicates that the version is not used, and trash indicates that the version is being deleted.
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The last time when the version was updated.
+                /// The time when the version was updated.
                 /// </summary>
                 [NameInMap("updateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the version. The value is null for an edit version.
+                /// The ID of the version. The value of this parameter is null for the edit version.
                 /// </summary>
                 [NameInMap("versionId")]
                 [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteIndexRequest : TeaModel {
+        /// <summary>
+        /// The data source
+        /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]
         public string DataSource { get; set; }

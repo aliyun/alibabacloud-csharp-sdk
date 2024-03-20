@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public int? DataFragmentNumber { get; set; }
 
+        [NameInMap("flowRatio")]
+        [Validation(Required=false)]
+        public int? FlowRatio { get; set; }
+
         [NameInMap("minServicePercent")]
         [Validation(Required=false)]
         public int? MinServicePercent { get; set; }
@@ -30,28 +34,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? Published { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The name of the cluster.
         /// </summary>
         [NameInMap("clusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The parameters in the request body.
+        /// The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The name of the cluster.
+        /// The original name of the node.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The original name of the node.
+        /// The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.
+        /// 
+        /// *   pop indicates the popularity model.
+        /// *   cp indicates the category prediction model.
+        /// *   hot indicates the top search model.
+        /// *   hint indicates the hint model.
+        /// *   suggest indicates the drop-down suggestion model.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

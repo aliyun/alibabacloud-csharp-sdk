@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListQueryResultRequest : TeaModel {
         /// <summary>
-        /// 353490
+        /// The query statement
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// The SQL statement that is executed in the query
+        /// </summary>
         [NameInMap("sql")]
         [Validation(Required=false)]
         public string Sql { get; set; }

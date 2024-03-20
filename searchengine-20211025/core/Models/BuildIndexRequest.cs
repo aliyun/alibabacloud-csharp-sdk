@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class BuildIndexRequest : TeaModel {
         /// <summary>
-        /// The mode in which reindexing is performed.
+        /// The reindexing mode.
         /// </summary>
         [NameInMap("buildMode")]
         [Validation(Required=false)]
@@ -31,28 +31,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The timestamp in seconds. This parameter is required if you import data from the data source by calling API operations.
+        /// The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.
         /// </summary>
         [NameInMap("dataTimeSec")]
         [Validation(Required=false)]
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// The data center in which the data source resides.
+        /// The data center where the data source is deployed.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the generation.
+        /// The data restoration version.
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
         public long? Generation { get; set; }
 
         /// <summary>
-        /// The data partition. This parameter is required if the dataSourceType parameter is set to odps.
+        /// This parameter is required for the odps data source.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

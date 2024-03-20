@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyDataSourceRequest : TeaModel {
         /// <summary>
-        /// The information about the index
+        /// The request body.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, object> Body { get; set; }
 
         /// <summary>
-        /// The ID of the request
+        /// Specifies whether the data source is created by using the dryRun feature. This parameter only checks whether the data source is valid. Valid values: true and false. true indicates that the data source is created by using the dryRun feature, and false indicates that the data source is not created by using the dryRun feature.
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

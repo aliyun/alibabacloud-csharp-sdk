@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class RecoverIndexResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Map
+        /// The result returned by data search.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

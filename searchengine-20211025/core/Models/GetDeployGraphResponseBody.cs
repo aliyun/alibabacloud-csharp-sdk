@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The result returned
+        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetDeployGraphResponseBodyResult Result { get; set; }
@@ -24,6 +27,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public GetDeployGraphResponseBodyResultGraph Graph { get; set; }
             public class GetDeployGraphResponseBodyResultGraph : TeaModel {
+                /// <summary>
+                /// 索引元信息
+                /// </summary>
                 [NameInMap("indexMetas")]
                 [Validation(Required=false)]
                 public List<GetDeployGraphResponseBodyResultGraphIndexMetas> IndexMetas { get; set; }
@@ -54,6 +60,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                 }
 
+                /// <summary>
+                /// 在线集群元信息
+                /// </summary>
                 [NameInMap("onlineMaster")]
                 [Validation(Required=false)]
                 public List<GetDeployGraphResponseBodyResultGraphOnlineMaster> OnlineMaster { get; set; }
@@ -76,10 +85,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                 }
 
+                /// <summary>
+                /// 数据源和索引关联关系
+                /// </summary>
                 [NameInMap("tableIndexRelation")]
                 [Validation(Required=false)]
                 public Dictionary<string, List<string>> TableIndexRelation { get; set; }
 
+                /// <summary>
+                /// 数据源元信息
+                /// </summary>
                 [NameInMap("tableMetas")]
                 [Validation(Required=false)]
                 public List<GetDeployGraphResponseBodyResultGraphTableMetas> TableMetas { get; set; }
@@ -110,10 +125,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                 }
 
+                /// <summary>
+                /// zone和索引关联关系
+                /// </summary>
                 [NameInMap("zoneIndexRelation")]
                 [Validation(Required=false)]
                 public Dictionary<string, List<string>> ZoneIndexRelation { get; set; }
 
+                /// <summary>
+                /// zone元信息
+                /// </summary>
                 [NameInMap("zoneMetas")]
                 [Validation(Required=false)]
                 public List<GetDeployGraphResponseBodyResultGraphZoneMetas> ZoneMetas { get; set; }

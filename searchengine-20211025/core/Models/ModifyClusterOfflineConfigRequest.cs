@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterOfflineConfigRequest : TeaModel {
         /// <summary>
-        /// The reindexing method. Valid values: api: API data source. indexRecover: data recovery through indexing.
+        /// The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.
         /// </summary>
         [NameInMap("buildMode")]
         [Validation(Required=false)]
@@ -23,40 +23,43 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public Dictionary<string, int?> Config { get; set; }
 
+        /// <summary>
+        /// The name of the data source.
+        /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
+        /// The type of the data source. Valid values: odps, swift, saro, and unKnow.
         /// </summary>
         [NameInMap("dataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// This parameter is required if the API data source experiences full indexing.
+        /// This parameter is required when index building by using API data sources is triggered.
         /// </summary>
         [NameInMap("dataTimeSec")]
         [Validation(Required=false)]
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// The domain in which the data source is deployed.
+        /// The domain where the data source is deployed.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the backward data delivery.
+        /// The data restoration version.
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
         public long? Generation { get; set; }
 
         /// <summary>
-        /// This parameter is required if the MaxCompute data source experiences full indexing.
+        /// This parameter is required when index building for full data in a MaxCompute data source is triggered.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

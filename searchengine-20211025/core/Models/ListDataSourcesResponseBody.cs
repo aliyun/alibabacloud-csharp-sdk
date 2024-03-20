@@ -10,41 +10,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// ## Method
-        /// 
-        /// `GET`
-        /// 
-        /// ## URI
-        /// 
-        /// `/openapi/ha3/instances/{instanceId}/data-sources`
+        /// The ID of the request.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// The result returned.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListDataSourcesResponseBodyResult> Result { get; set; }
         public class ListDataSourcesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The data sources deployed in offline mode.
+            /// The data center where the data source is deployed in offline mode.
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// The indexes.
+            /// The information about indexes.
             /// </summary>
             [NameInMap("indexes")]
             [Validation(Required=false)]
             public List<string> Indexes { get; set; }
 
             /// <summary>
-            /// The time when the full data of the data source was last queried.
+            /// The time when an index for full data was last built.
             /// </summary>
             [NameInMap("lastFulTime")]
             [Validation(Required=false)]
@@ -58,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the data source.
+            /// The state of the data source.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

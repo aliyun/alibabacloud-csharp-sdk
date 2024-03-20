@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// auditing
+        /// The information about the index
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
