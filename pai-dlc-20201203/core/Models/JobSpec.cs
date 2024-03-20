@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ResourceConfig ResourceConfig { get; set; }
 
+        [NameInMap("SpotSpec")]
+        [Validation(Required=false)]
+        public SpotSpec SpotSpec { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

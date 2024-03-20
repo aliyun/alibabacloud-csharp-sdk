@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
+        [NameInMap("DefaultGPUDriver")]
+        [Validation(Required=false)]
+        public string DefaultGPUDriver { get; set; }
+
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public int? Gpu { get; set; }
@@ -37,9 +41,25 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        [NameInMap("NonProtectSpotDiscount")]
+        [Validation(Required=false)]
+        public float? NonProtectSpotDiscount { get; set; }
+
+        [NameInMap("PaymentTypes")]
+        [Validation(Required=false)]
+        public List<string> PaymentTypes { get; set; }
+
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("SpotStockStatus")]
+        [Validation(Required=false)]
+        public string SpotStockStatus { get; set; }
+
+        [NameInMap("SupportedGPUDrivers")]
+        [Validation(Required=false)]
+        public List<string> SupportedGPUDrivers { get; set; }
 
     }
 
