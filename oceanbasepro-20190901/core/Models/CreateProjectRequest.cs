@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("IncrTransferConfig")]
         [Validation(Required=false)]
         public CreateProjectRequestIncrTransferConfig IncrTransferConfig { get; set; }

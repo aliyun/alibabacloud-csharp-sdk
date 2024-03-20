@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public List<string> LabelIds { get; set; }
 
+        [NameInMap("NeedRelatedInfo")]
+        [Validation(Required=false)]
+        public bool? NeedRelatedInfo { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }

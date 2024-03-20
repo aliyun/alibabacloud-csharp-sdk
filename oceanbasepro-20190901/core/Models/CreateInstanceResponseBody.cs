@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateInstanceResponseBodyData Data { get; set; }

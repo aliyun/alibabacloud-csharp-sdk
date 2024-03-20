@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string FullTransferConfigShrink { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("IncrTransferConfig")]
         [Validation(Required=false)]
         public string IncrTransferConfigShrink { get; set; }

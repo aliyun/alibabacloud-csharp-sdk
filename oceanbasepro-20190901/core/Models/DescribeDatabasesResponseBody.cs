@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The actual data size, in GB.
+            /// The actual data size, in GB. 
+            /// ><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice>
             /// </summary>
             [NameInMap("DataSize")]
             [Validation(Required=false)]
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string Encoding { get; set; }
 
             /// <summary>
-            /// The ID of the cluster.
+            /// The ID of the cluster to which the tenant belongs.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the database tables.
+            /// The list of database tables.
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
@@ -112,14 +113,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// Tenant name.
+            /// The name of the tenant.
             /// </summary>
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
 
             /// <summary>
-            /// The accounts that have privileges on the database.
+            /// The list of accounts that are granted privileges on this database.
             /// </summary>
             [NameInMap("Users")]
             [Validation(Required=false)]
@@ -152,7 +153,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 public string UserName { get; set; }
 
                 /// <summary>
-                /// The type of the account. Valid values:  - Admin: the super administrator account. - Normal: a general account.
+                /// The type of the account. Valid values:  
+                /// - Admin: the super administrator account. 
+                /// - Normal: a general account.
                 /// </summary>
                 [NameInMap("UserType")]
                 [Validation(Required=false)]
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

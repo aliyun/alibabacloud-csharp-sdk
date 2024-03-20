@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

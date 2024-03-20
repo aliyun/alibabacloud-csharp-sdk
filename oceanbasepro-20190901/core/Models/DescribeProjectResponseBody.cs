@@ -1132,6 +1132,68 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string WorkerGradeId { get; set; }
 
+            [NameInMap("WorkerGradeInfo")]
+            [Validation(Required=false)]
+            public DescribeProjectResponseBodyDataWorkerGradeInfo WorkerGradeInfo { get; set; }
+            public class DescribeProjectResponseBodyDataWorkerGradeInfo : TeaModel {
+                [NameInMap("AutoRenewal")]
+                [Validation(Required=false)]
+                public bool? AutoRenewal { get; set; }
+
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
+                public string ChargeType { get; set; }
+
+                [NameInMap("DestRegion")]
+                [Validation(Required=false)]
+                public string DestRegion { get; set; }
+
+                [NameInMap("DestType")]
+                [Validation(Required=false)]
+                public string DestType { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                [NameInMap("Expired")]
+                [Validation(Required=false)]
+                public bool? Expired { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                [NameInMap("Grade")]
+                [Validation(Required=false)]
+                public string Grade { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("SourceRegion")]
+                [Validation(Required=false)]
+                public string SourceRegion { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+                [NameInMap("Spec")]
+                [Validation(Required=false)]
+                public string Spec { get; set; }
+
+                [NameInMap("SpecName")]
+                [Validation(Required=false)]
+                public string SpecName { get; set; }
+
+            }
+
         }
 
         [NameInMap("ErrorDetail")]

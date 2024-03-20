@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -57,8 +57,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the information of tables in the database.   
-        /// Default value: false.
+        /// Specifies whether to return the information about tables in the database.
+        /// Default value: false. 
+        /// > The operation may time out if the database contains a large number of tables.
         /// </summary>
         [NameInMap("WithTables")]
         [Validation(Required=false)]
