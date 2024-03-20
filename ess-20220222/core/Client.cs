@@ -2669,6 +2669,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["Memory"] = request.Memory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaces))
+            {
+                query["NetworkInterfaces"] = request.NetworkInterfaces;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -2930,6 +2934,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaces))
+            {
+                query["NetworkInterfaces"] = request.NetworkInterfaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -10573,6 +10581,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["Memory"] = request.Memory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaces))
+            {
+                query["NetworkInterfaces"] = request.NetworkInterfaces;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Override))
             {
                 query["Override"] = request.Override;
@@ -10812,6 +10824,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaces))
+            {
+                query["NetworkInterfaces"] = request.NetworkInterfaces;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Override))
             {

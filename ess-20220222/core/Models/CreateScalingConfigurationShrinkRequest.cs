@@ -690,6 +690,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        [NameInMap("NetworkInterfaces")]
+        [Validation(Required=false)]
+        public List<CreateScalingConfigurationShrinkRequestNetworkInterfaces> NetworkInterfaces { get; set; }
+        public class CreateScalingConfigurationShrinkRequestNetworkInterfaces : TeaModel {
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("Ipv6AddressCount")]
+            [Validation(Required=false)]
+            public int? Ipv6AddressCount { get; set; }
+
+            [NameInMap("NetworkInterfaceTrafficMode")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceTrafficMode { get; set; }
+
+            [NameInMap("SecurityGroupIds")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
+
+        }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
