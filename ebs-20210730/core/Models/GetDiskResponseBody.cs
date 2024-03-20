@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// IOPS。
+            /// IOPS.
             /// </summary>
             [NameInMap("Iops")]
             [Validation(Required=false)]
