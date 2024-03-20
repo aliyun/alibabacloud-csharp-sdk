@@ -95,12 +95,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         }
 
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         /// <summary>
         /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// The ID of the request.
@@ -115,6 +123,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
 
     }
 

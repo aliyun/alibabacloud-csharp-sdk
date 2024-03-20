@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the instance.
+        /// The instances.
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
@@ -122,15 +122,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The type of the network in which the instance is deployed. Valid values:
                 /// 
-                /// *   **4**: the Internet and VPCs
-                /// *   **5**: VPCs
+                /// *   **4**: Internet and VPC
+                /// *   **5**: VPC
                 /// </summary>
                 [NameInMap("DeployType")]
                 [Validation(Required=false)]
                 public int? DeployType { get; set; }
 
                 /// <summary>
-                /// The disk size of the instance. Unit: GB
+                /// The disk size. Unit: GB.
                 /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
@@ -202,14 +202,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string IoMaxSpec { get; set; }
 
                 /// <summary>
-                /// The ID of the key that is used for disk encryption in the region where the instance resides.
+                /// The ID of the key that is used for disk encryption in the region where the instance is deployed.
                 /// </summary>
                 [NameInMap("KmsKeyId")]
                 [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// The retention period of messages on the instance. Unit: hours.
+                /// The retention period of messages in the instance. Unit: hours.
                 /// </summary>
                 [NameInMap("MsgRetain")]
                 [Validation(Required=false)]
@@ -225,8 +225,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **0**: the subscription billing method
-                /// *   **1**: the pay-as-you-go billing method
+                /// *   **0**: subscription
+                /// *   **1**: pay-as-you-go
                 /// </summary>
                 [NameInMap("PaidType")]
                 [Validation(Required=false)]
@@ -265,17 +265,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string SaslDomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The security group to which the instance belongs.
+                /// The security group of the instance.
                 /// 
                 /// *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
-                /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
+                /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.
                 /// </summary>
                 [NameInMap("SecurityGroup")]
                 [Validation(Required=false)]
                 public string SecurityGroup { get; set; }
 
                 /// <summary>
-                /// The status of the instance. Valid values:
+                /// The instance status. Valid values:
                 /// 
                 /// *   **0**: pending
                 /// *   **1**: preparing hardware resources
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
                 /// <summary>
-                /// The maximum number of topics that can be created on the instance.
+                /// The maximum number of topics on the instance.
                 /// </summary>
                 [NameInMap("TopicNumLimit")]
                 [Validation(Required=false)]
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
                 /// <summary>
-                /// The number of used consumer groups.
+                /// The number of used groups.
                 /// </summary>
                 [NameInMap("UsedGroupCount")]
                 [Validation(Required=false)]
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC) in which the instance is deployed.
+                /// The virtual private cloud (VPC) ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

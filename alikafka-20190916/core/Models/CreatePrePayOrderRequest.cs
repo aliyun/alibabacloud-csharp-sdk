@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string DiskType { get; set; }
 
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public int? Duration { get; set; }
+
         /// <summary>
         /// The Internet traffic for the instance.
         /// 
@@ -145,6 +149,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("IoMaxSpec")]
         [Validation(Required=false)]
         public string IoMaxSpec { get; set; }
+
+        [NameInMap("PaidType")]
+        [Validation(Required=false)]
+        public int? PaidType { get; set; }
 
         /// <summary>
         /// The number of partitions. We recommend that you configure this parameter.
