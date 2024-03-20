@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class CreateGroupIdResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID. This parameter is a common parameter.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

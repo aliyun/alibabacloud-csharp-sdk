@@ -9,23 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class BatchQuerySessionByClientIdsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The status list of all queried ApsaraMQ for MQTT clients.
+        /// </summary>
         [NameInMap("OnlineStatusList")]
         [Validation(Required=false)]
         public List<BatchQuerySessionByClientIdsResponseBodyOnlineStatusList> OnlineStatusList { get; set; }
         public class BatchQuerySessionByClientIdsResponseBodyOnlineStatusList : TeaModel {
-            [NameInMap("OnlineStatus")]
-            [Validation(Required=false)]
-            public bool? OnlineStatus { get; set; }
-
+            /// <summary>
+            /// The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).
+            /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
+            /// <summary>
+            /// Indicates whether the ApsaraMQ for MQTT client is online. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
+            [NameInMap("OnlineStatus")]
+            [Validation(Required=false)]
+            public bool? OnlineStatus { get; set; }
+
         }
+
+        /// <summary>
+        /// The request ID. This parameter is a common parameter.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
