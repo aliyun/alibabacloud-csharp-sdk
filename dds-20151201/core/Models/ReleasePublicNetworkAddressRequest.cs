@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ReleasePublicNetworkAddressRequest : TeaModel {
+        [NameInMap("ConnectionType")]
+        [Validation(Required=false)]
+        public string ConnectionType { get; set; }
+
         /// <summary>
         /// The instance ID.
         /// 

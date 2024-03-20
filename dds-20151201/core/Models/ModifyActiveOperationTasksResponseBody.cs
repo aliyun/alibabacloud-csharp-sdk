@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class RenewDBInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the order.
-        /// </summary>
-        [NameInMap("OrderId")]
+    public class ModifyActiveOperationTasksResponseBody : TeaModel {
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Ids { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
