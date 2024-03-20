@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// An array that consists of performance metrics.
+        /// Details of the performance metrics.
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to return the parameter overview.
+        /// 
+        /// *   **false** (default): The parameter overview is returned.
+        /// *   **true**: The parameter overview is not returned.
+        /// </summary>
         [NameInMap("EnableDetail")]
         [Validation(Required=false)]
         public bool? EnableDetail { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// The prefix of the proxy endpoint. Enter a custom prefix.
+        /// The prefix of the proxy endpoint Enter a custom prefix.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
+        /// The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.
         /// 
         /// >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.
         /// </summary>

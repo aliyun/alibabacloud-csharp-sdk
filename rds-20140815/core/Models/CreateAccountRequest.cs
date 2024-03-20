@@ -59,10 +59,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The account type. Valid values:
         /// 
-        /// *   **Normal**: standard account
-        /// *   **Super**: privileged account
+        /// *   **Normal**: standard account (default).
+        /// *   **Super**: privileged account.
+        /// *   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.
         /// 
-        /// Default value: **Normal**.
+        /// Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](~~170736~~).
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]

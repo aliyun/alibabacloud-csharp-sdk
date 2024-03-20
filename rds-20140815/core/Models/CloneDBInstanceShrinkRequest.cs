@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// This parameter is reserved. You do not need to specify this parameter.
+        /// An invalid parameter. You do not need to specify this parameter.
         /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
