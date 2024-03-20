@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryDomainListResponseBodyDataDomain> Domain { get; set; }
             public class QueryDomainListResponseBodyDataDomain : TeaModel {
+                [NameInMap("Ccompany")]
+                [Validation(Required=false)]
+                public string Ccompany { get; set; }
+
                 [NameInMap("DomainAuditStatus")]
                 [Validation(Required=false)]
                 public string DomainAuditStatus { get; set; }

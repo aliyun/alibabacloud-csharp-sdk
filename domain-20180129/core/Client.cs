@@ -3437,6 +3437,10 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
+            {
+                query["Ccompany"] = request.Ccompany;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainGroupId))
             {
                 query["DomainGroupId"] = request.DomainGroupId;
@@ -3524,6 +3528,10 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
+            {
+                query["Ccompany"] = request.Ccompany;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainGroupId))
             {
                 query["DomainGroupId"] = request.DomainGroupId;
@@ -11485,6 +11493,13 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.
+          *
+          * @param request ScrollDomainListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ScrollDomainListResponse
+         */
         public ScrollDomainListResponse ScrollDomainListWithOptions(ScrollDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11600,6 +11615,13 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ScrollDomainListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.
+          *
+          * @param request ScrollDomainListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ScrollDomainListResponse
+         */
         public async Task<ScrollDomainListResponse> ScrollDomainListWithOptionsAsync(ScrollDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11715,12 +11737,24 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<ScrollDomainListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.
+          *
+          * @param request ScrollDomainListRequest
+          * @return ScrollDomainListResponse
+         */
         public ScrollDomainListResponse ScrollDomainList(ScrollDomainListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ScrollDomainListWithOptions(request, runtime);
         }
 
+        /**
+          * If you have a large number of domain names, a slow response may occur when you call an API operation to query domain names. In this case, you can call this operation to query domain names more quickly. When you call this operation for the first time, specify the request parameters except ScrollId. A scroll ID is returned without other data. In the second request, use the scroll ID obtained from the previous response. In subsequent requests, the newly specified request parameters do not take effect, and the request parameters that are specified in the first request prevail.
+          *
+          * @param request ScrollDomainListRequest
+          * @return ScrollDomainListResponse
+         */
         public async Task<ScrollDomainListResponse> ScrollDomainListAsync(ScrollDomainListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainSpecialBizDetailRequest : TeaModel {
+        /// <summary>
+        /// The business ID.
+        /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public long? BizId { get; set; }
 
+        /// <summary>
+        /// The IP address of the client.
+        /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }

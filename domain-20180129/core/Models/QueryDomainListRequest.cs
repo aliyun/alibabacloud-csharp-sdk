@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainListRequest : TeaModel {
+        [NameInMap("Ccompany")]
+        [Validation(Required=false)]
+        public string Ccompany { get; set; }
+
         [NameInMap("DomainGroupId")]
         [Validation(Required=false)]
         public string DomainGroupId { get; set; }
