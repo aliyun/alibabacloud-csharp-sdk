@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("GmtCreateTime")]
+            [Validation(Required=false)]
+            public string GmtCreateTime { get; set; }
+
             [NameInMap("LaboratoryId")]
             [Validation(Required=false)]
             public string LaboratoryId { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("ResidualFlow")]
+            [Validation(Required=false)]
+            public long? ResidualFlow { get; set; }
 
             [NameInMap("SceneId")]
             [Validation(Required=false)]

@@ -1195,6 +1195,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["CrowdId"] = request.CrowdId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdTargetType))
+            {
+                body["CrowdTargetType"] = request.CrowdTargetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugCrowdId))
             {
                 body["DebugCrowdId"] = request.DebugCrowdId;
@@ -1234,6 +1238,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAA))
             {
                 body["NeedAA"] = request.NeedAA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RandomFlow))
+            {
+                body["RandomFlow"] = request.RandomFlow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservedBuckets))
             {
@@ -1271,6 +1279,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["CrowdId"] = request.CrowdId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdTargetType))
+            {
+                body["CrowdTargetType"] = request.CrowdTargetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugCrowdId))
             {
                 body["DebugCrowdId"] = request.DebugCrowdId;
@@ -1310,6 +1322,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAA))
             {
                 body["NeedAA"] = request.NeedAA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RandomFlow))
+            {
+                body["RandomFlow"] = request.RandomFlow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservedBuckets))
             {
@@ -4839,6 +4855,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["LayerId"] = request.LayerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -4874,6 +4894,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayerId))
             {
                 query["LayerId"] = request.LayerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -7483,6 +7507,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["CrowdId"] = request.CrowdId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdTargetType))
+            {
+                body["CrowdTargetType"] = request.CrowdTargetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugCrowdId))
             {
                 body["DebugCrowdId"] = request.DebugCrowdId;
@@ -7522,6 +7550,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAA))
             {
                 body["NeedAA"] = request.NeedAA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RandomFlow))
+            {
+                body["RandomFlow"] = request.RandomFlow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservcedBuckets))
             {
@@ -7559,6 +7591,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["CrowdId"] = request.CrowdId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdTargetType))
+            {
+                body["CrowdTargetType"] = request.CrowdTargetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugCrowdId))
             {
                 body["DebugCrowdId"] = request.DebugCrowdId;
@@ -7598,6 +7634,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAA))
             {
                 body["NeedAA"] = request.NeedAA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RandomFlow))
+            {
+                body["RandomFlow"] = request.RandomFlow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservcedBuckets))
             {

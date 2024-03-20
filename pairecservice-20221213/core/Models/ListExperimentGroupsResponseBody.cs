@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string CrowdId { get; set; }
 
+            [NameInMap("CrowdTargetType")]
+            [Validation(Required=false)]
+            public string CrowdTargetType { get; set; }
+
             [NameInMap("DebugCrowdId")]
             [Validation(Required=false)]
             public string DebugCrowdId { get; set; }
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Filter { get; set; }
 
+            [NameInMap("HoldingBuckets")]
+            [Validation(Required=false)]
+            public string HoldingBuckets { get; set; }
+
             [NameInMap("LaboratoryId")]
             [Validation(Required=false)]
             public string LaboratoryId { get; set; }
@@ -68,6 +76,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
+
+            [NameInMap("RandomFlow")]
+            [Validation(Required=false)]
+            public long? RandomFlow { get; set; }
 
             [NameInMap("ReservedBuckets")]
             [Validation(Required=false)]
