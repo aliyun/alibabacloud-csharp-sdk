@@ -199,6 +199,40 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("VoiceStrategy")]
+            [Validation(Required=false)]
+            public ChatResponseBodyMessagesVoiceStrategy VoiceStrategy { get; set; }
+            public class ChatResponseBodyMessagesVoiceStrategy : TeaModel {
+                [NameInMap("AsrMaxEndSilence")]
+                [Validation(Required=false)]
+                public string AsrMaxEndSilence { get; set; }
+
+                [NameInMap("CollectNumber")]
+                [Validation(Required=false)]
+                public bool? CollectNumber { get; set; }
+
+                [NameInMap("HangUp")]
+                [Validation(Required=false)]
+                public bool? HangUp { get; set; }
+
+                [NameInMap("Interruptible")]
+                [Validation(Required=false)]
+                public bool? Interruptible { get; set; }
+
+                [NameInMap("MaxDigits")]
+                [Validation(Required=false)]
+                public long? MaxDigits { get; set; }
+
+                [NameInMap("ReplyTimeout")]
+                [Validation(Required=false)]
+                public long? ReplyTimeout { get; set; }
+
+                [NameInMap("Terminator")]
+                [Validation(Required=false)]
+                public string Terminator { get; set; }
+
+            }
+
             [NameInMap("VoiceTitle")]
             [Validation(Required=false)]
             public string VoiceTitle { get; set; }

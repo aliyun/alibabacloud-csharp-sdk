@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class CreateBotResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateBotResponseBody Body { get; set; }
 
     }
