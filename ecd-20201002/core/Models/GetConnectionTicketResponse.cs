@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetConnectionTicketResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
 
-        [NameInMap("TaskStatus")]
-        [Validation(Required=true)]
-        public string TaskStatus { get; set; }
-
-        [NameInMap("Ticket")]
-        [Validation(Required=true)]
-        public string Ticket { get; set; }
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public GetConnectionTicketResponseBody Body { get; set; }
 
     }
 

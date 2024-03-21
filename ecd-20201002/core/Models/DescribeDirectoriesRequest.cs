@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientId { get; set; }
 
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public List<string> DirectoryId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 
