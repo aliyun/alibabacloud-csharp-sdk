@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The local Internet service provider (ISP).
         /// 
-        /// > In most cases, the value is Alibaba or Alibaba Cloud.
+        /// >  In most cases, the value is Alibaba or Alibaba Cloud.
         /// </summary>
         [NameInMap("CloudIsp")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The local port.
         /// 
-        /// >  This parameter is required only if you set the **TupleType** parameter to **5**.
+        /// >  This parameter is required only if you set GroupBy to CloudPort.
         /// </summary>
         [NameInMap("CloudPort")]
         [Validation(Required=false)]
@@ -80,7 +80,27 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string InstanceListShrink { get; set; }
 
         /// <summary>
-        /// The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.
+        /// The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Rtt
+        /// *   ByteCount
+        /// *   PacketCount
+        /// *   InByteCount
+        /// *   OutByteCount
+        /// *   InPacketCount
+        /// *   OutPacketCount
+        /// *   InRetranCount
+        /// *   OutRetranCount
+        /// *   InDupAckCount
+        /// *   OutDupAckCount
+        /// *   InOutOrderCount
+        /// *   OutOutOrderCount
+        /// *   RetranCount
+        /// *   OutOrderCount
+        /// *   DupAckCount
+        /// *   RetransmitRate
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
@@ -89,7 +109,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The remote city.
         /// 
-        /// > This parameter is required only if you set **TupleType** to **5**.
+        /// >  This parameter is required only if you set **TupleType** to **2** or **5**.
         /// </summary>
         [NameInMap("OtherCity")]
         [Validation(Required=false)]
@@ -98,7 +118,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// The remote country.
         /// 
-        /// > This parameter is required only if you set **TupleType** to **5**.
+        /// >  This parameter is required only if you set **TupleType** to **2** or **5**.
         /// </summary>
         [NameInMap("OtherCountry")]
         [Validation(Required=false)]
@@ -158,7 +178,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
+        /// Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.
         /// </summary>
         [NameInMap("TopN")]
         [Validation(Required=false)]
@@ -178,7 +198,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
         /// 
-        /// >  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.
+        /// >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
         /// </summary>
         [NameInMap("UseMultiAccount")]
         [Validation(Required=false)]

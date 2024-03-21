@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class GetInternetTupleResponseBody : TeaModel {
         /// <summary>
-        /// The ranking result of instances by Internet traffic.
+        /// The ranking result of Internet traffic data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <summary>
             /// The access point of Alibaba Cloud.
             /// 
-            /// > This parameter is valid only when the value of **InstanceId** is the instance ID of an Anycast elastic IP address (EIP).
+            /// >  This parameter is valid only if you set **InstanceId** to the instance ID of an Anycast elastic IP address (EIP).
             /// </summary>
             [NameInMap("AccessRegion")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public string CloudPort { get; set; }
 
             /// <summary>
-            /// The product code of the instance to which the local IP address belongs.
+            /// The service code of the instance to which the local IP address belongs.
             /// </summary>
             [NameInMap("CloudProduct")]
             [Validation(Required=false)]
@@ -89,17 +89,17 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public string CloudProvince { get; set; }
 
             /// <summary>
-            /// The direction of the Internet traffic. Valid values:
+            /// The direction of Internet traffic. Valid values:
             /// 
-            /// - **in**: inbound
-            /// - **out**: outbound
+            /// *   **in**: inbound
+            /// *   **out**: outbound
             /// </summary>
             [NameInMap("Direction")]
             [Validation(Required=false)]
             public string Direction { get; set; }
 
             /// <summary>
-            /// The inbound traffic volume. Unit: bytes.
+            /// The inbound traffic volume. Unit: bytes.
             /// </summary>
             [NameInMap("InByteCount")]
             [Validation(Required=false)]
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public double? InRetranCount { get; set; }
 
             /// <summary>
-            /// The instance ID to which the local IP address belongs.
+            /// The ID of the instance to which the local IP address belongs.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The remote city. In most cases, this parameter is empty if the value of **OtherCountry** is not China.
+            /// The remote city. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
             /// </summary>
             [NameInMap("OtherCity")]
             [Validation(Required=false)]
@@ -169,21 +169,21 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public string OtherPort { get; set; }
 
             /// <summary>
-            /// The product code of the instance to which the remote IP address belongs. If the IP address is not in the cloud, this parameter is empty.
+            /// The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.
             /// </summary>
             [NameInMap("OtherProduct")]
             [Validation(Required=false)]
             public string OtherProduct { get; set; }
 
             /// <summary>
-            /// The remote province. In most cases, this parameter is empty if the value of **OtherCountry** is not China.
+            /// The remote province. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
             /// </summary>
             [NameInMap("OtherProvince")]
             [Validation(Required=false)]
             public string OtherProvince { get; set; }
 
             /// <summary>
-            /// The outbound traffic volume. Unit: bytes.
+            /// The outbound traffic volume. Unit: bytes.
             /// </summary>
             [NameInMap("OutByteCount")]
             [Validation(Required=false)]
@@ -231,12 +231,15 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <summary>
+            /// The retransmission rate of TCP packets.
+            /// </summary>
             [NameInMap("RetransmitRate")]
             [Validation(Required=false)]
             public double? RetransmitRate { get; set; }
 
             /// <summary>
-            /// The round-trip time (RTT). Unit: milliseconds.
+            /// The round-trip time (RTT). Unit: milliseconds.
             /// </summary>
             [NameInMap("Rtt")]
             [Validation(Required=false)]

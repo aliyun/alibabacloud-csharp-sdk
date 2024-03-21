@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public string OtherPort { get; set; }
 
             /// <summary>
-            /// The remote region where the remote IP address resides.
+            /// The remote region where the **remote IP address** resides.
             /// </summary>
             [NameInMap("OtherRegion")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             public string ThisPort { get; set; }
 
             /// <summary>
-            /// The local region where the local IP address resides.
+            /// The local region where the **local IP address** resides.
             /// </summary>
             [NameInMap("ThisRegion")]
             [Validation(Required=false)]

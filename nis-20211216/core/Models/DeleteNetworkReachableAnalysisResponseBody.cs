@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNetworkReachableAnalysisResponseBody : TeaModel {
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public bool? Data { get; set; }
+
         /// <summary>
         /// The request ID.
         /// </summary>
