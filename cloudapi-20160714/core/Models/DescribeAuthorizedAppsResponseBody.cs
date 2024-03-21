@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                [NameInMap("StageAlias")]
+                [Validation(Required=false)]
+                public string StageAlias { get; set; }
+
                 /// <summary>
                 /// The name of the runtime environment. Valid values:
                 /// 

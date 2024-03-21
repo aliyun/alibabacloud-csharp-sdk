@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("StageAlias")]
+                [Validation(Required=false)]
+                public string StageAlias { get; set; }
+
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
                 public string StageName { get; set; }

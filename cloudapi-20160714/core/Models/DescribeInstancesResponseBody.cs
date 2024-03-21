@@ -205,6 +205,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 }
 
+                [NameInMap("PrivateDnsList")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList PrivateDnsList { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList : TeaModel {
+                    [NameInMap("PrivateDns")]
+                    [Validation(Required=false)]
+                    public List<string> PrivateDns { get; set; }
+
+                }
+
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

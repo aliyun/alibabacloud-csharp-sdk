@@ -1,3 +1,12 @@
+2024-03-21 Version: 3.6.2
+- Update API DescribeApiGroup: update response param.
+- Update API DescribeApisByApp: update response param.
+- Update API DescribeAuthorizedApps: update response param.
+- Update API DescribeHistoryApis: update response param.
+- Update API DescribeInstances: update response param.
+- Update API DescribePluginApis: update response param.
+
+
 2024-03-14 Version: 3.6.1
 - Update API CreateInstance: update param HttpsPolicy.
 - Update API DescribeApi: update response param.

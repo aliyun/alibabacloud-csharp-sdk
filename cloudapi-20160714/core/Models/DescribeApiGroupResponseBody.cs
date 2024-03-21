@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiGroupResponseBodyCustomDomainsDomainItem> DomainItem { get; set; }
             public class DescribeApiGroupResponseBodyCustomDomainsDomainItem : TeaModel {
+                [NameInMap("BindStageAlias")]
+                [Validation(Required=false)]
+                public string BindStageAlias { get; set; }
+
                 /// <summary>
                 /// The environment in which the associated API group runs.
                 /// </summary>
