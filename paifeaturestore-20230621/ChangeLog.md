@@ -1,3 +1,6 @@
+2024-03-21 Version: 1.1.3
+- Generated csharp 2023-06-21 for PaiFeatureStore.
+
 2024-03-20 Version: 1.1.2
 - Update API CreateModelFeatureTrainingSetFGTable: add param RegionId.
 - Update API ExportModelFeatureTrainingSetFGTable: add param RegionId.
