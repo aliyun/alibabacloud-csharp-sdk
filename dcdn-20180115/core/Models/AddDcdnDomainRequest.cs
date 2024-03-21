@@ -25,6 +25,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// Computing service type. Valid values:
+        /// 
+        /// *   **routine**
+        /// *   **image**
+        /// *   **cloudFunction**
+        /// </summary>
         [NameInMap("FunctionType")]
         [Validation(Required=false)]
         public string FunctionType { get; set; }
@@ -44,6 +51,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The Acceleration scen. Supported:
+        /// 
+        /// * apiscene:API acceleration.
+        /// * webservicescene: accelerate website business.
+        /// * staticscene: video and graphic acceleration.
+        /// * (Empty): no scene.
+        /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }

@@ -9,24 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeHighlightInfoResponseBody : TeaModel {
+        /// <summary>
+        /// The model of the highlighted data.
+        /// </summary>
         [NameInMap("DataModule")]
         [Validation(Required=false)]
         public List<DescribeHighlightInfoResponseBodyDataModule> DataModule { get; set; }
         public class DescribeHighlightInfoResponseBodyDataModule : TeaModel {
+            /// <summary>
+            /// The highlighted data.
+            /// </summary>
             [NameInMap("Hit")]
             [Validation(Required=false)]
             public string Hit { get; set; }
 
+            /// <summary>
+            /// The type of the highlight data.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// Complete data.
+            /// </summary>
             [NameInMap("Raw")]
             [Validation(Required=false)]
             public string Raw { get; set; }
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

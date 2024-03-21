@@ -51,6 +51,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string DomainStatus { get; set; }
 
+            /// <summary>
+            /// Computing service type. Valid values:
+            /// 
+            /// *   **routine**
+            /// *   **image**
+            /// *   **cloudFunction**
+            /// </summary>
             [NameInMap("FunctionType")]
             [Validation(Required=false)]
             public string FunctionType { get; set; }
@@ -93,6 +100,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string SSLPub { get; set; }
 
+            /// <summary>
+            /// Acceleration scenario. Valid values:
+            /// 
+            /// *   **apiscene**: API acceleration.
+            /// *   **webservicescene**: website acceleration.
+            /// *   **staticscene**: video, image, and text acceleration.
+            /// *   **an empty string**: no acceleration scenario is used.
+            /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
@@ -150,7 +165,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     /// <summary>
                     /// The type of the origin server. Valid values:
                     /// 
-                    /// *   **ipaddr**: an origin IP address
+                    /// *   **ipaddr**: an IP address
                     /// *   **domain**: an origin domain name
                     /// *   **oss**: the domain name of an Object Storage Service (OSS) bucket
                     /// </summary>
@@ -159,7 +174,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// The weight of the origin server if multiple origin servers have been specified.
+                    /// The weight of the origin server if multiple origin servers are specified.
                     /// </summary>
                     [NameInMap("Weight")]
                     [Validation(Required=false)]

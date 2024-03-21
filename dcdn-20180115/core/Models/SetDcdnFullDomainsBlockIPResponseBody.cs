@@ -11,20 +11,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class SetDcdnFullDomainsBlockIPResponseBody : TeaModel {
         /// <summary>
         /// The response code.
+        /// 
+        /// If the value of Code is not 0, specific required parameters are missing or the parameter format is invalid.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The status code that indicates the result.
+        /// The response message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

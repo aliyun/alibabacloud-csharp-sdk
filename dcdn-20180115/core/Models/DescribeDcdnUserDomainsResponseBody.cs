@@ -104,13 +104,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string Sandbox { get; set; }
 
-                /// <summary>
-                /// 场景。支持：
-                /// - **apiscene**：API加速。
-                /// - **webservicescene**：网站业务加速。
-                /// - **staticscene**：视频、图文类加速。
-                /// - **（空）**：没有场景。
-                /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }

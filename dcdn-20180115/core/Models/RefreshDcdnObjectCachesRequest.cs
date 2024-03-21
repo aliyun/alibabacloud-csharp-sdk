@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class RefreshDcdnObjectCachesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.
+        /// 
+        /// *   **true**: refresh all resources in the directory.
+        /// *   **false**: refresh the changed resources in the directory.
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

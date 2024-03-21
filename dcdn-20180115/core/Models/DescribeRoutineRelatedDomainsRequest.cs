@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineRelatedDomainsRequest : TeaModel {
+        /// <summary>
+        /// The name of the routine. The name is unique in the same account.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

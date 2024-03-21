@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// The accelerated domain name that was queried.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the content returned.
+        /// The type of the returned data.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The network traffic that was collected at each interval.
+        /// The traffic that was collected at each interval.
         /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 /// <summary>
                 /// The data usage in a specific scenario.
                 /// 
-                /// > SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
+                /// >  This parameter indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
                 /// </summary>
                 [NameInMap("SpecialValue")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The amount of resource usage.
+                /// The usage.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

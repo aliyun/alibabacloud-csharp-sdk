@@ -95,11 +95,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   Dynamic Content Delivery Network (DCDN) is activated.
-          * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-          * *   You can call this operation up to 30 times per second per account.
+          * > *   Dynamic Content Delivery Network (DCDN) is activated.
+          * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+          * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+          * > *   You can call this operation up to 30 times per second per account.
           *
           * @param request AddDcdnDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -177,11 +176,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   Dynamic Content Delivery Network (DCDN) is activated.
-          * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-          * *   You can call this operation up to 30 times per second per account.
+          * > *   Dynamic Content Delivery Network (DCDN) is activated.
+          * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+          * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+          * > *   You can call this operation up to 30 times per second per account.
           *
           * @param request AddDcdnDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -259,11 +257,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   Dynamic Content Delivery Network (DCDN) is activated.
-          * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-          * *   You can call this operation up to 30 times per second per account.
+          * > *   Dynamic Content Delivery Network (DCDN) is activated.
+          * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+          * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+          * > *   You can call this operation up to 30 times per second per account.
           *
           * @param request AddDcdnDomainRequest
           * @return AddDcdnDomainResponse
@@ -275,11 +272,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   Dynamic Content Delivery Network (DCDN) is activated.
-          * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-          * *   You can call this operation up to 30 times per second per account.
+          * > *   Dynamic Content Delivery Network (DCDN) is activated.
+          * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+          * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+          * > *   You can call this operation up to 30 times per second per account.
           *
           * @param request AddDcdnDomainRequest
           * @return AddDcdnDomainResponse
@@ -2098,6 +2094,128 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CommitStagingRoutineCodeWithOptionsAsync(request, runtime);
+        }
+
+        public CreateDcdnCertificateSigningRequestResponse CreateDcdnCertificateSigningRequestWithOptions(CreateDcdnCertificateSigningRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
+            {
+                query["CommonName"] = request.CommonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
+            {
+                query["Country"] = request.Country;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
+            {
+                query["Organization"] = request.Organization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
+            {
+                query["OrganizationUnit"] = request.OrganizationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SANs))
+            {
+                query["SANs"] = request.SANs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDcdnCertificateSigningRequest",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDcdnCertificateSigningRequestResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateDcdnCertificateSigningRequestResponse> CreateDcdnCertificateSigningRequestWithOptionsAsync(CreateDcdnCertificateSigningRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
+            {
+                query["CommonName"] = request.CommonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
+            {
+                query["Country"] = request.Country;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Organization))
+            {
+                query["Organization"] = request.Organization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationUnit))
+            {
+                query["OrganizationUnit"] = request.OrganizationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SANs))
+            {
+                query["SANs"] = request.SANs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDcdnCertificateSigningRequest",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDcdnCertificateSigningRequestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateDcdnCertificateSigningRequestResponse CreateDcdnCertificateSigningRequest(CreateDcdnCertificateSigningRequestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDcdnCertificateSigningRequestWithOptions(request, runtime);
+        }
+
+        public async Task<CreateDcdnCertificateSigningRequestResponse> CreateDcdnCertificateSigningRequestAsync(CreateDcdnCertificateSigningRequestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDcdnCertificateSigningRequestWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -10497,7 +10615,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         /**
           * * You can call this operation up to 10 times per second per account.
           * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-          * **Time granularity**:
+          * **Time granularity**
           * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
           * |Time granularity|Maximum time range per query|Historical data available|Data delay|
           * |---|---|---|---|
@@ -10567,7 +10685,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         /**
           * * You can call this operation up to 10 times per second per account.
           * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-          * **Time granularity**:
+          * **Time granularity**
           * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
           * |Time granularity|Maximum time range per query|Historical data available|Data delay|
           * |---|---|---|---|
@@ -10637,7 +10755,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         /**
           * * You can call this operation up to 10 times per second per account.
           * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-          * **Time granularity**:
+          * **Time granularity**
           * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
           * |Time granularity|Maximum time range per query|Historical data available|Data delay|
           * |---|---|---|---|
@@ -10657,7 +10775,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         /**
           * * You can call this operation up to 10 times per second per account.
           * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-          * **Time granularity**:
+          * **Time granularity**
           * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
           * |Time granularity|Maximum time range per query|Historical data available|Data delay|
           * |---|---|---|---|
@@ -11880,6 +11998,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnIpInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+          *
+          * @param request DescribeDcdnIpaDomainCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDcdnIpaDomainCidrResponse
+         */
         public DescribeDcdnIpaDomainCidrResponse DescribeDcdnIpaDomainCidrWithOptions(DescribeDcdnIpaDomainCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11907,6 +12032,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeDcdnIpaDomainCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+          *
+          * @param request DescribeDcdnIpaDomainCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDcdnIpaDomainCidrResponse
+         */
         public async Task<DescribeDcdnIpaDomainCidrResponse> DescribeDcdnIpaDomainCidrWithOptionsAsync(DescribeDcdnIpaDomainCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11934,12 +12066,24 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeDcdnIpaDomainCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+          *
+          * @param request DescribeDcdnIpaDomainCidrRequest
+          * @return DescribeDcdnIpaDomainCidrResponse
+         */
         public DescribeDcdnIpaDomainCidrResponse DescribeDcdnIpaDomainCidr(DescribeDcdnIpaDomainCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDcdnIpaDomainCidrWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+          *
+          * @param request DescribeDcdnIpaDomainCidrRequest
+          * @return DescribeDcdnIpaDomainCidrResponse
+         */
         public async Task<DescribeDcdnIpaDomainCidrResponse> DescribeDcdnIpaDomainCidrAsync(DescribeDcdnIpaDomainCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16008,6 +16152,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeDcdnUserTagsWithOptionsAsync(runtime);
         }
 
+        /**
+          * You can call this operation up to 30 times per second per account.
+          *
+          * @param request DescribeDcdnUserVipsByDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDcdnUserVipsByDomainResponse
+         */
         public DescribeDcdnUserVipsByDomainResponse DescribeDcdnUserVipsByDomainWithOptions(DescribeDcdnUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16039,6 +16190,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeDcdnUserVipsByDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 30 times per second per account.
+          *
+          * @param request DescribeDcdnUserVipsByDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDcdnUserVipsByDomainResponse
+         */
         public async Task<DescribeDcdnUserVipsByDomainResponse> DescribeDcdnUserVipsByDomainWithOptionsAsync(DescribeDcdnUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16070,12 +16228,24 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeDcdnUserVipsByDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 30 times per second per account.
+          *
+          * @param request DescribeDcdnUserVipsByDomainRequest
+          * @return DescribeDcdnUserVipsByDomainResponse
+         */
         public DescribeDcdnUserVipsByDomainResponse DescribeDcdnUserVipsByDomain(DescribeDcdnUserVipsByDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDcdnUserVipsByDomainWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 30 times per second per account.
+          *
+          * @param request DescribeDcdnUserVipsByDomainRequest
+          * @return DescribeDcdnUserVipsByDomainResponse
+         */
         public async Task<DescribeDcdnUserVipsByDomainResponse> DescribeDcdnUserVipsByDomainAsync(DescribeDcdnUserVipsByDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18480,6 +18650,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await DescribeHighlightInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * * You can call this operation up to 5 times per second per account.
+          * * The usage data indicates the number of requests.
+          * **Time granularity:** This operation supports only the time granularity of 1 hour.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 hour|31 days|90 days|3 to 4 hours|
+          *
+          * @param request DescribeKvUsageDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKvUsageDataResponse
+         */
         public DescribeKvUsageDataResponse DescribeKvUsageDataWithOptions(DescribeKvUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18531,6 +18713,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeKvUsageDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * * You can call this operation up to 5 times per second per account.
+          * * The usage data indicates the number of requests.
+          * **Time granularity:** This operation supports only the time granularity of 1 hour.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 hour|31 days|90 days|3 to 4 hours|
+          *
+          * @param request DescribeKvUsageDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKvUsageDataResponse
+         */
         public async Task<DescribeKvUsageDataResponse> DescribeKvUsageDataWithOptionsAsync(DescribeKvUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18582,12 +18776,34 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<DescribeKvUsageDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * * You can call this operation up to 5 times per second per account.
+          * * The usage data indicates the number of requests.
+          * **Time granularity:** This operation supports only the time granularity of 1 hour.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 hour|31 days|90 days|3 to 4 hours|
+          *
+          * @param request DescribeKvUsageDataRequest
+          * @return DescribeKvUsageDataResponse
+         */
         public DescribeKvUsageDataResponse DescribeKvUsageData(DescribeKvUsageDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKvUsageDataWithOptions(request, runtime);
         }
 
+        /**
+          * * You can call this operation up to 5 times per second per account.
+          * * The usage data indicates the number of requests.
+          * **Time granularity:** This operation supports only the time granularity of 1 hour.
+          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+          * |---|---|---|---|
+          * |1 hour|31 days|90 days|3 to 4 hours|
+          *
+          * @param request DescribeKvUsageDataRequest
+          * @return DescribeKvUsageDataResponse
+         */
         public async Task<DescribeKvUsageDataResponse> DescribeKvUsageDataAsync(DescribeKvUsageDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21498,6 +21714,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await RefreshDcdnObjectCachesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   DCDN supports POST requests in which parameters are sent as a form.
+          * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+          * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+          * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+          * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request RefreshErObjectCachesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RefreshErObjectCachesResponse
+         */
         public RefreshErObjectCachesResponse RefreshErObjectCachesWithOptions(RefreshErObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21541,6 +21769,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<RefreshErObjectCachesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   DCDN supports POST requests in which parameters are sent as a form.
+          * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+          * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+          * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+          * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request RefreshErObjectCachesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RefreshErObjectCachesResponse
+         */
         public async Task<RefreshErObjectCachesResponse> RefreshErObjectCachesWithOptionsAsync(RefreshErObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21584,12 +21824,34 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return TeaModel.ToObject<RefreshErObjectCachesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   DCDN supports POST requests in which parameters are sent as a form.
+          * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+          * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+          * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+          * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request RefreshErObjectCachesRequest
+          * @return RefreshErObjectCachesResponse
+         */
         public RefreshErObjectCachesResponse RefreshErObjectCaches(RefreshErObjectCachesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefreshErObjectCachesWithOptions(request, runtime);
         }
 
+        /**
+          * *   DCDN supports POST requests in which parameters are sent as a form.
+          * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+          * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+          * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+          * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request RefreshErObjectCachesRequest
+          * @return RefreshErObjectCachesResponse
+         */
         public async Task<RefreshErObjectCachesResponse> RefreshErObjectCachesAsync(RefreshErObjectCachesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21686,6 +21948,80 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RollbackDcdnStagingConfigWithOptionsAsync(request, runtime);
+        }
+
+        public SetDcdnDomainCSRCertificateResponse SetDcdnDomainCSRCertificateWithOptions(SetDcdnDomainCSRCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerCertificate))
+            {
+                query["ServerCertificate"] = request.ServerCertificate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnDomainCSRCertificate",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnDomainCSRCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetDcdnDomainCSRCertificateResponse> SetDcdnDomainCSRCertificateWithOptionsAsync(SetDcdnDomainCSRCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerCertificate))
+            {
+                query["ServerCertificate"] = request.ServerCertificate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnDomainCSRCertificate",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnDomainCSRCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetDcdnDomainCSRCertificateResponse SetDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDcdnDomainCSRCertificateWithOptions(request, runtime);
+        }
+
+        public async Task<SetDcdnDomainCSRCertificateResponse> SetDcdnDomainCSRCertificateAsync(SetDcdnDomainCSRCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDcdnDomainCSRCertificateWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -22231,7 +22567,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
+          * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
           *
           * @param request SetDcdnFullDomainsBlockIPRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22277,7 +22613,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
+          * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
           *
           * @param request SetDcdnFullDomainsBlockIPRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22323,7 +22659,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
+          * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
           *
           * @param request SetDcdnFullDomainsBlockIPRequest
           * @return SetDcdnFullDomainsBlockIPResponse
@@ -22335,7 +22671,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
+          * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
           *
           * @param request SetDcdnFullDomainsBlockIPRequest
           * @return SetDcdnFullDomainsBlockIPResponse

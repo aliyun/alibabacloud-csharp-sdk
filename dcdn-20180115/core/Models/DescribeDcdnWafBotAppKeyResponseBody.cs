@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafBotAppKeyResponseBody : TeaModel {
+        /// <summary>
+        /// The SDK authentication key for the Alibaba Cloud account.
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
