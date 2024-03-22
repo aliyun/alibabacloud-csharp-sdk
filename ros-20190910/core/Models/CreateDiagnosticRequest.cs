@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string DiagnosticType { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
         /// The name of the product that is diagonosed.
         /// </summary>

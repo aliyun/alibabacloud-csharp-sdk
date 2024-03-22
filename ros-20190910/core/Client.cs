@@ -721,6 +721,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["DiagnosticType"] = request.DiagnosticType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
@@ -755,6 +759,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticType))
             {
                 query["DiagnosticType"] = request.DiagnosticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
@@ -4100,7 +4108,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
           *
           * @param request GetStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4154,7 +4162,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
           *
           * @param request GetStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4208,7 +4216,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
           *
           * @param request GetStackRequest
           * @return GetStackResponse
@@ -4220,7 +4228,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
           *
           * @param request GetStackRequest
           * @return GetStackResponse
