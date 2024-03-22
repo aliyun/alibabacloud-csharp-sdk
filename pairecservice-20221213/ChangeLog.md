@@ -1,3 +1,6 @@
+2024-03-22 Version: 1.1.2
+- Generated csharp 2022-12-13 for PaiRecService.
+
 2024-03-20 Version: 1.1.1
 - Update API CreateExperimentGroup: add param RegionId.
 - Update API CreateExperimentGroup: update param body.
