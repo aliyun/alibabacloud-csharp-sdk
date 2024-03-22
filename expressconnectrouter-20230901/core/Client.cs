@@ -897,9 +897,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociatonId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
             {
-                body["AssociatonId"] = request.AssociatonId;
+                body["AssociationId"] = request.AssociationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -944,9 +944,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociatonId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
             {
-                body["AssociatonId"] = request.AssociatonId;
+                body["AssociationId"] = request.AssociationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {

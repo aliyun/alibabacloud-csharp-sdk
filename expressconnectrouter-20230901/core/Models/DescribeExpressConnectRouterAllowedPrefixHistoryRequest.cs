@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest : TeaModel {
-        [NameInMap("AssociatonId")]
+        [NameInMap("AssociationId")]
         [Validation(Required=false)]
-        public string AssociatonId { get; set; }
+        public string AssociationId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
