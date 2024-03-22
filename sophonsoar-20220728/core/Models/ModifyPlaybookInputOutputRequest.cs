@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ModifyPlaybookInputOutputRequest : TeaModel {
+        /// <summary>
+        /// The executed mode of a playbook. The value is a JSON array.
+        /// </summary>
         [NameInMap("ExeConfig")]
         [Validation(Required=false)]
         public string ExeConfig { get; set; }

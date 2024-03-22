@@ -158,6 +158,18 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string YunCode { get; set; }
 
+            [NameInMap("errCode")]
+            [Validation(Required=false)]
+            public string ErrCode { get; set; }
+
+            [NameInMap("errMsg")]
+            [Validation(Required=false)]
+            public string ErrMsg { get; set; }
+
+            [NameInMap("errTip")]
+            [Validation(Required=false)]
+            public string ErrTip { get; set; }
+
         }
 
         /// <summary>

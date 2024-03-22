@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeExecutePlaybooksRequest : TeaModel {
         /// <summary>
+        /// The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.
+        /// - **ip**: IP entity.
+        /// - **file**: file entity.
+        /// - **process**: process entity.
+        /// - **incident**: incident entity.
+        /// </summary>
+        [NameInMap("InputMode")]
+        [Validation(Required=false)]
+        public string InputMode { get; set; }
+
+        /// <summary>
         /// The language of the content within the request and the response. Valid values:
         /// 
         /// *   **zh**: Chinese (default)
