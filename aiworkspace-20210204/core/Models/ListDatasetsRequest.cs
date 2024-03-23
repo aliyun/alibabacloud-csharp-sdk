@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Properties { get; set; }
 
+        [NameInMap("Provider")]
+        [Validation(Required=false)]
+        public string Provider { get; set; }
+
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }

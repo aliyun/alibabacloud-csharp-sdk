@@ -8,46 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class CreateDatasetRequest : TeaModel {
+    public class Trial : TeaModel {
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
-        [NameInMap("DataSourceType")]
+        [NameInMap("ExperimentId")]
         [Validation(Required=false)]
-        public string DataSourceType { get; set; }
+        public string ExperimentId { get; set; }
 
-        [NameInMap("DataType")]
+        [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
-        public string DataType { get; set; }
+        public string GmtCreateTime { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string GmtModifiedTime { get; set; }
 
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public List<Label> Labels { get; set; }
+        public List<Dictionary<string, object>> Labels { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Options")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Options { get; set; }
-
-        [NameInMap("Property")]
-        [Validation(Required=false)]
-        public string Property { get; set; }
-
-        [NameInMap("Provider")]
-        [Validation(Required=false)]
-        public string Provider { get; set; }
-
-        [NameInMap("ProviderType")]
-        [Validation(Required=false)]
-        public string ProviderType { get; set; }
+        public string OwnerId { get; set; }
 
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -57,9 +45,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
-        [NameInMap("Uri")]
+        [NameInMap("TrialId")]
         [Validation(Required=false)]
-        public string Uri { get; set; }
+        public string TrialId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

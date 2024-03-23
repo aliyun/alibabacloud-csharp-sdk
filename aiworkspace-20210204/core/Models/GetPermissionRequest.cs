@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Creator { get; set; }
 
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public string Resource { get; set; }
+
     }
 
 }
