@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the preemptible instance feature for the resource group. This feature can be enabled only for job resource groups. Valid values:
+        /// 
+        /// *   **True**
+        /// *   **False**
+        /// </summary>
         [NameInMap("EnableSpot")]
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }

@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string LogContent { get; set; }
 
+            /// <summary>
+            /// The number of log entries. A value of 0 indicates that no valid logs are returned.
+            /// </summary>
             [NameInMap("LogSize")]
             [Validation(Required=false)]
             public int? LogSize { get; set; }
