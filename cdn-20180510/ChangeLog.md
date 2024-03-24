@@ -1,3 +1,11 @@
+2024-03-24 Version: 2.4.0
+- Support API BatchDescribeCdnIpInfo.
+- Support API DescribeCdnDomainAtoaLogs.
+- Support API DescribeDomainVerifyData.
+- Support API RefreshObjectCacheByCacheTag.
+- Update API DescribeRefreshTasks: update param ObjectType.
+
+
 2024-02-21 Version: 2.3.0
 - Support API BatchDescribeCdnIpInfo.
 - Support API DescribeCdnDomainAtoaLogs.
