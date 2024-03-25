@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<DescribeGrantRulesToResourceResponseBodyGrantRules> GrantRules { get; set; }
         public class DescribeGrantRulesToResourceResponseBodyGrantRules : TeaModel {
             /// <summary>
-            /// The CEN instance ID.
+            /// The ID of the CEN instance.
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public long? CenOwnerId { get; set; }
 
+            /// <summary>
+            /// The timestamp when the permissions were granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }

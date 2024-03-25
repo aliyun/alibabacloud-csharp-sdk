@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// The information about the tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

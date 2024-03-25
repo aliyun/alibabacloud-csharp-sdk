@@ -10,30 +10,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRouteMapsResponseBody : TeaModel {
         /// <summary>
-        /// The community set on which actions are performed.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
-        /// 
-        /// >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The information about the routing policy.
         /// </summary>
         [NameInMap("RouteMaps")]
         [Validation(Required=false)]
@@ -44,65 +42,83 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenRouteMapsResponseBodyRouteMapsRouteMap> RouteMap { get; set; }
             public class DescribeCenRouteMapsResponseBodyRouteMapsRouteMap : TeaModel {
                 /// <summary>
-                /// The IDs of the source route tables to which the routes belong.
+                /// The match method that is used to match routes based on the AS path.
+                /// 
+                /// *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
+                /// *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
                 /// </summary>
                 [NameInMap("AsPathMatchMode")]
                 [Validation(Required=false)]
                 public string AsPathMatchMode { get; set; }
 
                 /// <summary>
-                /// The number of entries returned.
+                /// The CEN instance ID.
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// The number of entries returned per page.
+                /// The region ID of the routing policy.
                 /// </summary>
                 [NameInMap("CenRegionId")]
                 [Validation(Required=false)]
                 public string CenRegionId { get; set; }
 
                 /// <summary>
-                /// The action performed on a route that meets the match conditions.
+                /// The match method that is used to evaluate routes based on the prefix. Valid values:
                 /// 
-                /// *   **Permit**: the route is permitted.
-                /// *   **Deny**: the route is denied.
+                /// *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
+                /// 
+                /// For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.
+                /// 
+                /// *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
+                /// 
+                /// For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
                 /// </summary>
                 [NameInMap("CidrMatchMode")]
                 [Validation(Required=false)]
                 public string CidrMatchMode { get; set; }
 
                 /// <summary>
-                /// The direction in which the routing policy is applied. Valid values:
+                /// The match method that is used to match routes against the community.
                 /// 
-                /// *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
-                /// 
-                ///     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
-                /// 
-                /// *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
-                /// 
-                ///     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
+                /// *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
+                /// *   **Complete**: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.
                 /// </summary>
                 [NameInMap("CommunityMatchMode")]
                 [Validation(Required=false)]
                 public string CommunityMatchMode { get; set; }
 
                 /// <summary>
-                /// The information about the routing policy.
+                /// The action that is performed on the community of the route.
+                /// 
+                /// *   **Additive**: adds the community to the route.
+                /// *   **Replace**: replaces the original community of the route.
+                /// 
+                /// This parameter specifies the action to be performed when a route meets the match condition.
                 /// </summary>
                 [NameInMap("CommunityOperateMode")]
                 [Validation(Required=false)]
                 public string CommunityOperateMode { get; set; }
 
                 /// <summary>
-                /// The AS paths based on which the routes are compared.
+                /// The description of the routing policy.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The types of destination network instances to which the routes belong.
+                /// 
+                /// *   **VPC**
+                /// *   **VBR**
+                /// *   **CCN**
+                /// *   **VPN**
+                /// 
+                /// >  The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the type of the destination route tables is the same as that of the network instance in the current region.
+                /// </summary>
                 [NameInMap("DestinationChildInstanceTypes")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationChildInstanceTypes DestinationChildInstanceTypes { get; set; }
@@ -114,7 +130,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The number of the returned page.
+                /// The prefixes of the routes.
                 /// </summary>
                 [NameInMap("DestinationCidrBlocks")]
                 [Validation(Required=false)]
@@ -126,6 +142,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
 
+                /// <summary>
+                /// The IDs of the destination network instances to which the routes point.
+                /// 
+                /// >  The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the ID the destination instance is the same as that of the network instance in the current region.
+                /// </summary>
                 [NameInMap("DestinationInstanceIds")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapDestinationInstanceIds DestinationInstanceIds { get; set; }
@@ -137,19 +158,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The description of the routing policy.
+                /// Indicates whether the destination network instance IDs are excluded.
+                /// 
+                /// *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+                /// *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
                 /// </summary>
                 [NameInMap("DestinationInstanceIdsReverseMatch")]
                 [Validation(Required=false)]
                 public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
                 /// <summary>
-                /// The types of source network instance to which the routes belong.
+                /// The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
                 /// 
-                /// *   **VPC**: virtual private cloud (VPC)
-                /// *   **VBR**: virtual border router (VBR)
-                /// *   **CCN**: Cloud Connect Network (CCN) instance
-                /// *   **VPN**: IPsec-VPN connection
+                /// >  The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the destination route table IDs are in the current region.
                 /// </summary>
                 [NameInMap("DestinationRouteTableIds")]
                 [Validation(Required=false)]
@@ -162,21 +183,29 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The ID of the region where the routing policy is applied.
+                /// The action performed on a route that meets the match conditions.
                 /// 
-                /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+                /// *   **Permit**: the route is permitted.
+                /// *   **Deny**: the route is denied.
                 /// </summary>
                 [NameInMap("MapResult")]
                 [Validation(Required=false)]
                 public string MapResult { get; set; }
 
                 /// <summary>
-                /// The IDs of the source network instances to which the routes belong.
+                /// The type of IP address to be matched against the match condition. Valid values:
+                /// 
+                /// *   **IPv4**: IPv4 addresses
+                /// *   **IPv6**: IPv6 addresses
+                /// *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
                 /// </summary>
                 [NameInMap("MatchAddressType")]
                 [Validation(Required=false)]
                 public string MatchAddressType { get; set; }
 
+                /// <summary>
+                /// The AS paths against which routes are matched.
+                /// </summary>
                 [NameInMap("MatchAsns")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns MatchAsns { get; set; }
@@ -187,6 +216,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
 
+                /// <summary>
+                /// The community set against which routes are matched.
+                /// </summary>
                 [NameInMap("MatchCommunitySet")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchCommunitySet MatchCommunitySet { get; set; }
@@ -198,20 +230,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The match method that is used to match routes based on the prefix. Valid values:
-                /// 
-                /// *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
-                /// 
-                ///     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
-                /// 
-                /// *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
-                /// 
-                ///     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+                /// The priority of the routing policy that you want to associate with the current one.
                 /// </summary>
                 [NameInMap("NextPriority")]
                 [Validation(Required=false)]
                 public int? NextPriority { get; set; }
 
+                /// <summary>
+                /// The community set on which actions are performed.
+                /// </summary>
                 [NameInMap("OperateCommunitySet")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapOperateCommunitySet OperateCommunitySet { get; set; }
@@ -223,12 +250,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The prefixes of the routes.
+                /// The new priority of the route.
+                /// 
+                /// A smaller value indicates a higher priority.
+                /// 
+                /// This parameter indicates the action to be performed when a route meets the match condition.
                 /// </summary>
                 [NameInMap("Preference")]
                 [Validation(Required=false)]
                 public int? Preference { get; set; }
 
+                /// <summary>
+                /// The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.
+                /// 
+                /// This parameter indicates the action to be performed when a route meets the match condition.
+                /// </summary>
                 [NameInMap("PrependAsPath")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapPrependAsPath PrependAsPath { get; set; }
@@ -240,23 +276,26 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The ID of the region where the routing policy is applied.
+                /// The priority of the routing policy. A smaller value indicates a higher priority.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// The type of IP address to be matched against the match condition. Valid values:
-                /// 
-                /// *   **IPv4**: IPv4 addresses
-                /// *   **IPv6**: IPv6 addresses
-                /// *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
+                /// The routing policy ID.
                 /// </summary>
                 [NameInMap("RouteMapId")]
                 [Validation(Required=false)]
                 public string RouteMapId { get; set; }
 
+                /// <summary>
+                /// The type of route that is compared. Valid values:
+                /// 
+                /// *   **System**: system routes that are automatically generated by the system.
+                /// *   **Custom**: custom routes that are manually added.
+                /// *   **BGP**: routes that are advertised over BGP.
+                /// </summary>
                 [NameInMap("RouteTypes")]
                 [Validation(Required=false)]
                 public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapRouteTypes RouteTypes { get; set; }
@@ -268,7 +307,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The community set based on which the routes are compared.
+                /// The types of source network instances to which the routes belong.
+                /// 
+                /// *   **VPC**
+                /// *   **VBR**
+                /// *   **CCN**
+                /// *   **VPN**
                 /// </summary>
                 [NameInMap("SourceChildInstanceTypes")]
                 [Validation(Required=false)]
@@ -281,7 +325,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The direction in which the routing policy is applied.
+                /// The IDs of the source network instances to which the routes belong.
                 /// </summary>
                 [NameInMap("SourceInstanceIds")]
                 [Validation(Required=false)]
@@ -294,18 +338,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The ID of the routing policy.
+                /// Indicates whether the source network instance IDs are excluded.
+                /// 
+                /// *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+                /// *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
                 /// </summary>
                 [NameInMap("SourceInstanceIdsReverseMatch")]
                 [Validation(Required=false)]
                 public bool? SourceInstanceIdsReverseMatch { get; set; }
 
                 /// <summary>
-                /// The status of the routing policy. Valid values:
-                /// 
-                /// *   **Creating**: The routing policy is being created.
-                /// *   **Active**: The routing policy is available.
-                /// *   **Deleting**: The routing policy is being deleted.
+                /// The IDs of the source regions to which the routes belong.
                 /// </summary>
                 [NameInMap("SourceRegionIds")]
                 [Validation(Required=false)]
@@ -318,7 +361,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// Queries the routing policies of a Cloud Enterprise Network (CEN) instance.
+                /// The IDs of the source route tables to which the routes belong.
                 /// </summary>
                 [NameInMap("SourceRouteTableIds")]
                 [Validation(Required=false)]
@@ -331,30 +374,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The new priority of the route.
+                /// The status of the routing policy. Valid values:
                 /// 
-                /// A smaller value indicates a higher priority.
-                /// 
-                /// This parameter indicates the action to be performed when a route meets the match condition.
+                /// *   **Creating**
+                /// *   **Active**
+                /// *   **Deleting**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The action that is performed on the community of the route.
-                /// 
-                /// *   **Additive**: adds the community to the route.
-                /// *   **Replace**: replaces the original community of the route.
-                /// 
-                /// This parameter indicates the action to be performed when a route meets the match condition.
+                /// The route table ID of the transit router with which the routing policy is associated.
                 /// </summary>
                 [NameInMap("TransitRouterRouteTableId")]
                 [Validation(Required=false)]
                 public string TransitRouterRouteTableId { get; set; }
 
                 /// <summary>
-                /// The ID of the routing policy.
+                /// The direction in which the routing policy is applied.
                 /// </summary>
                 [NameInMap("TransmitDirection")]
                 [Validation(Required=false)]
@@ -365,10 +403,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// Indicates whether the source network instance IDs are excluded.
-        /// 
-        /// *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
-        /// *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -82,9 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// The vSwitch IDs.
-        /// 
-        /// You can specify at most 20 IDs.
+        /// The IDs of vSwitches.
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

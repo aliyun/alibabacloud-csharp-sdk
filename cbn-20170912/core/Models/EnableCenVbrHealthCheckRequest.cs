@@ -16,6 +16,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// The description of the health check.
+        /// 
+        /// The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

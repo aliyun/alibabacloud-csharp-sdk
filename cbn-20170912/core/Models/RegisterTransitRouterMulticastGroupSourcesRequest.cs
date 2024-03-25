@@ -40,9 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// The IDs of ENIs.
-        /// 
-        /// >  This parameter is required.
+        /// The IDs of the ENIs.
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]

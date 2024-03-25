@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRouteTableId { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Default value: **20**.
+        /// The number of entries to return on each page. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

@@ -38,17 +38,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The queried VBR connections.
+        /// A list of VBR connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR. Valid values:
+            /// Indicates whether the Enterprise Edition transit router is allowed to automatically advertise routes to the VBR. Valid values:
             /// 
-            /// *   **false** (default): no
-            /// *   **true**: yes
+            /// *   **false** (default)
+            /// *   **true**
             /// </summary>
             [NameInMap("AutoPublishRouteEnabled")]
             [Validation(Required=false)]
@@ -62,14 +62,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// The time when the VBR connection was established.
+            /// The time when the VBR connection was created.
             /// 
-            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// The entity that pays the fees of the network instance. Valid values:
+            /// 
+            /// *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+            /// *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+            /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
@@ -77,10 +83,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of resource to which the transit router is connected. Valid values:
             /// 
-            /// *   **VPC**: VPC
-            /// *   **CCN**: Cloud Connect Network (CCN) instance
-            /// *   **VBR**: VBR
-            /// *   **TR**: transit router
+            /// *   **VPC**
+            /// *   **CCN**
+            /// *   **VBR**
+            /// *   **TR**
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -89,17 +95,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The status of the VBR connection. Valid values:
             /// 
-            /// *   **Attached**: The VBR connection is created on the transit router.
-            /// *   **Attaching**: The VBR connection is being created on the transit router.
-            /// *   **Detaching**: The VBR connection is being deleted from the transit router.
-            /// *   **Detached**: The VBR connection is deleted from the transit router.
+            /// *   **Attached**
+            /// *   **Attaching**
+            /// *   **Detaching**
+            /// *   **Detached**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// A list of tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// The ID of the Enterprise Edition transit router.
+            /// The description of the Enterprise Edition transit router.
             /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VbrId { get; set; }
 
             /// <summary>
-            /// The ID of the account to which the VBR belongs.
+            /// The ID of the Alibaba Cloud account to which the VBR belongs.
             /// </summary>
             [NameInMap("VbrOwnerId")]
             [Validation(Required=false)]

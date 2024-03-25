@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule : TeaModel {
                 /// <summary>
-                /// The CEN instance ID.
+                /// The ID of the CEN instance.
                 /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public long? CenOwnerId { get; set; }
 
                 /// <summary>
-                /// The network instance ID.
+                /// The ID of the network instance.
                 /// </summary>
                 [NameInMap("ChildInstanceId")]
                 [Validation(Required=false)]
@@ -58,15 +58,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The type of the network instance. Valid values:
                 /// 
-                /// *   **VPC**
-                /// *   **VBR**
-                /// *   **CCN**
-                /// *   **VPN**
+                /// *   **VPC**: VPC
+                /// *   **VBR**: VBR
+                /// *   **CCN**: CCN instance
+                /// *   **VPN**: IPsec-VPN connection
                 /// </summary>
                 [NameInMap("ChildInstanceType")]
                 [Validation(Required=false)]
                 public string ChildInstanceType { get; set; }
 
+                /// <summary>
+                /// The time when the permissions were granted to the CEN instance.
+                /// 
+                /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
