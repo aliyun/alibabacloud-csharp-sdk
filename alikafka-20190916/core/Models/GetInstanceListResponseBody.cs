@@ -412,6 +412,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                [NameInMap("ViewInstanceStatusCode")]
+                [Validation(Required=false)]
+                public int? ViewInstanceStatusCode { get; set; }
+
                 /// <summary>
                 /// The virtual private cloud (VPC) ID.
                 /// </summary>
