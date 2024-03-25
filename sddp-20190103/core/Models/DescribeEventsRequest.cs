@@ -127,6 +127,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string UserName { get; set; }
 
+        /// <summary>
+        /// The risk level of the alert that is triggered. Valid values:
+        /// 
+        /// *   **1**: low
+        /// *   **2**: medium
+        /// *   **3**: high
+        /// </summary>
         [NameInMap("WarnLevel")]
         [Validation(Required=false)]
         public int? WarnLevel { get; set; }

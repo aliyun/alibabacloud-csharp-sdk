@@ -4373,6 +4373,152 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribePackagesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeParentInstanceResponse DescribeParentInstanceWithOptions(DescribeParentInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthStatus))
+            {
+                query["AuthStatus"] = request.AuthStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckStatus))
+            {
+                query["CheckStatus"] = request.CheckStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterStatus))
+            {
+                query["ClusterStatus"] = request.ClusterStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParentInstance",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParentInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeParentInstanceResponse> DescribeParentInstanceWithOptionsAsync(DescribeParentInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthStatus))
+            {
+                query["AuthStatus"] = request.AuthStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckStatus))
+            {
+                query["CheckStatus"] = request.CheckStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterStatus))
+            {
+                query["ClusterStatus"] = request.ClusterStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParentInstance",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParentInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeParentInstanceResponse DescribeParentInstance(DescribeParentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParentInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeParentInstanceResponse> DescribeParentInstanceAsync(DescribeParentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParentInstanceWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
           * # Limits

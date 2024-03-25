@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// The language of the content within the request and response, default value zh_cn. Valid values:
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// *   **zh_cn**: Chinese
+        /// *   **en_us**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
-    public class DeleteDataLimitResponse : TeaModel {
+    public class DescribeParentInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteDataLimitResponseBody Body { get; set; }
+        public DescribeParentInstanceResponseBody Body { get; set; }
 
     }
 
