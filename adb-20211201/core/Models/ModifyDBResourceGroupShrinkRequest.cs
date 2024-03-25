@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class CreateDBResourceGroupRequest : TeaModel {
+    public class ModifyDBResourceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// A reserved parameter.
         /// </summary>
@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the preemptible instance feature for the resource group. This feature can be enabled only for job resource groups. Valid values:
+        /// 
+        /// *   **True**
+        /// *   **False**
+        /// </summary>
         [NameInMap("EnableSpot")]
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }
@@ -37,9 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// *   The name can be up to 255 characters in length.
-        /// *   The name must start with a letter or a digit.
-        /// *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+        /// > You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group in a cluster.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MaxClusterCount { get; set; }
 
         /// <summary>
-        /// The maximum reserved computing resources. Unit: ACU.
+        /// The maximum amount of reserved computing resources. Unit: ACU.
         /// 
         /// *   If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16 ACUs.
         /// *   If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8 ACUs.
@@ -82,10 +86,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinClusterCount { get; set; }
 
         /// <summary>
-        /// The minimum reserved computing resources. Unit: AnalyticDB Compute Units (ACUs).
+        /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
         /// 
-        /// *   When GroupType is set to Interactive, set this parameter to 16 ACUs.
-        /// *   When GroupType is set to Job, set this parameter to 0 ACUs.
+        /// *   If the GroupType parameter is set to Interactive, set the value to 16ACU.
+        /// *   If GroupType is set to Job, set the value to 0ACU.
         /// </summary>
         [NameInMap("MinComputeResource")]
         [Validation(Required=false)]
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -102,21 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public List<CreateDBResourceGroupRequestRules> Rules { get; set; }
-        public class CreateDBResourceGroupRequestRules : TeaModel {
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
-
-            [NameInMap("QueryTime")]
-            [Validation(Required=false)]
-            public string QueryTime { get; set; }
-
-            [NameInMap("TargetGroupName")]
-            [Validation(Required=false)]
-            public string TargetGroupName { get; set; }
-
-        }
+        public string RulesShrink { get; set; }
 
     }
 

@@ -102,6 +102,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string MinComputeResource { get; set; }
 
+            [NameInMap("Rules")]
+            [Validation(Required=false)]
+            public List<DescribeDBResourceGroupResponseBodyGroupsInfoRules> Rules { get; set; }
+            public class DescribeDBResourceGroupResponseBodyGroupsInfoRules : TeaModel {
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("QueryTime")]
+                [Validation(Required=false)]
+                public string QueryTime { get; set; }
+
+                [NameInMap("TargetGroupName")]
+                [Validation(Required=false)]
+                public string TargetGroupName { get; set; }
+
+            }
+
             /// <summary>
             /// A reserved parameter.
             /// </summary>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class CreateDBResourceGroupRequest : TeaModel {
+    public class CreateDBResourceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// A reserved parameter.
         /// </summary>
@@ -102,21 +102,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public List<CreateDBResourceGroupRequestRules> Rules { get; set; }
-        public class CreateDBResourceGroupRequestRules : TeaModel {
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
-
-            [NameInMap("QueryTime")]
-            [Validation(Required=false)]
-            public string QueryTime { get; set; }
-
-            [NameInMap("TargetGroupName")]
-            [Validation(Required=false)]
-            public string TargetGroupName { get; set; }
-
-        }
+        public string RulesShrink { get; set; }
 
     }
 

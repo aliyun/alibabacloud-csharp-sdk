@@ -104,6 +104,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Rules")]
+        [Validation(Required=false)]
+        public List<ModifyDBResourceGroupRequestRules> Rules { get; set; }
+        public class ModifyDBResourceGroupRequestRules : TeaModel {
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            [NameInMap("QueryTime")]
+            [Validation(Required=false)]
+            public string QueryTime { get; set; }
+
+            [NameInMap("TargetGroupName")]
+            [Validation(Required=false)]
+            public string TargetGroupName { get; set; }
+
+        }
+
     }
 
 }
