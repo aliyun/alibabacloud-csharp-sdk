@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
-                public int? BackupId { get; set; }
+                public long? BackupId { get; set; }
 
                 /// <summary>
                 /// The internal download URL of the backup set.
