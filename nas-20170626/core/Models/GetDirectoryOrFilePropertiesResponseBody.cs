@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string CTime { get; set; }
 
+            [NameInMap("HasArchiveFile")]
+            [Validation(Required=false)]
+            public bool? HasArchiveFile { get; set; }
+
             /// <summary>
             /// Indicates whether the directory contains files stored in the IA storage medium.
             /// 

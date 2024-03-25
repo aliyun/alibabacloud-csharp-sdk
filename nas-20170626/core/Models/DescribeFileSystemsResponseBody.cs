@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 }
 
+                [NameInMap("MeteredArchiveSize")]
+                [Validation(Required=false)]
+                public long? MeteredArchiveSize { get; set; }
+
                 /// <summary>
                 /// The storage usage of the Infrequent Access (IA) storage medium.
                 /// 
