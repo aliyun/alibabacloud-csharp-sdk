@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
