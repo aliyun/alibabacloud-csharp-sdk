@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string WriteMethod { get; set; }
 
+        [NameInMap("WriteToFeatureDB")]
+        [Validation(Required=false)]
+        public bool? WriteToFeatureDB { get; set; }
+
     }
 
 }

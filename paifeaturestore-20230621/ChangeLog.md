@@ -1,3 +1,9 @@
+2024-03-25 Version: 1.1.4
+- Update API CreateFeatureView: update param body.
+- Update API GetFeatureView: update response param.
+- Update API ListFeatureViews: update response param.
+
+
 2024-03-21 Version: 1.1.3
 - Generated csharp 2023-06-21 for PaiFeatureStore.
 

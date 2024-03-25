@@ -433,6 +433,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["WriteMethod"] = request.WriteMethod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WriteToFeatureDB))
+            {
+                body["WriteToFeatureDB"] = request.WriteToFeatureDB;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -504,6 +508,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WriteMethod))
             {
                 body["WriteMethod"] = request.WriteMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WriteToFeatureDB))
+            {
+                body["WriteToFeatureDB"] = request.WriteToFeatureDB;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
