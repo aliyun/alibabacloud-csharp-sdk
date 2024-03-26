@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DescribeScheduleRequest : TeaModel {
         /// <summary>
-        /// The name of the flow that is associated with the time-based schedule. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:
+        /// The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -22,14 +22,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The name of the time-based schedule. Configure this parameter based on the following rules:
+        /// The name of the time-based schedule. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).

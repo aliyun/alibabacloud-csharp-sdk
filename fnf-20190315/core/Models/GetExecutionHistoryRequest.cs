@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class GetExecutionHistoryRequest : TeaModel {
         /// <summary>
-        /// The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+        /// The name of the execution, which is unique within a flow. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string ExecutionName { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+        /// The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -46,13 +46,6 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
-
-        /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

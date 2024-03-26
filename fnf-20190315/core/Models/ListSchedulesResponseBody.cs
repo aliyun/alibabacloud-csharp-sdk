@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The CRON expression of the scheduled task.
+            /// The cron expression of the scheduled task.
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]

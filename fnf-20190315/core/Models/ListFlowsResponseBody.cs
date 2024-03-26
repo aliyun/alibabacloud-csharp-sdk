@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
+            /// The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.
             /// </summary>
             [NameInMap("ExecutionMode")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.
+            /// The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.
             /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class ListExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// The queried executions.
+        /// The information about executions.
         /// </summary>
         [NameInMap("Executions")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The execution result, which is in the JSON format.
+            /// The output of the execution, which is in the JSON format
             /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string StartedTime { get; set; }
 
             /// <summary>
-            /// The state of the execution.
+            /// The status of the execution.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

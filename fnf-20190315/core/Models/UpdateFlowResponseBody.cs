@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// The definition of the flow.
+        /// The flow definition, which follows the FDL syntax standard. Considering compatibility, the system supports the two flow definition specifications.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ARN of the RAM role.
+        /// The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]

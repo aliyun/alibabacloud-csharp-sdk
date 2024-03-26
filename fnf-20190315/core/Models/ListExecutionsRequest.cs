@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string ExecutionNamePrefix { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+        /// The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -43,13 +43,6 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// The beginning of the time range to query executions. Specify the value in the UTC RFC3339 format.
         /// </summary>
         [NameInMap("StartedTimeBegin")]
@@ -64,8 +57,9 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string StartedTimeEnd { get; set; }
 
         /// <summary>
-        /// The state of the execution that you want to filter. Valid values:
+        /// The status of the execution that you want to filter. Valid values:
         /// 
+        /// *   **Starting**
         /// *   **Running**
         /// *   **Stopped**
         /// *   **Succeeded**

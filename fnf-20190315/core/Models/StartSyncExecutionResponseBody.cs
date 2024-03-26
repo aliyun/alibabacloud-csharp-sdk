@@ -9,38 +9,72 @@ using Tea;
 namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class StartSyncExecutionResponseBody : TeaModel {
+        /// <summary>
+        /// The error code that is returned if the execution failed.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message that indicates the execution timed out.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The name of the flow.
+        /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
+        /// <summary>
+        /// The name of the execution.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The output of the execution, which is in the JSON format.
+        /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string Output { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The time when the execution started.
+        /// </summary>
         [NameInMap("StartedTime")]
         [Validation(Required=false)]
         public string StartedTime { get; set; }
 
+        /// <summary>
+        /// The status of the execution. Valid values:
+        /// 
+        /// *   **Starting**
+        /// *   **Running**
+        /// *   **Stopped**
+        /// *   **Succeeded**
+        /// *   **Failed**
+        /// *   **TimedOut**
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The time when the execution stopped.
+        /// </summary>
         [NameInMap("StoppedTime")]
         [Validation(Required=false)]
         public string StoppedTime { get; set; }

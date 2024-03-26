@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class CreateFlowRequest : TeaModel {
         /// <summary>
-        /// The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
+        /// The definition of the flow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
+        /// The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.
         /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string ExternalStorageLocation { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+        /// The name of the flow. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -53,21 +53,14 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.
+        /// The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// The type of the flow. Valid value: **FDL**.
+        /// The type of the flow. Set this parameter to **FDL**.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -57,11 +57,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public CreateFlowResponse CreateFlowWithOptions(CreateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
@@ -93,7 +88,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -123,11 +117,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<CreateFlowResponse> CreateFlowWithOptionsAsync(CreateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
@@ -159,7 +148,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -209,9 +197,9 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureVersion))
             {
-                query["RequestId"] = request.RequestId;
+                query["SignatureVersion"] = request.SignatureVersion;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
@@ -262,9 +250,9 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureVersion))
             {
-                query["RequestId"] = request.RequestId;
+                query["SignatureVersion"] = request.SignatureVersion;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
@@ -334,7 +322,11 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public DeleteFlowResponse DeleteFlowWithOptions(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -345,7 +337,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
                 Version = "2019-03-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -365,7 +357,11 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<DeleteFlowResponse> DeleteFlowWithOptionsAsync(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -376,7 +372,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
                 Version = "2019-03-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -414,7 +410,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public DeleteScheduleResponse DeleteScheduleWithOptions(DeleteScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
+            {
+                query["FlowName"] = request.FlowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -425,7 +429,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
                 Version = "2019-03-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -437,7 +441,15 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<DeleteScheduleResponse> DeleteScheduleWithOptionsAsync(DeleteScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
+            {
+                query["FlowName"] = request.FlowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -448,7 +460,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
                 Version = "2019-03-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -907,7 +919,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
           *
           * @param request ReportTaskFailedRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -917,10 +930,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskToken))
             {
                 query["TaskToken"] = request.TaskToken;
@@ -956,7 +965,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
           *
           * @param request ReportTaskFailedRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -966,10 +976,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskToken))
             {
                 query["TaskToken"] = request.TaskToken;
@@ -1005,7 +1011,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
           *
           * @param request ReportTaskFailedRequest
           * @return ReportTaskFailedResponse
@@ -1018,7 +1025,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+          * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+          * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
           *
           * @param request ReportTaskFailedRequest
           * @return ReportTaskFailedResponse
@@ -1031,7 +1039,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
           *
           * @param request ReportTaskSucceededRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1041,10 +1050,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskToken))
             {
                 query["TaskToken"] = request.TaskToken;
@@ -1076,7 +1081,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
           *
           * @param request ReportTaskSucceededRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1086,10 +1092,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskToken))
             {
                 query["TaskToken"] = request.TaskToken;
@@ -1121,7 +1123,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
           *
           * @param request ReportTaskSucceededRequest
           * @return ReportTaskSucceededResponse
@@ -1134,7 +1137,8 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+          * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+          * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
           *
           * @param request ReportTaskSucceededRequest
           * @return ReportTaskSucceededResponse
@@ -1147,10 +1151,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * *   The flow is created.
+          * *   The flow is created. A flow only in standard mode is supported.
           * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
           * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
           * *   If no execution with the same name exists, the system starts a new execution.
           *
           * @param request StartExecutionRequest
@@ -1160,11 +1164,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public StartExecutionResponse StartExecutionWithOptions(StartExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackFnFTaskToken))
             {
@@ -1184,7 +1183,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1204,10 +1202,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * *   The flow is created.
+          * *   The flow is created. A flow only in standard mode is supported.
           * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
           * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
           * *   If no execution with the same name exists, the system starts a new execution.
           *
           * @param request StartExecutionRequest
@@ -1217,11 +1215,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<StartExecutionResponse> StartExecutionWithOptionsAsync(StartExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackFnFTaskToken))
             {
@@ -1241,7 +1234,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1261,10 +1253,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * *   The flow is created.
+          * *   The flow is created. A flow only in standard mode is supported.
           * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
           * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
           * *   If no execution with the same name exists, the system starts a new execution.
           *
           * @param request StartExecutionRequest
@@ -1278,10 +1270,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /**
           * ## [](#)Usage notes
-          * *   The flow is created.
+          * *   The flow is created. A flow only in standard mode is supported.
           * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
           * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-          * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+          * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
           * *   If no execution with the same name exists, the system starts a new execution.
           *
           * @param request StartExecutionRequest
@@ -1293,14 +1285,16 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return await StartExecutionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Only flows of the express execution mode are supported.
+          *
+          * @param request StartSyncExecutionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartSyncExecutionResponse
+         */
         public StartSyncExecutionResponse StartSyncExecutionWithOptions(StartSyncExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionName))
             {
@@ -1316,7 +1310,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1334,14 +1327,16 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<StartSyncExecutionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Only flows of the express execution mode are supported.
+          *
+          * @param request StartSyncExecutionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StartSyncExecutionResponse
+         */
         public async Task<StartSyncExecutionResponse> StartSyncExecutionWithOptionsAsync(StartSyncExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionName))
             {
@@ -1357,7 +1352,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1375,12 +1369,24 @@ namespace AlibabaCloud.SDK.Fnf20190315
             return TeaModel.ToObject<StartSyncExecutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Only flows of the express execution mode are supported.
+          *
+          * @param request StartSyncExecutionRequest
+          * @return StartSyncExecutionResponse
+         */
         public StartSyncExecutionResponse StartSyncExecution(StartSyncExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartSyncExecutionWithOptions(request, runtime);
         }
 
+        /**
+          * *   Only flows of the express execution mode are supported.
+          *
+          * @param request StartSyncExecutionRequest
+          * @return StartSyncExecutionResponse
+         */
         public async Task<StartSyncExecutionResponse> StartSyncExecutionAsync(StartSyncExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1398,11 +1404,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public StopExecutionResponse StopExecutionWithOptions(StopExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cause))
             {
@@ -1422,7 +1423,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1451,11 +1451,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<StopExecutionResponse> StopExecutionWithOptionsAsync(StopExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cause))
             {
@@ -1475,7 +1470,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1522,11 +1516,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public UpdateFlowResponse UpdateFlowWithOptions(UpdateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
@@ -1550,7 +1539,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1571,11 +1559,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<UpdateFlowResponse> UpdateFlowWithOptionsAsync(UpdateFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
@@ -1599,7 +1582,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1632,11 +1614,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public UpdateScheduleResponse UpdateScheduleWithOptions(UpdateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
             {
@@ -1664,7 +1641,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1685,11 +1661,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
         public async Task<UpdateScheduleResponse> UpdateScheduleWithOptionsAsync(UpdateScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                query["RequestId"] = request.RequestId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
             {
@@ -1717,7 +1688,6 @@ namespace AlibabaCloud.SDK.Fnf20190315
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

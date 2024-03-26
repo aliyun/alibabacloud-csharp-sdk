@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// The definition of the flow.
+        /// Considering compatibility, the system supports two flow definition specifications.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
+        /// The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.
         /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ARN of the RAM role.
+        /// The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 
         /// <summary>
         /// The type of the flow.
+        /// 
+        /// Valid value:
+        /// 
+        /// *   FDL
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

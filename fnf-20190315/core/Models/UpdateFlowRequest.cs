@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class UpdateFlowRequest : TeaModel {
         /// <summary>
-        /// The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
+        /// The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the flow. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:
+        /// The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -36,14 +36,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.
+        /// The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string CallbackFnFTaskToken { get; set; }
 
         /// <summary>
-        /// The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+        /// The name of the execution. The execution name is unique within a workflow. Configure this parameter based on the following rules:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string ExecutionName { get; set; }
 
         /// <summary>
-        /// The name of the flow you want to start to execute. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+        /// The name of the workflow to be executed. The name is unique within a region and cannot be modified after the workflow is created. Configure this parameter based on the following rules:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
         /// *   The name must start with a letter or an underscore (\_).
@@ -46,13 +46,6 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
-
-        /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

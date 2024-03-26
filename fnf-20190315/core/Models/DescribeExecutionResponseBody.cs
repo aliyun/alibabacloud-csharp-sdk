@@ -59,8 +59,9 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string StartedTime { get; set; }
 
         /// <summary>
-        /// The execution state. Valid values:
+        /// The execution status. Valid values:
         /// 
+        /// *   **Starting**
         /// *   **Running**
         /// *   **Stopped**
         /// *   **Succeeded**

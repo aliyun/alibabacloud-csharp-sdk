@@ -48,13 +48,6 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         public string Payload { get; set; }
 
         /// <summary>
-        /// The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// The name of the time-based schedule. Configure this parameter based on the following rules:
         /// 
         /// *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -65,6 +58,10 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [NameInMap("ScheduleName")]
         [Validation(Required=false)]
         public string ScheduleName { get; set; }
+
+        [NameInMap("SignatureVersion")]
+        [Validation(Required=false)]
+        public string SignatureVersion { get; set; }
 
     }
 
