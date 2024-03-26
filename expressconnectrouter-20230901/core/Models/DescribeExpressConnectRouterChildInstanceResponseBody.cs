@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string ChildInstanceType { get; set; }
 
+            [NameInMap("EcrId")]
+            [Validation(Required=false)]
+            public string EcrId { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
