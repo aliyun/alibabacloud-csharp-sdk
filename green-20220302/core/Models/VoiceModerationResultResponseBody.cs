@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public VoiceModerationResultResponseBodyData Data { get; set; }
         public class VoiceModerationResultResponseBodyData : TeaModel {
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }

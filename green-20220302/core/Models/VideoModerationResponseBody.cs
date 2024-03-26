@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public VideoModerationResponseBodyData Data { get; set; }
         public class VideoModerationResponseBodyData : TeaModel {
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }

@@ -125,6 +125,30 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public List<VideoModerationResultResponseBodyDataFrameResultFramesResults> Results { get; set; }
                     public class VideoModerationResultResponseBodyDataFrameResultFramesResults : TeaModel {
+                        [NameInMap("CustomImage")]
+                        [Validation(Required=false)]
+                        public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> CustomImage { get; set; }
+                        public class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage : TeaModel {
+                            [NameInMap("ImageId")]
+                            [Validation(Required=false)]
+                            public string ImageId { get; set; }
+
+                            [NameInMap("LibId")]
+                            [Validation(Required=false)]
+                            public string LibId { get; set; }
+
+                        }
+
+                        [NameInMap("PublicFigure")]
+                        [Validation(Required=false)]
+                        public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> PublicFigure { get; set; }
+                        public class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure : TeaModel {
+                            [NameInMap("FigureId")]
+                            [Validation(Required=false)]
+                            public string FigureId { get; set; }
+
+                        }
+
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> Result { get; set; }
@@ -143,6 +167,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         [Validation(Required=false)]
                         public string Service { get; set; }
 
+                        [NameInMap("TextInImage")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> TextInImage { get; set; }
+
                     }
 
                     [NameInMap("TempUrl")]
@@ -160,6 +188,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
 
         }
 
