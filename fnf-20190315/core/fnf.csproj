@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Fnf20190315</AssemblyName>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Serverless Workflow (20190315) SDK Library for .NET</Description>
