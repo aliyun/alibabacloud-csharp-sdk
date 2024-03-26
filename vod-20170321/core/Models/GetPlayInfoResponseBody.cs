@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetPlayInfoResponseBodyPlayInfoListPlayInfo> PlayInfo { get; set; }
             public class GetPlayInfoResponseBodyPlayInfoListPlayInfo : TeaModel {
                 /// <summary>
-                /// The color depth. This value must be an integer.
+                /// The color depth. This value is an integer.
                 /// </summary>
                 [NameInMap("BitDepth")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Definition { get; set; }
 
                 /// <summary>
-                /// The duration of the media stream. Unit: seconds.
+                /// The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public int? JobType { get; set; }
 
                 /// <summary>
-                /// The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -285,6 +285,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The storage class of the audio or video file. Valid values:
+            /// 
+            /// *   **Standard**: All media resources are stored as Standard objects.
+            /// *   **IA**: All media resources are stored as IA objects.
+            /// *   **Archive**: All media resources are stored as Archive objects.
+            /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
+            /// *   **SourceIA**: Only the source files are IA objects.
+            /// *   **SourceArchive**: Only the source files are Archive objects.
+            /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
+            /// *   **Changing**: The storage class of the audio or video file is being changed.
+            /// *   **SourceChanging**: The storage class of the source file is being changed.
+            /// </summary>
             [NameInMap("StorageClass")]
             [Validation(Required=false)]
             public string StorageClass { get; set; }

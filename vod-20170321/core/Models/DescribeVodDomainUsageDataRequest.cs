@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainUsageDataRequest : TeaModel {
         /// <summary>
-        /// The region in which you want to query data. Default value: CN. Valid values:
+        /// The region in which you want to query data. Valid values:
         /// 
-        /// *   **CN**: the Chinese mainland.
-        /// *   **OverSeas**: outside the Chinese mainland.
+        /// *   **CN**: Chinese mainland
+        /// *   **OverSeas**: outside the Chinese mainland
         /// </summary>
         [NameInMap("Area")]
         [Validation(Required=false)]

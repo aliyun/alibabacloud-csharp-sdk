@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchMediaResponseBody : TeaModel {
         /// <summary>
-        /// The AI type.
+        /// The information about the media assets.
         /// </summary>
         [NameInMap("MediaList")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public List<SearchMediaResponseBodyMediaListAiDataOcrInfo> OcrInfo { get; set; }
                 public class SearchMediaResponseBodyMediaListAiDataOcrInfo : TeaModel {
                     /// <summary>
-                    /// The text.
+                    /// The text content.
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public SearchMediaResponseBodyMediaListAiRoughData AiRoughData { get; set; }
             public class SearchMediaResponseBodyMediaListAiRoughData : TeaModel {
                 /// <summary>
-                /// The AI type.
+                /// The AI category.
                 /// </summary>
                 [NameInMap("AiCategory")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string SaveType { get; set; }
 
                 /// <summary>
-                /// The status of the data.
+                /// The data status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// [Details about auxiliary media assets](~~86991~~).
+            /// [The information about the auxiliary media asset](~~86991~~).
             /// </summary>
             [NameInMap("AttachedMedia")]
             [Validation(Required=false)]
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? Level { get; set; }
 
                     /// <summary>
-                    /// The ID of the parent category.
+                    /// The ID of the parent node.
                     /// </summary>
                     [NameInMap("ParentId")]
                     [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -245,16 +245,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The status of the auxiliary media asset. Valid values:
                 /// 
-                /// *   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
-                /// *   **Normal**: The auxiliary media asset is uploaded.
-                /// *   **UploadFail**: The auxiliary media asset fails to be uploaded.
+                /// *   **Uploading**
+                /// *   **Normal**
+                /// *   **UploadFail**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The endpoint of the OSS bucket in which the auxiliary media asset is stored.
+                /// The region in which the auxiliary media asset is stored.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// [Details about audio files](~~86991~~).
+            /// [The information about the audio](~~86991~~).
             /// </summary>
             [NameInMap("Audio")]
             [Validation(Required=false)]
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AudioId { get; set; }
 
                 /// <summary>
-                /// The category ID of the audio file.
+                /// The ID of the category.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -357,19 +357,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// The source. Valid values:
+                /// The source of the audio file. Valid values:
                 /// 
                 /// *   **general**: The audio file is uploaded by using ApsaraVideo VOD.
                 /// *   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).
                 /// *   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).
-                /// *   **live**: The audio stream is recorded and uploaded as a file to ApsaraVideo VOD.
+                /// *   **live**: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.
                 /// </summary>
                 [NameInMap("MediaSource")]
                 [Validation(Required=false)]
                 public string MediaSource { get; set; }
 
                 /// <summary>
-                /// The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -413,14 +413,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The list of automatic snapshots.
+                /// The automatic snapshots.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
 
                 /// <summary>
-                /// The list of sprite snapshots.
+                /// The sprite snapshots.
                 /// </summary>
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
@@ -445,9 +445,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **IA**: All media resources are stored as IA objects.
                 /// *   **Archive**: All media resources are stored as Archive objects.
                 /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
-                /// *   **SourceIA**: Only the source files are IA objects.
-                /// *   **SourceArchive**: Only the source files are Archive objects.
-                /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
+                /// *   **SourceIA**: Only the source file is stored as an IA object.
+                /// *   **SourceArchive**: Only the source file is stored as an Archive object.
+                /// *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
                 /// *   **Changing**: The storage class is being modified.
                 /// </summary>
                 [NameInMap("StorageClass")]
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// The endpoint of the OSS bucket in which the audio file is stored.
+                /// The region in which the audio is stored.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
@@ -469,14 +469,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The title of the audio file.
+                /// The title of the audio file
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// The transcoding mode. Default value: FastTranscode. Valid values:
+                /// The transcoding mode. Valid values:
                 /// 
                 /// *   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
                 /// *   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.
@@ -489,14 +489,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// [Details about image files](~~86991~~).
+            /// [The information about the image](~~86991~~).
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The category ID of the image file.
+                /// The ID of the category.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -554,16 +554,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The status of the image file.
                 /// 
-                /// *   **Uploading**: The image file is being uploaded. This is the initial status.
-                /// *   **Normal**: The image file is uploaded.
-                /// *   **UploadFail**: The image file fails to be uploaded.
+                /// *   **Uploading**
+                /// *   **Normal**
+                /// *   **UploadFail**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The endpoint of the OSS bucket in which the image file is stored.
+                /// The region in which the image is stored.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
@@ -593,7 +593,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The ID of the media asset.
+            /// The ID of the file.
             /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
@@ -612,7 +612,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// [Details about video files](~~86991~~).
+            /// [The information about the video](~~86991~~).
             /// </summary>
             [NameInMap("Video")]
             [Validation(Required=false)]
@@ -626,7 +626,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The category ID of the video file.
+                /// The ID of the category.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
@@ -647,7 +647,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -678,7 +678,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// The source. Valid values:
+                /// The source of the video file. Valid values:
                 /// 
                 /// *   **general**: The video file is uploaded by using ApsaraVideo VOD.
                 /// *   **short_video**: The video file is uploaded by using the short video SDK.
@@ -690,7 +690,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MediaSource { get; set; }
 
                 /// <summary>
-                /// The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -734,21 +734,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The list of automatic snapshots.
+                /// The automatic snapshots.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
 
                 /// <summary>
-                /// The list of sprite snapshots.
+                /// The sprite snapshots.
                 /// </summary>
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
                 public List<string> SpriteSnapshots { get; set; }
 
                 /// <summary>
-                /// The status of the video file. Valid values:
+                /// The status of the file. Valid values:
                 /// 
                 /// *   **Uploading**
                 /// *   **UploadFail**
@@ -769,17 +769,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **IA**: All media resources are stored as IA objects.
                 /// *   **Archive**: All media resources are stored as Archive objects.
                 /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
-                /// *   **SourceIA**: Only the source files are IA objects.
-                /// *   **SourceArchive**: Only the source files are Archive objects.
-                /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-                /// *   **Changing**: The storage class is being modified.
+                /// *   **SourceIA**: Only the source file is stored as an IA object.
+                /// *   **SourceArchive**: Only the source file is stored as an Archive object.
+                /// *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+                /// *   **Changing**: The storage class of the video file is being changed.
+                /// *   **SourceChanging**: The storage class of the source file is being changed.
                 /// </summary>
                 [NameInMap("StorageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// The endpoint of the OSS bucket in which the video file is stored.
+                /// The region in which the video is stored.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
@@ -793,14 +794,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The title of the video file.
+                /// The title of the video.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// The transcoding mode. Default value: FastTranscode. Valid values:
+                /// The transcoding mode. Valid values:
                 /// 
                 /// *   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
                 /// *   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodStorageForAppRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. You can obtain the application ID from the response to the [CreateAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-createappinfo) or [ListAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-listappinfo) operation.
+        /// The IDs of applications. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) or [ListAppInfo](~~ListAppInfo~~) operation.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StorageLocation { get; set; }
 
         /// <summary>
-        /// The storage type. Default value: vod_oss_bucket.
+        /// The storage class. Default value: **vod_oss_bucket**.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

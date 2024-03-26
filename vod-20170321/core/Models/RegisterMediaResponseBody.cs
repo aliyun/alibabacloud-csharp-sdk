@@ -24,23 +24,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<RegisterMediaResponseBodyRegisteredMediaList> RegisteredMediaList { get; set; }
         public class RegisterMediaResponseBodyRegisteredMediaList : TeaModel {
             /// <summary>
-            /// The OSS URL of the media file.
+            /// The URL of the media file.
             /// </summary>
             [NameInMap("FileURL")]
             [Validation(Required=false)]
             public string FileURL { get; set; }
 
             /// <summary>
-            /// The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.
+            /// The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.
             /// </summary>
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
             /// <summary>
-            /// Indicates whether the media file is newly registered or repeatedly registered. Valid values:  
-            /// - **true**: The media file is newly registered.
-            /// - **false**: The media file is repeatedly registered.
+            /// Indicates whether the media file is newly registered or repeatedly registered. Valid values:
+            /// 
+            /// *   **true**: The media file is newly registered.
+            /// *   **false**: The media file is repeatedly registered.
             /// </summary>
             [NameInMap("NewRegister")]
             [Validation(Required=false)]

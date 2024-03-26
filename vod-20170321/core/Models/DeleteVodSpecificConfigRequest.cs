@@ -23,6 +23,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The environment of configuration. 
+        /// 
+        /// Value:
+        /// 
+        /// online: production environment
+        /// 
+        /// gray: simulation environment
+        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }

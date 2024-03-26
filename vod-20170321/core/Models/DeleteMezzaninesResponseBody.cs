@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteMezzaninesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the videos that do not exist.
+        /// The IDs of the audio or video files that do not exist.
         /// </summary>
         [NameInMap("NonExistVideoIds")]
         [Validation(Required=false)]
@@ -24,8 +24,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of the videos whose mezzanine files cannot be deleted.
-        /// > Generally, mezzanine files cannot be deleted if they are used for original-quality playback or you do not have required [permissions](~~113600~~) to delete them.
+        /// The IDs of the audio or video files whose source files cannot be deleted.
+        /// 
+        /// >  In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see [Overview](~~113600~~).
         /// </summary>
         [NameInMap("UnRemoveableVideoIds")]
         [Validation(Required=false)]

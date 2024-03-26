@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// >  If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.
+        /// </summary>
         [NameInMap("AllowUpdateWithoutTimeLimit")]
         [Validation(Required=false)]
         public bool? AllowUpdateWithoutTimeLimit { get; set; }
@@ -46,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// The storage class to which you want to modify. Valid values:
+        /// The storage class. Valid values:
         /// 
         /// *   **Standard**
         /// *   **IA**

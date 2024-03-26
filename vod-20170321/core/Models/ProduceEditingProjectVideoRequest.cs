@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The configuration of video production. The value must be in JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title_ybl\_7cs_y7d~~).
+        /// The configuration of video production. The value must be in the JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title-ybl-7cs-y7d~~).
         /// 
-        /// > The StorageLocation field is required if you create an online editing project in a region other than the China (Shanghai) region.
+        /// >  StorageLocation is required if you produce videos in a region other than China (Shanghai).
         /// </summary>
         [NameInMap("ProduceConfig")]
         [Validation(Required=false)]

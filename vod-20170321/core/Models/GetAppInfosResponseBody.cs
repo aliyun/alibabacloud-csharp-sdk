@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// The HTTP status code that is returned.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
