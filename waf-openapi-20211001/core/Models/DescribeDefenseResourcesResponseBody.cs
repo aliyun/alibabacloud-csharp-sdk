@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// The status of the secure attribute of the tracking cookie.
+            /// The status of the secure attribute in the tracking cookie.
             /// 
             /// *   **0:** disabled.
             /// *   **1:** enabled.
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// The status of the secure attribute of the slider verification cookie.
+            /// The status of the slider CAPTCHA cookie.
             /// 
             /// *   **0:** disabled.
             /// *   **1:** enabled.
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
-            /// The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP address in the XFF header is the originating IP address of the client.
+            /// The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.
             /// </summary>
             [NameInMap("CustomHeaders")]
             [Validation(Required=false)]
@@ -68,28 +68,32 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The details of the protected object. Different key-value pairs in a map indicate different properties of the protected object.
+            /// The details of the protected object. Different key-value pairs indicate different attributes of the protected object.
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public Dictionary<string, object> Detail { get; set; }
 
             /// <summary>
-            /// The creation time of the protected object. Unit: seconds.
+            /// The time when the protected object was created. Unit: milliseconds.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The most recent modification time of the protected object. Unit: seconds.
+            /// The time when the protected object was modified. Unit: milliseconds.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            [NameInMap("OwnerUserId")]
+            [Validation(Required=false)]
+            public string OwnerUserId { get; set; }
+
             /// <summary>
-            /// The protection pattern.
+            /// The pattern in which the protected object is protected.
             /// </summary>
             [NameInMap("Pattern")]
             [Validation(Required=false)]
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceGroup { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The ID of the Alibaba Cloud resource group.
             /// </summary>
             [NameInMap("ResourceManagerResourceGroupId")]
             [Validation(Required=false)]
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceOrigin { get; set; }
 
             /// <summary>
-            /// Indicates whether the X-Forwarded-For (XFF) header is used.
+            /// Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled for the protected object.
             /// </summary>
             [NameInMap("XffStatus")]
             [Validation(Required=false)]

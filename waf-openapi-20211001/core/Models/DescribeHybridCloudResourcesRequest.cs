@@ -73,13 +73,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
-        /// <summary>
-        /// The source IP address of the request. The system specifies this parameter.
-        /// </summary>
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
     }
 
 }

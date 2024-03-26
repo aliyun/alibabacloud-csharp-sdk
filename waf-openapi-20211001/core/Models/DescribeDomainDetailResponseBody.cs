@@ -180,14 +180,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ProtectionResource { get; set; }
 
+            /// <summary>
+            /// Indicates whether only SM certificate-based clients can access the domain name. This parameter is returned only if the value of SM2Enabled is true. Valid values:
+            /// 
+            /// *   true
+            /// *   false
+            /// </summary>
             [NameInMap("SM2AccessOnly")]
             [Validation(Required=false)]
             public bool? SM2AccessOnly { get; set; }
 
+            /// <summary>
+            /// The ID of the SM certificate that is added. This parameter is returned only if the value of SM2Enabled is true.
+            /// </summary>
             [NameInMap("SM2CertId")]
             [Validation(Required=false)]
             public bool? SM2CertId { get; set; }
 
+            /// <summary>
+            /// Indicates whether SM certificate-based verification is enabled. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
+            /// </summary>
             [NameInMap("SM2Enabled")]
             [Validation(Required=false)]
             public bool? SM2Enabled { get; set; }
@@ -317,7 +332,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<DescribeDomainDetailResponseBodyRedirectRequestHeaders> RequestHeaders { get; set; }
             public class DescribeDomainDetailResponseBodyRedirectRequestHeaders : TeaModel {
                 /// <summary>
-                /// The key of the custom header field.
+                /// The custom header field.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -366,6 +381,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public int? WriteTimeout { get; set; }
 
+            /// <summary>
+            /// Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+            /// 
+            /// *   **true** (default)
+            /// *   **false**
+            /// </summary>
             [NameInMap("XffProto")]
             [Validation(Required=false)]
             public bool? XffProto { get; set; }

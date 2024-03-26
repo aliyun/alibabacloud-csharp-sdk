@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeHybridCloudResourcesResponseBodyDomains> Domains { get; set; }
         public class DescribeHybridCloudResourcesResponseBodyDomains : TeaModel {
             /// <summary>
-            /// The CNAME that is assigned by WAF to the domain name.
+            /// The CNAME assigned by WAF.
             /// 
-            /// > This parameter is returned only if you set **CnameEnabled** to true.
+            /// >  This parameter is returned only if the value of **CnameEnabled** is true.
             /// </summary>
             [NameInMap("Cname")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// The configurations of the listeners.
+            /// The listeners.
             /// </summary>
             [NameInMap("Listen")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 /// <summary>
                 /// The custom cipher suites.
                 /// 
-                /// > This parameter is returned only if the value of **CipherSuite** is **99**.
+                /// >  This parameter is returned only if the value of **CipherSuite** is **99**.
                 /// </summary>
                 [NameInMap("CustomCiphers")]
                 [Validation(Required=false)]
@@ -127,6 +127,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 [Validation(Required=false)]
                 public List<long?> HttpsPorts { get; set; }
 
+                /// <summary>
+                /// Specifies whether to enable IPv6. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
                 [NameInMap("IPv6Enabled")]
                 [Validation(Required=false)]
                 public bool? IPv6Enabled { get; set; }
@@ -155,18 +161,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 /// <summary>
                 /// The method that is used to obtain the actual IP address of a client. Valid values:
                 /// 
-                /// *   **0:** No Layer 7 proxies are deployed in front of WAF.
-                /// *   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
-                /// *   **2:** WAF reads the value of a custom header field as the actual IP address of the client.
+                /// *   **0**: No Layer 7 proxies are deployed in front of WAF.
+                /// *   **1**: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
+                /// *   **2**: WAF reads the value of a custom header field as the actual IP address of the client.
                 /// </summary>
                 [NameInMap("XffHeaderMode")]
                 [Validation(Required=false)]
                 public int? XffHeaderMode { get; set; }
 
                 /// <summary>
-                /// The custom header fields that are used to obtain the actual IP address of a client. The value is in the \["header1","header2",...] format.
+                /// The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the \["header1","header2",...] format.
                 /// 
-                /// > This parameter is returned only if the value of **XffHeaderMode** is 2.
+                /// >  This parameter is returned only if the value of **XffHeaderMode** is 2.
                 /// </summary>
                 [NameInMap("XffHeaders")]
                 [Validation(Required=false)]
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeHybridCloudResourcesResponseBodyDomainsRedirect Redirect { get; set; }
             public class DescribeHybridCloudResourcesResponseBodyDomainsRedirect : TeaModel {
                 /// <summary>
-                /// The back-to-origin IP addresses or domain names.
+                /// The IP addresses or domain names of the origin server.
                 /// </summary>
                 [NameInMap("Backends")]
                 [Validation(Required=false)]
@@ -199,7 +205,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public bool? CnameEnabled { get; set; }
 
                 /// <summary>
-                /// The connection timeout period. Unit: seconds. Valid values: 5 to 120.
+                /// The timeout period for connections. Unit: seconds. Valid values: 5 to 120.
                 /// </summary>
                 [NameInMap("ConnectTimeout")]
                 [Validation(Required=false)]
@@ -228,25 +234,25 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 /// <summary>
                 /// The number of reused persistent connections. Valid values: 60 to 1000.
                 /// 
-                /// > This parameter indicates the number of reused persistent connections after you enable the persistent connection feature.
+                /// >  This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.
                 /// </summary>
                 [NameInMap("KeepaliveRequests")]
                 [Validation(Required=false)]
                 public long? KeepaliveRequests { get; set; }
 
                 /// <summary>
-                /// The timeout period of persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.
+                /// The timeout period for persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.
                 /// 
-                /// > This parameter indicates the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+                /// >  This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.
                 /// </summary>
                 [NameInMap("KeepaliveTimeout")]
                 [Validation(Required=false)]
                 public long? KeepaliveTimeout { get; set; }
 
                 /// <summary>
-                /// The load balancing algorithm that WAF uses to forward requests to the origin server. Valid values:
+                /// The load balancing algorithm that is used to forward requests to the origin server. Valid values:
                 /// 
-                /// *   **ip_hash**
+                /// *   **iphash**
                 /// *   **roundRobin**
                 /// *   **leastTime**
                 /// </summary>
@@ -255,14 +261,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Loadbalance { get; set; }
 
                 /// <summary>
-                /// The read timeout period. Unit: seconds. Valid values: 5 to 1800.
+                /// The timeout period for read connections. Unit: seconds. Valid values: 5 to 1800.
                 /// </summary>
                 [NameInMap("ReadTimeout")]
                 [Validation(Required=false)]
                 public long? ReadTimeout { get; set; }
 
                 /// <summary>
-                /// The key-value pair that is used to mark the requests that pass through the WAF instance.
+                /// The key-value pair that is used to label requests that pass through WAF.
                 /// </summary>
                 [NameInMap("RequestHeaders")]
                 [Validation(Required=false)]
@@ -285,7 +291,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:
+                /// Indicates whether WAF retries forwarding requests if requests fail to be forwarded to the origin server. Valid values:
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -295,11 +301,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public bool? Retry { get; set; }
 
                 /// <summary>
-                /// The forwarding rules that you configured for the domain name that you added to WAF in hybrid cloud mode. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+                /// The forwarding rules that are configured for the domain name. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
                 /// 
-                /// *   **rs:** The back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.
-                /// *   **location:** The name of the protection node. The value is of the STRING type.
-                /// *   **locationId:** The ID of the protection node. The value is of the LONG type.
+                /// *   **rs**: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.
+                /// *   **location**: the name of the protection node. The value is of the STRING type.
+                /// *   **locationId**: the ID of the protection node. The value is of the LONG type.
                 /// </summary>
                 [NameInMap("RoutingRules")]
                 [Validation(Required=false)]
@@ -316,16 +322,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public bool? SniEnabled { get; set; }
 
                 /// <summary>
-                /// The value of the custom Server Name Indication (SNI) field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.
+                /// The value of the custom SNI field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.
                 /// 
-                /// > This parameter is returned only if the value of **SniEnabled** is **true**.
+                /// >  This parameter is returned only if the value of **SniEnabled** is **true**.
                 /// </summary>
                 [NameInMap("SniHost")]
                 [Validation(Required=false)]
                 public string SniHost { get; set; }
 
                 /// <summary>
-                /// The write timeout period. Unit: seconds. Valid values: 5 to 1800.
+                /// The timeout period for write connections. Unit: seconds. Valid values: 5 to 1800.
                 /// </summary>
                 [NameInMap("WriteTimeout")]
                 [Validation(Required=false)]
@@ -334,7 +340,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The ID of the Alibaba Cloud resource group.
             /// </summary>
             [NameInMap("ResourceManagerResourceGroupId")]
             [Validation(Required=false)]
@@ -343,11 +349,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// The status of the domain name. Valid values:
             /// 
-            /// *   **1:** The domain name is normal.
+            /// *   **1:** The domain name is in a normal state.
             /// *   **2:** The domain name is being created.
             /// *   **3:** The domain name is being modified.
             /// *   **4:** The domain name is being released.
-            /// *   **5:** WAF no longer forwards traffic of the domain name.
+            /// *   **5:** WAF no longer forwards the traffic of the domain name.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

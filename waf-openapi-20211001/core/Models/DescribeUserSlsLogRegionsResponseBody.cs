@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ModifyDefenseRuleResponseBody : TeaModel {
+    public class DescribeUserSlsLogRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The region IDs.
+        /// </summary>
+        [NameInMap("LogRegions")]
+        [Validation(Required=false)]
+        public List<string> LogRegions { get; set; }
+
+        /// <summary>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

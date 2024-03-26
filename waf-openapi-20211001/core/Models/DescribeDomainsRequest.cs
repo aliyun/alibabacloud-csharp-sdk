@@ -62,13 +62,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// The source IP address. The value of this parameter is specified by the system.
-        /// </summary>
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        /// <summary>
         /// The tag of the resource. You can specify up to 20 tags.
         /// </summary>
         [NameInMap("Tag")]

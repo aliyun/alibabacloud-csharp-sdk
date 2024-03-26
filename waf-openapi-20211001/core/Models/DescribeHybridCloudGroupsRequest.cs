@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterProxyType { get; set; }
 
         /// <summary>
-        /// The name of the hybrid cloud node group that you want to query.
+        /// The name of the node group that you want to query.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

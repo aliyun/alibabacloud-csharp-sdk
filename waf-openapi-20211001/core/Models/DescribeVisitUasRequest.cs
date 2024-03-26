@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The region where the WAF instance resides. Valid values:
+        /// 
+        /// *   **cn-hangzhou:** the Chinese mainland
+        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
