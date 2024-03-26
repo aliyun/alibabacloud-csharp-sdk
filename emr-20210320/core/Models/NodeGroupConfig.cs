@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public List<string> AdditionalSecurityGroupIds { get; set; }
 
+        [NameInMap("ComponentTags")]
+        [Validation(Required=false)]
+        public List<string> ComponentTags { get; set; }
+
         /// <summary>
         /// 成本优化模式配置。
         /// </summary>
