@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        [NameInMap("CustomParams")]
+        [Validation(Required=false)]
+        public string CustomParams { get; set; }
+
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
@@ -39,6 +43,7 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
 
         [NameInMap("LightModel")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? LightModel { get; set; }
 
         [NameInMap("Mode")]
