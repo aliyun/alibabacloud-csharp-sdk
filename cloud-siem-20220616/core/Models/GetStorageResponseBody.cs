@@ -37,7 +37,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? DisplayRegion { get; set; }
 
             /// <summary>
-            /// The region in which the logs are stored. Default value: cn-shanghai. Valid values: cn-shanghai for the China site and ap-southeast-1 for the international site.
+            /// The region where the data is stored.
+            /// 
+            /// If the data management center is **cn-hangzhou**, the default value of **Region** is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is **ap-southeast-1**, the default value of **Region** is ap-southeast-1, which specifies the Singapore region.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]

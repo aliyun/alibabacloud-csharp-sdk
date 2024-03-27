@@ -103,18 +103,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// The risk type, which indicates the alert type.
+                /// The threat type, which indicates the alert type.
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// The risk level. Valid values:
+                /// The threat level. Valid values:
                 /// 
-                /// *   serious: high
-                /// *   suspicious: medium
-                /// *   remind: low
+                /// *   serious: high.
+                /// *   suspicious: medium.
+                /// *   remind: low.
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -151,8 +151,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// The status of the alert data. Valid values:
                 /// 
-                /// *   test: business test data
-                /// *   online: online data
+                /// *   test: business test data.
+                /// *   online: online data.
                 /// </summary>
                 [NameInMap("OnlineStatus")]
                 [Validation(Required=false)]

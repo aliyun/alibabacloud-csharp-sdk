@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+        /// The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions in China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// *   **cn-hangzhou**: Your assets reside in regions in China.
+        /// *   **ap-southeast-1**: Your assets reside in regions outside China.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The type of the rule. Valid values:
         /// 
-        /// *   predefine
-        /// *   customize
+        /// *   **predefine**
+        /// *   **customize**
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
@@ -81,22 +81,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The status of the rule. Valid values:
         /// 
-        /// *   0: The rule is in the initial state.
-        /// *   10: The simulation data is tested.
-        /// *   15: The business data is being tested.
-        /// *   20: The business data test ends.
-        /// *   100: The rule takes effect.
+        /// *   **0**: The rule is in the initial state.
+        /// *   **10**: The simulation data is tested.
+        /// *   **15**: The business data is being tested.
+        /// *   **20**: The business data test is complete.
+        /// *   **100**: The rule is in effect.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
         /// <summary>
-        /// The risk level. The value is a JSON array. Valid values:
+        /// The threat level. The value must be a JSON array. Valid values:
         /// 
-        /// *   serious: high
-        /// *   suspicious: medium
-        /// *   remind: low
+        /// *   **serious**: high-risk.
+        /// *   **suspicious**: medium-risk.
+        /// *   **remind**: low-risk.
         /// </summary>
         [NameInMap("ThreatLevel")]
         [Validation(Required=false)]

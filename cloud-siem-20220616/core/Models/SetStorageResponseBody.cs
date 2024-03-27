@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// Indicates whether the settings are saved. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true:
+        /// *   false:
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

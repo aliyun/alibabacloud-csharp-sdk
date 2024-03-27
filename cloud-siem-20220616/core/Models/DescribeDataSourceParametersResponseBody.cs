@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// Indicates whether the edit operation is supported. Valid values:
             /// 
-            /// *   0: no
-            /// *   1: yes
+            /// *   **0**
+            /// *   **1**
             /// </summary>
             [NameInMap("CanEditted")]
             [Validation(Required=false)]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The code of the cloud service provider. Valid values:
             /// 
-            /// *   qcloud: Tencent Cloud
-            /// *   aliyun: Alibaba Cloud
-            /// *   hcloud: Huawei Cloud
+            /// *   **qcloud**: Tencent Cloud
+            /// *   **aliyun**: Alibaba Cloud
+            /// *   **hcloud**: Huawei Cloud
             /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The type of the data source. Valid values:
             /// 
-            /// *   obs: Huawei Cloud OBS
-            /// *   wafApi: download API of Tencent Cloud WAF
-            /// *   ckafka: Tencent Cloud CKafka
+            /// *   **obs**: Huawei Cloud Object Storage Service (OBS)
+            /// *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
+            /// *   **ckafka**: Tencent Cloud TDMQ for CKafka
             /// </summary>
             [NameInMap("DataSourceType")]
             [Validation(Required=false)]
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// Indicates whether the modification operation is forbidden. Valid values:
             /// 
-            /// *   true
-            /// *   false
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
@@ -89,8 +89,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// The parameter level. Valid values:
             /// 
-            /// *   1: data source
-            /// *   2: log
+            /// *   **1**: the parameters of the data source
+            /// *   **2**: the parameters of the log
             /// </summary>
             [NameInMap("ParaLevel")]
             [Validation(Required=false)]
@@ -136,15 +136,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// Indicates whether the parameter is required. Valid values:
             /// 
-            /// *   1: yes
-            /// *   0: no
+            /// *   **1**: required
+            /// *   **0**: optional
             /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public int? Required { get; set; }
 
             /// <summary>
-            /// The note on the parameter value.
+            /// The note for the parameter value.
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// The number of entries to return on each page. Maximum value: 500.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// The detailed data
+            /// The detailed data.
             /// </summary>
             [NameInMap("ResponseData")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public Dictionary<string, string> OpcodeMap { get; set; }
 
                 /// <summary>
-                /// An array consisting of the codes of playbooks that are recommended for entity handling.
+                /// The codes of the playbooks that are recommended for entity handling.
                 /// </summary>
                 [NameInMap("OpcodeSet")]
                 [Validation(Required=false)]
@@ -147,6 +147,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     [Validation(Required=false)]
                     public string OpLevel { get; set; }
 
+                    /// <summary>
+                    /// The playbook parameters and the corresponding properties.
+                    /// </summary>
                     [NameInMap("ParamConfig")]
                     [Validation(Required=false)]
                     public List<object> ParamConfig { get; set; }
@@ -171,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// An array consisting of the IDs of the users who can handle objects.
+                /// The IDs of the users who can handle objects.
                 /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]

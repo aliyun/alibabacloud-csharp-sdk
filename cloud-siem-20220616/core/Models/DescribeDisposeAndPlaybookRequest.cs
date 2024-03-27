@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The entity type. Valid values:
         /// 
-        /// *   ip: IP address
-        /// *   process: process
-        /// *   file: file
+        /// *   ip
+        /// *   process
+        /// *   file
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]

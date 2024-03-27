@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SetStorageRequest : TeaModel {
         /// <summary>
-        /// The storage region of logs. By default, the region of the data management center is used and cannot be changed. cn-shanghai is used for the China data management center, and ap-southeast-1 is used for the Outside China data management center. To change the region, contact the technical support of threat analysis.
+        /// The storage region of logs.
+        /// 
+        /// If the data management center is **cn-hangzhou**, the default value of **Region** is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is **ap-southeast-1**, the default value of **Region** is ap-southeast-1, which specifies the Singapore region.
+        /// 
+        /// The region for log storage cannot be changed. To change the region, contact the technical support of threat analysis.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -19,8 +23,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions in the Chinese mainland or in the China (Hong Kong) region.
-        /// *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
+        /// *   cn-hangzhou: Your assets reside in regions in China.
+        /// *   ap-southeast-1: Your assets reside in regions outside China.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

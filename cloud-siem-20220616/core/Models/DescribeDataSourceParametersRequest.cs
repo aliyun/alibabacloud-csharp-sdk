@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// The type of the data source. Valid values:
         /// 
-        /// *   ckafka: Tencent Cloud Kafka (CKafka)
-        /// *   obs: Huawei Cloud Object Storage Service (OBS)
-        /// *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+        /// *   **ckafka**: Tencent Cloud TDMQ for CKafka
+        /// *   **obs**: Huawei Cloud Object Storage Service (OBS)
+        /// *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]

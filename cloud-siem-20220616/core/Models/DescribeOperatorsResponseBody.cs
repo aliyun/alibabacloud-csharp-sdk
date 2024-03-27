@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string OperatorDescEn { get; set; }
 
             /// <summary>
-            /// The display name of the operator.
+            /// The name of the operator.
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
             public string OperatorName { get; set; }
 
             /// <summary>
-            /// The data types that are supported by the current operator. The data types are separated by commas (,).
+            /// The data types that are supported by the operator. The data types are separated by commas (,).
             /// </summary>
             [NameInMap("SupportDataType")]
             [Validation(Required=false)]
             public string SupportDataType { get; set; }
 
             /// <summary>
-            /// The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. This parameter is empty by default.
+            /// The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. By default, this parameter is empty.
             /// </summary>
             [NameInMap("SupportTag")]
             [Validation(Required=false)]

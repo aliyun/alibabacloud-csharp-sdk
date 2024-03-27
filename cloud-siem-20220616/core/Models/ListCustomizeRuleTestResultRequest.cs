@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: 100.
+        /// The number of entries per page. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
