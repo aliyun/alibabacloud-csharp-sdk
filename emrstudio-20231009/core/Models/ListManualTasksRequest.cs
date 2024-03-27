@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EmrStudio20231009.Models
 {
-    public class ListProjectsRequest : TeaModel {
+    public class ListManualTasksRequest : TeaModel {
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.EmrStudio20231009.Models
         [Validation(Required=false)]
         public string SearchVal { get; set; }
 
+        [NameInMap("taskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
+
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
-        public long? WorkspaceId { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 

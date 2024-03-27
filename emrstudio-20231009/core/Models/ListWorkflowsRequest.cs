@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EmrStudio20231009.Models
 {
-    public class ListProjectsRequest : TeaModel {
+    public class ListWorkflowsRequest : TeaModel {
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
