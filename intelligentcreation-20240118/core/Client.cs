@@ -925,5 +925,65 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240118
             return await SubmitBulletQuestionsV1WithOptionsAsync(request, headers, runtime);
         }
 
+        public SyncDigitalVideoResponse SyncDigitalVideoWithOptions(SyncDigitalVideoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDigitalVideo",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/videos/commands/syncDigitalVideo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDigitalVideoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SyncDigitalVideoResponse> SyncDigitalVideoWithOptionsAsync(SyncDigitalVideoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDigitalVideo",
+                Version = "2024-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/videos/commands/syncDigitalVideo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDigitalVideoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SyncDigitalVideoResponse SyncDigitalVideo(SyncDigitalVideoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SyncDigitalVideoWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SyncDigitalVideoResponse> SyncDigitalVideoAsync(SyncDigitalVideoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SyncDigitalVideoWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }
