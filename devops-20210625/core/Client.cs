@@ -10633,6 +10633,62 @@ namespace AlibabaCloud.SDK.Devops20210625
             return await ListHostGroupsWithOptionsAsync(organizationId, request, headers, runtime);
         }
 
+        public ListJoinedOrganizationsResponse ListJoinedOrganizationsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJoinedOrganizations",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/users/joinedOrgs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJoinedOrganizationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListJoinedOrganizationsResponse> ListJoinedOrganizationsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJoinedOrganizations",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/users/joinedOrgs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJoinedOrganizationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListJoinedOrganizationsResponse ListJoinedOrganizations()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListJoinedOrganizationsWithOptions(headers, runtime);
+        }
+
+        public async Task<ListJoinedOrganizationsResponse> ListJoinedOrganizationsAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListJoinedOrganizationsWithOptionsAsync(headers, runtime);
+        }
+
         public ListMergeRequestCommentsResponse ListMergeRequestCommentsWithOptions(ListMergeRequestCommentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
