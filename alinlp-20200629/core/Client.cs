@@ -4717,6 +4717,100 @@ namespace AlibabaCloud.SDK.Alinlp20200629
             return await ImportServiceDataWithOptionsAsync(request, runtime);
         }
 
+        public ImportServiceDataV2Response ImportServiceDataV2WithOptions(ImportServiceDataV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportServiceDataV2ShrinkRequest request = new ImportServiceDataV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Documents))
+            {
+                request.DocumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Documents, "Documents", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentsShrink))
+            {
+                body["Documents"] = request.DocumentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportServiceDataV2",
+                Version = "2020-06-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportServiceDataV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ImportServiceDataV2Response> ImportServiceDataV2WithOptionsAsync(ImportServiceDataV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportServiceDataV2ShrinkRequest request = new ImportServiceDataV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Documents))
+            {
+                request.DocumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Documents, "Documents", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentsShrink))
+            {
+                body["Documents"] = request.DocumentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportServiceDataV2",
+                Version = "2020-06-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportServiceDataV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ImportServiceDataV2Response ImportServiceDataV2(ImportServiceDataV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportServiceDataV2WithOptions(request, runtime);
+        }
+
+        public async Task<ImportServiceDataV2Response> ImportServiceDataV2Async(ImportServiceDataV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportServiceDataV2WithOptionsAsync(request, runtime);
+        }
+
         public InsertCustomResponse InsertCustomWithOptions(InsertCustomRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
