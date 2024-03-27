@@ -271,6 +271,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["UseDsql"] = request.UseDsql;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -405,6 +409,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDsql))
             {
                 query["UseDsql"] = request.UseDsql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -3842,6 +3850,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
           * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param tmpReq CreateSQLReviewOrderRequest
@@ -3898,6 +3907,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
           * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param tmpReq CreateSQLReviewOrderRequest
@@ -3954,6 +3964,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
           * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param request CreateSQLReviewOrderRequest
@@ -3966,6 +3977,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
           * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param request CreateSQLReviewOrderRequest
@@ -17325,6 +17337,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["UseDsql"] = request.UseDsql;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -17463,6 +17479,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDsql))
             {
                 query["UseDsql"] = request.UseDsql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -17655,6 +17675,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await OfflineTaskFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request PauseDataCorrectSQLJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PauseDataCorrectSQLJobResponse
+         */
         public PauseDataCorrectSQLJobResponse PauseDataCorrectSQLJobWithOptions(PauseDataCorrectSQLJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17694,6 +17721,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<PauseDataCorrectSQLJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request PauseDataCorrectSQLJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PauseDataCorrectSQLJobResponse
+         */
         public async Task<PauseDataCorrectSQLJobResponse> PauseDataCorrectSQLJobWithOptionsAsync(PauseDataCorrectSQLJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17733,12 +17767,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<PauseDataCorrectSQLJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request PauseDataCorrectSQLJobRequest
+          * @return PauseDataCorrectSQLJobResponse
+         */
         public PauseDataCorrectSQLJobResponse PauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PauseDataCorrectSQLJobWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request PauseDataCorrectSQLJobRequest
+          * @return PauseDataCorrectSQLJobResponse
+         */
         public async Task<PauseDataCorrectSQLJobResponse> PauseDataCorrectSQLJobAsync(PauseDataCorrectSQLJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

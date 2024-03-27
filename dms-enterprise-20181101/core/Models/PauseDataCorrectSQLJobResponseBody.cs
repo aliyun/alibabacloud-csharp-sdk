@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class PauseDataCorrectSQLJobResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code that is returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message that is returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

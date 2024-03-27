@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? UseDsql { get; set; }
 
+        [NameInMap("UseSsl")]
+        [Validation(Required=false)]
+        public int? UseSsl { get; set; }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

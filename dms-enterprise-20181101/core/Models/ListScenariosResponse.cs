@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListScenariosResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListScenariosResponseBody Body { get; set; }
 
     }
