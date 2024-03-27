@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     [Validation(Required=false)]
                     public string ContainerName { get; set; }
 
+                    [NameInMap("ExtendField")]
+                    [Validation(Required=false)]
+                    public string ExtendField { get; set; }
+
                     /// <summary>
                     /// The complete version number.
                     /// </summary>

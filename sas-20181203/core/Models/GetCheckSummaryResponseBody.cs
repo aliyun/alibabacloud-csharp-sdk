@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryResponseBody : TeaModel {
+        /// <summary>
+        /// The statistics of the check items.
+        /// </summary>
         [NameInMap("OverallItemStatistic")]
         [Validation(Required=false)]
         public GetCheckSummaryResponseBodyOverallItemStatistic OverallItemStatistic { get; set; }
         public class GetCheckSummaryResponseBodyOverallItemStatistic : TeaModel {
+            /// <summary>
+            /// The number of check items supported by the system.
+            /// </summary>
             [NameInMap("ReleaseCount")]
             [Validation(Required=false)]
             public int? ReleaseCount { get; set; }
 
+            /// <summary>
+            /// The number of check items available to you.
+            /// </summary>
             [NameInMap("ResultCount")]
             [Validation(Required=false)]
             public int? ResultCount { get; set; }
@@ -24,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// overall risk statistics of check items.
+        /// The overall risk statistics.
         /// </summary>
         [NameInMap("OverallStatistic")]
         [Validation(Required=false)]
@@ -80,35 +89,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassLowCount { get; set; }
 
             /// <summary>
-            /// The number of low-risk check items that failed to pass the check.
+            /// The number of medium-risk check items that failed to pass the check.
             /// </summary>
             [NameInMap("NotPassMediumCount")]
             [Validation(Required=false)]
             public int? NotPassMediumCount { get; set; }
 
             /// <summary>
-            /// The number of check items that passed the check.
+            /// The number of check items that pass the check.
             /// </summary>
             [NameInMap("PassCount")]
             [Validation(Required=false)]
             public int? PassCount { get; set; }
 
             /// <summary>
-            /// The number off high-risk check items that passed the check.
+            /// The number of high-risk check items that pass the check.
             /// </summary>
             [NameInMap("PassHighCount")]
             [Validation(Required=false)]
             public int? PassHighCount { get; set; }
 
             /// <summary>
-            /// The number off low-risk check items that passed the check.
+            /// The number of low-risk check items that pass the check.
             /// </summary>
             [NameInMap("PassLowCount")]
             [Validation(Required=false)]
             public int? PassLowCount { get; set; }
 
             /// <summary>
-            /// The number off medium-risk check items that passed the check.
+            /// The number of medium-risk check items that pass the check.
             /// </summary>
             [NameInMap("PassMediumCount")]
             [Validation(Required=false)]
@@ -124,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the summary information about the configuration checks on cloud services.
+        /// The summary information about the configuration checks on cloud services.
         /// </summary>
         [NameInMap("Summarys")]
         [Validation(Required=false)]
@@ -152,7 +161,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetCheckSummaryResponseBodySummarysStandards> Standards { get; set; }
             public class GetCheckSummaryResponseBodySummarysStandards : TeaModel {
                 /// <summary>
-                /// The number of risk items.
+                /// The number of check items that failed to pass the check.
                 /// </summary>
                 [NameInMap("FailCount")]
                 [Validation(Required=false)]
@@ -166,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The number of check items that passed the check.
+                /// The number of check items that pass the check.
                 /// </summary>
                 [NameInMap("PassCount")]
                 [Validation(Required=false)]
@@ -201,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// Risk statistics of check items within the same standard.
+                /// The standard statistics of the check items.
                 /// </summary>
                 [NameInMap("StandardStatistic")]
                 [Validation(Required=false)]
@@ -264,28 +273,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotPassMediumCount { get; set; }
 
                     /// <summary>
-                    /// The number of check items that passed the check.
+                    /// The number of check items that pass the check.
                     /// </summary>
                     [NameInMap("PassCount")]
                     [Validation(Required=false)]
                     public int? PassCount { get; set; }
 
                     /// <summary>
-                    /// The number off high-risk check items that passed the check.
+                    /// The number of high-risk check items that pass the check.
                     /// </summary>
                     [NameInMap("PassHighCount")]
                     [Validation(Required=false)]
                     public int? PassHighCount { get; set; }
 
                     /// <summary>
-                    /// The number off low-risk check items that passed the check.
+                    /// The number of low-risk check items that pass the check.
                     /// </summary>
                     [NameInMap("PassLowCount")]
                     [Validation(Required=false)]
                     public int? PassLowCount { get; set; }
 
                     /// <summary>
-                    /// The number off medium-risk check items that passed the check.
+                    /// The number of medium-risk check items that pass the check.
                     /// </summary>
                     [NameInMap("PassMediumCount")]
                     [Validation(Required=false)]
@@ -307,7 +316,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// Risk statistics of check items within the same type.
+            /// The risk statistics by type.
             /// </summary>
             [NameInMap("TypeStatistic")]
             [Validation(Required=false)]
@@ -377,21 +386,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? PassCount { get; set; }
 
                 /// <summary>
-                /// The number off high-risk check items that passed the check.
+                /// The number of high-risk check items that pass the check.
                 /// </summary>
                 [NameInMap("PassHighCount")]
                 [Validation(Required=false)]
                 public int? PassHighCount { get; set; }
 
                 /// <summary>
-                /// The number off low-risk check items that passed the check.
+                /// The number of low-risk check items that pass the check.
                 /// </summary>
                 [NameInMap("PassLowCount")]
                 [Validation(Required=false)]
                 public int? PassLowCount { get; set; }
 
                 /// <summary>
-                /// The number off medium-risk check items that passed the check.
+                /// The number of medium-risk check items that pass the check.
                 /// </summary>
                 [NameInMap("PassMediumCount")]
                 [Validation(Required=false)]

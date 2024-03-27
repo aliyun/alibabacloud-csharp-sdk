@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AllowPartialBuy { get; set; }
 
+        /// <summary>
+        /// Switch of anti-ransomware hosting service. Valid values:
+        /// 
+        /// *   **0**: off
+        /// *   **1**: on
+        /// </summary>
         [NameInMap("AntiRansomwareService")]
         [Validation(Required=false)]
         public int? AntiRansomwareService { get; set; }
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RaspCapacity { get; set; }
 
         /// <summary>
-        /// The timestamp when Security Center was released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
+        /// The timestamp when Security Center was expired. Unit: milliseconds. 
         /// 
         /// >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).
         /// </summary>

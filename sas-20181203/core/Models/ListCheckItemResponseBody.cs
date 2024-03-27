@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("EstimatedCount")]
+            [Validation(Required=false)]
+            public int? EstimatedCount { get; set; }
+
             /// <summary>
             /// The asset subtype of the cloud service. Valid value:
             /// 

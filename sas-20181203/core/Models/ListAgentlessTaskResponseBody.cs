@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The volume of detection data, in MB.
+            /// </summary>
             [NameInMap("MeasureSpace")]
             [Validation(Required=false)]
             public long? MeasureSpace { get; set; }
@@ -55,14 +58,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Progress { get; set; }
 
+            /// <summary>
+            /// The execution progress of the inspection items.
+            /// </summary>
             [NameInMap("ProgressByProject")]
             [Validation(Required=false)]
             public string ProgressByProject { get; set; }
 
+            /// <summary>
+            /// The download link for the report.
+            /// </summary>
             [NameInMap("ReportDownloadUrl")]
             [Validation(Required=false)]
             public string ReportDownloadUrl { get; set; }
 
+            /// <summary>
+            /// The status of the report. Possible values:
+            /// 
+            /// *   **PREPARED**: In preparation.
+            /// *   **RUNNING**: In progress.
+            /// *   **SUCCESS**: Successful.
+            /// *   **TIMEOUT**: Timeout.
+            /// *   **FAILED**: Failed.
+            /// </summary>
             [NameInMap("ReportStatus")]
             [Validation(Required=false)]
             public string ReportStatus { get; set; }

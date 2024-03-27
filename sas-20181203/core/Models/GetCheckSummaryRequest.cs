@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.
+        /// </summary>
         [NameInMap("IsItemStatistic")]
         [Validation(Required=false)]
         public bool? IsItemStatistic { get; set; }
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The service provider (SP) of the cloud asset.
+        /// The cloud service providers.
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportRecordRequest : TeaModel {
+        /// <summary>
+        /// The type of the file to export. Valid values:
+        /// 
+        /// *   **virusScanExport**: The details of the virus scan tasks are exported. This parameter is available and required when ExportType is set to virusScanExport.
+        /// </summary>
         [NameInMap("ExportFileType")]
         [Validation(Required=false)]
         public string ExportFileType { get; set; }
@@ -28,12 +33,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **autorun**: the list of fingerprints for startup items
         /// *   **lkm**: the list of fingerprints for kernel modules
         /// *   **webserver**: the list of fingerprints for websites
+        /// *   **virusScanExport**: the details of the virus scan tasks
         /// *   **imageVulExport**: the list of image system vulnerabilities
         /// *   **imageBaseLineExport**: the list of check results for image baselines
         /// *   **imageAffectedMaliciousExport**: the list of check results for malicious image samples
-        /// *   **baseline**: the list of check results for configuration assessment
+        /// *   **baselineCspm**: the list of check results for configuration assessment
         /// *   **attack**: the list of alert events for attack analysis
-        /// *   **accessKey**: the list of alert events that are generated for AccessKey pair leaks
+        /// *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]

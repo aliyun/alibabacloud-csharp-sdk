@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// The number of entries per page. Maximum value : 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
