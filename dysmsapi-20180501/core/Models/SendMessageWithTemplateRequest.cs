@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SendMessageWithTemplateRequest : TeaModel {
+        [NameInMap("ChannelId")]
+        [Validation(Required=false)]
+        public string ChannelId { get; set; }
+
         /// <summary>
         /// The signature. To query the signature, log on to the [Short Message Service (SMS) console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Signatures** tab of the **Go China** page.
         /// </summary>

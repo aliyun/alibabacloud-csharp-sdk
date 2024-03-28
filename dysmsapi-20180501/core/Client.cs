@@ -420,6 +420,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -473,6 +477,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -554,6 +562,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -609,6 +621,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
