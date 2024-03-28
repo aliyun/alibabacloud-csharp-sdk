@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public bool? Archived { get; set; }
 
+        [NameInMap("minAccessLevel")]
+        [Validation(Required=false)]
+        public int? MinAccessLevel { get; set; }
+
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }

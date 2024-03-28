@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("namespaceId")]
+            [Validation(Required=false)]
+            public string NamespaceId { get; set; }
+
+            [NameInMap("organizationAlias")]
+            [Validation(Required=false)]
+            public string OrganizationAlias { get; set; }
+
             [NameInMap("organizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
