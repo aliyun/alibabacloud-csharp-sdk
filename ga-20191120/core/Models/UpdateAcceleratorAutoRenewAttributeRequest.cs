@@ -17,21 +17,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the GA instance. Default value: false. Valid values:
+        /// Specifies whether to enable auto-renewal for the GA instance. Valid values:
         /// 
-        /// *   **true**: enables auto-renewal for the GA instance.
-        /// *   **false**: does not enable auto-renewal for the GA instance.
+        /// *   **true**
+        /// *   **false** (default)
+        /// 
+        /// >  **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal period. Unit: months.
+        /// The auto-renewal duration. Unit: month.
         /// 
         /// Valid values: **1** to **12**.
         /// 
-        /// >  This parameter is required only if **AutoRenew** is set to **true**.
+        /// >  This parameter takes effect only if you set **AutoRenew** to **true**.
         /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]
@@ -40,9 +42,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate a token, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the GA instance.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -67,11 +69,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Specifies how to renew the GA instance. Valid values:
         /// 
-        /// *   **AutoRenewal**: The GA instance is automatically renewed.
+        /// *   **AutoRenewal**: The system automatically renews the GA instance.
         /// *   **Normal**: You must manually renew the GA instance.
-        /// *   **NotRenewal**: Choose this option if you do not want to renew the GA instance after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance. You can change the value of this parameter from NotRenewal to **Normal** for a GA instance, and then manually renew the instance. You can also set the RenewalStatus parameter to **AutoRenewal**.
+        /// *   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to **Normal**, and then manually renew the instance. You can also set RenewalStatus to **AutoRenewal**.
         /// 
-        /// >  **RenewalStatus** takes precedence over **AutoRenew**. If you do not specify **RenewalStatus**, the **AutoRenew** parameter is used by default.
+        /// > 
+        /// 
+        /// *   **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
+        /// 
+        /// *   **RenewalStatus** takes precedence over **AutoRenew**. By default, if you do not specify **RenewalStatus**, **AutoRenew** is used.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

@@ -17,7 +17,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
+        /// 
+        /// This parameter is returned only if ChargeType is set to PREPAY.
+        /// 
+        /// If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

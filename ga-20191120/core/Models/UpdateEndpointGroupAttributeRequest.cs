@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the endpoint group that you want to modify.
+        /// The description of the endpoint group that you want to modify. The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the endpoint group that you want to modify.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

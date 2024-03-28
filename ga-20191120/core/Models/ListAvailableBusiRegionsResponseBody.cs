@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? ChinaMainland { get; set; }
 
             /// <summary>
-            /// The region name.
+            /// The name of the region.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:
+            /// Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? Pop { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

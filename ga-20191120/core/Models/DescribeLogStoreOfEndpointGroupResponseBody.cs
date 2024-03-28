@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The response parameters.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -52,14 +52,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SlsProjectName { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the Simple Log Service project belongs.
+        /// The region ID of the Simple Log Service project.
         /// </summary>
         [NameInMap("SlsRegionId")]
         [Validation(Required=false)]
         public string SlsRegionId { get; set; }
 
         /// <summary>
-        /// Indicates whether the GA instance is associated with the project.
+        /// Indicates whether the endpoint group is bound to the Simple Log Service project.
+        /// 
+        /// *   **on:** The endpoint group is bound to the Simple Log Service project.
+        /// *   **off:** The endpoint group is not bound to the Simple Log Service project.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -45,10 +45,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The version of the IP protocol. Valid values:
+        /// The IP version. Valid values:
         /// 
         /// *   **IPv4**
         /// *   **IPv6**
+        /// *   **DUAL_STACK**
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
@@ -57,19 +58,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
         /// 
-        /// *   **BGP**: BGP (Multi-ISP) lines.
+        /// *   **BGP**: BGP (Multi-ISP) lines. This is the default value.
         /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
-        /// 
-        /// If you are allowed to use single-ISP bandwidth, one of the following values is returned:
-        /// 
-        /// *   **ChinaTelecom**: China Telecom (single ISP).
-        /// *   **ChinaUnicom**: China Unicom (single ISP).
-        /// *   **ChinaMobile**: China Mobile (single ISP).
-        /// *   **ChinaTelecom_L2**: China Telecom (single ISP)\_L2.
-        /// *   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.
-        /// *   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.
-        /// 
-        /// >  The supported single-ISP type varies with the acceleration region.
         /// </summary>
         [NameInMap("IspType")]
         [Validation(Required=false)]
@@ -83,68 +73,70 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The service ID to which the managed instance belongs.
+        /// The ID of the service that manages the instance.
         /// 
-        /// >  Valid only when the ServiceManaged parameter is True.
+        /// >  This parameter is returned only if the value of **ServiceManaged** is **true**.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// Is it a managed instance. Valid values:
+        /// Indicates whether the GA instance is managed. Valid values:
         /// 
-        /// - true
-        /// - false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// A list of action policies that users can execute on this managed instance.
+        /// The actions that users can perform on the managed instance.
+        /// 
+        /// > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+        /// >*   Users can perform only specific actions on a managed instance.
         /// </summary>
         [NameInMap("ServiceManagedInfos")]
         [Validation(Required=false)]
         public List<DescribeIpSetResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeIpSetResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// Managed policy action name, Valid values:
+            /// The name of the action on the managed instance. Valid values:
             /// 
-            /// - Create
-            /// - Update
-            /// - Delete
-            /// - Associate
-            /// - UserUnmanaged
-            /// - CreateChild
+            /// *   **Create**
+            /// *   **Update**
+            /// *   **Delete**
+            /// *   **Associate**
+            /// *   **UserUnmanaged**
+            /// *   **CreateChild**
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// Sub resource type, Valid values:
+            /// The type of the child resource. Valid values:
             /// 
-            /// - Listener
-            /// - IpSet
-            /// - EndpointGroup
-            /// - ForwardingRule
-            /// - Endpoint
-            /// - EndpointGroupDestination
-            /// - EndpointPolicy
+            /// *   **Listener**: listener.
+            /// *   **IpSet**: acceleration region.
+            /// *   **EndpointGroup**: endpoint group.
+            /// *   **ForwardingRule**: forwarding rule.
+            /// *   **Endpoint**: endpoint.
+            /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+            /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
             /// 
-            /// >Only valid when the Action parameter is CreateChild.
+            /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
             /// </summary>
             [NameInMap("ChildType")]
             [Validation(Required=false)]
             public string ChildType { get; set; }
 
             /// <summary>
-            /// Is the managed policy action managed, Valid values:
+            /// Indicates whether the specified actions are managed.
             /// 
-            /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-            /// 
-            /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// *   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.
+            /// *   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.
             /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]

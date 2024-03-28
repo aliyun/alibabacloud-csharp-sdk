@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance become unavailable, GA redirects the access traffic to the secondary IP addresses.
+        /// The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance becomes unavailable, access traffic is redirected to the secondary IP addresses.
         /// 
-        /// You can specify up to 2 secondary IP addresses. Separate IP addresses with commas (,).
+        /// You can specify up to two secondary IP addresses.
         /// </summary>
         [NameInMap("SpareIps")]
         [Validation(Required=false)]

@@ -26,22 +26,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The commodity code.
             /// 
-            /// Examples for the China site (aliyun.com):
+            /// Valid values on the China site (aliyun.com):
             /// 
             /// *   **ga_gapluspre_public_cn**: GA instance.
             /// *   **ga_plusbwppre_public_cn**: basic bandwidth plan.
             /// 
-            /// Examples for the international site (alibabacloud.com):
+            /// Valid values on the international site (alibabacloud.com):
             /// 
             /// *   **ga_pluspre_public_intl**: GA instance.
-            /// *   **ga_bwppreintl_public_intl**: basic bandwidth plan.
+            /// *   **ga_bwppreintl_public_intl:** basic bandwidth plan.
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The information about the commodity module.
+            /// The information about commodity modules.
             /// 
             /// The information varies based on the commodity module.
             /// </summary>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string ComponentCode { get; set; }
 
                 /// <summary>
-                /// The attributes of the commodity module.
+                /// The attributes of commodity modules.
                 /// 
                 /// The information varies based on the commodity module.
                 /// </summary>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<DescribeCommodityPriceRequestOrdersComponentsProperties> Properties { get; set; }
                 public class DescribeCommodityPriceRequestOrdersComponentsProperties : TeaModel {
                     /// <summary>
-                    /// The code of the attribute.
+                    /// The code of the attribute of the commodity module.
                     /// 
                     /// The information varies based on the commodity module. Examples: **instance** (GA instance) and **ord_time** (subscription duration).
                     /// </summary>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     /// <summary>
                     /// The value of the attribute.
                     /// 
-                    /// The information varies based on the commodity module. Examples: **1:Month** (one-month subscription) and **instance_fee** (GA instance fee).
+                    /// The information varies based on the commodity module. Examples: **instance_fee** (GA instance fee) and **1:Month** (one-month subscription).
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -90,31 +90,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The subscription duration of the instance.
+            /// The subscription duration.
             /// 
-            /// *   If the **PricingCycle** parameter is set to **Month**, the valid values of the Duration parameter are **1** to **9**.
-            /// *   If the **PricingCycle** parameter is set to **Year**, the valid values of the Duration parameter are **1** to **3**.
+            /// *   Valid values if you set **PricingCycle** to **Month**: **1** to **9**.
+            /// *   Valid values if you set **PricingCycle** to **Year**: **1** to **3**.
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
 
             /// <summary>
-            /// The type of order. Valid values:
+            /// The type of the order. Valid values:
             /// 
-            /// *   **BUY**: purchase order
-            /// *   **RENEW**: renewal order
-            /// *   **UPGRADE**: upgrade order
+            /// *   **BUY**: purchase order.
+            /// *   **RENEW**: renewal order.
+            /// *   **UPGRADE**: upgrade order.
             /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
 
             /// <summary>
-            /// The billing cycle of the GA instance. Valid values:
+            /// The billing cycle. Valid values:
             /// 
-            /// *   **Month**: billed on a monthly basis.
-            /// *   **Year**: billed on an annual basis.
+            /// *   **Month**
+            /// *   **Year**
             /// </summary>
             [NameInMap("PricingCycle")]
             [Validation(Required=false)]

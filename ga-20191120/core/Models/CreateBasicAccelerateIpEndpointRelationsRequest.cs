@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The IDs of the accelerated IP addresses.
             /// 
-            /// You can specify at most 20 IP address IDs.
+            /// You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the IDs of the accelerated IP addresses.
+            /// 
+            /// You can specify up to 20 IP address IDs.
             /// </summary>
             [NameInMap("AccelerateIpId")]
             [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             /// <summary>
             /// The IDs of the endpoints.
+            /// 
+            /// You can call the [ListBasicEndpoints](~~2253406~~) to query the IDs of the endpoints.
             /// 
             /// You can specify up to 20 endpoint IDs.
             /// </summary>
@@ -46,9 +50,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

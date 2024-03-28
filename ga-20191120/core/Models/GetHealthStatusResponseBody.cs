@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// The information about the endpoint group.
+        /// The information about the endpoint groups.
         /// </summary>
         [NameInMap("EndpointGroups")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint group. Valid values:
             /// 
-            /// *   **default**: a default endpoint group
-            /// *   **virtual**: a virtual endpoint group
+            /// *   **default:** the default endpoint group.
+            /// *   **virtual:** a virtual endpoint group.
             /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The health status of the endpoint. Valid values:
                 /// 
-                /// *   **init**: The endpoint is being initialized.
-                /// *   **normal**: The endpoint is normal.
-                /// *   **Abnormal**: The endpoint is abnormal.
+                /// *   **init:** The endpoint is being initialized.
+                /// *   **normal:** The endpoint is normal.
+                /// *   **abnormal:** The endpoint is abnormal.
                 /// </summary>
                 [NameInMap("HealthStatus")]
                 [Validation(Required=false)]
@@ -84,13 +84,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the endpoint. Valid values:
                 /// 
-                /// *   **Domain**: a custom domain name
-                /// *   **Ip**: a custom IP address
-                /// *   **PublicIp**: a public IP address provided by Alibaba Cloud
-                /// *   **ECS**: an Elastic Compute Service (ECS) instance
-                /// *   **SLB**: a Server Load Balancer (SLB) instance
-                /// *   **ALB**: an Application Load Balancer (ALB) instance
-                /// *   **OSS**: an Object Storage Service (OSS) bucket
+                /// *   **Domain:** a custom domain name.
+                /// *   **Ip:** a custom IP address.
+                /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+                /// *   **ECS:** an Elastic Compute Service (ECS) instance.
+                /// *   **SLB:** a Classic Load Balancer (CLB) instance.
+                /// *   **ALB:** an Application Load Balancer (ALB) instance.
+                /// *   **OSS:** an Object Storage Service (OSS) bucket.
+                /// *   **ENI:** an elastic network interface (ENI).
+                /// *   **NLB:** a Network Load Balancer (NLB) instance.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -108,10 +110,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The health status of the endpoint group. Valid values:
             /// 
-            /// *   **init**: The endpoint group is being initialized.
-            /// *   **normal**: The endpoint group is normal.
-            /// *   **Abnormal**: The endpoint group is abnormal.
-            /// *   **partiallyAbnormal**: Some endpoint groups that are associated with the listener are abnormal.
+            /// *   **init:** The endpoint group is being initialized.
+            /// *   **normal:** The endpoint group is normal.
+            /// *   **abnormal:** The endpoint group is abnormal.
+            /// *   **partiallyAbnormal:** The endpoint group is partially abnormal.
             /// </summary>
             [NameInMap("HealthStatus")]
             [Validation(Required=false)]
@@ -120,11 +122,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The health status of the listener. Valid values:
+        /// The health status of endpoints and endpoint groups. Valid values:
         /// 
-        /// *   **normal**: The listener is normal.
-        /// *   **Abnormal**: The listener is abnormal.
-        /// *   **partiallyAbnormal**: Some exceptions occur to the listener.
+        /// *   **normal**
+        /// *   **abnormal**
+        /// *   **partiallyAbnormal**
         /// </summary>
         [NameInMap("HealthStatus")]
         [Validation(Required=false)]

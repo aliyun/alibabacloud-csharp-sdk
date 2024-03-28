@@ -19,17 +19,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Indicates whether auto-renewal is enabled. Valid values:
         /// 
-        /// *   **true**: enabled
-        /// *   **false** (default): disabled
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal duration. Unit: months.
-        /// 
-        /// This parameter is returned only if **AutoRenew** is set to **true**.
+        /// The auto-renewal duration. Unit: month.
         /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]

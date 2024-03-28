@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateCustomRoutingEndpointsRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint group in which to create endpoints.
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+        /// 
+        /// > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -26,13 +30,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateCustomRoutingEndpointsRequestEndpointConfigurations> EndpointConfigurations { get; set; }
         public class CreateCustomRoutingEndpointsRequestEndpointConfigurations : TeaModel {
             /// <summary>
-            /// The traffic policy that is used to process traffic to the endpoint. Valid values:
-            /// 
-            /// *   **DenyAll** (default): denies all traffic to the endpoint.
-            /// *   **AllowAll**: allows all traffic to the endpoint.
-            /// *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
-            /// 
-            /// If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
+            /// The ID of the vSwitch that is specified as an endpoint.
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
@@ -48,13 +46,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<CreateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurations> PolicyConfigurations { get; set; }
             public class CreateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurations : TeaModel {
                 /// <summary>
-                /// The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
-                /// 
-                /// If you leave this parameter empty, traffic is forwarded to all destination ports.
+                /// The IP address of the destination to which traffic is forwarded.
                 /// 
                 /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                 /// 
-                /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.
+                /// You can specify up to 20 destination IP addresses for each endpoint.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
@@ -74,18 +70,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<CreateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurationsPortRanges> PortRanges { get; set; }
                 public class CreateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurationsPortRanges : TeaModel {
                     /// <summary>
-                    /// The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
+                    /// The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
                     /// 
                     /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                     /// 
-                    /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 last ports for each destination.
+                    /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 first ports for each destination.
                     /// </summary>
                     [NameInMap("FromPort")]
                     [Validation(Required=false)]
                     public int? FromPort { get; set; }
 
                     /// <summary>
-                    /// The returned information.
+                    /// The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
+                    /// 
+                    /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
+                    /// 
+                    /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 last ports for each destination.
                     /// </summary>
                     [NameInMap("ToPort")]
                     [Validation(Required=false)]
@@ -96,16 +96,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The destination to which traffic is forwarded.
+            /// The traffic policy that is used to process traffic to the endpoint. Valid values:
             /// 
-            /// You can specify up to 20 destinations for each endpoint.
+            /// *   **DenyAll** (default): denies all traffic to the endpoint.
+            /// *   **AllowAll**: allows all traffic to the endpoint.
+            /// *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
+            /// 
+            /// If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
             /// </summary>
             [NameInMap("TrafficToEndpointPolicy")]
             [Validation(Required=false)]
             public string TrafficToEndpointPolicy { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch that is specified as an endpoint.
+            /// The type of endpoint.
+            /// 
+            /// Set the value to **PrivateSubNet**, which specifies a private CIDR block. This is the default value.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -114,20 +120,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The information about the endpoints.
-        /// 
-        /// You can specify information for up to 20 endpoints.
+        /// The ID of the endpoint group in which to create endpoints.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
-        /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

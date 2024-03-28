@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<UpdateIpSetsRequestIpSets> IpSets { get; set; }
         public class UpdateIpSetsRequestIpSets : TeaModel {
             /// <summary>
-            /// The new bandwidth of the acceleration region. Unit: Mbit/s.
+            /// The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.
             /// 
-            /// You can specify the bandwidth for up to 100 acceleration regions.
+            /// You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The ID of the acceleration region that you want to modify.
+            /// The IDs of the acceleration regions that you want to modify.
             /// 
             /// You can specify the IDs of up to 100 acceleration regions.
             /// </summary>

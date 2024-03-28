@@ -90,11 +90,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// 基础型全球加速实例是否开启跨境线路功能。取值：
+        /// Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
         /// 
-        /// - **true**：开启跨境线路功能，可以加速跨境线路。
-        /// 
-        /// - **false**：关闭跨境线路功能，不可以加速跨境线路。
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("CrossBorderStatus")]
         [Validation(Required=false)]
@@ -209,14 +208,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<GetBasicAcceleratorResponseBodyTags> Tags { get; set; }
         public class GetBasicAcceleratorResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key of the basic GA instance.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the basic GA instance.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

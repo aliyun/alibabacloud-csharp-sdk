@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public double? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// The discounted price.
+                /// The transaction price, which is equal to the original price minus the discount.
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public double? OriginalPrice { get; set; }
 
             /// <summary>
-            /// The details about the discount.
+            /// The details of the discount.
             /// 
-            /// >  This parameter is unavailable on the China site (aliyun.com).
+            /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("PromDetails")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The discounted price.
                 /// 
-                /// >  This parameter is unavailable on the China site (aliyun.com).
+                /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("FinalPromFee")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The code of the discount option.
                 /// 
-                /// >  This parameter is unavailable on the China site (aliyun.com).
+                /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("OptionCode")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The sub-type of the discount.
                 /// 
-                /// >  This parameter is unavailable on the China site (aliyun.com).
+                /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("PromType")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The ID of the discount item.
                 /// 
-                /// >  This parameter is unavailable on the China site (aliyun.com).
+                /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("PromotionId")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The name of the discount item.
                 /// 
-                /// >  This parameter is unavailable on the China site (aliyun.com).
+                /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("PromotionName")]
                 [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public long? Quantity { get; set; }
 
             /// <summary>
-            /// The IDs of the discount rules.
+            /// The IDs of discount rules.
             /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
@@ -192,9 +192,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public double? OriginalPrice { get; set; }
 
         /// <summary>
-        /// The list of coupons.
+        /// The details of the coupon.
         /// 
-        /// >  This parameter is unavailable on the China site (aliyun.com).
+        /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
         /// </summary>
         [NameInMap("Promotions")]
         [Validation(Required=false)]
@@ -203,16 +203,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The discounted amount.
             /// 
-            /// >  This parameter is unavailable on the China site (aliyun.com).
+            /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("CanPromFee")]
             [Validation(Required=false)]
             public double? CanPromFee { get; set; }
 
             /// <summary>
-            /// The code of the commodity to which the coupon applies.
+            /// The code of the commodity to which the coupon can be applied.
             /// 
-            /// >  This parameter is unavailable on the China site (aliyun.com).
+            /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("OptionCode")]
             [Validation(Required=false)]
@@ -221,32 +221,28 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the coupon.
             /// 
-            /// >  This parameter is unavailable on the China site (aliyun.com).
+            /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("PromotionName")]
             [Validation(Required=false)]
             public string PromotionName { get; set; }
 
             /// <summary>
-            /// The coupon code.
-            /// 
-            /// > 
-            /// 
-            /// *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that do not apply.
-            /// 
-            /// *   This parameter is unavailable on the China site (aliyun.com).
+            /// The code of the coupon.
+            /// > *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.
+            /// > *   This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("PromotionOptionNo")]
             [Validation(Required=false)]
             public string PromotionOptionNo { get; set; }
 
             /// <summary>
-            /// Indicates whether an item is selected. Valid values:
+            /// Indicates whether the coupon was selected.
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// 
-            /// >  This parameter is unavailable on the China site (aliyun.com).
+            /// >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
             /// </summary>
             [NameInMap("Selected")]
             [Validation(Required=false)]

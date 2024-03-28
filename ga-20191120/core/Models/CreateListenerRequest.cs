@@ -577,6 +577,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
+        /// The maximum version of the HTTP protocol. Valid values:
+        /// 
+        /// *   **http3**
+        /// *   **http2** (default)
+        /// *   **http1.1**
+        /// 
+        /// >  Only HTTPS listeners support this parameter.
+        /// </summary>
+        [NameInMap("HttpVersion")]
+        [Validation(Required=false)]
+        public string HttpVersion { get; set; }
+
+        /// <summary>
         /// The timeout period of idle connections. Unit: seconds.
         /// 
         /// *   TCP: 10-900. Default value: 900. Unit: seconds.

@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// *   **IPv4**
             /// *   **IPv6**
+            /// *   **DUAL_STACK**
             /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
@@ -57,35 +58,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
             /// 
-            /// *   **BGP** (default)
-            /// *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
-            /// 
-            /// If you are allowed to use single-ISP bandwidth, one of the following values is supported:
-            /// 
-            /// *   **ChinaTelecom**
-            /// *   **ChinaUnicom**
-            /// *   **ChinaMobile**
-            /// *   **ChinaTelecom_L2**
-            /// *   **ChinaUnicom_L2**
-            /// *   **ChinaMobile_L2**
-            /// 
-            /// >  The supported line types vary based on the acceleration region.
+            /// *   **BGP**: BGP (Multi-ISP) lines. This is the default value.
+            /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
             /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
             public string IspType { get; set; }
 
             /// <summary>
-            /// The service that manages the instance.
+            /// The ID of the service that manages the instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// >  This parameter takes effect only if **ServiceManaged** is set to **true**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// Indicates whether the GA instance is managed. Valid values:
+            /// Indicates whether the instance is managed. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -97,9 +87,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The actions that users can perform on the managed instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-            /// 
-            /// *   Users can perform only specific actions on a managed instance.
+            /// > *   This parameter takes effect only if **ServiceManaged** is set to **true**.
+            /// >*   Users can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
@@ -122,13 +111,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the child resource. Valid values:
                 /// 
-                /// *   **Listener**: listener
-                /// *   **IpSet**: acceleration region
-                /// *   **EndpointGroup**: endpoint group
-                /// *   **ForwardingRule**: forwarding rule
-                /// *   **Endpoint**: endpoint
-                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+                /// *   **Listener**: listener.
+                /// *   **IpSet**: acceleration region.
+                /// *   **EndpointGroup**: endpoint group.
+                /// *   **ForwardingRule**: forwarding rule.
+                /// *   **Endpoint**: endpoint.
+                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
                 /// 
                 /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
                 /// </summary>
@@ -137,10 +126,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string ChildType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the specified actions are managed. Valid values:
+                /// Indicates whether the specified actions are managed.
                 /// 
-                /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
-                /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
+                /// *   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.****
+                /// *   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
@@ -151,10 +140,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The status of the acceleration region. Valid values:
             /// 
-            /// *   **init**
-            /// *   **active**
-            /// *   **updating**
-            /// *   **deleting**
+            /// *   **init:** The acceleration region is being initialized.
+            /// *   **active:** The acceleration region is in the running state.
+            /// *   **updating:** The acceleration region is being configured.
+            /// *   **deleting:** The acceleration region is being deleted.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

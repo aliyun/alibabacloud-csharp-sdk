@@ -82,6 +82,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The maximum version of the HTTP protocol. Valid values:
+        /// 
+        /// *   **http3**
+        /// *   **http2**
+        /// *   **http1.1**
+        /// 
+        /// >  Only HTTPS listeners support this parameter.
+        /// </summary>
+        [NameInMap("HttpVersion")]
+        [Validation(Required=false)]
+        public string HttpVersion { get; set; }
+
+        /// <summary>
+        /// The timeout period for idle connections. Unit: seconds.
+        /// 
+        /// *   TCP: 10-900. Default value: 900. Unit: seconds.
+        /// *   UDP: 10-20. Default value: 20. Unit: seconds.
+        /// *   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.
+        /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -172,6 +192,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The timeout period for HTTP or HTTPS requests.
+        /// 
+        /// Valid values: 1 to 180. Default value: 60. Unit: seconds.
+        /// 
+        /// >  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.
+        /// </summary>
         [NameInMap("RequestTimeout")]
         [Validation(Required=false)]
         public int? RequestTimeout { get; set; }

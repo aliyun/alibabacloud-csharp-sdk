@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The name of the acceleration area.
+            /// The acceleration area name.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -38,39 +38,41 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<ListAvailableAccelerateAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListAvailableAccelerateAreasResponseBodyAreasRegionList : TeaModel {
                 /// <summary>
-                /// Whether China Mainland.
+                /// Indicates whether the region is in the Chinese mainland. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("ChinaMainland")]
                 [Validation(Required=false)]
                 public bool? ChinaMainland { get; set; }
 
                 /// <summary>
-                /// The line types of EIPs in the acceleration region.
+                /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
                 /// 
-                /// *   **BGP**: BGP (Multi-ISP) lines
-                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
-                /// 
-                /// If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:
-                /// 
-                /// *   **ChinaTelecom**: China Telecom (single ISP)
-                /// *   **ChinaUnicom**: China Unicom (single ISP)
-                /// *   **ChinaMobile**: China Mobile (single ISP)
-                /// *   **ChinaTelecom_L2**: China Telecom_L2 (single ISP)
-                /// *   **ChinaUnicom_L2**: China Unicom_L2 (single ISP)
-                /// *   **ChinaMobile_L2**: China Mobile_L2 (single ISP)
-                /// 
-                /// > Different acceleration regions support different single-ISP BGP lines.
+                /// *   **BGP**: BGP (Multi-ISP) lines.
+                /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
                 /// </summary>
                 [NameInMap("IspTypeList")]
                 [Validation(Required=false)]
                 public List<string> IspTypeList { get; set; }
 
                 /// <summary>
-                /// The name of the acceleration region.
+                /// The acceleration region name.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
+
+                /// <summary>
+                /// Indicates whether multiple zones are supported. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// </summary>
+                [NameInMap("MultiAz")]
+                [Validation(Required=false)]
+                public bool? MultiAz { get; set; }
 
                 /// <summary>
                 /// The ID of the acceleration region.
@@ -80,10 +82,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Ipv6 supported, Valid values:
+                /// Indicates whether IPv6 is supported. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("SupportIpv6")]
                 [Validation(Required=false)]

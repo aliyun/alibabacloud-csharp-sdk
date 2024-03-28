@@ -19,33 +19,33 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of the ACL. Valid values:
         /// 
-        /// *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.
-        /// *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
+        /// *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.
+        /// *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
         /// 
-        /// If the value of **Status** is **on**, this parameter is returned.
+        /// This parameter is returned only if the value of **Status** is **on**.
         /// </summary>
         [NameInMap("AclType")]
         [Validation(Required=false)]
         public string AclType { get; set; }
 
         /// <summary>
-        /// Details about the backend ports.
+        /// The information about the backend ports.
         /// </summary>
         [NameInMap("BackendPorts")]
         [Validation(Required=false)]
         public List<DescribeListenerResponseBodyBackendPorts> BackendPorts { get; set; }
         public class DescribeListenerResponseBodyBackendPorts : TeaModel {
             /// <summary>
-            /// The start port in the range of ports used by the backend server to receive requests.
+            /// The first port in the range of ports that are used by the backend server to receive requests.
             /// 
-            /// This parameter is returned only when you configure an HTTPS listener and the listening port is the same port used by the backend server to provide services.
+            /// This parameter is returned only if an HTTPS listener is configured and the listener port is the same as the service port of the backend server.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public string FromPort { get; set; }
 
             /// <summary>
-            /// The end port in the range of ports used by the backend server to receive requests.
+            /// The last port in the range of ports that are used by the backend server to receive requests.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// The type of the certificate.
+            /// The type of the SSL certificate.
             /// 
-            /// Only **Server** can be returned. This value Server indicates a server certificate.
+            /// Only **Server** may be returned, which indicates a server certificate.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -81,15 +81,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Indicates whether client affinity is enabled for the listener.
         /// 
-        /// *   If **NONE** is returned, client affinity is disabled. In this case, requests from the same client may be forwarded to different endpoints.
-        /// *   If **SOURCE_IP** is returned, client affinity is enabled. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
+        /// *   If **NONE** is returned, client affinity is disabled. Requests from the same client may be forwarded to different endpoints.
+        /// *   If **SOURCE_IP** is returned, client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.
         /// </summary>
         [NameInMap("ClientAffinity")]
         [Validation(Required=false)]
         public string ClientAffinity { get; set; }
 
         /// <summary>
-        /// The timestamp when the listener was created. Unit: milliseconds.
+        /// The time when the listener was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -102,6 +102,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The maximum version of the HTTP protocol. Valid values:
+        /// 
+        /// *   **http3**
+        /// *   **http2**
+        /// *   **http1.1**
+        /// 
+        /// >  This parameter is returned only for HTTPS listeners.
+        /// </summary>
+        [NameInMap("HttpVersion")]
+        [Validation(Required=false)]
+        public string HttpVersion { get; set; }
+
+        /// <summary>
+        /// The timeout period of idle connections. Unit: seconds.
+        /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -121,21 +137,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Details about the listener ports.
+        /// The information about the listener ports.
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
         public List<DescribeListenerResponseBodyPortRanges> PortRanges { get; set; }
         public class DescribeListenerResponseBodyPortRanges : TeaModel {
             /// <summary>
-            /// The start port in the range of listening ports used to receive and forward requests to endpoints.
+            /// The first port in the range of listener ports that are used to receive and forward requests to endpoints.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// The end port in the range of listening ports used to receive and forward requests to endpoints.
+            /// The last port in the range of listener ports that are used to receive and forward requests to endpoints.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -146,10 +162,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The network transmission protocol that is used by the listener. Valid values:
         /// 
-        /// *   **tcp**: TCP
-        /// *   **udp**: UDP
-        /// *   **http**: HTTP
-        /// *   **https**: HTTPS
+        /// *   **tcp**: TCP.
+        /// *   **udp**: UDP.
+        /// *   **http**: HTTP.
+        /// *   **https**: HTTPS.
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
@@ -158,8 +174,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Indicates whether the client IP address preservation feature is enabled. Valid values:
         /// 
-        /// *   **true**: The client IP address preservation feature is enabled. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.
-        /// *   **false**: The client IP address preservation feature is disabled.
+        /// *   **true** You can view the source IP addresses of clients over the backend service.
+        /// *   **false**
         /// </summary>
         [NameInMap("ProxyProtocol")]
         [Validation(Required=false)]
@@ -182,8 +198,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the access control feature is enabled. Valid values:
             /// 
-            /// *   **on**: enabled
-            /// *   **off**: disabled
+            /// *   **on**: enabled.
+            /// *   **off**: disabled.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -198,6 +214,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The timeout period of HTTP or HTTPS requests. Unit: seconds.
+        /// 
+        /// >  This parameter is returned only for HTTP and HTTPS listeners. If no responses are received from the backend server within the specified timeout period, GA returns the HTTP 504 error code to the client.
+        /// </summary>
         [NameInMap("RequestTimeout")]
         [Validation(Required=false)]
         public int? RequestTimeout { get; set; }
@@ -207,28 +228,28 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   **tls_cipher_policy\_1\_0**
         /// 
-        ///     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+        ///     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
         /// *   **tls_cipher_policy\_1\_1**
         /// 
-        ///     *   Supported TLS versions: TLS 1.1 and TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+        ///     *   Supported TLS versions: TLS 1.1 and TLS 1.2.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
         /// *   **tls_cipher_policy\_1\_2**
         /// 
-        ///     *   Supported TLS version: TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+        ///     *   Supported TLS version: TLS 1.2.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
         /// 
         /// *   **tls_cipher_policy\_1\_2\_strict**
         /// 
-        ///     *   Supported TLS version: TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+        ///     *   Supported TLS version: TLS 1.2.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
         /// 
         /// *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
         /// 
-        ///     *   Supported TLS versions: TLS 1.2 and TLS 1.3
-        ///     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+        ///     *   Supported TLS versions: TLS 1.2 and TLS 1.3.
+        ///     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
         /// 
         /// >  This parameter is returned only for HTTPS listeners.
         /// </summary>
@@ -237,66 +258,69 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// The service ID to which the managed instance belongs.
+        /// The ID of the service that manages the instance.
         /// 
-        /// >  Valid only when the ServiceManaged parameter is True.
+        /// >  This parameter is returned only if the value of **ServiceManaged** is **true**.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// Is it a managed instance. Valid values:
+        /// Indicates whether the instance is managed. Valid values:
         /// 
-        /// - true
-        /// - false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// A list of action policies that users can execute on this managed instance.
+        /// The actions that users can perform on the managed instance.
+        /// >*   This parameter is returned only if the value of **ServiceManaged** is **true**.
+        /// >*   Users can perform only specific actions on a managed instance.
         /// </summary>
         [NameInMap("ServiceManagedInfos")]
         [Validation(Required=false)]
         public List<DescribeListenerResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeListenerResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// Managed policy action name, Valid values:
+            /// The name of the action on the managed instance. Valid values:
             /// 
-            /// - Create
-            /// - Update
-            /// - Delete
-            /// - Associate
-            /// - UserUnmanaged
-            /// - CreateChild
+            /// *   **Create**
+            /// *   **Update**
+            /// *   **Delete**
+            /// *   **Associate**
+            /// *   **UserUnmanaged**
+            /// *   **CreateChild**
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// Sub resource type, Valid values:
+            /// The type of the child resource. Valid values:
             /// 
-            /// - Listener
-            /// - IpSet
-            /// - EndpointGroup
-            /// - ForwardingRule
-            /// - Endpoint
-            /// - EndpointGroupDestination
-            /// - EndpointPolicy
+            /// *   **Listener**: a listener.
+            /// *   **IpSet**: an acceleration region.
+            /// *   **EndpointGroup**: an endpoint group.
+            /// *   **ForwardingRule**: a forwarding rule.
+            /// *   **Endpoint**: an endpoint.
+            /// *   **EndpointGroupDestination**: a protocol mapping of an endpoint group associated with a custom routing listener.
+            /// *   **EndpointPolicy**: a traffic policy of an endpoint associated with a custom routing listener.
             /// 
-            /// >Only valid when the Action parameter is CreateChild.
+            /// >  This parameter is returned only if the value of **Action** is **CreateChild**.
             /// </summary>
             [NameInMap("ChildType")]
             [Validation(Required=false)]
             public string ChildType { get; set; }
 
             /// <summary>
-            /// Is the managed policy action managed, Valid values:
-            /// - **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-            /// - **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// Indicates whether the specified actions are managed.
+            /// 
+            /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+            /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
             /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]
@@ -305,12 +329,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The state of the listener. Valid values:
+        /// The status of the listener. Valid values:
         /// 
         /// *   **configuring**: The listener is being configured.
         /// *   **init**: The listener is being initialized.
         /// *   **updating**: The listener is being updated.
-        /// *   **deleting**: The listener is being deleted.
+        /// *   **deleting:** The listener is being deleted.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
@@ -319,8 +343,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The routing type of the listener. Valid values:
         /// 
-        /// *   **Standard**: intelligent routing
-        /// *   **CustomRouting**: custom routing
+        /// *   **Standard**: intelligent routing.
+        /// *   **CustomRouting**: custom routing.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -334,10 +358,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig { get; set; }
         public class DescribeListenerResponseBodyXForwardedForConfig : TeaModel {
             /// <summary>
-            /// Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:
+            /// Indicates whether the `GA-AP` header is used to retrieve information about acceleration regions. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// 
             /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
@@ -348,8 +372,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the `GA-ID` header is used to retrieve the ID of the GA instance. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// 
             /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
@@ -360,8 +384,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the `GA-X-Forward-Port` header is used to retrieve the listener ports of the GA instance. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// 
             /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
@@ -372,8 +396,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the `GA-X-Forward-Proto` header is used to retrieve the listener protocol of the GA instance. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// 
             /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>

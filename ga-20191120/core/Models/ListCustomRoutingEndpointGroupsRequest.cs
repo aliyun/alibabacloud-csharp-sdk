@@ -16,6 +16,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        /// <summary>
+        /// Specifies whether the access log feature is enabled.
+        /// 
+        /// You can set the parameter to **on**.
+        /// 
+        /// If you leave the parameter empty, all endpoint groups are returned.
+        /// </summary>
         [NameInMap("AccessLogSwitch")]
         [Validation(Required=false)]
         public string AccessLogSwitch { get; set; }
@@ -35,14 +42,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

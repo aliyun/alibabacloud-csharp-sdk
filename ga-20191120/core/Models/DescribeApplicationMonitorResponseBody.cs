@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeApplicationMonitorResponseBodyIspCityList> IspCityList { get; set; }
         public class DescribeApplicationMonitorResponseBodyIspCityList : TeaModel {
             /// <summary>
-            /// The ID of the city where the probe point of the ISP is deployed.
+            /// The ID of the city in which the probe point of the ISP is deployed.
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// The name of the city where the probe point of the ISP is deployed.
+            /// The name of the city in which the probe point of the ISP is deployed.
             /// </summary>
             [NameInMap("CityName")]
             [Validation(Required=false)]
@@ -126,17 +126,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? SilenceTime { get; set; }
 
         /// <summary>
-        /// The state of the application monitor task. Valid values:
+        /// The status of the origin probing task. Valid values:
         /// 
-        /// - **init**
-        /// 
-        /// - **active**
-        /// 
-        /// - **updating**
-        /// 
-        /// - **inactive**
-        /// 
-        /// - **deleting**
+        /// *   **init**
+        /// *   **active**
+        /// *   **updating**
+        /// *   **inactive**
+        /// *   **deleting**
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

@@ -17,22 +17,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateIpSetsRequestAccelerateRegion> AccelerateRegion { get; set; }
         public class CreateIpSetsRequestAccelerateRegion : TeaModel {
             /// <summary>
-            /// The acceleration region IDs.
+            /// The ID of the acceleration region.
             /// 
-            /// The number of regions that can be added varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
+            /// The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
             /// </summary>
             [NameInMap("AccelerateRegionId")]
             [Validation(Required=false)]
             public string AccelerateRegionId { get; set; }
 
             /// <summary>
-            /// The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.
+            /// The bandwidth that you want to allocate to the acceleration region. Unit: **Mbit/s**.
             /// 
-            /// > 
-            /// 
-            /// *   Each acceleration region must be allocated a minimum of 2 Mbit/s of bandwidth.
-            /// 
-            /// *   The total bandwidth for all acceleration regions cannot exceed the maximum bandwidth of the basic bandwidth plan.
+            /// >*  This parameter is required.
+            /// >*   You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.
+            /// >*   The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -43,6 +41,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// *   **IPv4** (default)
             /// *   **IPv6**
+            /// *   **DUAL_STACK**: IPv4 and IPv6
+            /// 
+            /// > Only pay-as-you-go standard GA instances support DUAL_STACK.
             /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
@@ -51,19 +52,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
             /// 
-            /// *   **BGP**
-            /// *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+            /// *   **BGP**: BGP (Multi-ISP) lines.
+            /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
             /// 
-            /// If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
-            /// 
-            /// *   **ChinaTelecom**: China Telecom (single ISP)
-            /// *   **ChinaUnicom**: China Unicom (single ISP)
-            /// *   **ChinaMobile**: China Mobile (single ISP)
-            /// *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
-            /// *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
-            /// *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
-            /// 
-            /// > Different acceleration regions support different single-ISP BGP lines.
+            /// > *   This parameter is required only if the bandwidth metering method of the GA instance is **pay-by-data transfer**.
+            /// >*   Different acceleration regions support different line types of EIPs.
             /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
@@ -81,9 +74,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

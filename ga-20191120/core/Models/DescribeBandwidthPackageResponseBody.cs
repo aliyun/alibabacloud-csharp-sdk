@@ -70,7 +70,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string CbnGeographicRegionIdB { get; set; }
 
         /// <summary>
-        /// The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+        /// The billing method of the bandwidth plan.
+        /// 
+        /// *   **PREPAY**: subscription. This is the default value.
+        /// *   **POSTPAY**: pay-as-you-go.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -156,14 +159,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeBandwidthPackageResponseBodyTags> Tags { get; set; }
         public class DescribeBandwidthPackageResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key
+            /// The key of tag N that is added to the bandwidth plan.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of tag N that is added to the bandwidth plan.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

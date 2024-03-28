@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// The bandwidth value of the GA instance. Unit: Mbit/s.
+            /// The bandwidth of the GA instance. Unit: Mbit/s.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The bandwidth type that is provided by the basic bandwidth plan. Valid values:
                 /// 
-                /// *   **Basic**.
+                /// *   **Basic**
                 /// *   **Enhanced**
                 /// *   **Advanced**
                 /// </summary>
@@ -91,7 +91,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.
             /// 
-            /// Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.
+            /// *   **bpgPro**: BGP (Multi-ISP) Pro lines.
+            /// *   **private**: cross-border Express Connect circuit.
             /// </summary>
             [NameInMap("CrossBorderMode")]
             [Validation(Required=false)]
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.
+            /// The ID of the Anti-DDoS Pro or Anti-DDOS Premium instance that is associated with the GA instance.
             /// </summary>
             [NameInMap("DdosId")]
             [Validation(Required=false)]
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The canonical name (CNAME) that is assigned to the GA instance.
+            /// The CNAME that is assigned to the GA instance.
             /// </summary>
             [NameInMap("DnsName")]
             [Validation(Required=false)]
@@ -177,7 +178,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The access mode of the acceleration area. Valid values:
                 /// 
-                /// *   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.
+                /// *   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.
                 /// *   **Anycast**: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.
                 /// </summary>
                 [NameInMap("AccessMode")]
@@ -194,7 +195,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The region ID of the GA instance. Only **cn-hangzhou** may be returned.
+            /// The ID of the region where GA instance is deployed. Only **cn-hangzhou** may be returned.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -208,16 +209,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The CNAME that is used to associate the GA instance with an Anti-DDoS Pro/Premium instance.
+            /// The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDOS Premium instance.
             /// </summary>
             [NameInMap("SecondDnsName")]
             [Validation(Required=false)]
             public string SecondDnsName { get; set; }
 
             /// <summary>
-            /// The ID of the service that manages the GA instance.
+            /// The ID of the service that manages the instance.
             /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+            /// >  This parameter takes effect only if the value of **ServiceManaged** is **true**.
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
@@ -234,18 +235,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// The actions that you can perform on the managed instance.
-            /// 
-            /// >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-            /// 
-            /// *   You can perform only specific actions on a managed instance.
+            /// The actions that users can perform on the managed instance.
+            /// > *   This parameter takes effect only if the value of **ServiceManaged** is **true**.
+            /// > *   Users can perform only specific actions on a managed instance.
             /// </summary>
             [NameInMap("ServiceManagedInfos")]
             [Validation(Required=false)]
             public List<ListAcceleratorsResponseBodyAcceleratorsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListAcceleratorsResponseBodyAcceleratorsServiceManagedInfos : TeaModel {
                 /// <summary>
-                /// The name of the action performed on the managed instance. Valid values:
+                /// The name of the action that is performed on the managed instance. Valid values:
                 /// 
                 /// *   **Create**
                 /// *   **Update**
@@ -261,15 +260,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the child resource. Valid values:
                 /// 
-                /// *   **Listener**: listener
-                /// *   **IpSet**: acceleration region
-                /// *   **EndpointGroup**: endpoint group
-                /// *   **ForwardingRule**: forwarding rule
-                /// *   **Endpoint**: endpoint
-                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+                /// *   **Listener**: listener.
+                /// *   **IpSet**: acceleration region.
+                /// *   **EndpointGroup**: endpoint group.
+                /// *   **ForwardingRule**: forwarding rule.
+                /// *   **Endpoint**: endpoint.
+                /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+                /// *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
                 /// 
-                /// >  This parameter takes effect only if **Action** is set to **CreateChild**.
+                /// >  This parameter takes effect only if the value of **Action** is **CreateChild**.
                 /// </summary>
                 [NameInMap("ChildType")]
                 [Validation(Required=false)]
@@ -278,8 +277,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// Indicates whether the specified actions are managed. Valid values:
                 /// 
-                /// *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-                /// *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+                /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+                /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]
@@ -290,26 +289,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The specification of the GA instance. Valid values:
             /// 
-            /// *   **1**: Small Ⅰ
-            /// *   **2**: Small Ⅱ
-            /// *   **3**: Small Ⅲ
-            /// *   **5**: Medium Ⅰ
-            /// *   **8**: Medium Ⅱ
-            /// *   **10**: Medium Ⅲ
-            /// *   **20**: Large Ⅰ
-            /// *   **30**: Large Ⅱ
-            /// *   **40**: Large Ⅲ
-            /// *   **50**: Large Ⅳ
-            /// *   **60**: Large Ⅴ
-            /// *   **70**: Large Ⅵ
-            /// *   **80**: Large VⅡ
-            /// *   **90**: Large VⅢ
-            /// *   **100**: Super Large Ⅰ
-            /// *   **200**: Super Large Ⅱ
+            /// *   **1**: Small Ⅰ.
+            /// *   **2**: Small Ⅱ.
+            /// *   **3**: Small Ⅲ.
+            /// *   **5**: Medium Ⅰ.
+            /// *   **8**: Medium Ⅱ.
+            /// *   **10**: Medium Ⅲ.
+            /// *   **20**: Large Ⅰ.
+            /// *   **30**: Large Ⅱ.
+            /// *   **40**: Large Ⅲ.
+            /// *   **50**: Large IV.
+            /// *   **60**: Large V.
+            /// *   **70**: Large VI.
+            /// *   **80**: Large VII.
+            /// *   **90**: Large VIII.
+            /// *   **100**: Super Large Ⅰ.
+            /// *   **200**: Super Large Ⅱ.
             /// 
             /// >  The Large Ⅲ specification and higher specifications are available only to accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
             /// 
-            /// Each instance specification provides different capabilities. For more information, see [Instance specifications](~~153127~~).
+            /// Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
@@ -318,13 +317,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The status of the GA instance. Valid values:
             /// 
-            /// *   **init**
-            /// *   **active**
-            /// *   **configuring**
-            /// *   **binding**
-            /// *   **unbinding**
-            /// *   **deleting**
-            /// *   **finacialLocked**
+            /// *   **init**: The GA instance is being initialized.
+            /// *   **active**: The GA instance is available.
+            /// *   **configuring**: The GA instance is being configured.
+            /// *   **binding**: The GA instance is being associated.
+            /// *   **unbinding**: The GA instance is being disassociated.
+            /// *   **deleting**: The GA instance is being deleted.
+            /// *   **finacialLocked**: The GA instance is locked due to overdue payments.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

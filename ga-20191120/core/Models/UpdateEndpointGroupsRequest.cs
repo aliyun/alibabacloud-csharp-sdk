@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
+                /// The IP address, domain name, or instance ID based on the value of Type.
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
@@ -87,17 +87,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// *   **Ip:** a custom IP address.
                 /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
                 /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-                /// *   **SLB:** a Server Load Balancer (SLB) instance.
+                /// *   **SLB:**: a Server Load Balancer (SLB) instance.
                 /// *   **ALB:** an Application Load Balancer (ALB) instance.
                 /// *   **OSS:** an Object Storage Service (OSS) bucket.
                 /// *   **ENI:** an elastic network interface (ENI).
                 /// *   **NLB:** a Network Load Balancer (NLB) instance.
                 /// 
-                /// > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
-                /// >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.
-                /// >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.
-                /// 
-                /// For more information, see [Service-linked roles](~~178360~~).
+                /// > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.
+                /// >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.
+                /// >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.
+                /// > >For more information, see [Service-linked roles](~~178360~~).
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// 
                 /// Valid values: **0** to **255**.
                 /// 
-                /// >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
+                /// >  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -126,7 +125,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupDescription { get; set; }
 
             /// <summary>
-            /// The endpoint ID.
+            /// The ID of the endpoint.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
@@ -148,7 +147,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// *   **HTTPS**
             /// 
             /// > *   You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
-            /// >*   The backend service protocol of an HTTP listener must be HTTP.
+            /// > *   The backend service protocol of an HTTP listener must be HTTP.
             /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
@@ -165,7 +164,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
+            /// The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
             /// </summary>
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
@@ -190,9 +189,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The protocol over which health check requests are sent. Valid values:
             /// 
-            /// *   **tcp**
-            /// *   **http**
-            /// *   **https**
+            /// *   **tcp** or **TCP**
+            /// *   **http** or **HTTP**
+            /// *   **https** or **HTTPS**
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]

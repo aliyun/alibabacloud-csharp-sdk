@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The association status between the accelerated IP address and endpoint.
+        /// The status of the mapping between the accelerated IP address and the endpoint.
         /// 
-        /// >  This parameter is not in use and empty.
+        /// >  This parameter is not in use.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

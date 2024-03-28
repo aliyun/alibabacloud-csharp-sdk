@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBandwidthackagesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the bandwidth plans.
+        /// The details of the bandwidth plans.
         /// </summary>
         [NameInMap("BandwidthPackages")]
         [Validation(Required=false)]
         public List<ListBandwidthackagesResponseBodyBandwidthPackages> BandwidthPackages { get; set; }
         public class ListBandwidthackagesResponseBodyBandwidthPackages : TeaModel {
             /// <summary>
-            /// The ID of the GA instance that is associated with the bandwidth plan.
+            /// The IDs of the GA instances that are associated with the bandwidth plans.
             /// </summary>
             [NameInMap("Accelerators")]
             [Validation(Required=false)]
             public List<string> Accelerators { get; set; }
 
             /// <summary>
-            /// The bandwidth value of the bandwidth plan. Unit: Mbit/s.
+            /// The bandwidth of the bandwidth plan. Unit: Mbit/s.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -38,14 +38,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+            /// The billing method of the bandwidth plan. Valid values:
+            /// 
+            /// *   **PREPAY**: subscription. This is the default value.
+            /// *   **POSTPAY**: pay-as-you-go.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The timestamp when the bandwidth plan was created.
+            /// The time when the bandwidth plan was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The timestamp when the bandwidth plan expires.
+            /// The expiration time of the bandwidth plan.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The request ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -87,23 +90,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The state of the bandwidth plan. Valid values:
+            /// The status of the bandwidth plan. Valid values:
             /// 
-            /// *   **init**: The bandwidth plan is being initialized.
-            /// *   **active**: The bandwidth plan is available.
-            /// *   **binded**: The bandwidth plan is associated with a GA instance.
-            /// *   **binding**: The bandwidth plan is being associated.
-            /// *   **unbinding**: The bandwidth plan is being disassociated.
-            /// *   **updating**: The bandwidth plan is being updated.
-            /// *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-            /// *   **Locked**: The bandwidth plan is locked.
+            /// *   **init:** The bandwidth plan is being initialized.
+            /// *   **active:** The bandwidth plan is available.
+            /// *   **binded:** The bandwidth plan is associated with a GA instance.
+            /// *   **binding:** The bandwidth plan is being associated with a GA instance.
+            /// *   **unbinding:** The bandwidth plan is being disassociated from a GA instance.
+            /// *   **updating:** The bandwidth plan is being updated.
+            /// *   **finacialLocked:** The bandwidth plan is locked due to overdue payments.
+            /// *   **locked:** The bandwidth plan is locked.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The tags of the bandwidth plans.
+            /// The tag of the bandwidth plan.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

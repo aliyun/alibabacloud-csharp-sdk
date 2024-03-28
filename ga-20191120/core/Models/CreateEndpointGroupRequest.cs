@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The description of the endpoint group.
         /// 
-        /// The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+        /// The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateEndpointGroupRequestEndpointConfigurations> EndpointConfigurations { get; set; }
         public class CreateEndpointGroupRequestEndpointConfigurations : TeaModel {
             /// <summary>
-            /// Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
+            /// Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
             /// 
             /// *   **true**
             /// *   **false** (default)
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The private IP address of the ENI.
             /// 
-            /// >  If you set the endpoint type to ENI, you can specify this parameter. If you leave this parameter empty, the primary private IP address of the ENI is used.
+            /// >  This parameter is available only when you set the endpoint type to **ENI**. If you leave this parameter empty, the primary private IP address of the ENI is used.
             /// </summary>
             [NameInMap("SubAddress")]
             [Validation(Required=false)]
@@ -86,15 +86,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// *   **Ip:** a custom IP address.
             /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
             /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-            /// *   **SLB:** a Server Load Balancer (SLB) instance.
+            /// *   **SLB:** a Classic Load Balancer (CLB) instance.
             /// *   **ALB:** an Application Load Balancer (ALB) instance.
             /// *   **OSS:** an Object Storage Service (OSS) bucket.
             /// *   **ENI:** an elastic network interface (ENI).
             /// *   **NLB:** a Network Load Balancer (NLB) instance.
             /// 
-            /// >*   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
-            /// > *   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.
-            /// > *   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.
+            /// > 
+            /// 
+            /// *   If you set this parameter to **ECS**, **ENI**, **SLB**, **ALB**, or **NLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
+            /// 
+            /// *   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.
+            /// 
+            /// *   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.
+            /// 
+            /// *   If you set this parameter to **NLB** and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.
             /// 
             /// For more information, see [Service-linked roles](~~178360~~).
             /// </summary>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// Valid values: **0** to **255**.
             /// 
-            /// >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
+            /// >  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -123,12 +129,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupRegion { get; set; }
 
         /// <summary>
-        /// The type of the endpoint group. Default value: default. Valid values:
+        /// The type of the endpoint group. Valid values:
         /// 
-        /// *   **default**: a default endpoint group.
+        /// *   **default** (default): a default endpoint group.
         /// *   **virtual**: a virtual endpoint group.
         /// 
-        /// >  Only HTTP and HTTPS listeners support virtual endpoint groups.
+        /// >  When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.
         /// </summary>
         [NameInMap("EndpointGroupType")]
         [Validation(Required=false)]
@@ -148,10 +154,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointRequestProtocol { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the health check feature. Default value: true. Valid values:
+        /// Specifies whether to enable the health check feature. Valid values:
         /// 
-        /// *   **true**: enables the health check feature.
-        /// *   **false**: disables the health check feature.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("HealthCheckEnabled")]
         [Validation(Required=false)]
@@ -181,9 +187,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The protocol over which to send health check requests. Valid values:
         /// 
-        /// *   **tcp**: TCP
-        /// *   **http**: HTTP
-        /// *   **https**: HTTPS
+        /// *   **tcp** or **TCP**
+        /// *   **http** or **HTTP**
+        /// *   **https** or **HTTPS**
         /// </summary>
         [NameInMap("HealthCheckProtocol")]
         [Validation(Required=false)]
@@ -199,7 +205,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The name of the endpoint group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

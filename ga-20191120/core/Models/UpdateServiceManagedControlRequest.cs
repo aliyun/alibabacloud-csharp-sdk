@@ -35,18 +35,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource whose control mode you want to change. Valid values:
+        /// The type of the resource whose control mode you want to change.
         /// 
-        /// **Accelerator**: standard GA instance.
+        /// Set the value to **Accelerator**, which specifies a standard GA instance.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The control mode of the resource. Valid values:
+        /// The control mode of the resource.
         /// 
-        /// **false**: changes the control mode of the resource from managed mode to unmanaged mode.
+        /// Set the value to **false**, which changes the control mode of the resource from managed mode to unmanaged mode.
         /// 
         /// >  You can change the control mode only from managed mode to unmanaged mode.
         /// </summary>
