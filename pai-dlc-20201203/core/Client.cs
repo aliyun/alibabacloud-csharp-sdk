@@ -360,6 +360,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["SummaryRelativePath"] = request.SummaryRelativePath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TensorboardDataSources))
+            {
+                body["TensorboardDataSources"] = request.TensorboardDataSources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TensorboardSpec))
+            {
+                body["TensorboardSpec"] = request.TensorboardSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
             {
                 body["Uri"] = request.Uri;
@@ -443,6 +451,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummaryRelativePath))
             {
                 body["SummaryRelativePath"] = request.SummaryRelativePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TensorboardDataSources))
+            {
+                body["TensorboardDataSources"] = request.TensorboardDataSources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TensorboardSpec))
+            {
+                body["TensorboardSpec"] = request.TensorboardSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
             {
@@ -1922,6 +1938,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
             {
                 query["ShowOwn"] = request.ShowOwn;
@@ -2005,6 +2025,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
             {

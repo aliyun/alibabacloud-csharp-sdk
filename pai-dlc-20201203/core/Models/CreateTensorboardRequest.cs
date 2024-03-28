@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SummaryRelativePath { get; set; }
 
+        [NameInMap("TensorboardDataSources")]
+        [Validation(Required=false)]
+        public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
+
+        [NameInMap("TensorboardSpec")]
+        [Validation(Required=false)]
+        public TensorboardSpec TensorboardSpec { get; set; }
+
         [NameInMap("Uri")]
         [Validation(Required=false)]
         public string Uri { get; set; }
