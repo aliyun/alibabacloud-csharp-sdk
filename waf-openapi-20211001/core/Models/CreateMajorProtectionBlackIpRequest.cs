@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// The ID of the major event protection template.
+        /// The ID of the IP address blacklist rule template for major event protection.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
