@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public string DefaultDomain { get; set; }
 
+            [NameInMap("ErrorHttpStatus")]
+            [Validation(Required=false)]
+            public string ErrorHttpStatus { get; set; }
+
             [NameInMap("ErrorPath")]
             [Validation(Required=false)]
             public string ErrorPath { get; set; }
-
-            [NameInMap("HistoryModePath")]
-            [Validation(Required=false)]
-            public string HistoryModePath { get; set; }
 
             [NameInMap("IndexPath")]
             [Validation(Required=false)]

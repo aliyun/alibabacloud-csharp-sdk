@@ -3273,80 +3273,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             return await GetWebHostingUploadCredentialWithOptionsAsync(request, runtime);
         }
 
-        public ListAvailableCertificatesResponse ListAvailableCertificatesWithOptions(ListAvailableCertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
-            {
-                body["Domain"] = request.Domain;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceId))
-            {
-                body["SpaceId"] = request.SpaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAvailableCertificates",
-                Version = "2019-06-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAvailableCertificatesResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListAvailableCertificatesResponse> ListAvailableCertificatesWithOptionsAsync(ListAvailableCertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
-            {
-                body["Domain"] = request.Domain;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceId))
-            {
-                body["SpaceId"] = request.SpaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAvailableCertificates",
-                Version = "2019-06-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAvailableCertificatesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListAvailableCertificatesResponse ListAvailableCertificates(ListAvailableCertificatesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListAvailableCertificatesWithOptions(request, runtime);
-        }
-
-        public async Task<ListAvailableCertificatesResponse> ListAvailableCertificatesAsync(ListAvailableCertificatesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListAvailableCertificatesWithOptionsAsync(request, runtime);
-        }
-
         public ListCorsDomainsResponse ListCorsDomainsWithOptions(ListCorsDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4329,13 +4255,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             {
                 body["AllowedIps"] = request.AllowedIps;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHttpStatus))
+            {
+                body["ErrorHttpStatus"] = request.ErrorHttpStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPath))
             {
                 body["ErrorPath"] = request.ErrorPath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryModePath))
-            {
-                body["HistoryModePath"] = request.HistoryModePath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexPath))
             {
@@ -4372,13 +4298,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             {
                 body["AllowedIps"] = request.AllowedIps;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHttpStatus))
+            {
+                body["ErrorHttpStatus"] = request.ErrorHttpStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPath))
             {
                 body["ErrorPath"] = request.ErrorPath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryModePath))
-            {
-                body["HistoryModePath"] = request.HistoryModePath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexPath))
             {
