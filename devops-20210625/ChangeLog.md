@@ -1,3 +1,7 @@
+2024-03-29 Version: 4.18.2
+- Update API ListJoinedOrganizations: update response param.
+
+
 2024-03-28 Version: 4.18.1
 - Generated csharp 2021-06-25 for devops.
 

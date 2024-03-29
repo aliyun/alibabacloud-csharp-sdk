@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            [NameInMap("isOrgAdmin")]
+            [Validation(Required=false)]
+            public bool? IsOrgAdmin { get; set; }
+
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
