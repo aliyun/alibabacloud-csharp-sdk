@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
         /// </summary>

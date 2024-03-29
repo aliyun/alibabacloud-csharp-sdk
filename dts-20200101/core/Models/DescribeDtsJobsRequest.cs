@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         /// <summary>
         /// The type of the DTS task. Valid values:
         /// 
@@ -220,6 +228,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("WithoutDbList")]
         [Validation(Required=false)]
         public bool? WithoutDbList { get; set; }
+
+        [NameInMap("ZeroEtlJob")]
+        [Validation(Required=false)]
+        public bool? ZeroEtlJob { get; set; }
 
     }
 

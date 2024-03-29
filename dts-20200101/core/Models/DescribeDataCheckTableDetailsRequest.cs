@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The name of the schema whose data is verified in the source database.
         /// </summary>

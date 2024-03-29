@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The type of schema definition. Valid values:
         /// 
@@ -67,6 +71,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]
         public string SynchronizationDirection { get; set; }
+
+        [NameInMap("ZeroEtlJob")]
+        [Validation(Required=false)]
+        public bool? ZeroEtlJob { get; set; }
 
     }
 

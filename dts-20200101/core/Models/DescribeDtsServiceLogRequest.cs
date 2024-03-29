@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The beginning of the time range to query.
         /// 
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("SubJobType")]
         [Validation(Required=false)]
         public string SubJobType { get; set; }
+
+        [NameInMap("ZeroEtlJob")]
+        [Validation(Required=false)]
+        public bool? ZeroEtlJob { get; set; }
 
     }
 

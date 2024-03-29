@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
         /// </summary>

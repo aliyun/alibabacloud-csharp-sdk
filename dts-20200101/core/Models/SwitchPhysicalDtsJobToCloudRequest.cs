@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("SynchronizationDirection")]
         [Validation(Required=false)]
         public string SynchronizationDirection { get; set; }

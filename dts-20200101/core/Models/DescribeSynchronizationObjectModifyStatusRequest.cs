@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// The task ID, which is returned after you call the [ModifySynchronizationObject](~~49451~~) operation to modify the objects to be synchronized.
         /// </summary>
