@@ -1,3 +1,7 @@
+2024-03-29 Version: 2.5.0
+- Support API PostMSServiceDataImport.
+
+
 2024-03-27 Version: 2.4.0
 - Support API ImportServiceDataV2.
 
