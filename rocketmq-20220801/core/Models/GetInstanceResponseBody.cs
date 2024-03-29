@@ -47,15 +47,38 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public GetInstanceResponseBodyDataAclInfo AclInfo { get; set; }
             public class GetInstanceResponseBodyDataAclInfo : TeaModel {
                 /// <summary>
-                /// The authentication type of the instance.
+                /// The authentication types of the instance. Deprecated, it is recommended to use the aclTypes field.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   default: intelligent authentication
+                /// default: intelligent authentication
+                /// 
+                /// apache_acl: apache acl authentication
                 /// </summary>
                 [NameInMap("aclType")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string AclType { get; set; }
+
+                /// <summary>
+                /// The authentication types of the instance.
+                /// 
+                /// Valid values:
+                /// 
+                /// default: intelligent authentication
+                /// 
+                /// apache_acl: apache acl authentication
+                /// </summary>
+                [NameInMap("aclTypes")]
+                [Validation(Required=false)]
+                public List<string> AclTypes { get; set; }
+
+                /// <summary>
+                /// No need for authentication in intranet.
+                /// </summary>
+                [NameInMap("defaultVpcAuthFree")]
+                [Validation(Required=false)]
+                public bool? DefaultVpcAuthFree { get; set; }
 
             }
 
@@ -92,6 +115,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// </summary>
             [NameInMap("extConfig")]
             [Validation(Required=false)]
+            [Obsolete]
             public GetInstanceResponseBodyDataExtConfig ExtConfig { get; set; }
             public class GetInstanceResponseBodyDataExtConfig : TeaModel {
                 /// <summary>

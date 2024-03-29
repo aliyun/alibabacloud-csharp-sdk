@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceRequest : TeaModel {
+        [NameInMap("aclInfo")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestAclInfo AclInfo { get; set; }
+        public class UpdateInstanceRequestAclInfo : TeaModel {
+            [NameInMap("aclTypes")]
+            [Validation(Required=false)]
+            public List<string> AclTypes { get; set; }
+
+            [NameInMap("defaultVpcAuthFree")]
+            [Validation(Required=false)]
+            public bool? DefaultVpcAuthFree { get; set; }
+
+        }
+
         /// <summary>
         /// The updated name of the instance.
         /// </summary>
