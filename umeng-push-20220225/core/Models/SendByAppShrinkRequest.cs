@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string ReceiptUrl { get; set; }
 
+        [NameInMap("ThirdPartyId")]
+        [Validation(Required=false)]
+        public string ThirdPartyId { get; set; }
+
     }
 
 }

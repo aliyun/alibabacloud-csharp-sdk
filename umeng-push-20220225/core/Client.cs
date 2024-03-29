@@ -425,6 +425,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -506,6 +510,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiptUrl))
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -595,6 +603,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -668,6 +680,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiptUrl))
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -939,6 +955,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1016,6 +1036,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiptUrl))
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1109,6 +1133,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1186,6 +1214,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiptUrl))
             {
                 body["ReceiptUrl"] = request.ReceiptUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartyId))
+            {
+                body["ThirdPartyId"] = request.ThirdPartyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
