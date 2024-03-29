@@ -1,3 +1,6 @@
+2024-03-29 Version: 2.0.2
+- Generated csharp 2017-12-14 for BssOpenApi.
+
 2024-03-14 Version: 2.0.1
 - Update API GetOrderDetail: update response param.
 
