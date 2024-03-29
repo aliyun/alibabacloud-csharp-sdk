@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            [NameInMap("TailIpVersion")]
+            [Validation(Required=false)]
+            public string TailIpVersion { get; set; }
+
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
