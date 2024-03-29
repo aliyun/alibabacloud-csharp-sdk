@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
-    public class SetLoginPreferenceResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class GetUserIdResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

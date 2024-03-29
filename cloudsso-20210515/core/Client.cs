@@ -4035,6 +4035,92 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             return await GetUserWithOptionsAsync(request, runtime);
         }
 
+        public GetUserIdResponse GetUserIdWithOptions(GetUserIdRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetUserIdShrinkRequest request = new GetUserIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalId))
+            {
+                request.ExternalIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalId, "ExternalId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIdShrink))
+            {
+                query["ExternalId"] = request.ExternalIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserId",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetUserIdResponse> GetUserIdWithOptionsAsync(GetUserIdRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetUserIdShrinkRequest request = new GetUserIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalId))
+            {
+                request.ExternalIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalId, "ExternalId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIdShrink))
+            {
+                query["ExternalId"] = request.ExternalIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserId",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetUserIdResponse GetUserId(GetUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserIdWithOptions(request, runtime);
+        }
+
+        public async Task<GetUserIdResponse> GetUserIdAsync(GetUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserIdWithOptionsAsync(request, runtime);
+        }
+
         /**
           * This topic provides an example on how to query the MFA setting of the user named `u-00q8wbq42wiltcrk****`. The returned result shows that MFA is enabled for the user.
           *

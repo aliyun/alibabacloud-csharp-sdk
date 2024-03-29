@@ -8,20 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
-    public class GetUserProvisioningStatisticsRequest : TeaModel {
-        /// <summary>
-        /// The ID of the resource directory.
-        /// </summary>
+    public class GetUserIdShrinkRequest : TeaModel {
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
-        /// <summary>
-        /// The ID of the RAM user provisioning.
-        /// </summary>
-        [NameInMap("UserProvisioningId")]
+        [NameInMap("ExternalId")]
         [Validation(Required=false)]
-        public string UserProvisioningId { get; set; }
+        public string ExternalIdShrink { get; set; }
 
     }
 

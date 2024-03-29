@@ -84,6 +84,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            [NameInMap("ExternalId")]
+            [Validation(Required=false)]
+            public ListUsersResponseBodyUsersExternalId ExternalId { get; set; }
+            public class ListUsersResponseBodyUsersExternalId : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Issuer")]
+                [Validation(Required=false)]
+                public string Issuer { get; set; }
+
+            }
+
             /// <summary>
             /// The first name of the user.
             /// </summary>
