@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         [NameInMap("badge")]
         [Validation(Required=false)]
-        public int? Badge { get; set; }
+        public string Badge { get; set; }
 
         [NameInMap("category")]
         [Validation(Required=false)]
@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [NameInMap("sound")]
         [Validation(Required=false)]
         public string Sound { get; set; }
+
+        [NameInMap("threadID")]
+        [Validation(Required=false)]
+        public string ThreadID { get; set; }
 
     }
 

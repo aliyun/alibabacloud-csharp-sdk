@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         [NameInMap("extra")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Extra { get; set; }
+        public Dictionary<string, object> Extra { get; set; }
 
     }
 

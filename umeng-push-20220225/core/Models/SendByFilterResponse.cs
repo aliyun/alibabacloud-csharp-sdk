@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 {
     public class SendByFilterResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public SendByFilterResponseBody Body { get; set; }
 
     }
