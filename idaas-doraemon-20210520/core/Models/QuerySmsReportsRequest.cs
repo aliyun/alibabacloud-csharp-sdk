@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
-    public class ListUsersRequest : TeaModel {
-        [NameInMap("ApplicationExternalId")]
+    public class QuerySmsReportsRequest : TeaModel {
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string ApplicationExternalId { get; set; }
+        public string AppId { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("EventId")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string EventId { get; set; }
 
     }
 

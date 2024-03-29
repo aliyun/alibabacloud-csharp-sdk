@@ -20,22 +20,28 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
             [NameInMap("Access_token")]
             [Validation(Required=false)]
             public string AccessToken { get; set; }
+
             [NameInMap("Expires_in")]
             [Validation(Required=false)]
             public string ExpiresIn { get; set; }
+
             [NameInMap("Id_token")]
             [Validation(Required=false)]
             public string IdToken { get; set; }
+
             [NameInMap("Refresh_token")]
             [Validation(Required=false)]
             public string RefreshToken { get; set; }
+
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
+
             [NameInMap("Token_type")]
             [Validation(Required=false)]
             public string TokenType { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

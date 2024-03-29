@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string ServerExtendParamsJson { get; set; }
 
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
         [NameInMap("XClientIp")]
         [Validation(Required=false)]
         public string XClientIp { get; set; }

@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 查询结果数据总数
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

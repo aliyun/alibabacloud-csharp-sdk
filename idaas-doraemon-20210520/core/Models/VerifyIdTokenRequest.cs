@@ -8,14 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
-    public class ListUsersRequest : TeaModel {
+    public class VerifyIdTokenRequest : TeaModel {
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }
 
-        [NameInMap("UserId")]
+        /// <summary>
+        /// jwtIdToken
+        /// </summary>
+        [NameInMap("JwtIdToken")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string JwtIdToken { get; set; }
 
     }
 

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public string EventId { get; set; }
+
+        [NameInMap("IdToken")]
+        [Validation(Required=false)]
+        public string IdToken { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
-    public class GetAuthenticatorResponse : TeaModel {
+    public class QuerySmsReportsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetAuthenticatorResponseBody Body { get; set; }
+        public QuerySmsReportsResponseBody Body { get; set; }
 
     }
 

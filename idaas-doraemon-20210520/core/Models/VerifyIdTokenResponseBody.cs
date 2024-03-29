@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
-    public class ListUsersRequest : TeaModel {
-        [NameInMap("ApplicationExternalId")]
+    public class VerifyIdTokenResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ApplicationExternalId { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]

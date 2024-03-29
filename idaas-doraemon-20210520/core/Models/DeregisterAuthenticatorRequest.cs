@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
     public class DeregisterAuthenticatorRequest : TeaModel {
-        /// <summary>
-        /// 应用外部Id
-        /// </summary>
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }
 
-        /// <summary>
-        /// 认证器uuid
-        /// </summary>
         [NameInMap("AuthenticatorUuid")]
         [Validation(Required=false)]
         public string AuthenticatorUuid { get; set; }
 
-        /// <summary>
-        /// 用户id
-        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
