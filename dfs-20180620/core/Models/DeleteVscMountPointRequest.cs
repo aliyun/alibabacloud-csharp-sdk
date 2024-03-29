@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DFS20180620.Models
 {
-    public class CreateAccessGroupRequest : TeaModel {
-        [NameInMap("AccessGroupName")]
+    public class DeleteVscMountPointRequest : TeaModel {
+        [NameInMap("FileSystemId")]
         [Validation(Required=false)]
-        public string AccessGroupName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string FileSystemId { get; set; }
 
         [NameInMap("InputRegionId")]
         [Validation(Required=false)]
         public string InputRegionId { get; set; }
 
-        [NameInMap("NetworkType")]
+        [NameInMap("MountPointId")]
         [Validation(Required=false)]
-        public string NetworkType { get; set; }
+        public string MountPointId { get; set; }
 
     }
 

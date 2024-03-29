@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DFS20180620.Models
 {
-    public class DeleteAccessRuleResponse : TeaModel {
+    public class DeleteVscMountPointResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteAccessRuleResponseBody Body { get; set; }
+        public DeleteVscMountPointResponseBody Body { get; set; }
 
     }
 

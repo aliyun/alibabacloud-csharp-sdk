@@ -16,28 +16,36 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
             [NameInMap("AccessGroupId")]
             [Validation(Required=false)]
             public string AccessGroupId { get; set; }
+
             [NameInMap("AccessRuleId")]
             [Validation(Required=false)]
             public string AccessRuleId { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("NetworkSegment")]
             [Validation(Required=false)]
             public string NetworkSegment { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
+
             [NameInMap("RWAccessType")]
             [Validation(Required=false)]
             public string RWAccessType { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

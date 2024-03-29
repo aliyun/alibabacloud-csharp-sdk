@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
 
         [NameInMap("GroupNames")]
         [Validation(Required=false)]
-        public Dictionary<string, object> GroupNames { get; set; }
+        public List<string> GroupNames { get; set; }
 
         [NameInMap("InputRegionId")]
         [Validation(Required=false)]
