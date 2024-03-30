@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time.
         /// </summary>
         [NameInMap("FromStartTime")]
         [Validation(Required=false)]
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.
+        /// The instance ID. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the pending task. You can call the [DescribeRegions](https://next.api.aliyun.com/document/R-kvstore/2015-01-01/DescribeRegions) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -73,29 +73,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The task status. Valid values:
         /// 
-        /// *   Scheduled
-        /// *   Running
-        /// *   Succeed
-        /// *   Failed
-        /// *   Cancelling
-        /// *   Canceled
-        /// *   Waiting
+        /// *   **Scheduled**
+        /// *   **Running**
+        /// *   **Succeed**
+        /// *   **Failed**
+        /// *   **Cancelling**
+        /// *   **Canceled**
+        /// *   **Waiting**
         /// 
-        /// Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
+        /// >  This parameter is empty by default, which indicates that tasks in all states are queried. Separate multiple states with commas (,).
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs.
+        /// The task ID. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The task type. Separate multiple task types with commas (,). You can specify up to 30 task types. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.
+        /// The task type. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.
+        /// 
+        /// *   **ModifyInsSpec**
+        /// *   **DeleteInsNode**
+        /// *   **AddInsNode**
+        /// *   **HaSwitch**
+        /// *   **RestartIns**
+        /// *   **CreateIns**
+        /// *   **ModifyInsConfig**
+        /// 
+        /// >  Separate multiple task types with commas (,).
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
@@ -109,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried.
         /// </summary>
         [NameInMap("ToStartTime")]
         [Validation(Required=false)]

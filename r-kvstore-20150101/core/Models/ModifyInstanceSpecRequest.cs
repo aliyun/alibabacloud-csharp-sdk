@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string MajorVersion { get; set; }
 
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
+
         /// <summary>
         /// The change type. This parameter is required when you change the configurations of a subscription instance. Default value: UPGRADE. Valid values:
         /// 
@@ -115,7 +119,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks. Valid values: 1 to 5.
+        /// The number of read replicas. Valid values: 0 to 5. This parameter applies only to the following scenarios:
+        /// 
+        /// *   If the instance is a standard instance that uses cloud disks, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.
+        /// *   If the instance is a read/write splitting instance that uses cloud disks, you can use this parameter to customize the number of read replicas. You can also set this parameter to 0 to disable the read/write splitting architecture and switch the instance to the standard architecture.
         /// </summary>
         [NameInMap("ReadOnlyCount")]
         [Validation(Required=false)]

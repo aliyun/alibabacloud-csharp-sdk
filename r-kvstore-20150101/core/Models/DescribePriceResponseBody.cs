@@ -82,6 +82,46 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public long? CheapStandAmount { get; set; }
 
+                [NameInMap("ContractActivity")]
+                [Validation(Required=false)]
+                public DescribePriceResponseBodyOrderDepreciateInfoContractActivity ContractActivity { get; set; }
+                public class DescribePriceResponseBodyOrderDepreciateInfoContractActivity : TeaModel {
+                    [NameInMap("ActivityId")]
+                    [Validation(Required=false)]
+                    public long? ActivityId { get; set; }
+
+                    [NameInMap("ActivityName")]
+                    [Validation(Required=false)]
+                    public string ActivityName { get; set; }
+
+                    [NameInMap("FinalFee")]
+                    [Validation(Required=false)]
+                    public double? FinalFee { get; set; }
+
+                    [NameInMap("FinalPromFee")]
+                    [Validation(Required=false)]
+                    public double? FinalPromFee { get; set; }
+
+                    [NameInMap("OptionCode")]
+                    [Validation(Required=false)]
+                    public string OptionCode { get; set; }
+
+                    [NameInMap("OptionIds")]
+                    [Validation(Required=false)]
+                    public DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds OptionIds { get; set; }
+                    public class DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds : TeaModel {
+                        [NameInMap("OptionId")]
+                        [Validation(Required=false)]
+                        public List<long?> OptionId { get; set; }
+
+                    }
+
+                    [NameInMap("ProdFee")]
+                    [Validation(Required=false)]
+                    public double? ProdFee { get; set; }
+
+                }
+
                 [NameInMap("Differential")]
                 [Validation(Required=false)]
                 public long? Differential { get; set; }
@@ -239,6 +279,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodySubOrdersSubOrder> SubOrder { get; set; }
             public class DescribePriceResponseBodySubOrdersSubOrder : TeaModel {
+                [NameInMap("ContractActivity")]
+                [Validation(Required=false)]
+                public bool? ContractActivity { get; set; }
+
                 [NameInMap("DepreciateInfo")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo DepreciateInfo { get; set; }
@@ -250,6 +294,46 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [NameInMap("CheapStandAmount")]
                     [Validation(Required=false)]
                     public long? CheapStandAmount { get; set; }
+
+                    [NameInMap("ContractActivity")]
+                    [Validation(Required=false)]
+                    public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity ContractActivity { get; set; }
+                    public class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity : TeaModel {
+                        [NameInMap("ActivityId")]
+                        [Validation(Required=false)]
+                        public long? ActivityId { get; set; }
+
+                        [NameInMap("ActivityName")]
+                        [Validation(Required=false)]
+                        public string ActivityName { get; set; }
+
+                        [NameInMap("FinalFee")]
+                        [Validation(Required=false)]
+                        public double? FinalFee { get; set; }
+
+                        [NameInMap("FinalPromFee")]
+                        [Validation(Required=false)]
+                        public double? FinalPromFee { get; set; }
+
+                        [NameInMap("OptionCode")]
+                        [Validation(Required=false)]
+                        public string OptionCode { get; set; }
+
+                        [NameInMap("OptionIds")]
+                        [Validation(Required=false)]
+                        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds OptionIds { get; set; }
+                        public class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds : TeaModel {
+                            [NameInMap("OptionId")]
+                            [Validation(Required=false)]
+                            public List<long?> OptionId { get; set; }
+
+                        }
+
+                        [NameInMap("ProdFee")]
+                        [Validation(Required=false)]
+                        public double? ProdFee { get; set; }
+
+                    }
 
                     [NameInMap("Differential")]
                     [Validation(Required=false)]
@@ -303,6 +387,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public List<DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance> ModuleInstance { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance : TeaModel {
+                        [NameInMap("ContractActivity")]
+                        [Validation(Required=false)]
+                        public bool? ContractActivity { get; set; }
+
                         [NameInMap("DiscountFee")]
                         [Validation(Required=false)]
                         public double? DiscountFee { get; set; }
@@ -438,6 +526,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public List<DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail> PromDetail { get; set; }
                     public class DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail : TeaModel {
+                        [NameInMap("ActivityExtInfo")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> ActivityExtInfo { get; set; }
+
+                        [NameInMap("DerivedPromType")]
+                        [Validation(Required=false)]
+                        public string DerivedPromType { get; set; }
+
                         [NameInMap("FinalPromFee")]
                         [Validation(Required=false)]
                         public double? FinalPromFee { get; set; }
@@ -449,6 +545,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         [NameInMap("PromType")]
                         [Validation(Required=false)]
                         public string PromType { get; set; }
+
+                        [NameInMap("PromotionCode")]
+                        [Validation(Required=false)]
+                        public string PromotionCode { get; set; }
 
                         [NameInMap("PromotionId")]
                         [Validation(Required=false)]

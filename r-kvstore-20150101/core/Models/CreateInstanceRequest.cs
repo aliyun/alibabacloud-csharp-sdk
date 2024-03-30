@@ -306,6 +306,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecondaryZoneId { get; set; }
 
+        /// <summary>
+        /// 系统自动生成的安全 Token，无需传入
+        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

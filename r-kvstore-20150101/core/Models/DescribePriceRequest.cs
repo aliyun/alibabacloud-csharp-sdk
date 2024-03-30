@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// The instance type.****
+        /// The instance type.
         /// 
         /// **To view the instance type, perform the following steps:**
         /// 

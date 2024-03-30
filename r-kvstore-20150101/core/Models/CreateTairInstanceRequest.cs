@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 集群备份集ID。
+        /// The backup set ID.
         /// </summary>
         [NameInMap("ClusterBackupId")]
         [Validation(Required=false)]

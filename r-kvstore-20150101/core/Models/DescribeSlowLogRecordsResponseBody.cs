@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The slow log entries.
+        /// The slow query log entries.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Command { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// The database name.
                 /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// The name of the database, which serves the same purpose as the **DBName** parameter. We recommend that you use the value of the **DBName** parameter.
+                /// The database name. This parameter serves the same purpose as the **DBName** parameter. We recommend that you use the **DBName** parameter.
                 /// </summary>
                 [NameInMap("DataBaseName")]
                 [Validation(Required=false)]

@@ -14,20 +14,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   **Immediately**: immediately restarts the instance.
         /// *   **MaintainTime**: restarts the instance during the maintenance window.
-        /// 
-        /// Enumeration values:
-        /// 
-        /// *   0
-        /// *   1
-        /// *   Immediately
-        /// *   MaintainTime
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **RestartInstance**.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -54,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to update the instance to the latest minor version when the instance is restarted. Valid values:
+        /// Specifies whether to update to the latest minor version when the instance is restarted. Valid values:
         /// 
         /// *   **true**: updates the minor version.
         /// *   **false**: does not update the minor version.

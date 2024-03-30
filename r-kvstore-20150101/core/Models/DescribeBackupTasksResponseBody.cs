@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </summary>
             [NameInMap("BackupJobID")]
             [Validation(Required=false)]
-            public int? BackupJobID { get; set; }
+            public long? BackupJobID { get; set; }
 
             /// <summary>
             /// The state of the backup task. Valid values:
