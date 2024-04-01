@@ -1274,6 +1274,18 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingOverflowThreshold))
+            {
+                query["QueuingOverflowThreshold"] = request.QueuingOverflowThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingTimeoutSeconds))
+            {
+                query["QueuingTimeoutSeconds"] = request.QueuingTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingType))
+            {
+                query["RoutingType"] = request.RoutingType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
                 query["StrategyName"] = request.StrategyName;
@@ -1281,6 +1293,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyParams))
             {
                 query["StrategyParams"] = request.StrategyParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
@@ -1345,6 +1361,18 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingOverflowThreshold))
+            {
+                query["QueuingOverflowThreshold"] = request.QueuingOverflowThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingTimeoutSeconds))
+            {
+                query["QueuingTimeoutSeconds"] = request.QueuingTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingType))
+            {
+                query["RoutingType"] = request.RoutingType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
                 query["StrategyName"] = request.StrategyName;
@@ -1352,6 +1380,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyParams))
             {
                 query["StrategyParams"] = request.StrategyParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
@@ -6316,6 +6348,18 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingOverflowThreshold))
+            {
+                query["QueuingOverflowThreshold"] = request.QueuingOverflowThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingTimeoutSeconds))
+            {
+                query["QueuingTimeoutSeconds"] = request.QueuingTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingType))
+            {
+                query["RoutingType"] = request.RoutingType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
                 query["StrategyName"] = request.StrategyName;
@@ -6324,6 +6368,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["StrategyParams"] = request.StrategyParams;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
                 query["TimeoutSeconds"] = request.TimeoutSeconds;
@@ -6331,6 +6379,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transferee))
             {
                 query["Transferee"] = request.Transferee;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransfereeType))
+            {
+                query["TransfereeType"] = request.TransfereeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transferor))
             {
@@ -6379,6 +6431,18 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingOverflowThreshold))
+            {
+                query["QueuingOverflowThreshold"] = request.QueuingOverflowThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueuingTimeoutSeconds))
+            {
+                query["QueuingTimeoutSeconds"] = request.QueuingTimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingType))
+            {
+                query["RoutingType"] = request.RoutingType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
             {
                 query["StrategyName"] = request.StrategyName;
@@ -6387,6 +6451,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["StrategyParams"] = request.StrategyParams;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
                 query["TimeoutSeconds"] = request.TimeoutSeconds;
@@ -6394,6 +6462,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transferee))
             {
                 query["Transferee"] = request.Transferee;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransfereeType))
+            {
+                query["TransfereeType"] = request.TransfereeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transferor))
             {
@@ -7244,6 +7316,80 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAudioFilesWithOptionsAsync(request, runtime);
+        }
+
+        public ListBlacklistCallTaggingsResponse ListBlacklistCallTaggingsWithOptions(ListBlacklistCallTaggingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBlacklistCallTaggings",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListBlacklistCallTaggingsResponse> ListBlacklistCallTaggingsWithOptionsAsync(ListBlacklistCallTaggingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBlacklistCallTaggings",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListBlacklistCallTaggingsResponse ListBlacklistCallTaggings(ListBlacklistCallTaggingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListBlacklistCallTaggingsWithOptions(request, runtime);
+        }
+
+        public async Task<ListBlacklistCallTaggingsResponse> ListBlacklistCallTaggingsAsync(ListBlacklistCallTaggingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListBlacklistCallTaggingsWithOptionsAsync(request, runtime);
         }
 
         public ListBriefSkillGroupsResponse ListBriefSkillGroupsWithOptions(ListBriefSkillGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("QueuingOverflowThreshold")]
+        [Validation(Required=false)]
+        public long? QueuingOverflowThreshold { get; set; }
+
+        [NameInMap("QueuingTimeoutSeconds")]
+        [Validation(Required=false)]
+        public long? QueuingTimeoutSeconds { get; set; }
+
+        [NameInMap("RoutingType")]
+        [Validation(Required=false)]
+        public string RoutingType { get; set; }
+
         [NameInMap("StrategyName")]
         [Validation(Required=false)]
         public string StrategyName { get; set; }
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("StrategyParams")]
         [Validation(Required=false)]
         public string StrategyParams { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
         [NameInMap("TimeoutSeconds")]
         [Validation(Required=false)]
