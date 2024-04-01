@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class EvaluateResourceRequest : TeaModel {
         /// <summary>
-        /// The stype of the instance.
+        /// The type of the instance.
         /// 
         /// > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
         /// </summary>
@@ -35,11 +35,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The version of the database engine. Valid values:
         /// 
+        /// *   **7.0**
+        /// *   **6.0**
         /// *   **5.0**
         /// *   **4.4**
         /// *   **4.2**
         /// *   **4.0**
-        /// *   **3.4**
+        /// 
+        /// <!---->
+        /// 
+        /// *   3.4
+        /// *   4.0
+        /// *   4.2
+        /// *   4.4
+        /// *   5.0
+        /// *   6.0
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
