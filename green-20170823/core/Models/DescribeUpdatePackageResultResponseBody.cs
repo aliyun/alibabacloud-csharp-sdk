@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Green20170823.Models
+{
+    public class DescribeUpdatePackageResultResponseBody : TeaModel {
+        [NameInMap("AppInfo")]
+        [Validation(Required=false)]
+        public DescribeUpdatePackageResultResponseBodyAppInfo AppInfo { get; set; }
+        public class DescribeUpdatePackageResultResponseBodyAppInfo : TeaModel {
+            [NameInMap("DebugPackageInfo")]
+            [Validation(Required=false)]
+            public DescribeUpdatePackageResultResponseBodyAppInfoDebugPackageInfo DebugPackageInfo { get; set; }
+            public class DescribeUpdatePackageResultResponseBodyAppInfoDebugPackageInfo : TeaModel {
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
+            [NameInMap("EndDate")]
+            [Validation(Required=false)]
+            public string EndDate { get; set; }
+
+            [NameInMap("Icon")]
+            [Validation(Required=false)]
+            public string Icon { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("PackageInfo")]
+            [Validation(Required=false)]
+            public DescribeUpdatePackageResultResponseBodyAppInfoPackageInfo PackageInfo { get; set; }
+            public class DescribeUpdatePackageResultResponseBodyAppInfoPackageInfo : TeaModel {
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
+            [NameInMap("PackageName")]
+            [Validation(Required=false)]
+            public string PackageName { get; set; }
+
+            [NameInMap("StartDate")]
+            [Validation(Required=false)]
+            public string StartDate { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
