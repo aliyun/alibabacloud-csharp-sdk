@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("ColdDataEnabled")]
                 [Validation(Required=false)]
                 public bool? ColdDataEnabled { get; set; }
@@ -88,6 +91,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
 
+                [NameInMap("DBInstanceCpuCores")]
+                [Validation(Required=false)]
+                public string DBInstanceCpuCores { get; set; }
+
                 /// <summary>
                 /// The instance description.
                 /// </summary>
@@ -101,6 +108,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
+
+                [NameInMap("DBInstanceMemory")]
+                [Validation(Required=false)]
+                public string DBInstanceMemory { get; set; }
 
                 /// <summary>
                 /// The type of the network connection to the instance. Valid values:
@@ -279,6 +290,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
 
+                /// <summary>
+                /// Whether IO acceleration is enabled. The value has the following meanings:
+                /// 
+                /// - 1: enabled
+                /// - 0: not enabled
+                /// </summary>
                 [NameInMap("IoAccelerationEnabled")]
                 [Validation(Required=false)]
                 public string IoAccelerationEnabled { get; set; }

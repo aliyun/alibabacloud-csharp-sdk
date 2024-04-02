@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// A reserved parameter. You do not need to specify this parameter.
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]

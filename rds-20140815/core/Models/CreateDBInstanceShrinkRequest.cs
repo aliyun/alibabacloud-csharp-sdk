@@ -351,12 +351,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the I/O acceleration feature. Valid values:
-        /// 
-        /// *   1: The feature is enabled.
-        /// *   0: The feature is disabled.
-        /// 
-        /// >  For more information about the I/O acceleration feature of general enhanced SSDs (ESSDs), see [Introduction](~~2527067~~).
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]

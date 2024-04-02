@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 }
 
                 /// <summary>
-                /// An invalid parameter. You can ignore this parameter.
+                /// A deprecated parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
                 public string BpeEnabled { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. You can ignore this parameter.
+                /// An invalid parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// A reserved parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("ColdDataEnabled")]
                 [Validation(Required=false)]
@@ -578,6 +578,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **Postpaid**: pay-as-you-go
                 /// *   **Prepaid**: subscription
+                /// *   **SERVERLESS**
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]

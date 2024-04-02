@@ -23,24 +23,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
                 /// 
-                /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+                /// >  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
                 /// </summary>
                 [NameInMap("BabelfishPort")]
                 [Validation(Required=false)]
                 public string BabelfishPort { get; set; }
 
                 /// <summary>
-                /// The endpoints of the instance.
+                /// The endpoint of the instance.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The types of the endpoints. Valid values:
+                /// The type of the endpoint. Valid values:
                 /// 
-                /// *   **Normal**: regular endpoints
-                /// *   **ReadWriteSplitting**: read/write splitting endpoints
+                /// *   **Normal**: a regular endpoint
+                /// *   **ReadWriteSplitting**: a read/write splitting endpoint
                 /// </summary>
                 [NameInMap("ConnectionStringType")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The information about the instance weight.
                 /// 
-                /// > This parameter is returned only for instances that have read/write splitting endpoints.
+                /// >  This parameter is returned only when the read/write splitting feature is enabled for the instance.
                 /// </summary>
                 [NameInMap("DBInstanceWeights")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string DBInstanceId { get; set; }
 
                         /// <summary>
-                        /// The role of the instance. Valid values:
+                        /// The type of the instance. Valid values:
                         /// 
                         /// *   **Master**: primary instance
                         /// *   **Readonly**: read-only instance
@@ -107,8 +107,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:
                 /// 
-                /// *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
-                /// *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
+                /// *   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
+                /// *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
                 /// </summary>
                 [NameInMap("DistributionType")]
                 [Validation(Required=false)]
@@ -133,13 +133,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   Valid values when the instance resides in the classic network:
                 /// 
-                ///     *   **Inner:**: internal network
-                ///     *   **Public**: Internet
+                ///     *   **Inner**
+                ///     *   **Public**
                 /// 
                 /// *   Valid values when the instance resides in a virtual private cloud (VPC):
                 /// 
-                ///     *   **Private**: internal network
-                ///     *   **Public**: Internet
+                ///     *   **Private**
+                ///     *   **Public**
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.
                 /// 
-                /// > If the latency on a read-only instance exceeds the specified threshold, the system no longer forwards read requests to the read-only instance.
+                /// >  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.
                 /// </summary>
                 [NameInMap("MaxDelayTime")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The PgBouncer port.
                 /// 
-                /// > This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.
+                /// >  This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.
                 /// </summary>
                 [NameInMap("PGBouncerPort")]
                 [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The details of the IP address whitelist.
+                /// The IP addresses in the whitelist for the instance.
                 /// </summary>
                 [NameInMap("SecurityIPGroups")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string SecurityIPGroupName { get; set; }
 
                         /// <summary>
-                        /// The IP addresses that is contained in the IP address whitelist.
+                        /// The IP address in the whitelist.
                         /// </summary>
                         [NameInMap("SecurityIPs")]
                         [Validation(Required=false)]
@@ -202,17 +202,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// Indicates whether the IP version can be updated. Valid values:
                 /// 
-                /// *   **Enable**: The IP version can be updated.
-                /// *   **Disabled**: The IP version cannot be updated.
+                /// *   **Enable**
+                /// *   **Disabled**
                 /// 
-                /// > The IP version can be updated from IPv4 to IPv6.
+                /// >  The IP version can be updated from IPv4 to IPv6.
                 /// </summary>
                 [NameInMap("Upgradeable")]
                 [Validation(Required=false)]
                 public string Upgradeable { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// The VPC ID of the instance.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]

@@ -126,6 +126,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? EnableIncrementDataBackup { get; set; }
 
+        /// <summary>
+        /// Whether PITR recovery is enabled at any point in time (the upgraded version of the original log backup). Return value:
+        /// 
+        /// - True: Yes
+        /// - False: no
+        /// 
+        /// > Only MySQL instances return this parameter.
+        /// </summary>
         [NameInMap("EnablePitrProtection")]
         [Validation(Required=false)]
         public bool? EnablePitrProtection { get; set; }
@@ -180,6 +188,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? LogBackupRetentionPeriod { get; set; }
 
+        /// <summary>
+        /// The number of days to restore at any point in time.
+        /// </summary>
         [NameInMap("PitrRetentionPeriod")]
         [Validation(Required=false)]
         public int? PitrRetentionPeriod { get; set; }

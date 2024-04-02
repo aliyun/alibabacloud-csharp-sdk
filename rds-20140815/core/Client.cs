@@ -31468,198 +31468,6 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ### [](#)Supported database engine
-          * *   SQL Server
-          * ### [](#)Description
-          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * ### [](#)Precautions
-          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, **make sure that the following conditions are met**:
-          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user.
-          *     *   The instance is in the Running state.
-          *     *   The source and destination databases must be in the Running state.
-          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * > *   You can migrate the data of multiple databases at a time.
-          *
-          * @param request ImportDatabaseBetweenInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ImportDatabaseBetweenInstancesResponse
-         */
-        public ImportDatabaseBetweenInstancesResponse ImportDatabaseBetweenInstancesWithOptions(ImportDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInfo))
-            {
-                query["DBInfo"] = request.DBInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
-            {
-                query["SourceDBInstanceId"] = request.SourceDBInstanceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImportDatabaseBetweenInstances",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImportDatabaseBetweenInstancesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * ### [](#)Supported database engine
-          * *   SQL Server
-          * ### [](#)Description
-          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * ### [](#)Precautions
-          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, **make sure that the following conditions are met**:
-          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user.
-          *     *   The instance is in the Running state.
-          *     *   The source and destination databases must be in the Running state.
-          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * > *   You can migrate the data of multiple databases at a time.
-          *
-          * @param request ImportDatabaseBetweenInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ImportDatabaseBetweenInstancesResponse
-         */
-        public async Task<ImportDatabaseBetweenInstancesResponse> ImportDatabaseBetweenInstancesWithOptionsAsync(ImportDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInfo))
-            {
-                query["DBInfo"] = request.DBInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
-            {
-                query["SourceDBInstanceId"] = request.SourceDBInstanceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImportDatabaseBetweenInstances",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImportDatabaseBetweenInstancesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * ### [](#)Supported database engine
-          * *   SQL Server
-          * ### [](#)Description
-          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * ### [](#)Precautions
-          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, **make sure that the following conditions are met**:
-          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user.
-          *     *   The instance is in the Running state.
-          *     *   The source and destination databases must be in the Running state.
-          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * > *   You can migrate the data of multiple databases at a time.
-          *
-          * @param request ImportDatabaseBetweenInstancesRequest
-          * @return ImportDatabaseBetweenInstancesResponse
-         */
-        public ImportDatabaseBetweenInstancesResponse ImportDatabaseBetweenInstances(ImportDatabaseBetweenInstancesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ImportDatabaseBetweenInstancesWithOptions(request, runtime);
-        }
-
-        /**
-          * ### [](#)Supported database engine
-          * *   SQL Server
-          * ### [](#)Description
-          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-          * ### [](#)Precautions
-          * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-          * *   Before you call this operation, **make sure that the following conditions are met**:
-          *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-          *     *   The source and destination instances must be created by using the same user.
-          *     *   The instance is in the Running state.
-          *     *   The source and destination databases must be in the Running state.
-          *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-          * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-          * > *   You can migrate the data of multiple databases at a time.
-          *
-          * @param request ImportDatabaseBetweenInstancesRequest
-          * @return ImportDatabaseBetweenInstancesResponse
-         */
-        public async Task<ImportDatabaseBetweenInstancesResponse> ImportDatabaseBetweenInstancesAsync(ImportDatabaseBetweenInstancesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ImportDatabaseBetweenInstancesWithOptionsAsync(request, runtime);
-        }
-
-        /**
           * ### [](#)Supported database engines
           * *   MySQL
           * ### [](#)Description
@@ -34280,7 +34088,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is phased out.
+          * ### [](#)Supported database engines
+          * RDS SQL Server
+          * ### [](#)References
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * [Change the character set collation and the time zone of system databases](~~95700~~)
           *
           * @param request ModifyCollationTimeZoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -34334,7 +34146,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is phased out.
+          * ### [](#)Supported database engines
+          * RDS SQL Server
+          * ### [](#)References
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * [Change the character set collation and the time zone of system databases](~~95700~~)
           *
           * @param request ModifyCollationTimeZoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -34388,7 +34204,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is phased out.
+          * ### [](#)Supported database engines
+          * RDS SQL Server
+          * ### [](#)References
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * [Change the character set collation and the time zone of system databases](~~95700~~)
           *
           * @param request ModifyCollationTimeZoneRequest
           * @return ModifyCollationTimeZoneResponse
@@ -34400,7 +34220,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * > This operation is phased out.
+          * ### [](#)Supported database engines
+          * RDS SQL Server
+          * ### [](#)References
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * [Change the character set collation and the time zone of system databases](~~95700~~)
           *
           * @param request ModifyCollationTimeZoneRequest
           * @return ModifyCollationTimeZoneResponse
