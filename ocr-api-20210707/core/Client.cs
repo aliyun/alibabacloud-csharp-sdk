@@ -3927,6 +3927,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergePdfPages))
+            {
+                query["MergePdfPages"] = request.MergePdfPages;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -3960,6 +3964,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergePdfPages))
+            {
+                query["MergePdfPages"] = request.MergePdfPages;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;

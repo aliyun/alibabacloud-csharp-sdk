@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeMixedInvoicesRequest : TeaModel {
+        [NameInMap("MergePdfPages")]
+        [Validation(Required=false)]
+        public bool? MergePdfPages { get; set; }
+
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
