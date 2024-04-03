@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class CreateDedicatedHostRequest : TeaModel {
+    public class CreateDedicatedHostShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable the auto-renewal feature. Valid values:
         /// 
@@ -37,7 +34,7 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
 
         [NameInMap("ClusterServices")]
         [Validation(Required=false)]
-        public List<string> ClusterServices { get; set; }
+        public string ClusterServicesShrink { get; set; }
 
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -102,81 +99,7 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
 
         [NameInMap("MyBaseEcsClass")]
         [Validation(Required=false)]
-        public CreateDedicatedHostRequestMyBaseEcsClass MyBaseEcsClass { get; set; }
-        public class CreateDedicatedHostRequestMyBaseEcsClass : TeaModel {
-            [NameInMap("Amount")]
-            [Validation(Required=false)]
-            public long? Amount { get; set; }
-
-            [NameInMap("AutoRenew")]
-            [Validation(Required=false)]
-            public bool? AutoRenew { get; set; }
-
-            [NameInMap("ChargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            [NameInMap("DataDiskCategory")]
-            [Validation(Required=false)]
-            public string DataDiskCategory { get; set; }
-
-            [NameInMap("DataDiskCount")]
-            [Validation(Required=false)]
-            public long? DataDiskCount { get; set; }
-
-            [NameInMap("DataDiskSize")]
-            [Validation(Required=false)]
-            public long? DataDiskSize { get; set; }
-
-            [NameInMap("DepolymentSetId")]
-            [Validation(Required=false)]
-            public string DepolymentSetId { get; set; }
-
-            [NameInMap("EcsClassCode")]
-            [Validation(Required=false)]
-            public string EcsClassCode { get; set; }
-
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-
-            [NameInMap("InternetMaxBandwidthOut")]
-            [Validation(Required=false)]
-            public long? InternetMaxBandwidthOut { get; set; }
-
-            [NameInMap("KeyPairName")]
-            [Validation(Required=false)]
-            public string KeyPairName { get; set; }
-
-            [NameInMap("Password")]
-            [Validation(Required=false)]
-            public string Password { get; set; }
-
-            [NameInMap("Period")]
-            [Validation(Required=false)]
-            public long? Period { get; set; }
-
-            [NameInMap("PeriodType")]
-            [Validation(Required=false)]
-            public string PeriodType { get; set; }
-
-            [NameInMap("SecurityGroupIds")]
-            [Validation(Required=false)]
-            public List<string> SecurityGroupIds { get; set; }
-
-            [NameInMap("SystemDiskCategory")]
-            [Validation(Required=false)]
-            public string SystemDiskCategory { get; set; }
-
-            [NameInMap("SystemDiskSize")]
-            [Validation(Required=false)]
-            public long? SystemDiskSize { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<string> Tags { get; set; }
-
-        }
+        public string MyBaseEcsClassShrink { get; set; }
 
         /// <summary>
         /// The password of the host. You can specify a password only when you create a host in a **Proprietary MyBase** dedicated cluster.

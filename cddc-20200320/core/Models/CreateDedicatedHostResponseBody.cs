@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class CreateDedicatedHostResponseBody : TeaModel {
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
         /// <summary>
         /// The created hosts.
         /// </summary>
