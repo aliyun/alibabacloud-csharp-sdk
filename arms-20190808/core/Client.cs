@@ -12366,6 +12366,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["AliyunLang"] = request.AliyunLang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAuthToken))
+            {
+                query["CreateAuthToken"] = request.CreateAuthToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {
                 query["EnvironmentId"] = request.EnvironmentId;
@@ -12404,6 +12408,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAuthToken))
+            {
+                query["CreateAuthToken"] = request.CreateAuthToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {

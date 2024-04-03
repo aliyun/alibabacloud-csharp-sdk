@@ -315,6 +315,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        [NameInMap("GrafanaServiceOpened")]
+        [Validation(Required=false)]
+        public string GrafanaServiceOpened { get; set; }
+
         /// <summary>
         /// The indicators of whether the Prometheus service has been activated.
         /// </summary>

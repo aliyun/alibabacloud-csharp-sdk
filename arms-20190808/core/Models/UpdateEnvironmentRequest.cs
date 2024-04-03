@@ -10,26 +10,31 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// Locale, the default is Chinese zh | en.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// Environment name.
+        /// The environment name.
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
         public string EnvironmentName { get; set; }
 
+        /// <summary>
+        /// Fee package.
+        /// * When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.
+        /// * When the EnvironmentType is a different value, please enter a null value.
+        /// </summary>
         [NameInMap("FeePackage")]
         [Validation(Required=false)]
         public string FeePackage { get; set; }

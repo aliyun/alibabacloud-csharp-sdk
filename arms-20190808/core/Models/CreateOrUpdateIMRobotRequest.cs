@@ -56,9 +56,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the IM chatbot.
-        /// 
-        /// - If you do not specify the parameter, a new IM chatbot is created.
-        /// - If you specify this parameter, the specified IM chatbot is modified.
+        /// > If you do not specify the parameter, a new IM chatbot is created.
         /// </summary>
         [NameInMap("RobotId")]
         [Validation(Required=false)]

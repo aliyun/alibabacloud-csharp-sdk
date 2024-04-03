@@ -29,7 +29,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the ARMS resources for which you want to modify tags.
+        /// The type of the ARMS resources for which you want to modify tags. Valid values:
+        /// 
+        /// *   WEB: Browser Monitoring
+        /// *   APPLICATION: Application Monitoring
+        /// *   PROMETHEUS: Managed Service for Prometheus
+        /// *   SYNTHETICTASK: Synthetic Monitoring
+        /// *   ALERTRULE: Application Monitoring alert rule
+        /// *   PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule
+        /// *   XTRACEAPP: Managed Service for OpenTelemetry
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

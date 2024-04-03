@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        [NameInMap("CreateAuthToken")]
+        [Validation(Required=false)]
+        public bool? CreateAuthToken { get; set; }
+
         /// <summary>
         /// The ID of the environment instance.
         /// </summary>

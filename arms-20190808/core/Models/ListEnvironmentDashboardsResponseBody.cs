@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Totle of the dashboards.
+            /// Total of the dashboards.
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]

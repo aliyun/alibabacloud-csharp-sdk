@@ -10,32 +10,38 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListSilencePoliciesRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ListSilencePolicies**.
+        /// Specifies whether to query the details of a silence policy. Valid values:
+        /// 
+        /// *   `true`: Details of the silence policy are queried.
+        /// *   `false`: Details about notification policies are not queried.
         /// </summary>
         [NameInMap("IsDetail")]
         [Validation(Required=false)]
         public bool? IsDetail { get; set; }
 
         /// <summary>
-        /// An array of matching condition objects.
+        /// The name of the silence policy.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the silence policy.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
