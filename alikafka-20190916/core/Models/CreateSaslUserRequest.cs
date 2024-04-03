@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Mechanism")]
+        [Validation(Required=false)]
+        public string Mechanism { get; set; }
+
         /// <summary>
         /// The password of the SASL user.
         /// </summary>

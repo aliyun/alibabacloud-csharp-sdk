@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeAclsRequest : TeaModel {
+        [NameInMap("AclOperationType")]
+        [Validation(Required=false)]
+        public string AclOperationType { get; set; }
+
+        [NameInMap("AclPermissionType")]
+        [Validation(Required=false)]
+        public string AclPermissionType { get; set; }
+
         /// <summary>
         /// The name or ID of the resource.
         /// 
@@ -38,6 +46,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("AclResourceType")]
         [Validation(Required=false)]
         public string AclResourceType { get; set; }
+
+        [NameInMap("Host")]
+        [Validation(Required=false)]
+        public string Host { get; set; }
 
         /// <summary>
         /// The ID of the instance.

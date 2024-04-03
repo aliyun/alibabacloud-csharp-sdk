@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string AclOperationType { get; set; }
 
+                [NameInMap("AclPermissionType")]
+                [Validation(Required=false)]
+                public string AclPermissionType { get; set; }
+
                 /// <summary>
                 /// The name of the resource.
                 /// 

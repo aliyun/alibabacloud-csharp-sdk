@@ -30,6 +30,42 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
+            [NameInMap("RebalanceInfoList")]
+            [Validation(Required=false)]
+            public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList RebalanceInfoList { get; set; }
+            public class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList : TeaModel {
+                [NameInMap("RebalanceInfoList")]
+                [Validation(Required=false)]
+                public List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> RebalanceInfoList { get; set; }
+                public class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList : TeaModel {
+                    [NameInMap("Generation")]
+                    [Validation(Required=false)]
+                    public long? Generation { get; set; }
+
+                    [NameInMap("GroupId")]
+                    [Validation(Required=false)]
+                    public string GroupId { get; set; }
+
+                    [NameInMap("LastRebalanceTimestamp")]
+                    [Validation(Required=false)]
+                    public long? LastRebalanceTimestamp { get; set; }
+
+                    [NameInMap("Reason")]
+                    [Validation(Required=false)]
+                    public string Reason { get; set; }
+
+                    [NameInMap("RebalanceSuccess")]
+                    [Validation(Required=false)]
+                    public bool? RebalanceSuccess { get; set; }
+
+                    [NameInMap("RebalanceTimeConsuming")]
+                    [Validation(Required=false)]
+                    public long? RebalanceTimeConsuming { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The consumption progress of each topic to which the consumer group is subscribed.
             /// </summary>

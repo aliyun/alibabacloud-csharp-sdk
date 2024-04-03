@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
             public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
+                [NameInMap("Mechanism")]
+                [Validation(Required=false)]
+                public string Mechanism { get; set; }
+
                 /// <summary>
                 /// The password that is used to access the Elasticsearch cluster.
                 /// </summary>
