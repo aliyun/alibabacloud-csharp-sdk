@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public int? AccessLevel { get; set; }
 
+        [NameInMap("accessToken")]
+        [Validation(Required=false)]
+        public string AccessToken { get; set; }
+
         [NameInMap("minAccessLevel")]
         [Validation(Required=false)]
         public int? MinAccessLevel { get; set; }

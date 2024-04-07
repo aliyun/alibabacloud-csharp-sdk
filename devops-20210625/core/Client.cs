@@ -11733,6 +11733,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             {
                 query["accessLevel"] = request.AccessLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAccessLevel))
             {
                 query["minAccessLevel"] = request.MinAccessLevel;
@@ -11764,6 +11768,10 @@ namespace AlibabaCloud.SDK.Devops20210625
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLevel))
             {
                 query["accessLevel"] = request.AccessLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["accessToken"] = request.AccessToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAccessLevel))
             {
