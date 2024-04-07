@@ -8,16 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeDomainDNSRecordRequest : TeaModel {
+    public class SyncProductInstanceRequest : TeaModel {
         /// <summary>
-        /// The domain name whose DNS settings you want to check.
-        /// </summary>
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
-
-        /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// The ID of the WAF instance.
         /// 
         /// >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
         /// </summary>

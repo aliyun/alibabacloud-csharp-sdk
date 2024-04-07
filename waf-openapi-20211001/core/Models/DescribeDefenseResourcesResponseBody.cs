@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            /// <summary>
+            /// The ID of the Alibaba Cloud account to which the resource belongs.
+            /// </summary>
             [NameInMap("OwnerUserId")]
             [Validation(Required=false)]
             public string OwnerUserId { get; set; }
