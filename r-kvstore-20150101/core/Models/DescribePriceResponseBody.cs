@@ -359,6 +359,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public long? OriginalStandAmount { get; set; }
 
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
                 }
 
                 /// <summary>

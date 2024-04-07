@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   **Immediately**: immediately switched after the data is migrated.
         /// *   **MaintainTime**: switched within the maintenance window.
+        /// *   **0**: immediately switched after the data is migrated.
+        /// *   **1**: switched within the maintenance window.
         /// 
         /// >  Default value: **Immediately**.
         /// </summary>
