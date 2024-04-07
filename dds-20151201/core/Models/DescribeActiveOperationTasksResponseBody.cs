@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("AllowCancel")]
             [Validation(Required=false)]
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// Indicates whether the change is allowed.
+            /// Indicates whether the modification operation is allowed.
             /// 
-            /// *   **0**: The change is not allowed.
-            /// *   **1**: The change is allowed.
+            /// *   **0**: The modification operation is not allowed.
+            /// *   **1**: The modification operation is allowed.
             /// </summary>
             [NameInMap("AllowChange")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ChangeLevel { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("ChangeLevelEn")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("CurrentAVZ")]
             [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("ImpactEn")]
             [Validation(Required=false)]
             public string ImpactEn { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string InsComment { get; set; }
 
             /// <summary>
-            /// The node ID.
+            /// The ID of the node.
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
             public string InsName { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the task is modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The start time of the task. The time follows the ISO 8601 standard in the *yyyy-mm-dd* T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC. Service interruptions may occur during switchover.
+            /// The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// None
+            /// N/A
             /// </summary>
             [NameInMap("TaskTypeEn")]
             [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -410,6 +410,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     [Validation(Required=false)]
                     public double? OriginalStandAmount { get; set; }
 
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
                 }
 
                 /// <summary>
