@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         }
 
+        [NameInMap("ComputingIpVersion")]
+        [Validation(Required=false)]
+        public string ComputingIpVersion { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public object Components { get; set; }
 
+            [NameInMap("ComputingIpVersion")]
+            [Validation(Required=false)]
+            public string ComputingIpVersion { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
