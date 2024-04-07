@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> InstanceIds { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         [NameInMap("MountPointId")]
         [Validation(Required=false)]
