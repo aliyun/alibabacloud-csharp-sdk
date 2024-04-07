@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string AppRevision { get; set; }
 
+        [NameInMap("BillingInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> BillingInstanceIds { get; set; }
+
         [NameInMap("Calls")]
         [Validation(Required=false)]
         public string Calls { get; set; }

@@ -3920,7 +3920,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315
         }
 
         /**
-          * @deprecated
+          * @deprecated : UpdateEntity is deprecated, please use EasyGene::2021-03-15::UpdateEntityItems instead.
           *
           * @param tmpReq UpdateEntityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3971,7 +3971,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315
         }
 
         /**
-          * @deprecated
+          * @deprecated : UpdateEntity is deprecated, please use EasyGene::2021-03-15::UpdateEntityItems instead.
           *
           * @param tmpReq UpdateEntityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4022,7 +4022,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315
         }
 
         /**
-          * @deprecated
+          * @deprecated : UpdateEntity is deprecated, please use EasyGene::2021-03-15::UpdateEntityItems instead.
           *
           * @param request UpdateEntityRequest
           * @return UpdateEntityResponse
@@ -4035,7 +4035,7 @@ namespace AlibabaCloud.SDK.EasyGene20210315
         }
 
         /**
-          * @deprecated
+          * @deprecated : UpdateEntity is deprecated, please use EasyGene::2021-03-15::UpdateEntityItems instead.
           *
           * @param request UpdateEntityRequest
           * @return UpdateEntityResponse
