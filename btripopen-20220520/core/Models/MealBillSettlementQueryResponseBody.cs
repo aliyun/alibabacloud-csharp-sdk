@@ -69,6 +69,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CascadeDepartment { get; set; }
 
+                [NameInMap("consume_report_address")]
+                [Validation(Required=false)]
+                public string ConsumeReportAddress { get; set; }
+
+                [NameInMap("consume_report_city")]
+                [Validation(Required=false)]
+                public string ConsumeReportCity { get; set; }
+
+                [NameInMap("consume_report_city_code")]
+                [Validation(Required=false)]
+                public string ConsumeReportCityCode { get; set; }
+
                 [NameInMap("consumer_scene")]
                 [Validation(Required=false)]
                 public string ConsumerScene { get; set; }

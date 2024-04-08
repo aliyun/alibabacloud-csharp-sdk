@@ -57,9 +57,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string TaobaoCallbackUrl { get; set; }
 
+        [NameInMap("traveler_id")]
+        [Validation(Required=false)]
+        public string TravelerId { get; set; }
+
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
+
+        [NameInMap("use_booking_proxy")]
+        [Validation(Required=false)]
+        public int? UseBookingProxy { get; set; }
 
         [NameInMap("user_id")]
         [Validation(Required=false)]

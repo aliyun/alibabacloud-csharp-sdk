@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string MailProvince { get; set; }
 
+            [NameInMap("meal_normal_invoice_fee")]
+            [Validation(Required=false)]
+            public string MealNormalInvoiceFee { get; set; }
+
             [NameInMap("penalty_fee")]
             [Validation(Required=false)]
             public string PenaltyFee { get; set; }

@@ -204,6 +204,42 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos> RoomInfos { get; set; }
                 public class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos : TeaModel {
+                    [NameInMap("bed_info_group_list")]
+                    [Validation(Required=false)]
+                    public List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList> BedInfoGroupList { get; set; }
+                    public class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList : TeaModel {
+                        [NameInMap("bed_Infos")]
+                        [Validation(Required=false)]
+                        public List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos> BedInfos { get; set; }
+                        public class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos : TeaModel {
+                            [NameInMap("bed_desc")]
+                            [Validation(Required=false)]
+                            public string BedDesc { get; set; }
+
+                            [NameInMap("bed_num")]
+                            [Validation(Required=false)]
+                            public int? BedNum { get; set; }
+
+                            [NameInMap("bed_size")]
+                            [Validation(Required=false)]
+                            public string BedSize { get; set; }
+
+                            [NameInMap("bed_type")]
+                            [Validation(Required=false)]
+                            public string BedType { get; set; }
+
+                            [NameInMap("length")]
+                            [Validation(Required=false)]
+                            public string Length { get; set; }
+
+                            [NameInMap("width")]
+                            [Validation(Required=false)]
+                            public string Width { get; set; }
+
+                        }
+
+                    }
+
                     [NameInMap("bed_infos")]
                     [Validation(Required=false)]
                     public List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos> BedInfos { get; set; }
@@ -223,6 +259,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [NameInMap("bed_type")]
                         [Validation(Required=false)]
                         public string BedType { get; set; }
+
+                        [NameInMap("length")]
+                        [Validation(Required=false)]
+                        public string Length { get; set; }
+
+                        [NameInMap("width")]
+                        [Validation(Required=false)]
+                        public string Width { get; set; }
 
                     }
 

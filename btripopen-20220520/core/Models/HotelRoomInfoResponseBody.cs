@@ -21,6 +21,42 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<HotelRoomInfoResponseBodyModule> Module { get; set; }
         public class HotelRoomInfoResponseBodyModule : TeaModel {
+            [NameInMap("bed_info_group_list")]
+            [Validation(Required=false)]
+            public List<HotelRoomInfoResponseBodyModuleBedInfoGroupList> BedInfoGroupList { get; set; }
+            public class HotelRoomInfoResponseBodyModuleBedInfoGroupList : TeaModel {
+                [NameInMap("bed_infos")]
+                [Validation(Required=false)]
+                public List<HotelRoomInfoResponseBodyModuleBedInfoGroupListBedInfos> BedInfos { get; set; }
+                public class HotelRoomInfoResponseBodyModuleBedInfoGroupListBedInfos : TeaModel {
+                    [NameInMap("bed_desc")]
+                    [Validation(Required=false)]
+                    public string BedDesc { get; set; }
+
+                    [NameInMap("bed_num")]
+                    [Validation(Required=false)]
+                    public int? BedNum { get; set; }
+
+                    [NameInMap("bed_size")]
+                    [Validation(Required=false)]
+                    public string BedSize { get; set; }
+
+                    [NameInMap("bed_type")]
+                    [Validation(Required=false)]
+                    public string BedType { get; set; }
+
+                    [NameInMap("length")]
+                    [Validation(Required=false)]
+                    public string Length { get; set; }
+
+                    [NameInMap("width")]
+                    [Validation(Required=false)]
+                    public string Width { get; set; }
+
+                }
+
+            }
+
             [NameInMap("bed_infos")]
             [Validation(Required=false)]
             public List<HotelRoomInfoResponseBodyModuleBedInfos> BedInfos { get; set; }
@@ -40,6 +76,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("bed_type")]
                 [Validation(Required=false)]
                 public string BedType { get; set; }
+
+                [NameInMap("length")]
+                [Validation(Required=false)]
+                public string Length { get; set; }
+
+                [NameInMap("width")]
+                [Validation(Required=false)]
+                public string Width { get; set; }
 
             }
 
@@ -116,6 +160,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("rooms")]
             [Validation(Required=false)]
             public int? Rooms { get; set; }
+
+            [NameInMap("smoke")]
+            [Validation(Required=false)]
+            public string Smoke { get; set; }
 
             [NameInMap("window")]
             [Validation(Required=false)]
