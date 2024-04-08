@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? Quantity { get; set; }
 
+        [NameInMap("rankValue")]
+        [Validation(Required=false)]
+        public long? RankValue { get; set; }
+
         [NameInMap("shopId")]
         [Validation(Required=false)]
         public string ShopId { get; set; }
