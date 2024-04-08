@@ -1084,6 +1084,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 request.LabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelIds, "LabelIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReverseIncrTransferConfig))
+            {
+                request.ReverseIncrTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StructTransferConfig))
             {
                 request.StructTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StructTransferConfig, "StructTransferConfig", "json");
@@ -1140,6 +1144,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
             {
                 body["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReverseIncrTransferConfigShrink))
+            {
+                body["ReverseIncrTransferConfig"] = request.ReverseIncrTransferConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkEndpointId))
             {
@@ -1209,6 +1217,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 request.LabelIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelIds, "LabelIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReverseIncrTransferConfig))
+            {
+                request.ReverseIncrTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StructTransferConfig))
             {
                 request.StructTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StructTransferConfig, "StructTransferConfig", "json");
@@ -1265,6 +1277,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
             {
                 body["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReverseIncrTransferConfigShrink))
+            {
+                body["ReverseIncrTransferConfig"] = request.ReverseIncrTransferConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkEndpointId))
             {

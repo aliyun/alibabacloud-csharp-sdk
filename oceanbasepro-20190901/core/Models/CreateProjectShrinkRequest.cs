@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string OssKey { get; set; }
 
+        [NameInMap("ReverseIncrTransferConfig")]
+        [Validation(Required=false)]
+        public string ReverseIncrTransferConfigShrink { get; set; }
+
         [NameInMap("SinkEndpointId")]
         [Validation(Required=false)]
         public string SinkEndpointId { get; set; }

@@ -231,6 +231,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public bool? NonePkUkTruncateDstTable { get; set; }
 
+                [NameInMap("ReadWorkerNum")]
+                [Validation(Required=false)]
+                public int? ReadWorkerNum { get; set; }
+
+                [NameInMap("ThrottleIOPS")]
+                [Validation(Required=false)]
+                public int? ThrottleIOPS { get; set; }
+
+                [NameInMap("ThrottleRps")]
+                [Validation(Required=false)]
+                public int? ThrottleRps { get; set; }
+
+                [NameInMap("WriteWorkerNum")]
+                [Validation(Required=false)]
+                public int? WriteWorkerNum { get; set; }
+
             }
 
             [NameInMap("GmtCreate")]
@@ -285,6 +301,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? StoreLogKeptHour { get; set; }
 
+                [NameInMap("SupportDDLTypes")]
+                [Validation(Required=false)]
+                public List<string> SupportDDLTypes { get; set; }
+
+                [NameInMap("ThrottleIOPS")]
+                [Validation(Required=false)]
+                public int? ThrottleIOPS { get; set; }
+
+                [NameInMap("ThrottleRps")]
+                [Validation(Required=false)]
+                public int? ThrottleRps { get; set; }
+
             }
 
             [NameInMap("IsMerging")]
@@ -320,6 +348,48 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
+
+            [NameInMap("ReverseIncrTransferConfig")]
+            [Validation(Required=false)]
+            public DescribeProjectResponseBodyDataReverseIncrTransferConfig ReverseIncrTransferConfig { get; set; }
+            public class DescribeProjectResponseBodyDataReverseIncrTransferConfig : TeaModel {
+                [NameInMap("EnableIncrSyncStatistics")]
+                [Validation(Required=false)]
+                public bool? EnableIncrSyncStatistics { get; set; }
+
+                [NameInMap("EnableSequencingWithinTxn")]
+                [Validation(Required=false)]
+                public bool? EnableSequencingWithinTxn { get; set; }
+
+                [NameInMap("IncrSyncConcurrency")]
+                [Validation(Required=false)]
+                public int? IncrSyncConcurrency { get; set; }
+
+                [NameInMap("RecordTypeWhiteList")]
+                [Validation(Required=false)]
+                public List<string> RecordTypeWhiteList { get; set; }
+
+                [NameInMap("StartTimestamp")]
+                [Validation(Required=false)]
+                public long? StartTimestamp { get; set; }
+
+                [NameInMap("StoreLogKeptHour")]
+                [Validation(Required=false)]
+                public int? StoreLogKeptHour { get; set; }
+
+                [NameInMap("SupportDDLTypes")]
+                [Validation(Required=false)]
+                public List<string> SupportDDLTypes { get; set; }
+
+                [NameInMap("ThrottleIOPS")]
+                [Validation(Required=false)]
+                public int? ThrottleIOPS { get; set; }
+
+                [NameInMap("ThrottleRps")]
+                [Validation(Required=false)]
+                public int? ThrottleRps { get; set; }
+
+            }
 
             [NameInMap("SinkConnectInfo")]
             [Validation(Required=false)]
