@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class BatchPutDcdnKvShrinkRequest : TeaModel {
-        [NameInMap("KvList")]
-        [Validation(Required=false)]
-        public string KvListShrink { get; set; }
-
-        /// <summary>
-        /// The name of the namespace.
-        /// </summary>
+    public class BatchPutDcdnKvWithHighCapacityRequest : TeaModel {
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 
