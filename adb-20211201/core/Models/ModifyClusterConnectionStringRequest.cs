@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The current public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The port number that is used to connect to the cluster. Set the value to **3306**.
+        /// The port number. Set the value to **3306**.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

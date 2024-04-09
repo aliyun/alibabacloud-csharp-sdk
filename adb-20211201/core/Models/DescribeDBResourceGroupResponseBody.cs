@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The minimum amount of elastic computing resources. Unit: ACUs.
+            /// The minimum amount of elastic computing resources. Unit: ACU.
             /// </summary>
             [NameInMap("ElasticMinComputeResource")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string GroupType { get; set; }
 
             /// <summary>
-            /// The Resource Access Management (RAM) user with which the resource group is associated.
+            /// The Resource Access Management (RAM) user that is associated with the resource group.
             /// </summary>
             [NameInMap("GroupUsers")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? MaxClusterCount { get; set; }
 
             /// <summary>
-            /// The maximum amount of reserved computing resources. Unit: ACUs.
+            /// The maximum amount of reserved computing resources. Unit: ACU.
             /// </summary>
             [NameInMap("MaxComputeResource")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? MinClusterCount { get; set; }
 
             /// <summary>
-            /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
+            /// The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
             /// </summary>
             [NameInMap("MinComputeResource")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? RunningClusterCount { get; set; }
 
             /// <summary>
-            /// The state of the resource group. Valid values:
+            /// The status of the resource group. Valid values:
             /// 
             /// *   **creating**: The resource group is being created.
             /// *   **ok**: The resource group is created.

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// > You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the resource group information of a cluster, including the resource group name.
+        /// >  You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the information about resource groups of an AnalyticDB for MySQL cluster, including resource group names.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

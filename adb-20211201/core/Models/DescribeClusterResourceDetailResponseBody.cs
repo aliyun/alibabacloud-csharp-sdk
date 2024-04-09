@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ClusterSizeResource { get; set; }
 
+                /// <summary>
+                /// Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
+                /// 
+                /// The True value is returned only for job resource groups.
+                /// </summary>
                 [NameInMap("EnableSpot")]
                 [Validation(Required=false)]
                 public bool? EnableSpot { get; set; }
@@ -133,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? RunningClusterCount { get; set; }
 
                 /// <summary>
-                /// The state of the resource group. Valid values:
+                /// The status of the resource group. Valid values:
                 /// 
                 /// *   **running**
                 /// *   **deleting**
