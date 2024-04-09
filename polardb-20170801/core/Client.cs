@@ -7378,13 +7378,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBClusterTDEWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * The release note of the kernel version.
-          *
-          * @param request DescribeDBClusterVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterVersionResponse
-         */
         public DescribeDBClusterVersionResponse DescribeDBClusterVersionWithOptions(DescribeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7432,13 +7425,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The release note of the kernel version.
-          *
-          * @param request DescribeDBClusterVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterVersionResponse
-         */
         public async Task<DescribeDBClusterVersionResponse> DescribeDBClusterVersionWithOptionsAsync(DescribeDBClusterVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7486,24 +7472,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBClusterVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The release note of the kernel version.
-          *
-          * @param request DescribeDBClusterVersionRequest
-          * @return DescribeDBClusterVersionResponse
-         */
         public DescribeDBClusterVersionResponse DescribeDBClusterVersion(DescribeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBClusterVersionWithOptions(request, runtime);
         }
 
-        /**
-          * The release note of the kernel version.
-          *
-          * @param request DescribeDBClusterVersionRequest
-          * @return DescribeDBClusterVersionResponse
-         */
         public async Task<DescribeDBClusterVersionResponse> DescribeDBClusterVersionAsync(DescribeDBClusterVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

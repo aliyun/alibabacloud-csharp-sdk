@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values:
+        /// The number of entries to return on each page. Valid values:
         /// 
         /// *   **30**
         /// *   **50**

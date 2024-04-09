@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: 
+        /// Specifies whether to immediately run the kernel upgrade task. Valid values:
         /// 
-        /// - false: runs the task on schedule. 
-        /// - true: runs the task immediately. Default value: false.
+        /// *   **false** (default)
+        /// *   **true**
         /// 
-        /// > No need to use this parameter when calling this interface
+        /// >  This parameter is not required when you call the operation.
         /// </summary>
         [NameInMap("FromTimeService")]
         [Validation(Required=false)]
@@ -72,29 +72,31 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBRevisionVersionCode { get; set; }
 
         /// <summary>
-        /// Kernel version upgrade label. The value is fixed as INNOVATE.
-        /// > this parameter is passed in, UpgradePolicy must pass COLD.
+        /// The upgrade tag. The value is fixed as **INNOVATE**.
+        /// 
+        /// > *   This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.
+        /// >*   If you specify this parameter, you must set `UpgradePolicy` to **COLD**.
         /// </summary>
         [NameInMap("UpgradeLabel")]
         [Validation(Required=false)]
         public string UpgradeLabel { get; set; }
 
         /// <summary>
-        /// Kernel version upgrade strategy. Value:
+        /// The upgrade policy. Valid values:
         /// 
-        /// - HOT: Hot Upgrade
-        /// - COLD: Cold upgrade. Currently, only PolarDB MySQL version 8.0 cluster version supports this upgrade method.
+        /// *   **HOT**: hot upgrade.
+        /// *   **COLD**: cold upgrade. Only PolarDB for MySQL Cluster Edition that runs MySQL 8.0 supports this upgrade method.
         /// </summary>
         [NameInMap("UpgradePolicy")]
         [Validation(Required=false)]
         public string UpgradePolicy { get; set; }
 
         /// <summary>
-        /// There is no need to use this parameter to upgrade the type when calling this interface. Value:
+        /// The update type. Valid values:
         /// 
-        /// - PROXY: Upgrade database proxy only (Proxy)
-        /// - DB: Upgrade kernel engine only
-        /// - ALL (default): Upgrade both database proxy and kernel engine simultaneously
+        /// *   **PROXY**: specifies to upgrade PloarProxy.
+        /// *   **DB**: specifies to upgrade the kernel version.
+        /// *   **ALL**: specifies to upgrade both PloarProxy and kernel version.
         /// </summary>
         [NameInMap("UpgradeType")]
         [Validation(Required=false)]

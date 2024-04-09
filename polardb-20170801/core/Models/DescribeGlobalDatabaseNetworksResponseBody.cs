@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// The description of the GDN. The description must meet the following requirements:
             /// 
-            /// *   It cannot start with [http:// or https://.](http://https://。)
+            /// *   It cannot start with `http://` or `https://`.
             /// *   It must start with a letter.
             /// *   It can contain letters, digits, underscores (\_), and hyphens (-).
             /// *   It must be 2 to 126 characters in length.

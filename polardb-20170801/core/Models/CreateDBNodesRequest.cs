@@ -63,6 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   RO
         /// *   STANDBY
+        /// *   DLNode
         /// </summary>
         [NameInMap("DBNodeType")]
         [Validation(Required=false)]

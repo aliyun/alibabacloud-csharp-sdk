@@ -10,16 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterVersionRequest : TeaModel {
         /// <summary>
-        /// The revision version of the database engine.
-        /// 
-        /// >  For a cluster of the PolarDB for MySQL 5.6, the DBRevisionVersion parameter returns the revision version information only if the `Revision Version` is released later than August 31, 2020. Otherwise, this parameter returns an empty value. For more information about the kernel version of a cluster that runs the PolarDB for MySQL, see [PolarDB for MySQL](~~423884~~).
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specify to return the latest version information or a list of upgradeable versions.Valid values:
+        /// 
+        /// - AVAILABLE_VERSION
+        /// - LATEST_VERSION
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]

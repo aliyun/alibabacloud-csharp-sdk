@@ -23,52 +23,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The type of the AI node. Valid values:
                 /// 
-                /// *   SearchNode: Search node
-                /// *   DLNode: ai node
-                /// 
-                /// Enumeration values:
-                /// 
-                /// *   SearchNode | DLNode
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     both
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
-                /// 
-                /// *   DLNode
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     DLNode
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
-                /// 
-                /// *   DLNode
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     DLNode
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
+                /// *   SearchNode: search node.
+                /// *   DLNode: AI node.
                 /// </summary>
                 [NameInMap("AiType")]
                 [Validation(Required=false)]
@@ -85,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("CpuCores")]
+                [Validation(Required=false)]
+                public string CpuCores { get; set; }
 
                 /// <summary>
                 /// The time when the cluster was created.
@@ -164,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         /// The role of the node. Valid values:
                         /// 
                         /// *   **Writer**: The node is the primary node.
-                        /// *   **Reader**: The node is a read-only node.
+                        /// *   **Reader**: The node is the read-only node.
                         /// </summary>
                         [NameInMap("DBNodeRole")]
                         [Validation(Required=false)]
@@ -198,7 +158,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the serverless feature is enabled for the current node. **ON** indicates that the serverless feature is enabled. An empty value indicates that the serverless feature is disabled.
+                        /// Indicates whether the serverless feature is enabled for the current node.
+                        /// 
+                        /// *   **ON** indicates that the serverless feature is enabled.
+                        /// *   An empty value indicates that the serverless feature is disabled.
                         /// </summary>
                         [NameInMap("Serverless")]
                         [Validation(Required=false)]
@@ -235,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// *   **0**: The cluster is not locked.
                 /// *   **1**: The cluster is locked.
                 /// 
-                /// > If the cluster is locked, you cannot delete the cluster.
+                /// > You cannot delete clusters that are locked.
                 /// </summary>
                 [NameInMap("DeletionLock")]
                 [Validation(Required=false)]
@@ -270,7 +233,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Expired { get; set; }
 
                 /// <summary>
-                /// The lock status of the cluster. Valid values:
+                /// The lock state of the cluster. Valid values:
                 /// 
                 /// *   **Unlock**: The cluster is not locked.
                 /// *   **ManualLock**: The cluster is manually locked.
@@ -280,11 +243,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
+                [NameInMap("MemorySize")]
+                [Validation(Required=false)]
+                public string MemorySize { get; set; }
+
                 /// <summary>
                 /// The billing method of the cluster. Valid values:
                 /// 
-                /// *   **Postpaid**: pay-as-you-go.
-                /// *   **Prepaid**: subscription.
+                /// *   **Postpaid**: pay-as-you-go
+                /// *   **Prepaid**: subscription
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
@@ -296,6 +263,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RemoteMemorySize")]
+                [Validation(Required=false)]
+                public string RemoteMemorySize { get; set; }
 
                 /// <summary>
                 /// The ID of the resource group.
@@ -314,15 +285,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The billing method of the storage space. Valid values:
                 /// 
-                /// *   **Postpaid**: pay-as-you-go.
-                /// *   **Prepaid**: subscription.
+                /// *   **Postpaid**: pay-as-you-go
+                /// *   **Prepaid**: subscription
                 /// </summary>
                 [NameInMap("StoragePayType")]
                 [Validation(Required=false)]
                 public string StoragePayType { get; set; }
 
                 /// <summary>
-                /// The storage space that is billed based on the subscription billing method. Unit: bytes.
+                /// The storage capacity that is billed based on the subscription billing method. Unit: byte.
                 /// </summary>
                 [NameInMap("StorageSpace")]
                 [Validation(Required=false)]
@@ -344,6 +315,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("StrictConsistency")]
                 [Validation(Required=false)]
                 public string StrictConsistency { get; set; }
+
+                [NameInMap("SubCategory")]
+                [Validation(Required=false)]
+                public string SubCategory { get; set; }
 
                 /// <summary>
                 /// The tags of the cluster.

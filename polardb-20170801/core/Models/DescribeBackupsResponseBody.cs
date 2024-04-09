@@ -109,7 +109,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// �The expected expiration time of the backup set (This parameter is supported only for instances that are enabled with sparse backup).
+                /// The expected expiration time of the backup set.
+                /// > This parameter is supported only for instances that are enabled with sparse backup.
                 /// </summary>
                 [NameInMap("ExpectExpireTime")]
                 [Validation(Required=false)]

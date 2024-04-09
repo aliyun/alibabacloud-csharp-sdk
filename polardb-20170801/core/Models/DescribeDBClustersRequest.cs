@@ -63,7 +63,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// 查询方式，当取值为Simple时，将返回简略版参数
+        /// The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.
+        /// 
+        /// > If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.
         /// </summary>
         [NameInMap("DescribeType")]
         [Validation(Required=false)]
