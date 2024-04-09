@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? Number { get; set; }
 
+        [NameInMap("sharingTo")]
+        [Validation(Required=false)]
+        public string SharingTo { get; set; }
+
         [NameInMap("ticket")]
         [Validation(Required=false)]
         public string Ticket_ { get; set; }

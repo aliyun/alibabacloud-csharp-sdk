@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GroupConfiguration : TeaModel {
-        [NameInMap("fields")]
+    public class RefreshTokenRequest : TeaModel {
+        [NameInMap("accessTokenExpirationTime")]
         [Validation(Required=false)]
-        public List<string> Fields { get; set; }
+        public long? AccessTokenExpirationTime { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("ticket")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Ticket { get; set; }
 
     }
 

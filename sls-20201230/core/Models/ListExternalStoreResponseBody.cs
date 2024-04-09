@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// </summary>
         [NameInMap("externalstores")]
         [Validation(Required=false)]
-        public List<ExternalStore> Externalstores { get; set; }
+        public List<string> Externalstores { get; set; }
 
         /// <summary>
         /// The number of external stores that meet the query conditions.

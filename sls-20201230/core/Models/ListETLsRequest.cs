@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListETLsRequest : TeaModel {
+        [NameInMap("logstore")]
+        [Validation(Required=false)]
+        public string Logstore { get; set; }
+
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }

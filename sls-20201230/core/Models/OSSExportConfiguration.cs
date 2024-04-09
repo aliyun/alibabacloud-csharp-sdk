@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             [NameInMap("contentDetail")]
             [Validation(Required=false)]
-            public string ContentDetail { get; set; }
+            public Dictionary<string, object> ContentDetail { get; set; }
 
             [NameInMap("contentType")]
             [Validation(Required=false)]

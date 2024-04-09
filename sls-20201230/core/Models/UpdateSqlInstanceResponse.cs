@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GroupConfiguration : TeaModel {
-        [NameInMap("fields")]
+    public class UpdateSqlInstanceResponse : TeaModel {
+        [NameInMap("headers")]
         [Validation(Required=false)]
-        public List<string> Fields { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("statusCode")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? StatusCode { get; set; }
 
     }
 

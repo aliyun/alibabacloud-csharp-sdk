@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListScheduledSQLsRequest : TeaModel {
-        [NameInMap("logstore")]
+    public class GetSlsServiceResponse : TeaModel {
+        [NameInMap("headers")]
         [Validation(Required=false)]
-        public string Logstore { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("offset")]
+        [NameInMap("statusCode")]
         [Validation(Required=false)]
-        public long? Offset { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("size")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public long? Size { get; set; }
+        public ServiceStatus Body { get; set; }
 
     }
 

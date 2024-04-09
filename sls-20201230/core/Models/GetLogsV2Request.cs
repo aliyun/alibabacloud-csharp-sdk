@@ -78,13 +78,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Session { get; set; }
 
         /// <summary>
-        /// The ID of the shard.
-        /// </summary>
-        [NameInMap("shard")]
-        [Validation(Required=false)]
-        public int? Shard { get; set; }
-
-        /// <summary>
         /// The end of the time range to query. The value is the log time that is specified when log data is written.
         /// 
         /// The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
