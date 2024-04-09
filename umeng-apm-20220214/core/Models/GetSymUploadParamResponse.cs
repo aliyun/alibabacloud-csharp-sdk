@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class GetSymUploadParamResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetSymUploadParamResponseBody Body { get; set; }
 
     }

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class UploadSymbolFileResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UploadSymbolFileResponseBody Body { get; set; }
 
     }

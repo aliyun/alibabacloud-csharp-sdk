@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 
             [NameInMap("affectedUserRate")]
             [Validation(Required=false)]
-            public long? AffectedUserRate { get; set; }
+            public double? AffectedUserRate { get; set; }
 
             [NameInMap("errorCount")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 
             [NameInMap("errorRate")]
             [Validation(Required=false)]
-            public long? ErrorRate { get; set; }
+            public double? ErrorRate { get; set; }
 
             [NameInMap("timePoint")]
             [Validation(Required=false)]
