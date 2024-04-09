@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? CrossBackupId { get; set; }
 
         /// <summary>
-        /// The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /// The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("RecoveryBeginTime")]
         [Validation(Required=false)]

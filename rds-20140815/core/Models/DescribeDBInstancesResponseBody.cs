@@ -84,16 +84,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("DBInstanceCPU")]
+                [Validation(Required=false)]
+                public string DBInstanceCPU { get; set; }
+
                 /// <summary>
                 /// The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
-
-                [NameInMap("DBInstanceCpuCores")]
-                [Validation(Required=false)]
-                public string DBInstanceCpuCores { get; set; }
 
                 /// <summary>
                 /// The instance description.
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
-                public string DBInstanceMemory { get; set; }
+                public int? DBInstanceMemory { get; set; }
 
                 /// <summary>
                 /// The type of the network connection to the instance. Valid values:

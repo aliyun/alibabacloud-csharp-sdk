@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **0**: Backup data is not compressed.
         /// *   **1**: Backup data is compressed by using zlib.
         /// *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
-        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
-        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
+        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.
+        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.
         /// </summary>
         [NameInMap("CompressType")]
         [Validation(Required=false)]
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Indicates whether the log backup feature is enabled. Valid values:
         /// 
-        /// *   **1**: The log backup feature is enabled.
-        /// *   **0**: The log backup feature is disabled.
+        /// *   **1**: enabled
+        /// *   **0**: disabled
         /// </summary>
         [NameInMap("EnableBackupLog")]
         [Validation(Required=false)]
@@ -127,12 +127,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnableIncrementDataBackup { get; set; }
 
         /// <summary>
-        /// Whether PITR recovery is enabled at any point in time (the upgraded version of the original log backup). Return value:
+        /// Indicates whether the point-in-time restoration (PITR) feature is enabled. The PITR feature is an enhancement of the log backup feature. Valid values:
         /// 
-        /// - True: Yes
-        /// - False: no
+        /// *   **True**
+        /// *   **False**
         /// 
-        /// > Only MySQL instances return this parameter.
+        /// >  This parameter is returned only when the instance runs MySQL. For more information, see [Configure the PITR feature](~~2666046~~).
         /// </summary>
         [NameInMap("EnablePitrProtection")]
         [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **LogInterval**: Log backups are performed every 30 minutes.
         /// *   Default value: same as the value of the **PreferredBackupPeriod** parameter.
         /// 
-        /// > The **LogBackupFrequency** parameter is supported only when the instance runs **SQL Server**.
+        /// >  This parameter is returned only when the instance runs SQL Server.
         /// </summary>
         [NameInMap("LogBackupFrequency")]
         [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// The number of days to restore at any point in time.
+        /// The number of days during which you can restore data of the instance to any point in time.
         /// </summary>
         [NameInMap("PitrRetentionPeriod")]
         [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **1**: The instance supports snapshot backups.
         /// *   **0**: The instance does not support snapshot backups.
         /// 
-        /// > This parameter is returned only when the instance runs SQL Server.
+        /// >  This parameter is returned only when the instance runs SQL Server.
         /// </summary>
         [NameInMap("SupportVolumeShadowCopy")]
         [Validation(Required=false)]

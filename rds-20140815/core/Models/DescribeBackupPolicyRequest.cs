@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **0**: Backup data is not compressed.
         /// *   **1**: Backup data is compressed by using zlib.
         /// *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
-        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
-        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
+        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.
+        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.
         /// </summary>
         [NameInMap("CompressType")]
         [Validation(Required=false)]

@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CAType { get; set; }
 
         /// <summary>
-        /// User-defined certificate. The custom certificate is in pfx format.
+        /// The custom certificate. The custom certificate is in the `PFX` format.
         /// 
-        /// - Public address: `oss-<region ID>.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
-        /// - Intranet address: `oss-<region ID>-internal.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
+        /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
+        /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PassWord { get; set; }
 
         /// <summary>
-        /// The method that is used to verify the replication permissions. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+        /// The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
         /// 
         /// *   **cert**
         /// *   **prefer**
