@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public int? HttpCode { get; set; }
+
         /// <summary>
         /// The returned message. If the request is successful, success is returned.
         /// </summary>

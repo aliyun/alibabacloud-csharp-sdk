@@ -1570,6 +1570,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
+                    [NameInMap("SourcePrometheusParameters")]
+                    [Validation(Required=false)]
+                    public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters SourcePrometheusParameters { get; set; }
+                    public class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters : TeaModel {
+                        [NameInMap("ClusterId")]
+                        [Validation(Required=false)]
+                        public string ClusterId { get; set; }
+
+                        [NameInMap("DataType")]
+                        [Validation(Required=false)]
+                        public string DataType { get; set; }
+
+                        [NameInMap("Labels")]
+                        [Validation(Required=false)]
+                        public string Labels { get; set; }
+
+                        [NameInMap("RegionId")]
+                        [Validation(Required=false)]
+                        public string RegionId { get; set; }
+
+                    }
+
                     /// <summary>
                     /// The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.
                     /// </summary>

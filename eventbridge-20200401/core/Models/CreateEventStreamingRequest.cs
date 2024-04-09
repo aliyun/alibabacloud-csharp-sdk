@@ -2181,6 +2181,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
             }
 
             /// <summary>

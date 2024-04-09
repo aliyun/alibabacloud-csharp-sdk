@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventSourceRequest : TeaModel {
+        [NameInMap("EventBusName")]
+        [Validation(Required=false)]
+        public string EventBusName { get; set; }
+
         /// <summary>
         /// The name of the event source.
         /// </summary>

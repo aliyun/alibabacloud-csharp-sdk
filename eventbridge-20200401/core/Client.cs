@@ -1324,6 +1324,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventBusName))
+            {
+                body["EventBusName"] = request.EventBusName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
@@ -1358,6 +1362,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventBusName))
+            {
+                body["EventBusName"] = request.EventBusName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
