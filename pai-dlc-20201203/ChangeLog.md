@@ -1,3 +1,9 @@
+2024-04-09 Version: 1.5.7
+- Update API CreateTensorboard: update param body.
+- Update API ListJobs: add param ResourceQuotaName.
+- Update API ListTensorboards: add param PaymentType.
+
+
 2024-03-28 Version: 1.5.6
 - Update API CreateTensorboard: update param body.
 - Update API ListTensorboards: add param PaymentType.
