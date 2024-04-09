@@ -78,9 +78,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Label { get; set; }
 
-        /// <summary>
-        /// 所属的group。
-        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
@@ -104,23 +101,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
-        /// <summary>
-        /// 服务所属的资源组名称或ID。
-        /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
-        /// <summary>
-        /// 服务名。
-        /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
-        /// <summary>
-        /// 服务运行的状态。
-        /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
@@ -133,9 +121,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ServiceUid { get; set; }
 
-        /// <summary>
-        /// 服务的类型定义。
-        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }

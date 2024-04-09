@@ -28,15 +28,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// 
         /// Valid values:
         /// 
-        /// *   LLM
+        /// *   LLM: the large language model (LLM) application
         /// 
         ///     <!-- -->
         /// 
-        ///     :
-        /// 
         ///     <!-- -->
-        /// 
-        ///     the large language model (LLM) application
         /// 
         ///     <!-- -->
         /// </summary>
@@ -52,21 +48,32 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// Additional configurations that are required for the service deployment.
+        /// The additional configurations that are required for service deployment.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// The number of instances.
+        /// The number of instances. This value must be greater than 0.
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// The service specifications.
+        /// The service specifications. Valid values:
+        /// 
+        /// *   llama\_7b_fp16
+        /// *   llama\_7b_int8
+        /// *   llama\_13b_fp16
+        /// *   llama\_7b_int8
+        /// *   chatglm\_6b_fp16
+        /// *   chatglm\_6b_int8
+        /// *   chatglm2\_6b_fp16
+        /// *   baichuan\_7b_int8
+        /// *   baichuan\_13b_fp16
+        /// *   baichuan\_7b_fp16
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to isolate the service instance.
+        /// Specifies whether to isolate the service instance. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Isolate")]
         [Validation(Required=false)]

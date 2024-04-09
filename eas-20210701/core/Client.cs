@@ -55,6 +55,66 @@ namespace AlibabaCloud.SDK.Eas20210701
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CloneServiceResponse CloneServiceWithOptions(string ClusterId, string ServiceName, CloneServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloneService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/clone",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloneServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CloneServiceResponse> CloneServiceWithOptionsAsync(string ClusterId, string ServiceName, CloneServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloneService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/clone",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloneServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CloneServiceResponse CloneService(string ClusterId, string ServiceName, CloneServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CloneServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        public async Task<CloneServiceResponse> CloneServiceAsync(string ClusterId, string ServiceName, CloneServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CloneServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
         public CommitServiceResponse CommitServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -485,6 +545,14 @@ namespace AlibabaCloud.SDK.Eas20210701
             return await CreateGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+          *
+          * @param request CreateResourceRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateResourceResponse
+         */
         public CreateResourceResponse CreateResourceWithOptions(CreateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -541,6 +609,14 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<CreateResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+          *
+          * @param request CreateResourceRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateResourceResponse
+         */
         public async Task<CreateResourceResponse> CreateResourceWithOptionsAsync(CreateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -597,6 +673,12 @@ namespace AlibabaCloud.SDK.Eas20210701
             return TeaModel.ToObject<CreateResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+          *
+          * @param request CreateResourceRequest
+          * @return CreateResourceResponse
+         */
         public CreateResourceResponse CreateResource(CreateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -604,6 +686,12 @@ namespace AlibabaCloud.SDK.Eas20210701
             return CreateResourceWithOptions(request, headers, runtime);
         }
 
+        /**
+          * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+          *
+          * @param request CreateResourceRequest
+          * @return CreateResourceResponse
+         */
         public async Task<CreateResourceResponse> CreateResourceAsync(CreateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

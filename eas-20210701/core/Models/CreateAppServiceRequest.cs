@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// Additional configurations that are required for the service deployment.
+        /// The additional configurations that are required for service deployment.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -69,7 +69,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The service specifications.
+        /// The service specifications. Valid values:
+        /// 
+        /// *   llama\_7b_fp16
+        /// *   llama\_7b_int8
+        /// *   llama\_13b_fp16
+        /// *   llama\_7b_int8
+        /// *   chatglm\_6b_fp16
+        /// *   chatglm\_6b_int8
+        /// *   chatglm2\_6b_fp16
+        /// *   baichuan\_7b_int8
+        /// *   baichuan\_13b_fp16
+        /// *   baichuan\_7b_fp16
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]

@@ -15,6 +15,32 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// *   all: locks all operations.
         /// *   dangerous: locks high-risk operations such as delete and stop operations.
         /// *   none: locks no operations.
+        /// 
+        /// Enumerated values:
+        /// 
+        /// *   all
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   dangerous
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   none
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("Lock")]
         [Validation(Required=false)]
