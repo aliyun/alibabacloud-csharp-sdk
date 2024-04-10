@@ -1,3 +1,6 @@
+2024-04-10 Version: 2.5.2
+- Generated csharp 2020-06-29 for alinlp.
+
 2024-04-10 Version: 2.5.1
 - Update API PostMSSearchEnhance: add param MinScore.
 
