@@ -614,6 +614,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CloudIpList))
+            {
+                request.CloudIpListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CloudIpList, "CloudIpList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
             {
                 request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
@@ -630,6 +634,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIp))
             {
                 query["CloudIp"] = request.CloudIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIpListShrink))
+            {
+                query["CloudIpList"] = request.CloudIpListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIsp))
             {
@@ -727,6 +735,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CloudIpList))
+            {
+                request.CloudIpListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CloudIpList, "CloudIpList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
             {
                 request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
@@ -743,6 +755,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIp))
             {
                 query["CloudIp"] = request.CloudIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIpListShrink))
+            {
+                query["CloudIpList"] = request.CloudIpListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIsp))
             {

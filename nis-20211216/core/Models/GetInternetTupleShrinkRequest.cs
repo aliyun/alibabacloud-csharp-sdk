@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string CloudIp { get; set; }
 
         /// <summary>
+        /// The local IP addresses for filtering.
+        /// </summary>
+        [NameInMap("CloudIpList")]
+        [Validation(Required=false)]
+        public string CloudIpListShrink { get; set; }
+
+        /// <summary>
         /// The local Internet service provider (ISP).
         /// 
         /// >  In most cases, the value is Alibaba or Alibaba Cloud.
