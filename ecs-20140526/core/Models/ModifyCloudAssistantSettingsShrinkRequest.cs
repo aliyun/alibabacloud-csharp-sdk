@@ -1,0 +1,68 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Ecs20140526.Models
+{
+    public class ModifyCloudAssistantSettingsShrinkRequest : TeaModel {
+        /// <summary>
+        /// 云助手Agent升级配置。
+        /// </summary>
+        [NameInMap("AgentUpgradeConfig")]
+        [Validation(Required=false)]
+        public string AgentUpgradeConfigShrink { get; set; }
+
+        /// <summary>
+        /// The configurations for delivering records to Object Storage Service (OSS).
+        /// </summary>
+        [NameInMap("OssDeliveryConfig")]
+        [Validation(Required=false)]
+        public string OssDeliveryConfigShrink { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// The region ID.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// The Cloud Assistant feature. Valid values:
+        /// 
+        /// *   SessionManagerDelivery: the Session Record Delivery feature
+        /// *   InvocationDelivery: the Operation Content and Result Delivery feature
+        /// </summary>
+        [NameInMap("SettingType")]
+        [Validation(Required=false)]
+        public string SettingType { get; set; }
+
+        /// <summary>
+        /// The configurations for delivering records to Simple Log Service.
+        /// </summary>
+        [NameInMap("SlsDeliveryConfig")]
+        [Validation(Required=false)]
+        public string SlsDeliveryConfigShrink { get; set; }
+
+    }
+
+}
