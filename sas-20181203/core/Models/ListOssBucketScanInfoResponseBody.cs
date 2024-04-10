@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ConfigStatus { get; set; }
 
+            [NameInMap("DecompressStatus")]
+            [Validation(Required=false)]
+            public int? DecompressStatus { get; set; }
+
             /// <summary>
             /// The number of high-risk objects.
             /// </summary>

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ParentEventId")]
+        [Validation(Required=false)]
+        public long? ParentEventId { get; set; }
+
         /// <summary>
         /// The risk level of the alert. Valid values:
         /// 

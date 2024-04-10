@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
+            [NameInMap("HasSubEvent")]
+            [Validation(Required=false)]
+            public bool? HasSubEvent { get; set; }
+
             /// <summary>
             /// The timestamp at which the alert was last detected.
             /// </summary>

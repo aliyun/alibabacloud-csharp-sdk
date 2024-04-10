@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
+        [NameInMap("IsPreBind")]
+        [Validation(Required=false)]
+        public int? IsPreBind { get; set; }
+
         /// <summary>
         /// The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
         /// 
@@ -69,6 +73,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("LogicalExp")]
         [Validation(Required=false)]
         public string LogicalExp { get; set; }
+
+        [NameInMap("NtmVersion")]
+        [Validation(Required=false)]
+        public string NtmVersion { get; set; }
+
+        [NameInMap("PreBindOrderId")]
+        [Validation(Required=false)]
+        public long? PreBindOrderId { get; set; }
 
         /// <summary>
         /// The UUIDs of the servers that you want to unbind from Security Center.

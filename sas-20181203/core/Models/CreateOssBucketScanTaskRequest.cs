@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> BucketNameList { get; set; }
 
+        [NameInMap("DecompressMaxFileCount")]
+        [Validation(Required=false)]
+        public int? DecompressMaxFileCount { get; set; }
+
+        [NameInMap("DecompressMaxLayer")]
+        [Validation(Required=false)]
+        public int? DecompressMaxLayer { get; set; }
+
         /// <summary>
         /// The suffixes of the objects that you do not want to check.
         /// </summary>
