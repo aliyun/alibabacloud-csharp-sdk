@@ -25,6 +25,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public GetArtifactBuildRuleResponseBodyParameters Parameters { get; set; }
+        public class GetArtifactBuildRuleResponseBodyParameters : TeaModel {
+            [NameInMap("ImageIndexOnly")]
+            [Validation(Required=false)]
+            public bool? ImageIndexOnly { get; set; }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
