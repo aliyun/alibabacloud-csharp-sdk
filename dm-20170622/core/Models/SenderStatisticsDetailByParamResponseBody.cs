@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                [NameInMap("ErrorClassification")]
+                [Validation(Required=false)]
+                public string ErrorClassification { get; set; }
+
                 [NameInMap("LastUpdateTime")]
                 [Validation(Required=false)]
                 public string LastUpdateTime { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Dm20170622.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("Subject")]
+                [Validation(Required=false)]
+                public string Subject { get; set; }
 
                 [NameInMap("ToAddress")]
                 [Validation(Required=false)]
