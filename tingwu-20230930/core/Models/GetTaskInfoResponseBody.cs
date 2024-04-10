@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public string Summarization { get; set; }
 
+                [NameInMap("TextPolish")]
+                [Validation(Required=false)]
+                public string TextPolish { get; set; }
+
                 [NameInMap("Transcription")]
                 [Validation(Required=false)]
                 public string Transcription { get; set; }
