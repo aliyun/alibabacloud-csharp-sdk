@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public string Filters { get; set; }
 
+        [NameInMap("MinScore")]
+        [Validation(Required=false)]
+        public double? MinScore { get; set; }
+
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }

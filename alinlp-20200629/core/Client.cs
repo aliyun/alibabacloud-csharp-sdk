@@ -5389,6 +5389,10 @@ namespace AlibabaCloud.SDK.Alinlp20200629
             {
                 body["Filters"] = request.Filters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinScore))
+            {
+                body["MinScore"] = request.MinScore;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 body["Page"] = request.Page;
@@ -5481,6 +5485,10 @@ namespace AlibabaCloud.SDK.Alinlp20200629
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
             {
                 body["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinScore))
+            {
+                body["MinScore"] = request.MinScore;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
