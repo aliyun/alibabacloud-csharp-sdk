@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
     }
 
 }

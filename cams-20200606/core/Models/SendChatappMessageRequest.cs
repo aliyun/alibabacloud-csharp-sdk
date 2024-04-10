@@ -80,6 +80,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
+        /// <summary>
+        /// Specifies the period of time after which the fallback Short Message Service (SMS) message is sent if the message receipt that indicates the message is delivered to customers is not received. If this parameter is left empty, the fallback SMS message is sent only when the **message fails to be sent** or **the message receipt that indicates the message is not delivered to customers** is received. Valid values: 60 to 43200. Unit: seconds.
+        /// </summary>
         [NameInMap("FallBackDuration")]
         [Validation(Required=false)]
         public int? FallBackDuration { get; set; }
@@ -91,18 +94,39 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackId { get; set; }
 
+        /// <summary>
+        /// 回落规则。
+        /// 
+        /// > 取值范围
+        /// > - undelivered  消息不能发送到端时回落（在发送状态时模板、参数需要校验通过，模板被封、号码被封等不做校验）。参数值为空时默认使用此规则
+        /// > - sentFailed  消息在校验模板、模板变量等参数时，校验不通过也会回落。只会强校验channelType, type, messageType, to, from(是否存在) 几个参数。
+        /// 
+        /// <props="china">
+        /// 
+        /// > 中国站此字段无效
+        /// </props>
+        /// </summary>
         [NameInMap("FallBackRule")]
         [Validation(Required=false)]
         public string FallBackRule { get; set; }
 
+        /// <summary>
+        /// Flow发送数据
+        /// </summary>
         [NameInMap("FlowAction")]
         [Validation(Required=false)]
         public SendChatappMessageRequestFlowAction FlowAction { get; set; }
         public class SendChatappMessageRequestFlowAction : TeaModel {
+            /// <summary>
+            /// flow默认参数
+            /// </summary>
             [NameInMap("FlowActionData")]
             [Validation(Required=false)]
             public Dictionary<string, string> FlowActionData { get; set; }
 
+            /// <summary>
+            /// flow token信息
+            /// </summary>
             [NameInMap("FlowToken")]
             [Validation(Required=false)]
             public string FlowToken { get; set; }
@@ -248,6 +272,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
         /// <summary>
         /// The variables of the message template.

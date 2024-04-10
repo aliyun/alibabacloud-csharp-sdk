@@ -17,10 +17,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
-        /// 
-        /// *   A value of OK indicates that the call is successful.
-        /// *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+        /// The value OK indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -34,28 +31,36 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<GetChatappTemplateMetricResponseBodyData> Data { get; set; }
         public class GetChatappTemplateMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// Click Statistics
+            /// The statistics on button clicks.
             /// </summary>
             [NameInMap("Cliented")]
             [Validation(Required=false)]
             public List<GetChatappTemplateMetricResponseBodyDataCliented> Cliented { get; set; }
             public class GetChatappTemplateMetricResponseBodyDataCliented : TeaModel {
                 /// <summary>
-                /// Button name
+                /// The text on the button.
                 /// </summary>
                 [NameInMap("ButtonContent")]
                 [Validation(Required=false)]
                 public string ButtonContent { get; set; }
 
                 /// <summary>
-                /// Clicked count
+                /// The number of clicks.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The type of button.
+                /// The button type.
+                /// 
+                /// >  Valid values:
+                /// 
+                /// *   url_button
+                /// 
+                /// *   quick_relpy_button
+                /// 
+                /// *   phone_number_button
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -64,49 +69,49 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
-            /// Delivered count
+            /// The number of delivered messages.
             /// </summary>
             [NameInMap("DeliveredCount")]
             [Validation(Required=false)]
             public int? DeliveredCount { get; set; }
 
             /// <summary>
-            /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The end of the time range you queried.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public long? End { get; set; }
 
             /// <summary>
-            /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+            /// The template language.
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
             /// <summary>
-            /// Read count
+            /// The number of read messages.
             /// </summary>
             [NameInMap("ReadCount")]
             [Validation(Required=false)]
             public int? ReadCount { get; set; }
 
             /// <summary>
-            /// Sent count
+            /// The number of sent messages.
             /// </summary>
             [NameInMap("SentCount")]
             [Validation(Required=false)]
             public int? SentCount { get; set; }
 
             /// <summary>
-            /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The beginning of the time range you queried.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
             public long? Start { get; set; }
 
             /// <summary>
-            /// The code of the message template.
+            /// The template code.
             /// </summary>
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]
@@ -115,14 +120,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

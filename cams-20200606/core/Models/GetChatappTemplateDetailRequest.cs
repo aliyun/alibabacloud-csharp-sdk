@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user under the ISV account.
+        /// The space ID of the user within the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatsApp account that you registered.
+        /// The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+        /// 
+        /// >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -44,6 +46,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
         /// <summary>
         /// The type of the message template. Valid values:

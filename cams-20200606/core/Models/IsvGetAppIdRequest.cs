@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class IsvGetAppIdRequest : TeaModel {
+        /// <summary>
+        /// 权限
+        /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string Permissions { get; set; }

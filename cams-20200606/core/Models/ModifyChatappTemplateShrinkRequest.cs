@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The components of the message template.
         /// 
-        /// > If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty and text in the body or footer is automatically generated.
+        /// >  If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty and text in the body or footer is automatically generated.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
         /// <summary>
         /// The type of the message template.

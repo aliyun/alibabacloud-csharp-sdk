@@ -9,37 +9,52 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowPreviewUrlResponseBody : TeaModel {
+        /// <summary>
+        /// If OK is returned, the request was successful.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFlowPreviewUrlResponseBodyData Data { get; set; }
         public class GetFlowPreviewUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// flow ID。
+            /// The Flow ID.
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
+            /// <summary>
+            /// The temporary preview URL.
+            /// </summary>
             [NameInMap("PreviewUrl")]
             [Validation(Required=false)]
             public string PreviewUrl { get; set; }
 
+            /// <summary>
+            /// The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// </summary>
             [NameInMap("PreviewUrlExpires")]
             [Validation(Required=false)]
             public long? PreviewUrlExpires { get; set; }
 
         }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

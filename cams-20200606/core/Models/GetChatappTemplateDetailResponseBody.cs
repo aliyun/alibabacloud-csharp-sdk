@@ -75,67 +75,70 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<GetChatappTemplateDetailResponseBodyDataComponents> Components { get; set; }
             public class GetChatappTemplateDetailResponseBodyDataComponents : TeaModel {
                 /// <summary>
-                /// Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
+                /// The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY in a WhatsApp message template.
                 /// </summary>
                 [NameInMap("AddSecretRecommendation")]
                 [Validation(Required=false)]
                 public bool? AddSecretRecommendation { get; set; }
 
                 /// <summary>
-                /// This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
+                /// The buttons. Specify this parameter only if you set the Type sub-parameter of the Components parameter to **BUTTONS**. Before you specify this parameter, the format of the value must be changed from JSON to String.
                 /// </summary>
                 [NameInMap("Buttons")]
                 [Validation(Required=false)]
                 public List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> Buttons { get; set; }
                 public class GetChatappTemplateDetailResponseBodyDataComponentsButtons : TeaModel {
                     /// <summary>
-                    /// Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，Whatsap Autofill操作的按钮文本
+                    /// The text of the one-tap autofill button. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                     /// </summary>
                     [NameInMap("AutofillText")]
                     [Validation(Required=false)]
                     public string AutofillText { get; set; }
 
+                    /// <summary>
+                    /// The coupon code.
+                    /// </summary>
                     [NameInMap("CouponCode")]
                     [Validation(Required=false)]
                     public string CouponCode { get; set; }
 
                     /// <summary>
-                    /// 扩展字段
+                    /// The extended fields.
                     /// </summary>
                     [NameInMap("ExtendAttrs")]
                     [Validation(Required=false)]
                     public GetChatappTemplateDetailResponseBodyDataComponentsButtonsExtendAttrs ExtendAttrs { get; set; }
                     public class GetChatappTemplateDetailResponseBodyDataComponentsButtonsExtendAttrs : TeaModel {
                         /// <summary>
-                        /// 事件类型
+                        /// The event type.
                         /// </summary>
                         [NameInMap("Action")]
                         [Validation(Required=false)]
                         public string Action { get; set; }
 
                         /// <summary>
-                        /// 意图编码
+                        /// The intent code.
                         /// </summary>
                         [NameInMap("IntentCode")]
                         [Validation(Required=false)]
                         public string IntentCode { get; set; }
 
                         /// <summary>
-                        /// 下一个模板语言
+                        /// The language of the next template.
                         /// </summary>
                         [NameInMap("NextLanguageCode")]
                         [Validation(Required=false)]
                         public string NextLanguageCode { get; set; }
 
                         /// <summary>
-                        /// 下一个模板编码
+                        /// The code of the next template.
                         /// </summary>
                         [NameInMap("NextTemplateCode")]
                         [Validation(Required=false)]
                         public string NextTemplateCode { get; set; }
 
                         /// <summary>
-                        /// 下一个模板名称
+                        /// The name of the next template.
                         /// </summary>
                         [NameInMap("NextTemplateName")]
                         [Validation(Required=false)]
@@ -143,41 +146,52 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                     }
 
+                    /// <summary>
+                    /// flow 数据事件类型
+                    /// 取值范围：NAVIGATE/DATA_EXCHANGE
+                    /// </summary>
                     [NameInMap("FlowAction")]
                     [Validation(Required=false)]
                     public string FlowAction { get; set; }
 
+                    /// <summary>
+                    /// Flow ID
+                    /// </summary>
                     [NameInMap("FlowId")]
                     [Validation(Required=false)]
                     public string FlowId { get; set; }
 
                     /// <summary>
-                    /// Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
+                    /// The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
                     /// </summary>
                     [NameInMap("IsOptOut")]
                     [Validation(Required=false)]
                     public bool? IsOptOut { get; set; }
 
+                    /// <summary>
+                    /// 跳转屏 
+                    /// 在FlowAction=NAVIGATE时必填
+                    /// </summary>
                     [NameInMap("NavigateScreen")]
                     [Validation(Required=false)]
                     public string NavigateScreen { get; set; }
 
                     /// <summary>
-                    /// Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名
+                    /// The app package name that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                     /// </summary>
                     [NameInMap("PackageName")]
                     [Validation(Required=false)]
                     public string PackageName { get; set; }
 
                     /// <summary>
-                    /// The phone number. This parameter is valid only if the returned value of the Type parameter is **PHONE_NUMBER**.
+                    /// The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.
                     /// </summary>
                     [NameInMap("PhoneNumber")]
                     [Validation(Required=false)]
                     public string PhoneNumber { get; set; }
 
                     /// <summary>
-                    /// Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的签名Hash值
+                    /// The app signing key hash that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.
                     /// </summary>
                     [NameInMap("SignatureHash")]
                     [Validation(Required=false)]
@@ -193,24 +207,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <summary>
                     /// The type of the button. Valid values:
                     /// 
-                    /// *   **PHONE_NUMBER**: a phone call button
-                    /// *   **URL**: a URL button
-                    /// *   **QUICK_REPLY**: a quick reply button
+                    /// *   **PHONE_NUMBER**: phone call button
+                    /// *   **URL**: URL button
+                    /// *   **QUICK_REPLY**: quick reply button
                     /// 
                     /// > 
                     /// 
-                    /// *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+                    /// *   In a message template, a quick reply button cannot be used together with a phone call button or a URL button.
                     /// 
                     /// *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
                     /// 
-                    /// *   You can add only one button to a Viber message template, and the button must be a URL button.
+                    /// *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// The URL to be accessed when you click the URL button.
+                    /// The URL to which you are redirected when you click the URL button.
                     /// </summary>
                     [NameInMap("Url")]
                     [Validation(Required=false)]
@@ -219,8 +233,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <summary>
                     /// The type of the URL. Valid values:
                     /// 
-                    /// *   **static**: a static URL
-                    /// *   **dynamic**: a dynamic URL
+                    /// *   **static**
+                    /// *   **dynamic**
                     /// </summary>
                     [NameInMap("UrlType")]
                     [Validation(Required=false)]
@@ -229,58 +243,94 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
-                /// The description of the file.
+                /// The description of the document.
                 /// </summary>
                 [NameInMap("Caption")]
                 [Validation(Required=false)]
                 public string Caption { get; set; }
 
+                /// <summary>
+                /// The carousel cards.
+                /// </summary>
                 [NameInMap("Cards")]
                 [Validation(Required=false)]
                 public List<GetChatappTemplateDetailResponseBodyDataComponentsCards> Cards { get; set; }
                 public class GetChatappTemplateDetailResponseBodyDataComponentsCards : TeaModel {
+                    /// <summary>
+                    /// The card components.
+                    /// </summary>
                     [NameInMap("CardComponents")]
                     [Validation(Required=false)]
                     public List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents> CardComponents { get; set; }
                     public class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents : TeaModel {
+                        /// <summary>
+                        /// The card buttons.
+                        /// </summary>
                         [NameInMap("Buttons")]
                         [Validation(Required=false)]
                         public List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> Buttons { get; set; }
                         public class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons : TeaModel {
+                            /// <summary>
+                            /// The phone number.
+                            /// </summary>
                             [NameInMap("PhoneNumber")]
                             [Validation(Required=false)]
                             public string PhoneNumber { get; set; }
 
+                            /// <summary>
+                            /// The button content.
+                            /// </summary>
                             [NameInMap("Text")]
                             [Validation(Required=false)]
                             public string Text { get; set; }
 
+                            /// <summary>
+                            /// The type of the button in the carousel template. Valid values: URL, PHONE_NUMBER, and QUICK_REQLY.
+                            /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
 
+                            /// <summary>
+                            /// The URL to be accessed when you click the URL button.
+                            /// </summary>
                             [NameInMap("Url")]
                             [Validation(Required=false)]
                             public string Url { get; set; }
 
+                            /// <summary>
+                            /// The type of the URL. Valid values: static and dynamic.
+                            /// </summary>
                             [NameInMap("UrlType")]
                             [Validation(Required=false)]
                             public string UrlType { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// The type of the header in the carousel template. The header can only be an image or a video. The headers of all cards must be the same.
+                        /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
                         public string Format { get; set; }
 
+                        /// <summary>
+                        /// The card text.
+                        /// </summary>
                         [NameInMap("Text")]
                         [Validation(Required=false)]
                         public string Text { get; set; }
 
+                        /// <summary>
+                        /// The type of the component.
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
+                        /// <summary>
+                        /// The URL address.
+                        /// </summary>
                         [NameInMap("Url")]
                         [Validation(Required=false)]
                         public string Url { get; set; }
@@ -290,7 +340,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
-                /// Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
+                /// The validity period of the verification code in the WhatsApp authentication template. Unit: minutes. This parameter is valid only when Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to FOOTER in a WhatsApp message template. The validity period of the verification code is displayed in the footer.
                 /// </summary>
                 [NameInMap("CodeExpirationMinutes")]
                 [Validation(Required=false)]
@@ -304,54 +354,57 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The name of the file.
+                /// The name of the document.
                 /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// The type of the file attached in the Viber message template.
+                /// The type of the document attached in the Viber message template.
                 /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
                 public string FileType { get; set; }
 
                 /// <summary>
-                /// The type of the media resources that are included in the message.
+                /// The format.
                 /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
 
                 /// <summary>
-                /// 位置纬度属性
+                /// The latitude of the location.
                 /// </summary>
                 [NameInMap("Latitude")]
                 [Validation(Required=false)]
                 public string Latitude { get; set; }
 
                 /// <summary>
-                /// 位置地址
+                /// The address of the location.
                 /// </summary>
                 [NameInMap("LocationAddress")]
                 [Validation(Required=false)]
                 public string LocationAddress { get; set; }
 
                 /// <summary>
-                /// 位置名称
+                /// The name of the location.
                 /// </summary>
                 [NameInMap("LocationName")]
                 [Validation(Required=false)]
                 public string LocationName { get; set; }
 
                 /// <summary>
-                /// 位置经度属性
+                /// The longitude of the location.
                 /// </summary>
                 [NameInMap("Longitude")]
                 [Validation(Required=false)]
                 public string Longitude { get; set; }
 
+                /// <summary>
+                /// The variable when the coupon code expires in the limited-time offer template.
+                /// </summary>
                 [NameInMap("OfferExpirationTimeMs")]
                 [Validation(Required=false)]
                 public string OfferExpirationTimeMs { get; set; }
@@ -380,27 +433,26 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// 
                 /// > 
                 /// 
-                /// *   The following limits apply to components in WhatsApp message templates: A component of the **BODY** type cannot exceed 1,024 characters. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
-                /// 
-                /// > 
+                /// *   The following limits apply to components in WhatsApp message templates: A **BODY** component cannot exceed 1,024 characters in length. A **HEADER** or **FOOTER** component cannot exceed 60 characters in length.
                 /// 
                 /// *   **FOOTER** components are not supported in Viber message templates.
                 /// 
-                /// > 
-                /// 
-                /// *   In a Viber message template, a media resource, such as an image, a video, or a file, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
+                /// *   In a Viber message template, media resources such as images, videos, and documents are placed in the **HEADER** component. If a Viber message contains both text and an image, the image is placed below the text in the message received on a device.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The URL of the material.
+                /// The URL of the media resource.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
 
+                /// <summary>
+                /// Indicates whether the coupon code will expire in the limited-time offer template.
+                /// </summary>
                 [NameInMap("hasExpiration")]
                 [Validation(Required=false)]
                 public bool? HasExpiration { get; set; }
@@ -422,7 +474,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// Whatsapp中Authentication类型模板发送消息时的消息有效期
+            /// The validity period of the WhatsApp authentication message.
             /// </summary>
             [NameInMap("MessageSendTtlSeconds")]
             [Validation(Required=false)]
@@ -436,12 +488,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// 模板质量
+            /// The quality of the template.
             /// </summary>
             [NameInMap("QualityScore")]
             [Validation(Required=false)]
             public string QualityScore { get; set; }
 
+            /// <summary>
+            /// The reason why the template was rejected.
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }

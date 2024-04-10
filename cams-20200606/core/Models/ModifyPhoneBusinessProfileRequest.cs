@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyPhoneBusinessProfileRequest : TeaModel {
+        [NameInMap("About")]
+        [Validation(Required=false)]
+        public string About { get; set; }
+
         /// <summary>
         /// The space ID of the user under the independent software vendor (ISV) account.
         /// </summary>

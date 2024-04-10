@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddChatappPhoneNumberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddChatappPhoneNumberResponse
+         */
         public AddChatappPhoneNumberResponse AddChatappPhoneNumberWithOptions(AddChatappPhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -80,6 +87,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<AddChatappPhoneNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddChatappPhoneNumberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddChatappPhoneNumberResponse
+         */
         public async Task<AddChatappPhoneNumberResponse> AddChatappPhoneNumberWithOptionsAsync(AddChatappPhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -123,12 +137,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<AddChatappPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddChatappPhoneNumberRequest
+          * @return AddChatappPhoneNumberResponse
+         */
         public AddChatappPhoneNumberResponse AddChatappPhoneNumber(AddChatappPhoneNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddChatappPhoneNumberWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request AddChatappPhoneNumberRequest
+          * @return AddChatappPhoneNumberResponse
+         */
         public async Task<AddChatappPhoneNumberResponse> AddChatappPhoneNumberAsync(AddChatappPhoneNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -871,6 +897,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ChatappMigrationVerifiedWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ChatappPhoneNumberDeregisterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChatappPhoneNumberDeregisterResponse
+         */
         public ChatappPhoneNumberDeregisterResponse ChatappPhoneNumberDeregisterWithOptions(ChatappPhoneNumberDeregisterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -902,6 +935,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ChatappPhoneNumberDeregisterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ChatappPhoneNumberDeregisterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChatappPhoneNumberDeregisterResponse
+         */
         public async Task<ChatappPhoneNumberDeregisterResponse> ChatappPhoneNumberDeregisterWithOptionsAsync(ChatappPhoneNumberDeregisterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -933,12 +973,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ChatappPhoneNumberDeregisterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ChatappPhoneNumberDeregisterRequest
+          * @return ChatappPhoneNumberDeregisterResponse
+         */
         public ChatappPhoneNumberDeregisterResponse ChatappPhoneNumberDeregister(ChatappPhoneNumberDeregisterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChatappPhoneNumberDeregisterWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ChatappPhoneNumberDeregisterRequest
+          * @return ChatappPhoneNumberDeregisterResponse
+         */
         public async Task<ChatappPhoneNumberDeregisterResponse> ChatappPhoneNumberDeregisterAsync(ChatappPhoneNumberDeregisterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1545,6 +1597,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await CreateChatappTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq CreateFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFlowResponse
+         */
         public CreateFlowResponse CreateFlowWithOptions(CreateFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1586,6 +1645,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<CreateFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq CreateFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFlowResponse
+         */
         public async Task<CreateFlowResponse> CreateFlowWithOptionsAsync(CreateFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1627,12 +1693,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<CreateFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateFlowRequest
+          * @return CreateFlowResponse
+         */
         public CreateFlowResponse CreateFlow(CreateFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateFlowRequest
+          * @return CreateFlowResponse
+         */
         public async Task<CreateFlowResponse> CreateFlowAsync(CreateFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1753,9 +1831,21 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["IsvCode"] = request.IsvCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1800,9 +1890,21 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["IsvCode"] = request.IsvCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1849,6 +1951,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await DeleteChatappTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteFlowResponse
+         */
         public DeleteFlowResponse DeleteFlowWithOptions(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1880,6 +1989,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<DeleteFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteFlowResponse
+         */
         public async Task<DeleteFlowResponse> DeleteFlowWithOptionsAsync(DeleteFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1911,12 +2027,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<DeleteFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteFlowRequest
+          * @return DeleteFlowResponse
+         */
         public DeleteFlowResponse DeleteFlow(DeleteFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request DeleteFlowRequest
+          * @return DeleteFlowResponse
+         */
         public async Task<DeleteFlowResponse> DeleteFlowAsync(DeleteFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2079,6 +2207,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await DeprecateFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request EnableWhatsappROIMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableWhatsappROIMetricResponse
+         */
         public EnableWhatsappROIMetricResponse EnableWhatsappROIMetricWithOptions(EnableWhatsappROIMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2110,6 +2245,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<EnableWhatsappROIMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request EnableWhatsappROIMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableWhatsappROIMetricResponse
+         */
         public async Task<EnableWhatsappROIMetricResponse> EnableWhatsappROIMetricWithOptionsAsync(EnableWhatsappROIMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2141,18 +2283,37 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<EnableWhatsappROIMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request EnableWhatsappROIMetricRequest
+          * @return EnableWhatsappROIMetricResponse
+         */
         public EnableWhatsappROIMetricResponse EnableWhatsappROIMetric(EnableWhatsappROIMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableWhatsappROIMetricWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request EnableWhatsappROIMetricRequest
+          * @return EnableWhatsappROIMetricResponse
+         */
         public async Task<EnableWhatsappROIMetricResponse> EnableWhatsappROIMetricAsync(EnableWhatsappROIMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableWhatsappROIMetricWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappPhoneNumberMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetChatappPhoneNumberMetricResponse
+         */
         public GetChatappPhoneNumberMetricResponse GetChatappPhoneNumberMetricWithOptions(GetChatappPhoneNumberMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2200,6 +2361,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetChatappPhoneNumberMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappPhoneNumberMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetChatappPhoneNumberMetricResponse
+         */
         public async Task<GetChatappPhoneNumberMetricResponse> GetChatappPhoneNumberMetricWithOptionsAsync(GetChatappPhoneNumberMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2247,12 +2415,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetChatappPhoneNumberMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappPhoneNumberMetricRequest
+          * @return GetChatappPhoneNumberMetricResponse
+         */
         public GetChatappPhoneNumberMetricResponse GetChatappPhoneNumberMetric(GetChatappPhoneNumberMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetChatappPhoneNumberMetricWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappPhoneNumberMetricRequest
+          * @return GetChatappPhoneNumberMetricResponse
+         */
         public async Task<GetChatappPhoneNumberMetricResponse> GetChatappPhoneNumberMetricAsync(GetChatappPhoneNumberMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2290,6 +2470,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
@@ -2346,6 +2530,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["TemplateCode"] = request.TemplateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
@@ -2395,6 +2583,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetChatappTemplateDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappTemplateMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetChatappTemplateMetricResponse
+         */
         public GetChatappTemplateMetricResponse GetChatappTemplateMetricWithOptions(GetChatappTemplateMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2450,6 +2645,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetChatappTemplateMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappTemplateMetricRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetChatappTemplateMetricResponse
+         */
         public async Task<GetChatappTemplateMetricResponse> GetChatappTemplateMetricWithOptionsAsync(GetChatappTemplateMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2505,12 +2707,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetChatappTemplateMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappTemplateMetricRequest
+          * @return GetChatappTemplateMetricResponse
+         */
         public GetChatappTemplateMetricResponse GetChatappTemplateMetric(GetChatappTemplateMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetChatappTemplateMetricWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetChatappTemplateMetricRequest
+          * @return GetChatappTemplateMetricResponse
+         */
         public async Task<GetChatappTemplateMetricResponse> GetChatappTemplateMetricAsync(GetChatappTemplateMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2725,6 +2939,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetChatappVerifyCodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetCommerceSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCommerceSettingResponse
+         */
         public GetCommerceSettingResponse GetCommerceSettingWithOptions(GetCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2756,6 +2977,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetCommerceSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetCommerceSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetCommerceSettingResponse
+         */
         public async Task<GetCommerceSettingResponse> GetCommerceSettingWithOptionsAsync(GetCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2787,18 +3015,37 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetCommerceSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetCommerceSettingRequest
+          * @return GetCommerceSettingResponse
+         */
         public GetCommerceSettingResponse GetCommerceSetting(GetCommerceSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCommerceSettingWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetCommerceSettingRequest
+          * @return GetCommerceSettingResponse
+         */
         public async Task<GetCommerceSettingResponse> GetCommerceSettingAsync(GetCommerceSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCommerceSettingWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFlowResponse
+         */
         public GetFlowResponse GetFlowWithOptions(GetFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2830,6 +3077,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFlowResponse
+         */
         public async Task<GetFlowResponse> GetFlowWithOptionsAsync(GetFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2861,12 +3115,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowRequest
+          * @return GetFlowResponse
+         */
         public GetFlowResponse GetFlow(GetFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowRequest
+          * @return GetFlowResponse
+         */
         public async Task<GetFlowResponse> GetFlowAsync(GetFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2947,6 +3213,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetFlowJSONAssestWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowPreviewUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFlowPreviewUrlResponse
+         */
         public GetFlowPreviewUrlResponse GetFlowPreviewUrlWithOptions(GetFlowPreviewUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2978,6 +3251,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetFlowPreviewUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowPreviewUrlRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFlowPreviewUrlResponse
+         */
         public async Task<GetFlowPreviewUrlResponse> GetFlowPreviewUrlWithOptionsAsync(GetFlowPreviewUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3009,12 +3289,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetFlowPreviewUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowPreviewUrlRequest
+          * @return GetFlowPreviewUrlResponse
+         */
         public GetFlowPreviewUrlResponse GetFlowPreviewUrl(GetFlowPreviewUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFlowPreviewUrlWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetFlowPreviewUrlRequest
+          * @return GetFlowPreviewUrlResponse
+         */
         public async Task<GetFlowPreviewUrlResponse> GetFlowPreviewUrlAsync(GetFlowPreviewUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3405,6 +3697,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await GetPhoneNumberVerificationStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetPreValidatePhoneIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPreValidatePhoneIdResponse
+         */
         public GetPreValidatePhoneIdResponse GetPreValidatePhoneIdWithOptions(GetPreValidatePhoneIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3436,6 +3735,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetPreValidatePhoneIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetPreValidatePhoneIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPreValidatePhoneIdResponse
+         */
         public async Task<GetPreValidatePhoneIdResponse> GetPreValidatePhoneIdWithOptionsAsync(GetPreValidatePhoneIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3467,12 +3773,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<GetPreValidatePhoneIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetPreValidatePhoneIdRequest
+          * @return GetPreValidatePhoneIdResponse
+         */
         public GetPreValidatePhoneIdResponse GetPreValidatePhoneId(GetPreValidatePhoneIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPreValidatePhoneIdWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request GetPreValidatePhoneIdRequest
+          * @return GetPreValidatePhoneIdResponse
+         */
         public async Task<GetPreValidatePhoneIdResponse> GetPreValidatePhoneIdAsync(GetPreValidatePhoneIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3867,6 +4185,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ListChatappTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq ListFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListFlowResponse
+         */
         public ListFlowResponse ListFlowWithOptions(ListFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3908,6 +4233,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq ListFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListFlowResponse
+         */
         public async Task<ListFlowResponse> ListFlowWithOptionsAsync(ListFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3949,12 +4281,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ListFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListFlowRequest
+          * @return ListFlowResponse
+         */
         public ListFlowResponse ListFlow(ListFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ListFlowRequest
+          * @return ListFlowResponse
+         */
         public async Task<ListFlowResponse> ListFlowAsync(ListFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4412,6 +4756,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["TemplateCode"] = request.TemplateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 body["TemplateType"] = request.TemplateType;
@@ -4492,6 +4840,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["TemplateCode"] = request.TemplateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 body["TemplateType"] = request.TemplateType;
@@ -4539,6 +4891,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ModifyChatappTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq ModifyFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyFlowResponse
+         */
         public ModifyFlowResponse ModifyFlowWithOptions(ModifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4584,6 +4943,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ModifyFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param tmpReq ModifyFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyFlowResponse
+         */
         public async Task<ModifyFlowResponse> ModifyFlowWithOptionsAsync(ModifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4629,12 +4995,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<ModifyFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyFlowRequest
+          * @return ModifyFlowResponse
+         */
         public ModifyFlowResponse ModifyFlow(ModifyFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request ModifyFlowRequest
+          * @return ModifyFlowResponse
+         */
         public async Task<ModifyFlowResponse> ModifyFlowAsync(ModifyFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4658,6 +5036,10 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.WebsitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Websites, "Websites", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.About))
+            {
+                query["About"] = request.About;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 query["Address"] = request.Address;
@@ -4726,6 +5108,10 @@ namespace AlibabaCloud.SDK.Cams20200606
                 request.WebsitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Websites, "Websites", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.About))
+            {
+                query["About"] = request.About;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 query["Address"] = request.Address;
@@ -4801,6 +5187,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await ModifyPhoneBusinessProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PublishFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublishFlowResponse
+         */
         public PublishFlowResponse PublishFlowWithOptions(PublishFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4832,6 +5225,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<PublishFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PublishFlowRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublishFlowResponse
+         */
         public async Task<PublishFlowResponse> PublishFlowWithOptionsAsync(PublishFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4863,12 +5263,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<PublishFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PublishFlowRequest
+          * @return PublishFlowResponse
+         */
         public PublishFlowResponse PublishFlow(PublishFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PublishFlowWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request PublishFlowRequest
+          * @return PublishFlowResponse
+         */
         public async Task<PublishFlowResponse> PublishFlowAsync(PublishFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4994,6 +5406,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["IsvCode"] = request.IsvCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5031,6 +5447,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
             {
                 query["IsvCode"] = request.IsvCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5353,6 +5773,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["TemplateCode"] = request.TemplateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
                 body["Ttl"] = request.Ttl;
@@ -5453,6 +5877,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 body["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -5613,6 +6041,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["TemplateCode"] = request.TemplateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamsShrink))
             {
                 body["TemplateParams"] = request.TemplateParamsShrink;
@@ -5762,6 +6194,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
             {
                 body["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParamsShrink))
             {
@@ -6083,6 +6519,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return await UpdateAccountWebhookWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UpdateCommerceSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateCommerceSettingResponse
+         */
         public UpdateCommerceSettingResponse UpdateCommerceSettingWithOptions(UpdateCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6122,6 +6565,13 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<UpdateCommerceSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UpdateCommerceSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateCommerceSettingResponse
+         */
         public async Task<UpdateCommerceSettingResponse> UpdateCommerceSettingWithOptionsAsync(UpdateCommerceSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6161,12 +6611,24 @@ namespace AlibabaCloud.SDK.Cams20200606
             return TeaModel.ToObject<UpdateCommerceSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UpdateCommerceSettingRequest
+          * @return UpdateCommerceSettingResponse
+         */
         public UpdateCommerceSettingResponse UpdateCommerceSetting(UpdateCommerceSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateCommerceSettingWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request UpdateCommerceSettingRequest
+          * @return UpdateCommerceSettingResponse
+         */
         public async Task<UpdateCommerceSettingResponse> UpdateCommerceSettingAsync(UpdateCommerceSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

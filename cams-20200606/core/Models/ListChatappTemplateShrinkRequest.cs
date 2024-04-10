@@ -29,7 +29,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatsApp account that you register.
+        /// The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+        /// 
+        /// >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The paging settings.
+        /// The pagination settings.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]

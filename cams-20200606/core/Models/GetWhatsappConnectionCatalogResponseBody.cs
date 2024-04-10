@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// The returned data.
         /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]

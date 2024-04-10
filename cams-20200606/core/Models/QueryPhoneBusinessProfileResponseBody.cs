@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public QueryPhoneBusinessProfileResponseBodyData Data { get; set; }
         public class QueryPhoneBusinessProfileResponseBodyData : TeaModel {
+            [NameInMap("About")]
+            [Validation(Required=false)]
+            public string About { get; set; }
+
             /// <summary>
             /// The address.
             /// </summary>

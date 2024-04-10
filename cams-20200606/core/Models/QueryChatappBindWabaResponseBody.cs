@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappBindWabaResponseBody : TeaModel {
+        /// <summary>
+        /// The details about the access denial.
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -24,14 +27,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryChatappBindWabaResponseBodyData Data { get; set; }
         public class QueryChatappBindWabaResponseBodyData : TeaModel {
             /// <summary>
-            /// The review status of the WhatsApp Business account.
+            /// The review state of the WhatsApp Business account (WABA).
+            /// 
+            /// >  Valid values:
+            /// 
+            /// *   PENDING: The WABA is to be reviewed.
+            /// 
+            /// *   APPROVED: The WABA was approved.
+            /// 
+            /// *   REJECTED: The WABA was rejected.
+            /// 
+            /// *   DISABLED: The WABA was forbidden.
             /// </summary>
             [NameInMap("AccountReviewStatus")]
             [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Before { get; set; }
 
         /// <summary>
-        /// The ID of the product catalog.
+        /// The catalog ID.
         /// </summary>
         [NameInMap("CatalogId")]
         [Validation(Required=false)]

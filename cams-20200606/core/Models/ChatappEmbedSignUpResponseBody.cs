@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappEmbedSignUpResponseBody : TeaModel {
+        /// <summary>
+        /// The details about the access denial.
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ChatappEmbedSignUpResponseBodyWabas> Wabas { get; set; }
         public class ChatappEmbedSignUpResponseBodyWabas : TeaModel {
             /// <summary>
-            /// The review status of the WhatsApp Business account.
+            /// The review state of the WABA.
             /// </summary>
             [NameInMap("AccountReviewStatus")]
             [Validation(Required=false)]
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// The ID of the WhatsApp Business account.
+            /// The ID of the WABA.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageTemplateNamespace { get; set; }
 
             /// <summary>
-            /// The name of the WhatsApp Business account.
+            /// The name of the WABA.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

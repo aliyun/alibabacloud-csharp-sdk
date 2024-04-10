@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// 访问被拒绝详细信息。
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -34,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ListChatappTemplateResponseBodyListTemplate> ListTemplate { get; set; }
         public class ListChatappTemplateResponseBodyListTemplate : TeaModel {
             /// <summary>
-            /// The review status of the message template. Valid values:
+            /// The review state of the message template. Valid values:
             /// 
             /// *   **pass**: The message template is approved.
             /// *   **fail**: The message template is rejected.
@@ -46,11 +43,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// The category of the message template. Valid values:
+            /// The category of the WhatsApp template. Valid values:
             /// 
-            /// *   **TRANSACTIONAL**: a transactional template
-            /// *   **MARKETING**: a marketing template
-            /// *   **OTP**: a one-time password template
+            /// *   **UTILITY**: utility template
+            /// *   **MARKETING**: marketing template
+            /// *   **AUTHENTICATION**: authentication template
+            /// 
+            /// The category of the Viber template. Valid values:
+            /// 
+            /// *   **text**: template that contains only text
+            /// *   **image**: template that contains only an image
+            /// *   **text_image_button**: template that contains text, an image, and a button
+            /// *   **text_button**: template that contains text and a button
+            /// *   **document**: template that contains only a document
+            /// *   **video**: template that contains only a video
+            /// *   **text_video**: template that contains text and a video
+            /// *   **text_video_button**: template that contains text, a video, and a button
+            /// *   **text_image**: template that contains text and an image
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// 模板审核被拒的原因
+            /// The reason for the review failure.
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -108,7 +117,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 总记录条数。
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

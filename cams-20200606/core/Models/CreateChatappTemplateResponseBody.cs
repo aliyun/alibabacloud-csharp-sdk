@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateResponseBody : TeaModel {
-        /// <summary>
-        /// 访问被拒绝详细信息。
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

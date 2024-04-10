@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneEncryptionPublicKeyResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UpdatePhoneEncryptionPublicKeyResponseBody Body { get; set; }
 
     }

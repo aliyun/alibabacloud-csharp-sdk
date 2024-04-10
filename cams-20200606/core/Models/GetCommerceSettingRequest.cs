@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetCommerceSettingRequest : TeaModel {
+        /// <summary>
+        /// The space ID of the user within the independent software vendor (ISV) account.
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// The phone number.
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
