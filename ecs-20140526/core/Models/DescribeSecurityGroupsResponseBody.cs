@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the security groups.
+        /// The information about the security groups.
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -60,7 +60,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// The number of private IP addresses that can be added to the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+                /// 
+                /// If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.
+                /// 
+                /// >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
                 /// </summary>
                 [NameInMap("AvailableInstanceAmount")]
                 [Validation(Required=false)]
@@ -81,7 +85,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// The number of private IP addresses that are contained in the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+                /// 
+                /// If you set IsQueryEcsCount to True, the return value of EcsCount is valid.
+                /// 
+                /// >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
                 /// </summary>
                 [NameInMap("EcsCount")]
                 [Validation(Required=false)]
@@ -95,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The security group ID.
+                /// The ID of the security group.
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
@@ -133,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? ServiceManaged { get; set; }
 
                 /// <summary>
-                /// The tags of the security groups.
+                /// The tags of the security group.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -144,14 +152,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag> Tag { get; set; }
                     public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the security group.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the security group.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

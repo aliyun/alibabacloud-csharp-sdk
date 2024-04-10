@@ -67,7 +67,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
+        /// The page number.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// 
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -75,7 +81,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
+        /// The number of entries per page.
+        /// 
+        /// Valid values: 1 to 1000.
+        /// 
+        /// Default value: 10.
+        /// 
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -197,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the ENI belongs.
+        /// The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

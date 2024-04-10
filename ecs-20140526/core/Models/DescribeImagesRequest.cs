@@ -69,9 +69,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The name of the image family. You can specify this parameter to query images of the specified image family.
+        /// The name of the image family. You can set this parameter to query images of the specified image family.
         /// 
         /// This parameter is empty by default.
+        /// 
+        /// >  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).
         /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
@@ -183,9 +185,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 100.
+        /// Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -220,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether the subscription image has expired.
         /// 
-        /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+        /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
         /// </summary>
         [NameInMap("ShowExpired")]
         [Validation(Required=false)]
@@ -234,14 +236,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The status of the image. By default, only images in the Available state are returned if you do not specify this parameter. Valid values:
+        /// The status of the image. By default, if you do not specify this parameter, only images in the Available state are returned. Valid values:
         /// 
         /// *   Creating: The image is being created.
         /// *   Waiting: The image is waiting to be processed.
         /// *   Available: The image is available.
         /// *   UnAvailable: The image is unavailable.
-        /// *   CreateFailed: The image cannot be created.
-        /// *   Deprecated: The image is deprecated.
+        /// *   CreateFailed: The image fails to be created.
+        /// *   Deprecated: The image is no longer used.
         /// 
         /// Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).
         /// </summary>

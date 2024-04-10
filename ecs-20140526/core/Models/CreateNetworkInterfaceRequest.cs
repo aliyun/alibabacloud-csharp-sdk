@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// IPv4 prefix N to assign to the ENI. Valid values of N: 1 to 10.
+        /// IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.
         /// 
         /// >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
         /// </summary>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// IPv4 prefix N to assign to the ENI. Valid values: 1 to 10.
+        /// The number of IPv4 prefixes to assign to the ENI. Valid values: 1 to 10.
         /// 
         /// >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
         /// </summary>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv4PrefixCount { get; set; }
 
         /// <summary>
-        /// IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
+        /// IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
         /// 
         /// Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
         /// 
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// IPv6 prefix N to assign to the ENI. Valid values of N: 1 to 10.
+        /// IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.
         /// 
         /// >  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.
         /// </summary>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// IPv6 prefix N to assign to the ENI. Valid values: 1 to 10.
+        /// The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.
         /// 
         /// >  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.
         /// </summary>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6PrefixCount { get; set; }
 
         /// <summary>
-        /// The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the ENI. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
         /// 
         /// This parameter is empty by default.
         /// </summary>
@@ -115,12 +115,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// The communication model of the ENI. Valid values:
+        /// The communication mode of the ENI. Valid values:
         /// 
         /// *   Standard: uses the TCP communication mode.
         /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
         /// 
-        /// >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance. The number of ERIs on a c7re instance cannot exceed the maximum number of ERIs that the instance type supports. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).
+        /// >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance. The maximum number of ENIs in RDMA mode that can be attached to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).
         /// 
         /// Default value: Standard.
         /// </summary>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrimaryIpAddress { get; set; }
 
         /// <summary>
-        /// Secondary private IP address N to assign to the ENI. This IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
+        /// Secondary private IP addresses to assign to the ENI. The IP addresses must be idle IP addresses in the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
         /// 
         /// >  To assign secondary private IP addresses to the ENI, you can specify the `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` parameter, but not both.
         /// </summary>

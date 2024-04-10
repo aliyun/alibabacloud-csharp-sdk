@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateVersionRequest : TeaModel {
         /// <summary>
-        /// The version numbers of instance launch templates that to be deleted. You can specify at most 29 version numbers.
+        /// The version numbers of the launch template.
         /// </summary>
         [NameInMap("DeleteVersion")]
         [Validation(Required=false)]
         public List<long?> DeleteVersion { get; set; }
 
         /// <summary>
-        /// The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
+        /// The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// The name of the instance launch template.
+        /// The name of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the instance lauch template belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

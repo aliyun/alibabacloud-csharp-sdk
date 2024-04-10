@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateResponseBody : TeaModel {
         /// <summary>
-        /// 启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。
+        /// The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
         /// 
-        /// 使用启动模板创建实例时，您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。
+        /// You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
+        /// <summary>
+        /// The versions of the deleted launch template.
+        /// </summary>
         [NameInMap("LaunchTemplateVersionNumbers")]
         [Validation(Required=false)]
         public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers LaunchTemplateVersionNumbers { get; set; }
@@ -29,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

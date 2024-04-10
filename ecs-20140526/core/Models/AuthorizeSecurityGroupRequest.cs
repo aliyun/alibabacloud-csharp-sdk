@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.Description` to specify the description of security group rule N.
+        /// This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+        /// This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+        /// This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+        /// This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
         /// </summary>
         [NameInMap("Ipv6DestCidrIp")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+        /// This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
         /// </summary>
         [NameInMap("Ipv6SourceCidrIp")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.NicType` to specify the network interface type.
+        /// This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.Policy` to specify whether to allow inbound access.
+        /// This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow access.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.PortRange` to specify the range of destination ports.
+        /// This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRange { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.Priority` to specify the rule priority.
+        /// This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+        /// This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
+        /// This parameter is deprecated. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
         /// </summary>
         [NameInMap("SourceGroupId")]
         [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceGroupId { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
+        /// This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
         /// </summary>
         [NameInMap("SourceGroupOwnerAccount")]
         [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceGroupOwnerAccount { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
+        /// This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
         /// </summary>
         [NameInMap("SourceGroupOwnerId")]
         [Validation(Required=false)]
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? SourceGroupOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+        /// This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
         /// </summary>
         [NameInMap("SourcePortRange")]
         [Validation(Required=false)]
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
+        /// This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
         /// </summary>
         [NameInMap("SourcePrefixListId")]
         [Validation(Required=false)]

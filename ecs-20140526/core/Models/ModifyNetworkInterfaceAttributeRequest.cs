@@ -78,6 +78,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The receive (Rx) queue depth of the ENI.
+        /// 
+        /// Take note of the following items:
+        /// 
+        /// *   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+        /// *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
+        /// </summary>
         [NameInMap("RxQueueSize")]
         [Validation(Required=false)]
         public int? RxQueueSize { get; set; }
@@ -92,6 +100,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// The Tx queue depth of the ENI.
+        /// 
+        /// Take note of the following items:
+        /// 
+        /// *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+        /// *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
+        /// </summary>
         [NameInMap("TxQueueSize")]
         [Validation(Required=false)]
         public int? TxQueueSize { get; set; }

@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set : TeaModel {
                 /// <summary>
-                /// The IPv6 address.
+                /// The IPv6 address assigned to the ENI.
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
                 /// <summary>
-                /// Indicates whether the IP address is the primary private IP address.
+                /// Indicates whether the private IP address is the primary private IP address.
                 /// </summary>
                 [NameInMap("Primary")]
                 [Validation(Required=false)]

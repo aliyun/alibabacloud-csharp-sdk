@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
+        /// The order ID. This parameter is returned only if `InstanceChargeType` is set to PrePaid.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

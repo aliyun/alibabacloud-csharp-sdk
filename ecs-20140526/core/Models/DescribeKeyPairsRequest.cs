@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to include PublicKey in the response. Default value: false.
+        /// </summary>
         [NameInMap("IncludePublicKey")]
         [Validation(Required=false)]
         public bool? IncludePublicKey { get; set; }

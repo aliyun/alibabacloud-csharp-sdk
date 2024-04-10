@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateVersionResponseBody : TeaModel {
         /// <summary>
-        /// 实例启动模板版本。
+        /// The versions of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateVersions")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion> LaunchTemplateVersion { get; set; }
             public class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion : TeaModel {
                 /// <summary>
-                /// 实例启动模板ID。
+                /// The ID of the launch template.
                 /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// 实例启动模板版本号。
+                /// The version number of the launch template.
                 /// </summary>
                 [NameInMap("LaunchTemplateVersionNumber")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

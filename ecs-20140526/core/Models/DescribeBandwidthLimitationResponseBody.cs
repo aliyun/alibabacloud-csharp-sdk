@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The billing method for network usage. Valid values:
                 /// 
-                /// *   PayByBandwidth: pay-by-bandwidth
-                /// *   PayByTraffic: pay-by-traffic
+                /// *   PayByBandwidth
+                /// *   PayByTraffic
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

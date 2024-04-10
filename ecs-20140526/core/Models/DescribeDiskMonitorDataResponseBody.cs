@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiskMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The details about the monitoring data of the disk.
+        /// The monitoring data of the disk.
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -21,49 +21,49 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData> DiskMonitorData { get; set; }
             public class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData : TeaModel {
                 /// <summary>
-                /// The read bandwidth of the system disk. Unit: byte/s.
+                /// The read bandwidth of the disk. Unit: byte/s.
                 /// </summary>
                 [NameInMap("BPSRead")]
                 [Validation(Required=false)]
                 public int? BPSRead { get; set; }
 
                 /// <summary>
-                /// The total read and write bandwidth of the system disk. Unit: byte/s.
+                /// The total read and write bandwidth of the disk. Unit: byte/s.
                 /// </summary>
                 [NameInMap("BPSTotal")]
                 [Validation(Required=false)]
                 public int? BPSTotal { get; set; }
 
                 /// <summary>
-                /// The write bandwidth of the system disk. Unit: byte/s.
+                /// The write bandwidth of the disk. Unit: byte/s.
                 /// </summary>
                 [NameInMap("BPSWrite")]
                 [Validation(Required=false)]
                 public int? BPSWrite { get; set; }
 
                 /// <summary>
-                /// The disk ID.
+                /// The ID of the disk.
                 /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// The number of read I/O operations per second on the system disk.
+                /// The number of read I/O operations per second on the disk.
                 /// </summary>
                 [NameInMap("IOPSRead")]
                 [Validation(Required=false)]
                 public int? IOPSRead { get; set; }
 
                 /// <summary>
-                /// The total number of read and write I/O operations per second on the system disk.
+                /// The total number of read and write I/O operations per second on the disk.
                 /// </summary>
                 [NameInMap("IOPSTotal")]
                 [Validation(Required=false)]
                 public int? IOPSTotal { get; set; }
 
                 /// <summary>
-                /// The number of write I/O operations per second on the system disk.
+                /// The number of write I/O operations per second on the disk.
                 /// </summary>
                 [NameInMap("IOPSWrite")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? LatencyWrite { get; set; }
 
                 /// <summary>
-                /// The timestamp to query the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]

@@ -22,7 +22,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance type. For information about the values, see [Instance families](~~25378~~).
+        /// The type of the elastic network interface (ENI). Valid values:
+        /// 
+        /// *   Secondary: secondary ENI.
+        /// *   Trunk: trunk ENI. This value is in invitational preview.
+        /// 
+        /// Default value: Secondary.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -50,14 +55,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource ID.
         /// 
         /// >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
         /// </summary>
@@ -76,8 +81,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The bidding policy for the pay-as-you-go instance. Valid values:
         /// 
-        /// *   NoSpot: The instance is a regular pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
+        /// *   NoSpot: The instance is a pay-as-you-go instance.
+        /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
         /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
         /// 
         /// Default value: NoSpot.

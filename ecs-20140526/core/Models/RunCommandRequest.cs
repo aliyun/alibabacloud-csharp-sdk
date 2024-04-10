@@ -19,39 +19,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:
         /// 
-        /// *   If you want to retain the command, make sure that the Base64-encoded command content does not exceed 18 KB in size. If you do not want to retain the command, make sure that the Base64-encoded command content does not exceed 24 KB in size. You can set `KeepCommand` to specify whether to retain the command.
+        /// *   If you want to retain the command, make sure that the Base64-encoded command content does not exceed 18 KB in size. If you do not want to retain the command, make sure that the Base64-encoded command content does not exceed 24 KB in size. You can set the `KeepCommand` parameter to specify whether to retain the command.
         /// 
-        /// *   If the command content is Base64-encoded, set `ContentEncoding` to Base64.
+        /// *   If the command content is encoded in Base6, set `ContentEncoding` to Base64.
         /// 
-        /// *   If you set `EnableParameter` to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:
+        /// *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:
         /// 
         ///     *   Specify custom parameters in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
         ///     *   You can specify up to 20 custom parameters.
         ///     *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.
         ///     *   Each custom parameter name cannot exceed 64 bytes in length.
         /// 
-        /// *   You can specify built-in environment parameters as custom parameters. Then, when you run the command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:
+        /// *   You can specify built-in environment parameters as custom parameters. Then, when you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:
         /// 
         ///     *   `{{ACS::RegionId}}`: the region ID.
         /// 
         ///     *   `{{ACS::AccountId}}`: the UID of the Alibaba Cloud account.
         /// 
-        ///     *   `{{ACS::InstanceId}}`: the instance ID. When the command is run on multiple instances, if you want to specify `{{ACS::InstanceId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
+        ///     *   `{{ACS::InstanceId}}`: the instance ID. If you want to run the command on multiple instances and specify `{{ACS::InstanceId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
         /// 
         ///         *   Linux: 2.2.3.309
         ///         *   Windows: 2.1.3.309
         /// 
-        ///     *   `{{ACS::InstanceName}}`: the instance name. When the command is run on multiple instances, if you want to specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
+        ///     *   `{{ACS::InstanceName}}`: the instance name. If you want to run the command on multiple instances and specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
         /// 
         ///         *   Linux: 2.2.3.344
         ///         *   Windows: 2.1.3.344
         /// 
-        ///     *   `{{ACS::InvokeId}}`: the task ID. If you want to specify `{{ACS::InvokeId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
+        ///     *   `{{ACS::InvokeId}}`: the ID of the task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
         /// 
         ///         *   Linux: 2.2.3.309
         ///         *   Windows: 2.1.3.309
         /// 
-        ///     *   `{{ACS::CommandId}}`: the command ID. If you want to specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant Agent is not earlier than the following ones:
+        ///     *   `{{ACS::CommandId}}`: the ID of the command. If you want to specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:
         /// 
         ///         *   Linux: 2.2.3.309
         ///         *   Windows: 2.1.3.309
@@ -61,13 +61,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// The ID of the container. Only 64-bit hexadecimal strings are supported. Container IDs that are prefixed with `docker://`, `containerd://`, or `cri-o://` can specify container runtimes.
+        /// The ID of the container. Only 64-bit hexadecimal strings are supported. `docker://`, `containerd://`, or `cri-o://` can be used as the prefix to the container ID to specify the container runtime.
         /// 
         /// Take note of the following items:
         /// 
-        /// *   If this parameter is specified, Cloud Assistant runs scripts in the specified container of the instance.
-        /// *   If this parameter is specified, scripts can run only on Linux instances on which Cloud Assistant Agent is installed. The version of Cloud Assistant Agent must be 2.2.3.344 or later.
-        /// *   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
+        /// *   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.
+        /// *   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.
+        /// *   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
         /// *   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
         /// </summary>
         [NameInMap("ContainerId")]
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Take note of the following items:
         /// 
-        /// *   If this parameter is specified, Cloud Assistant runs scripts in the specified container of the instance.
-        /// *   If this parameter is specified, scripts can run only on Linux instances on which Cloud Assistant Agent is stalled. The version of Cloud Assistant Agent must be 2.2.3.344 or later.
-        /// *   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
+        /// *   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.
+        /// *   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.
+        /// *   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
         /// *   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
         /// </summary>
         [NameInMap("ContainerName")]
@@ -122,39 +122,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: `rate(<Execution interval value> <Execution interval unit>)`. For example, specify `rate(5m)` to run the command every 5 minutes. When you specify an interval, take note of the following limits:
         /// 
         ///     *   The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.
-        ///     *   The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before it runs the command again.
-        ///     *   A task is not executed immediately after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.
+        ///     *   The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.
+        ///     *   A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.
         /// 
         /// *   To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the `at(yyyy-MM-dd HH:mm:ss <Time zone>)` format, which indicates `at(Year-Month-Day Hour:Minute:Second <Time zone>)`. If you do not specify a time zone, the UTC time zone is used by default. You can specify the time zone in the following forms:
         /// 
         ///     *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.
-        /// 
-        ///     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, do not add leading zeros to the hour value.
-        /// 
+        ///     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.
         ///     *   The time zone abbreviation. Only UTC is supported.
         /// 
-        ///         For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.
+        ///     For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.
         /// 
         /// *   To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see [Cron expressions](~~64769~~). You can specify the time zone in the following forms:
         /// 
         ///     *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.
+        ///     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.
+        ///     *   The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to `0 15 10 ? * * 2022 Asia/Shanghai`. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to `0 0/30 10-11 * * ? 2022 GMT+8:00`. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to `0 0/5 14 * 10 ? 2022/2 UTC`.
         /// 
-        ///     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, do not add leading zeros to the hour value.
+        ///     **
         /// 
-        ///     *   The time zone abbreviation. Only UTC is supported.
-        /// 
-        ///         For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to `0 15 10 ? * * 2022 Asia/Shanghai`. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to `0 0/30 10-11 * ? 2022 GMT +8:00`. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to `0 0/5 14 * 10 ? 2022/2 UTC`.
-        /// 
-        ///         **
-        /// 
-        ///         **Note** The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.
+        ///     **Note** The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.
         /// </summary>
         [NameInMap("Frequency")]
         [Validation(Required=false)]
         public string Frequency { get; set; }
 
         /// <summary>
-        /// The ID of instance N on which to run the command. Valid values of N: 1 to 50.
+        /// The IDs of instances on which to run the command. Valid values of N: 1 to 50.
         /// 
         /// If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.
         /// </summary>
@@ -165,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to retain the command after the command is run. Valid values:
         /// 
-        /// *   true: retains the command. You can call the InvokeCommand operation to rerun the command. The retained command counts against the quota of Cloud Assistant commands.
+        /// *   true: retains the command. Then, you can call the InvokeCommand operation to rerun the command. The retained command counts against the quota of Cloud Assistant commands.
         /// *   false: does not retain the command. The command is automatically deleted after it is run and does not count against the quota of Cloud Assistant commands.
         /// 
         /// Default value: false.
@@ -222,12 +216,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default values:
         /// 
-        /// *   If you do not specify `Frequency`, the default value is `Once`.
-        /// *   If you specify `Frequency`, `Period` is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.
+        /// *   If you do not specify the `Frequency` parameter, the default value is `Once`.
+        /// *   If you specify the `Frequency` parameter, `Period` is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.
         /// 
         /// Take note of the following items:
         /// 
-        /// *   You can all the [StopInvocation](~~64838~~) operation to stop the pending or scheduled executions of the command.
+        /// *   You can call the [StopInvocation](~~64838~~) operation to stop the pending or scheduled executions of the command.
         /// *   If you set this parameter to `Period` or `EveryReboot`, you can call the [DescribeInvocationResults](~~64845~~) operation with `IncludeHistory` set to true to query the results of historical scheduled executions.
         /// </summary>
         [NameInMap("RepeatMode")]
@@ -252,14 +246,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.
+        /// </summary>
         [NameInMap("ResourceTag")]
         [Validation(Required=false)]
         public List<RunCommandRequestResourceTag> ResourceTag { get; set; }
         public class RunCommandRequestResourceTag : TeaModel {
+            /// <summary>
+            /// The key of tag N of the instance.
+            /// 
+            /// Take note of the following items:
+            /// 
+            /// *   This parameter and InstanceId.N are mutually exclusive.
+            /// *   Valid values of N: 1 to 10. The tag key cannot be an empty string.
+            /// *   The number of instances that have the specified tags cannot exceed 50. If more than 50 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 50 instances.
+            /// *   The tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N of the instance.
+            /// 
+            /// Take note of the following items:
+            /// 
+            /// *   Valid values of N: 1 to 10.
+            /// *   The tag value can be an empty string.
+            /// *   The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -325,21 +341,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// The username to use to run the command on instances. The username cannot exceed 255 characters in length.
+        /// The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.
         /// 
         /// *   For Linux instances, the root username is used by default.
         /// *   For Windows instances, the System username is used by default.
         /// 
-        /// You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Configure a regular user to run Cloud Assistant commands](~~203771~~).
+        /// You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Run Cloud Assistant commands as a regular user](~~203771~~).
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }
 
         /// <summary>
-        /// The name of the password to use to run the command on Windows instances. The name cannot exceed 255 characters in length.
+        /// The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.
         /// 
-        /// If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and `Username`. To mitigate the risk of password leaks, the password is stored in plaintext in Operation Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see [Encrypt parameters](~~186828~~) and [Configure a regular user to run Cloud Assistant commands](~~203771~~).
+        /// If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and `Username`. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see [Manage encryption parameters](~~186828~~) and [Run Cloud Assistant commands as a regular user](~~203771~~).
         /// 
         /// >  If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.
         /// </summary>

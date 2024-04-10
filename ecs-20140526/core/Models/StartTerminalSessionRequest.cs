@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionRequest : TeaModel {
         /// <summary>
-        /// If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.
+        /// The command to run after the session is initiated. The command length cannot exceed 512 characters.
         /// 
-        /// >If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.
+        /// >  If you specify the `CommandLine` parameter, you cannot specify the `PortNumber` or `TargetServer` parameter.
         /// </summary>
         [NameInMap("CommandLine")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The port number of the instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port for forwarding. Example: 22.
+        /// The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.
         /// 
         /// This parameter is empty by default, which indicates that no port is configured to forward data.
         /// </summary>
@@ -58,14 +58,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IP address of the instance.
+        /// The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).
         /// 
-        /// >If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.
+        /// >  If this parameter is not empty, `PortNumber` specifies the port number that is used by the managed instance to access the destination service in the VPC.
         /// </summary>
         [NameInMap("TargetServer")]
         [Validation(Required=false)]
         public string TargetServer { get; set; }
 
+        /// <summary>
+        /// 指定连接时的用户名称。
+        /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeEniMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The details about the monitoring data of the secondary ENI.
+        /// The monitoring data of the secondary ENI.
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -21,35 +21,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData> EniMonitorData { get; set; }
             public class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData : TeaModel {
                 /// <summary>
-                /// The number of dropped packets received by the secondary ENI over the internal network.
+                /// The number of received packets that were dropped by the secondary ENI over the internal network.
                 /// </summary>
                 [NameInMap("DropPacketRx")]
                 [Validation(Required=false)]
                 public string DropPacketRx { get; set; }
 
                 /// <summary>
-                /// The number of dropped packets sent by the secondary ENI over the internal network.
+                /// The number of sent packets that were dropped by the secondary ENI over the internal network.
                 /// </summary>
                 [NameInMap("DropPacketTx")]
                 [Validation(Required=false)]
                 public string DropPacketTx { get; set; }
 
                 /// <summary>
-                /// The secondary ENI ID.
+                /// The ID of the secondary ENI.
                 /// </summary>
                 [NameInMap("EniId")]
                 [Validation(Required=false)]
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// The average rate of data received by the secondary ENI over the internal network. Unit: Kbit/s.
+                /// The average rate at which the secondary ENI received data over the internal network. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetRx")]
                 [Validation(Required=false)]
                 public string IntranetRx { get; set; }
 
                 /// <summary>
-                /// The average rate of data sent by the secondary ENI over the internal network. Unit: Kbit/s.
+                /// The average rate at which the secondary ENI sent data over the internal network. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetTx")]
                 [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PacketTx { get; set; }
 
                 /// <summary>
-                /// The timestamp to query the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The timestamp of the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]

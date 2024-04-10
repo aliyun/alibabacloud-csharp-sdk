@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number. Pages start from page 1.
+        /// The page number. Page starts from page 1.
         /// 
         /// Default value: 1.
         /// </summary>

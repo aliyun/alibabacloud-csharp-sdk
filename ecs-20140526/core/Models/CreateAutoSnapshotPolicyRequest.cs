@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
         /// 
-        /// *   \-1: The snapshot copy is permanently retained.
-        /// *   A value in the range of 1 to 65535: The snapshot copy is retained for the specified number of days.
+        /// *   \-1: The snapshot copy is retained until it is deleted.
+        /// *   1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.
         /// 
         /// Default value: -1.
         /// </summary>
@@ -21,32 +21,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
+        /// <summary>
+        /// The encryption parameters for cross-region snapshot replication.
+        /// </summary>
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
         public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
         public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration : TeaModel {
+            /// <summary>
+            /// This parameter is not publicly available.
+            /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> Arn { get; set; }
             public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn : TeaModel {
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("AssumeRoleFor")]
                 [Validation(Required=false)]
                 public long? AssumeRoleFor { get; set; }
 
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("RoleType")]
                 [Validation(Required=false)]
                 public string RoleType { get; set; }
 
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("Rolearn")]
                 [Validation(Required=false)]
                 public string Rolearn { get; set; }
 
             }
 
+            /// <summary>
+            /// Specifies whether to enable cross-region snapshot replication and encryption. Valid values:
+            /// 
+            /// *   true
+            /// *   false
+            /// 
+            /// Default value: false.
+            /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public bool? Encrypted { get; set; }
 
+            /// <summary>
+            /// The ID of the KMS key used in cross-region snapshot replication and encryption.
+            /// </summary>
             [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
@@ -97,14 +123,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateAutoSnapshotPolicyRequestTag> Tag { get; set; }
         public class CreateAutoSnapshotPolicyRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -120,9 +146,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetCopyRegions { get; set; }
 
         /// <summary>
-        /// The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+        /// The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// 
-        /// This parameter is empty by default.
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("autoSnapshotPolicyName")]
         [Validation(Required=false)]
@@ -148,8 +174,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The retention period of the automatic snapshot. Unit: days. Valid values:
         /// 
-        /// *   \-1: The snapshot is permanently retained.
-        /// *   A value in the range of 1 to 65535: The snapshot is retained for the specified number of days.
+        /// *   \-1: The automatic snapshot is retained until it is deleted.
+        /// *   1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.
         /// 
         /// Default value: -1.
         /// </summary>

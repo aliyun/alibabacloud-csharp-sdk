@@ -179,16 +179,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The category of the system disk. Valid values:
             /// 
-            /// *   cloud_efficiency: ultra disk
+            /// *   cloud_efficiency: utra disk
             /// *   cloud_ssd: standard SSD
-            /// *   cloud_essd: ESSD
+            /// *   cloud_essd: enhanced SSD (ESSD)
             /// *   cloud: basic disk
             /// *   cloud_auto: ESSD AutoPL disk
             /// *   cloud_essd_entry: ESSD Entry disk
             /// 
-            /// >  Only when `InstanceType` is set to `ecs.u1` or `ecs.e`, this parameter supports `cloud_essd_entry`.
+            /// >  The value of this parameter can be `cloud_essd_entry` only when `InstanceType` is set to `ecs.u1` or `ecs.e`. ecs.u1 indicates the u1 universal instance family and ecs.e indicates the e economy instance family. For information about the u1 and e instance families, see the [u1, universal instance family](~~457079~~) section in the "Universal instance families" topic and the [e, economy instance family](~~108489~~) section in the "Shared instance families" topic.
             /// 
-            /// For non-I/O optimized instances of retired instance types, the default value is cloud. For instances of other instance types, the default value is cloud_efficiency.
+            /// For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -919,14 +919,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinAmount { get; set; }
 
         /// <summary>
-        /// The information of the ENI.
+        /// The information of the ENIs.
         /// </summary>
         [NameInMap("NetworkInterface")]
         [Validation(Required=false)]
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
             /// <summary>
-            /// Specifies whether to retain the ENI when the associated instance is released. Valid values:
+            /// Specifies whether to retain ENI N when the associated instance is released. Valid values:
             /// 
             /// *   true
             /// *   false
@@ -1006,9 +1006,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? NetworkCardIndex { get; set; }
 
             /// <summary>
-            /// The ID of the ENI to attach to the instance.
+            /// The ID of ENI N to attach to the instance.
             /// 
-            /// >  This parameter takes effect only for secondary ENIs.
+            /// >  This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other ENI creation parameters.
             /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]
@@ -1054,7 +1054,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.
             /// 
-            /// >  You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
+            /// > 
+            /// 
+            /// *   You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
+            /// 
+            /// *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
             /// </summary>
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
@@ -1082,12 +1086,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? QueuePairNumber { get; set; }
 
             /// <summary>
-            /// Elastic Network Interface RxQueueSize.
+            /// The receive (Rx) queue depth of ENI N.
             /// 
-            /// Please note:
+            /// Take note of the following items:
             /// 
-            /// - RxQueueSize of the ENI must be equal to the TxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.
-            /// - A larger RxQueueSize can improve the throughput of inbound traffic but will consume more memory.
+            /// *   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+            /// *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
             /// </summary>
             [NameInMap("RxQueueSize")]
             [Validation(Required=false)]
@@ -1110,7 +1114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The ID of security group N to which to assign ENI N.
             /// 
             /// *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-            /// *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see [Security group limits](~~25412#SecurityGroupQuota1~~).
+            /// *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits" topic.
             /// 
             /// Take note of the following items:
             /// 
@@ -1122,12 +1126,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// Elastic Network Interface TxQueueSize.
+            /// The Tx queue depth of ENI N.
             /// 
-            /// Please note:
+            /// Take note of the following items:
             /// 
-            /// - TxQueueSize of the ENI must be equal to the RxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.
-            /// - A larger TxQueueSize can improve the throughput of outbound traffic but will consume more memory.
+            /// *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+            /// *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
             /// </summary>
             [NameInMap("TxQueueSize")]
             [Validation(Required=false)]
@@ -1238,16 +1242,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The private IP address to assign to the instance. To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
+        /// The private IP address to assign to the instance. To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by `VSwitchId`.
         /// 
         /// Take note of the following items:
         /// 
-        /// *   If the `PrivateIpAddress` parameter is specified, take note of the following items:
+        /// *   If `PrivateIpAddress` is specified, take note of the following items:
         /// 
         ///     *   If `Amount` is set to 1, a single instance is created and the specified private IP address is assigned to the instance.
-        ///     *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to bind secondary ENIs to the instances.
+        ///     *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to attach secondary ENIs to the instances.
         /// 
         /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `PrivateIpAddress` but can specify `NetworkInterface.N.PrimaryIpAddress`.
+        /// 
+        /// >  The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -1331,7 +1337,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.
+        /// The interruption mode of the preemptible instance. Valid values:
+        /// 
+        /// *   Terminate: The instance is released.
+        /// 
+        /// *   Stop: The instance is stopped in economical mode. To use the economical mode, submit a ticket.
+        /// 
+        ///     For information about the economical mode, see [Economical mode](~~63353~~).
+        /// 
+        /// Default value: Terminate.
         /// </summary>
         [NameInMap("SpotInterruptionBehavior")]
         [Validation(Required=false)]

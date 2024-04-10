@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsUsageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SnapshotCount { get; set; }
 
         /// <summary>
-        /// The total size of snapshots stored in the current region. Unit: byte.
+        /// The total size of snapshots stored in the current region. Unit: bytes.
         /// </summary>
         [NameInMap("SnapshotSize")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteAutoProvisioningGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the auto provisioning group to be deleted.
+        /// The ID of the auto provisioning group.
         /// </summary>
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to release instances in the auto provisioning group. Valid values:
         /// 
-        /// *   true: releases instances in the auto provisioning group.
-        /// *   false: retains instances in the auto provisioning group.
+        /// *   true
+        /// *   false
+        /// 
+        /// >  By default, this parameter inherits the value of `TerminateInstances` that you specified when you call the `CreateAutoProvisioningGroup` operation to create an auto provisioning group. You can also change the value of `TerminateInstances` when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.
         /// </summary>
         [NameInMap("TerminateInstances")]
         [Validation(Required=false)]

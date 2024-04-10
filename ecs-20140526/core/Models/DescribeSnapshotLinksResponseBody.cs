@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the snapshot chains.
+        /// The details of the snapshot chains.
         /// </summary>
         [NameInMap("SnapshotLinks")]
         [Validation(Required=false)]
@@ -42,16 +42,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> SnapshotLink { get; set; }
             public class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink : TeaModel {
                 /// <summary>
-                /// The type of the snapshot.
-                /// 
-                /// > This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.
+                /// The category of the snapshot.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -69,27 +67,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// 
                 /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
                 /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                /// 
+                /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
                 public bool? InstantAccess { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the source disk of the snapshot chain is located.
+                /// The region ID of the source disk.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The snapshot chain IDs.
+                /// The ID of the snapshot chain.
                 /// </summary>
                 [NameInMap("SnapshotLinkId")]
                 [Validation(Required=false)]
                 public string SnapshotLinkId { get; set; }
 
                 /// <summary>
-                /// The source disk ID. This parameter is retained even if the source disk is deleted.
+                /// The ID of the source disk. This parameter is retained even if the source disk is deleted.
                 /// </summary>
                 [NameInMap("SourceDiskId")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SourceDiskName { get; set; }
 
                 /// <summary>
-                /// The size of the source disk. Unit: GiB.
+                /// The capacity of the source disk. Unit: GiB.
                 /// </summary>
                 [NameInMap("SourceDiskSize")]
                 [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// The total size of all snapshots in the snapshot chain. Unit: bytes.
+                /// The total size of all snapshots in the snapshot chain. Unit: byte.
                 /// </summary>
                 [NameInMap("TotalSize")]
                 [Validation(Required=false)]

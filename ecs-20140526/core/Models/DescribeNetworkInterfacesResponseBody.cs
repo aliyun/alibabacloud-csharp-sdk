@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> NetworkInterfaceSet { get; set; }
             public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet : TeaModel {
                 /// <summary>
-                /// Details about the EIP that is associated with the secondary private IP address of the ENI.
+                /// The EIPs that are associated with the secondary private IP addresses of the ENI.
                 /// </summary>
                 [NameInMap("AssociatedPublicIp")]
                 [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp AssociatedPublicIp { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp : TeaModel {
                     /// <summary>
-                    /// > This parameter is in invitational preview and is unavailable for general users.
+                    /// >  This parameter is in invitational preview and is not publicly available.
                     /// </summary>
                     [NameInMap("AllocationId")]
                     [Validation(Required=false)]
                     public string AllocationId { get; set; }
 
                     /// <summary>
-                    /// The EIP of the ENI.
+                    /// The EIP.
                     /// </summary>
                     [NameInMap("PublicIpAddress")]
                     [Validation(Required=false)]
@@ -44,38 +44,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("Attachment")]
                 [Validation(Required=false)]
                 public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment Attachment { get; set; }
                 public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment : TeaModel {
                     /// <summary>
-                    /// > This parameter is in invitational preview and is unavailable to the public.
+                    /// >  This parameter is in invitational preview and is not publicly available.
                     /// </summary>
                     [NameInMap("DeviceIndex")]
                     [Validation(Required=false)]
                     public int? DeviceIndex { get; set; }
 
                     /// <summary>
-                    /// > This parameter is in invitational preview and is unavailable for general users.
+                    /// >  This parameter is in invitational preview and is not publicly available.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// The index of the network interface controller (NIC).
+                    /// The index of the network card.
                     /// 
-                    /// *   If the ENI is in the Available state or no NIC index is specified when the ENI is attached, this parameter has no value.
-                    /// *   If the ENI is in the InUse state and an NIC index is specified when the ENI is attached, the specified NIC index is returned as the value of this parameter.
+                    /// *   If the ENI is in the Available state or if no network card index was specified when the ENI was attached, this parameter is empty.
+                    /// *   If the ENI is in the InUse state and a network card index was specified when the ENI was attached, the specified network card index is returned as the value of this parameter.
                     /// </summary>
                     [NameInMap("NetworkCardIndex")]
                     [Validation(Required=false)]
                     public int? NetworkCardIndex { get; set; }
 
                     /// <summary>
-                    /// > This parameter is in invitational preview and is unavailable for general users.
+                    /// >  This parameter is in invitational preview and is not publicly available.
                     /// </summary>
                     [NameInMap("TrunkNetworkInterfaceId")]
                     [Validation(Required=false)]
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Specifies whether to retain the ENI when the associated instance is released. Valid values:
+                /// Indicates whether to retain the ENI when the associated instance is released. Valid values:
                 /// 
-                /// - true
-                /// - false
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("DeleteOnRelease")]
                 [Validation(Required=false)]
@@ -108,16 +108,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the ENI is attached.
+                /// The ID of the Elastic Compute Service (ECS) instance to which the ENI is attached.
                 /// 
-                /// > If the ENI is managed and controlled by other Alibaba Cloud services, no instance ID is returned.
+                /// >  If the ENI is managed by other Alibaba Cloud services, no instance ID is returned.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable for general users.
+                /// The IPv4 prefixes of the ENI.
                 /// </summary>
                 [NameInMap("Ipv4PrefixSets")]
                 [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv4PrefixSetsIpv4PrefixSet> Ipv4PrefixSet { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv4PrefixSetsIpv4PrefixSet : TeaModel {
                         /// <summary>
-                        /// > This parameter is in invitational preview and is unavailable for general users.
+                        /// The IPv4 prefix of the ENI.
                         /// </summary>
                         [NameInMap("Ipv4Prefix")]
                         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable for general users.
+                /// The IPv6 prefixes of the ENI.
                 /// </summary>
                 [NameInMap("Ipv6PrefixSets")]
                 [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6PrefixSetsIpv6PrefixSet> Ipv6PrefixSet { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6PrefixSetsIpv6PrefixSet : TeaModel {
                         /// <summary>
-                        /// > This parameter is in invitational preview and is unavailable for general users.
+                        /// The IPv6 prefix of the ENI.
                         /// </summary>
                         [NameInMap("Ipv6Prefix")]
                         [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The IPv6 addresses assigned to the ENI.
+                /// The IPv6 addresses of the ENI.
                 /// </summary>
                 [NameInMap("Ipv6Sets")]
                 [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> Ipv6Set { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set : TeaModel {
                         /// <summary>
-                        /// The IPv6 address assigned to the ENI.
+                        /// The IPv6 address of the ENI.
                         /// </summary>
                         [NameInMap("Ipv6Address")]
                         [Validation(Required=false)]
@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The media access control (MAC) address of the ENI.
+                /// The MAC address of the ENI.
                 /// </summary>
                 [NameInMap("MacAddress")]
                 [Validation(Required=false)]
                 public string MacAddress { get; set; }
 
                 /// <summary>
-                /// The ENI ID.
+                /// The ID of the ENI.
                 /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The communication mode of the ENI. Valid values:
                 /// 
-                /// *   Standard: uses the TCP communication mode. 
-                /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled. 
+                /// *   Standard: The TCP communication mode is used.
+                /// *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
                 /// 
-                /// > The parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+                /// >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
                 /// </summary>
                 [NameInMap("NetworkInterfaceTrafficMode")]
                 [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// The private IP address of the ENI.
+                /// The primary private IP address of the ENI.
                 /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
@@ -241,21 +241,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet : TeaModel {
                         /// <summary>
-                        /// The elastic IP address (EIP) associated with the ENI.
+                        /// The elastic IP address (EIP) that is associated with the private IP address.
                         /// </summary>
                         [NameInMap("AssociatedPublicIp")]
                         [Validation(Required=false)]
                         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp AssociatedPublicIp { get; set; }
                         public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp : TeaModel {
                             /// <summary>
-                            /// > This parameter is in invitational preview and is unavailable for general users.
+                            /// >  This parameter is in invitational preview and is not publicly available.
                             /// </summary>
                             [NameInMap("AllocationId")]
                             [Validation(Required=false)]
                             public string AllocationId { get; set; }
 
                             /// <summary>
-                            /// The EIP of the ENI.
+                            /// The EIP.
                             /// </summary>
                             [NameInMap("PublicIpAddress")]
                             [Validation(Required=false)]
@@ -264,10 +264,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// Indicates whether the IP address is the primary private IP address. Valid values:
+                        /// Indicates whether the private IP address is the primary private IP address. Valid values:
                         /// 
                         /// *   true: The IP address is the primary private IP address.
-                        /// *   false: The IP address is the secondary private IP address.
+                        /// *   false: The IP address is a secondary private IP address.
                         /// </summary>
                         [NameInMap("Primary")]
                         [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// The number of queues supported by the ENI.
                 /// 
                 /// *   If the ENI is a secondary ENI in the InUse state and the number of queues supported by the ENI has never been modified, the default number of queues per secondary ENI that the instance type supports is returned.
-                /// *   If the number of queues supported by the secondary ENI has been modified, the new number of queues is returned.
+                /// *   If the ENI is a secondary ENI and the number of queues supported by the ENI has been modified, the new number of queues is returned.
                 /// *   If the ENI is a secondary ENI in the Available state and the number of queues supported by the ENI has never been modified, an empty value is returned.
                 /// *   If the ENI is a primary ENI, the default number of queues per primary ENI that the instance type supports is returned.
                 /// </summary>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? QueueNumber { get; set; }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable to the public.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("QueuePairNumber")]
                 [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The IDs of the security groups to which the ENI belongs.
+                /// The security groups to which the ENI belongs.
                 /// </summary>
                 [NameInMap("SecurityGroupIds")]
                 [Validation(Required=false)]
@@ -356,14 +356,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag> Tag { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the ENI.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the ENI.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch with which the ENI is associated.
+                /// The ID of the vSwitch.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

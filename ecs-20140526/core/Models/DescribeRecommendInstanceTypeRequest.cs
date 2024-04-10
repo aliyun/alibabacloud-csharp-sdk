@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// The billing method of the ECS instance. For more information, see [Billing overview](~~25398~~). Valid values:
         /// 
         /// *   PrePaid: subscription
         /// *   PostPaid: pay-as-you-go
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The policy that is used to recommend instance types. Valid values:
         /// 
         /// *   InventoryFirst: recommends instance types in descending order of resource availability.
-        /// *   PriceFirst: recommends instance types in ascending order of hourly price per vCPU.
+        /// *   PriceFirst: recommends the most cost-effective instance type. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
         /// *   NewProductFirst: recommends the latest instance types first.
         /// 
         /// Default value: InventoryFirst.
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The bidding policy of preemptible instances. Valid values:
         /// 
         /// *   NoSpot: The instance is a pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+        /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
+        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
         /// 
-        /// > The `SpotStrategy` parameter takes effect only when `InstanceChargeType` is set to `PostPaid`.
+        /// > If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.
         /// 
         /// Default value: NoSpot.
         /// </summary>

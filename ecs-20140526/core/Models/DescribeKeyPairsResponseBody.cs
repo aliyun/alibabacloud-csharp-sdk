@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the key pairs.
+        /// The information of the key pairs.
         /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string KeyPairName { get; set; }
 
+                /// <summary>
+                /// The content of the public key.
+                /// </summary>
                 [NameInMap("PublicKey")]
                 [Validation(Required=false)]
                 public string PublicKey { get; set; }

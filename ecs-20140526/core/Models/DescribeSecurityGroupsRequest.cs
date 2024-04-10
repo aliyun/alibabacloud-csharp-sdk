@@ -29,7 +29,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? FuzzyQuery { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated.
+        /// Specifies whether to query the capacity of the security group. If you set this parameter to True, the `EcsCount` and `AvailableInstanceAmount` values in the response are valid.
+        /// 
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("IsQueryEcsCount")]
         [Validation(Required=false)]
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: 1.
         /// 
-        /// > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: 10.
         /// 
-        /// > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+        /// >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -154,6 +156,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SecurityGroupType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to query managed security groups. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }

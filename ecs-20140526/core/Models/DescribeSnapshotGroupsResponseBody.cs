@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The snapshot-consistent groups.
+        /// Details of the snapshot-consistent groups.
         /// </summary>
         [NameInMap("SnapshotGroups")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all snapshots in the snapshot-consistent group belong to the same instance. If snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` for the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+                /// The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotGroupId { get; set; }
 
                 /// <summary>
-                /// The snapshots in the snapshot-consistent group.
+                /// Details of the snapshots in the snapshot-consistent group.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
@@ -107,17 +107,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public bool? Available { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the instant access feature was enabled. Valid values:
+                        /// Indicates whether the instant access feature is enabled. Valid values:
                         /// 
-                        /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                        /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                        /// *   true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.
+                        /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                         /// </summary>
                         [NameInMap("InstantAccess")]
                         [Validation(Required=false)]
                         public bool? InstantAccess { get; set; }
 
                         /// <summary>
-                        /// The validity period of the instant access feature. When the period expires, the instant access snapshot is automatically released.
+                        /// The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+                        /// 
+                        /// >  This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).
                         /// </summary>
                         [NameInMap("InstantAccessRetentionDays")]
                         [Validation(Required=false)]
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string SnapshotId { get; set; }
 
                         /// <summary>
-                        /// The ID of the source disk. This parameter is retained even after the source disk is released.
+                        /// The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.
                         /// </summary>
                         [NameInMap("SourceDiskId")]
                         [Validation(Required=false)]

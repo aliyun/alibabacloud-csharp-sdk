@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.
+        /// This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
+        /// This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRange { get; set; }
 
         /// <summary>
-        /// This parameter is deprecated. Use `Permissions.N.Priority` to specify the priority of the rule.
+        /// This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]

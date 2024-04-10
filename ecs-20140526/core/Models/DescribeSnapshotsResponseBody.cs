@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The category of the snapshot.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+                /// >  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instant access feature was enabled. Valid values:
+                /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                /// *   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.
                 /// 
-                /// By default, the value of this parameter is the same as that of `RetentionDays`.
+                /// By default, the value of this parameter is the same as the value of `RetentionDays`.
                 /// </summary>
                 [NameInMap("InstantAccessRetentionDays")]
                 [Validation(Required=false)]
@@ -135,12 +135,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Progress { get; set; }
 
+                /// <summary>
+                /// The ID of the region to which the snapshot belongs.
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The remaining time required to create the snapshot. Unit: seconds.
+                /// The amount of remaining time required to create the snapshot. Unit: seconds.
                 /// </summary>
                 [NameInMap("RemainTime")]
                 [Validation(Required=false)]
@@ -184,9 +187,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of snapshot. Valid values:
                 /// 
-                /// *   auto or timer: automatic snapshot.
-                /// *   user: manually created snapshot.
-                /// *   all: all snapshot types.
+                /// *   auto or timer: automatic snapshot
+                /// *   user: manual snapshot
+                /// *   all: all snapshot types
                 /// </summary>
                 [NameInMap("SnapshotType")]
                 [Validation(Required=false)]
