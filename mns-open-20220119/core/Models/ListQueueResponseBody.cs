@@ -21,37 +21,77 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public List<ListQueueResponseBodyDataPageData> PageData { get; set; }
             public class ListQueueResponseBodyDataPageData : TeaModel {
+                [NameInMap("ActiveMessages")]
+                [Validation(Required=false)]
                 public long? ActiveMessages { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("DelayMessages")]
+                [Validation(Required=false)]
                 public long? DelayMessages { get; set; }
+
+                [NameInMap("DelaySeconds")]
+                [Validation(Required=false)]
                 public long? DelaySeconds { get; set; }
+
+                [NameInMap("InactiveMessages")]
+                [Validation(Required=false)]
                 public long? InactiveMessages { get; set; }
+
+                [NameInMap("LastModifyTime")]
+                [Validation(Required=false)]
                 public long? LastModifyTime { get; set; }
+
+                [NameInMap("LoggingEnabled")]
+                [Validation(Required=false)]
                 public bool? LoggingEnabled { get; set; }
+
+                [NameInMap("MaximumMessageSize")]
+                [Validation(Required=false)]
                 public long? MaximumMessageSize { get; set; }
+
+                [NameInMap("MessageRetentionPeriod")]
+                [Validation(Required=false)]
                 public long? MessageRetentionPeriod { get; set; }
+
+                [NameInMap("PollingWaitSeconds")]
+                [Validation(Required=false)]
                 public long? PollingWaitSeconds { get; set; }
-                public string QueueInternalUrl { get; set; }
+
+                [NameInMap("QueueName")]
+                [Validation(Required=false)]
                 public string QueueName { get; set; }
-                public string QueueUrl { get; set; }
+
+                [NameInMap("VisibilityTimeout")]
+                [Validation(Required=false)]
                 public long? VisibilityTimeout { get; set; }
+
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public long? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("Pages")]
             [Validation(Required=false)]
             public long? Pages { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

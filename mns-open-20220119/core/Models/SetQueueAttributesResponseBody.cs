@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public long? Code { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("Success")]
             [Validation(Required=false)]
             public bool? Success { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

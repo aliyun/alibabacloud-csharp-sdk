@@ -21,26 +21,49 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public List<ListTopicResponseBodyDataPageData> PageData { get; set; }
             public class ListTopicResponseBodyDataPageData : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("LastModifyTime")]
+                [Validation(Required=false)]
                 public long? LastModifyTime { get; set; }
+
+                [NameInMap("LoggingEnabled")]
+                [Validation(Required=false)]
                 public bool? LoggingEnabled { get; set; }
+
+                [NameInMap("MaxMessageSize")]
+                [Validation(Required=false)]
                 public long? MaxMessageSize { get; set; }
+
+                [NameInMap("MessageCount")]
+                [Validation(Required=false)]
                 public long? MessageCount { get; set; }
+
+                [NameInMap("MessageRetentionPeriod")]
+                [Validation(Required=false)]
                 public long? MessageRetentionPeriod { get; set; }
-                public string TopicInnerUrl { get; set; }
+
+                [NameInMap("TopicName")]
+                [Validation(Required=false)]
                 public string TopicName { get; set; }
-                public string TopicUrl { get; set; }
+
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public long? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
