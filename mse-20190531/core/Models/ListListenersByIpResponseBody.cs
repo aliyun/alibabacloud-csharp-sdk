@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            [NameInMap("NamespaceId")]
+            [Validation(Required=false)]
+            public string NamespaceId { get; set; }
+
         }
 
         /// <summary>

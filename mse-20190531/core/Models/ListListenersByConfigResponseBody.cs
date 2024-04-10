@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Labels { get; set; }
+
             /// <summary>
             /// The verification string.
             /// </summary>
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
         }
 
