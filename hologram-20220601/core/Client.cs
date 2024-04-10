@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 body["duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerlessComputing))
+            {
+                body["enableServerlessComputing"] = request.EnableServerlessComputing;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayCount))
             {
                 body["gatewayCount"] = request.GatewayCount;
@@ -290,6 +294,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerlessComputing))
+            {
+                body["enableServerlessComputing"] = request.EnableServerlessComputing;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayCount))
             {
@@ -1177,6 +1185,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 body["cpu"] = request.Cpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerlessComputing))
+            {
+                body["enableServerlessComputing"] = request.EnableServerlessComputing;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayCount))
             {
                 body["gatewayCount"] = request.GatewayCount;
@@ -1230,6 +1242,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerlessComputing))
+            {
+                body["enableServerlessComputing"] = request.EnableServerlessComputing;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayCount))
             {

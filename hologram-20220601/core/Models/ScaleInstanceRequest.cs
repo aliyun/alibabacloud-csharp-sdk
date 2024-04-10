@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? Cpu { get; set; }
 
+        [NameInMap("enableServerlessComputing")]
+        [Validation(Required=false)]
+        public bool? EnableServerlessComputing { get; set; }
+
         /// <summary>
         /// The number of gateways. Valid values: 2 to 50.
         /// 
