@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
                 [Validation(Required=false)]
                 public string CoverUrl { get; set; }
 
+                [NameInMap("HumanBoxes")]
+                [Validation(Required=false)]
+                public List<List<double?>> HumanBoxes { get; set; }
+
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }

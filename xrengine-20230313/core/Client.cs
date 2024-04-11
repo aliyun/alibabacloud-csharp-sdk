@@ -5380,6 +5380,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313
             {
                 body["JwtToken"] = request.JwtToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedBoxIndex))
+            {
+                body["SelectedBoxIndex"] = request.SelectedBoxIndex;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 body["Title"] = request.Title;
@@ -5418,6 +5422,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
             {
                 body["JwtToken"] = request.JwtToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedBoxIndex))
+            {
+                body["SelectedBoxIndex"] = request.SelectedBoxIndex;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.XrEngine20230313.Models
         [Validation(Required=false)]
         public string JwtToken { get; set; }
 
+        [NameInMap("SelectedBoxIndex")]
+        [Validation(Required=false)]
+        public int? SelectedBoxIndex { get; set; }
+
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
