@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceResponseBody : TeaModel {
+        [NameInMap("OrderParams")]
+        [Validation(Required=false)]
+        public string OrderParams { get; set; }
+
         /// <summary>
         /// The price information.
         /// </summary>
@@ -103,6 +107,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
 
+            [NameInMap("OrderLines")]
+            [Validation(Required=false)]
+            public string OrderLines { get; set; }
+
             /// <summary>
             /// The original price.
             /// </summary>
@@ -122,6 +130,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<string> RuleId { get; set; }
 
             }
+
+            [NameInMap("TradeMaxRCUAmount")]
+            [Validation(Required=false)]
+            public float? TradeMaxRCUAmount { get; set; }
+
+            [NameInMap("TradeMinRCUAmount")]
+            [Validation(Required=false)]
+            public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
             /// The transaction price, which is equal to the original price minus the discount.
@@ -172,6 +188,52 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? RuleId { get; set; }
 
             }
+
+        }
+
+        [NameInMap("ServerlessPrice")]
+        [Validation(Required=false)]
+        public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
+        public class DescribePriceResponseBodyServerlessPrice : TeaModel {
+            [NameInMap("RCUDiscountMaxAmount")]
+            [Validation(Required=false)]
+            public float? RCUDiscountMaxAmount { get; set; }
+
+            [NameInMap("RCUDiscountMinAmount")]
+            [Validation(Required=false)]
+            public float? RCUDiscountMinAmount { get; set; }
+
+            [NameInMap("RCUOriginalMaxAmount")]
+            [Validation(Required=false)]
+            public float? RCUOriginalMaxAmount { get; set; }
+
+            [NameInMap("RCUOriginalMinAmount")]
+            [Validation(Required=false)]
+            public float? RCUOriginalMinAmount { get; set; }
+
+            [NameInMap("StorageOriginalAmount")]
+            [Validation(Required=false)]
+            public float? StorageOriginalAmount { get; set; }
+
+            [NameInMap("TotalOriginalMaxAmount")]
+            [Validation(Required=false)]
+            public float? TotalOriginalMaxAmount { get; set; }
+
+            [NameInMap("TotalOriginalMinAmount")]
+            [Validation(Required=false)]
+            public float? TotalOriginalMinAmount { get; set; }
+
+            [NameInMap("TradeMaxRCUAmount")]
+            [Validation(Required=false)]
+            public float? TradeMaxRCUAmount { get; set; }
+
+            [NameInMap("TradeMinRCUAmount")]
+            [Validation(Required=false)]
+            public float? TradeMinRCUAmount { get; set; }
+
+            [NameInMap("storageDiscountAmount")]
+            [Validation(Required=false)]
+            public float? StorageDiscountAmount { get; set; }
 
         }
 

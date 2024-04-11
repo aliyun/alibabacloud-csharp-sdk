@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **account**
         /// *   **database**
+        /// 
+        /// >  This parameter is required.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]

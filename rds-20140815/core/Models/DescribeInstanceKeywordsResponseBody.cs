@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of reserved keywords.
+        /// The reserved keywords.
         /// </summary>
         [NameInMap("Words")]
         [Validation(Required=false)]

@@ -6949,9 +6949,9 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * MySQL
+          * RDS MySQL
           * ### [](#)References
-          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
           * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
           *
           * @param tmpReq CreateOrderForDeleteDBNodesRequest
@@ -7053,9 +7053,9 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * MySQL
+          * RDS MySQL
           * ### [](#)References
-          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
           * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
           *
           * @param tmpReq CreateOrderForDeleteDBNodesRequest
@@ -7157,9 +7157,9 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * MySQL
+          * RDS MySQL
           * ### [](#)References
-          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
           * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
           *
           * @param request CreateOrderForDeleteDBNodesRequest
@@ -7173,9 +7173,9 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /**
           * ### [](#)Supported database engines
-          * MySQL
+          * RDS MySQL
           * ### [](#)References
-          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
           * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
           *
           * @param request CreateOrderForDeleteDBNodesRequest
@@ -23019,6 +23019,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeInstanceCrossBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          *
+          * @param request DescribeInstanceKeywordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceKeywordsResponse
+         */
         public DescribeInstanceKeywordsResponse DescribeInstanceKeywordsWithOptions(DescribeInstanceKeywordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23062,6 +23073,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeInstanceKeywordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          *
+          * @param request DescribeInstanceKeywordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceKeywordsResponse
+         */
         public async Task<DescribeInstanceKeywordsResponse> DescribeInstanceKeywordsWithOptionsAsync(DescribeInstanceKeywordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23105,12 +23127,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeInstanceKeywordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          *
+          * @param request DescribeInstanceKeywordsRequest
+          * @return DescribeInstanceKeywordsResponse
+         */
         public DescribeInstanceKeywordsResponse DescribeInstanceKeywords(DescribeInstanceKeywordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceKeywordsWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          *
+          * @param request DescribeInstanceKeywordsRequest
+          * @return DescribeInstanceKeywordsResponse
+         */
         public async Task<DescribeInstanceKeywordsResponse> DescribeInstanceKeywordsAsync(DescribeInstanceKeywordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
