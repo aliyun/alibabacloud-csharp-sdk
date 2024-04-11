@@ -15049,6 +15049,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DtsJobId"] = request.DtsJobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -15105,6 +15113,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
             {
                 query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
+            {
+                query["MaxDu"] = request.MaxDu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDu))
+            {
+                query["MinDu"] = request.MinDu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {

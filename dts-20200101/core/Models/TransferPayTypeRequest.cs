@@ -42,6 +42,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
+        [NameInMap("MaxDu")]
+        [Validation(Required=false)]
+        public int? MaxDu { get; set; }
+
+        [NameInMap("MinDu")]
+        [Validation(Required=false)]
+        public int? MinDu { get; set; }
+
         /// <summary>
         /// The billing cycle of the subscription instance. Valid values:
         /// 
