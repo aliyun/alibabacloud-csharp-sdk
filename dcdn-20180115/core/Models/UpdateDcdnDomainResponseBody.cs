@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UpdateDcdnDomainResponseBody : TeaModel {
         /// <summary>
-        /// The information about the addresses of origin servers.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class UpdateDcdnDomainRequest : TeaModel {
         /// <summary>
-        /// The top-level domain name.
+        /// The accelerated domain name. You can specify only one domain name in each call.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each call.
+        /// The information about the addresses of origin servers.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **UpdateDcdnDomain**.
+        /// The top-level domain.
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

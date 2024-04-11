@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The content returned by calling the operation.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Dictionary<string, object> Content { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DescribeRoutineUserInfo**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

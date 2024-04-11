@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteDcdnKvRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The name of the key that you want to delete.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]

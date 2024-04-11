@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnHttpsDomainListResponseBody : TeaModel {
         /// <summary>
-        /// The time when the certificate became effective.
+        /// The information about the certificate.
         /// </summary>
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
@@ -21,56 +21,64 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo : TeaModel {
                 /// <summary>
-                /// The certificate information about the domain name.
+                /// The returned primary domain name of the certificate.
                 /// </summary>
                 [NameInMap("CertCommonName")]
                 [Validation(Required=false)]
                 public string CertCommonName { get; set; }
 
                 /// <summary>
-                /// The name of the certificate.
+                /// The time at which the certificate expires.
                 /// </summary>
                 [NameInMap("CertExpireTime")]
                 [Validation(Required=false)]
                 public string CertExpireTime { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name for which the certificate information was queried.
+                /// The name of the certificate.
                 /// </summary>
                 [NameInMap("CertName")]
                 [Validation(Required=false)]
                 public string CertName { get; set; }
 
                 /// <summary>
-                /// The time when the certificate expires.
+                /// The time at which the certificate became effective.
                 /// </summary>
                 [NameInMap("CertStartTime")]
                 [Validation(Required=false)]
                 public string CertStartTime { get; set; }
 
                 /// <summary>
-                /// The number of pages to return. Valid values: **1 to 100000**.
+                /// The status of the certificate. Valid values:
+                /// 
+                /// *   **ok**: The certificate is working as expected.
+                /// *   **mismatch**: The certificate does not match the specified domain name.
+                /// *   **expired**: The certificate has expired.
+                /// *   **expire_soon**: The certificate is about to expire.
                 /// </summary>
                 [NameInMap("CertStatus")]
                 [Validation(Required=false)]
                 public string CertStatus { get; set; }
 
                 /// <summary>
-                /// The operation that you want to perform. Set the value to **DescribeDcdnHttpsDomainList**.
+                /// The type of the certificate. Valid values:
+                /// 
+                /// *   **cas**: a certificate that is purchased by using Certificate Management Service
+                /// *   **upload**: a custom certificate that you upload
                 /// </summary>
                 [NameInMap("CertType")]
                 [Validation(Required=false)]
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The keyword used for search.
+                /// The time at which the certificate was updated.
                 /// </summary>
                 [NameInMap("CertUpdateTime")]
                 [Validation(Required=false)]
                 public string CertUpdateTime { get; set; }
 
                 /// <summary>
-                /// The time when the certificate was updated.
+                /// The accelerated domain name.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
@@ -81,14 +89,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The returned primary domain name of the certificate.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
