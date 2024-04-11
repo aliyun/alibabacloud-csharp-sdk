@@ -61,6 +61,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public DescribeImageResultExtResponseBodyDataTextInImage TextInImage { get; set; }
             public class DescribeImageResultExtResponseBodyDataTextInImage : TeaModel {
+                [NameInMap("CustomTexts")]
+                [Validation(Required=false)]
+                public List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> CustomTexts { get; set; }
+                public class DescribeImageResultExtResponseBodyDataTextInImageCustomTexts : TeaModel {
+                    [NameInMap("KeyWords")]
+                    [Validation(Required=false)]
+                    public string KeyWords { get; set; }
+
+                    [NameInMap("LibId")]
+                    [Validation(Required=false)]
+                    public string LibId { get; set; }
+
+                    [NameInMap("LibName")]
+                    [Validation(Required=false)]
+                    public string LibName { get; set; }
+
+                }
+
                 [NameInMap("OcrDatas")]
                 [Validation(Required=false)]
                 public List<string> OcrDatas { get; set; }
