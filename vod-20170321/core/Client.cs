@@ -6579,6 +6579,136 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainUsageDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodMediaPlayDataResponse DescribeVodMediaPlayDataWithOptions(DescribeVodMediaPlayDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderName))
+            {
+                query["OrderName"] = request.OrderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                query["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayDate))
+            {
+                query["PlayDate"] = request.PlayDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalType))
+            {
+                query["TerminalType"] = request.TerminalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodMediaPlayData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodMediaPlayDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodMediaPlayDataResponse> DescribeVodMediaPlayDataWithOptionsAsync(DescribeVodMediaPlayDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderName))
+            {
+                query["OrderName"] = request.OrderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                query["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayDate))
+            {
+                query["PlayDate"] = request.PlayDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalType))
+            {
+                query["TerminalType"] = request.TerminalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodMediaPlayData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodMediaPlayDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodMediaPlayDataResponse DescribeVodMediaPlayData(DescribeVodMediaPlayDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodMediaPlayDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodMediaPlayDataResponse> DescribeVodMediaPlayDataAsync(DescribeVodMediaPlayDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodMediaPlayDataWithOptionsAsync(request, runtime);
+        }
+
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
           * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -13286,6 +13416,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {
                 query["ObjectPath"] = request.ObjectPath;
@@ -13334,6 +13468,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
             {
                 query["ObjectPath"] = request.ObjectPath;
@@ -14200,8 +14338,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-          * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+          * Specifies an AI template as the default template.
           *
           * @param request SetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14235,8 +14372,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-          * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+          * Specifies an AI template as the default template.
           *
           * @param request SetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14270,8 +14406,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-          * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+          * Specifies an AI template as the default template.
           *
           * @param request SetDefaultAITemplateRequest
           * @return SetDefaultAITemplateResponse
@@ -14283,8 +14418,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-          * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+          * Specifies an AI template as the default template.
           *
           * @param request SetDefaultAITemplateRequest
           * @return SetDefaultAITemplateResponse
