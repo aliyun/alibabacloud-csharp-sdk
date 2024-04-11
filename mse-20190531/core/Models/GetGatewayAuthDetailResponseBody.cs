@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public GetGatewayAuthDetailResponseBodyData Data { get; set; }
         public class GetGatewayAuthDetailResponseBodyData : TeaModel {
+            [NameInMap("AuthResourceConfig")]
+            [Validation(Required=false)]
+            public string AuthResourceConfig { get; set; }
+
+            [NameInMap("AuthResourceMode")]
+            [Validation(Required=false)]
+            public int? AuthResourceMode { get; set; }
+
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }

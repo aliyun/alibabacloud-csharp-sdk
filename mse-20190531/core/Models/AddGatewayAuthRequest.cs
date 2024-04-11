@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("AuthResourceConfig")]
+        [Validation(Required=false)]
+        public string AuthResourceConfig { get; set; }
+
         /// <summary>
         /// The information about the resource to be authorized.
         /// </summary>
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Path { get; set; }
 
         }
+
+        [NameInMap("AuthResourceMode")]
+        [Validation(Required=false)]
+        public int? AuthResourceMode { get; set; }
 
         /// <summary>
         /// The application ID registered with the OIDC authentication service.

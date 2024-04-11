@@ -724,9 +724,17 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceConfig))
+            {
+                query["AuthResourceConfig"] = request.AuthResourceConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceListShrink))
             {
                 query["AuthResourceList"] = request.AuthResourceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceMode))
+            {
+                query["AuthResourceMode"] = request.AuthResourceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
@@ -845,9 +853,17 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceConfig))
+            {
+                query["AuthResourceConfig"] = request.AuthResourceConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceListShrink))
             {
                 query["AuthResourceList"] = request.AuthResourceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthResourceMode))
+            {
+                query["AuthResourceMode"] = request.AuthResourceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
