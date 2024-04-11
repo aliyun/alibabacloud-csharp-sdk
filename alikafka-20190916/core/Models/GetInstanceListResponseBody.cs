@@ -194,12 +194,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public int? IoMax { get; set; }
 
+                [NameInMap("IoMaxRead")]
+                [Validation(Required=false)]
+                public int? IoMaxRead { get; set; }
+
                 /// <summary>
                 /// The traffic specification.
                 /// </summary>
                 [NameInMap("IoMaxSpec")]
                 [Validation(Required=false)]
                 public string IoMaxSpec { get; set; }
+
+                [NameInMap("IoMaxWrite")]
+                [Validation(Required=false)]
+                public int? IoMaxWrite { get; set; }
 
                 /// <summary>
                 /// The ID of the key that is used for disk encryption in the region where the instance is deployed.

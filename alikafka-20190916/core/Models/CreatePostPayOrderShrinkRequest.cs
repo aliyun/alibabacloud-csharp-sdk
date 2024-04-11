@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class CreatePostPayOrderRequest : TeaModel {
+    public class CreatePostPayOrderShrinkRequest : TeaModel {
         /// <summary>
         /// The deployment mode of the instance. Valid values:
         /// 
@@ -101,17 +101,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
-        public CreatePostPayOrderRequestServerlessConfig ServerlessConfig { get; set; }
-        public class CreatePostPayOrderRequestServerlessConfig : TeaModel {
-            [NameInMap("ReservedPublishCapacity")]
-            [Validation(Required=false)]
-            public long? ReservedPublishCapacity { get; set; }
-
-            [NameInMap("ReservedSubscribeCapacity")]
-            [Validation(Required=false)]
-            public long? ReservedSubscribeCapacity { get; set; }
-
-        }
+        public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
         /// The edition of the instance. Valid values:
@@ -131,8 +121,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreatePostPayOrderRequestTag> Tag { get; set; }
-        public class CreatePostPayOrderRequestTag : TeaModel {
+        public List<CreatePostPayOrderShrinkRequestTag> Tag { get; set; }
+        public class CreatePostPayOrderShrinkRequestTag : TeaModel {
             /// <summary>
             /// The key of tag N.
             /// 

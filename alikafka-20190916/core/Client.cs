@@ -440,13 +440,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
           *
-          * @param request CreatePostPayOrderRequest
+          * @param tmpReq CreatePostPayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreatePostPayOrderResponse
          */
-        public CreatePostPayOrderResponse CreatePostPayOrderWithOptions(CreatePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreatePostPayOrderResponse CreatePostPayOrderWithOptions(CreatePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePostPayOrderShrinkRequest request = new CreatePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployType))
             {
@@ -472,6 +478,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
             {
                 query["PartitionNum"] = request.PartitionNum;
@@ -483,6 +493,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
             {
@@ -518,13 +532,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /**
           * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
           *
-          * @param request CreatePostPayOrderRequest
+          * @param tmpReq CreatePostPayOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return CreatePostPayOrderResponse
          */
-        public async Task<CreatePostPayOrderResponse> CreatePostPayOrderWithOptionsAsync(CreatePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreatePostPayOrderResponse> CreatePostPayOrderWithOptionsAsync(CreatePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePostPayOrderShrinkRequest request = new CreatePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployType))
             {
@@ -550,6 +570,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["IoMaxSpec"] = request.IoMaxSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
             {
                 query["PartitionNum"] = request.PartitionNum;
@@ -561,6 +585,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
             {
