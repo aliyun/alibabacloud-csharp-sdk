@@ -306,6 +306,24 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("NodeErrorRecovery")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyNodeErrorRecovery NodeErrorRecovery { get; set; }
+        public class GetInstanceResponseBodyNodeErrorRecovery : TeaModel {
+            [NameInMap("autoSwitchCountdownSeconds")]
+            [Validation(Required=false)]
+            public long? AutoSwitchCountdownSeconds { get; set; }
+
+            [NameInMap("enableAutoSwitchOnNodeError")]
+            [Validation(Required=false)]
+            public bool? EnableAutoSwitchOnNodeError { get; set; }
+
+            [NameInMap("hasNodeError")]
+            [Validation(Required=false)]
+            public bool? HasNodeError { get; set; }
+
+        }
+
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
