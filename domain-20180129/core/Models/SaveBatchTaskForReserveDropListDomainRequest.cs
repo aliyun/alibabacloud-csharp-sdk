@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public List<SaveBatchTaskForReserveDropListDomainRequestDomains> Domains { get; set; }
         public class SaveBatchTaskForReserveDropListDomainRequestDomains : TeaModel {
+            [NameInMap("Dns1")]
+            [Validation(Required=false)]
+            public string Dns1 { get; set; }
+
+            [NameInMap("Dns2")]
+            [Validation(Required=false)]
+            public string Dns2 { get; set; }
+
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
