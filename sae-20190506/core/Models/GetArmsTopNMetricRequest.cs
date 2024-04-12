@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetArmsTopNMetricRequest : TeaModel {
+        [NameInMap("AppSource")]
+        [Validation(Required=false)]
+        public string AppSource { get; set; }
+
+        [NameInMap("CpuStrategy")]
+        [Validation(Required=false)]
+        public string CpuStrategy { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }

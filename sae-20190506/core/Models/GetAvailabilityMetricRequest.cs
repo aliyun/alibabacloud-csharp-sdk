@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetAvailabilityMetricRequest : TeaModel {
+        [NameInMap("AppSource")]
+        [Validation(Required=false)]
+        public string AppSource { get; set; }
+
+        [NameInMap("CpuStrategy")]
+        [Validation(Required=false)]
+        public string CpuStrategy { get; set; }
+
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }

@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CommitUrl { get; set; }
 
+            [NameInMap("OrganizationId")]
+            [Validation(Required=false)]
+            public string OrganizationId { get; set; }
+
             [NameInMap("Provider")]
             [Validation(Required=false)]
             public string Provider { get; set; }
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("BranchName")]
             [Validation(Required=false)]
             public string BranchName { get; set; }
+
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

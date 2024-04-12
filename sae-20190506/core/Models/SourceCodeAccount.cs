@@ -21,6 +21,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Organizations")]
+        [Validation(Required=false)]
+        public List<SourceCodeAccountOrganizations> Organizations { get; set; }
+        public class SourceCodeAccountOrganizations : TeaModel {
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
     }
 
 }

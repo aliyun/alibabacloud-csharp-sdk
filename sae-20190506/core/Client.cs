@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NamespaceId"] = request.NamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -220,6 +224,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -267,6 +275,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NamespaceId"] = request.NamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -298,6 +310,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5921,6 +5937,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -5965,6 +5989,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -6023,6 +6055,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
@@ -6055,6 +6095,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
@@ -6101,6 +6149,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
                 query["CreateTime"] = request.CreateTime;
@@ -6141,6 +6197,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
                 query["CreateTime"] = request.CreateTime;
@@ -6195,6 +6259,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
@@ -6227,6 +6299,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
@@ -6273,6 +6353,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -6313,6 +6401,14 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSource))
+            {
+                query["AppSource"] = request.AppSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuStrategy))
+            {
+                query["CpuStrategy"] = request.CpuStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;

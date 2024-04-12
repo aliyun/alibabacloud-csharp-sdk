@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("routeConfig")]
+        [Validation(Required=false)]
+        public RouteConfig RouteConfig { get; set; }
+
         [NameInMap("subdomainCount")]
         [Validation(Required=false)]
         public string SubdomainCount { get; set; }

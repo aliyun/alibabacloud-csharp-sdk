@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string BranchName { get; set; }
 
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
+                public string TagName { get; set; }
+
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -85,9 +89,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CommitUrl { get; set; }
 
-            [NameInMap("OrgId")]
+            [NameInMap("OrganizationId")]
             [Validation(Required=false)]
-            public string OrgId { get; set; }
+            public string OrganizationId { get; set; }
 
             [NameInMap("Provider")]
             [Validation(Required=false)]
@@ -228,6 +232,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+        }
+
+        [NameInMap("TriggerConfig")]
+        [Validation(Required=false)]
+        public BuildPipelineRunTriggerConfig TriggerConfig { get; set; }
+        public class BuildPipelineRunTriggerConfig : TeaModel {
+            [NameInMap("BranchName")]
+            [Validation(Required=false)]
+            public string BranchName { get; set; }
+
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
 
