@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ConfigInstanceWhiteListRequest : TeaModel {
         /// <summary>
-        /// The ID of the bastion host for which a whitelist of public IP addresses is configured.
+        /// The ID of the bastion host for which you want to configure a whitelist of public IP addresses.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Configures a whitelist of public IP addresses for a bastion host.
+        /// The region ID of the bastion host.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// ConfigInstanceWhiteList
+        /// The public IP addresses that you want to add to the whitelist.
         /// </summary>
         [NameInMap("WhiteList")]
         [Validation(Required=false)]

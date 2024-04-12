@@ -35,9 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// The region ID of the bastion host on which you want to create a host group.
         /// 
-        /// **
-        /// 
-        /// **For more information about the mapping between region IDs and region names, see **Regions and zones[.](~~40654~~)
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

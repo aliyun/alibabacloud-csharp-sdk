@@ -10,32 +10,35 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// Queries the details of a specified user group in a specified Bastionhost instance.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// GetUserGroup
+        /// The details of the user group returned.
         /// </summary>
         [NameInMap("UserGroup")]
         [Validation(Required=false)]
         public GetUserGroupResponseBodyUserGroup UserGroup { get; set; }
         public class GetUserGroupResponseBodyUserGroup : TeaModel {
             /// <summary>
-            /// GetUserGroup
+            /// The description of the user group.
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
+            /// <summary>
+            /// The ID of the group.
+            /// </summary>
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
             public string UserGroupId { get; set; }
 
             /// <summary>
-            /// WB662865
+            /// The name of the user group.
             /// </summary>
             [NameInMap("UserGroupName")]
             [Validation(Required=false)]

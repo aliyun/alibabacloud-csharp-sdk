@@ -10,17 +10,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetInstanceADAuthServerRequest : TeaModel {
         /// <summary>
-        /// The field that is used to indicate the email address of a user on the AD server.
+        /// The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Indicates whether passwords are required. Valid values:
+        /// The region ID of the bastion host.
         /// 
-        /// *   **true**: required
-        /// *   **false**: not required
+        /// > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

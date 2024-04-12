@@ -17,16 +17,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public GetInstanceTwoFactorResponseBodyConfig Config { get; set; }
         public class GetInstanceTwoFactorResponseBodyConfig : TeaModel {
             /// <summary>
-            /// Queries the settings of two-factor authentication on a bastion host.
+            /// Indicates whether two-factor authentication is enabled. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("EnableTwoFactor")]
             [Validation(Required=false)]
             public bool? EnableTwoFactor { get; set; }
 
+            /// <summary>
+            /// The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
+            /// 
+            /// > If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
+            /// </summary>
             [NameInMap("SkipTwoFactorTime")]
             [Validation(Required=false)]
             public long? SkipTwoFactorTime { get; set; }
 
+            /// <summary>
+            /// The two-factor authentication methods.
+            /// </summary>
             [NameInMap("TwoFactorMethods")]
             [Validation(Required=false)]
             public List<string> TwoFactorMethods { get; set; }
@@ -34,9 +45,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
-        /// 
-        /// >  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

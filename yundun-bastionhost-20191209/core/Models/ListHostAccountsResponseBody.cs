@@ -10,44 +10,65 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the host account.
+        /// An array that consists of the queried host accounts.
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
         public List<ListHostAccountsResponseBodyHostAccounts> HostAccounts { get; set; }
         public class ListHostAccountsResponseBodyHostAccounts : TeaModel {
             /// <summary>
-            /// The fingerprint of the private key for the host account.
+            /// Indicates whether a password is configured for the host account.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   true: A password is configured for the host account.
+            /// *   false: No passwords are configured for the host account.
             /// </summary>
             [NameInMap("HasPassword")]
             [Validation(Required=false)]
             public bool? HasPassword { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The ID of the host account.
             /// </summary>
             [NameInMap("HostAccountId")]
             [Validation(Required=false)]
             public string HostAccountId { get; set; }
 
             /// <summary>
-            /// The name of the shared key.
+            /// The name of the host account.
             /// </summary>
             [NameInMap("HostAccountName")]
             [Validation(Required=false)]
             public string HostAccountName { get; set; }
 
+            /// <summary>
+            /// The ID of the host.
+            /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
+            /// <summary>
+            /// The ID of the shared key.
+            /// </summary>
             [NameInMap("HostShareKeyId")]
             [Validation(Required=false)]
             public string HostShareKeyId { get; set; }
 
+            /// <summary>
+            /// The name of the shared key.
+            /// </summary>
             [NameInMap("HostShareKeyName")]
             [Validation(Required=false)]
             public string HostShareKeyName { get; set; }
+
+            /// <summary>
+            /// The fingerprint of the private key for the host account.
+            /// </summary>
+            [NameInMap("PrivateKeyFingerprint")]
+            [Validation(Required=false)]
+            public string PrivateKeyFingerprint { get; set; }
 
             /// <summary>
             /// The protocol that is used by the host.
@@ -57,13 +78,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// *   SSH
             /// *   RDP
             /// </summary>
-            [NameInMap("PrivateKeyFingerprint")]
-            [Validation(Required=false)]
-            public string PrivateKeyFingerprint { get; set; }
-
-            /// <summary>
-            /// The number of the page to return. Default value: **1**.
-            /// </summary>
             [NameInMap("ProtocolName")]
             [Validation(Required=false)]
             public string ProtocolName { get; set; }
@@ -71,16 +85,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// An array that consists of the queried host accounts.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host in which you want to query accounts of the specified host.
-        /// 
-        /// >  You can call the DescribeInstances operation to query the ID of the bastion host.
+        /// The total number of host accounts that are queried.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
