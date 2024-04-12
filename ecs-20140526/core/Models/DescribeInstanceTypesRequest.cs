@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string CpuArchitecture { get; set; }
 
+        [NameInMap("CpuArchitectures")]
+        [Validation(Required=false)]
+        public List<string> CpuArchitectures { get; set; }
+
         /// <summary>
         /// The GPU model.
         /// 
@@ -27,6 +31,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("GPUSpec")]
         [Validation(Required=false)]
         public string GPUSpec { get; set; }
+
+        [NameInMap("GpuSpecs")]
+        [Validation(Required=false)]
+        public List<string> GpuSpecs { get; set; }
+
+        [NameInMap("InstanceCategories")]
+        [Validation(Required=false)]
+        public List<string> InstanceCategories { get; set; }
 
         /// <summary>
         /// The category of the instance type. Valid values:
@@ -64,6 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
+        [NameInMap("InstanceTypeFamilies")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypeFamilies { get; set; }
+
         /// <summary>
         /// The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).
         /// 
@@ -79,6 +95,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
+
+        [NameInMap("LocalStorageCategories")]
+        [Validation(Required=false)]
+        public List<string> LocalStorageCategories { get; set; }
 
         /// <summary>
         /// The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
@@ -364,6 +384,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PhysicalProcessorModel")]
         [Validation(Required=false)]
         public string PhysicalProcessorModel { get; set; }
+
+        [NameInMap("PhysicalProcessorModels")]
+        [Validation(Required=false)]
+        public List<string> PhysicalProcessorModels { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

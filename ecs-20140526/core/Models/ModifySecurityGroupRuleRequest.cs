@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The destination IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.
+        /// The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
         /// 
         /// By default, this parameter is left empty.
         /// </summary>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// The transport layer protocol of the security group rule. The values of this parameter are not case-sensitive. Valid values:
+        /// The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:
         /// 
         /// *   ICMP
         /// *   GRE
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// The destination IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.
+        /// The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
         /// 
-        /// > Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
+        /// >  Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
         /// 
         /// By default, this parameter is left empty.
         /// </summary>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
-        /// The source IPv6 CIDR block to which you want to control access. IPv6 CIDR blocks and addresses are supported.
+        /// The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
         /// 
-        /// > Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
+        /// >  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
         /// 
         /// By default, this parameter is left empty.
         /// </summary>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupRuleId { get; set; }
 
         /// <summary>
-        /// The source IPv4 CIDR block to which you want to control access. IPv4 CIDR blocks and addresses are supported.
+        /// The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
         /// 
         /// By default, this parameter is left empty.
         /// </summary>

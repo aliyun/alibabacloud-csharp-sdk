@@ -17,14 +17,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// The command name.
+        /// The command name. If you specify both this parameter and `InstanceId`, this parameter does not take effect.
         /// </summary>
         [NameInMap("CommandName")]
         [Validation(Required=false)]
         public string CommandName { get; set; }
 
         /// <summary>
-        /// The command type. If this parameter and `InstanceId` are both specified, this parameter does not take effect.
+        /// The command type. Valid values:
+        /// 
+        /// *   RunBatScript: batch command, applicable to Windows instances.
+        /// *   RunPowerShellScript: PowerShell command, applicable to Windows instances.
+        /// *   RunShellScript: shell command, applicable to Linux instances.
         /// </summary>
         [NameInMap("CommandType")]
         [Validation(Required=false)]
@@ -69,38 +73,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The overall execution state of the command. The value of this parameter depends on the execution states on all involved instances. Valid values:
+        /// The overall execution status of the command task. The value of this parameter depends on the execution states of the command task on all involved instances. Valid values:
         /// 
         /// *   Running:
         /// 
-        ///     *   Scheduled execution: Before you manually stop the execution of the command, the overall execution state is always Running.
-        ///     *   One-time execution: If the execution is in progress on one or more instances, the overall execution state is Running.
+        ///     *   Scheduled task: Before you stop the scheduled execution of the command, the overall execution state is always Running.
+        ///     *   One-time task: If the command is being run on instances, the overall execution state is Running.
         /// 
         /// *   Finished:
         /// 
-        ///     *   Scheduled execution: The overall execution state can never be Finished.
-        ///     *   One-time execution: The execution is complete on all instances, or the execution is manually stopped on some instances and is complete on other instances.
+        ///     *   Scheduled task: The overall execution state can never be Finished.
+        ///     *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.
+        /// 
+        /// *   Success: If the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.
+        /// 
+        ///     *   One-time task: The execution is complete, and the exit code is 0.
+        ///     *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.
         /// 
         /// *   Failed:
         /// 
-        ///     *   Scheduled execution: The overall execution state can never be Failed.
-        ///     *   One-time execution: The execution fails on all instances.
+        ///     *   Scheduled task: The overall execution state can never be Failed.
+        ///     *   One-time task: The execution fails on all instances.
         /// 
-        /// *   PartialFailed:
+        /// *   Stopped: The task is stopped.
         /// 
-        ///     *   Scheduled execution: The overall execution state can never be PartialFailed.
-        ///     *   One-time execution: The execution fails on some instances.
+        /// *   Stopping: The task is being stopped.
         /// 
-        /// *   Stopped: The execution is stopped.
+        /// *   PartialFailed: The task fails on some instances. If you specify both this parameter and `InstanceId`, this parameter does not take effect.
         /// </summary>
         [NameInMap("InvokeStatus")]
         [Validation(Required=false)]
         public string InvokeStatus { get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page. 
+        /// The maximum number of entries per page.
         /// 
-        /// Valid values: 1 to 50. 
+        /// Valid values: 1 to 50.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -153,12 +161,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The execution mode of the command. Valid values:
+        /// The execution mode of the command. If you specify both this parameter and `InstanceId`, this parameter does not take effect. Valid values:
         /// 
-        /// *   Once: immediately runs the command.
+        /// *   Once: The command is immediately run.
         /// *   Period: The command is run on a schedule.
-        /// *   NextRebootOnly: The command is automatically run the next time the instance starts.
-        /// *   EveryReboot: The command is automatically run every time the instance starts.
+        /// *   NextRebootOnly: The command is run the next time the instances start.
+        /// *   EveryReboot: The command is run every time the instances start.
         /// 
         /// This parameter is empty by default, which indicates that commands run in all modes are queried.
         /// </summary>
@@ -209,14 +217,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Specifies whether to query commands that are to be automatically run. Valid values:
+        /// Specifies whether the command is to be automatically run. Valid values:
         /// 
-        /// *   true: queries commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.
+        /// *   true: The command is run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`.
         /// 
-        /// *   false: queries commands that meet the following requirements:
+        /// *   false: The command meets one of the following requirements:
         /// 
-        ///     *   The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.
-        ///     *   The executions of the commands are canceled, stopped, or complete.
+        ///     *   The command is run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.
+        ///     *   The command task is canceled, stopped, or completed.
         /// 
         /// Default value: false.
         /// </summary>
