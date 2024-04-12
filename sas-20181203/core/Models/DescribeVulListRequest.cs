@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public string Ids { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Default value: **zh**. Valid values:
         /// 
