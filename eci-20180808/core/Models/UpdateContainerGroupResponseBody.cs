@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class UpdateContainerGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

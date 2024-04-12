@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The data cache ID.
+            /// The ID of the data cache.
             /// </summary>
             [NameInMap("DataCacheId")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string LastTimestamp { get; set; }
 
                 /// <summary>
-                /// The information about the event.
+                /// The message about the event.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The event cause.
+                /// The reason for the transition into the current status of the event.
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The event type. Valid values:
+                /// The type of the event. Valid values:
                 /// 
                 /// *   Normal
                 /// *   Warning
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string ExpireDateTime { get; set; }
 
             /// <summary>
-            /// The ID of the local snapshot.
+            /// The ID of the on-premises snapshot.
             /// </summary>
             [NameInMap("FlashSnapshotId")]
             [Validation(Required=false)]
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string LastMatchedTime { get; set; }
 
             /// <summary>
-            /// The data cache name.
+            /// The name of the data cache.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The vHost directory in which the data cache resides.
+            /// The directory in which the virtual host of the data cache resides.
             /// </summary>
             [NameInMap("Path")]
             [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The resource group ID.
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// The state of the data cache. Valid values:
+            /// The status of the data cache. Valid values:
             /// 
             /// *   Loading: The data cache is loading data.
             /// *   Creating: The data cache is being created.
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// *   Updating: The data cache is being updated.
             /// *   UpdateFailed: The data cache failed to be updated.
             /// 
-            /// The data cache is available when it is in the Ready state.
+            /// If the data cache is in the Available state, the data cache can be used.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

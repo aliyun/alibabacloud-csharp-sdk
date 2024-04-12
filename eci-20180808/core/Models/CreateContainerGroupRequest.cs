@@ -198,6 +198,13 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// The computing power type of the instance.
+        /// </summary>
+        [NameInMap("ComputeCategory")]
+        [Validation(Required=false)]
+        public List<string> ComputeCategory { get; set; }
+
+        /// <summary>
         /// The information about the containers.
         /// </summary>
         [NameInMap("Container")]
@@ -357,28 +364,28 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The arguments that are passed to the startup command of the container. You can specify a maximum of 10 arguments.
+            /// The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.
             /// </summary>
             [NameInMap("Arg")]
             [Validation(Required=false)]
             public List<string> Arg { get; set; }
 
             /// <summary>
-            /// The commands that you want to run to perform checks in containers.
+            /// The commands that you want to run to perform health checks on containers.
             /// </summary>
             [NameInMap("Command")]
             [Validation(Required=false)]
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the container. Unit: cores.
+            /// The number of vCPUs that you want to allocate to the container.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The environment variable of the container.
+            /// The value of the environment variable for the container.
             /// </summary>
             [NameInMap("EnvironmentVar")]
             [Validation(Required=false)]
@@ -395,14 +402,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The name of the environment variable. The name must be 1 to 128 characters in length, and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+                /// The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value can be up to 256 characters in length.
+                /// The value of the environment variable. The value must be 0 to 256 bits in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -411,10 +418,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// Specifies whether to hide the information about the environment variable when you query the details of an elastic container instance (ECI). Valid values:
+            /// Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:
             /// 
-            /// *   false (default): does not hide the information about the environment variable.
-            /// *   true: does not return the information about the environment variable. If the environment variable contains sensitive information, you can set this parameter to true to improve the security of the information.
+            /// *   false
+            /// *   true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.
             /// </summary>
             [NameInMap("EnvironmentVarHide")]
             [Validation(Required=false)]
@@ -437,23 +444,23 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// <summary>
             /// The policy that you want to use to pull an image. Valid values:
             /// 
-            /// *   Always: Image pulling is always performed.
-            /// *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
-            /// *   Never: Image pulling is not performed. On-premises images are always used.
+            /// *   Always: Each time instances are created, image pulling is performed.
+            /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+            /// *   Never: On-premises images are always used. Image pulling is not performed.
             /// </summary>
             [NameInMap("ImagePullPolicy")]
             [Validation(Required=false)]
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// The commands to be executed in containers when you use the CLI to specify the postStart callback function.
+            /// The commands to be executed in containers when you use a CLI to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the postStart callback function.
+            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
             [Validation(Required=false)]
@@ -467,7 +474,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> LifecyclePostStartHandlerHttpGetHttpHeader { get; set; }
             public class CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader : TeaModel {
                 /// <summary>
-                /// The key of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
+                /// The name of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -483,14 +490,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+            /// The port to which the system sends an HTTP GET request when you use an HTTP request to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
             [Validation(Required=false)]
@@ -507,28 +514,28 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.
+            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.
+            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The commands to be executed in containers when you use the CLI to specify the preStop callback function.
+            /// The commands to be executed in containers when you use a CLI to specify the preStop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the preStop callback function.
+            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
             [Validation(Required=false)]
@@ -558,21 +565,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+            /// The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify the preStop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// The protocol type of HTTP GET requests when you use HTTP requests to specify the preStop callback function. Valid values:
+            /// The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:
             /// 
             /// *   HTTP
             /// *   HTTPS
@@ -582,35 +589,35 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The host IP address that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.
+            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.
+            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size of the container. Unit: GiB
+            /// The memory size that you want to allocate to the container. Unit: GiB
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
             /// <summary>
-            /// The container name.
+            /// The name of the container.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The port to which HTTP GET requests are sent when you use HTTP requests to perform health checks.
+            /// The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -635,24 +642,30 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             }
 
+            /// <summary>
+            /// The user group that runs the container.
+            /// </summary>
             [NameInMap("SecurityContextRunAsGroup")]
             [Validation(Required=false)]
             public long? SecurityContextRunAsGroup { get; set; }
 
+            /// <summary>
+            /// Specifies whether to run the container as a non-root user.
+            /// </summary>
             [NameInMap("SecurityContextRunAsNonRoot")]
             [Validation(Required=false)]
             public bool? SecurityContextRunAsNonRoot { get; set; }
 
             /// <summary>
-            /// Specifies whether the container allocates a buffer for standard input in the container runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input in the container is read. Default value: false.
+            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
             /// </summary>
             [NameInMap("Stdin")]
             [Validation(Required=false)]
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether to keep the standard input stream open in the container runtime across multiple attach sessions if Stdin is set to true.\
-            /// If StdinOnce is set to true, the standard input stream is opened when the container is started, remains empty until the first client is attached to standard input, and then remains open and receives data until the client is disconnected. When the client is disconnected, the standard input stream is closed and remains closed until the container is restarted.
+            /// Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\
+            /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
@@ -666,7 +679,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string TerminationMessagePath { get; set; }
 
             /// <summary>
-            /// The message notification policy. This parameter is empty by default. You can use only Message Service (MNS) queues to configure notifications.
+            /// The message notification policy. This parameter is empty by default. Only Message Service (MNS) queue message notifications can be sent.
             /// </summary>
             [NameInMap("TerminationMessagePolicy")]
             [Validation(Required=false)]
@@ -675,14 +688,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// <summary>
             /// Specifies whether to enable interaction. Default value: false.
             /// 
-            /// If you set Command to /bin/bash, you must set this parameter to true.
+            /// If the command is a /bin/bash command, set the value to true.
             /// </summary>
             [NameInMap("Tty")]
             [Validation(Required=false)]
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// The information about the volume that you want to mount on the container.
+            /// The information about the volume that you want to mount to the container.
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
@@ -700,9 +713,9 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 /// <summary>
                 /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
                 /// 
-                /// *   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
+                /// *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
                 /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-                /// *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
+                /// *   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
                 /// 
                 /// Default value: None.
                 /// </summary>
@@ -711,7 +724,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume. This parameter is the same as Name in the Volume object.
+                /// The name of the volume. The name of this parameter is the same as the name of the volume that is mounted to the containers.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -775,6 +788,12 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        /// <summary>
+        /// The CPU architecture of the instance. Default value: AMD64. Valid values:
+        /// 
+        /// *   AMD64
+        /// *   ARM64
+        /// </summary>
         [NameInMap("CpuArchitecture")]
         [Validation(Required=false)]
         public string CpuArchitecture { get; set; }
@@ -911,6 +930,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [NameInMap("FixedIpRetainHour")]
         [Validation(Required=false)]
         public int? FixedIpRetainHour { get; set; }
+
+        [NameInMap("GpuDriverVersion")]
+        [Validation(Required=false)]
+        public string GpuDriverVersion { get; set; }
 
         /// <summary>
         /// The alias of the elastic container instance.
@@ -1280,14 +1303,28 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public List<string> NtpServer { get; set; }
 
+        /// <summary>
+        /// The operating system of the elastic container instance. Default value: Linux. Valid values:
+        /// 
+        /// *   Linux
+        /// *   Windows
+        /// 
+        /// >  Windows instances are in invitational preview. To use the operating system, submit a ticket.
+        /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
 
+        /// <summary>
+        /// The options that you can configure when you enable the overhead reservation feature.
+        /// </summary>
         [NameInMap("OverheadReservationOption")]
         [Validation(Required=false)]
         public CreateContainerGroupRequestOverheadReservationOption OverheadReservationOption { get; set; }
         public class CreateContainerGroupRequestOverheadReservationOption : TeaModel {
+            /// <summary>
+            /// Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.
+            /// </summary>
             [NameInMap("EnableOverheadReservation")]
             [Validation(Required=false)]
             public bool? EnableOverheadReservation { get; set; }

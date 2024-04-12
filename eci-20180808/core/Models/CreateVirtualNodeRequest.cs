@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// he name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).
+        /// The name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("VirtualNodeName")]
         [Validation(Required=false)]

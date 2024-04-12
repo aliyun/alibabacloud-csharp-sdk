@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeContainerGroupsRequest : TeaModel {
         /// <summary>
+        /// The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.
+        /// </summary>
+        [NameInMap("ComputeCategory")]
+        [Validation(Required=false)]
+        public string ComputeCategory { get; set; }
+
+        /// <summary>
         /// The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.
         /// </summary>
         [NameInMap("ContainerGroupIds")]
@@ -57,7 +64,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the elastic container instances belong. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+        /// The ID of the resource group to which the instance belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -71,6 +78,9 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the security group to which the instance belongs.
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
@@ -124,7 +134,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return event information.
+        /// Specify whether to return event information.
         /// </summary>
         [NameInMap("WithEvent")]
         [Validation(Required=false)]

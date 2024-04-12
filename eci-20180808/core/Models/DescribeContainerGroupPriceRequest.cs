@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeContainerGroupPriceRequest : TeaModel {
         /// <summary>
+        /// The computing power type. A value of economy specifies economic instances.
+        /// </summary>
+        [NameInMap("ComputeCategory")]
+        [Validation(Required=false)]
+        public string ComputeCategory { get; set; }
+
+        /// <summary>
         /// The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
         /// </summary>
         [NameInMap("Cpu")]
