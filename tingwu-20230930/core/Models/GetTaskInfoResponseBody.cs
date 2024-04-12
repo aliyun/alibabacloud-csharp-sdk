@@ -25,6 +25,22 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            [NameInMap("OutputMp3Path")]
+            [Validation(Required=false)]
+            public string OutputMp3Path { get; set; }
+
+            [NameInMap("OutputMp4Path")]
+            [Validation(Required=false)]
+            public string OutputMp4Path { get; set; }
+
+            [NameInMap("OutputSpectrumPath")]
+            [Validation(Required=false)]
+            public string OutputSpectrumPath { get; set; }
+
+            [NameInMap("OutputThumbnailPath")]
+            [Validation(Required=false)]
+            public string OutputThumbnailPath { get; set; }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public GetTaskInfoResponseBodyDataResult Result { get; set; }
