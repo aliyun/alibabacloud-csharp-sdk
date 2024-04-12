@@ -124,6 +124,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FlightCabins { get; set; }
 
+                [NameInMap("flight_intl_rule_code")]
+                [Validation(Required=false)]
+                public long? FlightIntlRuleCode { get; set; }
+
+                [NameInMap("flight_rule_code")]
+                [Validation(Required=false)]
+                public long? FlightRuleCode { get; set; }
+
                 [NameInMap("hotel_citys")]
                 [Validation(Required=false)]
                 public List<ApplyQueryResponseBodyModuleExternalTravelerListHotelCitys> HotelCitys { get; set; }
@@ -160,6 +168,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("hotel_intl_rule_code")]
+                [Validation(Required=false)]
+                public long? HotelIntlRuleCode { get; set; }
+
+                [NameInMap("hotel_rule_code")]
+                [Validation(Required=false)]
+                public long? HotelRuleCode { get; set; }
+
                 [NameInMap("premium_economy_discount")]
                 [Validation(Required=false)]
                 public int? PremiumEconomyDiscount { get; set; }
@@ -167,6 +183,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]
                 public int? ReserveType { get; set; }
+
+                [NameInMap("train_rule_code")]
+                [Validation(Required=false)]
+                public long? TrainRuleCode { get; set; }
 
                 [NameInMap("train_seats")]
                 [Validation(Required=false)]
@@ -410,6 +430,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FlightCabins { get; set; }
 
+                [NameInMap("flight_intl_rule_code")]
+                [Validation(Required=false)]
+                public long? FlightIntlRuleCode { get; set; }
+
+                [NameInMap("flight_rule_code")]
+                [Validation(Required=false)]
+                public long? FlightRuleCode { get; set; }
+
                 [NameInMap("hotel_citys")]
                 [Validation(Required=false)]
                 public List<ApplyQueryResponseBodyModuleTravelerListHotelCitys> HotelCitys { get; set; }
@@ -446,6 +474,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("hotel_intl_rule_code")]
+                [Validation(Required=false)]
+                public long? HotelIntlRuleCode { get; set; }
+
+                [NameInMap("hotel_rule_code")]
+                [Validation(Required=false)]
+                public long? HotelRuleCode { get; set; }
+
                 [NameInMap("premium_economy_discount")]
                 [Validation(Required=false)]
                 public int? PremiumEconomyDiscount { get; set; }
@@ -453,6 +489,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]
                 public int? ReserveType { get; set; }
+
+                [NameInMap("train_rule_code")]
+                [Validation(Required=false)]
+                public long? TrainRuleCode { get; set; }
 
                 [NameInMap("train_seats")]
                 [Validation(Required=false)]
