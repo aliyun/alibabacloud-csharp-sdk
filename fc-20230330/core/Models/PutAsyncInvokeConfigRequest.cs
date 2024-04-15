@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutAsyncInvokeConfigRequest : TeaModel {
+        /// <summary>
+        /// The configurations of asynchronous function invocation.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public PutAsyncInvokeConfigInput Body { get; set; }
 
+        /// <summary>
+        /// The version or alias of the function.
+        /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }

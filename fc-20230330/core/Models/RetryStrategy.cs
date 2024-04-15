@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class GetResourceTagsRequest : TeaModel {
-        /// <summary>
-        /// The resource ID.
-        /// </summary>
-        [NameInMap("arn")]
+    public class RetryStrategy : TeaModel {
+        [NameInMap("PushRetryStrategy")]
         [Validation(Required=false)]
-        public string Arn { get; set; }
+        public string PushRetryStrategy { get; set; }
 
     }
 

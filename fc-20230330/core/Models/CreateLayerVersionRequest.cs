@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateLayerVersionRequest : TeaModel {
+        /// <summary>
+        /// The information about layer configurations.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateLayerVersionInput Body { get; set; }

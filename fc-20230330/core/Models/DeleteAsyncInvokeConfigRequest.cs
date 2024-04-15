@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DeleteAsyncInvokeConfigRequest : TeaModel {
+        /// <summary>
+        /// The version or alias of the function.
+        /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }

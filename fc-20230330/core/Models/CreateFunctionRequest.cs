@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateFunctionRequest : TeaModel {
+        /// <summary>
+        /// The information about function configurations.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateFunctionInput Body { get; set; }

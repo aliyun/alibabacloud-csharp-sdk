@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateFunctionRequest : TeaModel {
+        /// <summary>
+        /// The function information
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateFunctionInput Body { get; set; }

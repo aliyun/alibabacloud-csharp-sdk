@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionsRequest : TeaModel {
         /// <summary>
-        /// The number of functions to return.
+        /// The number of functions to return. The minimum value is 1 and the maximum value is 100.
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// A pagination token.
+        /// The pagination token.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// A prefix of function names.
+        /// The prefix of the function name.
         /// </summary>
         [NameInMap("prefix")]
         [Validation(Required=false)]

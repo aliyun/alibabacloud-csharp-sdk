@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateTriggerRequest : TeaModel {
+        /// <summary>
+        /// The trigger configurations.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateTriggerInput Body { get; set; }

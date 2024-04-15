@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutAsyncInvokeConfigInput : TeaModel {
+        [NameInMap("asyncTask")]
+        [Validation(Required=false)]
+        public bool? AsyncTask { get; set; }
+
         [NameInMap("destinationConfig")]
         [Validation(Required=false)]
         public DestinationConfig DestinationConfig { get; set; }

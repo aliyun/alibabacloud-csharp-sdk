@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateVpcBindingRequest : TeaModel {
+        /// <summary>
+        /// The configurations of the virtual private cloud (VPC) binding.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateVpcBindingInput Body { get; set; }

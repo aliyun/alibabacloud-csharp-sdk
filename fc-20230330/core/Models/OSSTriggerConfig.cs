@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class UntagResourceResponse : TeaModel {
-        [NameInMap("headers")]
+    public class OSSTriggerConfig : TeaModel {
+        [NameInMap("events")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public List<string> Events { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("filter")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public Filter Filter { get; set; }
 
     }
 

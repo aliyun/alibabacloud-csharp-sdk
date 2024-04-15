@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class AsyncConfig : TeaModel {
+        [NameInMap("asyncTask")]
+        [Validation(Required=false)]
+        public bool? AsyncTask { get; set; }
+
         [NameInMap("createdTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }

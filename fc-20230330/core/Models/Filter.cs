@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class GetFunctionRequest : TeaModel {
-        /// <summary>
-        /// The version or alias of the function.
-        /// </summary>
-        [NameInMap("qualifier")]
+    public class Filter : TeaModel {
+        [NameInMap("key")]
         [Validation(Required=false)]
-        public string Qualifier { get; set; }
+        public Key Key { get; set; }
 
     }
 

@@ -1545,108 +1545,6 @@ namespace AlibabaCloud.SDK.FC20230330
             return await GetProvisionConfigWithOptionsAsync(functionName, request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetResourceTagsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetResourceTagsResponse
-         */
-        // Deprecated
-        public GetResourceTagsResponse GetResourceTagsWithOptions(GetResourceTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
-            {
-                query["arn"] = request.Arn;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetResourceTags",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetResourceTagsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request GetResourceTagsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetResourceTagsResponse
-         */
-        // Deprecated
-        public async Task<GetResourceTagsResponse> GetResourceTagsWithOptionsAsync(GetResourceTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
-            {
-                query["arn"] = request.Arn;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetResourceTags",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetResourceTagsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request GetResourceTagsRequest
-          * @return GetResourceTagsResponse
-         */
-        // Deprecated
-        public GetResourceTagsResponse GetResourceTags(GetResourceTagsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetResourceTagsWithOptions(request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request GetResourceTagsRequest
-          * @return GetResourceTagsResponse
-         */
-        // Deprecated
-        public async Task<GetResourceTagsResponse> GetResourceTagsAsync(GetResourceTagsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetResourceTagsWithOptionsAsync(request, headers, runtime);
-        }
-
         public GetTriggerResponse GetTriggerWithOptions(string functionName, string triggerName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1716,6 +1614,10 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 realHeaders = headers.CommonHeaders;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAsyncTaskId))
+            {
+                realHeaders["x-fc-async-task-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAsyncTaskId);
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcInvocationType))
             {
                 realHeaders["x-fc-invocation-type"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcInvocationType);
@@ -1775,6 +1677,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
                 realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcAsyncTaskId))
+            {
+                realHeaders["x-fc-async-task-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XFcAsyncTaskId);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XFcInvocationType))
             {
@@ -2819,124 +2725,6 @@ namespace AlibabaCloud.SDK.FC20230330
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request ListTaggedResourcesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTaggedResourcesResponse
-         */
-        // Deprecated
-        public ListTaggedResourcesResponse ListTaggedResourcesWithOptions(ListTaggedResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
-            {
-                query["limit"] = request.Limit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["nextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["resourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListTaggedResources",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tags",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListTaggedResourcesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request ListTaggedResourcesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTaggedResourcesResponse
-         */
-        // Deprecated
-        public async Task<ListTaggedResourcesResponse> ListTaggedResourcesWithOptionsAsync(ListTaggedResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
-            {
-                query["limit"] = request.Limit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["nextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
-            {
-                query["resourceType"] = request.ResourceType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListTaggedResources",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tags",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListTaggedResourcesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request ListTaggedResourcesRequest
-          * @return ListTaggedResourcesResponse
-         */
-        // Deprecated
-        public ListTaggedResourcesResponse ListTaggedResources(ListTaggedResourcesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTaggedResourcesWithOptions(request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request ListTaggedResourcesRequest
-          * @return ListTaggedResourcesResponse
-         */
-        // Deprecated
-        public async Task<ListTaggedResourcesResponse> ListTaggedResourcesAsync(ListTaggedResourcesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTaggedResourcesWithOptionsAsync(request, headers, runtime);
-        }
-
         public ListTriggersResponse ListTriggersWithOptions(string functionName, ListTriggersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3413,98 +3201,6 @@ namespace AlibabaCloud.SDK.FC20230330
             return await PutProvisionConfigWithOptionsAsync(functionName, request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request TagResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourceResponse
-         */
-        // Deprecated
-        public TagResourceResponse TagResourceWithOptions(TagResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TagResource",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<TagResourceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request TagResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourceResponse
-         */
-        // Deprecated
-        public async Task<TagResourceResponse> TagResourceWithOptionsAsync(TagResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TagResource",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<TagResourceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request TagResourceRequest
-          * @return TagResourceResponse
-         */
-        // Deprecated
-        public TagResourceResponse TagResource(TagResourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return TagResourceWithOptions(request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request TagResourceRequest
-          * @return TagResourceResponse
-         */
-        // Deprecated
-        public async Task<TagResourceResponse> TagResourceAsync(TagResourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await TagResourceWithOptionsAsync(request, headers, runtime);
-        }
-
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3563,124 +3259,6 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request UntagResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourceResponse
-         */
-        // Deprecated
-        public UntagResourceResponse UntagResourceWithOptions(UntagResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
-            {
-                query["all"] = request.All;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
-            {
-                query["arn"] = request.Arn;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeys))
-            {
-                query["tagKeys"] = request.TagKeys;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UntagResource",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<UntagResourceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request UntagResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourceResponse
-         */
-        // Deprecated
-        public async Task<UntagResourceResponse> UntagResourceWithOptionsAsync(UntagResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
-            {
-                query["all"] = request.All;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
-            {
-                query["arn"] = request.Arn;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeys))
-            {
-                query["tagKeys"] = request.TagKeys;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UntagResource",
-                Version = "2023-03-30",
-                Protocol = "HTTPS",
-                Pathname = "/2023-03-30/tag",
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "none",
-            };
-            return TeaModel.ToObject<UntagResourceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request UntagResourceRequest
-          * @return UntagResourceResponse
-         */
-        // Deprecated
-        public UntagResourceResponse UntagResource(UntagResourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UntagResourceWithOptions(request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          *
-          * @param request UntagResourceRequest
-          * @return UntagResourceResponse
-         */
-        // Deprecated
-        public async Task<UntagResourceResponse> UntagResourceAsync(UntagResourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UntagResourceWithOptionsAsync(request, headers, runtime);
         }
 
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
