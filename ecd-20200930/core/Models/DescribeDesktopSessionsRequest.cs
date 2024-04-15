@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopSessionsRequest : TeaModel {
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public List<string> DesktopId { get; set; }
+
+        [NameInMap("DesktopName")]
+        [Validation(Required=false)]
+        public string DesktopName { get; set; }
+
         /// <summary>
         /// The end of the time range to query.
         /// </summary>

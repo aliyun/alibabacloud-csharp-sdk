@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The URL from which you can download the file that contains information about exported cloud desktops.
+        /// The URL of the exported file of the cloud computer list.
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

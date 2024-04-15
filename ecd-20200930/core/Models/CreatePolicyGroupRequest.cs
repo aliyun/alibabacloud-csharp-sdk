@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreatePolicyGroupRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether users have the administrator permissions after they connect to cloud desktops.
+        /// 
+        /// >  This parameter is in invitational preview and not available to the public.
+        /// </summary>
         [NameInMap("AdminAccess")]
         [Validation(Required=false)]
         public string AdminAccess { get; set; }
@@ -802,10 +807,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RecordingStartTime { get; set; }
 
+        /// <summary>
+        /// Specifies whether the feature to send screen recording notifications to clients is enabled. Valid values: on and off.
+        /// </summary>
         [NameInMap("RecordingUserNotify")]
         [Validation(Required=false)]
         public string RecordingUserNotify { get; set; }
 
+        /// <summary>
+        /// The notification content sent to clients when screen recording is enabled. By default, you do not need to specify this parameter.
+        /// </summary>
         [NameInMap("RecordingUserNotifyMessage")]
         [Validation(Required=false)]
         public string RecordingUserNotifyMessage { get; set; }
@@ -1056,6 +1067,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Watermark { get; set; }
 
+        /// <summary>
+        /// The anti-screen photo feature. Valid values: on and off.
+        /// </summary>
         [NameInMap("WatermarkAntiCam")]
         [Validation(Required=false)]
         public string WatermarkAntiCam { get; set; }
@@ -1091,6 +1105,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string WatermarkFontStyle { get; set; }
 
+        /// <summary>
+        /// The invisible watermark enhancement feature. Valid values: low, medium, and high.
+        /// </summary>
         [NameInMap("WatermarkPower")]
         [Validation(Required=false)]
         public string WatermarkPower { get; set; }

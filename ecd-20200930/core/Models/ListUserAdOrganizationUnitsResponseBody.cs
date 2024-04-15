@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListUserAdOrganizationUnitsResponseBody : TeaModel {
         /// <summary>
-        /// The token that is used to start the next query.
+        /// A pagination token.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The names of the OUs in the AD domain.
+        /// The OUs of the AD domain.
         /// </summary>
         [NameInMap("OUNames")]
         [Validation(Required=false)]
         public List<ListUserAdOrganizationUnitsResponseBodyOUNames> OUNames { get; set; }
         public class ListUserAdOrganizationUnitsResponseBodyOUNames : TeaModel {
             /// <summary>
-            /// The display name of the OU.
+            /// The name of the OU.
             /// </summary>
             [NameInMap("DisplayOUName")]
             [Validation(Required=false)]
             public string DisplayOUName { get; set; }
 
             /// <summary>
-            /// The name of the OU of the AD domain controller.
+            /// The canonical name (CNAME) of the OU in the AD domain controller.
             /// </summary>
             [NameInMap("OUName")]
             [Validation(Required=false)]
             public string OUName { get; set; }
 
             /// <summary>
-            /// The ID of the AD workspace.
+            /// The enterprise AD office network ID.
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the policy template that you want to manage.
+        /// The IDs of the automatic snapshot policies that you want to delete.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public List<string> PolicyId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the automatic snapshot policy is created.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the automatic payment feature.
+        /// Specifies whether to enable the auto-payment feature.
         /// 
-        /// Valid values:
+        /// Default value: true. Valid values:
         /// 
-        /// *   true (default): enables the auto-payment feature.
-        /// 
-        ///     <!-- -->
+        /// *   true: enables the auto-payment feature.
         /// 
         ///     <!-- -->
         /// 
-        ///     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+        ///     <!-- -->
+        /// 
+        ///     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.
         /// 
         ///     <!-- -->
         /// 
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         ///     <!-- -->
         /// 
-        ///     You can log on to the EDS console and complete the payment based on the order number.
+        ///     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
         /// 
         ///     <!-- -->
         /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The cloud desktop ID. Only subscription cloud desktops can be renewed.
+        /// The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the renewal duration that is specified by the Period parameter.
+        /// The unit of the renewal duration specified by the `Period` parameter.
         /// 
-        /// Valid values:
+        /// Default value: Month. Valid values:
         /// 
-        /// *   Month (default)
+        /// *   Month
         /// 
         ///     <!-- -->
         /// 
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the sales promotion.
+        /// The ID of the promotional activity.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

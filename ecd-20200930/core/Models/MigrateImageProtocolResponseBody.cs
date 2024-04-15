@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class MigrateImageProtocolResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of images whose protocols fail to be migrated.
+        /// The IDs of the images whose protocols failed to be updated.
         /// </summary>
         [NameInMap("FailedIds")]
         [Validation(Required=false)]

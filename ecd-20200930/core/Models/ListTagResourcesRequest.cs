@@ -31,35 +31,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs, namely the cloud desktop IDs. You can specify 1 to 50 IDs of cloud desktops.
+        /// The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+        /// The type of the resource.
+        /// 
+        /// Valid values:
+        /// 
+        /// * ALIYUN::GWS::INSTANCE: cloud computer.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags that you want to query.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. You can specify 1 to 20 keys.
+            /// The tag keys. You can specify 1 to 20 tag keys.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. You can specify 1 to 20 values.
+            /// The tag values. You can specify 1 to 20 tag values.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

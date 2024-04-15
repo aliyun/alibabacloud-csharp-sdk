@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
           *
           * @param request ActivateOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
           *
           * @param request ActivateOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
           *
           * @param request ActivateOfficeSiteRequest
           * @return ActivateOfficeSiteResponse
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+          * If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.
           *
           * @param request ActivateOfficeSiteRequest
           * @return ActivateOfficeSiteResponse
@@ -1151,8 +1151,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /**
           * Prerequisites
           * *   A CEN instance is created.
-          * *   A workspace of the convenience account type is created.
-          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
+          * *   The office network is an advanced office network, and the account system type is convenient account.
+          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1204,8 +1204,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /**
           * Prerequisites
           * *   A CEN instance is created.
-          * *   A workspace of the convenience account type is created.
-          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
+          * *   The office network is an advanced office network, and the account system type is convenient account.
+          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1257,8 +1257,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /**
           * Prerequisites
           * *   A CEN instance is created.
-          * *   A workspace of the convenience account type is created.
-          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
+          * *   The office network is an advanced office network, and the account system type is convenient account.
+          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @return AttachCenResponse
@@ -1272,8 +1272,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /**
           * Prerequisites
           * *   A CEN instance is created.
-          * *   A workspace of the convenience account type is created.
-          * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
+          * *   The office network is an advanced office network, and the account system type is convenient account.
+          * >  The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.
           *
           * @param request AttachCenRequest
           * @return AttachCenResponse
@@ -2511,11 +2511,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
-          *     **
-          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
+          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
+          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
+          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
+          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2625,11 +2627,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
-          *     **
-          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
+          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
+          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
+          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
+          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2739,11 +2743,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
-          *     **
-          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
+          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
+          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
+          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
+          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @return CreateADConnectorOfficeSiteResponse
@@ -2755,11 +2761,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   When you create a workspace of the enterprise AD account type, AD connectors are automatically created to allow you to connect to enterprise AD systems. You are charged for the AD connectors. For more information, see [Billing overview](~~188395~~).
-          * *   After you call this operation to create a workspace of the enterprise AD account type, perform the following steps to configure the AD domain: 1. Configure the conditional forwarder in the Domain Name System (DNS) server. 2. Configure the trust relationship in the AD domain server, and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship for the workspace of the enterprise AD account type. 3. Call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the organizational unit (OU) details of the AD domain. Then, call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and an administrator for the workspace of the enterprise AD account type.
-          *     **
-          *     **Note** If you specify DomainUserName and DomainPassword when you create a workspace of the enterprise AD account type, you must configure only the conditional forwarder. If you do not specify DomainUserName or DomainPassword, you must configure the conditional forwarder, trust relationship, and OU.
-          * For more information, see [Create a workspace of the enterprise AD account type](~~214469~~).
+          * When you create an enterprise AD office network, the system automatically creates an AD connector to connect to an enterprise AD. You are charged for the AD connector. For more information, see [Billing overview](~~188395~~).
+          * After you call this operation to create an AD office network, you must perform the following steps to complete AD domain setting:
+          * 1.  Configure a conditional forwarder in a Domain Name System (DNS) server.
+          * 2.  Configure a trust relationship in an AD domain controller and call the [ConfigADConnectorTrust](~~311258~~) operation to configure the trust relationship with the AD office network.
+          * 3.  Call the [ListUserAdOrganizationUnits](~~311259~~) operation to query a list of organizational units (OUs) of the AD domain, and call the [ConfigADConnectorUser](~~311262~~) operation to specify an OU and administrator for the AD office network.
+          *     >  When you create the AD office network, take note of the DomainUserName and DomainPassword parameters. If you specify the parameters, you need to only configure a conditional forwarder. If you do not specify the parameters, you must configure a conditional forwarder, trust relationship, and OU as prompted.
+          * For more information, see [Create and manage enterprise AD office networks](~~214469~~).
           *
           * @param request CreateADConnectorOfficeSiteRequest
           * @return CreateADConnectorOfficeSiteResponse
@@ -3009,7 +3017,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3079,7 +3087,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3149,7 +3157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
           * @return CreateBundleResponse
@@ -3161,7 +3169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
+          * Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.
           *
           * @param request CreateBundleRequest
           * @return CreateBundleResponse
@@ -3791,7 +3799,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * # Description
           * Before you call this operation to create a desktop group, make sure that the following operations are complete:
           * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
           * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
@@ -3976,7 +3983,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * # Description
           * Before you call this operation to create a desktop group, make sure that the following operations are complete:
           * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
           * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
@@ -4161,7 +4167,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * # Description
           * Before you call this operation to create a desktop group, make sure that the following operations are complete:
           * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
           * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
@@ -4176,7 +4181,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * # Description
           * Before you call this operation to create a desktop group, make sure that the following operations are complete:
           * *   You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see [Overview](~~290959~~) of desktop groups.
           * *   Resources, such as workspaces, users, desktop templates, and policies, are created.
@@ -4214,9 +4218,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleDisconnectDuration))
+            {
+                query["IdleDisconnectDuration"] = request.IdleDisconnectDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepDuration))
+            {
+                query["KeepDuration"] = request.KeepDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -4293,9 +4305,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleDisconnectDuration))
+            {
+                query["IdleDisconnectDuration"] = request.IdleDisconnectDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepDuration))
+            {
+                query["KeepDuration"] = request.KeepDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -4361,13 +4381,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
-          * *   A workspace and a user are created. For more information, see the following topics:
-          *     *   Create a workspace of the convenience account type and a convenience user: [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
-          *     *   Create a workspace of the enterprise Active Directory (AD) account type and an enterprise AD user: [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
-          * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is used.
-          * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is used.
-          * 2\\. A custom command script that can be automatically executed after you create the cloud desktop is prepared. You can customize a command script by using the UserCommands parameter.
+          * Before you create cloud computers, complete the following preparations:
+          * *   An office network (formerly called workspace) and users are created. For more information, see:
+          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
+          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
+          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
+          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
+          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
           *
           * @param request CreateDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4505,13 +4525,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
-          * *   A workspace and a user are created. For more information, see the following topics:
-          *     *   Create a workspace of the convenience account type and a convenience user: [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
-          *     *   Create a workspace of the enterprise Active Directory (AD) account type and an enterprise AD user: [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
-          * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is used.
-          * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is used.
-          * 2\\. A custom command script that can be automatically executed after you create the cloud desktop is prepared. You can customize a command script by using the UserCommands parameter.
+          * Before you create cloud computers, complete the following preparations:
+          * *   An office network (formerly called workspace) and users are created. For more information, see:
+          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
+          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
+          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
+          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
+          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
           *
           * @param request CreateDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4649,13 +4669,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
-          * *   A workspace and a user are created. For more information, see the following topics:
-          *     *   Create a workspace of the convenience account type and a convenience user: [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
-          *     *   Create a workspace of the enterprise Active Directory (AD) account type and an enterprise AD user: [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
-          * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is used.
-          * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is used.
-          * 2\\. A custom command script that can be automatically executed after you create the cloud desktop is prepared. You can customize a command script by using the UserCommands parameter.
+          * Before you create cloud computers, complete the following preparations:
+          * *   An office network (formerly called workspace) and users are created. For more information, see:
+          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
+          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
+          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
+          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
+          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
           *
           * @param request CreateDesktopsRequest
           * @return CreateDesktopsResponse
@@ -4667,13 +4687,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
-          * *   A workspace and a user are created. For more information, see the following topics:
-          *     *   Create a workspace of the convenience account type and a convenience user: [CreateSimpleOfficeSite](~~215416~~) and [Create a convenience user](~~214472~~)
-          *     *   Create a workspace of the enterprise Active Directory (AD) account type and an enterprise AD user: [CreateADConnectorOfficeSite](~~215417~~) and [Create an enterprise AD user](~~188619~~)
-          * *   A cloud desktop template is created by calling the [CreateBundle](~~188883~~) operation, or an existing cloud desktop template is used.
-          * *   A policy is created by calling the [CreatePolicyGroup](~~188889~~) operation, or an existing policy is used.
-          * 2\\. A custom command script that can be automatically executed after you create the cloud desktop is prepared. You can customize a command script by using the UserCommands parameter.
+          * Before you create cloud computers, complete the following preparations:
+          * *   An office network (formerly called workspace) and users are created. For more information, see:
+          *     *   Convenience office network: [CreateSimpleOfficeSite](~~215416~~) and [CreateUsers](~~437832~~).
+          *     *   Active Directory (AD) office network: [CreateADConnectorOfficeSite](~~215417~~) and [Create an AD user](~~188619~~).
+          * *   Make sure a cloud computer template exists. If no cloud computer template exists, call the [CreateBundle](~~188883~~) operation to create a template.
+          * *   Make sure a policy exists. If no policy exists, call the [CreatePolicyGroup](~~188889~~) operation to create a policy.
+          * If you want the cloud computers to automatically execute a custom command script, you can use the `UserCommands` field to configure a custom command.
           *
           * @param request CreateDesktopsRequest
           * @return CreateDesktopsResponse
@@ -5634,8 +5654,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you create a RAM directory, make sure that you have completed the following operations:
-          * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
-          * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+          * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
+          * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
           *
           * @param request CreateRAMDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5690,8 +5710,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you create a RAM directory, make sure that you have completed the following operations:
-          * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
-          * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+          * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
+          * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
           *
           * @param request CreateRAMDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5746,8 +5766,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you create a RAM directory, make sure that you have completed the following operations:
-          * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
-          * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+          * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
+          * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
           *
           * @param request CreateRAMDirectoryRequest
           * @return CreateRAMDirectoryResponse
@@ -5760,8 +5780,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you create a RAM directory, make sure that you have completed the following operations:
-          * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
-          * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
+          * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
+          * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
           *
           * @param request CreateRAMDirectoryRequest
           * @return CreateRAMDirectoryResponse
@@ -5943,7 +5963,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop for which you want to create a snapshot must be in the **Running** state or **Stopped** state.
+          * The cloud computer must be in the **Running** or **Stopped** state.
           *
           * @param request CreateSnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5993,7 +6013,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop for which you want to create a snapshot must be in the **Running** state or **Stopped** state.
+          * The cloud computer must be in the **Running** or **Stopped** state.
           *
           * @param request CreateSnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6043,7 +6063,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop for which you want to create a snapshot must be in the **Running** state or **Stopped** state.
+          * The cloud computer must be in the **Running** or **Stopped** state.
           *
           * @param request CreateSnapshotRequest
           * @return CreateSnapshotResponse
@@ -6055,7 +6075,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop for which you want to create a snapshot must be in the **Running** state or **Stopped** state.
+          * The cloud computer must be in the **Running** or **Stopped** state.
           *
           * @param request CreateSnapshotRequest
           * @return CreateSnapshotResponse
@@ -6476,6 +6496,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteCloudDriveUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+          *
+          * @param request DeleteDesktopGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDesktopGroupResponse
+         */
         public DeleteDesktopGroupResponse DeleteDesktopGroupWithOptions(DeleteDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6507,6 +6536,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteDesktopGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+          *
+          * @param request DeleteDesktopGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDesktopGroupResponse
+         */
         public async Task<DeleteDesktopGroupResponse> DeleteDesktopGroupWithOptionsAsync(DeleteDesktopGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6538,12 +6576,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DeleteDesktopGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+          *
+          * @param request DeleteDesktopGroupRequest
+          * @return DeleteDesktopGroupResponse
+         */
         public DeleteDesktopGroupResponse DeleteDesktopGroup(DeleteDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDesktopGroupWithOptions(request, runtime);
         }
 
+        /**
+          * *   Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.
+          * *   You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.
+          * *   If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.
+          *
+          * @param request DeleteDesktopGroupRequest
+          * @return DeleteDesktopGroupResponse
+         */
         public async Task<DeleteDesktopGroupResponse> DeleteDesktopGroupAsync(DeleteDesktopGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6741,7 +6795,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete directories that are in use by cloud desktops.
+          * You cannot delete directories that are used by cloud desktops.
           *
           * @param request DeleteDirectoriesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6779,7 +6833,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete directories that are in use by cloud desktops.
+          * You cannot delete directories that are used by cloud desktops.
           *
           * @param request DeleteDirectoriesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6817,7 +6871,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete directories that are in use by cloud desktops.
+          * You cannot delete directories that are used by cloud desktops.
           *
           * @param request DeleteDirectoriesRequest
           * @return DeleteDirectoriesResponse
@@ -6829,7 +6883,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You cannot delete directories that are in use by cloud desktops.
+          * You cannot delete directories that are used by cloud desktops.
           *
           * @param request DeleteDirectoriesRequest
           * @return DeleteDirectoriesResponse
@@ -6916,7 +6970,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
+          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
           *
           * @param request DeleteImagesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6959,7 +7013,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
+          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
           *
           * @param request DeleteImagesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7002,7 +7056,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
+          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
           *
           * @param request DeleteImagesRequest
           * @return DeleteImagesResponse
@@ -7015,7 +7069,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * *   Images include system images and custom images. System images cannot be deleted.
-          * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
+          * *   If an image that you want to delete is referenced by a cloud computer template, call the [DeleteBundles](~~436972~~) operation to delete the cloud computer template before you delete the image.
           *
           * @param request DeleteImagesRequest
           * @return DeleteImagesResponse
@@ -7028,8 +7082,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * **
-          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
           *
           * @param request DeleteNASFileSystemsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7068,8 +7121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * **
-          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
           *
           * @param request DeleteNASFileSystemsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7108,8 +7160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * **
-          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
           *
           * @param request DeleteNASFileSystemsRequest
           * @return DeleteNASFileSystemsResponse
@@ -7122,8 +7173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you delete an Apsara File Storage NAS (NAS) file system, make sure that the data you want to retain is backed up.
-          * **
-          * **Warning** If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.
+          * ><warning>If a NAS file system is deleted, data stored in the NAS file system cannot be restored. Proceed with caution when you delete NAS file systems.></warning>
           *
           * @param request DeleteNASFileSystemsRequest
           * @return DeleteNASFileSystemsResponse
@@ -7209,10 +7259,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following requirements are met:
-          * *   All cloud desktops in the workspace are released.
+          * Before you delete an office network, make sure that the following operations are complete:
+          * *   All cloud computers in the office network are released.
           * *   The data that you want to retain is backed up.
-          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
+          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7250,10 +7300,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following requirements are met:
-          * *   All cloud desktops in the workspace are released.
+          * Before you delete an office network, make sure that the following operations are complete:
+          * *   All cloud computers in the office network are released.
           * *   The data that you want to retain is backed up.
-          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
+          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7291,10 +7341,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following requirements are met:
-          * *   All cloud desktops in the workspace are released.
+          * Before you delete an office network, make sure that the following operations are complete:
+          * *   All cloud computers in the office network are released.
           * *   The data that you want to retain is backed up.
-          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
+          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @return DeleteOfficeSitesResponse
@@ -7306,10 +7356,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you delete a workspace, make sure that the following requirements are met:
-          * *   All cloud desktops in the workspace are released.
+          * Before you delete an office network, make sure that the following operations are complete:
+          * *   All cloud computers in the office network are released.
           * *   The data that you want to retain is backed up.
-          * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
+          * >  Resources and data on cloud computers in an office network cannot be restored after you delete it. Proceed with caution.
           *
           * @param request DeleteOfficeSitesRequest
           * @return DeleteOfficeSitesResponse
@@ -7495,7 +7545,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7533,7 +7583,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7571,7 +7621,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
           * @return DeleteVirtualMFADeviceResponse
@@ -7583,7 +7633,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
+          * If an MFA device is deleted, the device is unbound, reset, and disabled. When an Active Directory (AD) user wants to connect to the cloud desktop that is bound to the MFA device, the AD user must bind a new MFA device.
           *
           * @param request DeleteVirtualMFADeviceRequest
           * @return DeleteVirtualMFADeviceResponse
@@ -9513,6 +9563,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
+            {
+                query["DesktopName"] = request.DesktopName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -9575,6 +9633,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
+            {
+                query["DesktopName"] = request.DesktopName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -11037,7 +11103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
           *
           * @param request DescribeImagePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11075,7 +11141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
           *
           * @param request DescribeImagePermissionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11113,7 +11179,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
           *
           * @param request DescribeImagePermissionRequest
           * @return DescribeImagePermissionResponse
@@ -11125,7 +11191,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+          * You can call the [ModifyImagePermission](~~436982~~) operation to share an image with another cloud computer user or unshare an image. You can call the DescribeImagePermission operation to obtain the Alibaba Cloud accounts with which the current image is shared.
           *
           * @param request DescribeImagePermissionRequest
           * @return DescribeImagePermissionResponse
@@ -12600,6 +12666,136 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeRecordingsResponse DescribeRecordingsWithOptions(DescribeRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignedUrl))
+            {
+                query["NeedSignedUrl"] = request.NeedSignedUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignedUrlExpireMinutes))
+            {
+                query["SignedUrlExpireMinutes"] = request.SignedUrlExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRecordings",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRecordingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRecordingsResponse> DescribeRecordingsWithOptionsAsync(DescribeRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignedUrl))
+            {
+                query["NeedSignedUrl"] = request.NeedSignedUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
+            {
+                query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignedUrlExpireMinutes))
+            {
+                query["SignedUrlExpireMinutes"] = request.SignedUrlExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRecordings",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRecordingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRecordingsResponse DescribeRecordings(DescribeRecordingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRecordingsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRecordingsResponse> DescribeRecordingsAsync(DescribeRecordingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRecordingsWithOptionsAsync(request, runtime);
         }
 
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14435,7 +14631,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+          * *   Cloud computer ID and name
+          * *   Office network ID and name
+          * *   The instance type, OS and protocol of the cloud computer
+          * *   System disk and data disk of the cloud computer
+          * *   The status
+          * *   Purchase method
+          * *   The time when the cloud computer expires
+          * *   Remaining duration and total duration
+          * *   Number of assigned users and number of current users
+          * *   Office network type
+          * *   The time when the cloud computer was created
+          * *   Tags
+          * *   Encryption status
+          * *   IP
+          * *   The hostname
           *
           * @param request ExportDesktopListInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14525,7 +14736,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+          * *   Cloud computer ID and name
+          * *   Office network ID and name
+          * *   The instance type, OS and protocol of the cloud computer
+          * *   System disk and data disk of the cloud computer
+          * *   The status
+          * *   Purchase method
+          * *   The time when the cloud computer expires
+          * *   Remaining duration and total duration
+          * *   Number of assigned users and number of current users
+          * *   Office network type
+          * *   The time when the cloud computer was created
+          * *   Tags
+          * *   Encryption status
+          * *   IP
+          * *   The hostname
           *
           * @param request ExportDesktopListInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14615,7 +14841,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+          * *   Cloud computer ID and name
+          * *   Office network ID and name
+          * *   The instance type, OS and protocol of the cloud computer
+          * *   System disk and data disk of the cloud computer
+          * *   The status
+          * *   Purchase method
+          * *   The time when the cloud computer expires
+          * *   Remaining duration and total duration
+          * *   Number of assigned users and number of current users
+          * *   Office network type
+          * *   The time when the cloud computer was created
+          * *   Tags
+          * *   Encryption status
+          * *   IP
+          * *   The hostname
           *
           * @param request ExportDesktopListInfoRequest
           * @return ExportDesktopListInfoResponse
@@ -14627,7 +14868,22 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+          * The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:
+          * *   Cloud computer ID and name
+          * *   Office network ID and name
+          * *   The instance type, OS and protocol of the cloud computer
+          * *   System disk and data disk of the cloud computer
+          * *   The status
+          * *   Purchase method
+          * *   The time when the cloud computer expires
+          * *   Remaining duration and total duration
+          * *   Number of assigned users and number of current users
+          * *   Office network type
+          * *   The time when the cloud computer was created
+          * *   Tags
+          * *   Encryption status
+          * *   IP
+          * *   The hostname
           *
           * @param request ExportDesktopListInfoRequest
           * @return ExportDesktopListInfoResponse
@@ -14712,6 +14968,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await GetAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The cloud computer must be in the Running state.
+          *
+          * @param request GetConnectionTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConnectionTicketResponse
+         */
         public GetConnectionTicketResponse GetConnectionTicketWithOptions(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14775,6 +15038,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetConnectionTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The cloud computer must be in the Running state.
+          *
+          * @param request GetConnectionTicketRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetConnectionTicketResponse
+         */
         public async Task<GetConnectionTicketResponse> GetConnectionTicketWithOptionsAsync(GetConnectionTicketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14838,12 +15108,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<GetConnectionTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The cloud computer must be in the Running state.
+          *
+          * @param request GetConnectionTicketRequest
+          * @return GetConnectionTicketResponse
+         */
         public GetConnectionTicketResponse GetConnectionTicket(GetConnectionTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConnectionTicketWithOptions(request, runtime);
         }
 
+        /**
+          * The cloud computer must be in the Running state.
+          *
+          * @param request GetConnectionTicketRequest
+          * @return GetConnectionTicketResponse
+         */
         public async Task<GetConnectionTicketResponse> GetConnectionTicketAsync(GetConnectionTicketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15897,7 +16179,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15951,7 +16233,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
           *
           * @param request ListTagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16005,7 +16287,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -16017,7 +16299,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
+          * You must use at least one of the following parameters in the request to determine the object that you want to query: `ResourceId.N`, `Tag.N.Key`, and `Tag.N.Value`.
           *
           * @param request ListTagResourcesRequest
           * @return ListTagResourcesResponse
@@ -16127,7 +16409,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16165,7 +16447,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16203,7 +16485,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
           * @return LockVirtualMFADeviceResponse
@@ -16215,7 +16497,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
+          * After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
           *
           * @param request LockVirtualMFADeviceRequest
           * @return LockVirtualMFADeviceResponse
@@ -16544,6 +16826,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyADConnectorDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+          *
+          * @param request ModifyADConnectorOfficeSiteRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyADConnectorOfficeSiteResponse
+         */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSiteWithOptions(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16615,6 +16904,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorOfficeSiteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+          *
+          * @param request ModifyADConnectorOfficeSiteRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyADConnectorOfficeSiteResponse
+         */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteWithOptionsAsync(ModifyADConnectorOfficeSiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16686,18 +16982,37 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyADConnectorOfficeSiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+          *
+          * @param request ModifyADConnectorOfficeSiteRequest
+          * @return ModifyADConnectorOfficeSiteResponse
+         */
         public ModifyADConnectorOfficeSiteResponse ModifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyADConnectorOfficeSiteWithOptions(request, runtime);
         }
 
+        /**
+          * You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the `ERROR` or `REGISTERED` state. The parameters include `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress.N`.
+          *
+          * @param request ModifyADConnectorOfficeSiteRequest
+          * @return ModifyADConnectorOfficeSiteResponse
+         */
         public async Task<ModifyADConnectorOfficeSiteResponse> ModifyADConnectorOfficeSiteAsync(ModifyADConnectorOfficeSiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyADConnectorOfficeSiteWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+          *
+          * @param request ModifyAclEntriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAclEntriesResponse
+         */
         public ModifyAclEntriesResponse ModifyAclEntriesWithOptions(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16737,6 +17052,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyAclEntriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+          *
+          * @param request ModifyAclEntriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAclEntriesResponse
+         */
         public async Task<ModifyAclEntriesResponse> ModifyAclEntriesWithOptionsAsync(ModifyAclEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16776,12 +17098,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyAclEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+          *
+          * @param request ModifyAclEntriesRequest
+          * @return ModifyAclEntriesResponse
+         */
         public ModifyAclEntriesResponse ModifyAclEntries(ModifyAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAclEntriesWithOptions(request, runtime);
         }
 
+        /**
+          * You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.
+          *
+          * @param request ModifyAclEntriesRequest
+          * @return ModifyAclEntriesResponse
+         */
         public async Task<ModifyAclEntriesResponse> ModifyAclEntriesAsync(ModifyAclEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17703,10 +18037,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
-          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
+          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17768,10 +18101,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
-          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
+          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17833,10 +18165,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
-          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
+          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -17848,10 +18179,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops in Elastic Desktop Service (EDS). For more information, see [Billing overview](~~188395~~).
-          * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
-          * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
-          * *   After you change the billing method of the cloud desktop from subscription to pay-as-you-go, you may get a refund. For more information, see [Change a subscription cloud desktop to a pay-as-you-go one](https://help.aliyun.com/document_detail/439964.html).
+          * *   Before you call this operation, make sure that you fully understand the billing methods of cloud computers. For more information, see [Billing overview](~~188395~~).
+          * *   Before you call this operation, make sure that the cloud computers whose billing method you want to change are in the Running or Stopped state and you have no overdue payments in your Alibaba Cloud account.
+          * *   After the order payment is completed, the system starts to change the billing method of the cloud computers. During the change, you cannot perform operations, such as starting or stopping the cloud computers, and changing configurations of the cloud computers.
           *
           * @param request ModifyDesktopChargeTypeRequest
           * @return ModifyDesktopChargeTypeResponse
@@ -17863,11 +18193,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of end users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
-          * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
-          * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template (OwnBundleId) that has higher specifications.
-          * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy to another policy (PolicyGroupId) that provides higher security.
-          * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of end users, you can modify the parameter settings in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
           *
           * @param request ModifyDesktopGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18001,11 +18327,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of end users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
-          * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
-          * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template (OwnBundleId) that has higher specifications.
-          * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy to another policy (PolicyGroupId) that provides higher security.
-          * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of end users, you can modify the parameter settings in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
           *
           * @param request ModifyDesktopGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18139,11 +18461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of end users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
-          * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
-          * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template (OwnBundleId) that has higher specifications.
-          * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy to another policy (PolicyGroupId) that provides higher security.
-          * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of end users, you can modify the parameter settings in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
           *
           * @param request ModifyDesktopGroupRequest
           * @return ModifyDesktopGroupResponse
@@ -18155,11 +18473,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * After you create a desktop group, the system creates a specific number of cloud desktops based on the scaling policy that you configure for the desktop group and the number of end users who request to connect to the cloud desktops. Cloud desktops in a desktop group are created by using the same desktop template and security policy. You can modify the configurations of the desktop group in different scenarios to manage cloud desktops in a centralized manner.
-          * *   By default, a desktop group has the same name as all cloud desktops in the group. You can modify the desktop group name, which is specified by the DesktopGroupName parameter, to distinguish the desktop group from the cloud desktops.
-          * *   If the number of vCPUs and memory size of the cloud desktop cannot meet your business requirements in high performance scenarios, you can change the desktop template that is used to create the cloud desktop to a desktop template (OwnBundleId) that has higher specifications.
-          * *   If a security policy that is associated with the desktop group cannot meet your requirements on security, you can change the policy to another policy (PolicyGroupId) that provides higher security.
-          * *   If the number of cloud desktops in the desktop group is insufficient to meet the business requirements of end users, you can modify the parameter settings in the scaling policy. The parameters include MinDesktopsCount, MaxDesktopsCount, and AllowBufferCount.
+          * After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.
           *
           * @param request ModifyDesktopGroupRequest
           * @return ModifyDesktopGroupResponse
@@ -18171,7 +18485,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
+          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
           *
           * @param request ModifyDesktopHostNameRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18213,7 +18527,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
+          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
           *
           * @param request ModifyDesktopHostNameRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18255,7 +18569,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
+          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
           *
           * @param request ModifyDesktopHostNameRequest
           * @return ModifyDesktopHostNameResponse
@@ -18267,7 +18581,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
+          * The Windows cloud computer whose hostname you want to modify must be in an AD office network. After the hostname is modified, the cloud computer is re-created.
           *
           * @param request ModifyDesktopHostNameRequest
           * @return ModifyDesktopHostNameResponse
@@ -18372,9 +18686,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleDisconnectDuration))
+            {
+                query["IdleDisconnectDuration"] = request.IdleDisconnectDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepDuration))
+            {
+                query["KeepDuration"] = request.KeepDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -18431,9 +18753,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleDisconnectDuration))
+            {
+                query["IdleDisconnectDuration"] = request.IdleDisconnectDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepDuration))
+            {
+                query["KeepDuration"] = request.KeepDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -18671,16 +19001,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. You must take note of the following items:
-          *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory, and GPUs. When you change the desktop configurations, you can only change the desktop type from one to another. However, you cannot change only one of the specifications, such as vCPUs, memory, and GPUs.
-          *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          *     *   You can only increase the sizes of system and data disks.
-          *     *   If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or pay for the price difference.
-          *     *   If you want to change the configurations of your cloud desktop for multiple times, we recommend that you wait at least 5 minutes the next time you change the configurations of the same cloud desktop.
-          *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
+          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
           *
           * @param request ModifyDesktopSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18742,16 +19072,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. You must take note of the following items:
-          *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory, and GPUs. When you change the desktop configurations, you can only change the desktop type from one to another. However, you cannot change only one of the specifications, such as vCPUs, memory, and GPUs.
-          *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          *     *   You can only increase the sizes of system and data disks.
-          *     *   If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or pay for the price difference.
-          *     *   If you want to change the configurations of your cloud desktop for multiple times, we recommend that you wait at least 5 minutes the next time you change the configurations of the same cloud desktop.
-          *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
+          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
           *
           * @param request ModifyDesktopSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18813,16 +19143,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. You must take note of the following items:
-          *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory, and GPUs. When you change the desktop configurations, you can only change the desktop type from one to another. However, you cannot change only one of the specifications, such as vCPUs, memory, and GPUs.
-          *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          *     *   You can only increase the sizes of system and data disks.
-          *     *   If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or pay for the price difference.
-          *     *   If you want to change the configurations of your cloud desktop for multiple times, we recommend that you wait at least 5 minutes the next time you change the configurations of the same cloud desktop.
-          *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
+          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
           *
           * @param request ModifyDesktopSpecRequest
           * @return ModifyDesktopSpecResponse
@@ -18834,16 +19164,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
-          * *   Before you call this operation, take note of the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides. For more information, see [Cloud desktop types](~~188609~~).
-          * *   When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. You must take note of the following items:
-          *     *   Each desktop type contains different desktop specifications, such as vCPUs, memory, and GPUs. When you change the desktop configurations, you can only change the desktop type from one to another. However, you cannot change only one of the specifications, such as vCPUs, memory, and GPUs.
-          *     *   You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-          *     *   You can only increase the sizes of system and data disks.
-          *     *   If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or pay for the price difference.
-          *     *   If you want to change the configurations of your cloud desktop for multiple times, we recommend that you wait at least 5 minutes the next time you change the configurations of the same cloud desktop.
-          *     *   The cloud desktop for which you want to change configurations must be in the Stopped state.
-          * *   The changes do not affect your personal data on the cloud desktop.
+          * Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.
+          * *   Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see [Cloud computer types](~~188609~~). You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
+          * *   You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: `DesktopType`, `RootDiskSizeGib`, and `UserDiskSizeGib`. Take note of the following items:
+          *     *   The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.
+          *     *   You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.
+          *     *   The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.
+          *     *   If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.
+          *     *   We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.
+          *     *   When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.
+          * *   After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.
           *
           * @param request ModifyDesktopSpecRequest
           * @return ModifyDesktopSpecResponse
@@ -18945,7 +19275,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running (Running) state.
+          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18991,7 +19321,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running (Running) state.
+          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19037,7 +19367,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running (Running) state.
+          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @return ModifyDesktopsPolicyGroupResponse
@@ -19049,7 +19379,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop must be in the Running (Running) state.
+          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
           *
           * @param request ModifyDesktopsPolicyGroupRequest
           * @return ModifyDesktopsPolicyGroupResponse
@@ -19229,7 +19559,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops to which you want to assign users must be in the Running state.
+          * *   The cloud computer must be in the Running state.
+          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
           *
           * @param request ModifyEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19271,7 +19603,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops to which you want to assign users must be in the Running state.
+          * *   The cloud computer must be in the Running state.
+          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
           *
           * @param request ModifyEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19313,7 +19647,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops to which you want to assign users must be in the Running state.
+          * *   The cloud computer must be in the Running state.
+          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
           *
           * @param request ModifyEntitlementRequest
           * @return ModifyEntitlementResponse
@@ -19325,7 +19661,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops to which you want to assign users must be in the Running state.
+          * *   The cloud computer must be in the Running state.
+          * *   After you call this operation, the assignment result is immediately returned. You can call the [DescribeDesktops](~~436815~~) operation to query the assignment of the cloud computer. The value of the `ManagementFlags` response parameter indicates the assignment of the cloud computer. A value of `ASSIGNING` indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.
+          * *   We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.
           *
           * @param request ModifyEntitlementRequest
           * @return ModifyEntitlementResponse
@@ -19452,6 +19790,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await ModifyImageAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Security of shared images
+          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+          * ### [](#)Quota and billing
+          * *   A shared image does not count against the image quotas of principals to which the image is shared.
+          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+          * *   You are not charged for shared images.
+          * ### [](#)Supported sharing behaviors
+          * *   You can share custom images with other Alibaba Cloud accounts.
+          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+          * ### [](#)Unsupported sharing behaviors
+          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+          * *   You cannot share encrypted images.
+          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
+          *
+          * @param request ModifyImagePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyImagePermissionResponse
+         */
         public ModifyImagePermissionResponse ModifyImagePermissionWithOptions(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19491,6 +19848,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyImagePermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Security of shared images
+          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+          * ### [](#)Quota and billing
+          * *   A shared image does not count against the image quotas of principals to which the image is shared.
+          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+          * *   You are not charged for shared images.
+          * ### [](#)Supported sharing behaviors
+          * *   You can share custom images with other Alibaba Cloud accounts.
+          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+          * ### [](#)Unsupported sharing behaviors
+          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+          * *   You cannot share encrypted images.
+          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
+          *
+          * @param request ModifyImagePermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyImagePermissionResponse
+         */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionWithOptionsAsync(ModifyImagePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19530,12 +19906,48 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<ModifyImagePermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Security of shared images
+          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+          * ### [](#)Quota and billing
+          * *   A shared image does not count against the image quotas of principals to which the image is shared.
+          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+          * *   You are not charged for shared images.
+          * ### [](#)Supported sharing behaviors
+          * *   You can share custom images with other Alibaba Cloud accounts.
+          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+          * ### [](#)Unsupported sharing behaviors
+          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+          * *   You cannot share encrypted images.
+          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
+          *
+          * @param request ModifyImagePermissionRequest
+          * @return ModifyImagePermissionResponse
+         */
         public ModifyImagePermissionResponse ModifyImagePermission(ModifyImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyImagePermissionWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Security of shared images
+          * WUYING Workspace cannot guarantee the integrity and security of shared images. When you use a shared image, you must make sure that the image comes from a trusted sharer or account, and you are legally responsible for using the shared image.
+          * ### [](#)Quota and billing
+          * *   A shared image does not count against the image quotas of principals to which the image is shared.
+          * *   After a principal uses a shared image to create a cloud computer, the sharer is not charged for the shared image.
+          * *   You are not charged for shared images.
+          * ### [](#)Supported sharing behaviors
+          * *   You can share custom images with other Alibaba Cloud accounts.
+          * *   You can share custom images between accounts in the China site (aliyun.com) and the international site (alibabacloud.com).
+          * ### [](#)Unsupported sharing behaviors
+          * *   You cannot share images that are shared by other Alibaba Cloud accounts.
+          * *   You cannot share encrypted images.
+          * *   You cannot share images across regions. If you want to share an image across regions, you must copy the image to the destination region and then share the image. For more information, see [CopyImage](~~436978~~).
+          *
+          * @param request ModifyImagePermissionRequest
+          * @return ModifyImagePermissionResponse
+         */
         public async Task<ModifyImagePermissionResponse> ModifyImagePermissionAsync(ModifyImagePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19749,7 +20161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
+          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19791,7 +20203,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
+          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19833,7 +20245,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
+          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @return ModifyNetworkPackageEnabledResponse
@@ -19845,7 +20257,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
+          * If you want to temporarily disable the Internet access of your cloud computer after the Internet access is enabled for your cloud computer, you can disable the premium bandwidth plan and restore it as needed.
           *
           * @param request ModifyNetworkPackageEnabledRequest
           * @return ModifyNetworkPackageEnabledResponse
@@ -20641,7 +21053,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify user permissions on cloud desktops that are only in the Running state.
+          * You can modify end users only for cloud computers that are in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20687,7 +21099,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify user permissions on cloud desktops that are only in the Running state.
+          * You can modify end users only for cloud computers that are in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20733,7 +21145,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify user permissions on cloud desktops that are only in the Running state.
+          * You can modify end users only for cloud computers that are in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @return ModifyUserEntitlementResponse
@@ -20745,7 +21157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * You can modify user permissions on cloud desktops that are only in the Running state.
+          * You can modify end users only for cloud computers that are in the Running state.
           *
           * @param request ModifyUserEntitlementRequest
           * @return ModifyUserEntitlementResponse
@@ -20961,7 +21373,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+          * The cloud computers that you want to restart must be in the Running state.
           *
           * @param request RebootDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20999,7 +21411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+          * The cloud computers that you want to restart must be in the Running state.
           *
           * @param request RebootDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21037,7 +21449,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+          * The cloud computers that you want to restart must be in the Running state.
           *
           * @param request RebootDesktopsRequest
           * @return RebootDesktopsResponse
@@ -21049,7 +21461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to restart by calling this operation must be in the Running state.
+          * The cloud computers that you want to restart must be in the Running state.
           *
           * @param request RebootDesktopsRequest
           * @return RebootDesktopsResponse
@@ -21061,12 +21473,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud desktop, take note of the following limits:
-          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
-          * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * Before you change the image of a cloud computer, take note of the following limits:
+          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
           *
           * @param request RebuildDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21112,12 +21524,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud desktop, take note of the following limits:
-          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
-          * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * Before you change the image of a cloud computer, take note of the following limits:
+          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
           *
           * @param request RebuildDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21163,12 +21575,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud desktop, take note of the following limits:
-          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
-          * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * Before you change the image of a cloud computer, take note of the following limits:
+          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
           *
           * @param request RebuildDesktopsRequest
           * @return RebuildDesktopsResponse
@@ -21180,12 +21592,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * Before you change the image of a cloud desktop, take note of the following limits:
-          * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
-          * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
-          * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
-          * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
-          * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
+          * Before you change the image of a cloud computer, take note of the following limits:
+          * *   You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Australia (Sydney), Singapore, and Japan (Tokyo).
+          * *   GPU images and non-GPU images cannot be exchanged. Graphical cloud computers can only use GPU-accelerated images. Non-graphical cloud computers can only use non-GPU-accelerated images.
+          * After the image is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:
+          * *   Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots.
+          * *   If the OS of the image is changed, the data in the data disks of the original cloud computer is cleared, and the snapshots that are created based on the data disks of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disks of the original cloud computer is retained, and the snapshots that are created based on the data disks of the original cloud computer can still be used.
           *
           * @param request RebuildDesktopsRequest
           * @return RebuildDesktopsResponse
@@ -21789,7 +22201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          * > You can call this operation to reset only cloud computers in a cloud computer pool.
           *
           * @param request ResetDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21851,7 +22263,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          * > You can call this operation to reset only cloud computers in a cloud computer pool.
           *
           * @param request ResetDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -21913,7 +22325,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          * > You can call this operation to reset only cloud computers in a cloud computer pool.
           *
           * @param request ResetDesktopsRequest
           * @return ResetDesktopsResponse
@@ -21925,7 +22337,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to reset only cloud desktops that are managed by a cloud desktop group. You cannot reset an independent cloud desktop.
+          * > You can call this operation to reset only cloud computers in a cloud computer pool.
           *
           * @param request ResetDesktopsRequest
           * @return ResetDesktopsResponse
@@ -22038,10 +22450,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain in the disk is backed up.
-          *     **
-          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
-          * *   The cloud desktop whose disk you want to restore is stopped.
+          * *   The data that you want to retain is backed up.
+          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+          * *   The cloud computer to which the disk belongs is stopped.
           *
           * @param request ResetSnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22080,10 +22491,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain in the disk is backed up.
-          *     **
-          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
-          * *   The cloud desktop whose disk you want to restore is stopped.
+          * *   The data that you want to retain is backed up.
+          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+          * *   The cloud computer to which the disk belongs is stopped.
           *
           * @param request ResetSnapshotRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22122,10 +22532,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain in the disk is backed up.
-          *     **
-          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
-          * *   The cloud desktop whose disk you want to restore is stopped.
+          * *   The data that you want to retain is backed up.
+          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+          * *   The cloud computer to which the disk belongs is stopped.
           *
           * @param request ResetSnapshotRequest
           * @return ResetSnapshotResponse
@@ -22138,10 +22547,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /**
           * Before you call this operation, make sure that the following operations are performed:
-          * *   The data that you want to retain in the disk is backed up.
-          *     **
-          *     **Note** The disk restoration operation is irreversible. After you restore data on a disk, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore a disk from a snapshot, make sure that you back up important data.
-          * *   The cloud desktop whose disk you want to restore is stopped.
+          * *   The data that you want to retain is backed up.
+          *     > The disk restoration operation is irreversible. After you call this operation, the disk is restored to the status at the point in time when the snapshot was created. Data that is generated between the snapshot creation time and the current time is lost. Before you restore the disk based on the snapshot, make sure that you back up data.
+          * *   The cloud computer to which the disk belongs is stopped.
           *
           * @param request ResetSnapshotRequest
           * @return ResetSnapshotResponse
@@ -22391,8 +22799,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
           *
           * @param request SendVerifyCodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22434,8 +22841,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
           *
           * @param request SendVerifyCodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -22477,8 +22883,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
           *
           * @param request SendVerifyCodeRequest
           * @return SendVerifyCodeResponse
@@ -22490,8 +22895,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * ## Description
-          * When you attach your workspace network to a Cloud Enterprise Network (CEN) instance in another Alibaba Cloud account, you need to call this operation to obtain a verification code. After the call is successful, the system sends a verification code to the email address associated with the Alibaba Cloud account.
+          * You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.
           *
           * @param request SendVerifyCodeRequest
           * @return SendVerifyCodeResponse
@@ -23189,7 +23593,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop that you want to start must be in the Stopped state.
+          * The cloud computers that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23227,7 +23631,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop that you want to start must be in the Stopped state.
+          * The cloud computers that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23265,7 +23669,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop that you want to start must be in the Stopped state.
+          * The cloud computers that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -23277,7 +23681,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktop that you want to start must be in the Stopped state.
+          * The cloud computers that you want to start must be in the Stopped state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -23289,7 +23693,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to stop must be in the Running state.
+          * The cloud computers that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23331,7 +23735,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to stop must be in the Running state.
+          * The cloud computers that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -23373,7 +23777,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to stop must be in the Running state.
+          * The cloud computers that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse
@@ -23385,7 +23789,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * The cloud desktops that you want to stop must be in the Running state.
+          * The cloud computers that you want to stop must be in the Running state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse
@@ -23981,7 +24385,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to upload custom Windows images.
+          * >  You can upload only Windows images.
           *
           * @param request UploadImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24055,7 +24459,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to upload custom Windows images.
+          * >  You can upload only Windows images.
           *
           * @param request UploadImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -24129,7 +24533,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to upload custom Windows images.
+          * >  You can upload only Windows images.
           *
           * @param request UploadImageRequest
           * @return UploadImageResponse
@@ -24141,7 +24545,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         }
 
         /**
-          * > You can call this operation to upload custom Windows images.
+          * >  You can upload only Windows images.
           *
           * @param request UploadImageRequest
           * @return UploadImageResponse

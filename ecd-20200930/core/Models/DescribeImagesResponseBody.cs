@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? GpuCategory { get; set; }
 
             /// <summary>
-            /// The version of the GPU driver.
+            /// The version number of the GPU driver.
             /// </summary>
             [NameInMap("GpuDriverVersion")]
             [Validation(Required=false)]
@@ -67,6 +67,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The type of the image.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SYSTEM
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   CUSTOM
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
@@ -80,38 +98,104 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The OS type of the image.
+            /// The type of the operating system.
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The OS type of the image.
+            /// The operating system type of the image.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Ubuntu
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows Server 2022
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   UOS
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   CentOS
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows Server 2019
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   SQL Server 2016
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows 10
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public string Platform { get; set; }
 
             /// <summary>
-            /// The progress of image creation. Unit: percentage (%).
+            /// The creation progress of the image. Unit: %.
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
             /// <summary>
-            /// The type of the protocol.
+            /// The protocol type.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   HDX: High-definition Experience (HDX) protocol
+            /// *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The session type of the image. Valid values:
+            /// The type of the image session.
             /// 
-            /// *   SINGLE_SESSION: single-session images
-            /// *   MULTIPLE_SESSION: multi-session images
+            /// Valid values:
+            /// 
+            /// *   SINGLE_SESSION: single-session image.
+            /// 
+            /// *   MULTIPLE_SESSION: multi-session image.
             /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
@@ -132,14 +216,40 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// The state of the image.
+            /// The status of the image.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Creating
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Available
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   CreateFailed
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The languages of the OS.
+            /// The languages of the operating system.
             /// </summary>
             [NameInMap("SupportedLanguages")]
             [Validation(Required=false)]
@@ -160,7 +270,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.
+            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]

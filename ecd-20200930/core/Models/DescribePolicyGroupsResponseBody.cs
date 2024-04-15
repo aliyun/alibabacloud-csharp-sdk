@@ -10,12 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePolicyGroupsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the policies.
+        /// The details of the policies.
         /// </summary>
         [NameInMap("DescribePolicyGroups")]
         [Validation(Required=false)]
         public List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> DescribePolicyGroups { get; set; }
         public class DescribePolicyGroupsResponseBodyDescribePolicyGroups : TeaModel {
+            /// <summary>
+            /// Indicates whether users have the administrator permissions after they connect to cloud desktops.
+            /// 
+            /// >  This parameter is in invitational preview and not available to the public.
+            /// </summary>
             [NameInMap("AdminAccess")]
             [Validation(Required=false)]
             public string AdminAccess { get; set; }
@@ -23,8 +28,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// Indicates whether the anti-screenshot feature is enabled. Valid values:
             /// 
-            /// *   on: This feature is enabled.
-            /// *   off: This feature is disabled.
+            /// *   on
+            /// *   off
             /// 
             /// Default value: off.
             /// </summary>
@@ -33,21 +38,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AppContentProtection { get; set; }
 
             /// <summary>
-            /// The client CIDR blocks in the whitelist.
+            /// The client CIDR blocks in a whitelist.
             /// </summary>
             [NameInMap("AuthorizeAccessPolicyRules")]
             [Validation(Required=false)]
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> AuthorizeAccessPolicyRules { get; set; }
             public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules : TeaModel {
                 /// <summary>
-                /// The CIDR block that you access from the client. The value is an IPv4 CIDR block.
+                /// The CIDR block that is allowed to access the client. The value is an IPv4 CIDR block.
                 /// </summary>
                 [NameInMap("CidrIp")]
                 [Validation(Required=false)]
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// The description of the IPv4 CIDR block.
+                /// The remarks on the CIDR block that is allowed to access the client.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -63,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> AuthorizeSecurityPolicyRules { get; set; }
             public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules : TeaModel {
                 /// <summary>
-                /// The IPv4 CIDR block of the security group rule.
+                /// The object to which the security group rule applies. The value is an IPv4 CIDR block.
                 /// </summary>
                 [NameInMap("CidrIp")]
                 [Validation(Required=false)]
@@ -82,69 +87,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   tcp: Transmission Control Protocol (TCP)
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   udp: User Datagram Protocol (UDP)
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   all: all protocols
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   gre: Generic Routing Encapsulation (GRE)
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   icmp: ICMP (IPv4)
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// *   icmp: Internet Control Message Protocol (ICMP) for IPv4
                 /// </summary>
                 [NameInMap("IpProtocol")]
                 [Validation(Required=false)]
                 public string IpProtocol { get; set; }
 
                 /// <summary>
-                /// The authorization policy of the security group rule.
+                /// The authorization of the security group rule.
                 /// 
                 /// Valid values:
                 /// 
                 /// *   drop: denies all access requests.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   accept: accepts all access requests.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
@@ -170,20 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   outflow: outbound
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   inflow: inbound
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -196,21 +141,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   off: The feature is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   on (default): The feature is enabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// *   off
+            /// *   on (default)
             /// </summary>
             [NameInMap("CameraRedirect")]
             [Validation(Required=false)]
@@ -229,72 +161,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   html5: web client
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   linux
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     WUYING hardware client
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   android
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Android client
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   windows
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Windows client
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   ios
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     iOS client
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   macos
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     macOS client
-                /// 
-                ///     <!-- -->
+                /// *   linux: WUYING hardware terminal
+                /// *   android: Android client
+                /// *   windows: Windows client
+                /// *   ios: iOS client
+                /// *   macos: macOS client
                 /// </summary>
                 [NameInMap("ClientType")]
                 [Validation(Required=false)]
@@ -306,28 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   OFF
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     not allowed
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   ON
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     allowed
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -341,76 +191,74 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// Valid values:
             /// 
             /// *   read: One-way transfer is allowed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   readwrite: Two-way transfer is allowed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   off: Two-way transfer is not allowed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Clipboard")]
             [Validation(Required=false)]
             public string Clipboard { get; set; }
 
+            /// <summary>
+            /// The CPU underclocking duration. Valid values: 30 to 120.
+            /// </summary>
             [NameInMap("CpuDownGradeDuration")]
             [Validation(Required=false)]
             public int? CpuDownGradeDuration { get; set; }
 
+            /// <summary>
+            /// The process whitelist that is not restricted by the CPU usage limit.
+            /// </summary>
             [NameInMap("CpuProcessors")]
             [Validation(Required=false)]
             public List<string> CpuProcessors { get; set; }
 
+            /// <summary>
+            /// Indicates whether the switch for CPU protection mode is turned on. Valid values: on and off.
+            /// </summary>
             [NameInMap("CpuProtectedMode")]
             [Validation(Required=false)]
             public string CpuProtectedMode { get; set; }
 
+            /// <summary>
+            /// The overall CPU utilization. Valid values: 70 to 90.
+            /// </summary>
             [NameInMap("CpuRateLimit")]
             [Validation(Required=false)]
             public int? CpuRateLimit { get; set; }
 
+            /// <summary>
+            /// The overall CPU sampling duration. Valid values: 10 to 60.
+            /// </summary>
             [NameInMap("CpuSampleDuration")]
             [Validation(Required=false)]
             public int? CpuSampleDuration { get; set; }
 
+            /// <summary>
+            /// The usage of a single CPU. Valid values: 70 to 100.
+            /// </summary>
             [NameInMap("CpuSingleRateLimit")]
             [Validation(Required=false)]
             public int? CpuSingleRateLimit { get; set; }
 
             /// <summary>
-            /// The access control for domain names. The domain names can contain the wildcard character (\*). Multiple domain names are separated by commas (,). Valid values:
+            /// Indicates whether the access control for domain names is enabled. The domain names can contain wildcard characters (\*). Multiple domain names are separated by commas (,). Valid values:
             /// 
-            /// *   off: This feature is disabled.
-            /// *   on: This feature is enabled.
+            /// *   off
+            /// *   on
             /// </summary>
             [NameInMap("DomainList")]
             [Validation(Required=false)]
             public string DomainList { get; set; }
 
             /// <summary>
-            /// The resolution of domain names.
+            /// The rule of domain name resolution.
             /// </summary>
             [NameInMap("DomainResolveRule")]
             [Validation(Required=false)]
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule> DomainResolveRule { get; set; }
             public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule : TeaModel {
                 /// <summary>
-                /// The policy description.
+                /// The rule description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -424,10 +272,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resolution feature is allowed.
+                /// Indicates whether the domain name resolution is allowed. Valid values:
                 /// 
-                /// *   allow: The feature is allowed.
-                /// *   block: The feature is not allowed.
+                /// *   allow
+                /// *   block
                 /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
@@ -441,20 +289,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// Valid values:
             /// 
             /// *   off
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   on
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("DomainResolveRuleType")]
             [Validation(Required=false)]
@@ -462,120 +297,59 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The number of cloud desktops that are associated with the policy.\
-            /// This parameter is returned only if PolicyGroupType is set to CUSTOM.
+            /// This parameter is returned only for custom policies.
             /// </summary>
             [NameInMap("EdsCount")]
             [Validation(Required=false)]
             public int? EdsCount { get; set; }
 
             /// <summary>
-            /// Indicates whether the switch for end users to ask for assistance from the administrator is turned on. Valid values: on off
+            /// Indicates whether the switch for end users to ask for assistance from the administrator is turned on. Valid values: on and off.
             /// </summary>
             [NameInMap("EndUserApplyAdminCoordinate")]
             [Validation(Required=false)]
             public string EndUserApplyAdminCoordinate { get; set; }
 
             /// <summary>
-            /// The switch for stream collaboration between end users. Valid values: on off
+            /// Indicates whether the switch for stream collaboration between end users is turned on. Valid values: on and off.
             /// </summary>
             [NameInMap("EndUserGroupCoordinate")]
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
 
             /// <summary>
-            /// Indicates whether the image quality policy is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.
+            /// Indicates whether the image quality feature is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional graphic design scenarios.
             /// 
             /// Valid values:
             /// 
-            /// *   off: The feature is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   on: This feature is enabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// *   off
+            /// *   on
             /// </summary>
             [NameInMap("GpuAcceleration")]
             [Validation(Required=false)]
             public string GpuAcceleration { get; set; }
 
             /// <summary>
-            /// The HTML5 client access feature.
+            /// Indicates whether the access policy on HTML5 clients is allowed.
             /// 
             /// Valid values:
             /// 
             /// *   off (default)
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     disabled
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   on
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     enabled
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Html5Access")]
             [Validation(Required=false)]
             public string Html5Access { get; set; }
 
             /// <summary>
-            /// The file transfer feature for the HTML5 client.
+            /// The file transfer policy for HTML5 clients.
             /// 
             /// Valid values:
             /// 
-            /// *   all: Files can be uploaded and downloaded between your computer and HTML5 clients.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   download: Files on HTML5 clients can be downloaded to your computer.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   upload: Files on your computer can be uploaded to HTML5 clients.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
+            /// *   all: Files can be uploaded and downloaded between your local computer and HTML5 clients.
+            /// *   download: Files on HTML5 clients can be downloaded to your local computer.
+            /// *   upload: Files on your local computer can be uploaded to HTML5 clients.
             /// *   off (default): File transfer between HTML5 clients and your computer is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("Html5FileTransfer")]
             [Validation(Required=false)]
@@ -584,8 +358,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The protocol that is used for network communication. Valid values:
             /// 
-            /// *   TCP: Only the TCP protocol is used.
-            /// *   BOTH: The automatic switchover between the TCP protocol and the UDP protocol is supported.
+            /// *   TCP: Only TCP can be used.
+            /// *   BOTH: TCP or UDP can be used. The system switches between TCP and UDP based on the actual network condition.
             /// 
             /// Default value: TCP.
             /// </summary>
@@ -599,53 +373,51 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// Valid values:
             /// 
             /// *   read: read-only
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   readwrite: read and write
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   off: no permissions
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("LocalDrive")]
             [Validation(Required=false)]
             public string LocalDrive { get; set; }
 
+            /// <summary>
+            /// The duration required for underclocking memory by a single process. Valid values: 30 to 120.
+            /// </summary>
             [NameInMap("MemoryDownGradeDuration")]
             [Validation(Required=false)]
             public int? MemoryDownGradeDuration { get; set; }
 
+            /// <summary>
+            /// The whitelist of processes that are not restricted by the memory usage limit.
+            /// </summary>
             [NameInMap("MemoryProcessors")]
             [Validation(Required=false)]
             public List<string> MemoryProcessors { get; set; }
 
+            /// <summary>
+            /// Indicates whether the switch for memory protection mode is turned on. Valid values: on and off.
+            /// </summary>
             [NameInMap("MemoryProtectedMode")]
             [Validation(Required=false)]
             public string MemoryProtectedMode { get; set; }
 
+            /// <summary>
+            /// The overall memory usage. Valid values: 70 to 90.
+            /// </summary>
             [NameInMap("MemoryRateLimit")]
             [Validation(Required=false)]
             public int? MemoryRateLimit { get; set; }
 
+            /// <summary>
+            /// The overall sampling duration of memory statistics. Valid values: 30 to 60.
+            /// </summary>
             [NameInMap("MemorySampleDuration")]
             [Validation(Required=false)]
             public int? MemorySampleDuration { get; set; }
 
+            /// <summary>
+            /// The memory usage of a single process. Valid values: 30 to 60.
+            /// </summary>
             [NameInMap("MemorySingleRateLimit")]
             [Validation(Required=false)]
             public int? MemorySingleRateLimit { get; set; }
@@ -660,29 +432,41 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// Indicates whether the network redirection feature is enabled. Valid values:
             /// 
-            /// *   on: This feature is enabled.
-            /// *   off: The feature is disabled.
+            /// *   on
+            /// *   off
             /// 
             /// Default value: off.
+            /// 
+            /// >  This parameter is in invitational preview and not available to the public.
             /// </summary>
             [NameInMap("NetRedirect")]
             [Validation(Required=false)]
             public string NetRedirect { get; set; }
 
             /// <summary>
-            /// The network redirection rules.
+            /// The network redirection rule.
+            /// 
+            /// >  This parameter is in invitational preview and not available to the public.
             /// </summary>
             [NameInMap("NetRedirectRule")]
             [Validation(Required=false)]
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule> NetRedirectRule { get; set; }
             public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule : TeaModel {
                 /// <summary>
-                /// The content of the rule.
+                /// The rule content.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
+                /// <summary>
+                /// Indicates whether the rule is allowed.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   allow
+                /// *   block
+                /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
                 public string Policy { get; set; }
@@ -692,29 +476,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 /// Valid values:
                 /// 
-                /// *   prc
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     process
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   domain
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     domain name
-                /// 
-                ///     <!-- -->
+                /// *   prc: process
+                /// *   domain: domain name
                 /// </summary>
                 [NameInMap("RuleType")]
                 [Validation(Required=false)]
@@ -730,50 +493,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// The rule type.
+            /// The policy type.
             /// 
             /// Valid values:
             /// 
             /// *   SYSTEM
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   CUSTOM
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("PolicyGroupType")]
             [Validation(Required=false)]
             public string PolicyGroupType { get; set; }
 
             /// <summary>
-            /// The state of the policy.
+            /// The policy status.
             /// 
             /// Valid values:
             /// 
             /// *   AVAILABLE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   CREATING
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("PolicyStatus")]
             [Validation(Required=false)]
@@ -794,37 +531,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<string> PreemptLoginUsers { get; set; }
 
             /// <summary>
-            /// The printer redirection feature.
+            /// Indicates whether the printer redirection feature is enabled.
             /// 
             /// Valid values:
             /// 
             /// *   off
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The feature is disabled
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
             /// *   on
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The feature is enabled
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
             /// </summary>
             [NameInMap("PrinterRedirection")]
             [Validation(Required=false)]
@@ -833,8 +545,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// Indicates whether the custom screen recording feature is enabled. Valid values:
             /// 
-            /// *   on: This feature is enabled.
-            /// *   off: This feature is disabled.
+            /// *   on
+            /// *   off
             /// 
             /// Default value: off.
             /// </summary>
@@ -843,47 +555,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordContent { get; set; }
 
             /// <summary>
-            /// The duration in which the custom screen recording is valid. Default value: 30. Unit: days.
+            /// The period when the custom screen recording can be retained before expiration. Default value: 30 days.
             /// </summary>
             [NameInMap("RecordContentExpires")]
             [Validation(Required=false)]
             public long? RecordContentExpires { get; set; }
 
             /// <summary>
-            /// Indicates whether screen recording is enabled.
+            /// Indicates whether the screen recording feature is enabled.
             /// 
             /// Valid values:
             /// 
             /// *   ALLTIME: All operations that are performed by end users on cloud desktops are recorded. The recording starts immediately when end users connect to cloud desktops and ends after the end users disconnect from the cloud desktops.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   PERIOD: The operations that are performed by end users on cloud desktops during a specified period of time are recorded. You must specify the start time and the end time of the recording.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   OFF: Screen recording is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// *   OFF: The screen recording feature is disabled.
             /// </summary>
             [NameInMap("Recording")]
             [Validation(Required=false)]
             public string Recording { get; set; }
 
             /// <summary>
-            /// Indicates whether the sound that is generated on the cloud desktop is recorded during screen recording. Valid values:
+            /// Indicates whether to record audio or video data that is generated on the cloud desktop during screen recording. Valid values:
             /// 
             /// *   on: records audio and video data.
             /// *   off: records only video data.
@@ -893,21 +585,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingAudio { get; set; }
 
             /// <summary>
-            /// This parameter is used together with Recording. After the specified period of the recording reaches, a screen recording file is generated.
+            /// This parameter is used with the Recording parameter to generate a screen recording file after you specify the duration of screen recording.
             /// </summary>
             [NameInMap("RecordingDuration")]
             [Validation(Required=false)]
             public int? RecordingDuration { get; set; }
 
             /// <summary>
-            /// The time when the screen recording ended. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.
+            /// The time when the screen recording ended. The value is in the HH:MM:SS format. The value takes effect only when Recording is set to PERIOD.
             /// </summary>
             [NameInMap("RecordingEndTime")]
             [Validation(Required=false)]
             public string RecordingEndTime { get; set; }
 
             /// <summary>
-            /// The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.
+            /// The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: day.
             /// </summary>
             [NameInMap("RecordingExpires")]
             [Validation(Required=false)]
@@ -926,16 +618,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordingFps { get; set; }
 
             /// <summary>
-            /// The time when the screen recording was started. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.
+            /// The time when the screen recording was started. The value is in the HH:MM:SS format. The value takes effect only when Recording is set to PERIOD.
             /// </summary>
             [NameInMap("RecordingStartTime")]
             [Validation(Required=false)]
             public string RecordingStartTime { get; set; }
 
+            /// <summary>
+            /// Indicates whether the client notification of screen recording is enabled. Valid values: on and off.
+            /// </summary>
             [NameInMap("RecordingUserNotify")]
             [Validation(Required=false)]
             public string RecordingUserNotify { get; set; }
 
+            /// <summary>
+            /// The notification content of screen recording. By default, this parameter is left empty.
+            /// </summary>
             [NameInMap("RecordingUserNotifyMessage")]
             [Validation(Required=false)]
             public string RecordingUserNotifyMessage { get; set; }
@@ -955,14 +653,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// The effective scope of the policy. Valid values:
             /// 
             /// *   GLOBAL: The policy takes effect globally.
-            /// *   IP: The policy takes effect based on the IP address.
+            /// *   IP: The policy takes effect based on IP addresses.
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
 
             /// <summary>
-            /// This parameter is specified if Scope is set to IP.
+            /// This parameter is required when Scope is set to IP. This parameter takes effect when Scope is set to IP.
             /// </summary>
             [NameInMap("ScopeValue")]
             [Validation(Required=false)]
@@ -973,28 +671,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   off: The feature is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   on: This feature is enabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// *   off
+            /// *   on
             /// </summary>
             [NameInMap("UsbRedirect")]
             [Validation(Required=false)]
             public string UsbRedirect { get; set; }
 
             /// <summary>
-            /// The USB redirection rules.
+            /// The USB redirection rule.
             /// </summary>
             [NameInMap("UsbSupplyRedirectRule")]
             [Validation(Required=false)]
@@ -1008,14 +693,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The device class. If you set `UsbRuleType` to 1, you must specify this parameter. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
+                /// The device class. This parameter is required when `usbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
                 /// </summary>
                 [NameInMap("DeviceClass")]
                 [Validation(Required=false)]
                 public string DeviceClass { get; set; }
 
                 /// <summary>
-                /// The device subclass. This parameter is required if `UsbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
+                /// The subclass of the device. This parameter is required when `usbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
                 /// </summary>
                 [NameInMap("DeviceSubclass")]
                 [Validation(Required=false)]
@@ -1029,25 +714,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// The USB redirection type.
+                /// Indicates whether USB redirection is allowed.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   1: allows USB redirection.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   2: forbids USB redirection.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// *   1: allowed
+                /// *   2: not allowed
                 /// </summary>
                 [NameInMap("UsbRedirectType")]
                 [Validation(Required=false)]
@@ -1059,27 +731,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// Valid values:
                 /// 
                 /// *   1: by device class
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   2: by device vendor
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("UsbRuleType")]
                 [Validation(Required=false)]
                 public long? UsbRuleType { get; set; }
 
                 /// <summary>
-                /// The vendor ID. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
+                /// The vendor ID (VID). For more information, see [Valid USB VIDs](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
                 /// </summary>
                 [NameInMap("VendorId")]
                 [Validation(Required=false)]
@@ -1088,100 +747,47 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// Indicates whether the multimedia redirection feature is enabled. Valid values: on: The feature is enabled. off: The feature is disabled.
+            /// Indicates whether the multimedia redirection feature is enabled. Valid values: on and off.
             /// </summary>
             [NameInMap("VideoRedirect")]
             [Validation(Required=false)]
             public string VideoRedirect { get; set; }
 
             /// <summary>
-            /// The image display quality feature.
+            /// The image display quality.
             /// 
             /// Valid values:
             /// 
-            /// *   high
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     high-definition (HD)
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   low
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     fluent
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   medium (default)
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     adaptive
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   lossless
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     no quality loss
-            /// 
-            ///     <!-- -->
+            /// *   high: high-definition (HD)
+            /// *   low: fluent
+            /// *   medium (default): adaptive
+            /// *   lossless: no quality loss
             /// </summary>
             [NameInMap("VisualQuality")]
             [Validation(Required=false)]
             public string VisualQuality { get; set; }
 
             /// <summary>
-            /// Indicates whether the watermark feature is enabled.
+            /// Indicates whether the watermarking feature is enabled.
             /// 
             /// Valid values:
             /// 
-            /// *   off: The feature is disabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   on: This feature is enabled.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// *   off
+            /// *   on
             /// </summary>
             [NameInMap("Watermark")]
             [Validation(Required=false)]
             public string Watermark { get; set; }
 
+            /// <summary>
+            /// Indicates whether the anti-screen photo feature is enabled for invisible watermarks. Valid values: on and off.
+            /// </summary>
             [NameInMap("WatermarkAntiCam")]
             [Validation(Required=false)]
             public string WatermarkAntiCam { get; set; }
 
             /// <summary>
-            /// The font color of the watermark. Valid values: 0 to 16777215.
+            /// The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.
             /// </summary>
             [NameInMap("WatermarkColor")]
             [Validation(Required=false)]
@@ -1195,7 +801,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkCustomText { get; set; }
 
             /// <summary>
-            /// The inclination angle of the watermark. Valid values: -10 to -30.
+            /// The slope of the watermark. Valid values: -10 to -30.
             /// </summary>
             [NameInMap("WatermarkDegree")]
             [Validation(Required=false)]
@@ -1218,6 +824,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string WatermarkFontStyle { get; set; }
 
+            /// <summary>
+            /// The invisible watermark enhancement feature. Valid values: low, medium, and high.
+            /// </summary>
             [NameInMap("WatermarkPower")]
             [Validation(Required=false)]
             public string WatermarkPower { get; set; }
@@ -1229,6 +838,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? WatermarkRowAmount { get; set; }
 
+            /// <summary>
+            /// Indicates whether the security priority for invisible watermarks is enabled. Valid values: on and off.
+            /// </summary>
             [NameInMap("WatermarkSecurity")]
             [Validation(Required=false)]
             public string WatermarkSecurity { get; set; }
@@ -1239,35 +851,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// Valid values:
             /// 
             /// *   LIGHT
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   DARK
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   MIDDLE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("WatermarkTransparency")]
             [Validation(Required=false)]
             public string WatermarkTransparency { get; set; }
 
             /// <summary>
-            /// The watermark transparency. A larger value indicates that the watermark is less transparent. Valid values: 10 to 100.
+            /// The watermark transparency. A greater value indicates that the watermark is less transparent. Valid values: 10 to 100.
             /// </summary>
             [NameInMap("WatermarkTransparencyValue")]
             [Validation(Required=false)]
@@ -1279,36 +871,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// Valid values:
             /// 
             /// *   HostName,EndUserId: The watermark is displayed in the following format: Rightmost 15 characters of the cloud desktop ID,Username.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   EndUserId: The username is displayed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   EndUserId,HostName: The watermark is displayed in the following format: Username,Rightmost 15 characters of the cloud desktop ID.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
             /// *   HostName: The rightmost 15 characters of the cloud desktop ID are displayed.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
             /// </summary>
             [NameInMap("WatermarkType")]
             [Validation(Required=false)]

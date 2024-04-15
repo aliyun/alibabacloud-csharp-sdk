@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The Cloud Enterprise Network (CEN) instance ID.
         /// 
-        /// > If you want to connect to your cloud desktops over a VPC, you can attach the network of the workspace to the CEN instance. The CEN instance is connected to the on-premises network over VPN Gateway or Express Connect.
+        /// >  If you want end users to connect to cloud computers from WUYING clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -36,37 +36,82 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
+        /// The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:
+        /// 
+        /// *   `10.0.0.0/12` (subnet mask range: 12 to 14 bits)
+        /// *   `172.16.0.0/12` (subnet mask range: 12 to 24 bits)
+        /// *   `192.168.0.0/16` (subnet mask range: 16 to 24 bits)
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// Specifies whether the workspace is a CloudBox-based workspace.
+        /// Specifies whether to create a CloudBox-based office network.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("CloudBoxOfficeSite")]
         [Validation(Required=false)]
         public bool? CloudBoxOfficeSite { get; set; }
 
         /// <summary>
-        /// The method that is used to connect the client to cloud desktops.
+        /// The method to connect to cloud computers from WUYING clients.
         /// 
-        /// > VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.
+        /// >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````
         /// </summary>
         [NameInMap("DesktopAccessType")]
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+        /// Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
+        /// 
+        /// Valid values:
+        /// 
+        /// * true (default)
+        /// * false
         /// </summary>
         [NameInMap("EnableAdminAccess")]
         [Validation(Required=false)]
         public bool? EnableAdminAccess { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Internet access. By default, Internet access is not enabled.
+        /// Specifies whether to enable Internet access.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false (default)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EnableInternetAccess")]
         [Validation(Required=false)]
@@ -80,21 +125,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? NeedVerifyZeroDevice { get; set; }
 
         /// <summary>
-        /// The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the vSwitches in the VPC. This parameter is required when you create a CloudBox-based workspace.
+        /// The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -107,6 +152,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string VerifyCode { get; set; }
 
+        /// <summary>
+        /// The network type of the office network.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   standard: advanced
+        /// *   basic: basic
+        /// </summary>
         [NameInMap("VpcType")]
         [Validation(Required=false)]
         public string VpcType { get; set; }

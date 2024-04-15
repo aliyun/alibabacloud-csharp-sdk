@@ -10,63 +10,98 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the desktop templates. You can specify 1 to 100 desktop templates.
+        /// The IDs of the cloud computer templates. You can specify 1 to 100 IDs.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// The type of the cloud desktop template. Valid values:
+        /// The type of the cloud computer template.
         /// 
-        /// *   SYSTEM: the system template
-        /// *   CUSTOM: the custom template
+        /// Valid values:
+        /// 
+        /// *   SYSTEM: system template
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   CUSTOM: custom template
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("BundleType")]
         [Validation(Required=false)]
         public string BundleType { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the inventory status of the cloud desktop type.
+        /// Specifies whether to query the inventory status of the cloud computer instance type.
         /// </summary>
         [NameInMap("CheckStock")]
         [Validation(Required=false)]
         public bool? CheckStock { get; set; }
 
         /// <summary>
-        /// The number of vCPUs that is defined in the cloud desktop type.
+        /// The number of vCPUs contained in the cloud computer instance type.
         /// </summary>
         [NameInMap("CpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// The family of the cloud desktop type. Valid values:
+        /// The instance family of the cloud computers.
         /// 
-        /// *   eds.general: General Office
-        /// *   eds.hf: High Frequency
-        /// *   eds.graphics: Graphics
+        /// Valid values:
+        /// 
+        /// *   eds.graphics: graphical instance families
+        /// *   eds.hf: instance families with high clock speeds
+        /// *   eds.general: general-purpose instance families
         /// </summary>
         [NameInMap("DesktopTypeFamily")]
         [Validation(Required=false)]
         public string DesktopTypeFamily { get; set; }
 
         /// <summary>
-        /// This parameter is now in invitational preview and unavailable.
+        /// This parameter is now in invitational preview and not publicly available.
         /// </summary>
         [NameInMap("FotaChannel")]
         [Validation(Required=false)]
         public string FotaChannel { get; set; }
 
         /// <summary>
-        /// Specifies whether the cloud desktop template belongs to a desktop group. Default value: false.
+        /// Specifies whether the cloud computers in the template belong to a cloud computer pool.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("FromDesktopGroup")]
         [Validation(Required=false)]
         public bool? FromDesktopGroup { get; set; }
 
         /// <summary>
-        /// The number of GPUs that is defined in the cloud desktop type.
+        /// The number of GPUs contained in the cloud computer instance type.
         /// </summary>
         [NameInMap("GpuCount")]
         [Validation(Required=false)]
@@ -91,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The memory size that is defined in the cloud desktop type. Unit: GiB.
+        /// The memory size of the cloud computer instance type. Unit: GiB.
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
@@ -105,10 +140,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The OS. Valid values:
+        /// The type of the OS.
         /// 
-        /// * **Windows**
-        /// * **Linux**
+        /// Valid values:
+        /// 
+        /// *   Linux
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Windows
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -117,15 +167,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The protocol type.
         /// 
-        /// *   HDX
-        /// *   ASP (Recommend)
+        /// Valid values:
+        /// 
+        /// *   HDX: High-definition Experience (HDX) protocol
+        /// *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -157,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SessionType { get; set; }
 
         /// <summary>
-        /// Specifies whether to return multi-session desktop templates in this call. Default value: false.
+        /// Specifies whether to return multi-session cloud computer templates. Default value: false.
         /// </summary>
         [NameInMap("SupportMultiSession")]
         [Validation(Required=false)]

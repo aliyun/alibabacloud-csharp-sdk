@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUserConnectionRecordsResponseBody : TeaModel {
         /// <summary>
-        /// Details about connection records.
+        /// Details about connection records of the end user.
         /// </summary>
         [NameInMap("ConnectionRecords")]
         [Validation(Required=false)]
         public List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> ConnectionRecords { get; set; }
         public class DescribeUserConnectionRecordsResponseBodyConnectionRecords : TeaModel {
             /// <summary>
-            /// The duration of the desktop connection. Unit: seconds.
+            /// The duration for which the end user is connected to the cloud computer. Unit: seconds.
             /// </summary>
             [NameInMap("ConnectDuration")]
             [Validation(Required=false)]
             public string ConnectDuration { get; set; }
 
             /// <summary>
-            /// The time when the cloud desktop was disconnected.
+            /// The time when the end user disconnected from the cloud computer.
             /// </summary>
             [NameInMap("ConnectEndTime")]
             [Validation(Required=false)]
             public string ConnectEndTime { get; set; }
 
             /// <summary>
-            /// The time when the cloud desktop was connected.
+            /// The time when the end user connected to the cloud computer.
             /// </summary>
             [NameInMap("ConnectStartTime")]
             [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionRecordId { get; set; }
 
             /// <summary>
-            /// The ID of the cloud desktop that is connected.
+            /// The ID of the cloud computer to which the end user connected.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud desktop that is connected.
+            /// The name of the cloud computer to which the end user connected.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]

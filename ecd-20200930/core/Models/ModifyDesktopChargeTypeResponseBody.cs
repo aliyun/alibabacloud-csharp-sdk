@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the desktop groups. If multiple cloud desktops are created at a time, multiple cloud desktop IDs are returned.
+        /// The IDs of the cloud computers.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]

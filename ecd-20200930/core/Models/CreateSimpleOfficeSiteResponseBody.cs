@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSimpleOfficeSiteResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the workspace.
+        /// The office network ID.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

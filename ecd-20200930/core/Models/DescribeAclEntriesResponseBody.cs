@@ -10,34 +10,38 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeAclEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The ACL entry.
+        /// The ACL entries.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<DescribeAclEntriesResponseBodyAclEntries> AclEntries { get; set; }
         public class DescribeAclEntriesResponseBodyAclEntries : TeaModel {
             /// <summary>
-            /// The ACL policy.
+            /// The ACL type.
             /// 
-            /// *   **allow**: allows access.
-            /// *   **drop**: denies access.
+            /// Valid values:
+            /// 
+            /// *   allow: whitelist
+            /// *   disable: blacklist
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
 
             /// <summary>
-            /// The ID of the instance corresponding to the ACL.
+            /// The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.
             /// </summary>
             [NameInMap("SourceId")]
             [Validation(Required=false)]
             public string SourceId { get; set; }
 
             /// <summary>
-            /// The object on which the ACL takes effect.
+            /// The granularity of the ACL.
             /// 
-            /// *   **vpc**: workspace.
-            /// *   **desktop**: cloud desktop.
+            /// Valid values:
+            /// 
+            /// *   desktop: cloud computer
+            /// *   vpc: office network
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]

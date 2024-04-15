@@ -11,13 +11,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DescribeUsersInGroupRequest : TeaModel {
         /// <summary>
         /// The status of the desktop connection for the end user.
+        /// 
+        /// Valid values:
+        /// 
+        /// - 0: Disconnected.
+        /// - 1: Connected.
         /// </summary>
         [NameInMap("ConnectState")]
         [Validation(Required=false)]
         public int? ConnectState { get; set; }
 
         /// <summary>
-        /// The ID of the desktop group.
+        /// The ID of the cloud computer pool.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The IDs of the end users.
+        /// The IDs of the authorized users.
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -69,14 +74,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the details about the end user.
+        /// Specifies whether to query user details.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true (default)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("QueryUserDetail")]
         [Validation(Required=false)]
         public bool? QueryUserDetail { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

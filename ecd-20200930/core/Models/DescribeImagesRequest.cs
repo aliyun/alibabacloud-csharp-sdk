@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImagesRequest : TeaModel {
         /// <summary>
-        /// The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.
+        /// The instance type of the cloud computer. You can call the [DescribeDesktopTypes](~~436816~~) operation to obtain the parameter value.
         /// </summary>
         [NameInMap("DesktopInstanceType")]
         [Validation(Required=false)]
@@ -24,7 +24,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FotaVersion { get; set; }
 
         /// <summary>
-        /// Specifies whether the image is a GPU-accelerated image.
+        /// Specifies whether the images are GPU-accelerated images.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("GpuCategory")]
         [Validation(Required=false)]
@@ -90,21 +108,44 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The type of the OS. Default value: `null`.
+        /// The type of the operating system of the images. Default value: `null`.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   Linux
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Windows
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
 
         /// <summary>
-        /// The type of the protocol.
+        /// The protocol type.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   HDX: High-definition Experience (HDX) protocol
+        /// *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

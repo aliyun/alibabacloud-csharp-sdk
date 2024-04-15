@@ -10,51 +10,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ConfigADConnectorTrustRequest : TeaModel {
         /// <summary>
-        /// The ID of the AD workspace.
+        /// The ID of the enterprise AD office network.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// Specifies whether to configure the trust password for the RDS license domain of the AD workspace.
+        /// Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.
         /// 
         /// Valid values:
         /// 
-        /// *   true
+        /// *   true: configures a trust password for the RDS License Domain of the AD office network.
         /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     configures the trust password
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     for the RDS license domain of the AD workspace.
-        /// 
-        /// *   false
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     configures the trust password
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     for common AD workspaces.
+        /// *   false: configures a trust password for a regular enterprise AD office network.
         /// </summary>
         [NameInMap("RdsLicenseDomain")]
         [Validation(Required=false)]
         public bool? RdsLicenseDomain { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

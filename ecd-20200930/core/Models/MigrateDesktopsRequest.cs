@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class MigrateDesktopsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify one or more cloud desktops. Valid values of N: 1 to 100.
+        /// The IDs of the cloud computers. You can specify 1 to 100 IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the destination workspace.
+        /// The ID of the destination office network.
         /// </summary>
         [NameInMap("TargetOfficeSiteId")]
         [Validation(Required=false)]

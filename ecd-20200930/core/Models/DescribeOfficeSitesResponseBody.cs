@@ -17,32 +17,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Details about the workspaces.
+        /// The information about office networks.
         /// </summary>
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
         public List<DescribeOfficeSitesResponseBodyOfficeSites> OfficeSites { get; set; }
         public class DescribeOfficeSitesResponseBodyOfficeSites : TeaModel {
             /// <summary>
-            /// Details about AD connectors.
+            /// The details of AD connectors.
             /// </summary>
             [NameInMap("ADConnectors")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesADConnectors : TeaModel {
                 /// <summary>
-                /// The IP address of the AD connector.
+                /// The connection address of the AD connector.
                 /// </summary>
                 [NameInMap("ADConnectorAddress")]
                 [Validation(Required=false)]
                 public string ADConnectorAddress { get; set; }
 
                 /// <summary>
-                /// The state of the AD connector.
+                /// The status of the AD connector.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   CONNECT_ERROR: A connection error occurs.
+                /// *   CONNECT_ERROR
                 /// 
                 ///     <!-- -->
                 /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 ///     <!-- -->
                 /// 
-                /// *   RUNNING: The AD connector is running
+                /// *   RUNNING
                 /// 
                 ///     <!-- -->
                 /// 
@@ -58,27 +58,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 ///     <!-- -->
                 /// 
-                ///     .
-                /// 
-                /// *   CONNECTING: The AD connector is being connected.
+                /// *   CONNECTING
                 /// 
                 ///     <!-- -->
                 /// 
                 ///     <!-- -->
                 /// 
-                ///     The AD domain for the connector needs to be configured.
+                ///     (You must configure the AD domain in which the AD connector is used.)
                 /// 
                 ///     <!-- -->
                 /// 
-                /// *   EXPIRED: The AD connector expired due to overdue payments.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   CREATING: The consumer group is being created
+                /// *   EXPIRED
                 /// 
                 ///     <!-- -->
                 /// 
@@ -86,14 +76,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 ///     <!-- -->
                 /// 
-                ///     .
+                /// *   CREATING
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("ConnectorStatus")]
                 [Validation(Required=false)]
                 public string ConnectorStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the network interface controller (NIC) that is associated with the AD connector.
+                /// The ID of an elastic network interface (ENI) to which the AD connector is mounted.
                 /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
@@ -125,14 +121,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// The trust password that is specified when you configured the AD trust relationship.
+                /// The trust password that is specified when you configure the AD trust relationship.
                 /// </summary>
                 [NameInMap("TrustKey")]
                 [Validation(Required=false)]
                 public string TrustKey { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch that corresponds to the network of the AD connector.
+                /// The ID of the vSwitch that resides in the network of the AD connector.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -141,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.
+            /// The hostname of the domain controller. The hostname must comply with Windows hostname naming convention.
             /// </summary>
             [NameInMap("AdHostname")]
             [Validation(Required=false)]
@@ -149,36 +145,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// The maximum public bandwidth value. Valid values: 0 to 1000.\
-            /// If the value of this parameter is 0, Internet access is disabled.
+            /// If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
+            /// <summary>
+            /// The CEN instance status.
+            /// </summary>
             [NameInMap("CenAttachStatus")]
             [Validation(Required=false)]
             public string CenAttachStatus { get; set; }
 
             /// <summary>
-            /// The ID of the Cloud Enterprise Network (CEN) instance.
+            /// The CEN instance ID.
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// The IPv4 CIDR block that is included in the secure office network of the workspace.
+            /// The IPv4 CIDR block of the VPC that the office network uses.
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// Specifies whether the workspace is a cloud box-based workspace.
+            /// Indicates whether the CloudBox-based office network is created.
             /// 
             /// Valid values:
             /// 
-            /// *   True: a cloud box-based workspace
+            /// *   true
             /// 
             ///     <!-- -->
             /// 
@@ -186,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   False: an Internet-based workspace
+            /// *   false
             /// 
             ///     <!-- -->
             /// 
@@ -199,84 +198,64 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? CloudBoxOfficeSite { get; set; }
 
             /// <summary>
-            /// The time when the workspace was created.
+            /// The time when the office network was created.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The ID of the security group.
+            /// The security group ID.
             /// </summary>
             [NameInMap("CustomSecurityGroupId")]
             [Validation(Required=false)]
             public string CustomSecurityGroupId { get; set; }
 
             /// <summary>
-            /// The method that is used to connect an Alibaba Cloud Workspace client to cloud desktops.
+            /// The method that is used to connect cloud computers that reside in the office network from WUYING clients.
+            /// 
+            /// >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use Alibaba Cloud PrivateLink for free. When you set this parameter to `VPC` or `Any`, PrivateLink is automatically activated.
             /// 
             /// Valid values:
             /// 
-            /// *   INTERNET: allows clients to connect to cloud desktops only over the Internet.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   VPC: allows only clients in VPCs to connect to a cloud desktop.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   ANY: connects the client to cloud desktops over the Internet or a VPC.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     Configure the Connection Method parameter based on your business requirements.
-            /// 
-            ///     <!-- -->
+            /// *   INTERNET (default): Cloud computers are connected from WUYING clients over the Internet.
+            /// *   VPC: Cloud computers are connected from WUYING clients over the VPC.
+            /// *   ANY: Cloud computers are connected from WUYING clients over the Internet or the VPC. When you use can choose a method to connect cloud computers over the Internet or VPC from WUYING clients based on their business requirements.
             /// </summary>
             [NameInMap("DesktopAccessType")]
             [Validation(Required=false)]
             public string DesktopAccessType { get; set; }
 
             /// <summary>
-            /// The number of cloud desktops that are created.
+            /// The number of cloud computers that are created.
             /// </summary>
             [NameInMap("DesktopCount")]
             [Validation(Required=false)]
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// The endpoint that is used to connect to cloud desktops over a VPC.
+            /// The endpoint that is used by the VPC, over which cloud computers are connected.
             /// </summary>
             [NameInMap("DesktopVpcEndpoint")]
             [Validation(Required=false)]
             public string DesktopVpcEndpoint { get; set; }
 
             /// <summary>
-            /// The DNS addresses of the AD domains.
+            /// The array of DNS addresses in the AD domains.
             /// </summary>
             [NameInMap("DnsAddress")]
             [Validation(Required=false)]
             public List<string> DnsAddress { get; set; }
 
             /// <summary>
-            /// The username of the Domain Name System (DNS) user.
+            /// The username of a Domain Name System (DNS) user.
             /// </summary>
             [NameInMap("DnsUserName")]
             [Validation(Required=false)]
             public string DnsUserName { get; set; }
 
             /// <summary>
-            /// The domain name of the enterprise Active Directory (AD) system.
+            /// The domain name of the enterprise AD.
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -297,14 +276,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainUserName { get; set; }
 
             /// <summary>
-            /// Indicates whether the Local Administrator permissions are granted for users of the cloud desktop.
+            /// Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.
+            /// 
+            /// Valid values:
+            /// 
+            /// * true (default)
+            /// * false
             /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether the cross-desktop access feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.
+            /// Indicates whether the connection between cloud computers in the office network is enabled. After you enable the connection between cloud computers in the office network, cloud computers in the office network can access each other.
             /// </summary>
             [NameInMap("EnableCrossDesktopAccess")]
             [Validation(Required=false)]
@@ -318,7 +302,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableInternetAccess { get; set; }
 
             /// <summary>
-            /// The IDs of the Apsara File Storage NAS (NAS) file systems.
+            /// An array of Apsara File Storage NAS (NAS) file system IDs.
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]
@@ -332,11 +316,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> Logs { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesLogs : TeaModel {
                 /// <summary>
-                /// The log level.
+                /// The log severity.
                 /// 
                 /// Valid values:
                 /// 
-                /// *   ERROR: errors
+                /// *   ERROR
                 /// 
                 ///     <!-- -->
                 /// 
@@ -344,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 ///     <!-- -->
                 /// 
-                /// *   INFO: information
+                /// *   INFO
                 /// 
                 ///     <!-- -->
                 /// 
@@ -352,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// 
                 ///     <!-- -->
                 /// 
-                /// *   WARN: warnings
+                /// *   WARN
                 /// 
                 ///     <!-- -->
                 /// 
@@ -372,7 +356,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The step that corresponds to the log entry.
+                /// The step in the log entry.
                 /// </summary>
                 [NameInMap("Step")]
                 [Validation(Required=false)]
@@ -388,33 +372,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// Specifies whether to enable multi-factor authentication (MFA).
+            /// Indicates whether multi-factor authentication (MFA) is enabled.
             /// </summary>
             [NameInMap("MfaEnabled")]
             [Validation(Required=false)]
             public bool? MfaEnabled { get; set; }
 
             /// <summary>
-            /// The name of the workspace. The name is unique in the same region.
+            /// The office network name. The name is unique in a region.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether two-step verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
-            /// If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+            /// Indicates whether two-factor verification is enabled when an end user logs on to a WUYING client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.
             /// </summary>
             [NameInMap("NeedVerifyLoginRisk")]
             [Validation(Required=false)]
             public bool? NeedVerifyLoginRisk { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable trusted device verification.
+            /// Indicates whether the trusted device verification is enabled.
             /// 
             /// Valid values:
             /// 
-            /// *   true: enables device verification.
+            /// *   true
             /// 
             ///     <!-- -->
             /// 
@@ -422,7 +405,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   false: disables device verification.
+            /// *   false
             /// 
             ///     <!-- -->
             /// 
@@ -435,25 +418,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? NeedVerifyZeroDevice { get; set; }
 
             /// <summary>
-            /// The ID of the Internet access package.
+            /// The premium bandwidth plan ID.
             /// </summary>
             [NameInMap("NetworkPackageId")]
             [Validation(Required=false)]
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// The workspace ID.
+            /// The office network ID.
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The account type of the workspace.
+            /// The account type of the office network.
             /// 
             /// Valid values:
             /// 
-            /// *   SIMPLE: the convenience account
+            /// *   SIMPLE: convenience account
             /// 
             ///     <!-- -->
             /// 
@@ -461,7 +444,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   AD_CONNECTOR: the enterprise AD account
+            /// *   AD_CONNECTOR: enterprise AD account
             /// 
             ///     <!-- -->
             /// 
@@ -474,18 +457,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteType { get; set; }
 
             /// <summary>
-            /// The name of the organizational unit (OU) that is connected to the AD domain.
+            /// The organizational unit (OU) in the AD domain to which the office network is connected.
             /// </summary>
             [NameInMap("OuName")]
             [Validation(Required=false)]
             public string OuName { get; set; }
 
             /// <summary>
-            /// The workspace protocol.
+            /// The protocol type.
             /// 
             /// Valid values:
             /// 
-            /// *   HDX: the third-party protocol
+            /// *   High-definition Experience (HDX)
             /// 
             ///     <!-- -->
             /// 
@@ -493,7 +476,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   ASP: the protocol developed by Alibaba Cloud
+            /// *   Adaptive Streaming Protocol (ASP)
             /// 
             ///     <!-- -->
             /// 
@@ -505,14 +488,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
+            /// <summary>
+            /// The IP address of the RDS license.
+            /// </summary>
             [NameInMap("RdsLicenseAddress")]
             [Validation(Required=false)]
             public string RdsLicenseAddress { get; set; }
 
+            /// <summary>
+            /// The domain name of the RDS license.
+            /// </summary>
             [NameInMap("RdsLicenseDomainName")]
             [Validation(Required=false)]
             public string RdsLicenseDomainName { get; set; }
 
+            /// <summary>
+            /// The remote desktop service (RDS) license status.
+            /// </summary>
             [NameInMap("RdsLicenseStatus")]
             [Validation(Required=false)]
             public string RdsLicenseStatus { get; set; }
@@ -525,18 +517,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SsoEnabled { get; set; }
 
             /// <summary>
-            /// The type of SSO.
+            /// The SSO type.
             /// </summary>
             [NameInMap("SsoType")]
             [Validation(Required=false)]
             public string SsoType { get; set; }
 
             /// <summary>
-            /// The state of the workspace.
+            /// The office network status.
             /// 
             /// Valid values:
             /// 
-            /// *   REGISTERING: The workspace is being registered.
+            /// *   REGISTERING: The office network is being registered.
             /// 
             ///     <!-- -->
             /// 
@@ -544,7 +536,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   DEREGISTERING: The workspace is being deregistered.
+            /// *   DEREGISTERING: The office network is being deregistered.
             /// 
             ///     <!-- -->
             /// 
@@ -552,7 +544,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   REGISTERED: The workspace is registered.
+            /// *   REGISTERED: The office network is registered.
             /// 
             ///     <!-- -->
             /// 
@@ -560,7 +552,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   NEEDCONFIGTRUST: A trust relationship needs to be configured.
+            /// *   NEEDCONFIGTRUST: A trust relationship is required for the office network.
             /// 
             ///     <!-- -->
             /// 
@@ -568,7 +560,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   CONFIGTRUSTFAILED: A trust relationship fails to be configured.
+            /// *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.
             /// 
             ///     <!-- -->
             /// 
@@ -576,7 +568,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   DEREGISTERED: The workspace is deregistered.
+            /// *   DEREGISTERED: The office network is deregistered.
             /// 
             ///     <!-- -->
             /// 
@@ -584,7 +576,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   ERROR: The configurations of the workspace are invalid.
+            /// *   ERROR: One or more configurations of the office network are invalid.
             /// 
             ///     <!-- -->
             /// 
@@ -592,7 +584,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   CONFIGTRUSTING: A trust relationship is being configured.
+            /// *   CONFIGTRUSTING: A trust relationship is being configured for the office network.
             /// 
             ///     <!-- -->
             /// 
@@ -600,7 +592,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             ///     <!-- -->
             /// 
-            /// *   NEEDCONFIGUSER: Users need to be configured.
+            /// *   NEEDCONFIGUSER: Users are required for the office network.
             /// 
             ///     <!-- -->
             /// 
@@ -613,43 +605,49 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The DNS addresses of the AD subdomains.
+            /// An array of DNS addresses for AD subdomains.
             /// </summary>
             [NameInMap("SubDnsAddress")]
             [Validation(Required=false)]
             public List<string> SubDnsAddress { get; set; }
 
             /// <summary>
-            /// The username of a Domain Name System (DNS) account in the AD subdomain.
+            /// The username of enterprise AD subdomain.
             /// </summary>
             [NameInMap("SubDomainName")]
             [Validation(Required=false)]
             public string SubDomainName { get; set; }
 
+            /// <summary>
+            /// The total number of cloud computers.
+            /// </summary>
             [NameInMap("TotalEdsCount")]
             [Validation(Required=false)]
             public long? TotalEdsCount { get; set; }
 
+            /// <summary>
+            /// The total number of cloud computers in the cloud computer pool (formerly desktop group).
+            /// </summary>
             [NameInMap("TotalEdsCountForGroup")]
             [Validation(Required=false)]
             public long? TotalEdsCountForGroup { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable.
+            /// >  This parameter is unavailable.
             /// </summary>
             [NameInMap("TrustPassword")]
             [Validation(Required=false)]
             public string TrustPassword { get; set; }
 
             /// <summary>
-            /// The IDs of the vSwitches.
+            /// An array of VSwitch IDs.
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// The ID of the secure office network of the workspace. The ID is also the ID of the virtual private cloud (VPC) used by the workspace.
+            /// The VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

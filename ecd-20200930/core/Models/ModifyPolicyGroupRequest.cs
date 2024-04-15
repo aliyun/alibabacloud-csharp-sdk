@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyPolicyGroupRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.
+        /// 
+        /// >  This parameter is in invitational preview and not available to the public.
+        /// </summary>
         [NameInMap("AdminAccess")]
         [Validation(Required=false)]
         public string AdminAccess { get; set; }
@@ -465,10 +470,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RecordingStartTime { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).
+        /// </summary>
         [NameInMap("RecordingUserNotify")]
         [Validation(Required=false)]
         public string RecordingUserNotify { get; set; }
 
+        /// <summary>
+        /// The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.
+        /// </summary>
         [NameInMap("RecordingUserNotifyMessage")]
         [Validation(Required=false)]
         public string RecordingUserNotifyMessage { get; set; }
@@ -717,6 +728,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Watermark { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).
+        /// </summary>
         [NameInMap("WatermarkAntiCam")]
         [Validation(Required=false)]
         public string WatermarkAntiCam { get; set; }
@@ -752,6 +766,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string WatermarkFontStyle { get; set; }
 
+        /// <summary>
+        /// The watermark enhancement feature. Valid values: low, medium, and high.
+        /// </summary>
         [NameInMap("WatermarkPower")]
         [Validation(Required=false)]
         public string WatermarkPower { get; set; }

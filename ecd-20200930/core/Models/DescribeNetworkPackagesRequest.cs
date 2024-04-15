@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// The billing method of the Internet access package. Valid values:
+        /// The charge type of the pay-as-you-go premium bandwidth plan.
         /// 
-        /// *   PayByTraffic: pay-by-data-transfer
-        /// *   PayByBandwidth: pay-by-bandwidth
+        /// Valid values:
+        /// 
+        /// *   PayByTraffic: charges by data transfer.
+        /// 
+        /// *   PayByBandwidth: charges by fixed bandwidth.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The IDs of the Internet access packages. You can specify 1 to 100 IDs of Internet access packages.
+        /// The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.
         /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

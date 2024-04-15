@@ -17,28 +17,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs, namely the cloud desktop IDs. Valid values of N: 1 to 50.
+        /// The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+        /// The type of the resource.
+        /// 
+        /// Valid values:
+        /// 
+        /// * ALIYUN::GWS::INSTANCE: cloud computer.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag key. You can specify up to 20 tag keys.
+        /// The tag keys. You can specify 1 to 20 tag keys.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

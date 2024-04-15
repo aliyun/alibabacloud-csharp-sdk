@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopTimerResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of cloud desktops whose scheduled tasks are configured.
+        /// The IDs of the cloud computers for which you successfully configure the scheduled task.
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]

@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ManagementFlag { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// *   Maximum value: 100.
-        /// *   Default value: 10.
+        /// *   Maximum value: 100
+        /// *   Default value: 10
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

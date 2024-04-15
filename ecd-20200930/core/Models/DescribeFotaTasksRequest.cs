@@ -62,29 +62,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// Valid values:
         /// 
-        /// *   Running
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     automatically pushes the image update task.
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Pending
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     does not automatically push the image update task.
-        /// 
-        ///     <!-- -->
+        /// *   Running: automatically pushes the image update task.
+        /// *   Pending: does not automatically push the image update task.
         /// </summary>
         [NameInMap("UserStatus")]
         [Validation(Required=false)]

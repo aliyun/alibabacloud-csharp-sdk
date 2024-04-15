@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteVirtualMFADeviceRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// The serial number of the virtual MFA device, which is a unique identifier.
         /// 
-        /// You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound to AD users.
+        /// You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device that is bound by AD users.
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]

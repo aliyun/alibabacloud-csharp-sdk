@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// The IDs of Internet access packages.
+        /// The IDs of premium bandwidth plans. You can specify one or more IDs.
         /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

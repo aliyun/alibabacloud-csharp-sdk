@@ -17,23 +17,41 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The new billing method that you want to use for the desktop group.
+        /// The new billing method that you want to apply.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   PostPaid: changes the billing method from subscription to pay-as-you-go.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   PrePaid: changes the billing method from pay-as-you-go to subscription.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud desktops. You can specify 1 to 20 IDs.
+        /// The IDs of the cloud computers. You can specify 1 to 20 IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.
+        /// The subscription duration of the cloud computers if you set the ChargeType parameter to PrePaid. The unit is specified by the `PeriodUnit` parameter. This parameter is valid only when the `ChargeType` parameter is set to `PrePaid`. In this case, you must specify this parameter.
         /// 
-        /// *   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.
+        /// *   If the `PeriodUnit` parameter is set to `Week`, set the Period parameter to 1.
         /// *   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.
         /// *   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
         /// </summary>
@@ -49,21 +67,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the sales promotion.
+        /// The ID of the promotional activity.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// > 处于定向邀测中，暂不对外开放。
+        /// >  This parameter is in invitational preview and not publicly available.
         /// </summary>
         [NameInMap("UseDuration")]
         [Validation(Required=false)]

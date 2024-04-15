@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFlowStatisticResponseBody : TeaModel {
         /// <summary>
-        /// The number of available cloud desktops in the workspace.
+        /// The number of available cloud computers in the office network.
         /// </summary>
         [NameInMap("DesktopCount")]
         [Validation(Required=false)]
         public int? DesktopCount { get; set; }
 
         /// <summary>
-        /// Details of the traffic that is consumed by cloud desktops.
+        /// The traffic statistics.
         /// </summary>
         [NameInMap("DesktopFlowStatistic")]
         [Validation(Required=false)]
         public List<DescribeFlowStatisticResponseBodyDesktopFlowStatistic> DesktopFlowStatistic { get; set; }
         public class DescribeFlowStatisticResponseBodyDesktopFlowStatistic : TeaModel {
             /// <summary>
-            /// The ID of the cloud desktop.
+            /// The ID of the cloud computer.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud desktop.
+            /// The name of the cloud computer.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The amount of the traffic. Unit: KB.
+            /// The traffic amount. Unit: KB.
             /// </summary>
             [NameInMap("FlowIn")]
             [Validation(Required=false)]

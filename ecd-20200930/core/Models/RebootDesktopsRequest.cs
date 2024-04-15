@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebootDesktopsRequest : TeaModel {
         /// <summary>
-        /// The cloud desktop ID. You can specify one or more desktop IDs. Valid values of N: 1 to 100.
+        /// The IDs of the cloud computers. You can specify 1 to 100 IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

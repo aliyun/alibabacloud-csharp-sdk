@@ -10,28 +10,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupResponseBody : TeaModel {
         /// <summary>
-        /// Details about the end users.
+        /// The list of authorized users.
         /// </summary>
         [NameInMap("EndUsers")]
         [Validation(Required=false)]
         public List<DescribeUsersInGroupResponseBodyEndUsers> EndUsers { get; set; }
         public class DescribeUsersInGroupResponseBodyEndUsers : TeaModel {
             /// <summary>
-            /// The status of the desktop connection for the end user.
+            /// The connection status.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   0: disconnected
+            /// *   1: connecting
             /// </summary>
             [NameInMap("ConnectionStatus")]
             [Validation(Required=false)]
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The ID of the cloud desktop.
+            /// The ID of the cloud computer.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The name of the cloud desktop.
+            /// The name of the cloud computer.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -45,42 +50,47 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The email address of the end user.
+            /// The email address of the authorized user.
             /// </summary>
             [NameInMap("EndUserEmail")]
             [Validation(Required=false)]
             public string EndUserEmail { get; set; }
 
             /// <summary>
-            /// The name of the end user.
+            /// The ID of the authorized user.
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The name of the end user.
+            /// The username of the authorized user.
             /// </summary>
             [NameInMap("EndUserName")]
             [Validation(Required=false)]
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// The mobile number of the end user.
+            /// The mobile number of the authorized user.
             /// </summary>
             [NameInMap("EndUserPhone")]
             [Validation(Required=false)]
             public string EndUserPhone { get; set; }
 
             /// <summary>
-            /// The remarks of the end user.
+            /// The remarks.
             /// </summary>
             [NameInMap("EndUserRemark")]
             [Validation(Required=false)]
             public string EndUserRemark { get; set; }
 
             /// <summary>
-            /// The account type of the end user.
+            /// The user account type.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SIMPLE: convenience account
+            /// *   AD_CONNECTOR: enterprise Active Directory (AD) account
             /// </summary>
             [NameInMap("EndUserType")]
             [Validation(Required=false)]
@@ -110,35 +120,40 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The ID of the desktop of the end user.
+            /// The ID of the cloud computer that is used by the user.
             /// </summary>
             [NameInMap("UserDesktopId")]
             [Validation(Required=false)]
             public string UserDesktopId { get; set; }
 
             /// <summary>
-            /// Details about the seats of end users.
+            /// Details about the seats of users.
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
             public List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> UserSetPropertiesModels { get; set; }
             public class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels : TeaModel {
                 /// <summary>
-                /// The ID of the property.
+                /// The property ID.
                 /// </summary>
                 [NameInMap("PropertyId")]
                 [Validation(Required=false)]
                 public long? PropertyId { get; set; }
 
                 /// <summary>
-                /// The name of the property.
+                /// The property name.
                 /// </summary>
                 [NameInMap("PropertyKey")]
                 [Validation(Required=false)]
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// The type of the property.
+                /// The property type.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   1: system property
+                /// *   2: custom property
                 /// </summary>
                 [NameInMap("PropertyType")]
                 [Validation(Required=false)]
@@ -168,14 +183,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 }
 
                 /// <summary>
-                /// The ID of the end user.
+                /// The user ID.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// The name of the end user.
+                /// The username.
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -193,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of authorized users that are connecting to cloud desktops.
+        /// The total number of authorized users that is connected to cloud computers in the cloud computer pool.
         /// </summary>
         [NameInMap("OnlineUsersCount")]
         [Validation(Required=false)]
@@ -207,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of authorized users of the desktop group.
+        /// The total number of authorized users of the cloud computer pool.
         /// </summary>
         [NameInMap("UsersCount")]
         [Validation(Required=false)]

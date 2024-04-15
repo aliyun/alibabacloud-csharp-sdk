@@ -10,49 +10,57 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImageModifiedRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The image modification record collection.
+        /// Details about the image modification record.
         /// </summary>
         [NameInMap("ImageModifiedRecords")]
         [Validation(Required=false)]
         public List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> ImageModifiedRecords { get; set; }
         public class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords : TeaModel {
             /// <summary>
-            /// The ID of the image before the change.
+            /// The ID of the original image.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The name of the image before the change.
+            /// The name of the original image.
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// The ID of the new image.
+            /// The ID of the new image after the image was modified.
             /// </summary>
             [NameInMap("NewImageId")]
             [Validation(Required=false)]
             public string NewImageId { get; set; }
 
             /// <summary>
-            /// Add the image name.
+            /// The name of the new image after the image was modified.
             /// </summary>
             [NameInMap("NewImageName")]
             [Validation(Required=false)]
             public string NewImageName { get; set; }
 
             /// <summary>
-            /// The status of the workspace.
+            /// The status of the image modification.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   0: The image is being modified.
+            /// 
+            /// *   1: The image is successfully modified.
+            /// 
+            /// *   2: The image fails to be modified.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The last time when the disaster recovery plan was updated.
+            /// The time when the image was last modified.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

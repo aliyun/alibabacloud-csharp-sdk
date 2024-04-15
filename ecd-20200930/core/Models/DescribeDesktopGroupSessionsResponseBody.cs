@@ -136,29 +136,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   0
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     single-session
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   1
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     multi-session
-            /// 
-            ///     <!-- -->
+            /// *   0: single-session
+            /// *   1: multi-session
             /// </summary>
             [NameInMap("OwnType")]
             [Validation(Required=false)]

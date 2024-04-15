@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGuestApplicationsRequest : TeaModel {
         /// <summary>
-        /// The cloud desktop ID.
+        /// The ID of the cloud computer.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The end user ID.
+        /// The ID of the end user.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

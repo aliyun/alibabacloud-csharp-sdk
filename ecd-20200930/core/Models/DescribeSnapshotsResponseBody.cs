@@ -24,91 +24,108 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The queried snapshots.
+        /// Details of the queried snapshots.
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The point in time at which the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The user that creates the cloud desktop.
+            /// The user who creates the snapshot.
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }
 
             /// <summary>
-            /// The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+            /// The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("DeletionTime")]
             [Validation(Required=false)]
             public string DeletionTime { get; set; }
 
             /// <summary>
-            /// The snapshot description.
+            /// The description of the snapshot.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the cloud desktop to which the snapshot belongs.
+            /// The ID of the cloud computer to which the snapshot belongs.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The cloud desktop name.
+            /// The name of the cloud computer.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The cloud desktop state. Valid values:
+            /// The status of the cloud computer.
             /// 
-            /// *   Pending: The cloud desktop is pending.
-            /// *   Starting: The cloud desktop is being started.
-            /// *   Running: The cloud desktop is running.
-            /// *   Stopping: The cloud desktop is being stopped.
-            /// *   Rebuilding: The cloud desktop is being recreated.
-            /// *   Stopped: The cloud desktop is stopped.
-            /// *   Expired: The cloud desktop expired.
-            /// *   Deleted: The cloud desktop is deleted.
+            /// Valid values:
+            /// 
+            /// *   Stopped
+            /// *   Starting
+            /// *   Rebuilding
+            /// *   Running
+            /// *   Stopping
+            /// *   Expired
+            /// *   Deleted
+            /// *   Pending
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The progress of creating the snapshot. Unit: percentage (%).
+            /// The progress of creating the snapshot. Unit: %.
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
             /// <summary>
-            /// The protocol. Valid values:
+            /// The protocol type.
             /// 
-            /// *   ASP
-            /// *   HDX
+            /// Valid values:
+            /// 
+            /// *   HDX: High-definition Experience (HDX) protocol
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   ASP: in-house Adaptive Streaming Protocol (ASP)
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The remaining time required to create the snapshot. Unit: seconds.
+            /// The remaining time that is required to complete the snapshot creation. Unit: seconds.
             /// 
-            /// > If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.
+            /// >  When the `Status` value is `PROGRESSING`, the `RemainTime` value is `-1`. A value of -1 indicates that the system is calculating the remaining time.
             /// </summary>
             [NameInMap("RemainTime")]
             [Validation(Required=false)]
@@ -122,45 +139,97 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// The snapshot name.
+            /// The name of the snapshot.
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// The snapshot type. Valid values:
+            /// The type of the snapshot.
+            /// 
+            /// Valid values:
             /// 
             /// *   AUTO: automatic snapshot
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   USER: manual snapshot
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("SnapshotType")]
             [Validation(Required=false)]
             public string SnapshotType { get; set; }
 
             /// <summary>
-            /// The size of the source disk. Unit: GiB.
+            /// The capacity of the source disk. Unit: GiB.
             /// </summary>
             [NameInMap("SourceDiskSize")]
             [Validation(Required=false)]
             public string SourceDiskSize { get; set; }
 
             /// <summary>
-            /// The type of the source disk. Valid values:
+            /// The type of the source disk.
+            /// 
+            /// Valid values:
             /// 
             /// *   SYSTEM: system disk
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   DATA: data disk
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("SourceDiskType")]
             [Validation(Required=false)]
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// The state of the snapshot. Valid values:
+            /// The status of the snapshot.
+            /// 
+            /// Valid values:
             /// 
             /// *   PROGRESSING: The snapshot is being created.
-            /// *   FAILED: The snapshot failed to be created.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   FAILED: The snapshot fails to be created.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   ACCOMPLISHED: The snapshot is created.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -174,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+            /// The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
             /// </summary>
             [NameInMap("VolumeEncryptionKey")]
             [Validation(Required=false)]

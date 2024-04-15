@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImagePermissionResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the recipient Alibaba Cloud accounts. You can share an image with up to 50 Alibaba Cloud accounts.
+        /// The IDs of the Alibaba Cloud accounts with which the image is shared.
         /// </summary>
         [NameInMap("AliUids")]
         [Validation(Required=false)]

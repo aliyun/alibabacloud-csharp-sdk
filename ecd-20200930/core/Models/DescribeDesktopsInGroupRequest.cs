@@ -10,14 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupRequest : TeaModel {
         /// <summary>
-        /// The desktop group ID.
+        /// The ID of the cloud computer pool.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// Specifies whether to ignore the deleted cloud desktops.
+        /// Specifies whether to ignore deletion flags.
+        /// 
+        /// Default value: true. Valid values:
+        /// 
+        /// *   true: ignores deletion flags. The cloud computers that were deleted are returned.
+        /// *   false: does not ignore deletion flags. The cloud computers that were deleted are not returned.
         /// </summary>
         [NameInMap("IgnoreDeleted")]
         [Validation(Required=false)]
@@ -45,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

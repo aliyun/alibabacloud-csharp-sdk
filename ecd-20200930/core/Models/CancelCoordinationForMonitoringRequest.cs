@@ -35,15 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// 
         /// Valid value:
         /// 
-        /// *   <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     TENANT_ADMIN
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : administrator.
+        /// * TENANT_ADMIN: administrator.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

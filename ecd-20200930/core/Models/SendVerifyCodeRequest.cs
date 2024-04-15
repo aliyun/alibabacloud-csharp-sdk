@@ -10,26 +10,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SendVerifyCodeRequest : TeaModel {
         /// <summary>
-        /// The information in JSON format that is required for sending the verification code. To verify the security of CEN, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.
+        /// The information that is required to send the verification code, in JSON format. When you verify the CEN instance of another Alibaba Cloud account, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.
         /// 
-        /// *   CenId: the ID of the CEN instance
+        /// *   CenId: the ID of the CEN instance.
         /// *   CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.
         /// 
-        /// Note: If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the Alibaba Cloud account, skip this parameter. If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account. Example: {"cenOwnerId": 1234567890\*\*\*\*\*\*,"cenId": "cen-3weq30r6t0s7t4\*\*\*\*"}.
+        /// >  If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.
         /// </summary>
         [NameInMap("ExtraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The action that indicates what the verification code is used for. The parameter is only used to verify the security of CEN. Valid value: eds_cenID_securityverification.
+        /// The action that you want to perform by using the verification code.
+        /// 
+        /// Valid value:
+        /// 
+        /// *   eds_cenID_securityverification: Use the verification code to verify the CEN instance.
         /// </summary>
         [NameInMap("VerifyCodeAction")]
         [Validation(Required=false)]

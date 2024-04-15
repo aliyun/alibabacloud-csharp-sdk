@@ -34,21 +34,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
+        /// The office network IDs. You can specify IDs of 1 to 100 office networks.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public List<string> OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The query scope. Default value: 1.
+        /// The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.
+        /// 
+        /// Default values:
+        /// 
+        /// *   1 (default): queries non-pooled cloud computers in the office network.
+        /// *   2: queries pooled cloud computers in the office network.
+        /// *   3: queries all cloud computers in the office network.
         /// </summary>
         [NameInMap("QueryRange")]
         [Validation(Required=false)]
         public int? QueryRange { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

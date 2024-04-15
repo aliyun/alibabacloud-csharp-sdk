@@ -10,120 +10,180 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNetworkPackagesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the Internet access packages.
+        /// The premium bandwidth plans.
         /// </summary>
         [NameInMap("NetworkPackages")]
         [Validation(Required=false)]
         public List<DescribeNetworkPackagesResponseBodyNetworkPackages> NetworkPackages { get; set; }
         public class DescribeNetworkPackagesResponseBodyNetworkPackages : TeaModel {
             /// <summary>
-            /// The maximum public bandwidth of the Internet access package. Unit: Mbit/s.
+            /// The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
+            /// <summary>
+            /// The business status.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Expired
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Normal
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// The time when the Internet access package was created.
+            /// The time when the premium bandwidth plan was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The elastic IP addresses (EIPs) of the Internet access package for outbound traffic.
+            /// The public egress IP address of the premium bandwidth plan.
             /// </summary>
             [NameInMap("EipAddresses")]
             [Validation(Required=false)]
             public List<string> EipAddresses { get; set; }
 
             /// <summary>
-            /// The time when the Internet access package expires.
+            /// The time when the premium bandwidth plan expires.
             /// 
-            /// *   If the Internet access package is metered on a pay-by-bandwidth basis, the actual expiration time is returned.
-            /// *   If the Internet access package is metered on a pay-by-data-transfer basis, 2099-12-31T15:59:59Z is returned.
+            /// *   If the plan is a subscription one, the time when the plan expires is returned.
+            /// *   If the plan is a pay-as-you-go one, `2099-12-31T15:59:59Z` is returned.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// The billing method of the network bandwidth.
+            /// The charge type of the premium bandwidth plan.
             /// 
-            /// *   PayByTraffic: pay-by-data-transfer
-            /// *   PayByBandwidth: pay-by-bandwidth
+            /// *   Valid value when the `PayType` parameter is set to `PrePaid`:
+            /// 
+            ///     *   PayByBandwidth: charges by fixed bandwidth.
+            /// 
+            /// *   Valid values when the `PayType` parameter is set to `PostPaid`:
+            /// 
+            ///     *   PayByTraffic: charges by data transfer.
+            ///     *   PayByBandwidth: charges by fixed bandwidth.
             /// </summary>
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// The ID of the Internet access package.
+            /// The ID of the premium bandwidth plan.
             /// </summary>
             [NameInMap("NetworkPackageId")]
             [Validation(Required=false)]
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// The state of the Internet access package. Valid values:
+            /// The status of the premium bandwidth plan.
+            /// 
+            /// Valid values:
             /// 
             /// *   Creating
-            /// *   InUse
-            /// *   Releasing
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   Released
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   InUse
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Releasing
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("NetworkPackageStatus")]
             [Validation(Required=false)]
             public string NetworkPackageStatus { get; set; }
 
             /// <summary>
-            /// The ID of the workspace.
+            /// The office network ID.
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The name of the workspace.
+            /// The office network name.
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// The type of the workspace. Valid values:
+            /// The type of the office network.
             /// 
-            /// *   basic
-            /// *   standard
-            /// *   customized
+            /// Valid values:
+            /// 
+            /// *   standard: advanced office network
+            /// *   customized: custom office network
+            /// *   basic: basic office network
             /// </summary>
             [NameInMap("OfficeSiteVpcType")]
             [Validation(Required=false)]
             public string OfficeSiteVpcType { get; set; }
 
             /// <summary>
-            /// The billing method for the network.
+            /// The billing method of the premium bandwidth plan.
             /// 
-            /// *   PrePaid: subscription
+            /// Valid values:
+            /// 
             /// *   PostPaid: pay-as-you-go
+            /// *   PrePaid: subscription
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
 
             /// <summary>
-            /// The time when the reserved network bandwidth takes effect.
+            /// The time when the reserved network bandwidth took effect.
             /// </summary>
             [NameInMap("ReservationActiveTime")]
             [Validation(Required=false)]
             public string ReservationActiveTime { get; set; }
 
             /// <summary>
-            /// The peak bandwidth of the reserved network bandwidth. Unit: Mbit/s.
+            /// The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.
             /// </summary>
             [NameInMap("ReservationBandwidth")]
             [Validation(Required=false)]
@@ -132,8 +192,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The billing method of the reserved network bandwidth.
             /// 
-            /// *   PayByTraffic: pay-by-data-transfer
-            /// *   PayByBandwidth: pay-by-bandwidth
+            /// Valid values:
+            /// 
+            /// *   PayByTraffic: charges by data transfer.
+            /// 
+            /// *   PayByBandwidth: charges by fixed bandwidth.
             /// </summary>
             [NameInMap("ReservationInternetChargeType")]
             [Validation(Required=false)]

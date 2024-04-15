@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyUserEntitlementRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops on which you want to grant permissions to users.
+        /// The IDs of the cloud computers to which you want to add end users.
         /// </summary>
         [NameInMap("AuthorizeDesktopId")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud desktops on which you want to revoke permissions from users.
+        /// The IDs of the cloud computers whose end users you want to remove.
         /// </summary>
         [NameInMap("RevokeDesktopId")]
         [Validation(Required=false)]

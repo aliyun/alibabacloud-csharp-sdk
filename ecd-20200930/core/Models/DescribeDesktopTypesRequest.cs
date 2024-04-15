@@ -23,40 +23,186 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        /// <summary>
+        /// The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.
+        /// </summary>
         [NameInMap("DesktopGroupIdForModify")]
         [Validation(Required=false)]
         public string DesktopGroupIdForModify { get; set; }
 
         /// <summary>
-        /// When changing the configuration, enter the desktop ID that needs to be changed. The return value will increase the compatibility between the specifications and the desktop.
+        /// The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.
         /// </summary>
         [NameInMap("DesktopIdForModify")]
         [Validation(Required=false)]
         public string DesktopIdForModify { get; set; }
 
         /// <summary>
-        /// The ID of the cloud desktop type. Valid values:
+        /// The IDs of the instance types of cloud computers.
+        /// 
+        /// >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance types of cloud computers are queried.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   eds.hf.4c8g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.basic.large
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.advanced.large
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.basic.small
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.graphics.2xlarge
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.hf.8c16g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.hf.12c24g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.8c16g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.16c32g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.advanced.xlarge
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// 
         /// *   eds.graphics.16c1t4
-        /// *   eds.graphics.24c1t4
-        /// *   eds.hf.12c24g
-        /// *   eds.hf.8c16g
-        /// *   eds.hf.4c8g
-        /// *   eds.general.8c32g
-        /// *   eds.general.16c32g
-        /// *   eds.general.8c16g
-        /// *   eds.general.4c16g
-        /// *   eds.general.4c8g
-        /// *   eds.general.2c8g
-        /// *   eds.general.2c4g
-        /// *   eds.general.2c2g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// *   ecd.graphics.xlarge
-        /// *   ecd.graphics.2xlarge
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// *   ecd.performance.2xlarge
-        /// *   ecd.advanced.xlarge
-        /// *   ecd.advanced.large
-        /// *   ecd.basic.large
-        /// *   ecd.basic.small
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.8c32g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.2c2g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.2c4g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.graphics.24c1t4
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.4c8g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.4c16g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general.2c8g
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("DesktopTypeId")]
         [Validation(Required=false)]
@@ -70,22 +216,74 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public float? GpuCount { get; set; }
 
         /// <summary>
-        /// The family of the cloud desktop type. Valid values:
+        /// The name of the instance family.
+        /// 
+        /// >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance families of cloud computers are queried.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   ecd.advanced
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// 
         /// *   eds.graphics
-        /// *   eds.hf
-        /// *   eds.general
-        /// *   ecd.graphics
-        /// *   ecd.performance
-        /// *   ecd.advanced
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// *   ecd.basic
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.hf
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.graphics
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   eds.general
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ecd.performance
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The memory size. Unit: GiB.
+        /// The memory size. Unit: MiB.
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
@@ -99,7 +297,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

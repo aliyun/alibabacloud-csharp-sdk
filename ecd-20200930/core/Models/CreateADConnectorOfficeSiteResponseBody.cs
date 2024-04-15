@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorOfficeSiteResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the workspace.
+        /// The office network ID.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]

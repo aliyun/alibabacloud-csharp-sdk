@@ -10,19 +10,36 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// Specifies whether to enable the automatic payment feature.
         /// 
-        /// *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-        /// *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+        /// Valid values:
         /// 
-        /// Default value: true.
+        /// *   true (default): enables the auto-payment feature.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The IDs of Internet access packages.
+        /// The IDs of premium bandwidth plans. You can specify up to 100 IDs.
         /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
@@ -52,14 +69,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the promotion. You can call the `GetResourcePrice` operation to obtain the ID of the promotion.
+        /// The promotion ID.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

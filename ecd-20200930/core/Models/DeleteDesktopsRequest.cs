@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteDesktopsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the cloud desktops that you want to release. You can configure up to 100 desktop IDs.
+        /// The IDs of the cloud computers. You can specify 1 to 100 IDs.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the cloud desktops to release are located.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -17,31 +17,31 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
+        /// The Alibaba Cloud account to which the CEN instance belongs.
         /// 
-        /// *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
-        /// *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
+        /// *   If you own the CEN instance, you can skip this parameter.
+        /// *   If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.
         /// </summary>
         [NameInMap("CenOwnerId")]
         [Validation(Required=false)]
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// The IPv4 CIDR block of the workspace.
+        /// The IPv4 CIDR block of the associated office network.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
+        /// The verification code. If you do not own the CEN instance, you must call the [SendVerifyCode](~~436847~~) operation to obtain a verification code.
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

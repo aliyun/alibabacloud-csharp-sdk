@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeAutoSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// Details of the automatic snapshot policies.
+        /// The details of the queried automatic snapshot policies.
         /// </summary>
         [NameInMap("AutoSnapshotPolicies")]
         [Validation(Required=false)]
         public List<DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies> AutoSnapshotPolicies { get; set; }
         public class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies : TeaModel {
             /// <summary>
-            /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+            /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The CRON expression that is used to create the snapshot.
+            /// The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// The number of cloud desktops that are associated with the automatic snapshot policy.
+            /// The number of cloud computers to which the automatic snapshot policy is applied.
             /// </summary>
             [NameInMap("DesktopNum")]
             [Validation(Required=false)]
@@ -52,38 +52,48 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// The ID of the region where the automatic snapshot policy resides.
+            /// The ID of the region to which the automatic snapshot policy belongs.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The retention period of the automatic snapshot. Unit: days. Valid values:
-            /// 
-            /// *   \-1: The snapshot is permanently retained.
-            /// *   1 to 65536: The automatic snapshot is retained for the specified number of days.
+            /// The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.
             /// </summary>
             [NameInMap("RetentionDays")]
             [Validation(Required=false)]
             public string RetentionDays { get; set; }
 
             /// <summary>
-            /// The state of the automatic snapshot policy. Valid values:
+            /// The status of the automatic snapshot policy.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// 
             /// *   Normal: The automatic snapshot policy is normal.
-            /// *   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The points in time at which automatic snapshots are created.
+            /// The points in time at which the auto snapshots were created.
             /// 
-            /// The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.
-            /// 
-            /// The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.
+            /// The parameter values are a JSON array. Example: `["0", "1", ... "23"]`. A maximum of 24 points in time are returned. The points in time are separated with commas (,).
             /// </summary>
             [NameInMap("TimePoints")]
             [Validation(Required=false)]

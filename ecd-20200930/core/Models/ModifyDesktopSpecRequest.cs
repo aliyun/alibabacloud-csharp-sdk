@@ -10,40 +10,57 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid values:
+        /// Specifies whether to enable the auto-payment feature.
         /// 
-        /// *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
-        /// *   `false`: does not automatically complete the payment. In this case, an order is generated, but no payment is made. You can log on to the EDS console and complete the payment based on the order ID on the **Orders** page.
+        /// Default value: true. Valid values:
         /// 
-        /// Default value: `true`.
+        /// *   true: enables the auto-payment feature.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, an exception occurs on your order.
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The ID of the cloud desktop.
+        /// The ID of a cloud computer.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.
+        /// The destination instance type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the instance types supported by cloud computers.
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// The ID of the sales promotion.
+        /// The ID of the promotional activity.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,24 +74,51 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// The performance level (PL) of the data disk. Valid values:
+        /// The performance level (PL) of the data disk. Default value: PL0.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   PL1
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// 
         /// *   PL0
-        /// *   PL1
-        /// *   PL2
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
         /// *   PL3
         /// 
-        /// Default value: PL0.
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   PL2
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("UserDiskPerformanceLevel")]
         [Validation(Required=false)]
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The size of the new data disk. Unit: GiB.
+        /// The destination data disk size. Unit: GiB.
         /// 
-        /// *   The data disk size of a non-Graphics cloud desktop can be within the range of 20 to 1,020 GiB. The value must be a multiple of 10.
-        /// *   The data disk size of the Graphics cloud desktop can be within the range of 40 to 1,020 GiB. The value must be a multiple of 10.
+        /// *   The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.
+        /// *   The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.
         /// </summary>
         [NameInMap("UserDiskSizeGib")]
         [Validation(Required=false)]

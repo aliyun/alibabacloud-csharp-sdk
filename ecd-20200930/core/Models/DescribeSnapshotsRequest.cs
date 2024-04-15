@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// The cloud desktop ID.
+        /// The ID of the cloud computer.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The cloud desktop name.
+        /// The name of the cloud computer.
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The query is performed based on the time when the system stopped creating a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -69,41 +69,74 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The snapshot name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
-        /// 
-        /// The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+        /// The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// The snapshot type.
+        /// The category of the snapshots.
         /// 
-        /// Valid values:
+        /// Default value: all. Valid values:
         /// 
-        /// *   auto: automatic snapshot
-        /// *   user: manual snapshot
-        /// *   all (default): all types of snapshots
+        /// *   all: all snapshot categories
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   auto: automatic snapshots
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   user: manual snapshots
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("SnapshotType")]
         [Validation(Required=false)]
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// The type of the source disk of which you want to query snapshots. Valid values:
+        /// The type of the disk for which the snapshot is created.
         /// 
-        /// *   System: system disk
+        /// >  The value of this parameter is not case-sensitive.
+        /// 
+        /// Valid values:
+        /// 
         /// *   Data: data disk
         /// 
-        /// > The value of this parameter is not case-sensitive.
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   System: system disk
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The query is performed based on the time when the system created a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

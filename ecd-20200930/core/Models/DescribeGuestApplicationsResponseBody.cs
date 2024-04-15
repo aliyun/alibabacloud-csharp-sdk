@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGuestApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// The application details.
+        /// The details of the applications.
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ApplicationVersion { get; set; }
 
             /// <summary>
-            /// The CPU usage.
+            /// The CPU utilization (%).
             /// </summary>
             [NameInMap("CpuPercent")]
             [Validation(Required=false)]
             public double? CpuPercent { get; set; }
 
             /// <summary>
-            /// The GPU usage.
+            /// The GPU utilization (%).
             /// </summary>
             [NameInMap("GpuPercent")]
             [Validation(Required=false)]
             public double? GpuPercent { get; set; }
 
             /// <summary>
-            /// The icon address of the application.
+            /// The icon URL of the application.
             /// </summary>
             [NameInMap("IconUrl")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public double? IoSpeed { get; set; }
 
             /// <summary>
-            /// The memory usage.
+            /// The memory utilization (%).
             /// </summary>
             [NameInMap("MemPercent")]
             [Validation(Required=false)]
             public double? MemPercent { get; set; }
 
             /// <summary>
-            /// The process ID.
+            /// The process ID (PID).
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ApplicationVersion { get; set; }
 
                 /// <summary>
-                /// The CPU usage.
+                /// The CPU utilization (%).
                 /// </summary>
                 [NameInMap("CpuPercent")]
                 [Validation(Required=false)]
                 public double? CpuPercent { get; set; }
 
                 /// <summary>
-                /// The GPU usage.
+                /// The GPU utilization (%).
                 /// </summary>
                 [NameInMap("GpuPercent")]
                 [Validation(Required=false)]
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public double? Iospeed { get; set; }
 
                 /// <summary>
-                /// The memory usage.
+                /// The memory utilization (%).
                 /// </summary>
                 [NameInMap("MemPercent")]
                 [Validation(Required=false)]
                 public double? MemPercent { get; set; }
 
                 /// <summary>
-                /// The process ID.
+                /// The PID.
                 /// </summary>
                 [NameInMap("Pid")]
                 [Validation(Required=false)]

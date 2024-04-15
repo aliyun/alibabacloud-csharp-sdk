@@ -10,29 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The display language of the specified service in a location.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   en
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : English
-        /// 
-        /// *   zh (default)
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : Chinese
+        /// The display name of the region, which varies based on the current language.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

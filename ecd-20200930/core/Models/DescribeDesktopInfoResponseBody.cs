@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoResponseBody : TeaModel {
         /// <summary>
-        /// Details of the cloud desktops.
+        /// Details of the cloud computers.
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
@@ -27,56 +27,65 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// The current image version of the cloud desktop.
+            /// The version of the image that is used by the cloud computer.
             /// </summary>
             [NameInMap("CurrentAppVersion")]
             [Validation(Required=false)]
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// The ID of the cloud desktop.
+            /// The cloud computer ID.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The state of the cloud desktop. Valid values:
+            /// The status of the cloud computer. Valid values:
             /// 
-            /// *   Pending: The cloud desktop is being created.
-            /// *   Starting: The cloud desktop is being started.
-            /// *   Running: The cloud desktop is running.
-            /// *   Stopping: The cloud desktop is being stopped.
-            /// *   Stopped: The cloud desktop is stopped.
-            /// *   Expired: The cloud desktop is expired.
-            /// *   Deleted: The cloud desktop is deleted.
-            /// *   Failed: Failed to create the cloud desktop.
+            /// *   Pending: The cloud computer is being created.
+            /// *   Starting: The cloud computer is being started.
+            /// *   Running: The cloud computer is running.
+            /// *   Stopping: The cloud computer is being stopped.
+            /// *   Stopped: The cloud computer is stopped.
+            /// *   Expired: The cloud computer is expired.
+            /// *   Deleted: The cloud computer is deleted.
+            /// *   Failed: Failed to create the cloud computer.
             /// </summary>
             [NameInMap("DesktopStatus")]
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// The information about flags that are used to manage cloud desktops.
+            /// The information about flags that are used to manage cloud computers.
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public List<string> ManagementFlag { get; set; }
 
+            /// <summary>
+            /// The size of the update package. Unit: KB.
+            /// </summary>
             [NameInMap("NewAppSize")]
             [Validation(Required=false)]
             public long? NewAppSize { get; set; }
 
+            /// <summary>
+            /// The destination version to which the image of the cloud computer can be updated.
+            /// </summary>
             [NameInMap("NewAppVersion")]
             [Validation(Required=false)]
             public string NewAppVersion { get; set; }
 
+            /// <summary>
+            /// The description of the destination version to which the image of the cloud computer can be updated.
+            /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// The first time when the cloud desktop was started.
+            /// The first time when the cloud computer was started.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]

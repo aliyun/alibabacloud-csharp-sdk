@@ -38,11 +38,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether IPv6 is supported. A value of DISABLED indicates that IPv6 is not supported.
+            /// The IPv6 level.
             /// 
-            /// **
+            /// >  IPv6 is not supported.
             /// 
-            /// **Description** IPv6 is not supported.
+            /// Valid value:
+            /// 
+            /// *   DISABLED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Ipv6Level")]
             [Validation(Required=false)]
@@ -56,14 +64,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The IDs of the bandwidth plans that are associated with the CEN instance.
+            /// The bandwidth plans that are bound to the CEN instance.
             /// </summary>
             [NameInMap("PackageIds")]
             [Validation(Required=false)]
             public List<DescribeCensResponseBodyCensPackageIds> PackageIds { get; set; }
             public class DescribeCensResponseBodyCensPackageIds : TeaModel {
                 /// <summary>
-                /// The ID of the bandwidth plan that is associated with the CEN instance.
+                /// The ID of the bandwidth plan that is bound to the CEN instance.
                 /// </summary>
                 [NameInMap("PackageId")]
                 [Validation(Required=false)]
@@ -72,18 +80,44 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The level of CIDR block overlapping. If REDUCED returns, the CIDR blocks can overlap with each other but must not be the same.
+            /// The tolerated level of CIDR block conflict.
+            /// 
+            /// Valid value:
+            /// 
+            /// *   REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.
             /// </summary>
             [NameInMap("ProtectionLevel")]
             [Validation(Required=false)]
             public string ProtectionLevel { get; set; }
 
             /// <summary>
-            /// The status of the CEN instance. Valid values:
+            /// The status of the CEN instance.
+            /// 
+            /// Valid values:
             /// 
             /// *   Creating
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   Active
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   Deleting
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -97,14 +131,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeCensResponseBodyCensTags> Tags { get; set; }
             public class DescribeCensResponseBodyCensTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of the tag.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

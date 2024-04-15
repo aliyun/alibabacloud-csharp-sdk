@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyBundleRequest : TeaModel {
         /// <summary>
-        /// The desktop template ID.
+        /// The ID of the cloud computer template that you want to modify.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public string BundleId { get; set; }
 
         /// <summary>
-        /// The name of the new desktop template.
+        /// The name of the new cloud computer template.
         /// </summary>
         [NameInMap("BundleName")]
         [Validation(Required=false)]
         public string BundleName { get; set; }
 
         /// <summary>
-        /// The description of the new desktop template.
+        /// The description of the new cloud computer template.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -43,11 +43,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The language of the OS. This parameter is available only for system images. Valid values:
+        /// The OS language. This parameter is available only for system images.
         /// 
-        /// *   zh-CN: Simplified Chinese
+        /// Valid values:
+        /// 
+        /// *   en-US: American English
         /// *   zh-HK: Traditional Chinese (Hong Kong)
-        /// *   en-US: English
+        /// *   zh-CN: Simplified Chinese.
+        /// 
         /// *   ja-JP: Japanese
         /// </summary>
         [NameInMap("Language")]
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -28,61 +28,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   COORDINATING
+            /// *   COORDINATING: The collaboration task is being executed.
             /// 
-            ///     <!-- -->
+            /// *   TERMINATING: The collaboration task is being terminated.
             /// 
-            ///     :
+            /// *   TERMINATED: The collaboration task is terminated.
             /// 
-            ///     <!-- -->
-            /// 
-            ///     The collaboration task is being executed
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   TERMINATING
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The collaboration task is being terminated
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   TERMINATED
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The collaboration task is terminated
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   PENDING
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The collaboration task is pending to be executed
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// *   PENDING: The collaboration task is pending to be executed.
             /// </summary>
             [NameInMap("CoordinateStatus")]
             [Validation(Required=false)]
@@ -100,47 +52,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   ADMIN_INITIATE_FORCE
+            /// *   ADMIN_INITIATE_FORCE: The administrator forcibly initiates the collaboration request.
             /// 
-            ///     <!-- -->
+            /// *   ADMIN_INITIATE: The administrator initiates the collaboration request.
             /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The administrator forcibly initiates the collaboration request
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   ADMIN_INITIATE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The administrator initiates the collaboration request
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   COORDINATOR_INITIATE_FORCE
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     The coordinator forcibly initiates the collaboration request
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// *   COORDINATOR_INITIATE_FORCE: The coordinator forcibly initiates the collaboration request.
             /// </summary>
             [NameInMap("InitiatorType")]
             [Validation(Required=false)]

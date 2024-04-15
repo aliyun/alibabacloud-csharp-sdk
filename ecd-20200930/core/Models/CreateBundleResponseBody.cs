@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateBundleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the desktop template.
+        /// The ID of the cloud computer template.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]

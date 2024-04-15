@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// The command that you want to run to configure a custom application in user mode. After you obtain the credentials, the application automatically starts.
+        /// The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:
         /// 
-        /// *   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as delimiters.
-        /// *   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.
+        /// *   appPath: the path of the application startup file. Example: `"C:\\Program Files (x86)\\000\\000.exe"`. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.
+        /// *   appParameter: the startup arguments of the application. Example: `"meetingid 000 meetingname aaa"`. Separate multiple arguments with spaces. Type of the parameter value: string.
         /// </summary>
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// The ID of the cloud desktop.
+        /// The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The ID of the end user.
+        /// The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The password for the username.
+        /// The password of the current end user of the cloud computer.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The region ID of the cloud desktop.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the desktop connection task.
+        /// The ID of the cloud computer connection task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

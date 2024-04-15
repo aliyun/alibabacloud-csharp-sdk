@@ -31,28 +31,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The resource ID, namely the cloud desktop ID.
+            /// The resource ID, which is the cloud computer ID.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+            /// The type of the resource.
+            /// 
+            /// Valid values:
+            /// 
+            /// * ALIYUN::GWS::INSTANCE: cloud computer.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// The tag keys.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The tag values.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

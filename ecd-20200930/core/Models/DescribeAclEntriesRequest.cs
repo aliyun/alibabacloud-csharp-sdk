@@ -26,24 +26,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance corresponding to the ACL.
+        /// The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// The object on which the ACL takes effect.
+        /// The granularity of the ACL.
         /// 
-        /// *   **vpc**: workspace.
-        /// *   **desktop**: cloud desktop.
+        /// Valid values:
+        /// 
+        /// *   desktop: cloud computer
+        /// *   vpc: office network
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

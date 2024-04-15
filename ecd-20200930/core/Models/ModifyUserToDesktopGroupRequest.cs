@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyUserToDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the desktop group that you want to assign to users.
+        /// The ID of the cloud computer pool whose end users you want to change.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the regular users to whom you want to grant the permissions on the cloud desktop.
+        /// The IDs of the end users that you want to add. You can configure 1 to 500 IDs.
         /// </summary>
         [NameInMap("NewEndUserIds")]
         [Validation(Required=false)]
         public List<string> NewEndUserIds { get; set; }
 
         /// <summary>
-        /// The IDs of the original regular users who have the permissions on the cloud desktop.
+        /// The IDs of the end users that you want to remove. You can configure 1 to 500 IDs.
         /// </summary>
         [NameInMap("OldEndUserIds")]
         [Validation(Required=false)]
         public List<string> OldEndUserIds { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

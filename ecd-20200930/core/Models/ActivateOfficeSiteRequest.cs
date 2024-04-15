@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ActivateOfficeSiteRequest : TeaModel {
         /// <summary>
-        /// The ID of the convenience workspace that is locked.
+        /// The ID of the convenience office network that is locked.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

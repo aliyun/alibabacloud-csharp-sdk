@@ -29,9 +29,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        [NameInMap("IdleDisconnectDuration")]
+        [Validation(Required=false)]
+        public long? IdleDisconnectDuration { get; set; }
+
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        [NameInMap("KeepDuration")]
+        [Validation(Required=false)]
+        public int? KeepDuration { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]

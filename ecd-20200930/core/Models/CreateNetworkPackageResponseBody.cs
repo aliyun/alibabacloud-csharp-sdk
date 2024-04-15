@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNetworkPackageResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Internet access package.
+        /// The ID of the premium bandwidth plan.
         /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]

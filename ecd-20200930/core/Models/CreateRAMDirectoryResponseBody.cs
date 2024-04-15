@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the RAM directory.
+        /// The RAM directory ID.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

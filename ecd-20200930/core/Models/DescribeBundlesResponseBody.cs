@@ -10,59 +10,74 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the cloud desktop templates.
+        /// The details of the queried cloud computer templates.
         /// </summary>
         [NameInMap("Bundles")]
         [Validation(Required=false)]
         public List<DescribeBundlesResponseBodyBundles> Bundles { get; set; }
         public class DescribeBundlesResponseBodyBundles : TeaModel {
             /// <summary>
-            /// The ID of the cloud desktop template.
+            /// The ID of the cloud computer template.
             /// </summary>
             [NameInMap("BundleId")]
             [Validation(Required=false)]
             public string BundleId { get; set; }
 
             /// <summary>
-            /// The name of the cloud desktop template.
+            /// The name of the cloud computer template.
             /// </summary>
             [NameInMap("BundleName")]
             [Validation(Required=false)]
             public string BundleName { get; set; }
 
             /// <summary>
-            /// The type of the cloud desktop template. Valid values:
+            /// The type of the cloud computer template.
             /// 
-            /// *   SYSTEM: the system template
-            /// *   CUSTOM: the custom template
+            /// Valid values:
+            /// 
+            /// *   SYSTEM: system template
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   CUSTOM: custom template
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("BundleType")]
             [Validation(Required=false)]
             public string BundleType { get; set; }
 
             /// <summary>
-            /// The time when the cloud desktop template was created.
+            /// The time when the cloud computer template was created.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the cloud desktop template.
+            /// The description of the cloud computer template.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The type of the cloud desktop.
+            /// The instance type of the cloud computer.
             /// </summary>
             [NameInMap("DesktopType")]
             [Validation(Required=false)]
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// Details about the cloud desktop type.
+            /// The details of the cloud computer instance type.
             /// </summary>
             [NameInMap("DesktopTypeAttribute")]
             [Validation(Required=false)]
@@ -90,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string GpuSpec { get; set; }
 
                 /// <summary>
-                /// The memory size. Unit: MB.
+                /// The memory size. Unit: MiB.
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -99,25 +114,61 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The family of the cloud desktop type. Valid values:
+            /// The instance family of the cloud computer.
             /// 
-            /// *   eds.general: General Office
-            /// *   eds.hf: High Frequency
-            /// *   eds.graphics: Graphics
+            /// Valid values:
+            /// 
+            /// *   eds.graphics: graphical instance family
+            /// *   eds.hf: instance family with a high clock speed
+            /// *   eds.general: general-purpose instance family
             /// </summary>
             [NameInMap("DesktopTypeFamily")]
             [Validation(Required=false)]
             public string DesktopTypeFamily { get; set; }
 
             /// <summary>
-            /// Details about the disks.
+            /// Details of the disks.
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<DescribeBundlesResponseBodyBundlesDisks> Disks { get; set; }
             public class DescribeBundlesResponseBodyBundlesDisks : TeaModel {
                 /// <summary>
-                /// The performance level (PL) of the disk.
+                /// The PL of the disk.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   PL1
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   PL0
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   PL3
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   PL2
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("DiskPerformanceLevel")]
                 [Validation(Required=false)]
@@ -131,10 +182,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// The disk type. Valid values:
+                /// The type of the disk.
                 /// 
-                /// *   SYSTEM: the system disk
-                /// *   DATA: the data disk
+                /// Valid values:
+                /// 
+                /// *   SYSTEM: system disk
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   DATA: data disk
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -143,14 +209,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The ID of the image.
+            /// The image ID.
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// The name of the image.
+            /// The image name.
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
@@ -171,20 +237,82 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// The OS type.
+            /// The type of the OS.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Linux
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
 
             /// <summary>
-            /// The information about the OS platform. Valid values:
+            /// The OS.
             /// 
-            /// * CentOS
-            /// * Ubuntu
-            /// * Windows Server 2016
-            /// * Windows Server 2019
-            /// * UOS
+            /// Valid values:
+            /// 
+            /// *   Ubuntu
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows Server 2022
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   UOS
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   CentOS
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows Server 2019
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Windows Server 2016
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
@@ -193,25 +321,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// The protocol type.
             /// 
-            /// *   HDX
-            /// *   ASP (Recommend)
+            /// Valid values:
+            /// 
+            /// *   HDX: HDX protocol
+            /// *   ASP: in-house ASP
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// The session type. Valid values:
+            /// The session type.
             /// 
-            /// *   0: single_session
-            /// *   1: multiple_session
+            /// Valid values:
+            /// 
+            /// *   0: single-session
+            /// *   1: multi-session
             /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
 
             /// <summary>
-            /// The inventory status of the cloud desktop type, which is returned when the CheckStock parameter is set to true.
+            /// The inventory status of the cloud computer instance type. This parameter is returned only if you set the `CheckStock` parameter to `true`.
             /// </summary>
             [NameInMap("StockState")]
             [Validation(Required=false)]

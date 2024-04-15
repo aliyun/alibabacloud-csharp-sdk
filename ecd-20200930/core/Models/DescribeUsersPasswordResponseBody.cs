@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersPasswordResponseBody : TeaModel {
         /// <summary>
-        /// The users that are associated with cloud desktop.
+        /// The authorized users of the cloud computer.
         /// </summary>
         [NameInMap("DesktopUsers")]
         [Validation(Required=false)]
         public List<DescribeUsersPasswordResponseBodyDesktopUsers> DesktopUsers { get; set; }
         public class DescribeUsersPasswordResponseBodyDesktopUsers : TeaModel {
             /// <summary>
-            /// The display name of the user.
+            /// The display name of the end user.
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// The password of the user.
+            /// The password of the end user.
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]

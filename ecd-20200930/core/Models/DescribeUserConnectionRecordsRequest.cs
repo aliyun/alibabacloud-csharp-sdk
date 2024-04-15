@@ -52,31 +52,46 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectStartTimeTo { get; set; }
 
         /// <summary>
-        /// The ID of the desktop group.
+        /// The ID of the cloud computer pool.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the cloud desktop.
+        /// The ID of the cloud computer.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The user that you want to authorize to use the desktop group.
+        /// The ID of the authorized user.
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// The account type of the user. Valid values:
+        /// The type of the user account.
         /// 
-        /// *   SIMPLE: the convenience account type
-        /// *   AD_CONNECTOR: the enterprise Active Directory (AD) account type
+        /// Valid values:
+        /// 
+        /// *   SIMPLE: convenience account
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   AD_CONNECTOR: enterprise AD account
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EndUserType")]
         [Validation(Required=false)]
@@ -97,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

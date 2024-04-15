@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the cloud desktops.
+        /// The IDs of cloud desktops.
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

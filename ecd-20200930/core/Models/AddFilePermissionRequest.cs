@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// The group ID.
+        /// The ID of the team that uses cloud disks in Cloud Drive Service.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -104,111 +104,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// 
             /// Valid values:
             /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileEditorWithoutShareLink
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileUploaderAndDownloaderWithShareLink
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileDownloader
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileEditorWithoutDelete
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileOwner
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileDownloaderWithShareLink
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileUploaderAndViewer
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileViewer
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileEditor
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileUploaderWithShareLink
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileUploader
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileUploaderAndDownloader
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   <!-- -->
-            /// 
-            ///     SystemFileMetaViewer
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// * SystemFileEditorWithoutShareLink
+            /// * SystemFileUploaderAndDownloaderWithShareLink
+            /// * SystemFileDownloader
+            /// * SystemFileEditorWithoutDelete
+            /// * SystemFileOwner
+            /// * SystemFileDownloaderWithShareLink
+            /// * SystemFileUploaderAndViewer
+            /// * SystemFileViewer
+            /// * SystemFileEditor
+            /// * SystemFileUploaderWithShareLink
+            /// * SystemFileUploader
+            /// * SystemFileUploaderAndDownloader
+            /// * SystemFileMetaViewer
             /// </summary>
             [NameInMap("RoleId")]
             [Validation(Required=false)]

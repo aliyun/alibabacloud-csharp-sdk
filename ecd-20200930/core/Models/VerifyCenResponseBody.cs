@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class VerifyCenResponseBody : TeaModel {
         /// <summary>
-        /// The three random IPv4 CIDR blocks that are recommended. If the returned value of the Status parameter is Conflict, this parameter is returned.
+        /// The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the `Status` value is `Conflict`.
         /// </summary>
         [NameInMap("CidrBlocks")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the routes of the CEN instance.
+        /// The routes provided by the CEN instance.
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
@@ -38,24 +38,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// The ID of the network instance that is attached to the route.
+            /// The ID of the instance corresponding to the route.
             /// </summary>
             [NameInMap("NextHopInstanceId")]
             [Validation(Required=false)]
             public string NextHopInstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the route resides.
+            /// The region ID of the route.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The verification result for a route. Valid values:
+            /// The verification result of the route.
             /// 
-            /// *   Access: The route verification succeeds.
+            /// Valid values:
+            /// 
             /// *   Conflict: A CIDR block conflict exists.
+            /// *   Access: The verification is passed.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -64,14 +66,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The verification result. Valid values:
+        /// The check result of CIDR block conflict.
         /// 
-        /// *   Access: The route verification succeeds. If the verification result for all routes succeeds, Access is returned for this parameter.
-        /// *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
-        /// *   InvalidCen.ParameterCenInstanceId: The ID of the CEN instance and the ID of the Alibaba Cloud account are invalid. The CEN instance does not belong to the Alibaba Cloud account.
-        /// *   InvalidCen.CenUidInvalid: The ID of the Alibaba Cloud account is invalid or the Alibaba Cloud account is not granted the required permissions to access Elastic Desktop Service (EDS).
+        /// Valid values:
+        /// 
+        /// *   InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access WUYING Workspace.
         /// *   VerifyCode.InvalidTokenCode: The verification code is invalid.
-        /// *   VerifyCode.ReachTokenRetryTime: The retries of entering the verification code reaches the upper limit.
+        /// *   VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.
+        /// *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
+        /// *   Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.
+        /// *   InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

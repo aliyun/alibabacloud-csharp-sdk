@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// The ID of the region
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

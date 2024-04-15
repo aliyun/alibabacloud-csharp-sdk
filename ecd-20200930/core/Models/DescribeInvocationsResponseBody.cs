@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// The ID of the end user.
+            /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }

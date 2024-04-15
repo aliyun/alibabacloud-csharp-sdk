@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CopyImageRequest : TeaModel {
         /// <summary>
-        /// The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// The description of the new image in the destination region. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("DestinationDescription")]
         [Validation(Required=false)]
         public string DestinationDescription { get; set; }
 
         /// <summary>
-        /// The name of the image copy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+        /// The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("DestinationImageName")]
         [Validation(Required=false)]
         public string DestinationImageName { get; set; }
 
         /// <summary>
-        /// The destination region to which you want to copy the image.
+        /// The ID of the destination region. The ID must be different from the current region ID of the image. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("DestinationRegionId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
