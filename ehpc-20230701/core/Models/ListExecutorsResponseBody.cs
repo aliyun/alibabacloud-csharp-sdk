@@ -59,10 +59,6 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
 
         }
 
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
@@ -74,10 +70,6 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TaskName")]
-        [Validation(Required=false)]
-        public string TaskName { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

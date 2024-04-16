@@ -109,6 +109,38 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
                 [Validation(Required=false)]
                 public List<CreateJobRequestTasksTaskSpecTaskExecutor> TaskExecutor { get; set; }
                 public class CreateJobRequestTasksTaskSpecTaskExecutor : TeaModel {
+                    [NameInMap("Container")]
+                    [Validation(Required=false)]
+                    public CreateJobRequestTasksTaskSpecTaskExecutorContainer Container { get; set; }
+                    public class CreateJobRequestTasksTaskSpecTaskExecutorContainer : TeaModel {
+                        [NameInMap("Command")]
+                        [Validation(Required=false)]
+                        public List<string> Command { get; set; }
+
+                        [NameInMap("EnvironmentVars")]
+                        [Validation(Required=false)]
+                        public List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> EnvironmentVars { get; set; }
+                        public class CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars : TeaModel {
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
+                            public string Value { get; set; }
+
+                        }
+
+                        [NameInMap("Image")]
+                        [Validation(Required=false)]
+                        public string Image { get; set; }
+
+                        [NameInMap("WorkingDir")]
+                        [Validation(Required=false)]
+                        public string WorkingDir { get; set; }
+
+                    }
+
                     [NameInMap("VM")]
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorVM VM { get; set; }
@@ -126,6 +158,24 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
                         public string Script { get; set; }
 
                     }
+
+                }
+
+                [NameInMap("VolumeMount")]
+                [Validation(Required=false)]
+                public List<CreateJobRequestTasksTaskSpecVolumeMount> VolumeMount { get; set; }
+                public class CreateJobRequestTasksTaskSpecVolumeMount : TeaModel {
+                    [NameInMap("MountOptions")]
+                    [Validation(Required=false)]
+                    public string MountOptions { get; set; }
+
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                    [NameInMap("VolumeDriver")]
+                    [Validation(Required=false)]
+                    public string VolumeDriver { get; set; }
 
                 }
 
