@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string AgentName { get; set; }
 
+            [NameInMap("DefaultAgent")]
+            [Validation(Required=false)]
+            public bool? DefaultAgent { get; set; }
+
             [NameInMap("InstanceInfos")]
             [Validation(Required=false)]
             public Dictionary<string, object> InstanceInfos { get; set; }
