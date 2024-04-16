@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TunnelId { get; set; }
 
         /// <summary>
-        /// The configurations of IKE Phase 1.
+        /// The Phase 1 configuration.
         /// </summary>
         [NameInMap("TunnelIkeConfig")]
         [Validation(Required=false)]
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? IkeLifetime { get; set; }
 
             /// <summary>
-            /// The IKE negotiation mode. Valid values:
+            /// The IKE negotiation mode.
             /// 
             /// *   **main:** This mode offers higher security during negotiations.
-            /// *   **aggressive:** This mode is faster and has a higher success rate.
+            /// *   **aggressive**: This mode is faster and has a higher success rate.
             /// </summary>
             [NameInMap("IkeMode")]
             [Validation(Required=false)]
@@ -185,12 +185,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkePfs { get; set; }
 
             /// <summary>
-            /// The IKE version. Valid values:
+            /// The IKE version.
             /// 
             /// *   **ikev1**
             /// *   **ikev2**
             /// 
-            /// Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+            /// Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.
             /// </summary>
             [NameInMap("IkeVersion")]
             [Validation(Required=false)]

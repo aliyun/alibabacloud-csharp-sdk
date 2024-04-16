@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The propagation source associated with the VPC.
+        /// The route source associated with the VPC.
         /// </summary>
         [NameInMap("AssociatedPropagationSources")]
         [Validation(Required=false)]
@@ -61,44 +61,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> AssociatedPropagationSources { get; set; }
             public class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources : TeaModel {
                 /// <summary>
-                /// Indicates whether to propagate the routes of the VPC.
+                /// Indicates whether routes are advertised to the VPC.
                 /// </summary>
                 [NameInMap("RoutePropagated")]
                 [Validation(Required=false)]
                 public bool? RoutePropagated { get; set; }
 
                 /// <summary>
-                /// The instance ID of the propagation source.
+                /// The instance ID of the source.
                 /// </summary>
                 [NameInMap("SourceInstanceId")]
                 [Validation(Required=false)]
                 public string SourceInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the account to which the propagation source belongs.
+                /// The account ID of the source.
                 /// </summary>
                 [NameInMap("SourceOwnerId")]
                 [Validation(Required=false)]
                 public long? SourceOwnerId { get; set; }
 
                 /// <summary>
-                /// The type of the propagation source. Valid values:
+                /// The source type.
                 /// 
-                /// - **CEN**
-                /// - **VPN**
-                /// - **TR**
-                /// - **ECR**
+                /// *   **CEN**
+                /// *   **VPN**
+                /// *   **TR**
+                /// *   **ECR**
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The status indicating whether the propagation source is attached to the VPC. Valid values:
+                /// The binding status.
                 /// 
-                /// - **Attaching**
-                /// - **Attached**
-                /// - **Detaching**
+                /// *   **Attaching**
+                /// *   **Attached**
+                /// *   **Detaching**
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -190,6 +190,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("DhcpOptionsSetStatus")]
         [Validation(Required=false)]
         public string DhcpOptionsSetStatus { get; set; }
+
+        /// <summary>
+        /// 是否开启IPv6。
+        /// </summary>
+        [NameInMap("EnabledIpv6")]
+        [Validation(Required=false)]
+        public bool? EnabledIpv6 { get; set; }
 
         /// <summary>
         /// The ID of the IPv4 gateway.

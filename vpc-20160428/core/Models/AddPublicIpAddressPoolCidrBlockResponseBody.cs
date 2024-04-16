@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddPublicIpAddressPoolCidrBlockResponseBody : TeaModel {
+        /// <summary>
+        /// The CIDR blocks.
+        /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }

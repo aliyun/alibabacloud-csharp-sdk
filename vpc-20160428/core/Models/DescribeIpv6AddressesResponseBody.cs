@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// The billing method of the Internet bandwidth of the IPv6 address. Valid values:
                     /// 
                     /// *   **PayByTraffic**
-                    /// *   **PayByBandwidth**: pay-by-bandwidth
+                    /// *   **PayByBandwidth**
                     /// </summary>
                     [NameInMap("InternetChargeType")]
                     [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string Ipv6InternetBandwidthId { get; set; }
 
                     /// <summary>
-                    /// The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
+                    /// The time when the renewal takes effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
                     /// </summary>
                     [NameInMap("ReservationActiveTime")]
                     [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     /// The metering method that is used after the renewal takes effect.
                     /// 
                     /// *   **PayByTraffic**
-                    /// *   **PayByBandwidth**: pay-by-bandwidth
+                    /// *   **PayByBandwidth**
                     /// </summary>
                     [NameInMap("ReservationInternetChargeType")]
                     [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// The ISP of the IPv6 address.
+                /// The ISP of the IPv6 address. Valid values:
                 /// 
                 /// *   **BGP** (default)
                 /// *   **ChinaMobile**
@@ -206,6 +206,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// Indicates whether the instance is managed. Valid values:
+                /// 
+                /// *   **1**: yes
+                /// *   **0**: no
+                /// </summary>
                 [NameInMap("ServiceManaged")]
                 [Validation(Required=false)]
                 public int? ServiceManaged { get; set; }
@@ -232,16 +238,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag> Tag { get; set; }
                     public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+                        /// The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
                         /// 
-                        /// The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                        /// The tag key can be up to 128 characters in length. The tag key cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N.
+                        /// The tag value.
                         /// 
                         /// The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                         /// 

@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The weight of the destination-based route. Valid values:
         /// 
-        /// *   **0**: a low priority
-        /// *   **100**: a high priority
+        /// *   **0**: a low priority.
+        /// *   **100**: a high priority.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

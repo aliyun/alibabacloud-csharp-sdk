@@ -13980,7 +13980,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
-          * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot call the **CreateSslVpnServer** operation to create multiple SSL servers at a time for the same VPN gateway.
+          * ### [](#)Prerequisites
+          * A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see [CreateVpnGateway](~~2526913~~).
           *
           * @param request CreateSslVpnServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14081,7 +14083,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
-          * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot call the **CreateSslVpnServer** operation to create multiple SSL servers at a time for the same VPN gateway.
+          * ### [](#)Prerequisites
+          * A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see [CreateVpnGateway](~~2526913~~).
           *
           * @param request CreateSslVpnServerRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14182,7 +14186,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
-          * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot call the **CreateSslVpnServer** operation to create multiple SSL servers at a time for the same VPN gateway.
+          * ### [](#)Prerequisites
+          * A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see [CreateVpnGateway](~~2526913~~).
           *
           * @param request CreateSslVpnServerRequest
           * @return CreateSslVpnServerResponse
@@ -14197,7 +14203,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
           *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
           *     *   If the VPN gateway is in the **active** state, the SSL server is created.
-          * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+          * *   You cannot call the **CreateSslVpnServer** operation to create multiple SSL servers at a time for the same VPN gateway.
+          * ### [](#)Prerequisites
+          * A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see [CreateVpnGateway](~~2526913~~).
           *
           * @param request CreateSslVpnServerRequest
           * @return CreateSslVpnServerResponse
@@ -15443,12 +15451,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * *   The IPsec-VPN connection must be associated with a transit router. For more information, see [CreateTransitRouterVpnAttachment](~~468249~~).
           * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-          * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail.
-          * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-          *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
-          *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
-          * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+          * *   Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.
+          * *   **CreateVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnConnection](~~53046~~) to query the status of the task.
+          *     *   If the IPsec-VPN connection is in the **updating** state, the destination-based route is being created.
+          *     *   If the IPsec-VPN connection is in the **attached** state, the destination-based route is created.
+          * *   You cannot repeatedly call **CreateVcoRouteEntry** within the specified period of time.
           *
           * @param request CreateVcoRouteEntryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15522,12 +15531,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * *   The IPsec-VPN connection must be associated with a transit router. For more information, see [CreateTransitRouterVpnAttachment](~~468249~~).
           * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-          * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail.
-          * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-          *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
-          *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
-          * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+          * *   Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.
+          * *   **CreateVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnConnection](~~53046~~) to query the status of the task.
+          *     *   If the IPsec-VPN connection is in the **updating** state, the destination-based route is being created.
+          *     *   If the IPsec-VPN connection is in the **attached** state, the destination-based route is created.
+          * *   You cannot repeatedly call **CreateVcoRouteEntry** within the specified period of time.
           *
           * @param request CreateVcoRouteEntryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15601,12 +15611,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * *   The IPsec-VPN connection must be associated with a transit router. For more information, see [CreateTransitRouterVpnAttachment](~~468249~~).
           * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-          * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail.
-          * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-          *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
-          *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
-          * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+          * *   Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.
+          * *   **CreateVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnConnection](~~53046~~) to query the status of the task.
+          *     *   If the IPsec-VPN connection is in the **updating** state, the destination-based route is being created.
+          *     *   If the IPsec-VPN connection is in the **attached** state, the destination-based route is created.
+          * *   You cannot repeatedly call **CreateVcoRouteEntry** within the specified period of time.
           *
           * @param request CreateVcoRouteEntryRequest
           * @return CreateVcoRouteEntryResponse
@@ -15618,12 +15629,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+          * *   The IPsec-VPN connection must be associated with a transit router. For more information, see [CreateTransitRouterVpnAttachment](~~468249~~).
           * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-          * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail.
-          * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-          *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
-          *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
-          * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+          * *   Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.
+          * *   **CreateVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnConnection](~~53046~~) to query the status of the task.
+          *     *   If the IPsec-VPN connection is in the **updating** state, the destination-based route is being created.
+          *     *   If the IPsec-VPN connection is in the **attached** state, the destination-based route is created.
+          * *   You cannot repeatedly call **CreateVcoRouteEntry** within the specified period of time.
           *
           * @param request CreateVcoRouteEntryRequest
           * @return CreateVcoRouteEntryResponse
@@ -25559,8 +25571,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
-          * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+          * *   If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see [DeleteTransitRouterVpnAttachment](~~468251~~).
+          * *   If an IPsec-VPN connection is not associated with a resource, you can call `DeleteVpnAttachment` to directly delete the IPsec-VPN connection.
           *
           * @param request DeleteVpnAttachmentRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -25614,8 +25626,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
-          * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+          * *   If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see [DeleteTransitRouterVpnAttachment](~~468251~~).
+          * *   If an IPsec-VPN connection is not associated with a resource, you can call `DeleteVpnAttachment` to directly delete the IPsec-VPN connection.
           *
           * @param request DeleteVpnAttachmentRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -25669,8 +25681,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
-          * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+          * *   If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see [DeleteTransitRouterVpnAttachment](~~468251~~).
+          * *   If an IPsec-VPN connection is not associated with a resource, you can call `DeleteVpnAttachment` to directly delete the IPsec-VPN connection.
           *
           * @param request DeleteVpnAttachmentRequest
           * @return DeleteVpnAttachmentResponse
@@ -25682,8 +25694,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-          * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
-          * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+          * *   If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see [DeleteTransitRouterVpnAttachment](~~468251~~).
+          * *   If an IPsec-VPN connection is not associated with a resource, you can call `DeleteVpnAttachment` to directly delete the IPsec-VPN connection.
           *
           * @param request DeleteVpnAttachmentRequest
           * @return DeleteVpnAttachmentResponse
@@ -45566,6 +45578,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddInstanceList))
+            {
+                query["AddInstanceList"] = request.AddInstanceList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -45582,10 +45598,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PconnIdList))
-            {
-                query["PconnIdList"] = request.PconnIdList;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
             {
                 query["QosDescription"] = request.QosDescription;
@@ -45601,6 +45613,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveInstanceList))
+            {
+                query["RemoveInstanceList"] = request.RemoveInstanceList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -45629,6 +45645,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddInstanceList))
+            {
+                query["AddInstanceList"] = request.AddInstanceList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -45645,10 +45665,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["OwnerId"] = request.OwnerId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PconnIdList))
-            {
-                query["PconnIdList"] = request.PconnIdList;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosDescription))
             {
                 query["QosDescription"] = request.QosDescription;
@@ -45664,6 +45680,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveInstanceList))
+            {
+                query["RemoveInstanceList"] = request.RemoveInstanceList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {

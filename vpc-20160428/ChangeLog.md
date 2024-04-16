@@ -1,3 +1,14 @@
+2024-04-16 Version: 6.7.1
+- Update API DeleteExpressConnectTrafficQos: update param QosId.
+- Update API DeleteExpressConnectTrafficQosQueue: update param QosId.
+- Update API DeleteExpressConnectTrafficQosQueue: update param QueueId.
+- Update API DescribeVpcAttribute: update response param.
+- Update API DescribeVpcs: update response param.
+- Update API ModifyExpressConnectTrafficQos: add param AddInstanceList.
+- Update API ModifyExpressConnectTrafficQos: add param RemoveInstanceList.
+- Update API ModifyExpressConnectTrafficQos: update param QosId.
+
+
 2024-03-14 Version: 6.7.0
 - Support API CreateExpressConnectTrafficQos.
 - Support API CreateExpressConnectTrafficQosQueue.

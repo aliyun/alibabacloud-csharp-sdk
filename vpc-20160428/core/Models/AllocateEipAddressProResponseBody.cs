@@ -24,7 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EipAddress { get; set; }
 
         /// <summary>
-        /// The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
+        /// The order ID.
+        /// 
+        /// This parameter is returned when InstanceChargeType is set to PrePaid. If AutoPay is set to false, you must manually complete the payment in the [Order Center](https://usercenter2-intl.aliyun.com/order/list).
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

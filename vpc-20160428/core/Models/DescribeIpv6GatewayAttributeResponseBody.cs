@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6GatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The service status of the IPv6 gateway. Valid values:
+        /// The status of the IPv6 gateway. Valid values:
         /// 
-        /// *   **Normal**: The IPv6 gateway runs as expected.
-        /// *   **FinacialLocked**: The IPv6 gateway is locked due to overdue payments.
-        /// *   **SecurityLocked**: The IPv6 gateway is locked due to security reasons.
+        /// *   **Normal**
+        /// *   **FinancialLocked**
+        /// *   **SecurityLocked**
         /// </summary>
         [NameInMap("BusinessStatus")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The information about the tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -114,14 +114,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeIpv6GatewayAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeIpv6GatewayAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+                /// 
+                /// The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.
+                /// 
+                /// The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

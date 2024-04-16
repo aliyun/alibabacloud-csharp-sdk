@@ -19,7 +19,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The type of instance associated with the IPv6 address. Valid values:
         /// 
-        /// **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
+        /// *   **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
+        /// *   **NetworkInterface**: secondary elastic network interface (ENI)
         /// </summary>
         [NameInMap("AssociatedInstanceType")]
         [Validation(Required=false)]
@@ -119,6 +120,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the instance is managed. Valid values:
+        /// 
+        /// *   **true**
+        /// *   **false**
+        /// 
+        /// If you do not specify this parameter, all instances are queried.
+        /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
