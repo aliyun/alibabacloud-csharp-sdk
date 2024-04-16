@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class RefundPayAsYouGoOrderRequest : TeaModel {
         /// <summary>
-        /// The ID of the sales order instance.
+        /// The instance ID in the sales order.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string AuditStatus { get; set; }
 
+            /// <summary>
+            /// Release remarks.
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }

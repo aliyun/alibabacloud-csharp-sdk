@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataArchiveOrderResponseBody : TeaModel {
         /// <summary>
-        /// The data archiving ticket IDs.
+        /// The ID of the data archiving ticket.
         /// </summary>
         [NameInMap("CreateOrderResult")]
         [Validation(Required=false)]
         public List<long?> CreateOrderResult { get; set; }
 
         /// <summary>
-        /// Error code
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

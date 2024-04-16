@@ -15105,6 +15105,120 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListScenariosWithOptionsAsync(request, runtime);
         }
 
+        public ListSensitiveColumnInfoResponse ListSensitiveColumnInfoWithOptions(ListSensitiveColumnInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnName))
+            {
+                query["ColumnName"] = request.ColumnName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                query["SchemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSensitiveColumnInfo",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSensitiveColumnInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListSensitiveColumnInfoResponse> ListSensitiveColumnInfoWithOptionsAsync(ListSensitiveColumnInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnName))
+            {
+                query["ColumnName"] = request.ColumnName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                query["SchemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSensitiveColumnInfo",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSensitiveColumnInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListSensitiveColumnInfoResponse ListSensitiveColumnInfo(ListSensitiveColumnInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSensitiveColumnInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ListSensitiveColumnInfoResponse> ListSensitiveColumnInfoAsync(ListSensitiveColumnInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSensitiveColumnInfoWithOptionsAsync(request, runtime);
+        }
+
         public ListSensitiveColumnsResponse ListSensitiveColumnsWithOptions(ListSensitiveColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The created security rule set.
+        /// The information about the created security rule set.
         /// </summary>
         [NameInMap("StandardGroup")]
         [Validation(Required=false)]
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The security rule set ID.
+            /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }

@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ParamShrink { get; set; }
 
         /// <summary>
-        /// The ID of the parent ticket. A parent ticket is generated only when a sub ticket is created.
+        /// The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// The plugin type. Default value: DATA_ARCHIVE.
+        /// The type of the plug-in. Default value: DATA_ARCHIVE.
         /// </summary>
         [NameInMap("PluginType")]
         [Validation(Required=false)]
