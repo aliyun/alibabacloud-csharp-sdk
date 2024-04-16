@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class DescribeBackupTasksRequest : TeaModel {
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
-        public long? BackupJobId { get; set; }
+        public string BackupJobId { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

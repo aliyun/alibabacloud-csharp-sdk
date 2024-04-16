@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateAvailableZoneRequest : TeaModel {
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
         /// <summary>
         /// The ID of the instance.
         /// 

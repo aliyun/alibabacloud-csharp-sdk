@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
             [NameInMap("BackupjobId")]
             [Validation(Required=false)]
-            public long? BackupjobId { get; set; }
+            public string BackupjobId { get; set; }
 
             [NameInMap("JobMode")]
             [Validation(Required=false)]
