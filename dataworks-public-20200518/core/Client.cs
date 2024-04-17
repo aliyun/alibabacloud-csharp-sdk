@@ -8162,6 +8162,184 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DesensitizeDataWithOptionsAsync(request, runtime);
         }
 
+        public DsgQuerySensResultResponse DsgQuerySensResultWithOptions(DsgQuerySensResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Col))
+            {
+                body["Col"] = request.Col;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                body["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                body["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["SchemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensStatus))
+            {
+                body["SensStatus"] = request.SensStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveId))
+            {
+                body["SensitiveId"] = request.SensitiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveName))
+            {
+                body["SensitiveName"] = request.SensitiveName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                body["Table"] = request.Table;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgQuerySensResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgQuerySensResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DsgQuerySensResultResponse> DsgQuerySensResultWithOptionsAsync(DsgQuerySensResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Col))
+            {
+                body["Col"] = request.Col;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                body["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                body["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["SchemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensStatus))
+            {
+                body["SensStatus"] = request.SensStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveId))
+            {
+                body["SensitiveId"] = request.SensitiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensitiveName))
+            {
+                body["SensitiveName"] = request.SensitiveName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                body["Table"] = request.Table;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgQuerySensResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgQuerySensResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DsgQuerySensResultResponse DsgQuerySensResult(DsgQuerySensResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgQuerySensResultWithOptions(request, runtime);
+        }
+
+        public async Task<DsgQuerySensResultResponse> DsgQuerySensResultAsync(DsgQuerySensResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgQuerySensResultWithOptionsAsync(request, runtime);
+        }
+
         public EstablishRelationTableToBusinessResponse EstablishRelationTableToBusinessWithOptions(EstablishRelationTableToBusinessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
