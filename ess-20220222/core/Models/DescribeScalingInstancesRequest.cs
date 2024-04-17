@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string LifecycleState { get; set; }
 
+        /// <summary>
+        /// The lifecycle states of the ECS instance in the scaling group. You can specify only one of the LifecycleStates and LifecycleState parameters at the same time. We recommend that you specify this parameter.
+        /// </summary>
         [NameInMap("LifecycleStates")]
         [Validation(Required=false)]
         public List<string> LifecycleStates { get; set; }

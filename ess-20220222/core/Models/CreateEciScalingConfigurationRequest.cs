@@ -239,49 +239,49 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
+            /// The container startup arguments. You can specify up to 10 arguments.
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// The commands that you want to run in the container when you use the CLI to perform probes.
+            /// The commands that you can run in the container when you use the CLI to perform liveness probes.
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
             public List<string> Commands { get; set; }
 
             /// <summary>
-            /// The number of CPU cores in the container.
+            /// The number of vCPUs that you want to allocate to the container.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// Information about environment variables.
+            /// The environment variables.
             /// </summary>
             [NameInMap("EnvironmentVars")]
             [Validation(Required=false)]
             public List<CreateEciScalingConfigurationRequestContainersEnvironmentVars> EnvironmentVars { get; set; }
             public class CreateEciScalingConfigurationRequestContainersEnvironmentVars : TeaModel {
                 /// <summary>
-                /// > This parameter is unavailable.
+                /// >  This parameter is not available for use.
                 /// </summary>
                 [NameInMap("FieldRefFieldPath")]
                 [Validation(Required=false)]
                 public string FieldRefFieldPath { get; set; }
 
                 /// <summary>
-                /// The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_). The name cannot start with a digit. Specify the name in the \[0-9a-zA-Z] format.
+                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (\_) and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value must be 0 to 256 characters in length.
+                /// The value of the environment variable. The value can be up to 256 characters in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -306,9 +306,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The image pulling policy. Valid values:
             /// 
-            /// *   Always: pulls images each time.
-            /// *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-            /// *   Never: never pulls images. On-premises images are always used.
+            /// *   Always: Each time instances are created, image pulling is performed.
+            /// *   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+            /// *   Never: On-premises images are always used. Image pulling is not performed.
             /// </summary>
             [NameInMap("ImagePullPolicy")]
             [Validation(Required=false)]
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size of the container. Unit: GiB.
+            /// The memory size that you want to allocate to the container. Unit: GiB.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The type of the protocol. Valid values:
+                /// The protocol type. Valid values:
                 /// 
                 /// *   TCP
                 /// *   UDP
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur.
+            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read.
             /// 
             /// Default value: false.
             /// </summary>
@@ -420,9 +420,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether to disconnect standard input streams after a client is disconnected.
+            /// Specifies whether to remain standard input streams connected during multiple sessions if StdinOnce is set to true.
             /// 
-            /// If you set the StdinOnce parameter to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is started again.
+            /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   true
             /// *   false
             /// 
-            /// If the value of the Command parameter is /bin/bash, you must set this parameter to true.
+            /// If the command is a /bin/bash command, set the value to true.
             /// 
             /// Default value: false.
             /// </summary>
@@ -443,27 +443,27 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// Information about the volume mount of the container.
+            /// The volume mounts of the container.
             /// </summary>
             [NameInMap("VolumeMounts")]
             [Validation(Required=false)]
             public List<CreateEciScalingConfigurationRequestContainersVolumeMounts> VolumeMounts { get; set; }
             public class CreateEciScalingConfigurationRequestContainersVolumeMounts : TeaModel {
                 /// <summary>
-                /// The directory on which the container mounts the volume.
+                /// The directory to which the container mounts the volume.
                 /// 
-                /// > Data in this directory is overwritten by the data on the volume.
+                /// >  Data under this directory is overwritten by data on the volume. Specify this parameter with caution.
                 /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
                 /// 
-                /// *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+                /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or the subdirectories of the volume.
+                /// *   HostToContainer: The volume mount receives all subsequent mounts that are performed on the volume or the subdirectories of the volume.
+                /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
                 /// 
                 /// Default value: None.
                 /// </summary>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume. The value of this parameter is the same as the value of the VolumeName parameter.
+                /// The volume name. The value of this parameter is the same as the value of Volumes.Name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -539,18 +539,48 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? CpuOptionsThreadsPerCore { get; set; }
 
+        /// <summary>
+        /// The bucket that caches data.
+        /// </summary>
         [NameInMap("DataCacheBucket")]
         [Validation(Required=false)]
         public string DataCacheBucket { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk that caches data. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// 
+        /// Default value: false.
+        /// 
+        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
+        /// </summary>
         [NameInMap("DataCacheBurstingEnabled")]
         [Validation(Required=false)]
         public bool? DataCacheBurstingEnabled { get; set; }
 
+        /// <summary>
+        /// The performance level (PL) of the cloud disk that caches disk. We recommend that you use enhanced SSDs (ESSDs). Valid values:
+        /// 
+        /// *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
+        /// *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+        /// *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
+        /// *   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.
+        /// 
+        /// Default value: PL1.
+        /// 
+        /// >  For more information about ESSDs, see [ESSDs](~~122389~~).
+        /// </summary>
         [NameInMap("DataCachePL")]
         [Validation(Required=false)]
         public string DataCachePL { get; set; }
 
+        /// <summary>
+        /// The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.
+        /// 
+        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
+        /// </summary>
         [NameInMap("DataCacheProvisionedIops")]
         [Validation(Required=false)]
         public int? DataCacheProvisionedIops { get; set; }
@@ -858,8 +888,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// The mount propagation settings of the volume . Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
                 /// 
                 /// *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+                /// *   HostToContainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
+                /// *   Bidirectional: This value is similar to HostToContainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
                 /// </summary>
                 [NameInMap("MountPropagation")]
                 [Validation(Required=false)]

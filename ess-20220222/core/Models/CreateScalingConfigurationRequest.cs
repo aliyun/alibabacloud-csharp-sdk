@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public CreateScalingConfigurationRequestImageOptions ImageOptions { get; set; }
         public class CreateScalingConfigurationRequestImageOptions : TeaModel {
+            /// <summary>
+            /// For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see [Manage the login name of an ECS instance](~~388447~~). Value range:
+            /// 
+            /// - true: Yes.
+            /// - false: No.
+            /// 
+            /// Default value: false.
+            /// </summary>
             [NameInMap("LoginAsNonRoot")]
             [Validation(Required=false)]
             public bool? LoginAsNonRoot { get; set; }
@@ -131,14 +139,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string KMSKeyId { get; set; }
 
             /// <summary>
-            /// The performance level (PL) of the system disk that is an ESSD. Valid values:
+            /// The performance level (PL) of the system disk that is an enhanced SSD (ESSD). Valid values:
             /// 
             /// *   PL0: An ESSD can provide up to 10,000 random read/write IOPS.
             /// *   PL1: An ESSD can provide up to 50,000 random read/write IOPS.
             /// *   PL2: An ESSD can provide up to 100,000 random read/write IOPS.
             /// *   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.
             /// 
-            /// Default value: PL0
+            /// Default value: PL1.
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
@@ -214,14 +222,35 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string CreditSpecification { get; set; }
 
+        /// <summary>
+        /// The priority of the custom ECS instance type + vSwitch combination.
+        /// 
+        /// >  This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.
+        /// 
+        /// If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.
+        /// 
+        /// >  If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.
+        /// 
+        /// *   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify \["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.
+        /// </summary>
         [NameInMap("CustomPriorities")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestCustomPriorities> CustomPriorities { get; set; }
         public class CreateScalingConfigurationRequestCustomPriorities : TeaModel {
+            /// <summary>
+            /// The ECS instance type.
+            /// 
+            /// >  The ECS instance type must be included in the instance types specified in the scaling configuration.
+            /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// The vSwitch ID.
+            /// 
+            /// >  The vSwitch must be included in the vSwitch list of the scaling group.
+            /// </summary>
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
@@ -551,7 +580,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The instance type of the ECS instance. For more information, see the "Instance families" topic.
+        /// The instance type of the ECS instance. For more information, see the [Instance families](~~25378~~) topic.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

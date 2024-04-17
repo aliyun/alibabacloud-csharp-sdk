@@ -89,7 +89,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://. Default value: null.](http://https://。、（:）、（\_）（-）。：)
+            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. 
+            /// 
+            /// Default value: null.
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
