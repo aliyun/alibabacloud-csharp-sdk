@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SnatchNo")]
+        [Validation(Required=false)]
+        public string SnatchNo { get; set; }
+
         [NameInMap("TransferInPrice")]
         [Validation(Required=false)]
         public float? TransferInPrice { get; set; }
