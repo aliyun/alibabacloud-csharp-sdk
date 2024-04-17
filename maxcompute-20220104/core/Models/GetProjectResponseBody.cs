@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? EnableDecimal2 { get; set; }
 
+                [NameInMap("enableFdcCacheForce")]
+                [Validation(Required=false)]
+                public bool? EnableFdcCacheForce { get; set; }
+
                 /// <summary>
                 /// Indicates whether tunnel quota routing is enabled.
                 /// </summary>
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Key { get; set; }
 
                 }
+
+                [NameInMap("fdcQuota")]
+                [Validation(Required=false)]
+                public string FdcQuota { get; set; }
 
                 /// <summary>
                 /// The number of days for which backup data can be retained.
