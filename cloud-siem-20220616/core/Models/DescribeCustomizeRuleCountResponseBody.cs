@@ -23,6 +23,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeCustomizeRuleCountResponseBodyData Data { get; set; }
         public class DescribeCustomizeRuleCountResponseBodyData : TeaModel {
+            [NameInMap("AggregationRuleNum")]
+            [Validation(Required=false)]
+            public int? AggregationRuleNum { get; set; }
+
+            [NameInMap("CustomizeRuleNum")]
+            [Validation(Required=false)]
+            public int? CustomizeRuleNum { get; set; }
+
+            [NameInMap("ExpertRuleNum")]
+            [Validation(Required=false)]
+            public int? ExpertRuleNum { get; set; }
+
+            [NameInMap("GraphComputingRuleNum")]
+            [Validation(Required=false)]
+            public int? GraphComputingRuleNum { get; set; }
+
             /// <summary>
             /// The number of rules that are used to identify high-risk threats.
             /// </summary>
@@ -50,6 +66,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [NameInMap("MediumRuleNum")]
             [Validation(Required=false)]
             public int? MediumRuleNum { get; set; }
+
+            [NameInMap("PredefinedRuleNum")]
+            [Validation(Required=false)]
+            public int? PredefinedRuleNum { get; set; }
+
+            [NameInMap("SingleAlertRuleNum")]
+            [Validation(Required=false)]
+            public int? SingleAlertRuleNum { get; set; }
+
+            [NameInMap("TotalRuleNum")]
+            [Validation(Required=false)]
+            public int? TotalRuleNum { get; set; }
+
+            [NameInMap("UnEventRuleNum")]
+            [Validation(Required=false)]
+            public int? UnEventRuleNum { get; set; }
 
         }
 

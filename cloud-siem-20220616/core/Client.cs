@@ -707,6 +707,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -741,6 +749,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -785,6 +801,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -815,6 +839,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -953,6 +985,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 body["RuleId"] = request.RuleId;
@@ -983,6 +1023,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
@@ -1367,6 +1415,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1397,6 +1453,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1437,6 +1501,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1463,6 +1535,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1503,6 +1583,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1529,6 +1617,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1573,6 +1669,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1603,6 +1707,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1651,6 +1763,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -1689,6 +1809,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1737,6 +1865,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1767,6 +1903,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1807,6 +1951,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                body["RuleType"] = request.RuleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1833,6 +1989,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                body["RuleType"] = request.RuleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1901,6 +2069,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["Source"] = request.Source;
@@ -1968,6 +2144,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["Source"] = request.Source;
@@ -2023,6 +2207,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -2057,6 +2249,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -2117,6 +2317,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
                 body["SophonTaskId"] = request.SophonTaskId;
@@ -2163,6 +2371,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
@@ -2231,6 +2447,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["Source"] = request.Source;
@@ -2289,6 +2513,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
@@ -2349,6 +2581,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -2391,6 +2631,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -2501,6 +2749,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2527,6 +2783,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2571,6 +2835,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2601,6 +2873,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2649,6 +2929,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2683,6 +2971,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2739,6 +3035,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2781,6 +3085,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2825,6 +3137,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2855,6 +3175,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2899,6 +3227,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2929,6 +3265,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3001,6 +3345,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -3071,6 +3423,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -3279,6 +3639,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3305,6 +3673,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3349,6 +3725,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3379,6 +3763,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3423,6 +3815,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3453,6 +3853,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3681,6 +4089,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3723,6 +4139,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3767,6 +4191,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -3801,6 +4233,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -3857,6 +4297,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
                 body["SophonTaskId"] = request.SophonTaskId;
@@ -3900,6 +4348,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
                 body["SophonTaskId"] = request.SophonTaskId;
@@ -3939,9 +4395,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3966,9 +4438,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4021,6 +4509,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4059,6 +4555,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4247,6 +4751,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4281,6 +4793,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4325,6 +4845,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4355,6 +4883,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4461,6 +4997,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4487,6 +5031,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4527,6 +5079,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
             {
                 body["SceneType"] = request.SceneType;
@@ -4557,6 +5117,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
             {
@@ -4667,6 +5235,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4693,6 +5269,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4799,6 +5383,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4825,6 +5417,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4943,6 +5543,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4973,6 +5581,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5033,6 +5649,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5079,6 +5703,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5311,9 +5943,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSubmit))
+            {
+                body["AutoSubmit"] = request.AutoSubmit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5338,9 +5982,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSubmit))
+            {
+                body["AutoSubmit"] = request.AutoSubmit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5447,6 +6103,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5473,6 +6137,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5799,6 +6471,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5825,6 +6505,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5951,6 +6639,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5989,6 +6685,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6029,6 +6733,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -6055,6 +6767,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6119,6 +6839,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 body["RuleName"] = request.RuleName;
@@ -6181,6 +6909,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -6401,6 +7137,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
@@ -6408,6 +7152,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -6468,6 +7220,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
@@ -6475,6 +7235,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -6535,6 +7303,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["AlertType"] = request.AlertType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttCk))
+            {
+                body["AttCk"] = request.AttCk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 body["CurrentPage"] = request.CurrentPage;
@@ -6543,9 +7315,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTransferType))
+            {
+                body["EventTransferType"] = request.EventTransferType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
+            {
+                body["LogSource"] = request.LogSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -6554,6 +7342,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -6602,6 +7398,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["AlertType"] = request.AlertType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttCk))
+            {
+                body["AttCk"] = request.AttCk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 body["CurrentPage"] = request.CurrentPage;
@@ -6610,9 +7410,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTransferType))
+            {
+                body["EventTransferType"] = request.EventTransferType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
+            {
+                body["LogSource"] = request.LogSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -6621,6 +7437,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
@@ -6693,6 +7517,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -6731,6 +7563,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6935,6 +7775,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -6961,6 +7809,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7045,6 +7901,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
                 body["SophonTaskId"] = request.SophonTaskId;
@@ -7124,6 +7988,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SophonTaskId))
             {
                 body["SophonTaskId"] = request.SophonTaskId;
@@ -7179,6 +8051,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -7213,6 +8093,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8071,6 +8959,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8105,6 +9001,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8165,6 +9069,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 body["RuleName"] = request.RuleName;
@@ -8220,6 +9132,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 body["RuleName"] = request.RuleName;
@@ -8271,6 +9191,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["AlertTypeMds"] = request.AlertTypeMds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttCk))
+            {
+                body["AttCk"] = request.AttCk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTransferExt))
             {
                 body["EventTransferExt"] = request.EventTransferExt;
@@ -8310,6 +9234,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCondition))
             {
@@ -8366,6 +9298,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["AlertTypeMds"] = request.AlertTypeMds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttCk))
+            {
+                body["AttCk"] = request.AttCk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTransferExt))
             {
                 body["EventTransferExt"] = request.EventTransferExt;
@@ -8405,6 +9341,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCondition))
             {
@@ -8473,6 +9417,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimulatedData))
             {
                 body["SimulatedData"] = request.SimulatedData;
@@ -8511,6 +9463,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimulatedData))
             {
@@ -8575,6 +9535,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
@@ -8621,6 +9589,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -8669,6 +9645,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteruleList))
             {
                 body["WhiteruleList"] = request.WhiteruleList;
@@ -8703,6 +9687,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteruleList))
             {
@@ -8751,6 +9743,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8781,6 +9781,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8829,6 +9837,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
                 body["RuleType"] = request.RuleType;
@@ -8867,6 +9883,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
@@ -8911,6 +9935,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8937,6 +9969,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9063,6 +10103,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
                 body["Ttl"] = request.Ttl;
@@ -9097,6 +10145,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
@@ -9395,6 +10451,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -9429,6 +10493,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9477,6 +10549,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteRuleId))
             {
                 body["WhiteRuleId"] = request.WhiteRuleId;
@@ -9515,6 +10595,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteRuleId))
             {

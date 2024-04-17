@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string AutoResponseType { get; set; }
 
+                [NameInMap("DataType")]
+                [Validation(Required=false)]
+                public int? DataType { get; set; }
+
                 /// <summary>
                 /// The trigger condition of the rule. The value is in the JSON format.
                 /// </summary>

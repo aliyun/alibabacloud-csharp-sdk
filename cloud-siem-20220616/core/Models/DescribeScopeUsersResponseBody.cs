@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            [NameInMap("CloudCode")]
+            [Validation(Required=false)]
+            public string CloudCode { get; set; }
+
             /// <summary>
             /// An array consisting of the domain names that are protected by the WAF instance.
             /// </summary>
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
 
             /// <summary>
             /// The username.

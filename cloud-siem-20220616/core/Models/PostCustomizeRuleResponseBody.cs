@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? Aliuid { get; set; }
 
+            [NameInMap("AttCk")]
+            [Validation(Required=false)]
+            public string AttCk { get; set; }
+
+            [NameInMap("DataType")]
+            [Validation(Required=false)]
+            public int? DataType { get; set; }
+
             /// <summary>
             /// The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
             /// </summary>

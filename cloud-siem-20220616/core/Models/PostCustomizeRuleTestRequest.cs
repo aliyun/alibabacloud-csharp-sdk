@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
+
         /// <summary>
         /// The simulation data for the test. This parameter is available only when TestType is set to simulate.
         /// </summary>

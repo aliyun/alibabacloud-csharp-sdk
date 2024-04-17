@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class EnableAccessForCloudSiemRequest : TeaModel {
+        [NameInMap("AutoSubmit")]
+        [Validation(Required=false)]
+        public int? AutoSubmit { get; set; }
+
         /// <summary>
         /// The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
         /// 
@@ -18,6 +22,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
     }
 

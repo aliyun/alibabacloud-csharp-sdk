@@ -238,6 +238,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                [NameInMap("EntityList")]
+                [Validation(Required=false)]
+                public string EntityList { get; set; }
+
                 /// <summary>
                 /// The time when the alert was received.
                 /// </summary>

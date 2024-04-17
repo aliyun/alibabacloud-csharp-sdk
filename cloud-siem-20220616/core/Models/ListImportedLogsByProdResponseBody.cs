@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string LogMdsCode { get; set; }
 
+            [NameInMap("LogType")]
+            [Validation(Required=false)]
+            public int? LogType { get; set; }
+
             /// <summary>
             /// The time when the log was last added.
             /// </summary>

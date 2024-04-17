@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string AlertType { get; set; }
 
+        [NameInMap("AttCk")]
+        [Validation(Required=false)]
+        public string AttCk { get; set; }
+
         /// <summary>
         /// The page number. Pages start from page 1.
         /// </summary>
@@ -30,12 +34,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("EventTransferType")]
+        [Validation(Required=false)]
+        public string EventTransferType { get; set; }
+
         /// <summary>
         /// The ID of the rule.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("LogSource")]
+        [Validation(Required=false)]
+        public string LogSource { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        [NameInMap("OrderField")]
+        [Validation(Required=false)]
+        public string OrderField { get; set; }
 
         /// <summary>
         /// The number of entries per page. Maximum value: 100.
@@ -53,6 +73,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
         /// <summary>
         /// The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).

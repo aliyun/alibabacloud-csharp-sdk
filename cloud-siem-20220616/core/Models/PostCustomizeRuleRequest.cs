@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string AlertTypeMds { get; set; }
 
+        [NameInMap("AttCk")]
+        [Validation(Required=false)]
+        public string AttCk { get; set; }
+
         /// <summary>
         /// The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.
         /// </summary>
@@ -102,6 +106,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
         /// <summary>
         /// The query condition of the rule. The value is in the JSON format.

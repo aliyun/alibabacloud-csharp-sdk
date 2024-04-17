@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string MasterUserName { get; set; }
 
+            [NameInMap("RdOrder")]
+            [Validation(Required=false)]
+            public int? RdOrder { get; set; }
+
             /// <summary>
             /// The instance ID of Security Center.
             /// </summary>

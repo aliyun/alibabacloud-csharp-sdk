@@ -19,6 +19,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
+
+        [NameInMap("RuleType")]
+        [Validation(Required=false)]
+        public string RuleType { get; set; }
+
     }
 
 }

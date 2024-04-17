@@ -151,6 +151,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string IncidentUuid { get; set; }
 
+                [NameInMap("ReferAccount")]
+                [Validation(Required=false)]
+                public string ReferAccount { get; set; }
+
                 /// <summary>
                 /// The remarks of the event.
                 /// </summary>

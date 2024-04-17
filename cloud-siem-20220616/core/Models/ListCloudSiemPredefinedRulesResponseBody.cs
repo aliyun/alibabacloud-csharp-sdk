@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string AlertType { get; set; }
 
+                [NameInMap("AttCk")]
+                [Validation(Required=false)]
+                public string AttCk { get; set; }
+
+                [NameInMap("EventTransferType")]
+                [Validation(Required=false)]
+                public string EventTransferType { get; set; }
+
                 /// <summary>
                 /// The time when the rule was created.
                 /// </summary>
@@ -101,6 +109,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("RuleNameCn")]
+                [Validation(Required=false)]
+                public string RuleNameCn { get; set; }
+
+                [NameInMap("RuleNameEn")]
+                [Validation(Required=false)]
+                public string RuleNameEn { get; set; }
 
                 /// <summary>
                 /// The internal code of the rule name.

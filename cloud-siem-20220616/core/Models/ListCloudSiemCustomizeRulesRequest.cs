@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        [NameInMap("OrderField")]
+        [Validation(Required=false)]
+        public string OrderField { get; set; }
+
         /// <summary>
         /// The number of entries per page. The value can be up to 100.
         /// </summary>
@@ -53,6 +61,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public int? RoleType { get; set; }
 
         /// <summary>
         /// The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).
