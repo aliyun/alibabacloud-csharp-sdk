@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1Request : TeaModel {
         /// <summary>
-        /// 集群ID。
+        /// The cluster ID.
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]

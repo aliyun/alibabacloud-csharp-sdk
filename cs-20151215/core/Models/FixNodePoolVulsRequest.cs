@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class FixNodePoolVulsRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to allow the nodes to restart.
+        /// </summary>
         [NameInMap("auto_restart")]
         [Validation(Required=false)]
         public bool? AutoRestart { get; set; }
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public FixNodePoolVulsRequestRolloutPolicy RolloutPolicy { get; set; }
         public class FixNodePoolVulsRequestRolloutPolicy : TeaModel {
             /// <summary>
-            /// The maximum number of nodes that can be patched in parallel. The minimum value is 1. The maximum value equals the number of nodes in the node pool.
+            /// The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.
             /// </summary>
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]

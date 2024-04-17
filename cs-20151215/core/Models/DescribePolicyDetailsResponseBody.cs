@@ -61,7 +61,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? NoConfig { get; set; }
 
         /// <summary>
-        /// The severity level of the policy.
+        /// The severity level of the policy. Valid values:
+        /// 
+        /// *   `high`
+        /// *   `medium`
+        /// *   `low`
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]

@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+        /// The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
         /// 
         /// *   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
-        /// *   `none`: specifies that the default CPU affinity is used.
+        /// *   `none`: The default CPU affinity is used.
         /// 
         /// Default value: `none`.
         /// </summary>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CpuPolicy { get; set; }
 
         /// <summary>
-        /// Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
+        /// Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
         /// </summary>
         [NameInMap("image_id")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
+        /// After you specify the list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+        /// The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The ID of an automatic snapshot policy. Automatic backup is performed for a disk based on the specified automatic snapshot policy.
             /// 
-            /// By default, this parameter is empty. This indicates that automatic backup is disabled.
+            /// By default, this parameter is empty, which indicates that automatic backup is disabled.
             /// </summary>
             [NameInMap("auto_snapshot_policy_id")]
             [Validation(Required=false)]
@@ -177,9 +177,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The billing method of worker nodes. Valid values:
         /// 
         /// *   `PrePaid`: subscription.
-        /// *   `PostPaid`: pay-as-you-go
+        /// *   `PostPaid`: pay-as-you-go.
         /// 
-        /// Default value: `PostPaid`
+        /// Default value: `PostPaid`.
         /// </summary>
         [NameInMap("worker_instance_charge_type")]
         [Validation(Required=false)]

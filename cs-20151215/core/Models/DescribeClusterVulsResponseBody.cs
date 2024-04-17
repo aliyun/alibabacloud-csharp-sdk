@@ -28,41 +28,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// Valid values:
             /// 
-            /// *   nntf
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     low
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   later
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     medium
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   asap
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     high
-            /// 
-            ///     <!-- -->
+            /// *   nntf: low
+            /// *   later: medium     
+            /// *   asap: high
             /// </summary>
             [NameInMap("necessity")]
             [Validation(Required=false)]
@@ -108,77 +76,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// Valid values:
             /// 
-            /// *   app
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     application vulnerabilities
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   sca
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     application vulnerabilities (software component analysis)
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   cve
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     Linux vulnerabilities
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   cms
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     Web-CMS vulnerabilities
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   sys
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     Windows vulnerabilities
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   emg
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     emergency vulnerabilities
-            /// 
-            ///     <!-- -->
+            /// *   app: application vulnerabilities
+            /// *   sca: application vulnerabilities (software component analysis)
+            /// *   cve: Linux vulnerabilities
+            /// *   cms: Web-CMS vulnerabilities
+            /// *   sys: Windows vulnerabilities
+            /// *   emg:  emergency vulnerabilities
             /// </summary>
             [NameInMap("vul_type")]
             [Validation(Required=false)]

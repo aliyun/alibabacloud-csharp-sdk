@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
+        [NameInMap("os_config")]
+        [Validation(Required=false)]
+        public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
+        public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
+            [NameInMap("sysctl")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Sysctl { get; set; }
+
+        }
+
         /// <summary>
         /// The rotation configuration.
         /// </summary>

@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// *   `cpu`: regular instance.
             /// *   `gpu`: GPU-accelerated instance.
-            /// *   `gpushare`: shared GPU-accelerated instance.
+            /// *   `gpushare`: shared GPU-accelerated instance
             /// *   `spot`: preemptible instance
             /// 
             /// Default value: `cpu`.
@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// Specifies whether concurrency is supported.
+        /// </summary>
         [NameInMap("concurrency")]
         [Validation(Required=false)]
         public bool? Concurrency { get; set; }
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CmsEnabled { get; set; }
 
             /// <summary>
-            /// The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+            /// The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
             /// 
             /// *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
             /// *   `none`: specifies that the default CPU affinity is used.
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:
             /// 
-            /// *   Each label is a case-sensitive key-value pair. You can add at most 20 labels.
+            /// *   A tag is a case-sensitive key-value pair. You can add up to 20 tags.
             /// *   The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
             /// </summary>
             [NameInMap("labels")]
@@ -243,7 +246,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:
             /// 
             /// *   `true`: yes
-            /// *   `false`: no
+            /// *   `true`: no
             /// </summary>
             [NameInMap("auto_vul_fix")]
             [Validation(Required=false)]
@@ -356,7 +359,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the node pool belongs.
+            /// The ID of the resource group.
             /// </summary>
             [NameInMap("resource_group_id")]
             [Validation(Required=false)]
@@ -395,7 +398,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:
             /// 
-            /// *   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
+            /// *   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created
             /// *   `false`: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
             /// </summary>
             [NameInMap("compensate_with_on_demand")]
@@ -423,6 +426,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values: CentOS, AliyunLinux, AliyunLinux Qboot, AliyunLinuxUEFI, AliyunLinux3, Windows, WindowsCore, AliyunLinux3Arm64, and ContainerOS.
+            /// </summary>
             [NameInMap("image_type")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
@@ -478,7 +484,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// The ECS instance scaling policy for a multi-zone scaling group. Valid values:
+            /// The ECS instance scaling policy for the multi-zone scaling group. Valid values:
             /// 
             /// *   `PRIORITY`: The scaling group is scaled based on the VSwitchIds.N parameter. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.
             /// 
@@ -488,7 +494,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             ///     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
             /// 
-            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
+            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
             /// 
             /// Default value: `PRIORITY`.
             /// </summary>
@@ -580,7 +586,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The scaling mode of the scaling group. Valid values:
             /// 
-            /// *   `release`: the standard mode. ECS instances are created and released based on resource usage.
+            /// *   `release`: the standard mode. ECS instances are created and released based on the resource usage.
             /// *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.
             /// </summary>
             [NameInMap("scaling_policy")]
@@ -642,10 +648,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            /// <summary>
+            /// Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.
+            /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
+            /// <summary>
+            /// The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).
+            /// </summary>
             [NameInMap("system_disk_categories")]
             [Validation(Required=false)]
             public List<string> SystemDiskCategories { get; set; }
@@ -654,7 +666,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// The type of system disk. Valid values:
             /// 
             /// *   `cloud_efficiency`: ultra disk.
-            /// *   `cloud_ssd`: standard SSD.
+            /// *   `cloud_ssd`: standard SSD
             /// 
             /// Default value: `cloud_ssd`.
             /// </summary>
@@ -662,14 +674,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// The algorithm that you want to use to encrypt the system disk. The value is aes-256.
+            /// </summary>
             [NameInMap("system_disk_encrypt_algorithm")]
             [Validation(Required=false)]
             public string SystemDiskEncryptAlgorithm { get; set; }
 
+            /// <summary>
+            /// Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
+            /// </summary>
             [NameInMap("system_disk_encrypted")]
             [Validation(Required=false)]
             public bool? SystemDiskEncrypted { get; set; }
 
+            /// <summary>
+            /// The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.
+            /// </summary>
             [NameInMap("system_disk_kms_key_id")]
             [Validation(Required=false)]
             public string SystemDiskKmsKeyId { get; set; }
@@ -681,34 +702,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
+            /// <summary>
+            /// The predefined read and write IOPS of the system disk when the disk type is cloud_auto.
+            /// </summary>
             [NameInMap("system_disk_provisioned_iops")]
             [Validation(Required=false)]
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
-            /// The system disk size of a node. Unit: GiB.
+            /// The size of the system disk in GiB.
             /// 
             /// Valid values: 20 to 500.
             /// 
-            /// The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.
+            /// The value of this parameter must be at least 20 and greater than or equal to the size of the image.
             /// 
-            /// The default value is the greater one between 40 and the image size.
+            /// Default value: the greater value between 40 and the image size.
             /// </summary>
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// The labels that you want to add to the ECS instances.
+            /// The labels that you want to add only to ECS instances.
             /// 
-            /// The key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
+            /// The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// The vSwitch IDs. You can specify 1 to 20 vSwitches.
+            /// The IDs of vSwitches. You can specify 1 to 20 vSwitches.
             /// 
             /// >  To ensure high availability, we recommend that you select vSwitches in different zones.
             /// </summary>
