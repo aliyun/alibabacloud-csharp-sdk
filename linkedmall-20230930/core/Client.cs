@@ -1410,5 +1410,65 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             return await RenderRefundOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        public SplitPurchaseOrderResponse SplitPurchaseOrderWithOptions(SplitPurchaseOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SplitPurchaseOrder",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/split",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SplitPurchaseOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SplitPurchaseOrderResponse> SplitPurchaseOrderWithOptionsAsync(SplitPurchaseOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SplitPurchaseOrder",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/split",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SplitPurchaseOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SplitPurchaseOrderResponse SplitPurchaseOrder(SplitPurchaseOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SplitPurchaseOrderWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SplitPurchaseOrderResponse> SplitPurchaseOrderAsync(SplitPurchaseOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SplitPurchaseOrderWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }
