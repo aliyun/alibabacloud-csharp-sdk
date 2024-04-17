@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public long? AuthLimit { get; set; }
 
+                [NameInMap("AuthLimitList")]
+                [Validation(Required=false)]
+                public string AuthLimitList { get; set; }
+
                 /// <summary>
                 /// The end time of the trial use.
                 /// </summary>

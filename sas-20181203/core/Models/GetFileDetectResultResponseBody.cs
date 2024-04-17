@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            [NameInMap("Compress")]
+            [Validation(Required=false)]
+            public bool? Compress { get; set; }
+
             /// <summary>
             /// The extended information about the file detection result.
             /// </summary>

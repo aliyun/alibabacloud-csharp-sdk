@@ -3812,6 +3812,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Decompress))
+            {
+                query["Decompress"] = request.Decompress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxFileCount))
+            {
+                query["DecompressMaxFileCount"] = request.DecompressMaxFileCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxLayer))
+            {
+                query["DecompressMaxLayer"] = request.DecompressMaxLayer;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadUrl))
             {
                 query["DownloadUrl"] = request.DownloadUrl;
@@ -3866,6 +3878,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Decompress))
+            {
+                query["Decompress"] = request.Decompress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxFileCount))
+            {
+                query["DecompressMaxFileCount"] = request.DecompressMaxFileCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxLayer))
+            {
+                query["DecompressMaxLayer"] = request.DecompressMaxLayer;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadUrl))
             {
                 query["DownloadUrl"] = request.DownloadUrl;
@@ -42899,6 +42923,96 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClusterPluginInfoWithOptionsAsync(request, runtime);
+        }
+
+        public ListCompressFileDetectResultResponse ListCompressFileDetectResultWithOptions(ListCompressFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
+            {
+                query["HashKey"] = request.HashKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCompressFileDetectResult",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCompressFileDetectResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListCompressFileDetectResultResponse> ListCompressFileDetectResultWithOptionsAsync(ListCompressFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
+            {
+                query["HashKey"] = request.HashKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCompressFileDetectResult",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCompressFileDetectResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListCompressFileDetectResultResponse ListCompressFileDetectResult(ListCompressFileDetectResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCompressFileDetectResultWithOptions(request, runtime);
+        }
+
+        public async Task<ListCompressFileDetectResultResponse> ListCompressFileDetectResultAsync(ListCompressFileDetectResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCompressFileDetectResultWithOptionsAsync(request, runtime);
         }
 
         public ListContainerDefenseRuleResponse ListContainerDefenseRuleWithOptions(ListContainerDefenseRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

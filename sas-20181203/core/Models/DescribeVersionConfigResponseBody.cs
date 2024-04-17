@@ -179,6 +179,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? MVUnusedAuthCount { get; set; }
 
+        [NameInMap("NewThreatAnalysis")]
+        [Validation(Required=false)]
+        public int? NewThreatAnalysis { get; set; }
+
         /// <summary>
         /// The timestamp when Security Center is purchased. Unit: milliseconds.
         /// </summary>
@@ -282,6 +286,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ThreatAnalysisCapacity")]
         [Validation(Required=false)]
         public long? ThreatAnalysisCapacity { get; set; }
+
+        [NameInMap("ThreatAnalysisFlow")]
+        [Validation(Required=false)]
+        public int? ThreatAnalysisFlow { get; set; }
 
         /// <summary>
         /// Indicates whether the custom alert feature is enabled. Valid values:

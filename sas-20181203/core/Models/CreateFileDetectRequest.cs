@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileDetectRequest : TeaModel {
+        [NameInMap("Decompress")]
+        [Validation(Required=false)]
+        public bool? Decompress { get; set; }
+
+        [NameInMap("DecompressMaxFileCount")]
+        [Validation(Required=false)]
+        public int? DecompressMaxFileCount { get; set; }
+
+        [NameInMap("DecompressMaxLayer")]
+        [Validation(Required=false)]
+        public int? DecompressMaxLayer { get; set; }
+
         /// <summary>
         /// The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.
         /// </summary>
