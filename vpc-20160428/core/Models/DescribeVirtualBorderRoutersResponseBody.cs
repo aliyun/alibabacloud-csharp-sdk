@@ -313,6 +313,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EcrId { get; set; }
 
+                [NameInMap("EcrOwnerId")]
+                [Validation(Required=false)]
+                public string EcrOwnerId { get; set; }
+
                 /// <summary>
                 /// Indicates whether IPv6 is enabled. Valid values:
                 /// 
