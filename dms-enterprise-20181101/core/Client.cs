@@ -951,6 +951,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["NewApprover"] = request.NewApprover;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewApproverList))
+            {
+                query["NewApproverList"] = request.NewApproverList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OldApprover))
             {
                 query["OldApprover"] = request.OldApprover;
@@ -1005,6 +1009,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewApprover))
             {
                 query["NewApprover"] = request.NewApprover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewApproverList))
+            {
+                query["NewApproverList"] = request.NewApproverList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OldApprover))
             {

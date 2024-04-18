@@ -16,6 +16,96 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail DataCorrectOrderDetail { get; set; }
         public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail : TeaModel {
+            [NameInMap("ConfigDetail")]
+            [Validation(Required=false)]
+            public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail ConfigDetail { get; set; }
+            public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail : TeaModel {
+                [NameInMap("Cron")]
+                [Validation(Required=false)]
+                public bool? Cron { get; set; }
+
+                [NameInMap("CronCallTimes")]
+                [Validation(Required=false)]
+                public int? CronCallTimes { get; set; }
+
+                [NameInMap("CronExtConfig")]
+                [Validation(Required=false)]
+                public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig CronExtConfig { get; set; }
+                public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig : TeaModel {
+                    [NameInMap("CurrentClearTaskCount")]
+                    [Validation(Required=false)]
+                    public int? CurrentClearTaskCount { get; set; }
+
+                    [NameInMap("OptimizeTableAfterEveryClearTimes")]
+                    [Validation(Required=false)]
+                    public int? OptimizeTableAfterEveryClearTimes { get; set; }
+
+                }
+
+                [NameInMap("CronFormat")]
+                [Validation(Required=false)]
+                public string CronFormat { get; set; }
+
+                [NameInMap("CronLastCallStartTime")]
+                [Validation(Required=false)]
+                public string CronLastCallStartTime { get; set; }
+
+                [NameInMap("CronNextCallTime")]
+                [Validation(Required=false)]
+                public string CronNextCallTime { get; set; }
+
+                [NameInMap("CronStatus")]
+                [Validation(Required=false)]
+                public string CronStatus { get; set; }
+
+                [NameInMap("CsvTableName")]
+                [Validation(Required=false)]
+                public string CsvTableName { get; set; }
+
+                [NameInMap("CurrentTaskId")]
+                [Validation(Required=false)]
+                public long? CurrentTaskId { get; set; }
+
+                [NameInMap("DetailType")]
+                [Validation(Required=false)]
+                public string DetailType { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
+                public int? Duration { get; set; }
+
+                [NameInMap("FileEncoding")]
+                [Validation(Required=false)]
+                public string FileEncoding { get; set; }
+
+                [NameInMap("FileType")]
+                [Validation(Required=false)]
+                public string FileType { get; set; }
+
+                [NameInMap("ImportExtConfig")]
+                [Validation(Required=false)]
+                public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig ImportExtConfig { get; set; }
+                public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig : TeaModel {
+                    [NameInMap("CsvFirstRowIsColumnDef")]
+                    [Validation(Required=false)]
+                    public bool? CsvFirstRowIsColumnDef { get; set; }
+
+                    [NameInMap("IgnoreError")]
+                    [Validation(Required=false)]
+                    public bool? IgnoreError { get; set; }
+
+                    [NameInMap("ImportMode")]
+                    [Validation(Required=false)]
+                    public string ImportMode { get; set; }
+
+                    [NameInMap("InsertType")]
+                    [Validation(Required=false)]
+                    public string InsertType { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The information about the database in which data is changed.
             /// </summary>

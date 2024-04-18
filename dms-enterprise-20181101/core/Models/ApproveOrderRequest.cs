@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? NewApprover { get; set; }
 
+        [NameInMap("NewApproverList")]
+        [Validation(Required=false)]
+        public string NewApproverList { get; set; }
+
         /// <summary>
         /// The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.
         /// </summary>
