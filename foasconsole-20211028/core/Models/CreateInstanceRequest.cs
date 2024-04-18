@@ -109,6 +109,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
         }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestTag> Tag { get; set; }
+        public class CreateInstanceRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("UsePromotionCode")]
         [Validation(Required=false)]
         public bool? UsePromotionCode { get; set; }

@@ -176,6 +176,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 request.StorageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Storage, "Storage", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchIds))
             {
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
@@ -248,6 +252,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                body["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
             {
@@ -305,6 +313,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 request.StorageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Storage, "Storage", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchIds))
             {
                 request.VSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIds, "VSwitchIds", "json");
@@ -377,6 +389,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageShrink))
             {
                 body["Storage"] = request.StorageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                body["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
             {

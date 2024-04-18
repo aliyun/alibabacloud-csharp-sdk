@@ -21,9 +21,43 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            [NameInMap("DepreciateInfo")]
+            [Validation(Required=false)]
+            public QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo DepreciateInfo { get; set; }
+            public class QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo : TeaModel {
+                [NameInMap("CheapRate")]
+                [Validation(Required=false)]
+                public string CheapRate { get; set; }
+
+                [NameInMap("CheapStandAmount")]
+                [Validation(Required=false)]
+                public string CheapStandAmount { get; set; }
+
+                [NameInMap("IsShow")]
+                [Validation(Required=false)]
+                public bool? IsShow { get; set; }
+
+                [NameInMap("MonthPrice")]
+                [Validation(Required=false)]
+                public string MonthPrice { get; set; }
+
+                [NameInMap("OriginalStandAmount")]
+                [Validation(Required=false)]
+                public string OriginalStandAmount { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
+            }
+
             [NameInMap("DiscountAmount")]
             [Validation(Required=false)]
             public float? DiscountAmount { get; set; }
+
+            [NameInMap("IsContractActivity")]
+            [Validation(Required=false)]
+            public bool? IsContractActivity { get; set; }
 
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -68,6 +102,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public long? RuleId { get; set; }
 
             }
+
+            [NameInMap("StandDiscountPrice")]
+            [Validation(Required=false)]
+            public string StandDiscountPrice { get; set; }
+
+            [NameInMap("StandPrice")]
+            [Validation(Required=false)]
+            public string StandPrice { get; set; }
 
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]

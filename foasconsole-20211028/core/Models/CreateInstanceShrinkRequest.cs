@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string StorageShrink { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
+
         [NameInMap("UsePromotionCode")]
         [Validation(Required=false)]
         public bool? UsePromotionCode { get; set; }
