@@ -1,3 +1,11 @@
+2024-04-18 Version: 1.4.0
+- Support API ListCouponUsage.
+- Update API GetAccountInfo: update response param.
+- Update API InviteSubAccount: update param AccountInfoList.
+- Update API SetAccountInfo: add param CustomerBd.
+- Update API SubscriptionBill: update response param.
+
+
 2024-03-08 Version: 1.3.0
 - Support API ListCouponUsage.
 

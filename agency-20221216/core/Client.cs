@@ -1712,6 +1712,10 @@ namespace AlibabaCloud.SDK.Agency20221216
             {
                 query["AccountNickname"] = request.AccountNickname;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerBd))
+            {
+                query["CustomerBd"] = request.CustomerBd;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
@@ -1746,6 +1750,10 @@ namespace AlibabaCloud.SDK.Agency20221216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNickname))
             {
                 query["AccountNickname"] = request.AccountNickname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerBd))
+            {
+                query["CustomerBd"] = request.CustomerBd;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {

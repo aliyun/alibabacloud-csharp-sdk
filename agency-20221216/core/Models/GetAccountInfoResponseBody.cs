@@ -50,6 +50,18 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 [Validation(Required=false)]
                 public long? Cid { get; set; }
 
+                [NameInMap("CustomerBd")]
+                [Validation(Required=false)]
+                public string CustomerBd { get; set; }
+
+                [NameInMap("DelayAmount")]
+                [Validation(Required=false)]
+                public string DelayAmount { get; set; }
+
+                [NameInMap("DelayStatus")]
+                [Validation(Required=false)]
+                public string DelayStatus { get; set; }
+
                 /// <summary>
                 /// The E-mail of Distribution Customer.
                 /// </summary>
@@ -63,6 +75,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 [NameInMap("Mobile")]
                 [Validation(Required=false)]
                 public string Mobile { get; set; }
+
+                [NameInMap("NewBuyStatus")]
+                [Validation(Required=false)]
+                public string NewBuyStatus { get; set; }
 
                 /// <summary>
                 /// Description of Distribution Customer.

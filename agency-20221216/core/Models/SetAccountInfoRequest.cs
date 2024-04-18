@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string AccountNickname { get; set; }
 
+        [NameInMap("CustomerBd")]
+        [Validation(Required=false)]
+        public string CustomerBd { get; set; }
+
         /// <summary>
         /// Description of Sub Account.
         /// </summary>

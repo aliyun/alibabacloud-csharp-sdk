@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public string CreditLine { get; set; }
 
+            [NameInMap("CustomerBd")]
+            [Validation(Required=false)]
+            public string CustomerBd { get; set; }
+
             /// <summary>
             /// Customer ID, Returning ID from CreateCustomer API.
             /// </summary>
