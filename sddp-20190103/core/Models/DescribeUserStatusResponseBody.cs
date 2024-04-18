@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DataManagerRole { get; set; }
 
             /// <summary>
-            /// The ID of the instance within the current account.
+            /// The ID of the data security center instance purchased by the main account.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]

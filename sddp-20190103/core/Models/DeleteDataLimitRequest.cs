@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DeleteDataLimitRequest : TeaModel {
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
@@ -32,6 +35,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }

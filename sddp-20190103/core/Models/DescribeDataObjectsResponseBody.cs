@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
+            [NameInMap("MemberAccount")]
+            [Validation(Required=false)]
+            public long? MemberAccount { get; set; }
+
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeDataObjectsResponseBodyItemsModelTags> ModelTags { get; set; }

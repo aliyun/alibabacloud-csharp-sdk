@@ -2175,6 +2175,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -2253,6 +2257,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -2893,6 +2901,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
             {
                 query["ModelIds"] = request.ModelIds;
@@ -2979,6 +2991,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
             {
@@ -3506,9 +3522,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that DSC is not authorized to access. This helps you obtain information about the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+          * This operation is no longer used for the KMS console of the new version.
+          * # [](#qps-)QPS limits
+          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceSourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3590,9 +3607,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that DSC is not authorized to access. This helps you obtain information about the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+          * This operation is no longer used for the KMS console of the new version.
+          * # [](#qps-)QPS limits
+          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceSourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3674,9 +3692,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that DSC is not authorized to access. This helps you obtain information about the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+          * This operation is no longer used for the KMS console of the new version.
+          * # [](#qps-)QPS limits
+          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceSourcesRequest
           * @return DescribeInstanceSourcesResponse
@@ -3688,9 +3707,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that DSC is not authorized to access. This helps you obtain information about the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+          * This operation is no longer used for the KMS console of the new version.
+          * # [](#qps-)QPS limits
+          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeInstanceSourcesRequest
           * @return DescribeInstanceSourcesResponse
@@ -4409,6 +4429,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -4475,6 +4499,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {

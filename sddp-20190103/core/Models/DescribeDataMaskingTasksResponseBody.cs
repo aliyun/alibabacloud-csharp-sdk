@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public List<DescribeDataMaskingTasksResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingTasksResponseBodyItems : TeaModel {
+            [NameInMap("DstMemberAccount")]
+            [Validation(Required=false)]
+            public long? DstMemberAccount { get; set; }
+
             /// <summary>
             /// The destination directory.
             /// </summary>
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("RunCount")]
             [Validation(Required=false)]
             public int? RunCount { get; set; }
+
+            [NameInMap("SrcMemberAccount")]
+            [Validation(Required=false)]
+            public long? SrcMemberAccount { get; set; }
 
             /// <summary>
             /// The source path.

@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? LogStoreDay { get; set; }
 
+            [NameInMap("MemberAccount")]
+            [Validation(Required=false)]
+            public long? MemberAccount { get; set; }
+
             /// <summary>
             /// The next time when the data asset is scanned. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>

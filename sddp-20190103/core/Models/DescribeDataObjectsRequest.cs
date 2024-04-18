@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("MemberAccount")]
+        [Validation(Required=false)]
+        public long? MemberAccount { get; set; }
+
         [NameInMap("ModelIds")]
         [Validation(Required=false)]
         public string ModelIds { get; set; }

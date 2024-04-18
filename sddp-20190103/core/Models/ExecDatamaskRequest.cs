@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }

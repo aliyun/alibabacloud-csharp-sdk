@@ -73,6 +73,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
@@ -86,6 +89,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("MemberAccount")]
+        [Validation(Required=false)]
+        public long? MemberAccount { get; set; }
 
         /// <summary>
         /// The number of entries to return on each page.

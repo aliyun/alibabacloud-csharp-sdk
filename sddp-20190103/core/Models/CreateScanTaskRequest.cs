@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? DataLimitId { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
@@ -84,6 +87,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string ScanRangeContent { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
