@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new storage capacity. Unit: GB.
+        /// The storage capacity that you can select when you change the cluster. Unit: GB.
         /// 
-        /// > Valid values for PolarDB for MySQL Standard Edition are 20 to 32000.
+        /// >  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.
         /// </summary>
         [NameInMap("StorageSpace")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The category of the cluster. Default value: ON. Valid values:
         /// 
         /// *   **normal_exclusive**: dedicated
-        /// *   **normal_general**: genera-purpose
+        /// *   **normal_general**: general-purpose
         /// </summary>
         [NameInMap("SubCategory")]
         [Validation(Required=false)]

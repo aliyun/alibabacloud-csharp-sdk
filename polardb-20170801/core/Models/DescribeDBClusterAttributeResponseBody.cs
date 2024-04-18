@@ -571,6 +571,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SubCategory { get; set; }
 
+        [NameInMap("SupportInstantSwitchWithImci")]
+        [Validation(Required=false)]
+        public string SupportInstantSwitchWithImci { get; set; }
+
         /// <summary>
         /// Details about the tags.
         /// </summary>
