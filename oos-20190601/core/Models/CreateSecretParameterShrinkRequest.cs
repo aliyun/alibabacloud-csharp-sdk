@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string Constraints { get; set; }
 
+        [NameInMap("DKMSInstanceId")]
+        [Validation(Required=false)]
+        public string DKMSInstanceId { get; set; }
+
         /// <summary>
         /// The description of the encryption parameter. The description must be 1 to 200 characters in length.
         /// </summary>

@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The metadata of the template.
+        /// The template metadata.
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<ListTemplatesResponseBodyTemplates> Templates { get; set; }
         public class ListTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// The type of the template.
+            /// The template type.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string CreatedDate { get; set; }
 
             /// <summary>
-            /// The description of the template.
+            /// The template description.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether the template is configured with a trigger.
+            /// Indicates whether the template was configured with a trigger.
             /// </summary>
             [NameInMap("HasTrigger")]
             [Validation(Required=false)]
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public bool? IsFavorite { get; set; }
 
             /// <summary>
-            /// The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.
+            /// The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.
             /// 
-            /// **Notes** This parameter is valid only if the value of the **ShareType** parameter is set to **Public**.
+            /// >  This parameter is valid only if the value of **ShareType** is set to **Public**.
             /// </summary>
             [NameInMap("Popularity")]
             [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Publisher { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The resource group ID.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The share type of the template. The share type of the template that you create is **Private**. Valid values:
+            /// The share type of the template. The share type of a template created by a user is **Private**. Valid values:
             /// 
             /// *   **Public**
             /// *   **Private**
@@ -134,43 +134,44 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// The format of the template. The system automatically determines whether the format is JSON or YAML.
+            /// The template format. The system automatically determines whether the format is JSON or YAML.
             /// </summary>
             [NameInMap("TemplateFormat")]
             [Validation(Required=false)]
             public string TemplateFormat { get; set; }
 
             /// <summary>
-            /// The ID of the template.
+            /// The template ID.
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// The name of the template.
+            /// The template name.
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The type of the template.
+            /// The template type.
             /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
+            /// The template version. The name of the version consists of the letter v and a number. The number starts from 1.
             /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
 
             /// <summary>
-            /// The number of times for which the private template is executed. If the **ShareType** parameter is set to **Public**, the value of this parameter is `-1`.
-            /// **Notes** This parameter is valid only if the **ShareType** parameter is set to **Private**.
+            /// The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.
+            /// 
+            /// >  This parameter is valid only if the value of **ShareType** is **Private**.
             /// </summary>
             [NameInMap("TotalExecutionCount")]
             [Validation(Required=false)]

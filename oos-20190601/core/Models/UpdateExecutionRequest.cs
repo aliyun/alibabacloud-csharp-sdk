@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateExecutionRequest : TeaModel {
         /// <summary>
-        /// The description of the execution.
+        /// The client token that is used to ensure the idempotence of the request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListInstancePatchesRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ
+        /// The token that is used to retrieve the next page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The token that is used to retrieve the next page of results.
+        /// The status of the patches that you want to query. If you do not set this parameter, patches are not filtered.
         /// </summary>
         [NameInMap("PatchStatuses")]
         [Validation(Required=false)]
         public string PatchStatuses { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the region in which the instance whose patches you want to query resides.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

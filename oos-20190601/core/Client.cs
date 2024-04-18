@@ -1095,6 +1095,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["Constraints"] = request.Constraints;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DKMSInstanceId))
+            {
+                query["DKMSInstanceId"] = request.DKMSInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1163,6 +1167,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Constraints))
             {
                 query["Constraints"] = request.Constraints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DKMSInstanceId))
+            {
+                query["DKMSInstanceId"] = request.DKMSInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -4585,6 +4593,112 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListExecutionsWithOptionsAsync(request, runtime);
+        }
+
+        public ListGitRepositoriesResponse ListGitRepositoriesWithOptions(ListGitRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
+            {
+                query["OrgName"] = request.OrgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGitRepositories",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGitRepositoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListGitRepositoriesResponse> ListGitRepositoriesWithOptionsAsync(ListGitRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
+            {
+                query["OrgName"] = request.OrgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGitRepositories",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGitRepositoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListGitRepositoriesResponse ListGitRepositories(ListGitRepositoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGitRepositoriesWithOptions(request, runtime);
+        }
+
+        public async Task<ListGitRepositoriesResponse> ListGitRepositoriesAsync(ListGitRepositoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGitRepositoriesWithOptionsAsync(request, runtime);
         }
 
         public ListInstancePatchStatesResponse ListInstancePatchStatesWithOptions(ListInstancePatchStatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

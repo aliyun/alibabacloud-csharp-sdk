@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public bool? IsFavorite { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
+        /// The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

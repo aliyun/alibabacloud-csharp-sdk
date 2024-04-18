@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
 
+            [NameInMap("DKMSInstanceId")]
+            [Validation(Required=false)]
+            public string DKMSInstanceId { get; set; }
+
             /// <summary>
             /// The description of the encryption parameter.
             /// </summary>
