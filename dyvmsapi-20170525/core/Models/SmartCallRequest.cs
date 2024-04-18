@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public int? MuteTime { get; set; }
 
+        [NameInMap("NoiseThreshold")]
+        [Validation(Required=false)]
+        public double? NoiseThreshold { get; set; }
+
         /// <summary>
         /// The ID that is reserved for the caller of the operation. This ID is returned to the caller in a receipt message.
         /// 
