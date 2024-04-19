@@ -10,32 +10,67 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryRequest : TeaModel {
         /// <summary>
-        /// The method to connect clients to cloud desktops.
+        /// The method in which the cloud computer is connected.
         /// 
         /// Valid values:
         /// 
-        /// *   VPC: connects to cloud desktops over VPCs.
-        /// *   Internet (default): connects to the cloud desktops over the Internet.
-        /// *   Any: connects to the cloud desktops over the Internet or VPCs.
+        /// *   VPC
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Internet (default)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Any
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("DesktopAccessType")]
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// The directory name. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
+        /// The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// Specifies whether to grant the permissions of the local administrator to end users of the cloud desktops that belong to the workspace.
+        /// Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
         /// 
         /// Valid values:
         /// 
-        /// * true (default)
-        /// * false
+        /// *   <!-- -->
+        /// 
+        ///     true
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     (default)
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   <!-- -->
+        /// 
+        ///     false
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("EnableAdminAccess")]
         [Validation(Required=false)]

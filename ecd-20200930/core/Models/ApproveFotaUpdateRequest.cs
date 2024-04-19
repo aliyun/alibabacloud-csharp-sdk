@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// The ID of the cloud desktop.
+        /// The ID of the cloud computer.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

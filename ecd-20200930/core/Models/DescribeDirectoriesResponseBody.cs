@@ -10,49 +10,73 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDirectoriesResponseBody : TeaModel {
         /// <summary>
-        /// The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
+        /// The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.
         /// </summary>
         [NameInMap("AdHostname")]
         [Validation(Required=false)]
         public string AdHostname { get; set; }
 
         /// <summary>
-        /// Details of the directories.
+        /// The directories.
         /// </summary>
         [NameInMap("Directories")]
         [Validation(Required=false)]
         public List<DescribeDirectoriesResponseBodyDirectories> Directories { get; set; }
         public class DescribeDirectoriesResponseBodyDirectories : TeaModel {
             /// <summary>
-            /// Details of the AD connectors.
+            /// Details of the AD connector.
             /// </summary>
             [NameInMap("ADConnectors")]
             [Validation(Required=false)]
             public List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors { get; set; }
             public class DescribeDirectoriesResponseBodyDirectoriesADConnectors : TeaModel {
                 /// <summary>
-                /// The address of the AD connector.
+                /// The connection address.
                 /// </summary>
                 [NameInMap("ADConnectorAddress")]
                 [Validation(Required=false)]
                 public string ADConnectorAddress { get; set; }
 
                 /// <summary>
-                /// The status of the AD connector.
+                /// Valid values:
+                /// 
+                /// *   CONNECT_ERROR
+                /// *   RUNNING
+                /// *   CONNECTING: You must configure domain trust for your AD system.
+                /// *   EXPIRED
+                /// *   CREATING
                 /// </summary>
                 [NameInMap("ConnectorStatus")]
                 [Validation(Required=false)]
                 public string ConnectorStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the network interface controller (NIC) with which the AD connector is associated.
+                /// The ID of the NIC to which the AD connector is mounted.
                 /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// The type of the AD connector.
+                /// The AD connector type.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   1: General
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   2: Advanced
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("Specification")]
                 [Validation(Required=false)]
@@ -82,63 +106,107 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The ID of the security group.
+            /// The security group ID. This parameter is returned only when the directory type is AD office network.
             /// </summary>
             [NameInMap("CustomSecurityGroupId")]
             [Validation(Required=false)]
             public string CustomSecurityGroupId { get; set; }
 
             /// <summary>
-            /// The method that is used to connect the client to cloud desktops.
+            /// The method in which the cloud computer is connected.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   VPC
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Internet
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Any
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DesktopAccessType")]
             [Validation(Required=false)]
             public string DesktopAccessType { get; set; }
 
             /// <summary>
-            /// The endpoint that is used to connect to cloud desktops over a VPC.
+            /// The endpoint that is used to connect to cloud computers in the directory over a VPC.
             /// </summary>
             [NameInMap("DesktopVpcEndpoint")]
             [Validation(Required=false)]
             public string DesktopVpcEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the directory.
+            /// The directory ID.
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The type of the directory.
+            /// The directory type.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   AD_CONNECTOR: AD directory
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   RAM: RAM directory
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("DirectoryType")]
             [Validation(Required=false)]
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// Details of the DNS addresses of the directory.
+            /// The DNS address of the directory.
             /// </summary>
             [NameInMap("DnsAddress")]
             [Validation(Required=false)]
             public List<string> DnsAddress { get; set; }
 
             /// <summary>
-            /// The username of the Domain Name System (DNS) user.
+            /// The username of a DNS user.
             /// </summary>
             [NameInMap("DnsUserName")]
             [Validation(Required=false)]
             public string DnsUserName { get; set; }
 
             /// <summary>
-            /// The name of the domain.
+            /// The domain name.
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The password of the domain administrator.
+            /// The password of the domain administrator. This parameter is returned only when the directory type is AD office network.
             /// </summary>
             [NameInMap("DomainPassword")]
             [Validation(Required=false)]
@@ -152,23 +220,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainUserName { get; set; }
 
             /// <summary>
-            /// Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
+            /// Indicates whether the local administrator permissions are granted to users that use cloud computers in the office network.
             /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.
-            /// 
-            /// If the feature is enabled, the cloud desktops in the same workspace can access each other.
+            /// Indicates whether cloud computers can communicate with each other in the directory.
             /// </summary>
             [NameInMap("EnableCrossDesktopAccess")]
             [Validation(Required=false)]
             public bool? EnableCrossDesktopAccess { get; set; }
 
             /// <summary>
-            /// Indicates whether access over the Internet is allowed.
+            /// Indicates whether access over the Internet is enabled.
             /// 
             /// >  This parameter is unavailable.
             /// </summary>
@@ -177,14 +243,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableInternetAccess { get; set; }
 
             /// <summary>
-            /// Details of the IDs of the Apsara File Storage NAS (NAS) file systems.
+            /// The IDs of Apsara File Storage NAS (NAS) file systems.
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]
             public List<string> FileSystemIds { get; set; }
 
             /// <summary>
-            /// Details of the registration logs.
+            /// The registration logs. This parameter is returned only when the directory type is AD office network.
             /// </summary>
             [NameInMap("Logs")]
             [Validation(Required=false)]
@@ -192,6 +258,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public class DescribeDirectoriesResponseBodyDirectoriesLogs : TeaModel {
                 /// <summary>
                 /// The level of the log entry.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   ERROR
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   INFO
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   WARN
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
@@ -221,29 +313,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// Indicates whether multi-factor authentication (MFA) is enabled.
+            /// Indicates whether MFA is enabled.
             /// </summary>
             [NameInMap("MfaEnabled")]
             [Validation(Required=false)]
             public bool? MfaEnabled { get; set; }
 
             /// <summary>
-            /// The name of the directory.
+            /// The directory name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
-            /// If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+            /// Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\
+            /// If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
             /// </summary>
             [NameInMap("NeedVerifyLoginRisk")]
             [Validation(Required=false)]
             public bool? NeedVerifyLoginRisk { get; set; }
 
             /// <summary>
-            /// The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.
+            /// The organization unit that you selected when you added the cloud computer to the domain.
             /// </summary>
             [NameInMap("OuName")]
             [Validation(Required=false)]
@@ -257,45 +349,60 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SsoEnabled { get; set; }
 
             /// <summary>
-            /// The status of the AD directory. Valid values:
+            /// The status of the AD directory.
+            /// 
+            /// Valid values:
             /// 
             /// *   REGISTERING
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
             /// *   REGISTERED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// Details of the DNS addresses of the AD subdomain.
+            /// The DNS address of the enterprise AD subdomain.
             /// </summary>
             [NameInMap("SubDnsAddress")]
             [Validation(Required=false)]
             public List<string> SubDnsAddress { get; set; }
 
             /// <summary>
-            /// The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.
+            /// The fully qualified domain name (FQDN) of the existing AD subdomain. The value contains both the host name and the domain name.
             /// </summary>
             [NameInMap("SubDomainName")]
             [Validation(Required=false)]
             public string SubDomainName { get; set; }
 
             /// <summary>
-            /// The AD trust password.
+            /// The AD trust password. This parameter is returned only when the directory type is AD office network.
             /// </summary>
             [NameInMap("TrustPassword")]
             [Validation(Required=false)]
             public string TrustPassword { get; set; }
 
             /// <summary>
-            /// Details of vSwitch IDs that are specified when the directory is being created.
+            /// The IDs of the vSwitches specified when the directory was created.
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// The ID of the virtual private cloud (VPC) to which the vSwitch belongs.
+            /// The ID of the VPC to which the vSwitch belongs. This parameter is returned only when the directory type is AD office network.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

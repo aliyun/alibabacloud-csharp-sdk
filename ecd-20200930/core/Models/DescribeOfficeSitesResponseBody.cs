@@ -517,7 +517,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SsoEnabled { get; set; }
 
             /// <summary>
-            /// The SSO type.
+            /// >  This parameter is unavailable.
             /// </summary>
             [NameInMap("SsoType")]
             [Validation(Required=false)]

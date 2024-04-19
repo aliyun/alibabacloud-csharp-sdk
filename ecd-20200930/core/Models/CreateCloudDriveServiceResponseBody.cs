@@ -27,6 +27,44 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        [NameInMap("ConflictCdsAndOrder")]
+        [Validation(Required=false)]
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder ConflictCdsAndOrder { get; set; }
+        public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrder : TeaModel {
+            [NameInMap("ConflictCds")]
+            [Validation(Required=false)]
+            public List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> ConflictCds { get; set; }
+            public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds : TeaModel {
+                [NameInMap("CdsId")]
+                [Validation(Required=false)]
+                public string CdsId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+            }
+
+            [NameInMap("ConflictOrder")]
+            [Validation(Required=false)]
+            public List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> ConflictOrder { get; set; }
+            public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder : TeaModel {
+                [NameInMap("CdsId")]
+                [Validation(Required=false)]
+                public string CdsId { get; set; }
+
+                [NameInMap("OrderId")]
+                [Validation(Required=false)]
+                public string OrderId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+            }
+
+        }
+
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

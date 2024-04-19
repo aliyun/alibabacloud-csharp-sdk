@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.
+        /// The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListDirectoryUsersResponseBodyUsers> Users { get; set; }
         public class ListDirectoryUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// The display name.
+            /// The display name of the user.
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// Details of the AD connectors.
+        /// The details of AD connectors.
         /// </summary>
         [NameInMap("AdConnectors")]
         [Validation(Required=false)]
         public List<CreateADConnectorDirectoryResponseBodyAdConnectors> AdConnectors { get; set; }
         public class CreateADConnectorDirectoryResponseBodyAdConnectors : TeaModel {
             /// <summary>
-            /// The IP address of the AD connector.
+            /// The connection address.
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaTasksResponseBody : TeaModel {
         /// <summary>
-        /// The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+        /// The returned message. If the request was successful, a `success` is returned. If the request failed, an error message is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeFotaTasksResponseBodyFotaTasks> FotaTasks { get; set; }
         public class DescribeFotaTasksResponseBodyFotaTasks : TeaModel {
             /// <summary>
-            /// The version of the image. You can call the [DescribeImages](~~188895~~) operation to obtain this parameter.
+            /// The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
             /// </summary>
             [NameInMap("AppVersion")]
             [Validation(Required=false)]
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// This parameter is not available.
+            /// >  This parameter is not publicly available.
             /// </summary>
             [NameInMap("FotaProject")]
             [Validation(Required=false)]
@@ -45,47 +45,47 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? PendingCustomImageCount { get; set; }
 
             /// <summary>
-            /// The number of cloud desktops for which images can be updated to this version.
+            /// The number of cloud computers whose images can be updated to this version.
             /// </summary>
             [NameInMap("PendingDesktopCount")]
             [Validation(Required=false)]
             public int? PendingDesktopCount { get; set; }
 
             /// <summary>
-            /// The time when the image version is available for update was published.
+            /// The time when the image version available for update was published.
             /// </summary>
             [NameInMap("PublishTime")]
             [Validation(Required=false)]
             public string PublishTime { get; set; }
 
             /// <summary>
-            /// The description of the image version that is available for update.
+            /// The description of the image version available for update.
             /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// The size of the image update package. Unit: KB.
+            /// The size of the update package. Unit: KB.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
             /// <summary>
-            /// Indicates whether an end user can update the image.
+            /// Indicates whether the image update task is automatically pushed.
             /// 
             /// Valid values:
             /// 
-            /// *   valid: The end user can update the image.
-            /// *   invalid: The end user cannot update the image.
+            /// *   Running: automatically pushes the image update task.
+            /// *   Pending: does not automatically push the image update task.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the image update task.
+            /// The ID of the image upgrade task.
             /// </summary>
             [NameInMap("TaskUid")]
             [Validation(Required=false)]
@@ -94,17 +94,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// The returned error message. This parameter is not returned if the value of Code is `success`.
+        /// The returned error message. This parameter is not returned if the Code value is a `success` message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-        /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

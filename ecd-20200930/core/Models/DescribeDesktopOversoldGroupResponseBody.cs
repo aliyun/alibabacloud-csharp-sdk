@@ -45,9 +45,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            [NameInMap("IdleDisconnectDuration")]
+            [Validation(Required=false)]
+            public string IdleDisconnectDuration { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
+            [NameInMap("KeepDuration")]
+            [Validation(Required=false)]
+            public string KeepDuration { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]

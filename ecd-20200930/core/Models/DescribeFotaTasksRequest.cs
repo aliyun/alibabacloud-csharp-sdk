@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaTasksRequest : TeaModel {
         /// <summary>
-        /// This parameter is not available.
+        /// >  This parameter is not publicly available.
         /// </summary>
         [NameInMap("FotaStatus")]
         [Validation(Required=false)]
         public string FotaStatus { get; set; }
 
         /// <summary>
-        /// The language of the image version to update. Valid values:
+        /// The language of the image version to update.
         /// 
-        /// *   zh: Chinese
-        /// *   en: English
+        /// Valid values:
+        /// 
+        /// *   en: English.
+        /// *   zh: Simplified Chinese.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -44,14 +46,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the image update tasks. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
+        /// The IDs of the image update tasks.
         /// </summary>
         [NameInMap("TaskUid")]
         [Validation(Required=false)]

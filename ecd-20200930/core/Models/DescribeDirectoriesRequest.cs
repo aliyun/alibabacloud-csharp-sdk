@@ -17,14 +17,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DirectoryId { get; set; }
 
         /// <summary>
-        /// The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.
+        /// The directory status. This parameter is equivalent to `Status`.
         /// </summary>
         [NameInMap("DirectoryStatus")]
         [Validation(Required=false)]
         public string DirectoryStatus { get; set; }
 
         /// <summary>
-        /// The type of the directory.
+        /// The directory type.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   SIMPLE: a directory of the convenience account type
+        /// *   AD_CONNECTOR: an AD directory
+        /// *   RAM: a RAM directory
         /// </summary>
         [NameInMap("DirectoryType")]
         [Validation(Required=false)]
@@ -49,14 +55,88 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The status of the workspace.
+        /// The directory status.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   REGISTERING: The directory is being registered.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   DEREGISTERING: The directory is being deregistered.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   REGISTERED: The directory is registered.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   NEEDCONFIGTRUST: A trust relationship needs to be configured for the directory.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the directory.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   DEREGISTERED: The directory is deregistered.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   ERROR: One or more configurations of the directory are invalid.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   CONFIGTRUSTING: A trust relationship is being configured.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   NEEDCONFIGUSER: Users need to be configured for the directory.
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
