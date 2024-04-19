@@ -299,6 +299,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public bool? AutoUpgradeKubelet { get; set; }
 
+                [NameInMap("auto_upgrade_os")]
+                [Validation(Required=false)]
+                public bool? AutoUpgradeOs { get; set; }
+
+                [NameInMap("auto_upgrade_runtime")]
+                [Validation(Required=false)]
+                public bool? AutoUpgradeRuntime { get; set; }
+
             }
 
             [NameInMap("auto_vul_fix")]
