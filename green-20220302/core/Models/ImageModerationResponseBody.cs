@@ -21,6 +21,26 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            [NameInMap("Ext")]
+            [Validation(Required=false)]
+            public ImageModerationResponseBodyDataExt Ext { get; set; }
+            public class ImageModerationResponseBodyDataExt : TeaModel {
+                [NameInMap("Recognition")]
+                [Validation(Required=false)]
+                public List<ImageModerationResponseBodyDataExtRecognition> Recognition { get; set; }
+                public class ImageModerationResponseBodyDataExtRecognition : TeaModel {
+                    [NameInMap("Classification")]
+                    [Validation(Required=false)]
+                    public string Classification { get; set; }
+
+                    [NameInMap("Confidence")]
+                    [Validation(Required=false)]
+                    public float? Confidence { get; set; }
+
+                }
+
+            }
+
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ImageModerationResponseBodyDataResult> Result { get; set; }
