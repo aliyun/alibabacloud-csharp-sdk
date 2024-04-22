@@ -89,6 +89,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("cis_enabled")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? CisEnabled { get; set; }
 
         /// <summary>
@@ -290,7 +291,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// The cluster IP stack.
+        /// The cluster ip_stack.
         /// </summary>
         [NameInMap("ip_stack")]
         [Validation(Required=false)]
@@ -669,6 +670,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("security_group_id")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("security_hardening_os")]
+        [Validation(Required=false)]
+        public bool? SecurityHardeningOs { get; set; }
 
         /// <summary>
         /// Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.

@@ -464,6 +464,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             [NameInMap("cis_enabled")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? CisEnabled { get; set; }
 
             /// <summary>
@@ -700,6 +701,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("security_group_ids")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
+
+            [NameInMap("security_hardening_os")]
+            [Validation(Required=false)]
+            public bool? SecurityHardeningOs { get; set; }
 
             [NameInMap("soc_enabled")]
             [Validation(Required=false)]

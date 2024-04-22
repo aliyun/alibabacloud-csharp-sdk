@@ -506,6 +506,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </summary>
                 [NameInMap("cis_enabled")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public bool? CisEnabled { get; set; }
 
                 /// <summary>
@@ -741,6 +742,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("security_group_ids")]
                 [Validation(Required=false)]
                 public List<string> SecurityGroupIds { get; set; }
+
+                [NameInMap("security_hardening_os")]
+                [Validation(Required=false)]
+                public bool? SecurityHardeningOs { get; set; }
 
                 /// <summary>
                 /// 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。

@@ -1153,6 +1153,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["security_group_id"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityHardeningOs))
+            {
+                body["security_hardening_os"] = request.SecurityHardeningOs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccountIssuer))
             {
                 body["service_account_issuer"] = request.ServiceAccountIssuer;
@@ -1550,6 +1554,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 body["security_group_id"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityHardeningOs))
+            {
+                body["security_hardening_os"] = request.SecurityHardeningOs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccountIssuer))
             {
