@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DBRole { get; set; }
 
             /// <summary>
-            /// The execution duration of the query.
+            /// The execution duration of the SQL statement.
             /// </summary>
             [NameInMap("ExecuteCost")]
             [Validation(Required=false)]
             public float? ExecuteCost { get; set; }
 
             /// <summary>
-            /// The execution state of the query. Valid values:
+            /// The execution status of the SQL statement. Valid values:
             /// 
             /// *   **success**
             /// *   **fail**

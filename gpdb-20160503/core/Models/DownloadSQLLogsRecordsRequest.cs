@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExecuteCost { get; set; }
 
         /// <summary>
-        /// The execution state of the SQL statement.
+        /// The execution status of the SQL statement.
         /// 
-        /// *   **success**
-        /// *   **fail**
+        /// *   **1**: successful.
+        /// *   **0**: failed.
         /// </summary>
         [NameInMap("ExecuteState")]
         [Validation(Required=false)]

@@ -11914,6 +11914,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryCollectionDataShrinkRequest request = new QueryCollectionDataShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
+            {
+                request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Vector))
             {
                 request.VectorShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Vector, "Vector", "json");
@@ -11934,6 +11938,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
+            {
+                query["HybridSearch"] = request.HybridSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
+            {
+                query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeValues))
             {
@@ -11991,6 +12003,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryCollectionDataShrinkRequest request = new QueryCollectionDataShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
+            {
+                request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Vector))
             {
                 request.VectorShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Vector, "Vector", "json");
@@ -12011,6 +12027,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
+            {
+                query["HybridSearch"] = request.HybridSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
+            {
+                query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeValues))
             {
@@ -12080,6 +12104,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryContentShrinkRequest request = new QueryContentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
+            {
+                request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecallWindow))
             {
                 request.RecallWindowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecallWindow, "RecallWindow", "json");
@@ -12108,6 +12136,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
+            {
+                query["HybridSearch"] = request.HybridSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
+            {
+                query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVector))
             {
@@ -12173,6 +12209,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryContentShrinkRequest request = new QueryContentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
+            {
+                request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecallWindow))
             {
                 request.RecallWindowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecallWindow, "RecallWindow", "json");
@@ -12201,6 +12241,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
+            {
+                query["HybridSearch"] = request.HybridSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearchArgsShrink))
+            {
+                query["HybridSearchArgs"] = request.HybridSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVector))
             {

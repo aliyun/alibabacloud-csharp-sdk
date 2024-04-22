@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("HybridSearch")]
+        [Validation(Required=false)]
+        public string HybridSearch { get; set; }
+
+        [NameInMap("HybridSearchArgs")]
+        [Validation(Required=false)]
+        public Dictionary<string, Dictionary<string, object>> HybridSearchArgs { get; set; }
+
         [NameInMap("IncludeVector")]
         [Validation(Required=false)]
         public bool? IncludeVector { get; set; }
