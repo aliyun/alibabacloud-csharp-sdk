@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public int? InProgressTaskCount { get; set; }
 
+            [NameInMap("InlinePolicyPerAccessConfigurationQuota")]
+            [Validation(Required=false)]
+            public int? InlinePolicyPerAccessConfigurationQuota { get; set; }
+
             /// <summary>
             /// The region ID of the directory.
             /// </summary>
