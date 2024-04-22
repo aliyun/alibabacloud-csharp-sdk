@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                [NameInMap("ErrorClassification")]
+                [Validation(Required=false)]
+                public string ErrorClassification { get; set; }
+
                 [NameInMap("LastUpdateTime")]
                 [Validation(Required=false)]
                 public string LastUpdateTime { get; set; }
