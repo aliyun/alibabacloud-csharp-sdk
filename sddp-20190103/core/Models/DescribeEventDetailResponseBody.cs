@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 [Validation(Required=false)]
                 public List<DescribeEventDetailResponseBodyEventDetailChart> Chart { get; set; }
                 public class DescribeEventDetailResponseBodyEventDetailChart : TeaModel {
+                    [NameInMap("ChatType")]
+                    [Validation(Required=false)]
+                    public int? ChatType { get; set; }
+
                     /// <summary>
                     /// The data in the baseline behavior profile of the anomalous event.
                     /// </summary>
@@ -112,6 +116,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                         [Validation(Required=false)]
                         public List<string> Y { get; set; }
 
+                        [NameInMap("Z")]
+                        [Validation(Required=false)]
+                        public List<string> Z { get; set; }
+
                     }
 
                     /// <summary>
@@ -120,6 +128,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
 
                     /// <summary>
                     /// The type of the chart. Valid values:
@@ -145,6 +157,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [Validation(Required=false)]
                     public string YLabel { get; set; }
 
+                    [NameInMap("ZLabel")]
+                    [Validation(Required=false)]
+                    public string ZLabel { get; set; }
+
                 }
 
                 /// <summary>
@@ -160,6 +176,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
 
                     /// <summary>
                     /// The description of the content in the anomalous event.
@@ -299,6 +319,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("LoginName")]
             [Validation(Required=false)]
             public string LoginName { get; set; }
+
+            [NameInMap("NewAlarm")]
+            [Validation(Required=false)]
+            public bool? NewAlarm { get; set; }
 
             /// <summary>
             /// The name of the service in which the anomalous event was detected. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
