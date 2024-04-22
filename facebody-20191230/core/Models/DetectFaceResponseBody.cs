@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public int? LandmarkCount { get; set; }
 
+            [NameInMap("LandmarkScore")]
+            [Validation(Required=false)]
+            public List<float?> LandmarkScore { get; set; }
+
             /// <summary>
             /// 1
             /// </summary>
