@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges> PortRanges { get; set; }
         public class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges : TeaModel {
             /// <summary>
-            /// The port range of the traffic destination.
+            /// The first port of the port range used by the traffic destination to process requests.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// The first port of the port range.
+            /// The last port of the port range used by the traffic destination to process requests.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -89,67 +89,69 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The service ID to which the managed instance belongs.
+        /// The ID of the service that manages the instance.
         /// 
-        /// >  Valid only when the ServiceManaged parameter is True.
+        /// >  This parameter is returned only if the value of **ServiceManaged** is **true**.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// Is it a managed instance. Valid values:
+        /// Indicates whether the instance is managed. Valid values:
         /// 
-        /// - true
-        /// - false
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// A list of action policies that users can execute on this managed instance.
+        /// The actions that users can perform on the managed instance.
+        /// > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+        /// > *   Users can perform only specific actions on a managed instance.
         /// </summary>
         [NameInMap("ServiceManagedInfos")]
         [Validation(Required=false)]
         public List<DescribeCustomRoutingEndPointTrafficPolicyResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// Managed policy action name, Valid values:
-            /// - Create
-            /// - Update
-            /// - Delete
-            /// - Associate
-            /// - UserUnmanaged
-            /// - CreateChild
+            /// The name of the action performed on the managed instance. Valid values:
+            /// 
+            /// *   **Create**
+            /// *   **Update**
+            /// *   **Delete**
+            /// *   **Associate**
+            /// *   **UserUnmanaged**
+            /// *   **CreateChild**
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// Sub resource type, Valid values:
+            /// The type of the child resource. Valid values:
             /// 
-            /// - Listener
-            /// - IpSet
-            /// - EndpointGroup
-            /// - ForwardingRule
-            /// - Endpoint
-            /// - EndpointGroupDestination
-            /// - EndpointPolicy
+            /// *   **Listener**: listener.
+            /// *   **IpSet**: acceleration region.
+            /// *   **EndpointGroup**: endpoint group.
+            /// *   **ForwardingRule**: forwarding rule.
+            /// *   **Endpoint**: endpoint.
+            /// *   **EndpointGroupDestination**: protocol mapping of an endpoint group that is associated with a custom routing listener.
+            /// *   **EndpointPolicy**: traffic policy of an endpoint that is associated with a custom routing listener.
             /// 
-            /// >Only valid when the Action parameter is CreateChild.
+            /// >  This parameter takes effect only if the value of **Action** is **CreateChild**.
             /// </summary>
             [NameInMap("ChildType")]
             [Validation(Required=false)]
             public string ChildType { get; set; }
 
             /// <summary>
-            /// Is the managed policy action managed, Valid values:
+            /// Indicates whether the specified actions are managed.
             /// 
-            /// - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-            /// 
-            /// - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+            /// *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+            /// *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
             /// </summary>
             [NameInMap("IsManaged")]
             [Validation(Required=false)]

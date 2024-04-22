@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBusiRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information of the regions.
+        /// The information about the acceleration regions that are supported by GA.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The ID of the region where the GA instance is deployed. Only **cn-hangzhou** is returned.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

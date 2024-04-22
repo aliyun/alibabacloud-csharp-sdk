@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The area name.
+            /// The name of the area.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<ListAccelerateAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListAccelerateAreasResponseBodyAreasRegionList : TeaModel {
                 /// <summary>
-                /// The region name.
+                /// The name of the region.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]

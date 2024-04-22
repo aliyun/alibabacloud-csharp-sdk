@@ -21,9 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint for which you want to create the traffic destinations.
-        /// 
-        /// > This parameter is required.
+        /// The ID of the endpoint for which you want to create traffic destinations.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]

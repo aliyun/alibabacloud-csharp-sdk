@@ -10,27 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetAclResponseBody : TeaModel {
         /// <summary>
-        /// The state of the network ACL. Valid values:
-        /// 
-        /// *   **init**: The network ACL is being initialized.
-        /// *   **active**: The network ACL is available.
-        /// *   **configuring**: The network ACL is being configured.
-        /// *   **updating**: The network ACL is being updated.
-        /// *   **deleting**: The network ACL is being deleted.
+        /// The entries of the ACL.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyAclEntries> AclEntries { get; set; }
         public class GetAclResponseBodyAclEntries : TeaModel {
             /// <summary>
-            /// The list of network ACL entries that are returned. A maximum of 20 network ACL entries can be returned.
+            /// An IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
             public string Entry { get; set; }
 
             /// <summary>
-            /// The network ACL entry.
+            /// The description of the ACL entry.
             /// </summary>
             [NameInMap("EntryDescription")]
             [Validation(Required=false)]
@@ -70,31 +64,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AddressIPVersion { get; set; }
 
         /// <summary>
-        /// The description of the network ACL entry.
+        /// The listeners that are associated with the ACL.
         /// </summary>
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyRelatedListeners> RelatedListeners { get; set; }
         public class GetAclResponseBodyRelatedListeners : TeaModel {
             /// <summary>
-            /// The type of the network ACL.
-            /// 
-            /// *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the network ACL, the listener does not forward requests.
-            /// *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the network ACL, the listener forwards all requests.
+            /// The ID of the GA instance.
             /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// The ID of the listener.
+            /// The type of the ACL. Valid values:
+            /// 
+            /// *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. Risks may arise if an IP address whitelist is improperly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
+            /// *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
             /// </summary>
             [NameInMap("AclType")]
             [Validation(Required=false)]
             public string AclType { get; set; }
 
             /// <summary>
-            /// The listeners that are associated with the network ACL.
+            /// The ID of the listener.
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
@@ -117,21 +111,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The tags of the ACL.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyTags> Tags { get; set; }
         public class GetAclResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tags of the ACL.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag key
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
