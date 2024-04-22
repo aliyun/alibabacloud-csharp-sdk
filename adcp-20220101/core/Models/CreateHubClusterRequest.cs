@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? ApiServerPublicEip { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ArgoServerEnabled")]
         [Validation(Required=false)]
         public bool? ArgoServerEnabled { get; set; }
@@ -47,6 +53,9 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
+        /// </summary>
         [NameInMap("PriceLimit")]
         [Validation(Required=false)]
         public string PriceLimit { get; set; }
@@ -71,6 +80,13 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The Resource Group ID.
+        /// </summary>
+        [NameInMap("ResourceGroupID")]
+        [Validation(Required=false)]
+        public string ResourceGroupID { get; set; }
+
+        /// <summary>
         /// The ID of the vSwitch.
         /// </summary>
         [NameInMap("VSwitches")]
@@ -84,6 +100,12 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+        /// 
+        /// *   cost-optimized: cost-prioritized scheduling mode.
+        /// *   stock-optimized: inventory-prioritized scheduling mode.
+        /// </summary>
         [NameInMap("WorkflowScheduleMode")]
         [Validation(Required=false)]
         public string WorkflowScheduleMode { get; set; }

@@ -102,9 +102,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? EnableMesh { get; set; }
 
-        [NameInMap("MSEEnabled")]
+        /// <summary>
+        /// Specifies whether to enable Gateway. Valid values:
+        /// - true
+        /// - false
+        /// </summary>
+        [NameInMap("GatewayEnabled")]
         [Validation(Required=false)]
-        public bool? MSEEnabled { get; set; }
+        public bool? GatewayEnabled { get; set; }
 
         /// <summary>
         /// Specifies whether to enable the monitoring dashboard feature for the workflow instance. This parameter takes effect only if Profile is set to XFlow. Valid values:

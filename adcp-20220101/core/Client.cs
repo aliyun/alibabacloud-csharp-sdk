@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Adcp20220101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -186,6 +185,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
+            {
+                body["ResourceGroupID"] = request.ResourceGroupID;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitches))
             {
                 body["VSwitches"] = request.VSwitches;
@@ -252,6 +255,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
+            {
+                body["ResourceGroupID"] = request.ResourceGroupID;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitches))
             {
@@ -890,6 +897,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["Profile"] = request.Profile;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -916,6 +927,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
             {
                 query["Profile"] = request.Profile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1650,6 +1665,14 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await GrantUserPermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+          *
+          * @param tmpReq GrantUserPermissionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantUserPermissionsResponse
+         */
+        // Deprecated
         public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1687,6 +1710,14 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<GrantUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+          *
+          * @param tmpReq GrantUserPermissionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantUserPermissionsResponse
+         */
+        // Deprecated
         public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1724,12 +1755,26 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<GrantUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+          *
+          * @param request GrantUserPermissionsRequest
+          * @return GrantUserPermissionsResponse
+         */
+        // Deprecated
         public GrantUserPermissionsResponse GrantUserPermissions(GrantUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantUserPermissionsWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+          *
+          * @param request GrantUserPermissionsRequest
+          * @return GrantUserPermissionsResponse
+         */
+        // Deprecated
         public async Task<GrantUserPermissionsResponse> GrantUserPermissionsAsync(GrantUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1790,9 +1835,9 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["EnableMesh"] = request.EnableMesh;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MSEEnabled))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayEnabled))
             {
-                query["MSEEnabled"] = request.MSEEnabled;
+                query["GatewayEnabled"] = request.GatewayEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
             {
@@ -1895,9 +1940,9 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["EnableMesh"] = request.EnableMesh;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MSEEnabled))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayEnabled))
             {
-                query["MSEEnabled"] = request.MSEEnabled;
+                query["GatewayEnabled"] = request.GatewayEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorEnabled))
             {

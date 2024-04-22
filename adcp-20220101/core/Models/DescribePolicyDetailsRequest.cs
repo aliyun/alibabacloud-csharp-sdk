@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribePolicyDetailsRequest : TeaModel {
         /// <summary>
-        /// The name of the policy.
+        /// The policy name.
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]

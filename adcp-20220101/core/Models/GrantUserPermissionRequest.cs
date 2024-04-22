@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class GrantUserPermissionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -20,6 +23,9 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? IsRamRole { get; set; }
 
+        /// <summary>
+        /// The namespace to which the permissions are scoped. By default, this parameter is empty when you set RoleType to cluster.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -29,37 +35,17 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         /// 
         /// *   admin: the administrator role.
         /// *   dev: the developer role.
-        /// 
-        /// Enumerated values:
-        /// 
-        /// *   arms-admin
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   dev
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   admin
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
 
+        /// <summary>
+        /// The authorization type. Valid values:
+        /// 
+        /// *   cluster: specifies that the permissions are scoped to a master instance.
+        /// *   namespace: specifies that the permissions are scoped to a namespace of a cluster.
+        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public string RoleType { get; set; }

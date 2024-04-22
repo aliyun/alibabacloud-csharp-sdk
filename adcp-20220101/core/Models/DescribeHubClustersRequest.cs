@@ -9,9 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeHubClustersRequest : TeaModel {
+        /// <summary>
+        /// The configurations of the cluster.
+        /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }
+
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

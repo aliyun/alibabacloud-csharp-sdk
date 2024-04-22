@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribePolicyDetailsResponseBody : TeaModel {
         /// <summary>
-        /// Detailed information about the policy.
+        /// The policies.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             /// Indicates whether parameters are required. Valid values:
             /// 
             /// *   0: Parameters are required.
-            /// *   1: Parameters are optional.
+            /// *   1: Parameters are not required.
             /// </summary>
             [NameInMap("NoConfig")]
             [Validation(Required=false)]
