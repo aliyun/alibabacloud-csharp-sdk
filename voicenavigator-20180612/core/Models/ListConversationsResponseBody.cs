@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string ConversationId { get; set; }
 
+            [NameInMap("DsReport")]
+            [Validation(Required=false)]
+            public string DsReport { get; set; }
+
+            [NameInMap("DsReportTitles")]
+            [Validation(Required=false)]
+            public List<string> DsReportTitles { get; set; }
+
             [NameInMap("EndReason")]
             [Validation(Required=false)]
             public int? EndReason { get; set; }
