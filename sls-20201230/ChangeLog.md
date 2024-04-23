@@ -1,3 +1,17 @@
+2024-04-23 Version: 5.2.0
+- Support API ConsumerGroupUpdateCheckPoint.
+- Support API CreateStoreView.
+- Support API DeleteStoreView.
+- Support API DisableScheduledSQL.
+- Support API GetMetricStoreMeteringMode.
+- Support API GetStoreView.
+- Support API GetStoreViewIndex.
+- Support API ListStoreViews.
+- Support API UpdateMetricStoreMeteringMode.
+- Support API UpdateStoreView.
+- Update API GetMLServiceResults: add param version.
+
+
 2024-04-09 Version: 5.1.0
 - Support API CreateSqlInstance.
 - Support API GetSlsService.

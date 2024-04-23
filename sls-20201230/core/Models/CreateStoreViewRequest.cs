@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetMLServiceResultsRequest : TeaModel {
-        [NameInMap("allowBuiltin")]
+    public class CreateStoreViewRequest : TeaModel {
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public bool? AllowBuiltin { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("storeType")]
         [Validation(Required=false)]
-        public MLServiceAnalysisParam Body { get; set; }
+        public string StoreType { get; set; }
 
-        [NameInMap("version")]
+        [NameInMap("stores")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public List<StoreViewStore> Stores { get; set; }
 
     }
 
