@@ -1150,6 +1150,152 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await CreateNatFirewallControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateSecurityProxyResponse CreateSecurityProxyWithOptions(CreateSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
+            {
+                query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatRouteEntryList))
+            {
+                query["NatRouteEntryList"] = request.NatRouteEntryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyName))
+            {
+                query["ProxyName"] = request.ProxyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictMode))
+            {
+                query["StrictMode"] = request.StrictMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchAuto))
+            {
+                query["VswitchAuto"] = request.VswitchAuto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchCidr))
+            {
+                query["VswitchCidr"] = request.VswitchCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                query["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityProxy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityProxyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateSecurityProxyResponse> CreateSecurityProxyWithOptionsAsync(CreateSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
+            {
+                query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatRouteEntryList))
+            {
+                query["NatRouteEntryList"] = request.NatRouteEntryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyName))
+            {
+                query["ProxyName"] = request.ProxyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictMode))
+            {
+                query["StrictMode"] = request.StrictMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchAuto))
+            {
+                query["VswitchAuto"] = request.VswitchAuto;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchCidr))
+            {
+                query["VswitchCidr"] = request.VswitchCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                query["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityProxy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityProxyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateSecurityProxyResponse CreateSecurityProxy(CreateSecurityProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSecurityProxyWithOptions(request, runtime);
+        }
+
+        public async Task<CreateSecurityProxyResponse> CreateSecurityProxyAsync(CreateSecurityProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSecurityProxyWithOptionsAsync(request, runtime);
+        }
+
         public CreateTrFirewallV2Response CreateTrFirewallV2WithOptions(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallPolicyBackUpAssociationListRequest : TeaModel {
+        /// <summary>
+        /// An array that consists of the details about the traffic redirection instance.
+        /// </summary>
         [NameInMap("CandidateList")]
         [Validation(Required=false)]
         public List<DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList> CandidateList { get; set; }
         public class DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList : TeaModel {
+            /// <summary>
+            /// The ID of the traffic redirection instance.
+            /// </summary>
             [NameInMap("CandidateId")]
             [Validation(Required=false)]
             public string CandidateId { get; set; }
 
+            /// <summary>
+            /// The type of the traffic redirection instance.
+            /// </summary>
             [NameInMap("CandidateType")]
             [Validation(Required=false)]
             public string CandidateType { get; set; }

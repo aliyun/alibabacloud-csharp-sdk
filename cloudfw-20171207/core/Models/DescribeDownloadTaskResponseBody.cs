@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The expiration time of the task. The value is a UNIX timestamp. Unit: seconds.
+            /// The time when the task expires. The value is a UNIX timestamp. Unit: seconds.
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string FileSize { get; set; }
 
             /// <summary>
-            /// The URL of the OSS object.
+            /// The URL of the OSS file.
             /// </summary>
             [NameInMap("FileURL")]
             [Validation(Required=false)]
