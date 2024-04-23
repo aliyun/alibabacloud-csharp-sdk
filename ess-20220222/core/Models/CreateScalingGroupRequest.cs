@@ -107,6 +107,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string DBInstanceIds { get; set; }
 
+        [NameInMap("DBInstances")]
+        [Validation(Required=false)]
+        public List<CreateScalingGroupRequestDBInstances> DBInstances { get; set; }
+        public class CreateScalingGroupRequestDBInstances : TeaModel {
+            [NameInMap("AttachMode")]
+            [Validation(Required=false)]
+            public string AttachMode { get; set; }
+
+            [NameInMap("DBInstanceId")]
+            [Validation(Required=false)]
+            public string DBInstanceId { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// The cooldown period of the scaling group after a scaling activity is complete. Valid values: 0 to 86400. Unit: seconds.
         /// 

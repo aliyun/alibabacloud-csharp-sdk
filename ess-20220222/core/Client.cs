@@ -431,6 +431,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachMode))
+            {
+                query["AttachMode"] = request.AttachMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -458,6 +462,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
             {
                 query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -493,6 +501,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachMode))
+            {
+                query["AttachMode"] = request.AttachMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -520,6 +532,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
             {
                 query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2581,6 +2597,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["DataDisks"] = request.DataDisks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostClusterId))
+            {
+                query["DedicatedHostClusterId"] = request.DedicatedHostClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostId))
             {
                 query["DedicatedHostId"] = request.DedicatedHostId;
@@ -2846,6 +2866,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
                 query["DataDisks"] = request.DataDisks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostClusterId))
+            {
+                query["DedicatedHostClusterId"] = request.DedicatedHostClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostId))
             {
@@ -3166,6 +3190,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["DBInstanceIds"] = request.DBInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstances))
+            {
+                query["DBInstances"] = request.DBInstances;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCooldown))
             {
                 query["DefaultCooldown"] = request.DefaultCooldown;
@@ -3392,6 +3420,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceIds))
             {
                 query["DBInstanceIds"] = request.DBInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstances))
+            {
+                query["DBInstances"] = request.DBInstances;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCooldown))
             {
@@ -7434,6 +7466,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveSecurityGroup))
+            {
+                query["RemoveSecurityGroup"] = request.RemoveSecurityGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -7484,6 +7520,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveSecurityGroup))
+            {
+                query["RemoveSecurityGroup"] = request.RemoveSecurityGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -10501,6 +10541,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["DataDisks"] = request.DataDisks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostClusterId))
+            {
+                query["DedicatedHostClusterId"] = request.DedicatedHostClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostId))
             {
                 query["DedicatedHostId"] = request.DedicatedHostId;
@@ -10744,6 +10788,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisks))
             {
                 query["DataDisks"] = request.DataDisks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostClusterId))
+            {
+                query["DedicatedHostClusterId"] = request.DedicatedHostClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostId))
             {

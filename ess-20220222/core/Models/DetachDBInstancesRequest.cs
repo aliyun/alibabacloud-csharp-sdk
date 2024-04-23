@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RemoveSecurityGroup")]
+        [Validation(Required=false)]
+        public bool? RemoveSecurityGroup { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

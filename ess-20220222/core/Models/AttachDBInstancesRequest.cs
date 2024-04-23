@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachDBInstancesRequest : TeaModel {
+        [NameInMap("AttachMode")]
+        [Validation(Required=false)]
+        public string AttachMode { get; set; }
+
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
         /// 
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

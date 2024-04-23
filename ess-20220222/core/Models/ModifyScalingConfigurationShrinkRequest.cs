@@ -370,6 +370,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        [NameInMap("DedicatedHostClusterId")]
+        [Validation(Required=false)]
+        public string DedicatedHostClusterId { get; set; }
+
         /// <summary>
         /// The ID of the dedicated host on which you want to create ECS instances. You cannot create preemptible instances on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.
         /// 

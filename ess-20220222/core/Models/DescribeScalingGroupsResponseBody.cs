@@ -130,6 +130,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public List<string> DBInstanceIds { get; set; }
 
+            [NameInMap("DBInstances")]
+            [Validation(Required=false)]
+            public List<DescribeScalingGroupsResponseBodyScalingGroupsDBInstances> DBInstances { get; set; }
+            public class DescribeScalingGroupsResponseBodyScalingGroupsDBInstances : TeaModel {
+                [NameInMap("DBInstanceId")]
+                [Validation(Required=false)]
+                public string DBInstanceId { get; set; }
+
+                [NameInMap("SecurityGroupIds")]
+                [Validation(Required=false)]
+                public List<string> SecurityGroupIds { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// The cooldown period of the scaling group. During the cooldown period, Auto Scaling does not execute the scaling activities that are triggered by [CloudMonitor](~~35170~~) event-triggered tasks.
             /// </summary>
