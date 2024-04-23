@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerProgressResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// The returned HTTP status code. If the request is successful, 200 is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The consumption status of the consumer group.
+        /// The consumer progress of the consumer group.
         /// </summary>
         [NameInMap("ConsumerProgress")]
         [Validation(Required=false)]
@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
+            /// <summary>
+            /// The details of rebalances in the consumer group.
+            /// </summary>
             [NameInMap("RebalanceInfoList")]
             [Validation(Required=false)]
             public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList RebalanceInfoList { get; set; }
@@ -38,26 +41,44 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> RebalanceInfoList { get; set; }
                 public class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList : TeaModel {
+                    /// <summary>
+                    /// The number of rebalances.
+                    /// </summary>
                     [NameInMap("Generation")]
                     [Validation(Required=false)]
                     public long? Generation { get; set; }
 
+                    /// <summary>
+                    /// The group ID of the subscriber.
+                    /// </summary>
                     [NameInMap("GroupId")]
                     [Validation(Required=false)]
                     public string GroupId { get; set; }
 
+                    /// <summary>
+                    /// The time when the last rebalance occurred. Unit: milliseconds.
+                    /// </summary>
                     [NameInMap("LastRebalanceTimestamp")]
                     [Validation(Required=false)]
                     public long? LastRebalanceTimestamp { get; set; }
 
+                    /// <summary>
+                    /// The cause of the rebalance.
+                    /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public string Reason { get; set; }
 
+                    /// <summary>
+                    /// Indicates whether new members are added to the consumer group in the rebalance.
+                    /// </summary>
                     [NameInMap("RebalanceSuccess")]
                     [Validation(Required=false)]
                     public bool? RebalanceSuccess { get; set; }
 
+                    /// <summary>
+                    /// The duration of the rebalance. Unit: milliseconds.
+                    /// </summary>
                     [NameInMap("RebalanceTimeConsuming")]
                     [Validation(Required=false)]
                     public long? RebalanceTimeConsuming { get; set; }
@@ -67,7 +88,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// The consumption progress of each topic to which the consumer group is subscribed.
+            /// The consumer progress of each topic to which the consumer group subscribes.
             /// </summary>
             [NameInMap("TopicList")]
             [Validation(Required=false)]
@@ -85,7 +106,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     public long? LastTimestamp { get; set; }
 
                     /// <summary>
-                    /// The information about offsets in the topic.
+                    /// The consumer offsets.
                     /// </summary>
                     [NameInMap("OffsetList")]
                     [Validation(Required=false)]
@@ -117,7 +138,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                             public long? LastTimestamp { get; set; }
 
                             /// <summary>
-                            /// The ID of the partition.
+                            /// The partition ID.
                             /// </summary>
                             [NameInMap("Partition")]
                             [Validation(Required=false)]
@@ -128,14 +149,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     }
 
                     /// <summary>
-                    /// The name of the topic.
+                    /// The topic name.
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
                     /// <summary>
-                    /// The number of messages that were not consumed in the topic. This is also known as the number of accumulated messages in the topic.
+                    /// The number of unconsumed messages in the topic to which the consumer group subscribes.
                     /// </summary>
                     [NameInMap("TotalDiff")]
                     [Validation(Required=false)]
@@ -146,7 +167,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// The number of messages that were not consumed in all topics. This is also known as the number of accumulated messages in all topics.
+            /// The total number of unconsumed messages in all topics to which the consumer group subscribes.
             /// </summary>
             [NameInMap("TotalDiff")]
             [Validation(Required=false)]
@@ -162,7 +183,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

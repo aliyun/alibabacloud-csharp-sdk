@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
             public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
                 /// <summary>
-                /// The consumer group that is automatically created by the system.
+                /// Indicates that the consumer group was automatically created by the system.
                 /// </summary>
                 [NameInMap("AutomaticallyCreatedGroup")]
                 [Validation(Required=false)]
                 public bool? AutomaticallyCreatedGroup { get; set; }
 
                 /// <summary>
-                /// The ID of the consumer group.
+                /// The consumer group ID.
                 /// </summary>
                 [NameInMap("ConsumerId")]
                 [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The description of the consumer group.
+                /// The instance description.
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
@@ -95,6 +95,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         }
 
+        /// <summary>
+        /// The number of the page to return. Pages start from page 1.
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -106,6 +109,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -124,6 +130,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public long? Total { get; set; }

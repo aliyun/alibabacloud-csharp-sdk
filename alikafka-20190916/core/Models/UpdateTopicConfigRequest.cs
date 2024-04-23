@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The key of the topic configuration.
         /// 
-        /// *   Valid values: retention.hours, max.message.bytes, and replications.
-        /// *   retention.hours specifies the message retention period.
-        /// *   max.message.bytes specifies the maximum size of a sent message.
-        /// *   replications specifies the number of topic replicas.
+        /// *   ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.
+        /// *   ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.
+        /// *   The following keys are supported by `local topic` of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.
+        /// *   The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -45,9 +45,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The value of the topic configuration.
         /// 
-        /// *   retention.hours specifies the message retention period. The value is a string. Valid values: 24 to 8760.
-        /// *   max.message.bytes specifies the maximum size of a sent message. The value is a string. Valid values: 1048576 to 10485760.
-        /// *   replications specifies the number of topic replicas. The value is a string. Valid values: 1 to 3.
+        /// *   `retention.hours` specifies the message retention period. Value type: string. Valid values: 24 to 8760.
+        /// *   `max.message.bytes` specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

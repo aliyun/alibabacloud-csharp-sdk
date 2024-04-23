@@ -2337,6 +2337,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                query["Series"] = request.Series;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -2379,6 +2383,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                query["Series"] = request.Series;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -3277,6 +3285,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only if your instance is in the Stopped state.
+          *
+          * @param request ReopenInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReopenInstanceResponse
+         */
         public ReopenInstanceResponse ReopenInstanceWithOptions(ReopenInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3308,6 +3323,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReopenInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only if your instance is in the Stopped state.
+          *
+          * @param request ReopenInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReopenInstanceResponse
+         */
         public async Task<ReopenInstanceResponse> ReopenInstanceWithOptionsAsync(ReopenInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3339,12 +3361,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReopenInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only if your instance is in the Stopped state.
+          *
+          * @param request ReopenInstanceRequest
+          * @return ReopenInstanceResponse
+         */
         public ReopenInstanceResponse ReopenInstance(ReopenInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReopenInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only if your instance is in the Stopped state.
+          *
+          * @param request ReopenInstanceRequest
+          * @return ReopenInstanceResponse
+         */
         public async Task<ReopenInstanceResponse> ReopenInstanceAsync(ReopenInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3603,6 +3637,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await StartInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+          *
+          * @param request StopInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopInstanceResponse
+         */
         public StopInstanceResponse StopInstanceWithOptions(StopInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3634,6 +3675,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StopInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+          *
+          * @param request StopInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopInstanceResponse
+         */
         public async Task<StopInstanceResponse> StopInstanceWithOptionsAsync(StopInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3665,12 +3713,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<StopInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+          *
+          * @param request StopInstanceRequest
+          * @return StopInstanceResponse
+         */
         public StopInstanceResponse StopInstance(StopInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+          *
+          * @param request StopInstanceRequest
+          * @return StopInstanceResponse
+         */
         public async Task<StopInstanceResponse> StopInstanceAsync(StopInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

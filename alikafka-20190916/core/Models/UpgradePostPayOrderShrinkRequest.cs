@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// The disk size. Unit: GB.
         /// 
         /// *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("DiskSize")]
         [Validation(Required=false)]
@@ -22,10 +24,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The Internet traffic for the instance.
         /// 
-        /// *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
-        /// > - If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
-        /// > - If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
+        /// *   The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// > 
+        /// 
+        /// *   If you set **EipModel** to **true**, set **EipMax** to a value that is greater than 0.
+        /// 
+        /// *   If you set **EipModel** to **false**, set **EipMax** to **0**.
+        /// 
+        /// *   When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("EipMax")]
         [Validation(Required=false)]
@@ -52,8 +60,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// The maximum traffic for the instance. We recommend that you do not configure this parameter.
         /// 
         /// *   The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.
-        /// *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
+        /// *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("IoMax")]
         [Validation(Required=false)]
@@ -63,8 +73,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// The traffic specification of the instance. We recommend that you configure this parameter.
         /// 
         /// *   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.
-        /// *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
+        /// *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("IoMaxSpec")]
         [Validation(Required=false)]
@@ -73,9 +85,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The number of partitions. We recommend that you configure this parameter.
         /// 
-        /// *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-        /// *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
+        /// *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
+        /// *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("PartitionNum")]
         [Validation(Required=false)]
@@ -88,18 +102,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The parameters configured for the Serverless instance. When you create an ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.
+        /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// The edition of the instance. Valid values:
+        /// The instance edition.
         /// 
-        /// *   **normal**: Standard Edition (High Write)
-        /// *   **professional**: Professional Edition (High Write)
-        /// *   **professionalForHighRead**: Professional Edition (High Read)
+        /// Valid values for this parameter if you set PaidType to 1:
         /// 
-        /// You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing](~~84737~~).
+        /// *   normal: Standard Edition (High Write)
+        /// *   professional: Professional Edition (High Write)
+        /// *   professionalForHighRead: Professional Edition (High Read)
+        /// 
+        /// Valid values for this parameter if you set PaidType to 3:
+        /// 
+        /// *   normal: Serverless Standard Edition
+        /// *   professional: Serverless Professional Edition
+        /// 
+        /// For more information, see [Billing](~~84737~~).
         /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]
@@ -108,10 +132,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The number of topics. We recommend that you do not configure this parameter.
         /// 
-        /// *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-        /// *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-        /// *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-        /// *   For more information about the valid values, see [Billing](~~84737~~).
+        /// *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
+        /// *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+        /// *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+        /// *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+        /// 
+        /// >  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.
         /// </summary>
         [NameInMap("TopicQuota")]
         [Validation(Required=false)]

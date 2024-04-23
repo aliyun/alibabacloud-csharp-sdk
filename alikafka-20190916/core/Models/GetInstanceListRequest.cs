@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("Series")]
+        [Validation(Required=false)]
+        public string Series { get; set; }
+
         /// <summary>
         /// The tags.
         /// </summary>

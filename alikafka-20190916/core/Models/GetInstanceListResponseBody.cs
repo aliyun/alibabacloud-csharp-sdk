@@ -282,6 +282,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string SecurityGroup { get; set; }
 
+                [NameInMap("Series")]
+                [Validation(Required=false)]
+                public string Series { get; set; }
+
                 /// <summary>
                 /// The instance status. Valid values:
                 /// 

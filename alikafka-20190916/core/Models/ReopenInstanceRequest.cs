@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ReopenInstanceRequest : TeaModel {
+        /// <summary>
+        /// The instance ID.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the instance resides.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
