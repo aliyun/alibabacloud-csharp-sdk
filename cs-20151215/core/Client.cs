@@ -3490,16 +3490,24 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
           * @deprecated
           *
+          * @param request DescribeClusterAddonMetadataRequest
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
-        public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3519,16 +3527,24 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
           * @deprecated
           *
+          * @param request DescribeClusterAddonMetadataRequest
           * @param headers map
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
-        public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3548,27 +3564,29 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
           * @deprecated
           *
+          * @param request DescribeClusterAddonMetadataRequest
           * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
-        public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadata(string clusterId, string componentId, string version)
+        public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadata(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeClusterAddonMetadataWithOptions(clusterId, componentId, version, headers, runtime);
+            return DescribeClusterAddonMetadataWithOptions(clusterId, componentId, request, headers, runtime);
         }
 
         /**
           * @deprecated
           *
+          * @param request DescribeClusterAddonMetadataRequest
           * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
-        public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataAsync(string clusterId, string componentId, string version)
+        public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeClusterAddonMetadataWithOptionsAsync(clusterId, componentId, version, headers, runtime);
+            return await DescribeClusterAddonMetadataWithOptionsAsync(clusterId, componentId, request, headers, runtime);
         }
 
         /**
