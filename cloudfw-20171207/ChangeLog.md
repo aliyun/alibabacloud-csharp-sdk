@@ -6,6 +6,10 @@
 - Support API CreateSecurityProxy.
 
 
+2024-04-23 Version: 2.5.0
+- Support API CreateSecurityProxy.
+
+
 2024-03-14 Version: 2.4.0
 - Support API BatchDeleteVpcFirewallControlPolicy.
 - Support API CreateDownloadTask.
