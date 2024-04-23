@@ -10,6 +10,10 @@
 - Support API DescribeEvents.
 
 
+2024-04-23 Version: 2.7.0
+- Support API DescribeEvents.
+
+
 2024-03-20 Version: 2.6.0
 - Support API DeleteDisk.
 - Support API DescribeDisks.
