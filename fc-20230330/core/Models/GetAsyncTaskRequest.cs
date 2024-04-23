@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class TagResourcesRequest : TeaModel {
-        /// <summary>
-        /// The configuration of the resource tag.
-        /// </summary>
-        [NameInMap("body")]
+    public class GetAsyncTaskRequest : TeaModel {
+        [NameInMap("qualifier")]
         [Validation(Required=false)]
-        public TagResourcesInput Body { get; set; }
+        public string Qualifier { get; set; }
 
     }
 
