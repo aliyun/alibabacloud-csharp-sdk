@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The number of entries per page.
         /// 
-        /// Valid values: 1 to 100
+        /// Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>

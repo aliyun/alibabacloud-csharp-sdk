@@ -22,12 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The type of the elastic network interface (ENI). Valid values:
-        /// 
-        /// *   Secondary: secondary ENI.
-        /// *   Trunk: trunk ENI. This value is in invitational preview.
-        /// 
-        /// Default value: Secondary.
+        /// The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInvocationAttributeResponseBody : TeaModel {
         /// <summary>
-        /// *   The command ID.
+        /// The command ID.
         /// 
-        ///     *   A new command is added and its `CommandId` is returned only when `CommandContent` changes.
-        ///     *   No new command is added and the `CommandId` of the command that is running is returned if `CommandContent` has no changes.
-        ///     *   If you set `KeepCommand` to `true` when you called the [InvokeCommand](~~64841~~) or [RunCommand](~~141751~~) operation, the added command is retained. Otherwise, commands related to the task are deleted after executions are complete or the task is manually stopped.
+        /// *   A new command is added and the `CommandId` value of the new command is returned only when `CommandContent` is changed.
+        /// *   No new command is added and the `CommandId` value of the command that is running is returned if `CommandContent` is not changed.
+        /// *   If you set `KeepCommand` to `true` when you called the [InvokeCommand](~~64841~~) or [RunCommand](~~141751~~) operation, a new command is added and retained. Otherwise, commands related to the task are deleted after all executions of the task are complete or the task is manually stopped.
         /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]

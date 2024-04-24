@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the auto provisioning groups.
+        /// Details about the auto provisioning groups.
         /// </summary>
         [NameInMap("AutoProvisioningGroups")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether to release the scaled-in instances when the real-time capacity exceeds the target capacity and the group scales in. Valid values:
+                /// Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
                 /// 
                 /// *   termination: releases the scaled-in instances.
                 /// *   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ExcessCapacityTerminationPolicy { get; set; }
 
                 /// <summary>
-                /// The details of the extended configurations.
+                /// Details about the extended configurations.
                 /// </summary>
                 [NameInMap("LaunchTemplateConfigs")]
                 [Validation(Required=false)]
@@ -126,11 +126,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LaunchTemplateVersion { get; set; }
 
                 /// <summary>
-                /// The maximum price for preemptible instances in the auto provisioning group.
+                /// The maximum price of preemptible instances in the auto provisioning group.
                 /// 
-                /// >  When both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the smaller one of the two parameter values is used.
+                /// >  When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.
                 /// 
-                /// The value of LaunchTemplateConfig.N.MaxPrice is specified when the auto provisioning group is created, and the value cannot be modified.
+                /// The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
                 /// </summary>
                 [NameInMap("MaxSpotPrice")]
                 [Validation(Required=false)]
@@ -147,9 +147,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// The policy for creating pay-as-you-go instances. Valid values:
                     /// 
                     /// *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
-                    /// *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by LaunchTemplateConfig.N.Priority.
+                    /// *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.
                     /// 
-                    /// >  The value of LaunchTemplateConfig.N.Priority is specified when the auto provisioning group is created, and the value cannot be modified.
+                    /// >  The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
                     /// </summary>
                     [NameInMap("AllocationStrategy")]
                     [Validation(Required=false)]
@@ -179,9 +179,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions SpotOptions { get; set; }
                 public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions : TeaModel {
                     /// <summary>
-                    /// The provisioning policy for preemptible instances. Valid values:
+                    /// The policy for creating preemptible instances. Valid values:
                     /// 
-                    /// *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
+                    /// *   lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.
                     /// *   diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.
                     /// </summary>
                     [NameInMap("AllocationStrategy")]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The overall state of instance scheduling in the auto provisioning group. Valid values:
+                /// The overall status of instance scheduling in the auto provisioning group. Valid values:
                 /// 
                 /// *   fulfilled: Scheduling was complete and the instances were delivered.
                 /// *   pending-fulfillment: The instances were being created.
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// The state of the auto provisioning group. Valid values:
+                /// The status of the auto provisioning group. Valid values:
                 /// 
                 /// *   submitted: The auto provisioning group was created but did not execute scheduling tasks.
                 /// *   active: The auto provisioning group was executing scheduling tasks.
@@ -234,6 +234,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tags that are added to the auto provisioning group.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTags Tags { get; set; }
@@ -242,10 +245,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTagsTag> Tag { get; set; }
                     public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTagsTag : TeaModel {
+                        /// <summary>
+                        /// The key of tag N that is added to the auto provisioning group.
+                        /// 
+                        /// Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The value of tag N that is added to the auto provisioning group.
+                        /// 
+                        /// Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -264,22 +277,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is less than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
                     /// 
-                    /// *   PayAsYouGo: pay-as-you-go instances
-                    /// *   Spot: preemptible instances
+                    /// *   PayAsYouGo: pay-as-you-go instances.
+                    /// *   Spot: preemptible instances.
                     /// </summary>
                     [NameInMap("DefaultTargetCapacityType")]
                     [Validation(Required=false)]
                     public string DefaultTargetCapacityType { get; set; }
 
                     /// <summary>
-                    /// The target capacity of pay-as-you-go instances in the auto provisioning group.
+                    /// The target capacity of pay-as-you-go instances that the auto provisioning group provisions.
                     /// </summary>
                     [NameInMap("PayAsYouGoTargetCapacity")]
                     [Validation(Required=false)]
                     public float? PayAsYouGoTargetCapacity { get; set; }
 
                     /// <summary>
-                    /// The target capacity of preemptible instances in the auto provisioning group.
+                    /// The target capacity of preemptible instances that the auto provisioning group provisions.
                     /// </summary>
                     [NameInMap("SpotTargetCapacity")]
                     [Validation(Required=false)]
@@ -299,10 +312,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the instances in the auto provisioning group are released when the auto provisioning group is deleted. Valid values:
+                /// Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
                 /// 
                 /// *   true: releases the instances.
-                /// *   false: retains the instances.
+                /// *   false: only removes the instances from the auto provisioning group but does not release the instances.
                 /// </summary>
                 [NameInMap("TerminateInstances")]
                 [Validation(Required=false)]

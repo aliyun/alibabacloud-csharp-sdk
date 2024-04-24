@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyCloudAssistantSettingsShrinkRequest : TeaModel {
         /// <summary>
-        /// 云助手Agent升级配置。
+        /// The configurations for upgrading Cloud Assistant Agent.
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]

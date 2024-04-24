@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantSettingsResponseBody : TeaModel {
         /// <summary>
-        /// 云助手Agent升级配置。
+        /// The configurations for upgrading Cloud Assistant Agent.
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]
         public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig AgentUpgradeConfig { get; set; }
         public class DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig : TeaModel {
             /// <summary>
-            /// 允许升级的时间段列表。
+            /// The time windows during which Cloud Assistant Agent can be upgraded.
             /// </summary>
             [NameInMap("AllowedUpgradeWindows")]
             [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// 是否开启自定义Agent升级配置。如查询结果为false或空，默认保持每30分钟尝试升级一次。
+            /// Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// 允许升级时间段的时区。
+            /// The time zone of the time window.
             /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// OSS encryption algorithm. Valid values:
+                /// The OSS encryption algorithm. Valid values:
                 /// 
                 /// *   AES256
                 /// *   SM4
@@ -91,18 +91,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EncryptionAlgorithm { get; set; }
 
                 /// <summary>
-                /// The ID of the customer master key (CMK) when the encryption method is KMS.
+                /// The ID of the customer master key (CMK) when EncryptionType is KMS.
                 /// </summary>
                 [NameInMap("EncryptionKeyId")]
                 [Validation(Required=false)]
                 public string EncryptionKeyId { get; set; }
 
                 /// <summary>
-                /// OSS encryption method. Valid values:
+                /// The OSS encryption method. Valid values:
                 /// 
                 /// *   Inherit: the encryption method used by the specified bucket.
                 /// *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-                /// *   KMS: server-side encryption with Key Management Service (SSE-KMS).
+                /// *   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).
                 /// </summary>
                 [NameInMap("EncryptionType")]
                 [Validation(Required=false)]

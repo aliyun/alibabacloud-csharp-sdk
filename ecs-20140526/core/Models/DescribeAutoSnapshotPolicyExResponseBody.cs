@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoSnapshotPolicyExResponseBody : TeaModel {
         /// <summary>
-        /// Details about the returned automatic snapshot policies.
+        /// Details about the automatic snapshot policies.
         /// </summary>
         [NameInMap("AutoSnapshotPolicies")]
         [Validation(Required=false)]
@@ -35,20 +35,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string AutoSnapshotPolicyName { get; set; }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("CopiedSnapshotsRetentionDays")]
                 [Validation(Required=false)]
                 public int? CopiedSnapshotsRetentionDays { get; set; }
 
+                /// <summary>
+                /// Encryption configurations for cross-region snapshot replication.
+                /// </summary>
                 [NameInMap("CopyEncryptionConfiguration")]
                 [Validation(Required=false)]
                 public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
                 public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration : TeaModel {
+                    /// <summary>
+                    /// Whether to enable encryption for cross-region snapshot replication. Valid values:
+                    /// 
+                    /// *   true
+                    /// *   false
+                    /// 
+                    /// Default value: false.
+                    /// </summary>
                     [NameInMap("Encrypted")]
                     [Validation(Required=false)]
                     public bool? Encrypted { get; set; }
 
+                    /// <summary>
+                    /// The ID of the Key Management Service (KMS) key used to encrypt snapshots in cross-region snapshot replication.
+                    /// </summary>
                     [NameInMap("KMSKeyId")]
                     [Validation(Required=false)]
                     public string KMSKeyId { get; set; }
@@ -56,21 +70,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The number of disks that are associated with the automatic snapshot policy.
+                /// The number of disks to which the automatic snapshot policy is applied.
                 /// </summary>
                 [NameInMap("DiskNums")]
                 [Validation(Required=false)]
                 public int? DiskNums { get; set; }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("EnableCrossRegionCopy")]
                 [Validation(Required=false)]
@@ -98,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The retention period of automatic snapshots. Unit: days. Valid values:
+                /// The retention period of the automatic snapshots. Unit: days. Valid values:
                 /// 
                 /// *   \-1: Automatic snapshots are retained until they are deleted.
                 /// *   1 to 65536: Auto snapshots are retained for the specified number of days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
@@ -108,10 +122,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? RetentionDays { get; set; }
 
                 /// <summary>
-                /// The state of the automatic snapshot policy. Valid values:
+                /// The status of the automatic snapshot policy. Valid values:
                 /// 
                 /// *   Normal: The automatic snapshot policy is normal.
-                /// *   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.
+                /// *   Expire: The automatic snapshot policy cannot be used because your account has overdue payments.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -147,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("TargetCopyRegions")]
                 [Validation(Required=false)]
@@ -165,17 +179,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TimePoints { get; set; }
 
                 /// <summary>
-                /// 自动快照策略类型。
+                /// The type of the automatic snapshot policy. Valid values:
                 /// 
-                /// - Custom：用户定义的快照策略。
-                /// - System：系统定义的快照策略。
+                /// *   Custom: user-defined snapshot policy.
+                /// *   System: system-defined snapshot policy.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The number of extended volumes that are associated with the automatic snapshot policy.
+                /// The number of extended volumes to which the automatic snapshot policy is applied.
                 /// </summary>
                 [NameInMap("VolumeNums")]
                 [Validation(Required=false)]

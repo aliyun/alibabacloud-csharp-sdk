@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
         /// 
-        ///     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768.
+        ///     *   Valid values when PerformanceLevel is set to PL0: 1 to 32,768.
         ///     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768.
         ///     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768.
         ///     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768.

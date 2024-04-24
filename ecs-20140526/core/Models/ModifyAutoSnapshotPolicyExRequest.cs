@@ -16,32 +16,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
+        /// <summary>
+        /// The encryption configurations for cross-region snapshot replication.
+        /// </summary>
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
         public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
         public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration : TeaModel {
+            /// <summary>
+            /// This parameter is not publicly available.
+            /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> Arn { get; set; }
             public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn : TeaModel {
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("AssumeRoleFor")]
                 [Validation(Required=false)]
                 public long? AssumeRoleFor { get; set; }
 
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("RoleType")]
                 [Validation(Required=false)]
                 public string RoleType { get; set; }
 
+                /// <summary>
+                /// This parameter is not publicly available.
+                /// </summary>
                 [NameInMap("Rolearn")]
                 [Validation(Required=false)]
                 public string Rolearn { get; set; }
 
             }
 
+            /// <summary>
+            /// Specifies whether to enable encryption for cross-region snapshot replication. Valid values:
+            /// 
+            /// *   true
+            /// *   false
+            /// 
+            /// Default value: false.
+            /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public bool? Encrypted { get; set; }
 
+            /// <summary>
+            /// The ID of the KMS key used for encryption in cross-region snapshot replication.
+            /// </summary>
             [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }

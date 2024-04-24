@@ -31,10 +31,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource : TeaModel {
+                        /// <summary>
+                        /// The number of available instances.
+                        /// </summary>
                         [NameInMap("AvailableAmount")]
                         [Validation(Required=false)]
                         public int? AvailableAmount { get; set; }
 
+                        /// <summary>
+                        /// Details of instance usage.
+                        /// </summary>
                         [NameInMap("CapacityReservationUsages")]
                         [Validation(Required=false)]
                         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages CapacityReservationUsages { get; set; }
@@ -43,14 +49,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage> CapacityReservationUsage { get; set; }
                             public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage : TeaModel {
+                                /// <summary>
+                                /// The ID of the Alibaba Cloud account.
+                                /// </summary>
                                 [NameInMap("AccountId")]
                                 [Validation(Required=false)]
                                 public string AccountId { get; set; }
 
+                                /// <summary>
+                                /// The name of the Alibaba Cloud service.
+                                /// </summary>
                                 [NameInMap("ServiceName")]
                                 [Validation(Required=false)]
                                 public string ServiceName { get; set; }
 
+                                /// <summary>
+                                /// The number of instances that are used by the Alibaba Cloud account or service.
+                                /// </summary>
                                 [NameInMap("UsedAmount")]
                                 [Validation(Required=false)]
                                 public int? UsedAmount { get; set; }
@@ -60,14 +75,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The instance type.
+                        /// The instance type of the instances.
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The total number of instances for which capacity of an instance type is reserved.
+                        /// The total number of instances for which the capacity of an instance type is reserved.
                         /// </summary>
                         [NameInMap("TotalAmount")]
                         [Validation(Required=false)]
@@ -91,6 +106,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the capacity reservation owner.
+                /// </summary>
                 [NameInMap("CapacityReservationOwnerId")]
                 [Validation(Required=false)]
                 public string CapacityReservationOwnerId { get; set; }
@@ -112,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The release mode of the capacity reservation. Valid values:
                 /// 
-                /// *   Limited: The capacity reservation is automatically released at the specified time.
+                /// *   Limited: The capacity reservation is automatically released at a specified time.
                 /// *   Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.
                 /// </summary>
                 [NameInMap("EndTimeType")]
@@ -120,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EndTimeType { get; set; }
 
                 /// <summary>
-                /// The billing method of instances in the capacity reservation. Valid values:
+                /// The billing method of the instances created by using the capacity reservation. Valid values:
                 /// 
                 /// *   PostPaid: pay-as-you-go.
                 /// *   PrePaid: subscription.
@@ -130,10 +148,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// The operating system type of the instances. Valid values:
+                /// The operating system type of the instances created by using the capacity reservation. Valid values:
                 /// 
-                /// *   windows: Windows operating systems.
-                /// *   linux: Linux operating systems.
+                /// *   windows
+                /// *   linux
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
@@ -201,15 +219,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The mode in which the capacity reservation takes effect. Valid values:
                 /// 
-                /// *   Now: The capacity reservation takes effect as soon as it is created.
-                /// *   Later: The capacity reservation takes effect at the specified time.
+                /// *   Now: The capacity reservation takes effect immediately after it is created.
+                /// *   Later: The capacity reservation takes effect at a specified time.
                 /// </summary>
                 [NameInMap("StartTimeType")]
                 [Validation(Required=false)]
                 public string StartTimeType { get; set; }
 
                 /// <summary>
-                /// The state of the capacity reservation. Valid values:
+                /// The status of the capacity reservation. Valid values:
                 /// 
                 /// *   Pending: The capacity reservation is being initialized.
                 /// *   Preparing: The capacity reservation is being prepared.
@@ -222,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags of the capacity reservation.
+                /// The tags that are added to the capacity reservation.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -233,14 +251,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag> Tag { get; set; }
                     public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -251,7 +269,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// > This parameter is in invitational preview and is not publicly available.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("TimeSlot")]
                 [Validation(Required=false)]

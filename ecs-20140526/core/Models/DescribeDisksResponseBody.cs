@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDisksResponseBodyDisksDisk> Disk { get; set; }
             public class DescribeDisksResponseBodyDisksDisk : TeaModel {
                 /// <summary>
-                /// The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.
+                /// The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("AttachedTime")]
                 [Validation(Required=false)]
                 public string AttachedTime { get; set; }
 
                 /// <summary>
-                /// The attachment information about the cloud disk. The value is an array that consists of the `Attachment` values. This value is not returned when you query Shared Block Storage devices.
+                /// The attachment information about the cloud disk. The value is an array that contains a list of `Attachment` objects. The value is not returned when you query Shared Block Storage devices.
                 /// </summary>
                 [NameInMap("Attachments")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the automatic snapshot policy that is applied to the disk.
+                /// The ID of the automatic snapshot policy that is applied to the cloud disk.
                 /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the automatic snapshots of the disk are deleted when the disk is released. Valid values:
+                /// Indicates whether the automatic snapshots of the cloud disk are deleted when the cloud disk is released. Valid values:
                 /// 
                 /// *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
                 /// *   false: The automatic snapshots of the cloud disk are retained when the disk is released.
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? DeleteAutoSnapshot { get; set; }
 
                 /// <summary>
-                /// Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:
+                /// Indicates whether the cloud disk is released when the instance to which the disk is attached is released. Valid values:
                 /// 
                 /// *   true: The disk is released when the instance to which the disk is attached is released.
                 /// *   false: The disk is retained when the instance to which the disk is attached is released.
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the disk was last detached.
+                /// The time when the cloud disk was last detached.
                 /// </summary>
                 [NameInMap("DetachedTime")]
                 [Validation(Required=false)]
@@ -153,8 +153,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The device name of the disk on the instance to which the disk is attached. Example: /dev/xvdb. Take note of the following items:
                 /// 
-                /// *   This parameter has a value only when the `Status` value is `In_use`.
-                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
+                /// *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
+                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
                 /// 
                 /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
                 /// </summary>
@@ -187,14 +187,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DiskName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the automatic snapshot policy feature is enabled for the disk.
+                /// Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
                 /// </summary>
                 [NameInMap("EnableAutoSnapshot")]
                 [Validation(Required=false)]
                 public bool? EnableAutoSnapshot { get; set; }
 
                 /// <summary>
-                /// Indicates whether an automatic snapshot policy is applied to the disk.
+                /// Indicates whether an automatic snapshot policy is applied to the cloud disk.
                 /// </summary>
                 [NameInMap("EnableAutomatedSnapshotPolicy")]
                 [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ExpiredTime { get; set; }
 
                 /// <summary>
-                /// The maximum number of read/write IOPS of the disk.
+                /// The maximum number of read and write operations per second.
                 /// </summary>
                 [NameInMap("IOPS")]
                 [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? IOPSRead { get; set; }
 
                 /// <summary>
-                /// The maximum number of write IOPS of the disk.
+                /// The maximum number of write operations per second.
                 /// </summary>
                 [NameInMap("IOPSWrite")]
                 [Validation(Required=false)]
@@ -245,15 +245,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The ID of the instance to which the disk is attached. Take note of the following items:
                 /// 
-                /// *   This parameter has a value only when the `Status` value is `In_use`.
-                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
+                /// *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
+                /// *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the Key Management Service (KMS) key that is used for the disk.
+                /// The ID of the Key Management Service (KMS) key that is used for the cloud disk.
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> MountInstance { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance : TeaModel {
                         /// <summary>
-                        /// The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+                        /// The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("AttachedTime")]
                         [Validation(Required=false)]
@@ -303,14 +303,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the multi-attach feature is enabled for the disk.
+                /// Indicates whether the multi-attach feature is enabled for the cloud disk.
                 /// </summary>
                 [NameInMap("MultiAttach")]
                 [Validation(Required=false)]
                 public string MultiAttach { get; set; }
 
                 /// <summary>
-                /// The reasons why the disk is locked.
+                /// The reasons why the disk was locked.
                 /// </summary>
                 [NameInMap("OperationLocks")]
                 [Validation(Required=false)]
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// The security reason why the disk is locked.
+                        /// The security reason why the disk was locked.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// Specifies whether the disk is removable.
+                /// Indicates whether the disk is removable.
                 /// </summary>
                 [NameInMap("Portable")]
                 [Validation(Required=false)]
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
+                /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
                 /// 
                 /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
                 /// </summary>
@@ -395,9 +395,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot that was used to create the disk.
+                /// The ID of the snapshot that was used to create the cloud disk.
                 /// 
-                /// This parameter is empty unless the disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
+                /// This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
                 /// </summary>
                 [NameInMap("SourceSnapshotId")]
                 [Validation(Required=false)]
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated block storage cluster to which the disk belongs. If your disk belongs to the public block storage cluster, an empty value is returned.
+                /// The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.
                 /// </summary>
                 [NameInMap("StorageClusterId")]
                 [Validation(Required=false)]
@@ -450,14 +450,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskTagsTag> Tag { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The tag key of the disk.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The tag value of the disk.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -468,21 +468,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The amount of data that is transferred per second. Unit: MB/s.
+                /// The amount of data that can be transferred per second. Unit: MB/s.
                 /// </summary>
                 [NameInMap("Throughput")]
                 [Validation(Required=false)]
                 public int? Throughput { get; set; }
 
                 /// <summary>
-                /// The amount of data that is read by the system per second. Unit: MB/s.
+                /// The amount of data that can be read per second. Unit: MB/s.
                 /// </summary>
                 [NameInMap("ThroughputRead")]
                 [Validation(Required=false)]
                 public int? ThroughputRead { get; set; }
 
                 /// <summary>
-                /// The amount of data that is written by the system per second. Unit: MB/s.
+                /// The amount of data that can be written per second. Unit: MB/s.
                 /// </summary>
                 [NameInMap("ThroughputWrite")]
                 [Validation(Required=false)]

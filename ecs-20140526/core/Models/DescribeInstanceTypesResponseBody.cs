@@ -334,6 +334,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? SecondaryEniQueueNumber { get; set; }
 
+                [NameInMap("SupportedBootModes")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes SupportedBootModes { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes : TeaModel {
+                    [NameInMap("SupportedBootMode")]
+                    [Validation(Required=false)]
+                    public List<string> SupportedBootMode { get; set; }
+
+                }
+
                 /// <summary>
                 /// The maximum number of queues on ENIs that the instance type supports.
                 /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationResultsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the execution results.
+        /// Details about the execution results.
         /// </summary>
         [NameInMap("Invocation")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> InvocationResult { get; set; }
                 public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult : TeaModel {
                     /// <summary>
-                    /// The ID of the command.
+                    /// The command ID.
                     /// </summary>
                     [NameInMap("CommandId")]
                     [Validation(Required=false)]
@@ -49,32 +49,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ContainerName { get; set; }
 
                     /// <summary>
-                    /// The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
+                    /// The size of the Output text that was truncated and discarded because the `Output` value exceeded 24 KB in size.
                     /// </summary>
                     [NameInMap("Dropped")]
                     [Validation(Required=false)]
                     public int? Dropped { get; set; }
 
                     /// <summary>
-                    /// The error code returned when the command failed to be sent or run. Valid values:
+                    /// The error code for the failure to send or run the command. Valid values:
                     /// 
-                    /// *   If this parameter is left empty, the command is run normally.
-                    /// *   InstanceNotExists: The instance does not exist or is released.
-                    /// *   InstanceReleased: The instance is released while the command is being run.
-                    /// *   InstanceNotRunning: The instance is not running while the command is being run.
-                    /// *   CommandNotApplicable: The command is not applicable to the specified instance.
-                    /// *   AccountNotExists: The specified account does not exist.
-                    /// *   DirectoryNotExists: The specified directory does not exist.
-                    /// *   BadCronExpression: The specified cron expression for the execution schedule is invalid.
-                    /// *   ClientNotRunning: Cloud Assistant Agent is not running.
-                    /// *   ClientNotResponse: Cloud Assistant Agent does not respond.
+                    /// *   If this parameter is empty, the command was run as expected.
+                    /// *   InstanceNotExists: The specified instance did not exist or was released.
+                    /// *   InstanceReleased: The instance was released while the command was being run.
+                    /// *   InstanceNotRunning: The instance was not running when the command started to be run.
+                    /// *   CommandNotApplicable: The command was not applicable to the specified instance.
+                    /// *   AccountNotExists: The specified account did not exist.
+                    /// *   DirectoryNotExists: The specified directory did not exist.
+                    /// *   BadCronExpression: The specified cron expression for the execution schedule was invalid.
+                    /// *   ClientNotRunning: Cloud Assistant Agent was not running.
+                    /// *   ClientNotResponse: Cloud Assistant Agent did not respond.
                     /// *   ClientIsUpgrading: Cloud Assistant Agent was being upgraded.
-                    /// *   ClientNeedUpgrade: Cloud Assistant Agent must be upgraded.
+                    /// *   ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.
                     /// *   DeliveryTimeout: The request to send the command timed out.
-                    /// *   ExecutionTimeout: The request to send the command timed out.
-                    /// *   ExecutionException: An exception occurred while the command is being run.
-                    /// *   ExecutionInterrupted: The execution is interrupted.
-                    /// *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
+                    /// *   ExecutionTimeout: The execution timed out.
+                    /// *   ExecutionException: An exception occurred while the command was being run.
+                    /// *   ExecutionInterrupted: The execution was interrupted.
+                    /// *   ExitCodeNonzero: The execution was complete, but the exit code was not 0.
                     /// </summary>
                     [NameInMap("ErrorCode")]
                     [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The error message returned when the command failed to be sent or run. Valid values:
                     /// 
-                    /// *   If this parameter is left empty, the command is run normally.
+                    /// *   If this parameter is empty, the command was run as expected.
                     /// *   the specified instance does not exists
                     /// *   the instance has released when create task
                     /// *   the instance is not running when create task
@@ -94,12 +94,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// *   the aliyun service is not running on the instance
                     /// *   the aliyun service in the instance does not response
                     /// *   the aliyun service in the instance is upgrading now
-                    /// *   the aliyun service in the instance is upgrading now
+                    /// *   the aliyun service in the instance need upgrade
                     /// *   the command delivery has been timeout
                     /// *   the command execution has been timeout
                     /// *   the command execution got an exception
                     /// *   the command execution has been interrupted
                     /// *   the command execution exit code is not zero
+                    /// *   the specified instance has been released
                     /// </summary>
                     [NameInMap("ErrorInfo")]
                     [Validation(Required=false)]
@@ -108,22 +109,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The exit code of the command task.
                     /// 
-                    /// *   For Linux instances, the exit code is the exit code of the shell command.
-                    /// *   For Windows instances, the exit code is the exit code of the batch or PowerShell command.
+                    /// *   For Linux instances, the value is the exit code of the shell command.
+                    /// *   For Windows instances, the value is the exit code of the batch or PowerShell command.
                     /// </summary>
                     [NameInMap("ExitCode")]
                     [Validation(Required=false)]
                     public long? ExitCode { get; set; }
 
                     /// <summary>
-                    /// The time when the command task was complete. If the command task times out, the end time is equal to the start time of the command task specified by StartTime plus the timeout period specified by Timeout in the [CreateCommand](~~64844~~) operation.
+                    /// The time when the command task was complete. If the command task times out, the end time is equal to the start time of the command task specified by `StartTime` plus the timeout period specified by `Timeout`.
                     /// </summary>
                     [NameInMap("FinishedTime")]
                     [Validation(Required=false)]
                     public string FinishedTime { get; set; }
 
                     /// <summary>
-                    /// The ID of the instance
+                    /// The instance ID.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -132,38 +133,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The execution state on a single instance. Valid values:
                     /// 
-                    /// *   Pending: The command is being verified or sent.
+                    /// *   Pending: The command was being verified or sent.
                     /// 
-                    /// *   Invalid: The specified command type or parameter is invalid.
+                    /// *   Invalid: The specified command type or parameter was invalid.
                     /// 
-                    /// *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
+                    /// *   Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.
                     /// 
-                    /// *   Running: The command is being run on the instance.
+                    /// *   Running: The command was being run on the instance.
                     /// 
                     /// *   Success:
                     /// 
-                    ///     *   Command that is set to run only once: The execution is complete, and the exit code is 0.
-                    ///     *   Command that is set to run on a schedule: The previous execution is complete, and the exit code is 0. The specified execution period ends.
+                    ///     *   One-time task: The execution was complete, and the exit code was 0.
+                    ///     *   Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.
                     /// 
                     /// *   Failed:
                     /// 
-                    ///     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
-                    ///     *   Command that is set to run on a schedule: The previous execution is complete, but the exit code is not 0. The specified execution period is about to end.
+                    ///     *   One-time task: The execution was complete, but the exit code was not 0.
+                    ///     *   Scheduled task: The last execution was complete, but the exit code was not 0. The specified period was about to end.
                     /// 
                     /// *   Error: The execution cannot proceed due to an exception.
                     /// 
                     /// *   Timeout: The execution timed out.
                     /// 
-                    /// *   Cancelled: The execution is canceled, and the command is not run.
+                    /// *   Cancelled: The execution was canceled, and the command was not run.
                     /// 
-                    /// *   Stopping: The command task is being stopped.
+                    /// *   Stopping: The command task was being stopped.
                     /// 
-                    /// *   Terminated: The command task is terminated while it is being run.
+                    /// *   Terminated: The execution was terminated before completion.
                     /// 
                     /// *   Scheduled:
                     /// 
-                    ///     *   Command that is set to run only once: The execution state cannot be Scheduled.
-                    ///     *   Command that is set to run on a schedule: The command is waiting to be run.
+                    ///     *   One-time task: The execution state can never be Scheduled.
+                    ///     *   Scheduled task: The command was waiting to be run.
                     /// </summary>
                     [NameInMap("InvocationStatus")]
                     [Validation(Required=false)]
@@ -177,7 +178,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string InvokeId { get; set; }
 
                     /// <summary>
-                    /// The execution state of the command task.
+                    /// The execution state of the command. Valid values:
+                    /// 
+                    /// *   Running:
+                    /// 
+                    ///     *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.
+                    ///     *   One-time task: If the command is being run on instances, the execution state is Running.
+                    /// 
+                    /// *   Finished:
+                    /// 
+                    ///     *   Scheduled task: The execution state can never be Finished.
+                    ///     *   One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.
+                    /// 
+                    /// *   Failed:
+                    /// 
+                    ///     *   Scheduled task: The execution state can never be Failed.
+                    ///     *   One-time task: The execution failed on all instances.
+                    /// 
+                    /// *   PartialFailed:
+                    /// 
+                    ///     *   Scheduled task: The execution state can never be PartialFailed.
+                    ///     *   One-time task: The execution failed on some instances.
+                    /// 
+                    /// *   Stopped: The task was stopped.
+                    /// 
+                    /// *   Stopping: The task was being stopped.
                     /// </summary>
                     [NameInMap("InvokeRecordStatus")]
                     [Validation(Required=false)]
@@ -185,6 +210,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                     /// <summary>
                     /// The command output.
+                    /// 
+                    /// *   If ContentEncoding is set to PlainText in the request, the original command output is returned.
+                    /// *   If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.
                     /// </summary>
                     [NameInMap("Output")]
                     [Validation(Required=false)]
@@ -194,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// The number of times that the command was run on the instance.
                     /// 
                     /// *   If the command is set to run only once, the value is 0 or 1.
-                    /// *   If the command is set to run on a schedule, the value is the number of times that the command was run.
+                    /// *   If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.
                     /// </summary>
                     [NameInMap("Repeats")]
                     [Validation(Required=false)]
@@ -244,7 +272,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The username that was used to run the command on the instance.
+                    /// The username used to run the command on the instance.
                     /// </summary>
                     [NameInMap("Username")]
                     [Validation(Required=false)]
@@ -255,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The query token returned in this call.
+            /// A pagination token. It can be used in the next request to retrieve a new page of results.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
