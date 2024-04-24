@@ -39,6 +39,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
+            /// <summary>
+            /// The outputs of the stack.
+            /// 
+            /// >  This parameter is returned if OutputOption is set to Enabled.
+            /// </summary>
             [NameInMap("Outputs")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Outputs { get; set; }

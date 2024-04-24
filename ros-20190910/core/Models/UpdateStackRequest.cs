@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// </summary>
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DisableRollback { get; set; }
 
         /// <summary>

@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> SourceResources { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceResources : TeaModel {
+                [NameInMap("RelatedResourceTypeFilter")]
+                [Validation(Required=false)]
+                public List<string> RelatedResourceTypeFilter { get; set; }
+
                 /// <summary>
                 /// The resource ID.
                 /// </summary>
