@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeDbInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDbInstancesResponseBodyItemsDBInstance : TeaModel {
+                [NameInMap("AllowAllCategory")]
+                [Validation(Required=false)]
+                public bool? AllowAllCategory { get; set; }
+
                 /// <summary>
                 /// The description of the storage instance.
                 /// </summary>

@@ -1,3 +1,9 @@
+2024-04-24 Version: 1.0.12
+- Update API DescribeDbInstances: update response param.
+- Update API DescribeDrdsInstances: update param RegionId.
+- Update API DescribeDrdsInstances: update response param.
+
+
 2024-01-24 Version: 1.0.11
 - Generated csharp 2019-01-23 for Drds.
 
