@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ProcessCode { get; set; }
 
+        [NameInMap("ProcessData")]
+        [Validation(Required=false)]
+        public string ProcessData { get; set; }
+
         [NameInMap("SystemToken")]
         [Validation(Required=false)]
         public string SystemToken { get; set; }

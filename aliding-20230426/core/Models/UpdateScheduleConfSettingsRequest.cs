@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public int? EnableChat { get; set; }
 
+                [NameInMap("EnableWebAnonymousJoin")]
+                [Validation(Required=false)]
+                public bool? EnableWebAnonymousJoin { get; set; }
+
                 [NameInMap("JoinBeforeHost")]
                 [Validation(Required=false)]
                 public int? JoinBeforeHost { get; set; }
