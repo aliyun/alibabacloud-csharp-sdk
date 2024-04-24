@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             {
                 body["ClusterType"] = request.ClusterType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableReplication))
+            {
+                body["DisableReplication"] = request.DisableReplication;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceDescription))
             {
                 body["InstanceDescription"] = request.InstanceDescription;
@@ -182,6 +186,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 body["ClusterType"] = request.ClusterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableReplication))
+            {
+                body["DisableReplication"] = request.DisableReplication;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceDescription))
             {

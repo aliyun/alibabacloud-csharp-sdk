@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public List<GetInstanceResponseBodyTags> Tags { get; set; }
         public class GetInstanceResponseBodyTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
@@ -92,6 +96,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
         }
 

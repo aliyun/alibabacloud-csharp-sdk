@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        [NameInMap("DisableReplication")]
+        [Validation(Required=false)]
+        public bool? DisableReplication { get; set; }
+
         [NameInMap("InstanceDescription")]
         [Validation(Required=false)]
         public string InstanceDescription { get; set; }
