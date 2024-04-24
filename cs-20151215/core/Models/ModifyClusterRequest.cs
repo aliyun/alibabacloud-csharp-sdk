@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<string> AccessControlList { get; set; }
 
+        [NameInMap("api_server_custom_cert_sans")]
+        [Validation(Required=false)]
+        public ModifyClusterRequestApiServerCustomCertSans ApiServerCustomCertSans { get; set; }
+        public class ModifyClusterRequestApiServerCustomCertSans : TeaModel {
+            [NameInMap("action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("subject_alternative_names")]
+            [Validation(Required=false)]
+            public List<string> SubjectAlternativeNames { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to associate an elastic IP address (EIP) with the cluster API server. This enables Internet access for the cluster. Valid values:
         /// 

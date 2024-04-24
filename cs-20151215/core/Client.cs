@@ -7817,6 +7817,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["access_control_list"] = request.AccessControlList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerCustomCertSans))
+            {
+                body["api_server_custom_cert_sans"] = request.ApiServerCustomCertSans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
                 body["api_server_eip"] = request.ApiServerEip;
@@ -7892,6 +7896,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlList))
             {
                 body["access_control_list"] = request.AccessControlList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerCustomCertSans))
+            {
+                body["api_server_custom_cert_sans"] = request.ApiServerCustomCertSans;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEip))
             {
