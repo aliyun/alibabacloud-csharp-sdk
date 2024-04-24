@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeResourceInstanceCertsRequest : TeaModel {
+    public class DescribeCertDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the certificate.
+        /// </summary>
+        [NameInMap("CertIdentifier")]
+        [Validation(Required=false)]
+        public string CertIdentifier { get; set; }
+
         /// <summary>
         /// The ID of the WAF instance.
         /// 
@@ -19,21 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        /// <summary>
-        /// The number of entries per page. Default value: **10**.
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
+        /// The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
         /// 
         /// *   **cn-hangzhou**: Chinese mainland.
         /// *   **ap-southeast-1**: outside the Chinese mainland.
@@ -41,13 +34,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// The ID of the instance.
-        /// </summary>
-        [NameInMap("ResourceInstanceId")]
-        [Validation(Required=false)]
-        public string ResourceInstanceId { get; set; }
 
         /// <summary>
         /// The ID of the Alibaba Cloud resource group.

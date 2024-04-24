@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DeleteMemberAccountResponseBody : TeaModel {
+    public class DescribePunishedDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The domain names that are penalized for failing to obtain an ICP filing.
+        /// </summary>
+        [NameInMap("PunishedDomains")]
+        [Validation(Required=false)]
+        public List<string> PunishedDomains { get; set; }
+
+        /// <summary>
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateMemberAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

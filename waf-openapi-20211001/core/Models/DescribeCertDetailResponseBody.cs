@@ -8,30 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeResourceInstanceCertsResponseBody : TeaModel {
+    public class DescribeCertDetailResponseBody : TeaModel {
         /// <summary>
-        /// The certificates.
+        /// The details of the certificate.
         /// </summary>
-        [NameInMap("Certs")]
+        [NameInMap("CertDetail")]
         [Validation(Required=false)]
-        public List<DescribeResourceInstanceCertsResponseBodyCerts> Certs { get; set; }
-        public class DescribeResourceInstanceCertsResponseBodyCerts : TeaModel {
+        public DescribeCertDetailResponseBodyCertDetail CertDetail { get; set; }
+        public class DescribeCertDetailResponseBodyCertDetail : TeaModel {
             /// <summary>
-            /// The time when the certificate expires.
+            /// The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// The time when the certificate was issued.
+            /// The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.
+            /// The ID of the certificate.
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
@@ -45,41 +45,34 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CertName { get; set; }
 
             /// <summary>
-            /// The common name.
+            /// The primary domain name, which is a common name.
             /// </summary>
             [NameInMap("CommonName")]
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
             /// <summary>
-            /// The domain name for which the certificate is issued.
+            /// The domain name that is associated with the certificate.
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// Indicates whether the certificate chain is complete.
+            /// The other domain names that are associated with the certificate.
             /// </summary>
-            [NameInMap("IsChainCompleted")]
+            [NameInMap("Sans")]
             [Validation(Required=false)]
-            public bool? IsChainCompleted { get; set; }
+            public List<string> Sans { get; set; }
 
         }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// The total number of entries returned.
-        /// </summary>
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
     }
 

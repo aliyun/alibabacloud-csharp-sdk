@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeResourceInstanceCertsRequest : TeaModel {
+    public class DescribeDefenseResourceNamesRequest : TeaModel {
         /// <summary>
-        /// The ID of the WAF instance.
+        /// The ID of the Web Application Firewall (WAF) instance.
         /// 
         /// >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
         /// </summary>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: **10**.
+        /// The number of entries per page. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// The region in which the WAF instance is deployed. Valid values:
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The name of the protected object that you want to query.
         /// </summary>
-        [NameInMap("ResourceInstanceId")]
+        [NameInMap("Resource")]
         [Validation(Required=false)]
-        public string ResourceInstanceId { get; set; }
+        public string Resource { get; set; }
 
         /// <summary>
         /// The ID of the Alibaba Cloud resource group.

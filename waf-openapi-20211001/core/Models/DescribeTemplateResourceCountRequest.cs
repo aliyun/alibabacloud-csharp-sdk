@@ -8,29 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeResourceInstanceCertsRequest : TeaModel {
+    public class DescribeTemplateResourceCountRequest : TeaModel {
         /// <summary>
-        /// The ID of the WAF instance.
+        /// The ID of the Web Application Firewall (WAF) instance.
         /// 
         /// >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        /// <summary>
-        /// The page number. Default value: **1**.
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        /// <summary>
-        /// The number of entries per page. Default value: **10**.
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
 
         /// <summary>
         /// The region in which the WAF instance is deployed. Valid values:
@@ -43,18 +29,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
-        /// </summary>
-        [NameInMap("ResourceInstanceId")]
-        [Validation(Required=false)]
-        public string ResourceInstanceId { get; set; }
-
-        /// <summary>
         /// The ID of the Alibaba Cloud resource group.
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
+
+        /// <summary>
+        /// The IDs of the protection templates that you want to query. Separate multiple template IDs with commas (,).
+        /// </summary>
+        [NameInMap("TemplateIds")]
+        [Validation(Required=false)]
+        public string TemplateIds { get; set; }
 
     }
 

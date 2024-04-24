@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Code405Pv { get; set; }
 
             /// <summary>
+            /// The number of 444 error codes that are returned.
+            /// </summary>
+            [NameInMap("444Pv")]
+            [Validation(Required=false)]
+            public long? Code444Pv { get; set; }
+
+            /// <summary>
             /// The number of 499 error codes that are returned.
             /// </summary>
             [NameInMap("499Pv")]

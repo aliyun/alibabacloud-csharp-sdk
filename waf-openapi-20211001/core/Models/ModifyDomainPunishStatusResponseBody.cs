@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DeleteMemberAccountResponseBody : TeaModel {
+    public class ModifyDomainPunishStatusResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>

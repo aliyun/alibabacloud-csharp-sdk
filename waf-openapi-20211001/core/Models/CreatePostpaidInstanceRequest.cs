@@ -8,16 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeAccountDelegatedStatusRequest : TeaModel {
-        /// <summary>
-        /// The ID of the WAF instance.
-        /// 
-        /// >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
+    public class CreatePostpaidInstanceRequest : TeaModel {
         /// <summary>
         /// The region in which the WAF instance is deployed. Valid values:
         /// 
