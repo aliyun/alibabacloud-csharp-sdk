@@ -179,6 +179,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? AverageWorkTime { get; set; }
 
+                    [NameInMap("CallsAbandoned")]
+                    [Validation(Required=false)]
+                    public long? CallsAbandoned { get; set; }
+
+                    [NameInMap("CallsAgentHandled")]
+                    [Validation(Required=false)]
+                    public long? CallsAgentHandled { get; set; }
+
                     [NameInMap("CallsAnswered")]
                     [Validation(Required=false)]
                     public long? CallsAnswered { get; set; }
@@ -187,9 +195,41 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? CallsDialed { get; set; }
 
+                    [NameInMap("CallsOffered")]
+                    [Validation(Required=false)]
+                    public long? CallsOffered { get; set; }
+
+                    [NameInMap("CallsQueuingCancelled")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingCancelled { get; set; }
+
+                    [NameInMap("CallsQueuingFailed")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingFailed { get; set; }
+
+                    [NameInMap("CallsQueuingFailure")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingFailure { get; set; }
+
+                    [NameInMap("CallsQueuingOverflow")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingOverflow { get; set; }
+
+                    [NameInMap("CallsQueuingRerouted")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingRerouted { get; set; }
+
+                    [NameInMap("CallsQueuingTimeout")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingTimeout { get; set; }
+
                     [NameInMap("CallsServiceLevel30")]
                     [Validation(Required=false)]
                     public string CallsServiceLevel30 { get; set; }
+
+                    [NameInMap("CallsServiceLevel30V2")]
+                    [Validation(Required=false)]
+                    public long? CallsServiceLevel30V2 { get; set; }
 
                     [NameInMap("MaxDialingTime")]
                     [Validation(Required=false)]
@@ -222,6 +262,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [NameInMap("TotalTalkTime")]
                     [Validation(Required=false)]
                     public long? TotalTalkTime { get; set; }
+
+                    [NameInMap("TotalWaitTime")]
+                    [Validation(Required=false)]
+                    public long? TotalWaitTime { get; set; }
 
                     [NameInMap("TotalWorkTime")]
                     [Validation(Required=false)]
