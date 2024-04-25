@@ -4186,6 +4186,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["VSwitchId"] = request.VSwitchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistTemplateList))
+            {
+                query["WhitelistTemplateList"] = request.WhitelistTemplateList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
@@ -4455,6 +4459,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistTemplateList))
+            {
+                query["WhitelistTemplateList"] = request.WhitelistTemplateList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -38854,6 +38862,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
+            {
+                query["VSwitchIds"] = request.VSwitchIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -38929,6 +38941,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
+            {
+                query["VSwitchIds"] = request.VSwitchIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

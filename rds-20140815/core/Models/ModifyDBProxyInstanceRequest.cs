@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("VSwitchIds")]
+        [Validation(Required=false)]
+        public string VSwitchIds { get; set; }
+
     }
 
 }

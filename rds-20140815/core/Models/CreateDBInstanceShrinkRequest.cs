@@ -622,6 +622,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("WhitelistTemplateList")]
+        [Validation(Required=false)]
+        public string WhitelistTemplateList { get; set; }
+
         /// <summary>
         /// The zone ID of the primary instance.
         /// 
