@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string FacePictureUrl { get; set; }
 
-        [NameInMap("FlowType")]
-        [Validation(Required=false)]
-        public string FlowType { get; set; }
-
         [NameInMap("IdFaceQuality")]
         [Validation(Required=false)]
         public string IdFaceQuality { get; set; }
@@ -76,21 +72,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Ocr { get; set; }
 
-        [NameInMap("OperationMode")]
-        [Validation(Required=false)]
-        public string OperationMode { get; set; }
-
-        [NameInMap("Pages")]
-        [Validation(Required=false)]
-        public string Pages { get; set; }
-
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
-
-        [NameInMap("ProductConfig")]
-        [Validation(Required=false)]
-        public string ProductConfig { get; set; }
 
         [NameInMap("ProductFlow")]
         [Validation(Required=false)]
@@ -108,9 +92,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SecurityLevel { get; set; }
 
-        [NameInMap("ServiceLevel")]
+        [NameInMap("StyleConfig")]
         [Validation(Required=false)]
-        public string ServiceLevel { get; set; }
+        public string StyleConfig { get; set; }
 
     }
 

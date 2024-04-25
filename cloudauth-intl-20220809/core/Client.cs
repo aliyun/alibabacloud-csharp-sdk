@@ -299,80 +299,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await CheckResultWithOptionsAsync(request, runtime);
         }
 
-        public DeletePictureResponse DeletePictureWithOptions(DeletePictureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletePicAfterQuery))
-            {
-                query["DeletePicAfterQuery"] = request.DeletePicAfterQuery;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
-            {
-                query["TransactionId"] = request.TransactionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeletePicture",
-                Version = "2022-08-09",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeletePictureResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DeletePictureResponse> DeletePictureWithOptionsAsync(DeletePictureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletePicAfterQuery))
-            {
-                query["DeletePicAfterQuery"] = request.DeletePicAfterQuery;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
-            {
-                query["TransactionId"] = request.TransactionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeletePicture",
-                Version = "2022-08-09",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeletePictureResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DeletePictureResponse DeletePicture(DeletePictureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeletePictureWithOptions(request, runtime);
-        }
-
-        public async Task<DeletePictureResponse> DeletePictureAsync(DeletePictureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeletePictureWithOptionsAsync(request, runtime);
-        }
-
         public DeleteVerifyResultResponse DeleteVerifyResultWithOptions(DeleteVerifyResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1899,10 +1825,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowType))
-            {
-                query["FlowType"] = request.FlowType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
             {
                 query["IdFaceQuality"] = request.IdFaceQuality;
@@ -1931,21 +1853,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Ocr"] = request.Ocr;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
-            {
-                query["OperationMode"] = request.OperationMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
-            {
-                query["Pages"] = request.Pages;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductConfig))
-            {
-                query["ProductConfig"] = request.ProductConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductFlow))
             {
@@ -1963,9 +1873,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["SecurityLevel"] = request.SecurityLevel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLevel))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
-                query["ServiceLevel"] = request.ServiceLevel;
+                query["StyleConfig"] = request.StyleConfig;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
@@ -2024,10 +1934,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowType))
-            {
-                query["FlowType"] = request.FlowType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
             {
                 query["IdFaceQuality"] = request.IdFaceQuality;
@@ -2056,21 +1962,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Ocr"] = request.Ocr;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
-            {
-                query["OperationMode"] = request.OperationMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
-            {
-                query["Pages"] = request.Pages;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductConfig))
-            {
-                query["ProductConfig"] = request.ProductConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductFlow))
             {
@@ -2088,9 +1982,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["SecurityLevel"] = request.SecurityLevel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLevel))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
-                query["ServiceLevel"] = request.ServiceLevel;
+                query["StyleConfig"] = request.StyleConfig;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
