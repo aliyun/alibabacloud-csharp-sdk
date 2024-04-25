@@ -6275,6 +6275,64 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainRealTimeByteHitRateDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodDomainRealTimeDetailDataResponse DescribeVodDomainRealTimeDetailDataWithOptions(DescribeVodDomainRealTimeDetailDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeDetailData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeDetailDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeDetailDataResponse> DescribeVodDomainRealTimeDetailDataWithOptionsAsync(DescribeVodDomainRealTimeDetailDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeDetailData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeDetailDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeDetailDataResponse DescribeVodDomainRealTimeDetailData(DescribeVodDomainRealTimeDetailDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeDetailDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeDetailDataResponse> DescribeVodDomainRealTimeDetailDataAsync(DescribeVodDomainRealTimeDetailDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeDetailDataWithOptionsAsync(request, runtime);
+        }
+
         public DescribeVodDomainRealTimeHttpCodeDataResponse DescribeVodDomainRealTimeHttpCodeDataWithOptions(DescribeVodDomainRealTimeHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

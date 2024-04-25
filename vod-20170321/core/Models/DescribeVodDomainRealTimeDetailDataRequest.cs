@@ -1,0 +1,50 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Vod20170321.Models
+{
+    public class DescribeVodDomainRealTimeDetailDataRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Field")]
+        [Validation(Required=false)]
+        public string Field { get; set; }
+
+        [NameInMap("IspNameEn")]
+        [Validation(Required=false)]
+        public string IspNameEn { get; set; }
+
+        [NameInMap("LocationNameEn")]
+        [Validation(Required=false)]
+        public string LocationNameEn { get; set; }
+
+        [NameInMap("Merge")]
+        [Validation(Required=false)]
+        public string Merge { get; set; }
+
+        [NameInMap("MergeLocIsp")]
+        [Validation(Required=false)]
+        public string MergeLocIsp { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+    }
+
+}
