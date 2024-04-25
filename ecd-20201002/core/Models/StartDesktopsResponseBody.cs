@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class StartDesktopsResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

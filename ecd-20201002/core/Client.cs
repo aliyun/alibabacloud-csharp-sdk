@@ -1828,6 +1828,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["SessionToken"] = request.SessionToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1886,6 +1890,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionToken))
             {
                 query["SessionToken"] = request.SessionToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2815,7 +2823,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The ID of the client.
+          * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2857,6 +2865,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2877,7 +2889,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The ID of the client.
+          * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
           *
           * @param request StartDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2919,6 +2931,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2939,7 +2955,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The ID of the client.
+          * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -2951,7 +2967,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The ID of the client.
+          * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
           *
           * @param request StartDesktopsRequest
           * @return StartDesktopsResponse
@@ -3085,7 +3101,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+          * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3151,7 +3167,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+          * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
           *
           * @param request StopDesktopsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3217,7 +3233,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+          * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse
@@ -3229,7 +3245,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         }
 
         /**
-          * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+          * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
           *
           * @param request StopDesktopsRequest
           * @return StopDesktopsResponse

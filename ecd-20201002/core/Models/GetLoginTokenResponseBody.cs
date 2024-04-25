@@ -93,6 +93,28 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RiskVerifyInfo")]
+        [Validation(Required=false)]
+        public GetLoginTokenResponseBodyRiskVerifyInfo RiskVerifyInfo { get; set; }
+        public class GetLoginTokenResponseBodyRiskVerifyInfo : TeaModel {
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
+            [NameInMap("LastLockDuration")]
+            [Validation(Required=false)]
+            public long? LastLockDuration { get; set; }
+
+            [NameInMap("Locked")]
+            [Validation(Required=false)]
+            public string Locked { get; set; }
+
+            [NameInMap("Phone")]
+            [Validation(Required=false)]
+            public string Phone { get; set; }
+
+        }
+
         /// <summary>
         /// The key that is generated when you bind the virtual MFA device. This parameter is required when the CurrentStage parameter is set to `MFABind`.
         /// 

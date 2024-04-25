@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// The client OS.
+        /// The operating system (OS) of the device that runs the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client).
         /// </summary>
         [NameInMap("ClientOS")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The client version.
+        /// The client version. If you use a WUYING client, you can view the client version in the **About** dialog box on the client logon page.
         /// </summary>
         [NameInMap("ClientVersion")]
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
 
         /// <summary>
-        /// The cloud desktop IDs. You can specify 1 to 20 IDs.
+        /// The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [NameInMap("SessionToken")]
         [Validation(Required=false)]
         public string SessionToken { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 
