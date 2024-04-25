@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
+        [NameInMap("Ipv4CidrMask")]
+        [Validation(Required=false)]
+        public int? Ipv4CidrMask { get; set; }
+
         /// <summary>
         /// The ID of the IP Address Manager (IPAM) pool of the IPv4 type.
         /// </summary>

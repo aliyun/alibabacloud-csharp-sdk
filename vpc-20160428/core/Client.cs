@@ -4361,6 +4361,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrMask))
+            {
+                query["SecondaryCidrMask"] = request.SecondaryCidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -4442,6 +4446,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrBlock))
             {
                 query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrMask))
+            {
+                query["SecondaryCidrMask"] = request.SecondaryCidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -16130,6 +16138,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EnableIpv6"] = request.EnableIpv6;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4CidrMask))
+            {
+                query["Ipv4CidrMask"] = request.Ipv4CidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4IpamPoolId))
             {
                 query["Ipv4IpamPoolId"] = request.Ipv4IpamPoolId;
@@ -16236,6 +16248,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
             {
                 query["EnableIpv6"] = request.EnableIpv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4CidrMask))
+            {
+                query["Ipv4CidrMask"] = request.Ipv4CidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4IpamPoolId))
             {

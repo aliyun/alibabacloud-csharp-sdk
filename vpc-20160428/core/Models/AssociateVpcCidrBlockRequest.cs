@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string SecondaryCidrBlock { get; set; }
 
+        [NameInMap("SecondaryCidrMask")]
+        [Validation(Required=false)]
+        public int? SecondaryCidrMask { get; set; }
+
         /// <summary>
         /// The ID of the VPC to which you want to add a secondary CIDR block.
         /// </summary>

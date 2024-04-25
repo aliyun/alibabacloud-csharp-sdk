@@ -1,3 +1,8 @@
+2024-04-25 Version: 6.7.3
+- Update API AssociateVpcCidrBlock: add param SecondaryCidrMask.
+- Update API CreateVpc: add param Ipv4CidrMask.
+
+
 2024-04-17 Version: 6.7.2
 - Update API DescribeVirtualBorderRouters: update response param.
 

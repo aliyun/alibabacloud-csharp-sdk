@@ -192,7 +192,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetStatus { get; set; }
 
         /// <summary>
-        /// 是否开启IPv6。
+        /// Indicates whether the VPC enables IPv6 .
+        /// - true
+        /// - false
         /// </summary>
         [NameInMap("EnabledIpv6")]
         [Validation(Required=false)]
