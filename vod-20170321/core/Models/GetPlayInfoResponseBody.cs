@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video stream was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The quality of the media stream. Valid values:
+                /// The quality of the video stream. Valid values:
                 /// 
                 /// *   **FD**: low definition
                 /// *   **LD**: standard definition
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Definition { get; set; }
 
                 /// <summary>
-                /// The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
+                /// The duration of the media stream. Unit: seconds.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// The encryption type of the media stream. Valid values:
                 /// 
                 /// *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
-                /// *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
+                /// *   **HLSEncryption**: HTTP-Live-Streaming (HLS) encryption
                 /// 
                 /// >  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.
                 /// </summary>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public int? JobType { get; set; }
 
                 /// <summary>
-                /// The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -160,11 +160,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The type of Narrowband HD transcoding. Valid values:
                 /// 
-                /// *   **0**: normal transcoding
-                /// *   **1.0**: Narrowband HD 1.0
-                /// *   **2.0**: Narrowband HD 2.0
+                /// *   **0**: regular transcoding
+                /// *   **1.0**: Narrowband HD™ 1.0 transcoding
+                /// *   **2.0**: Narrowband HD™ 2.0 transcoding
                 /// 
-                /// This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
+                /// This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
                 /// </summary>
                 [NameInMap("NarrowBandType")]
                 [Validation(Required=false)]
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The storage class of the audio or video file. Valid values:
+            /// The storage class of the audio file. Valid values:
             /// 
             /// *   **Standard**: All media resources are stored as Standard objects.
             /// *   **IA**: All media resources are stored as IA objects.
@@ -294,8 +294,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
             /// *   **SourceIA**: Only the source files are IA objects.
             /// *   **SourceArchive**: Only the source files are Archive objects.
-            /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-            /// *   **Changing**: The storage class of the audio or video file is being changed.
+            /// *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+            /// *   **Changing**: The storage class of the video file is being changed.
             /// *   **SourceChanging**: The storage class of the source file is being changed.
             /// </summary>
             [NameInMap("StorageClass")]

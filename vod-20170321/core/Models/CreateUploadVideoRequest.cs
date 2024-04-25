@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// The size of the audio or video file. Unit: bytes.
+        /// The size of the source file. Unit: bytes.
         /// </summary>
         [NameInMap("FileSize")]
         [Validation(Required=false)]

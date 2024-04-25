@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeVodUserDomainsResponseBodyDomainsPageData : TeaModel {
                 /// <summary>
-                /// The canonical domain name that is assigned to the domain name for CDN.
+                /// The CNAME that is assigned to the domain name for CDN.
                 /// </summary>
                 [NameInMap("Cname")]
                 [Validation(Required=false)]
@@ -56,21 +56,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string DomainStatus { get; set; }
 
                 /// <summary>
-                /// The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the domain name for CDN was added. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("GmtCreated")]
                 [Validation(Required=false)]
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The last time when the domain name for CDN was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// Indicates whether the domain name for CDN is in a sandbox environment.
+                /// Indicates whether the accelerated domain name was in a sandbox.
                 /// </summary>
                 [NameInMap("Sandbox")]
                 [Validation(Required=false)]
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// The type of the origin server. Valid values:
                         /// 
-                        /// *   **ipaddr**: a server that you can access by using an IP address.
-                        /// *   **domain**: a server that you can access by using a domain name.
-                        /// *   **oss**: an Object Storage Service (OSS) bucket.
+                        /// *   **ipaddr**: an IP address.
+                        /// *   **domain**: an origin domain name
+                        /// *   **oss**: the OSS domain of an Object Storage Service (OSS) bucket
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// Indicates whether HTTPS is enabled.
                 /// 
-                /// - **on**: indicates that HTTPS is enabled.
-                /// - **off**: indicates that HTTPS is disabled.
+                /// *   **on**: HTTPS is enabled.
+                /// *   **off**: HTTPS is not eabled.
                 /// </summary>
                 [NameInMap("SslProtocol")]
                 [Validation(Required=false)]
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

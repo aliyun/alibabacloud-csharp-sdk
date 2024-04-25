@@ -5463,8 +5463,130 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainBpsDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodDomainBpsDataByLayerResponse DescribeVodDomainBpsDataByLayerWithOptions(DescribeVodDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainBpsDataByLayer",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainBpsDataByLayerResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainBpsDataByLayerResponse> DescribeVodDomainBpsDataByLayerWithOptionsAsync(DescribeVodDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Layer))
+            {
+                query["Layer"] = request.Layer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainBpsDataByLayer",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainBpsDataByLayerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainBpsDataByLayerResponse DescribeVodDomainBpsDataByLayer(DescribeVodDomainBpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainBpsDataByLayerWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainBpsDataByLayerResponse> DescribeVodDomainBpsDataByLayerAsync(DescribeVodDomainBpsDataByLayerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainBpsDataByLayerWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * This operation is available only in the **China (Shanghai)** region.
           *
           * @param request DescribeVodDomainCertificateInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5502,7 +5624,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * This operation is available only in the **China (Shanghai)** region.
           *
           * @param request DescribeVodDomainCertificateInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5540,7 +5662,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * This operation is available only in the **China (Shanghai)** region.
           *
           * @param request DescribeVodDomainCertificateInfoRequest
           * @return DescribeVodDomainCertificateInfoResponse
@@ -5552,7 +5674,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * This operation is available only in the **China (Shanghai)** region.
           *
           * @param request DescribeVodDomainCertificateInfoRequest
           * @return DescribeVodDomainCertificateInfoResponse
@@ -5787,6 +5909,104 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainDetailWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodDomainHitRateDataResponse DescribeVodDomainHitRateDataWithOptions(DescribeVodDomainHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainHitRateDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainHitRateDataResponse> DescribeVodDomainHitRateDataWithOptionsAsync(DescribeVodDomainHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainHitRateDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainHitRateDataResponse DescribeVodDomainHitRateData(DescribeVodDomainHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainHitRateDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainHitRateDataResponse> DescribeVodDomainHitRateDataAsync(DescribeVodDomainHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainHitRateDataWithOptionsAsync(request, runtime);
+        }
+
         /**
           * *   This operation is available only in the **China (Shanghai)** region.
           * *   For more information about the log format and latency, see [Download logs](~~86099~~).
@@ -5937,6 +6157,540 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVodDomainLogWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeBpsDataResponse DescribeVodDomainRealTimeBpsDataWithOptions(DescribeVodDomainRealTimeBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeBpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeBpsDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeBpsDataResponse> DescribeVodDomainRealTimeBpsDataWithOptionsAsync(DescribeVodDomainRealTimeBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeBpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeBpsDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeBpsDataResponse DescribeVodDomainRealTimeBpsData(DescribeVodDomainRealTimeBpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeBpsDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeBpsDataResponse> DescribeVodDomainRealTimeBpsDataAsync(DescribeVodDomainRealTimeBpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeBpsDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeByteHitRateDataResponse DescribeVodDomainRealTimeByteHitRateDataWithOptions(DescribeVodDomainRealTimeByteHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeByteHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeByteHitRateDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeByteHitRateDataResponse> DescribeVodDomainRealTimeByteHitRateDataWithOptionsAsync(DescribeVodDomainRealTimeByteHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeByteHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeByteHitRateDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeByteHitRateDataResponse DescribeVodDomainRealTimeByteHitRateData(DescribeVodDomainRealTimeByteHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeByteHitRateDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeByteHitRateDataResponse> DescribeVodDomainRealTimeByteHitRateDataAsync(DescribeVodDomainRealTimeByteHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeByteHitRateDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeHttpCodeDataResponse DescribeVodDomainRealTimeHttpCodeDataWithOptions(DescribeVodDomainRealTimeHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeHttpCodeData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeHttpCodeDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeHttpCodeDataResponse> DescribeVodDomainRealTimeHttpCodeDataWithOptionsAsync(DescribeVodDomainRealTimeHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeHttpCodeData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeHttpCodeDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeHttpCodeDataResponse DescribeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeHttpCodeDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeHttpCodeDataResponse> DescribeVodDomainRealTimeHttpCodeDataAsync(DescribeVodDomainRealTimeHttpCodeDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeHttpCodeDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeQpsDataResponse DescribeVodDomainRealTimeQpsDataWithOptions(DescribeVodDomainRealTimeQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeQpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeQpsDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeQpsDataResponse> DescribeVodDomainRealTimeQpsDataWithOptionsAsync(DescribeVodDomainRealTimeQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeQpsData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeQpsDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeQpsDataResponse DescribeVodDomainRealTimeQpsData(DescribeVodDomainRealTimeQpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeQpsDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeQpsDataResponse> DescribeVodDomainRealTimeQpsDataAsync(DescribeVodDomainRealTimeQpsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeQpsDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeReqHitRateDataResponse DescribeVodDomainRealTimeReqHitRateDataWithOptions(DescribeVodDomainRealTimeReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeReqHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeReqHitRateDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeReqHitRateDataResponse> DescribeVodDomainRealTimeReqHitRateDataWithOptionsAsync(DescribeVodDomainRealTimeReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeReqHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeReqHitRateDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeReqHitRateDataResponse DescribeVodDomainRealTimeReqHitRateData(DescribeVodDomainRealTimeReqHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeReqHitRateDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeReqHitRateDataResponse> DescribeVodDomainRealTimeReqHitRateDataAsync(DescribeVodDomainRealTimeReqHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeReqHitRateDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainRealTimeTrafficDataResponse DescribeVodDomainRealTimeTrafficDataWithOptions(DescribeVodDomainRealTimeTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeTrafficData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeTrafficDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainRealTimeTrafficDataResponse> DescribeVodDomainRealTimeTrafficDataWithOptionsAsync(DescribeVodDomainRealTimeTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainRealTimeTrafficData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainRealTimeTrafficDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainRealTimeTrafficDataResponse DescribeVodDomainRealTimeTrafficData(DescribeVodDomainRealTimeTrafficDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainRealTimeTrafficDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainRealTimeTrafficDataResponse> DescribeVodDomainRealTimeTrafficDataAsync(DescribeVodDomainRealTimeTrafficDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainRealTimeTrafficDataWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeVodDomainReqHitRateDataResponse DescribeVodDomainReqHitRateDataWithOptions(DescribeVodDomainReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainReqHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainReqHitRateDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainReqHitRateDataResponse> DescribeVodDomainReqHitRateDataWithOptionsAsync(DescribeVodDomainReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainReqHitRateData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainReqHitRateDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainReqHitRateDataResponse DescribeVodDomainReqHitRateData(DescribeVodDomainReqHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainReqHitRateDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainReqHitRateDataResponse> DescribeVodDomainReqHitRateDataAsync(DescribeVodDomainReqHitRateDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainReqHitRateDataWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -6709,6 +7463,112 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodMediaPlayDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodRangeDataByLocateAndIspServiceResponse DescribeVodRangeDataByLocateAndIspServiceWithOptions(DescribeVodRangeDataByLocateAndIspServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodRangeDataByLocateAndIspService",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodRangeDataByLocateAndIspServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodRangeDataByLocateAndIspServiceResponse> DescribeVodRangeDataByLocateAndIspServiceWithOptionsAsync(DescribeVodRangeDataByLocateAndIspServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspNameEn))
+            {
+                query["IspNameEn"] = request.IspNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationNameEn))
+            {
+                query["LocationNameEn"] = request.LocationNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodRangeDataByLocateAndIspService",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodRangeDataByLocateAndIspServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodRangeDataByLocateAndIspServiceResponse DescribeVodRangeDataByLocateAndIspService(DescribeVodRangeDataByLocateAndIspServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodRangeDataByLocateAndIspServiceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodRangeDataByLocateAndIspServiceResponse> DescribeVodRangeDataByLocateAndIspServiceAsync(DescribeVodRangeDataByLocateAndIspServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodRangeDataByLocateAndIspServiceWithOptionsAsync(request, runtime);
+        }
+
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
           * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -7277,6 +8137,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodTranscodeDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+          * *   This operation is available only in the China (Shanghai) region.
+          *
+          * @param request DescribeVodUserDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVodUserDomainsResponse
+         */
         public DescribeVodUserDomainsResponse DescribeVodUserDomainsWithOptions(DescribeVodUserDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7332,6 +8200,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodUserDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+          * *   This operation is available only in the China (Shanghai) region.
+          *
+          * @param request DescribeVodUserDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVodUserDomainsResponse
+         */
         public async Task<DescribeVodUserDomainsResponse> DescribeVodUserDomainsWithOptionsAsync(DescribeVodUserDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7387,12 +8263,26 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodUserDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+          * *   This operation is available only in the China (Shanghai) region.
+          *
+          * @param request DescribeVodUserDomainsRequest
+          * @return DescribeVodUserDomainsResponse
+         */
         public DescribeVodUserDomainsResponse DescribeVodUserDomains(DescribeVodUserDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVodUserDomainsWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+          * *   This operation is available only in the China (Shanghai) region.
+          *
+          * @param request DescribeVodUserDomainsRequest
+          * @return DescribeVodUserDomainsResponse
+         */
         public async Task<DescribeVodUserDomainsResponse> DescribeVodUserDomainsAsync(DescribeVodUserDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8256,7 +9146,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * You can specify multiple accelerated domain names in a request.
           *
           * @param request GetAppInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8290,7 +9180,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * You can specify multiple accelerated domain names in a request.
           *
           * @param request GetAppInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8324,7 +9214,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * You can specify multiple accelerated domain names in a request.
           *
           * @param request GetAppInfosRequest
           * @return GetAppInfosResponse
@@ -8336,7 +9226,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * You can specify multiple accelerated domain names in a request.
           *
           * @param request GetAppInfosRequest
           * @return GetAppInfosResponse
@@ -10282,10 +11172,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-          * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+          * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+          * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
           * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-          * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+          * *   **You can call this operation to query information only about transcoding tasks created within the past year.
           *
           * @param request GetTranscodeSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10319,10 +11209,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-          * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+          * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+          * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
           * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-          * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+          * *   **You can call this operation to query information only about transcoding tasks created within the past year.
           *
           * @param request GetTranscodeSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10356,10 +11246,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-          * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+          * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+          * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
           * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-          * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+          * *   **You can call this operation to query information only about transcoding tasks created within the past year.
           *
           * @param request GetTranscodeSummaryRequest
           * @return GetTranscodeSummaryResponse
@@ -10371,10 +11261,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-          * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+          * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+          * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
           * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-          * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+          * *   **You can call this operation to query information only about transcoding tasks created within the past year.
           *
           * @param request GetTranscodeSummaryRequest
           * @return GetTranscodeSummaryResponse
@@ -10478,7 +11368,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10512,7 +11402,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10546,7 +11436,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -10558,7 +11448,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -12070,7 +12960,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query a maximum of 5,000 videos based on the specified filter condition.
+          * You can query up to 5,000 videos based on the specified filter condition.
           *
           * @param request ListLiveRecordVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12132,7 +13022,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query a maximum of 5,000 videos based on the specified filter condition.
+          * You can query up to 5,000 videos based on the specified filter condition.
           *
           * @param request ListLiveRecordVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12194,7 +13084,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query a maximum of 5,000 videos based on the specified filter condition.
+          * You can query up to 5,000 videos based on the specified filter condition.
           *
           * @param request ListLiveRecordVideoRequest
           * @return ListLiveRecordVideoResponse
@@ -12206,7 +13096,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query a maximum of 5,000 videos based on the specified filter condition.
+          * You can query up to 5,000 videos based on the specified filter condition.
           *
           * @param request ListLiveRecordVideoRequest
           * @return ListLiveRecordVideoResponse
@@ -13930,12 +14820,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+          * *   Method 1: Traverse data by page
+          *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+          * *   Method 2: Traverse all data (available only for audio and video files)
+          *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+          *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+          *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+          * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
           *
           * @param request SearchMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13993,12 +14885,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+          * *   Method 1: Traverse data by page
+          *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+          * *   Method 2: Traverse all data (available only for audio and video files)
+          *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+          *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+          *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+          * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
           *
           * @param request SearchMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14056,12 +14950,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+          * *   Method 1: Traverse data by page
+          *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+          * *   Method 2: Traverse all data (available only for audio and video files)
+          *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+          *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+          *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+          * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
           *
           * @param request SearchMediaRequest
           * @return SearchMediaResponse
@@ -14073,12 +14969,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+          * *   Method 1: Traverse data by page
+          *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+          * *   Method 2: Traverse all data (available only for audio and video files)
+          *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+          *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+          *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+          * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
           *
           * @param request SearchMediaRequest
           * @return SearchMediaResponse
@@ -14967,6 +15865,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await SetVodDomainCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only in the Singapore region.
+          *
+          * @param request SubmitAIImageAuditJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitAIImageAuditJobResponse
+         */
         public SubmitAIImageAuditJobResponse SubmitAIImageAuditJobWithOptions(SubmitAIImageAuditJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15018,6 +15923,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitAIImageAuditJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only in the Singapore region.
+          *
+          * @param request SubmitAIImageAuditJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitAIImageAuditJobResponse
+         */
         public async Task<SubmitAIImageAuditJobResponse> SubmitAIImageAuditJobWithOptionsAsync(SubmitAIImageAuditJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15069,12 +15981,24 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitAIImageAuditJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only in the Singapore region.
+          *
+          * @param request SubmitAIImageAuditJobRequest
+          * @return SubmitAIImageAuditJobResponse
+         */
         public SubmitAIImageAuditJobResponse SubmitAIImageAuditJob(SubmitAIImageAuditJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitAIImageAuditJobWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only in the Singapore region.
+          *
+          * @param request SubmitAIImageAuditJobRequest
+          * @return SubmitAIImageAuditJobResponse
+         */
         public async Task<SubmitAIImageAuditJobResponse> SubmitAIImageAuditJobAsync(SubmitAIImageAuditJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17200,7 +18124,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17246,7 +18170,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17292,7 +18216,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @return UpdateTranscodeTemplateGroupResponse
@@ -17304,7 +18228,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+          * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @return UpdateTranscodeTemplateGroupResponse
@@ -18165,6 +19089,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await UploadStreamByURLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only in the **China (Shanghai)** region.
+          *
+          * @param request VerifyVodDomainOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return VerifyVodDomainOwnerResponse
+         */
         public VerifyVodDomainOwnerResponse VerifyVodDomainOwnerWithOptions(VerifyVodDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18200,6 +19131,13 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<VerifyVodDomainOwnerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only in the **China (Shanghai)** region.
+          *
+          * @param request VerifyVodDomainOwnerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return VerifyVodDomainOwnerResponse
+         */
         public async Task<VerifyVodDomainOwnerResponse> VerifyVodDomainOwnerWithOptionsAsync(VerifyVodDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18235,12 +19173,24 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<VerifyVodDomainOwnerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only in the **China (Shanghai)** region.
+          *
+          * @param request VerifyVodDomainOwnerRequest
+          * @return VerifyVodDomainOwnerResponse
+         */
         public VerifyVodDomainOwnerResponse VerifyVodDomainOwner(VerifyVodDomainOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyVodDomainOwnerWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only in the **China (Shanghai)** region.
+          *
+          * @param request VerifyVodDomainOwnerRequest
+          * @return VerifyVodDomainOwnerResponse
+         */
         public async Task<VerifyVodDomainOwnerResponse> VerifyVodDomainOwnerAsync(VerifyVodDomainOwnerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTranscodeDataRequest : TeaModel {
+        /// <summary>
+        /// The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) operation.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

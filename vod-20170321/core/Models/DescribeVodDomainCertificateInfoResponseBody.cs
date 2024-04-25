@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CertDomainName { get; set; }
 
                 /// <summary>
-                /// The time at which the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time at which the certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CertExpireTime")]
                 [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CertLife { get; set; }
 
                 /// <summary>
-                /// The name of the certificate.
+                /// The certificate name.
                 /// </summary>
                 [NameInMap("CertName")]
                 [Validation(Required=false)]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CertType { get; set; }
 
                 /// <summary>
-                /// The accelerated domain name.
+                /// The accelerated domain name whose ICP filing status you want to update.
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SSL certificate is enabled.
+                /// The status of the SSL certificate.
                 /// 
                 /// *   **on**
                 /// *   **off**
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ServerCertificateStatus { get; set; }
 
                 /// <summary>
-                /// The status of the certificate. Valid values:
+                /// The status of the certificate.
                 /// 
                 /// *   **success**: The certificate is in effect.
                 /// *   **checking**: The system is checking whether the domain name is added to ApsaraVideo VOD.
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **applying**: The certificate application is in progress.
                 /// *   **failed**: The certificate application failed.
                 /// 
-                /// > A value is returned for this parameter only if `free` is returned for `CertType`. If a value other than free is returned for CertType, an empty string is returned for this parameter.
+                /// >  A value is returned for this parameter only when you set `CertType` to `free`. Otherwise, an empty value is returned for this parameter.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

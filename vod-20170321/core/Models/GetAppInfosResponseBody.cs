@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the application was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The last time when the application was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
@@ -53,8 +53,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// The status of the application. Valid values:
-            /// - **Normal**
-            /// - **Disable**
+            /// 
+            /// *   **Normal**
+            /// *   **Disable**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -62,8 +63,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// The type of the application. Valid values:
-            /// - **System**
-            /// - **Custom**
+            /// 
+            /// *   **System**
+            /// *   **Custom**
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The ID of the application that was not found.
+        /// The IDs of applications that do not exist.
         /// </summary>
         [NameInMap("NonExistAppIds")]
         [Validation(Required=false)]

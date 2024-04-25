@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo> LiveRecordVideo { get; set; }
             public class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo : TeaModel {
                 /// <summary>
-                /// The name of the application.
+                /// The name of the app.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -42,28 +42,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PlaylistId { get; set; }
 
                 /// <summary>
-                /// The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The recording end time. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("RecordEndTime")]
                 [Validation(Required=false)]
                 public string RecordEndTime { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The recording start time. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("RecordStartTime")]
                 [Validation(Required=false)]
                 public string RecordStartTime { get; set; }
 
                 /// <summary>
-                /// The name of the live stream.
+                /// The name of the live-to-VOD file.
                 /// </summary>
                 [NameInMap("StreamName")]
                 [Validation(Required=false)]
                 public string StreamName { get; set; }
 
                 /// <summary>
-                /// The information about the video.
+                /// The information about the live-to-VOD file.
                 /// </summary>
                 [NameInMap("Video")]
                 [Validation(Required=false)]
@@ -77,49 +77,49 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public int? CateId { get; set; }
 
                     /// <summary>
-                    /// The name of the video category.
+                    /// The category of the video.
                     /// </summary>
                     [NameInMap("CateName")]
                     [Validation(Required=false)]
                     public string CateName { get; set; }
 
                     /// <summary>
-                    /// The thumbnail URL of the video.
+                    /// The URL of the video thumbnail.
                     /// </summary>
                     [NameInMap("CoverURL")]
                     [Validation(Required=false)]
                     public string CoverURL { get; set; }
 
                     /// <summary>
-                    /// The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                    /// The time when the audio or video file was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                     /// </summary>
                     [NameInMap("CreationTime")]
                     [Validation(Required=false)]
                     public string CreationTime { get; set; }
 
                     /// <summary>
-                    /// The description of the video.
+                    /// The description of the video file.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The duration of the video. Unit: seconds.
+                    /// The duration of the video file. Unit: seconds.
                     /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public float? Duration { get; set; }
 
                     /// <summary>
-                    /// The last time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                    /// The time when the video was updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                     /// </summary>
                     [NameInMap("ModifyTime")]
                     [Validation(Required=false)]
                     public string ModifyTime { get; set; }
 
                     /// <summary>
-                    /// The size of the mezzanine file. Unit: byte.
+                    /// The size of the source video file. Unit: bytes.
                     /// </summary>
                     [NameInMap("Size")]
                     [Validation(Required=false)]
@@ -140,20 +140,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                     /// <summary>
                     /// The status of the video. Valid values:
-                    /// *   **Uploading:**: indicates that the video is being uploaded.
-                    /// *   **UploadFail**: indicates that the video failed to be uploaded.
-                    /// *   **UploadSucces**: indicates that the video was uploaded.
-                    /// *   **Transcoding**: indicates that the video is being transcoded.
-                    /// *   **TranscodeFail**: indicates that the video failed to be transcoded.
-                    /// *   **Blocked**: indicates that the video is blocked.
-                    /// *   **Normal**: indicates that the video is in a normal state.
+                    /// 
+                    /// *   **Uploading**
+                    /// *   **UploadFail**
+                    /// *   **UploadSuccess**
+                    /// *   **Transcoding**
+                    /// *   **TranscodeFail**
+                    /// *   **Blocked**
+                    /// *   **Normal**: The video is normal.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The tags of the video. Separate multiple tags with commas (,).
+                    /// The tags of the video. Multiple tags are separated with commas (,).
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -194,7 +195,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of videos returned.
+        /// The total number of videos.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

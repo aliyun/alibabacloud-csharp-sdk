@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class SubmitAIImageAuditJobResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the image review job.
-        /// </summary>
-        [NameInMap("JobId")]
+    public class DescribeVodRangeDataByLocateAndIspServiceResponseBody : TeaModel {
+        [NameInMap("JsonResult")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string JsonResult { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

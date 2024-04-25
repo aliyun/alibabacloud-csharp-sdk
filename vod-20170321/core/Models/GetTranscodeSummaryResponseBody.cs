@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> TranscodeSummaryList { get; set; }
         public class GetTranscodeSummaryResponseBodyTranscodeSummaryList : TeaModel {
             /// <summary>
-            /// The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the transcoding task was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the transcoding task was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the transcoding job was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CompleteTime")]
                 [Validation(Required=false)]
                 public string CompleteTime { get; set; }
 
                 /// <summary>
-                /// The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the transcoding job was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -123,9 +123,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 /// <summary>
                 /// The status of the transcoding job. Valid values:
-                /// *   **Transcoding**
-                /// *   **TranscodeSuccess**
-                /// *   **TranscodeFail**
+                /// 
+                /// *   **Transcoding**: Transcoding is in process.
+                /// *   **TranscodeSuccess**: The job was successful.
+                /// *   **TranscodeFail**: The job failed.
                 /// </summary>
                 [NameInMap("TranscodeJobStatus")]
                 [Validation(Required=false)]
@@ -163,7 +164,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// The status of the transcoding task. Valid values:
-            /// *   **Processing**: In progress.
+            /// 
+            /// *   **Processing**: Transcoding is in process.
             /// *   **Partial**: Some transcoding jobs were complete.
             /// *   **CompleteAllSucc**: All transcoding jobs were successful.
             /// *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.

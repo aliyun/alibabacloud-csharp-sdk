@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The DNS verification method that is used to verify the ownership of the specified domain name.
+        /// The verification method. Valid values:
+        /// 
+        /// *   **dnsCheck**: uses a Domain Name System (DNS) record
+        /// *   **fileCheck**: uses a verification file
         /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]

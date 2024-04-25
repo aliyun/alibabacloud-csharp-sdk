@@ -18,17 +18,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The search method. Valid values:
-        /// *   **fuzzy_match**: fuzzy match. This is the default value.
-        /// *   **pre_match**: prefix match.
-        /// *   **suf_match**: suffix match.
-        /// *   **full_match**: exact match.
+        /// 
+        /// *   **fuzzy_match** (default): fuzzy match.
+        /// *   **pre_match**: prefix match
+        /// *   **suf_match**: suffix match
+        /// *   **full_match**: exact match
         /// </summary>
         [NameInMap("DomainSearchType")]
         [Validation(Required=false)]
         public string DomainSearchType { get; set; }
 
         /// <summary>
-        /// The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
+        /// The status of the domain name. Value values:
+        /// 
         /// *   **online**: indicates that the domain name is enabled.
         /// *   **offline**: indicates that the domain name is disabled.
         /// *   **configuring**: indicates that the domain name is being configured.
@@ -45,14 +47,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
+        /// The number of entries per page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// Tag.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// The key of tag N. Valid values of N: **1** to **20**.
             /// 
-            /// If you do not specify this parameter, all tag keys are queried.
+            /// By default, all tag keys are queried.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// The value of tag N. Valid values of N: **1** to **20**.
             /// 
-            /// If you do not specify this parameter, all tag values are queried.
+            /// By default, all tag values are queried.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

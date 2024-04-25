@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string IsDefault { get; set; }
 
             /// <summary>
-            /// Indicates whether the template group is locked. Valid values:
+            /// Indicates whether the transcoding template group is locked. Valid values:
             /// 
             /// *   **Disabled**: The template group is not locked.
             /// *   **Enabled**: The template group is locked.
@@ -93,21 +93,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Audio { get; set; }
 
                 /// <summary>
-                /// The video cropping configurations. The value is a JSON string. For example, you can set this parameter to extract 5 seconds of content from a video to generate a new video.
+                /// The clipping configurations of the video. The value is a JSON string. For example, this parameter is returned if you extract 5 seconds of content from a video to generate a new video.
                 /// </summary>
                 [NameInMap("Clip")]
                 [Validation(Required=false)]
                 public string Clip { get; set; }
 
                 /// <summary>
-                /// The format of the container that is used to encapsulate audio and video streams. The value is a JSON string.
+                /// The format of the container used to encapsulate audio and video streams. The value is a JSON string.
                 /// </summary>
                 [NameInMap("Container")]
                 [Validation(Required=false)]
                 public string Container { get; set; }
 
                 /// <summary>
-                /// CopyrightMark.
+                /// The content of the copyright watermark.
                 /// </summary>
                 [NameInMap("CopyrightMark")]
                 [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **4K-NBV1**
                 /// 
                 /// > *   You cannot change the definition of a transcoding template.
-                /// >*   You cannot modify the system parameters of Narrowband HD™ 1.0 transcoding templates such as the video resolution, audio resolution, and bitrate.
+                /// >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
                 /// >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
                 /// </summary>
                 [NameInMap("Definition")]
@@ -151,21 +151,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string EncryptSetting { get; set; }
 
                 /// <summary>
-                /// The transcoding segment configurations. This parameter is used when you transcode a media stream into an HLS file. The value is a JSON string.
+                /// The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON string.
                 /// </summary>
                 [NameInMap("MuxConfig")]
                 [Validation(Required=false)]
                 public string MuxConfig { get; set; }
 
                 /// <summary>
-                /// The packaging configuration. Only HTTP-Live-Streaming (HLS) packaging and DASH packaging are supported. The value is a JSON string.
+                /// The packaging configuration. Only HLS packaging and DASH packaging are supported. The value is a JSON string.
                 /// </summary>
                 [NameInMap("PackageSetting")]
                 [Validation(Required=false)]
                 public string PackageSetting { get; set; }
 
                 /// <summary>
-                /// The video rotation identifier. This parameter is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `[0,360]`.
+                /// The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `[0,360]`.
                 /// </summary>
                 [NameInMap("Rotate")]
                 [Validation(Required=false)]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// TraceMark.
+                /// The content of the tracing watermark.
                 /// </summary>
                 [NameInMap("TraceMark")]
                 [Validation(Required=false)]
                 public string TraceMark { get; set; }
 
                 /// <summary>
-                /// The conditional transcoding configurations. This parameter is used if you want to determine the basic logic based on the bitrate and resolution of the source file before the transcoded video is generated. The value is a JSON string.
+                /// The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the source file before the video is transcoded. The value is a JSON-formatted string.
                 /// </summary>
                 [NameInMap("TransConfig")]
                 [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TranscodeFileRegular { get; set; }
 
                 /// <summary>
-                /// The ID of the transcoding template.
+                /// The transcoding template ID.
                 /// </summary>
                 [NameInMap("TranscodeTemplateId")]
                 [Validation(Required=false)]
@@ -216,9 +216,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The type of the transcoding template. Valid values:
                 /// 
-                /// *   **Normal** (default): a common transcoding template. You cannot set the PackageSetting parameter for this type of template.
-                /// *   **VideoPackage**: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and creates a multi-bitrate video package. You must set the PackageSetting parameter for this type of template.
-                /// *   **SubtitlePackage**: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file that is generated by packaging the multi-bitrate video streams of the corresponding video. You must set the PackageSetting parameter for a subtitle packaging template and associate the subtitle packaging template with a video stream packaging template. You can configure only one subtitle packaging template in a template group.
+                /// *   **Normal** (default): a common transcoding template. The PackageSetting parameter cannot be set for this type of template.
+                /// *   **VideoPackage**: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and packages these video streams with a file. The PackageSetting parameter must be set for this type of template.
+                /// *   **SubtitlePackage**: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file generated by packaging the multi-bitrate video streams of the corresponding video without transcoding. You must set the PackageSetting parameter for a subtitle package template and associate the subtitle package template with a video stream package template. A template group can contain only one subtitle package template.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Video { get; set; }
 
                 /// <summary>
-                /// The IDs of associated watermarks.
+                /// The IDs of the associated watermarks.
                 /// </summary>
                 [NameInMap("WatermarkIds")]
                 [Validation(Required=false)]
