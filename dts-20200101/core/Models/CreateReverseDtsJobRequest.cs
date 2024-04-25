@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ShardPassword")]
+        [Validation(Required=false)]
+        public string ShardPassword { get; set; }
+
+        [NameInMap("ShardUsername")]
+        [Validation(Required=false)]
+        public string ShardUsername { get; set; }
+
     }
 
 }

@@ -3393,6 +3393,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardPassword))
+            {
+                query["ShardPassword"] = request.ShardPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardUsername))
+            {
+                query["ShardUsername"] = request.ShardUsername;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3423,6 +3431,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardPassword))
+            {
+                query["ShardPassword"] = request.ShardPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardUsername))
+            {
+                query["ShardUsername"] = request.ShardUsername;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11243,6 +11259,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["EndpointPort"] = request.EndpointPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointRegionId))
+            {
+                query["EndpointRegionId"] = request.EndpointRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
@@ -11337,6 +11357,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointPort))
             {
                 query["EndpointPort"] = request.EndpointPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointRegionId))
+            {
+                query["EndpointRegionId"] = request.EndpointRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
