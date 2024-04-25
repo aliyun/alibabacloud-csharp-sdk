@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? PageNumbers { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// The resource group ID. For more information about resource groups, see related documentation.
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeWhitelistTemplateRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// The resource group ID.
         /// </summary>

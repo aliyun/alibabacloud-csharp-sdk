@@ -30,11 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the original instance.
         /// 
-        /// > 
-        /// 
-        /// *   If you specify BackupId, you do not need to specify this parameter.
-        /// 
-        /// *   If you specify RestoreTime, you must also specify this parameter.
+        /// > *   If you specify BackupId, you do not need to specify this parameter.
+        /// > *   If you specify RestoreTime, you must also specify this parameter.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

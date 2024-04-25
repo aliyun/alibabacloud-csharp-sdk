@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InsName { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// The resource group ID. You can leave this parameter empty.
         /// </summary>

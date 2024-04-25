@@ -887,6 +887,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InsName"] = request.InsName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -939,6 +943,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
             {
                 query["InsName"] = request.InsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -11921,6 +11929,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PageNumbers"] = request.PageNumbers;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -11981,6 +11993,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumbers))
             {
                 query["PageNumbers"] = request.PageNumbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -12804,11 +12820,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ### Supported database engines
-          * *   MySQL
-          * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
           *
           * @param request DescribeAvailableZonesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12874,11 +12891,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ### Supported database engines
-          * *   MySQL
-          * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
           *
           * @param request DescribeAvailableZonesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12944,11 +12962,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ### Supported database engines
-          * *   MySQL
-          * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
           *
           * @param request DescribeAvailableZonesRequest
           * @return DescribeAvailableZonesResponse
@@ -12960,11 +12979,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * ### Supported database engines
-          * *   MySQL
-          * *   PostgreSQL
-          * *   SQL Server
-          * *   MariaDB
+          * ### [](#)Supported database engines
+          * *   RDS MySQL
+          * *   RDS PostgreSQL
+          * *   RDS SQL Server
+          * *   RDS MariaDB
+          * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
           *
           * @param request DescribeAvailableZonesRequest
           * @return DescribeAvailableZonesResponse
@@ -23177,6 +23197,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InsName"] = request.InsName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -23225,6 +23249,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
             {
                 query["InsName"] = request.InsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -23287,6 +23315,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeInstanceLinkedWhitelistTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          *
+          * @param request DescribeKmsAssociateResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKmsAssociateResourcesResponse
+         */
         public DescribeKmsAssociateResourcesResponse DescribeKmsAssociateResourcesWithOptions(DescribeKmsAssociateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23354,6 +23392,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeKmsAssociateResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          *
+          * @param request DescribeKmsAssociateResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeKmsAssociateResourcesResponse
+         */
         public async Task<DescribeKmsAssociateResourcesResponse> DescribeKmsAssociateResourcesWithOptionsAsync(DescribeKmsAssociateResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23421,12 +23469,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeKmsAssociateResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          *
+          * @param request DescribeKmsAssociateResourcesRequest
+          * @return DescribeKmsAssociateResourcesResponse
+         */
         public DescribeKmsAssociateResourcesResponse DescribeKmsAssociateResources(DescribeKmsAssociateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeKmsAssociateResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * ### [](#)Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          *
+          * @param request DescribeKmsAssociateResourcesRequest
+          * @return DescribeKmsAssociateResourcesResponse
+         */
         public async Task<DescribeKmsAssociateResourcesResponse> DescribeKmsAssociateResourcesAsync(DescribeKmsAssociateResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -29981,6 +30047,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -30030,6 +30100,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -30109,6 +30183,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -30160,6 +30238,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -30505,6 +30587,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InsName"] = request.InsName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -30557,6 +30643,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
             {
                 query["InsName"] = request.InsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -38288,9 +38378,9 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   RDS MySQL
           * *   RDS PostgreSQL
           * ### [](#)References
-          * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-          * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
           *
           * @param request ModifyDBProxyEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -38388,9 +38478,9 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   RDS MySQL
           * *   RDS PostgreSQL
           * ### [](#)References
-          * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-          * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
           *
           * @param request ModifyDBProxyEndpointRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -38488,9 +38578,9 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   RDS MySQL
           * *   RDS PostgreSQL
           * ### [](#)References
-          * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-          * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
           *
           * @param request ModifyDBProxyEndpointRequest
           * @return ModifyDBProxyEndpointResponse
@@ -38506,9 +38596,9 @@ namespace AlibabaCloud.SDK.Rds20140815
           * *   RDS MySQL
           * *   RDS PostgreSQL
           * ### [](#)References
-          * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-          * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-          * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+          * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+          * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
           *
           * @param request ModifyDBProxyEndpointRequest
           * @return ModifyDBProxyEndpointResponse
@@ -42301,6 +42391,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["IpWhitelist"] = request.IpWhitelist;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -42357,6 +42451,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhitelist))
             {
                 query["IpWhitelist"] = request.IpWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {

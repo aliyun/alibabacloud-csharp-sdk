@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateGADInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID. The primary instance serves as the central node of the global active database cluster.
+        /// The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID. The primary instance serves as the central node of the global active database cluster.
         /// 
-        /// > *   A primary instance can serve as the central node only of a single global active database cluster.
-        /// > *   Only a primary instance that is created in one of the following regions can serve as the central node of a global active database cluster: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+        /// > *   A primary instance can serve only as the central node of a single global active database cluster.
+        /// > *   The primary instance can serve as the central node of the global active database cluster only in the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
         /// </summary>
         [NameInMap("CentralDBInstanceId")]
         [Validation(Required=false)]
         public string CentralDBInstanceId { get; set; }
 
         /// <summary>
-        /// The username of the privileged account of the central node. You can call the [DescribeAccounts](~~26265~~) operation to query the privileged account of the central node.
+        /// The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.
         /// </summary>
         [NameInMap("CentralRdsDtsAdminAccount")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CentralRdsDtsAdminPassword { get; set; }
 
         /// <summary>
-        /// The region ID of the central node. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.
         /// </summary>
         [NameInMap("CentralRegionId")]
         [Validation(Required=false)]
@@ -104,16 +104,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
             /// *   The name cannot start with `http://` or `https://`.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("DBInstanceDescription")]
             [Validation(Required=false)]
             public string DBInstanceDescription { get; set; }
 
             /// <summary>
-            /// The storage capacity of the unit node that you want to create. Unit: GB. The storage capacity increases at a step size of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
+            /// The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("DBInstanceStorage")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **local_ssd**: local SSD. This is the recommended storage type.
             /// *   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.
             /// *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).
-            /// *   **cloud_essd2**: ESSD of PL2
+            /// *   **cloud_essd2**: ESSD of PL2.
             /// *   **cloud_essd3**: ESSD of PL3.
             /// 
             /// The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.
@@ -138,9 +138,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceStorageType { get; set; }
 
             /// <summary>
-            /// The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the available instance types in a region.
+            /// The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the DescribeAvailableResource operation to query the available instance types in a region.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("DbInstanceClass")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **interrupt**: DTS stops the synchronization task, reports an error, and then exits.
             /// *   **ignore**: DTS hides the conflicting primary key on the node.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("DtsConflict")]
             [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// 
             /// >  For more information, see [Specifications of data synchronization tasks](~~26605~~).
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("DtsInstanceClass")]
             [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The database engine of the unit node that you want to create. Set the value to **MySQL**.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **5.6**
             /// *   **5.5**
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]
@@ -206,28 +206,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// 
             /// >  The system automatically generates a purchase order and completes the payment. You do not need to manually confirm the purchase order or complete the payment.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
 
             /// <summary>
-            /// The region ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+            /// The region ID of the unit node that you want to create. You can call the DescribeRegions operation to query the most recent region list.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("RegionID")]
             [Validation(Required=false)]
             public string RegionID { get; set; }
 
             /// <summary>
-            /// The IP address whitelist of the unit node that you want to create. For more information, see [IP address whitelist](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+            /// The [IP address whitelist](~~43185~~) of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
             /// 
             /// *   IP addresses, such as `10.10.10.10`.
-            /// *   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.
+            /// *   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address in the whitelist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("SecurityIPList")]
             [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The vSwitch ID of the unit node that you want to create.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("VSwitchID")]
             [Validation(Required=false)]
@@ -245,40 +245,40 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The virtual private cloud (VPC) ID of the unit node that you want to create.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("VpcID")]
             [Validation(Required=false)]
             public string VpcID { get; set; }
 
             /// <summary>
-            /// The zone ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+            /// The zone ID of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("ZoneID")]
             [Validation(Required=false)]
             public string ZoneID { get; set; }
 
             /// <summary>
-            /// The zone ID of the secondary node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+            /// The zone ID of the secondary node of the unit node that you want to create. You can call the DescribeRegions operation to query the ID of the zone.
             /// 
             /// *   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.
             /// *   If the value of this parameter is different from the **zone ID** of the unit node that you want to create, the multiple-zone deployment method is used.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("ZoneIDSlave1")]
             [Validation(Required=false)]
             public string ZoneIDSlave1 { get; set; }
 
             /// <summary>
-            /// The zone ID of the logger node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+            /// The zone ID of the logger node of the unit node that you want to create. You can call the DescribeRegions operation to query the ID of the zone.
             /// 
             /// *   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.
             /// *   If the value of this parameter is different from the **zone ID** of the unit node that you want to create, the multiple-zone deployment method is used.
             /// 
-            /// **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
             [NameInMap("ZoneIDSlave2")]
             [Validation(Required=false)]

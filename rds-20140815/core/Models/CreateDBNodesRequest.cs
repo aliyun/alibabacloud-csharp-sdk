@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
-            [NameInMap("vswId")]
+            [NameInMap("vswitchId")]
             [Validation(Required=false)]
-            public string VswId { get; set; }
+            public string VswitchId { get; set; }
 
             /// <summary>
             /// The zone ID of the node.

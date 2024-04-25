@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the region ID of the instance.
+        /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -140,9 +140,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the zone ID of the instance.
+        /// The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID of the instance.
         /// 
-        /// >  If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set this parameter to `cn-hangzhou-g` or `cn-hangzhou-h`.
+        /// > If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones.`` For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set this parameter to `cn-hangzhou-g` or cn-hangzhou-h.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

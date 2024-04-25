@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The cluster name.
+            /// The name of the cluster.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> GadInstanceMembers { get; set; }
             public class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers : TeaModel {
                 /// <summary>
-                /// The node ID.
+                /// The ID of the node.
                 /// </summary>
                 [NameInMap("DBInstanceID")]
                 [Validation(Required=false)]
@@ -70,23 +70,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the node resides.
+                /// The ID of the region where the node resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The node type. Valid values:
+                /// The type of the node. Valid values:
                 /// 
-                /// *   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
+                /// *   **CENTRAL**: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
                 /// *   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.
                 /// </summary>
                 [NameInMap("Role")]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// The cluster status. Valid values:
+            /// The status of the cluster. Valid values:
             /// 
             /// *   **activation**: The cluster is running.
             /// *   **creating**: The cluster is being created.

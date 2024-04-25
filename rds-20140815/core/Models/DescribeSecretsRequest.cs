@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group where the instance is located.
+        /// The ID of the resource group to which the instance belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
