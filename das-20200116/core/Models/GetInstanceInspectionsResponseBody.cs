@@ -17,17 +17,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The inspection and scoring results.
+        /// The details.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetInstanceInspectionsResponseBodyData Data { get; set; }
         public class GetInstanceInspectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// The mode in which the inspection and scoring task was initiated. Valid values:
-            /// 
-            /// *   **0**: automatic mode
-            /// *   **1**: manual mode
+            /// The detailed information.
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -43,9 +40,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:
                     /// 
-                    /// * **0**: disabled.
-                    /// * **1**: enabled.
-                    /// * **2**: not supported.
+                    /// *   **0**: disabled.
+                    /// *   **1**: enabled.
+                    /// *   **2**: not supported.
                     /// </summary>
                     [NameInMap("AutoIndex")]
                     [Validation(Required=false)]
@@ -54,20 +51,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// Indicates whether the automatic throttling feature is enabled. Valid values:
                     /// 
-                    /// * **0**: disabled.
-                    /// * **1**: enabled.
-                    /// * **2**: not supported.
+                    /// *   **0**: disabled.
+                    /// *   **1**: enabled.
+                    /// *   **2**: not supported.
                     /// </summary>
                     [NameInMap("AutoLimitedSql")]
                     [Validation(Required=false)]
                     public int? AutoLimitedSql { get; set; }
 
                     /// <summary>
-                    /// Indicates whether automatic reclamation of fragments is enabled. Valid values:
+                    /// Indicates whether the automatic fragment recycling feature is enabled. Valid values:
                     /// 
-                    /// * **0**: disabled.
-                    /// * **1**: enabled.
-                    /// * **2**: not supported.
+                    /// *   **0**: disabled.
+                    /// *   **1**: enabled.
+                    /// *   **2**: not supported.
                     /// </summary>
                     [NameInMap("AutoResourceOptimize")]
                     [Validation(Required=false)]
@@ -76,9 +73,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// Indicates whether the auto scaling feature is enabled. Valid values:
                     /// 
-                    /// * **0**: disabled.
-                    /// * **1**: enabled.
-                    /// * **2**: not supported.
+                    /// *   **0**: disabled.
+                    /// *   **1**: enabled.
+                    /// *   **2**: not supported.
                     /// </summary>
                     [NameInMap("AutoScale")]
                     [Validation(Required=false)]
@@ -87,9 +84,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// Indicates whether the event subscription feature is enabled. Valid values:
                     /// 
-                    /// * **0**: disabled.
-                    /// * **1**: enabled.
-                    /// * **2**: not supported.
+                    /// *   **0**: disabled.
+                    /// *   **1**: enabled.
+                    /// *   **2**: not supported.
                     /// </summary>
                     [NameInMap("EventSubscription")]
                     [Validation(Required=false)]
@@ -98,18 +95,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// The returned data.
+                /// The data returned.
                 /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Data { get; set; }
 
                 /// <summary>
-                /// Indicates whether DAS Professional Edition is enabled. Valid values:
+                /// Indicates whether DAS Enterprise Edition is enabled. Valid values:
                 /// 
-                /// * **0**: disabled.
-                /// * **1**: enabled.
-                /// * **2**: not supported.
+                /// *   **0**: disabled.
+                /// *   **1**: enabled.
+                /// *   **2**: not supported.
                 /// </summary>
                 [NameInMap("EnableDasPro")]
                 [Validation(Required=false)]
@@ -118,7 +115,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// 
-                /// > The end time must be later than the start time.
+                /// >  The end time must be later than the start time.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -132,14 +129,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// The details of the instance.
+                /// The information about the instance.
                 /// </summary>
                 [NameInMap("Instance")]
                 [Validation(Required=false)]
                 public GetInstanceInspectionsResponseBodyDataListInstance Instance { get; set; }
                 public class GetInstanceInspectionsResponseBodyDataListInstance : TeaModel {
                     /// <summary>
-                    /// The account ID. You can obtain the account ID on the **Security Settings** page in the Alibaba Cloud **account management center**.
+                    /// The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.
                     /// </summary>
                     [NameInMap("AccountId")]
                     [Validation(Required=false)]
@@ -148,8 +145,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The connection mode of the instance. Valid values:
                     /// 
-                    /// * **standard**: standard mode.
-                    /// * **safe**: database proxy mode.
+                    /// *   **standard**: standard mode.
+                    /// *   **safe**: database proxy mode.
                     /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
@@ -165,9 +162,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The database engine. Valid values:
                     /// 
-                    /// * **MySQL**
-                    /// * **Redis**
-                    /// * **PolarDBMySQL**
+                    /// *   **MySQL**
+                    /// *   **Redis**
+                    /// *   **PolarDBMySQL**
                     /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
@@ -181,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string EngineVersion { get; set; }
 
                     /// <summary>
-                    /// The name of the instance.
+                    /// The instance name.
                     /// </summary>
                     [NameInMap("InstanceAlias")]
                     [Validation(Required=false)]
@@ -190,11 +187,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The type of the instance on which the database is deployed. Valid values:
                     /// 
-                    /// * **RDS**: an Alibaba Cloud database instance.
-                    /// * **ECS**: an ECS instance on which a self-managed database is deployed.
-                    /// * **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
+                    /// *   **RDS**: an Alibaba Cloud database instance.
+                    /// *   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.
+                    /// *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
                     /// 
-                    /// > The value IDC indicates that the instance is deployed in a data center.
+                    /// >  The value IDC indicates that the instance is deployed in a data center.
                     /// </summary>
                     [NameInMap("InstanceArea")]
                     [Validation(Required=false)]
@@ -236,7 +233,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// The ID of the region in which the instance resides.
+                    /// The region ID of the instance.
                     /// </summary>
                     [NameInMap("Region")]
                     [Validation(Required=false)]
@@ -266,7 +263,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// The inspection scores of the instance.
+                /// The inspection score of the instance.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
@@ -280,7 +277,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public Dictionary<string, object> ScoreMap { get; set; }
 
                 /// <summary>
-                /// The start time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// The start time of the inspection and scoring task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -289,9 +286,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// The state of the inspection and scoring task. Valid values:
                 /// 
-                /// * **0**: The task is waiting for execution.
-                /// * **1**: The task is in progress.
-                /// * **2**: The task is complete.
+                /// *   **0**: The task is waiting for execution.
+                /// *   **1**: The task is in progress.
+                /// *   **2**: The task is complete.
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -300,8 +297,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// The mode in which the inspection and scoring task was initiated. Valid values:
                 /// 
-                /// * **0**: automatic mode
-                /// * **1**: manual mode
+                /// *   **0**: automatic mode.
+                /// *   **1**: manual mode.
                 /// </summary>
                 [NameInMap("TaskType")]
                 [Validation(Required=false)]

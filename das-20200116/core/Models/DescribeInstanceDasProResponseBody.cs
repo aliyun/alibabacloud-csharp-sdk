@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether DAS Professional Edition is enabled for the database instance.
+        /// Indicates whether DAS Enterprise Edition is enabled for the database instance. Valid values:
         /// 
         /// *   **true**
         /// *   **false**

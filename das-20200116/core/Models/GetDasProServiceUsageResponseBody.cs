@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public GetDasProServiceUsageResponseBodyData Data { get; set; }
         public class GetDasProServiceUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the DAS Professional Edition instance.
+            /// The ID of the DAS Enterprise Edition instance.
             /// </summary>
             [NameInMap("commodityInstanceId")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// The point of time when DAS Professional Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("expireTime")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// Indicates whether DAS Professional Edition for the database instance has expired. Valid values:
+            /// Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SqlRetention { get; set; }
 
             /// <summary>
-            /// The time when DAS Professional Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("startTime")]
             [Validation(Required=false)]

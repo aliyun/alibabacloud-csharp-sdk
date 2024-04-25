@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Downgrade { get; set; }
 
             /// <summary>
-            /// The observation window of the automatic bandwidth upgrade feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
+            /// The observation window of the automatic bandwidth adjustment feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
             /// 
             /// *   **1m**
             /// *   **5m**
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// *   **true**
             /// *   **false**
             /// 
-            /// >  The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition instances that use cloud disks on the China site (aliyun.com).
+            /// > The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition cloud-native instances on the China site (aliyun.com).
             /// </summary>
             [NameInMap("Apply")]
             [Validation(Required=false)]
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// *   **80**
             /// *   **90**
             /// 
-            /// >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+            /// > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
             /// </summary>
             [NameInMap("CpuUsageUpperThreshold")]
             [Validation(Required=false)]
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// *   **true**
             /// *   **false**
             /// 
-            /// >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+            /// > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
             /// </summary>
             [NameInMap("Downgrade")]
             [Validation(Required=false)]
@@ -324,17 +324,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// The maximum number of read-only nodes of the instance.
             /// 
-            /// >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.
+            /// > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.
             /// </summary>
             [NameInMap("MaxReadOnlyNodes")]
             [Validation(Required=false)]
             public int? MaxReadOnlyNodes { get; set; }
 
             /// <summary>
-            /// The maximum specifications to which the database instance can be upgraded. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, refer to the following topics:
+            /// The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:
             /// 
-            /// *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).
-            /// *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~).
+            /// *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~)
+            /// *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~)
             /// </summary>
             [NameInMap("MaxSpec")]
             [Validation(Required=false)]
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// *   **80**
             /// *   **90**
             /// 
-            /// >  This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition instance that uses cloud disks on the China site (aliyun.com).
+            /// > This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition cloud-native instance on the China site (aliyun.com).
             /// </summary>
             [NameInMap("MemUsageUpperThreshold")]
             [Validation(Required=false)]
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// 
             /// *   Valid values for PolarDB for MySQL Cluster Edition instances: **5m**, **10m**, **15m**, and **30m**.
             /// *   Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: **5m**, **20m**, **30m**, **40m**, and **1h**.
-            /// *   Valid values for ApsaraDB for Redis Community Edition instances that use cloud disks: **5m**, **10m**, **15m**, and **30m**.
+            /// *   Valid values for ApsaraDB for Redis Community Edition cloud-native instances: **5m**, **10m**, **15m**, and **30m**.
             /// </summary>
             [NameInMap("ObservationWindowSize")]
             [Validation(Required=false)]

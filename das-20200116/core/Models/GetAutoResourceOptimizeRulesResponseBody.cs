@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// Indicates whether the automatic fragment recycling feature is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("AutoDefragment")]
                 [Validation(Required=false)]
                 public bool? AutoDefragment { get; set; }
 
                 /// <summary>
-                /// Indicates whether DAS Professional Edition is enabled. Valid values:
+                /// Indicates whether DAS Enterprise Edition is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("DasProOn")]
                 [Validation(Required=false)]
@@ -88,16 +88,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// The number of database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
+            /// The number of database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.
             /// </summary>
             [NameInMap("HasEnableRuleButNotDasProCount")]
             [Validation(Required=false)]
             public long? HasEnableRuleButNotDasProCount { get; set; }
 
             /// <summary>
-            /// The database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
+            /// The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.
             /// 
-            /// > This type of database instance does not perform automatic fragment recycling tasks until DAS Professional Edition is enabled for the instances again.
+            /// >  Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.
             /// </summary>
             [NameInMap("HasEnableRuleButNotDasProList")]
             [Validation(Required=false)]
@@ -106,18 +106,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// Indicates whether the automatic fragment recycling feature is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("AutoDefragment")]
                 [Validation(Required=false)]
                 public bool? AutoDefragment { get; set; }
 
                 /// <summary>
-                /// Indicates whether DAS Professional Edition is enabled. Valid values:
+                /// Indicates whether DAS Enterprise Edition is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("DasProOn")]
                 [Validation(Required=false)]
@@ -193,18 +193,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// Indicates whether the automatic fragment recycling feature is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**:
+                /// *   **false**
                 /// </summary>
                 [NameInMap("AutoDefragment")]
                 [Validation(Required=false)]
                 public bool? AutoDefragment { get; set; }
 
                 /// <summary>
-                /// Indicates whether DAS Professional Edition is enabled. Valid values:
+                /// Indicates whether DAS Enterprise Edition is enabled. Valid values:
                 /// 
-                /// * **true**
-                /// * **false**
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("DasProOn")]
                 [Validation(Required=false)]
@@ -225,10 +225,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public double? TableFragmentationRatio { get; set; }
 
                 /// <summary>
-                /// Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-                /// 
-                /// true
-                /// false
+                /// The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.
                 /// </summary>
                 [NameInMap("TableSpaceSize")]
                 [Validation(Required=false)]

@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// Specifies whether to filter instances for which DAS Professional Edition is enabled. Valid values:
+        /// Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:
         /// 
-        /// *   **true**: filters instances for which DAS Professional Edition is enabled.
-        /// *   **false**: does not filter instances for which DAS Professional Edition is enabled.
+        /// *   **true**
+        /// *   **false**
         /// 
-        /// >  If you set the value to **true**, only database instances for which DAS Professional Edition is disabled are queried. If you set the value to **false**, all database instances are queried.
+        /// >  If you set this parameter to **true**, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to **false**, all database instances are queried.
         /// </summary>
         [NameInMap("FilterEnable")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The node ID.
         /// 
-        /// >  This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.
+        /// >  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

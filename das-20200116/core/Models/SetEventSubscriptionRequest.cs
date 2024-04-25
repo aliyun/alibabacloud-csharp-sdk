@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **Notice**: events that trigger notifications, including events at the **Notice**, **Optimization**, **Warn**, and **Critical** levels.
         /// *   **Optimization**: events that trigger optimizations, including events at the **Optimization**, **Warn**, and **Critical** levels.
         /// *   **Warn**: events that trigger warnings, including events at the **Warn** and **Critical** levels.
-        /// *   **Critical**: events that trigger critical warnings.****
+        /// *   **Critical**: events that trigger critical warnings.
         /// 
         /// The following content describes the events at each level in detail:
         /// 

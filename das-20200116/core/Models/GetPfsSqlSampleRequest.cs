@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetPfsSqlSampleRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
-        /// >  The end time must be later than the start time. You can query the data of up to seven days within the last month.
+        /// >  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The instance ID.
         /// 
-        /// >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.
+        /// >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The node ID.
         /// 
-        /// >  This parameter must be specified for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.
+        /// >  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

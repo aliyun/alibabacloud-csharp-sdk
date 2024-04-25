@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// The queried SQL sample data.
+        /// The SQL sample data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public double? LockLatency { get; set; }
 
             /// <summary>
-            /// The logical database ID.
+            /// The ID of the logical database.
             /// </summary>
             [NameInMap("LogicId")]
             [Validation(Required=false)]
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:
             /// 
-            /// * **1:** yes.
-            /// * **0:** no.
+            /// *   **1**: yes.
+            /// *   **0**: no.
             /// </summary>
             [NameInMap("NoGoodIndexUsed")]
             [Validation(Required=false)]
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// Indicates whether table scans were performed when indexes were not used. Valid values:
             /// 
-            /// * **1:** yes.
-            /// * **0:** no.
+            /// *   **1**: yes.
+            /// *   **0**: no.
             /// </summary>
             [NameInMap("NoIndexUsed")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// The node ID.
             /// 
-            /// > This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.
+            /// >  This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// The number of joins that are used to perform table scans without using indexes.
             /// 
-            /// > This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+            /// > : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.
             /// </summary>
             [NameInMap("SelectFullJoin")]
             [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// The number of joins that did not have key values. The keys and values were checked for each row of data.
             /// 
-            /// >  This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+            /// > : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.
             /// </summary>
             [NameInMap("SelectRangeCheck")]
             [Validation(Required=false)]
@@ -218,14 +218,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SortScan { get; set; }
 
             /// <summary>
-            /// The SQL sample.
+            /// The sample SQL statement.
             /// </summary>
             [NameInMap("Sql")]
             [Validation(Required=false)]
             public string Sql { get; set; }
 
             /// <summary>
-            /// The SQL ID.
+            /// The SQL statement ID.
             /// </summary>
             [NameInMap("SqlId")]
             [Validation(Required=false)]
