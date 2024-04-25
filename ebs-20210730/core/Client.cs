@@ -3513,6 +3513,112 @@ namespace AlibabaCloud.SDK.Ebs20210730
             return await DescribeEventsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeLensMonitorDisksResponse DescribeLensMonitorDisksWithOptions(DescribeLensMonitorDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskCategory))
+            {
+                query["DiskCategory"] = request.DiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIds))
+            {
+                query["DiskIds"] = request.DiskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LensTags))
+            {
+                query["LensTags"] = request.LensTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLensMonitorDisks",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLensMonitorDisksResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeLensMonitorDisksResponse> DescribeLensMonitorDisksWithOptionsAsync(DescribeLensMonitorDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskCategory))
+            {
+                query["DiskCategory"] = request.DiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIds))
+            {
+                query["DiskIds"] = request.DiskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LensTags))
+            {
+                query["LensTags"] = request.LensTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLensMonitorDisks",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLensMonitorDisksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeLensMonitorDisksResponse DescribeLensMonitorDisks(DescribeLensMonitorDisksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLensMonitorDisksWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeLensMonitorDisksResponse> DescribeLensMonitorDisksAsync(DescribeLensMonitorDisksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLensMonitorDisksWithOptionsAsync(request, runtime);
+        }
+
         /**
           * ## Usage notes
           * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
