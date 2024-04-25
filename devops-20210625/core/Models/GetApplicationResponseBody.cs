@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetApplicationResponseBody : TeaModel {
+        [NameInMap("appTemplateDisplayName")]
+        [Validation(Required=false)]
+        public string AppTemplateDisplayName { get; set; }
+
+        [NameInMap("appTemplateName")]
+        [Validation(Required=false)]
+        public string AppTemplateName { get; set; }
+
         [NameInMap("creatorAccountId")]
         [Validation(Required=false)]
         public string CreatorAccountId { get; set; }
