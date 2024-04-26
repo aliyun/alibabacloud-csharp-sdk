@@ -8445,6 +8445,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLogCode))
             {
                 body["SourceLogCode"] = request.SourceLogCode;
@@ -8479,6 +8487,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLogCode))
             {
@@ -8527,6 +8543,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceProdCode))
             {
                 body["SourceProdCode"] = request.SourceProdCode;
@@ -8557,6 +8581,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceProdCode))
             {
