@@ -1101,6 +1101,140 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await CreateVerifySettingWithOptionsAsync(request, runtime);
         }
 
+        public CredentialVerifyResponse CredentialVerifyWithOptions(CredentialVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNum))
+            {
+                query["CertNum"] = request.CertNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredName))
+            {
+                query["CredName"] = request.CredName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredType))
+            {
+                query["CredType"] = request.CredType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCheck))
+            {
+                query["IsCheck"] = request.IsCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOCR))
+            {
+                query["IsOCR"] = request.IsOCR;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageContext))
+            {
+                body["ImageContext"] = request.ImageContext;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CredentialVerifyResponse> CredentialVerifyWithOptionsAsync(CredentialVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNum))
+            {
+                query["CertNum"] = request.CertNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredName))
+            {
+                query["CredName"] = request.CredName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredType))
+            {
+                query["CredType"] = request.CredType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                query["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCheck))
+            {
+                query["IsCheck"] = request.IsCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOCR))
+            {
+                query["IsOCR"] = request.IsOCR;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageContext))
+            {
+                body["ImageContext"] = request.ImageContext;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CredentialVerifyResponse CredentialVerify(CredentialVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialVerifyWithOptions(request, runtime);
+        }
+
+        public async Task<CredentialVerifyResponse> CredentialVerifyAsync(CredentialVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialVerifyWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDeviceInfoResponse DescribeDeviceInfoWithOptions(DescribeDeviceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
