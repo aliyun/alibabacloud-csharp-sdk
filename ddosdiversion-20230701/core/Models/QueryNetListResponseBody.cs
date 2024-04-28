@@ -9,13 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 {
     public class QueryNetListResponseBody : TeaModel {
+        /// <summary>
+        /// The status code.
+        /// 
+        /// *   **200**: The request was successful.
+        /// *   Other codes: The request failed.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// The CIDR blocks.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<QueryNetListResponseBodyData> Data { get; set; }
+        public QueryNetListResponseBodyData Data { get; set; }
         public class QueryNetListResponseBodyData : TeaModel {
             [NameInMap("Nets")]
             [Validation(Required=false)]
@@ -29,16 +38,10 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
                     [Validation(Required=false)]
                     public QueryNetListResponseBodyDataNetsDDoSDefenseCleanTh CleanTh { get; set; }
                     public class QueryNetListResponseBodyDataNetsDDoSDefenseCleanTh : TeaModel {
-                        /// <summary>
-                        /// Mbps。
-                        /// </summary>
                         [NameInMap("Mbps")]
                         [Validation(Required=false)]
                         public int? Mbps { get; set; }
 
-                        /// <summary>
-                        /// Pps。
-                        /// </summary>
                         [NameInMap("Pps")]
                         [Validation(Required=false)]
                         public int? Pps { get; set; }
@@ -107,11 +110,11 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 
                 [NameInMap("NetExtend")]
                 [Validation(Required=false)]
-                public long? NetExtend { get; set; }
+                public string NetExtend { get; set; }
 
                 [NameInMap("NetMain")]
                 [Validation(Required=false)]
-                public string NetMain { get; set; }
+                public long? NetMain { get; set; }
 
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
@@ -145,10 +148,16 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 
         }
 
+        /// <summary>
+        /// The response parameters.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
