@@ -33,6 +33,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string SaveType { get; set; }
 
+                [NameInMap("StandardSmartTagJob")]
+                [Validation(Required=false)]
+                public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob StandardSmartTagJob { get; set; }
+                public class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob : TeaModel {
+                    [NameInMap("AiJobId")]
+                    [Validation(Required=false)]
+                    public string AiJobId { get; set; }
+
+                    [NameInMap("ResultUrl")]
+                    [Validation(Required=false)]
+                    public string ResultUrl { get; set; }
+
+                    [NameInMap("Results")]
+                    [Validation(Required=false)]
+                    public List<GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults> Results { get; set; }
+                    public class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults : TeaModel {
+                        [NameInMap("Data")]
+                        [Validation(Required=false)]
+                        public string Data { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

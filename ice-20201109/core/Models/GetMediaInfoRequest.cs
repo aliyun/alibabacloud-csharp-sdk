@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string OutputType { get; set; }
 
+        [NameInMap("ReturnDetailedInfo")]
+        [Validation(Required=false)]
+        public string ReturnDetailedInfo { get; set; }
+
     }
 
 }

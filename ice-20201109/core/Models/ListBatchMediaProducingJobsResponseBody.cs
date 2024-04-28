@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class GetBatchMediaProducingJobResponseBody : TeaModel {
-        [NameInMap("EditingBatchJob")]
+    public class ListBatchMediaProducingJobsResponseBody : TeaModel {
+        [NameInMap("EditingBatchJobList")]
         [Validation(Required=false)]
-        public GetBatchMediaProducingJobResponseBodyEditingBatchJob EditingBatchJob { get; set; }
-        public class GetBatchMediaProducingJobResponseBodyEditingBatchJob : TeaModel {
+        public List<ListBatchMediaProducingJobsResponseBodyEditingBatchJobList> EditingBatchJobList { get; set; }
+        public class ListBatchMediaProducingJobsResponseBodyEditingBatchJobList : TeaModel {
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
@@ -53,42 +53,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            [NameInMap("SubJobList")]
-            [Validation(Required=false)]
-            public List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> SubJobList { get; set; }
-            public class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList : TeaModel {
-                [NameInMap("ErrorCode")]
-                [Validation(Required=false)]
-                public string ErrorCode { get; set; }
-
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-
-                [NameInMap("JobId")]
-                [Validation(Required=false)]
-                public string JobId { get; set; }
-
-                [NameInMap("MediaId")]
-                [Validation(Required=false)]
-                public string MediaId { get; set; }
-
-                [NameInMap("MediaURL")]
-                [Validation(Required=false)]
-                public string MediaURL { get; set; }
-
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-
-            }
-
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
 
         }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
