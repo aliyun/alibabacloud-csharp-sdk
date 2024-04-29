@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
-    public class DescribeDomainQpsWithCacheResponse : TeaModel {
+    public class ModifyElasticBizQpsResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public DescribeDomainQpsWithCacheResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public ModifyElasticBizQpsResponseBody Body { get; set; }
 
     }
 
