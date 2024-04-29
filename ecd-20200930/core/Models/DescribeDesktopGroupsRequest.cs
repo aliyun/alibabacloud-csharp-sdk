@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the desktop templates.
+        /// The IDs of the cloud computer templates.
         /// </summary>
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// The desktop group ID.
+        /// The ID of the cloud computer pool.
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// The name of the desktop group that you want to query. Fuzzy search is supported.
+        /// The name of the cloud computer pool to query. Fuzzy search is supported.
         /// </summary>
         [NameInMap("DesktopGroupName")]
         [Validation(Required=false)]
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// The authorized users.
+        /// The authorized user IDs of cloud computer pools.
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -66,149 +66,102 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The workspace ID of the desktop group that you want to query.
+        /// The ID of the office network to which the cloud computer pool belongs.
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// The desktop group type.
+        /// The type of the cloud computer pool.
+        /// 
+        /// >  This parameter is not publicly available.
         /// 
         /// Valid values:
         /// 
-        /// *   0
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     personal desktop group
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   1
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     shared desktop group (multi-session)
-        /// 
-        ///     <!-- -->
+        /// *   0: individual (single session)
+        /// *   1: shared (multiple sessions)
         /// </summary>
         [NameInMap("OwnType")]
         [Validation(Required=false)]
         public long? OwnType { get; set; }
 
         /// <summary>
-        /// The validity period of the desktop group. The unit is specified by the PeriodUnit parameter.
+        /// The subscription duration of the cloud computer pool. The unit is specified by the `PeriodUnit` parameter.
+        /// 
+        /// *   Valid values if the `PeriodUnit` parameter is set to `Month`:
+        /// 
+        ///     *   1
+        ///     *   2
+        ///     *   3
+        ///     *   6
+        /// 
+        /// *   Valid values if the `PeriodUnit` parameter is set to `Year`:
+        /// 
+        ///     *   1
+        ///     *   2
+        ///     *   3
+        ///     *   4
+        ///     *   5
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the duration.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   Month
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Year
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Day
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// The unit of the subscription duration.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The ID of the policy with which the desktop group is associated.
+        /// The ID of the policy that you want to associate with the cloud computer pool.
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// The protocol. Valid values:
+        /// The protocol type.
         /// 
-        /// *   ASP
-        /// *   HDX
+        /// Valid values:
+        /// 
+        /// *   High-definition Experience (HDX)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Adaptive Streaming Protocol (ASP)
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The payment status of the desktop group.
+        /// The payment status of the cloud computer pool.
         /// 
         /// Valid values:
         /// 
-        /// *   0
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     unpaid
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   1
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     paid
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   2
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     :
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     overdue or expired
-        /// 
-        ///     <!-- -->
+        /// *   0: unpaid
+        /// *   1: paid
+        /// *   2: overdue or expired
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

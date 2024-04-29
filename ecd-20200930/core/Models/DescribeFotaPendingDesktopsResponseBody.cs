@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The cloud computers whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).
+        /// The cloud computers whose images can be and are pending to be updated to the version specified in `TaskUid`.
         /// </summary>
         [NameInMap("FotaPendingDesktops")]
         [Validation(Required=false)]
@@ -31,35 +31,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// The cloud computer ID.
+            /// The ID of the cloud computer.
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// The cloud computer name.
+            /// The name of the cloud computer.
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// The Firmware Over-The-Air (FOTA) update project of the cloud computer.
+            /// > This parameter is not publicly available.
             /// </summary>
             [NameInMap("FotaProject")]
             [Validation(Required=false)]
             public string FotaProject { get; set; }
 
             /// <summary>
-            /// The office network ID.
+            /// The ID of the office network.
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// The information about the connected sessions.
+            /// The connected sessions.
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
@@ -75,7 +75,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// The status.
+            /// The status of the cloud computer.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   0: The cloud computer is being created.
+            /// *   1: The cloud computer is being started.
+            /// *   2: The cloud computer is running.
+            /// *   3: The cloud computer is being stopped.
+            /// *   5: The cloud computer is stopped.
+            /// *   6: The cloud computer expires.
+            /// *   7: The cloud computer is deleted.
+            /// *   9: Failed to create the cloud computer.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

@@ -143,6 +143,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AdHostname { get; set; }
 
+            [NameInMap("BackupDCHostname")]
+            [Validation(Required=false)]
+            public string BackupDCHostname { get; set; }
+
+            [NameInMap("BackupDns")]
+            [Validation(Required=false)]
+            public string BackupDns { get; set; }
+
             /// <summary>
             /// The maximum public bandwidth value. Valid values: 0 to 1000.\
             /// If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.
@@ -300,6 +308,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EnableInternetAccess")]
             [Validation(Required=false)]
             public bool? EnableInternetAccess { get; set; }
+
+            [NameInMap("EnableServiceRoute")]
+            [Validation(Required=false)]
+            public bool? EnableServiceRoute { get; set; }
 
             /// <summary>
             /// An array of Apsara File Storage NAS (NAS) file system IDs.

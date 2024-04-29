@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopSessionsRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the cloud computers.
+        /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
+        /// <summary>
+        /// The name of the cloud computer.
+        /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
         public string DesktopName { get; set; }

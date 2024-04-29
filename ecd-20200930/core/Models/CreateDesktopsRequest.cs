@@ -331,6 +331,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        [NameInMap("MonthDesktopSetting")]
+        [Validation(Required=false)]
+        public CreateDesktopsRequestMonthDesktopSetting MonthDesktopSetting { get; set; }
+        public class CreateDesktopsRequestMonthDesktopSetting : TeaModel {
+            [NameInMap("BuyerId")]
+            [Validation(Required=false)]
+            public long? BuyerId { get; set; }
+
+            [NameInMap("DesktopId")]
+            [Validation(Required=false)]
+            public string DesktopId { get; set; }
+
+            [NameInMap("UseDuration")]
+            [Validation(Required=false)]
+            public int? UseDuration { get; set; }
+
+        }
+
         /// <summary>
         /// The office network ID.
         /// </summary>
