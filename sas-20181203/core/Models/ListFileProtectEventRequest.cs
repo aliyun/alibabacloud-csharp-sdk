@@ -24,6 +24,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// The end of the time range to query.
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// The instance ID of the asset.
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// The name of the server.
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
+        /// The public IP address of the asset that you want to query.
+        /// </summary>
+        [NameInMap("InternetIp")]
+        [Validation(Required=false)]
+        public string InternetIp { get; set; }
+
+        /// <summary>
+        /// The private IP address of the asset that you want to query.
+        /// </summary>
+        [NameInMap("IntranetIp")]
+        [Validation(Required=false)]
+        public string IntranetIp { get; set; }
+
+        /// <summary>
         /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
@@ -38,6 +73,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// The start of the time range to query.
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        /// <summary>
         /// The status of the event. Valid values:
         /// 
         /// *   0: unhandled
@@ -47,6 +89,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// The server UUID.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+        /// </summary>
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

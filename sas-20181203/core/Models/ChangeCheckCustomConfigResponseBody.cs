@@ -25,6 +25,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("IllegalRepairConfigs")]
+        [Validation(Required=false)]
+        public List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> IllegalRepairConfigs { get; set; }
+        public class ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>

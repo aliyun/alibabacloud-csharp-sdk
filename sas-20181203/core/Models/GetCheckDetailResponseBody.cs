@@ -116,6 +116,84 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("RepairReset")]
+        [Validation(Required=false)]
+        public string RepairReset { get; set; }
+
+        [NameInMap("RepairSetting")]
+        [Validation(Required=false)]
+        public GetCheckDetailResponseBodyRepairSetting RepairSetting { get; set; }
+        public class GetCheckDetailResponseBodyRepairSetting : TeaModel {
+            [NameInMap("FlowStep")]
+            [Validation(Required=false)]
+            public List<GetCheckDetailResponseBodyRepairSettingFlowStep> FlowStep { get; set; }
+            public class GetCheckDetailResponseBodyRepairSettingFlowStep : TeaModel {
+                [NameInMap("ShowText")]
+                [Validation(Required=false)]
+                public string ShowText { get; set; }
+
+                [NameInMap("Step")]
+                [Validation(Required=false)]
+                public string Step { get; set; }
+
+            }
+
+            [NameInMap("RepairConfigs")]
+            [Validation(Required=false)]
+            public List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> RepairConfigs { get; set; }
+            public class GetCheckDetailResponseBodyRepairSettingRepairConfigs : TeaModel {
+                [NameInMap("CustomFlag")]
+                [Validation(Required=false)]
+                public bool? CustomFlag { get; set; }
+
+                [NameInMap("DefaultValue")]
+                [Validation(Required=false)]
+                public string DefaultValue { get; set; }
+
+                [NameInMap("ExclusiveName")]
+                [Validation(Required=false)]
+                public List<string> ExclusiveName { get; set; }
+
+                [NameInMap("FlowId")]
+                [Validation(Required=false)]
+                public string FlowId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("ShowName")]
+                [Validation(Required=false)]
+                public string ShowName { get; set; }
+
+                [NameInMap("TypeDefine")]
+                [Validation(Required=false)]
+                public string TypeDefine { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("RepairReset")]
+            [Validation(Required=false)]
+            public bool? RepairReset { get; set; }
+
+            [NameInMap("RepairSupport")]
+            [Validation(Required=false)]
+            public bool? RepairSupport { get; set; }
+
+            [NameInMap("RepairSupportType")]
+            [Validation(Required=false)]
+            public int? RepairSupportType { get; set; }
+
+        }
+
+        [NameInMap("RepairSupportType")]
+        [Validation(Required=false)]
+        public int? RepairSupportType { get; set; }
+
         /// <summary>
         /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>

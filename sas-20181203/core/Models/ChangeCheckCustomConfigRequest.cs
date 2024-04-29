@@ -58,6 +58,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RepairConfigs")]
+        [Validation(Required=false)]
+        public List<ChangeCheckCustomConfigRequestRepairConfigs> RepairConfigs { get; set; }
+        public class ChangeCheckCustomConfigRequestRepairConfigs : TeaModel {
+            [NameInMap("FlowId")]
+            [Validation(Required=false)]
+            public string FlowId { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Operation")]
+            [Validation(Required=false)]
+            public string Operation { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

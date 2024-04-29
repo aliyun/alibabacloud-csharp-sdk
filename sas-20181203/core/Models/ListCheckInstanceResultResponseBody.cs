@@ -30,6 +30,38 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceInfo")]
+            [Validation(Required=false)]
+            public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo InstanceInfo { get; set; }
+            public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfo : TeaModel {
+                [NameInMap("Config")]
+                [Validation(Required=false)]
+                public List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> Config { get; set; }
+                public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("ShowName")]
+                    [Validation(Required=false)]
+                    public string ShowName { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("FirstUpdateTime")]
+                [Validation(Required=false)]
+                public long? FirstUpdateTime { get; set; }
+
+                [NameInMap("LastUpdateTime")]
+                [Validation(Required=false)]
+                public long? LastUpdateTime { get; set; }
+
+            }
+
             /// <summary>
             /// The instance name.
             /// </summary>

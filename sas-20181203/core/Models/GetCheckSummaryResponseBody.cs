@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The statistics of the check items.
+        /// The statistics about the number of check items.
         /// </summary>
         [NameInMap("OverallItemStatistic")]
         [Validation(Required=false)]
@@ -307,9 +307,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the check item. Valid values:
             /// 
-            /// *   **COMPLIANCE**: compliance
-            /// *   **RISK**: security risk
-            /// *   **IDENTITY_PERMISSION**: identity and permission
+            /// *   **COMPLIANCE**
+            /// *   **RISK**
+            /// *   **IDENTITY_PERMISSION**
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotPassMediumCount { get; set; }
 
                 /// <summary>
-                /// The number of check items that passed the check.
+                /// The number of check items that pass the check.
                 /// </summary>
                 [NameInMap("PassCount")]
                 [Validation(Required=false)]
