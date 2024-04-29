@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The details of the download task.
+        /// The details of the tasks.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDownloadTaskResponseBodyData Data { get; set; }
         public class DescribeDownloadTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of the download task.
+            /// The details of the task.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                 public List<DescribeDownloadTaskResponseBodyDataContentList> List { get; set; }
                 public class DescribeDownloadTaskResponseBodyDataContentList : TeaModel {
                     /// <summary>
-                    /// The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: milliseconds.
+                    /// The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.
                     /// </summary>
                     [NameInMap("BackupSetTime")]
                     [Validation(Required=false)]
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                     public string BakSetId { get; set; }
 
                     /// <summary>
-                    /// The databases.
+                    /// The details of the databases.
                     /// </summary>
                     [NameInMap("DbList")]
                     [Validation(Required=false)]
                     public string DbList { get; set; }
 
                     /// <summary>
-                    /// The state of the download task. Valid values:
+                    /// The status of the download task. Valid values:
                     /// 
-                    /// *   **Initializing**: The download task was being initialized.
-                    /// *   **queuing**: The download task was queuing.
-                    /// *   **running**: The download task was running.
-                    /// *   **failed**: The download task failed.
-                    /// *   **finished**: The download task was complete.
-                    /// *   **expired**: The download task expired.
+                    /// *   **Initializing**: The download task is being initialized.
+                    /// *   **queuing**: The download task is queuing.
+                    /// *   **running**: The download task is running.
+                    /// *   **failed**: The download task fails.
+                    /// *   **finished**: The download task is complete.
+                    /// *   **expired**: The download task expires.
                     /// </summary>
                     [NameInMap("DownloadStatus")]
                     [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                     public string RegionCode { get; set; }
 
                     /// <summary>
-                    /// The destination path to which the data is downloaded if the TargeType parameter is set to OSS.
+                    /// The destination path to which the data is downloaded if the value of **TargetType is OSS**.
                     /// </summary>
                     [NameInMap("TargetPath")]
                     [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                     public string TargetType { get; set; }
 
                     /// <summary>
-                    /// The ID of the download task.
+                    /// The download task ID.
                     /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]

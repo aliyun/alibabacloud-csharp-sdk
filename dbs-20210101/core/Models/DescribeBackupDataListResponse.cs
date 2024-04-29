@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class ModifyDBTablesRecoveryStateResponse : TeaModel {
+    public class DescribeBackupDataListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ModifyDBTablesRecoveryStateResponseBody Body { get; set; }
+        public DescribeBackupDataListResponseBody Body { get; set; }
 
     }
 

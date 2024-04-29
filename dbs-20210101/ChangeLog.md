@@ -1,3 +1,9 @@
+2024-04-29 Version: 2.0.0
+- Support API DescribeBackupDataList.
+- Support API DescribeBackupPolicy.
+- Delete API CreateSandboxInstance.
+
+
 2023-12-22 Version: 1.0.5
 - Generated csharp 2021-01-01 for Dbs.
 

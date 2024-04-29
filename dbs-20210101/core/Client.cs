@@ -162,7 +162,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request CreateDownloadRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -236,7 +244,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request CreateDownloadRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -310,7 +326,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request CreateDownloadRequest
           * @return CreateDownloadResponse
@@ -322,7 +346,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request CreateDownloadRequest
           * @return CreateDownloadResponse
@@ -331,178 +363,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDownloadWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-          *
-          * @param request CreateSandboxInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSandboxInstanceResponse
-         */
-        public CreateSandboxInstanceResponse CreateSandboxInstanceWithOptions(CreateSandboxInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPlanId))
-            {
-                query["BackupPlanId"] = request.BackupPlanId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
-            {
-                query["BackupSetId"] = request.BackupSetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
-            {
-                query["RestoreTime"] = request.RestoreTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxInstanceName))
-            {
-                query["SandboxInstanceName"] = request.SandboxInstanceName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPassword))
-            {
-                query["SandboxPassword"] = request.SandboxPassword;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxSpecification))
-            {
-                query["SandboxSpecification"] = request.SandboxSpecification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxType))
-            {
-                query["SandboxType"] = request.SandboxType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxUser))
-            {
-                query["SandboxUser"] = request.SandboxUser;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
-            {
-                query["VpcId"] = request.VpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSwitchId))
-            {
-                query["VpcSwitchId"] = request.VpcSwitchId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSandboxInstance",
-                Version = "2021-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSandboxInstanceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-          *
-          * @param request CreateSandboxInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSandboxInstanceResponse
-         */
-        public async Task<CreateSandboxInstanceResponse> CreateSandboxInstanceWithOptionsAsync(CreateSandboxInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPlanId))
-            {
-                query["BackupPlanId"] = request.BackupPlanId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
-            {
-                query["BackupSetId"] = request.BackupSetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
-            {
-                query["RestoreTime"] = request.RestoreTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxInstanceName))
-            {
-                query["SandboxInstanceName"] = request.SandboxInstanceName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPassword))
-            {
-                query["SandboxPassword"] = request.SandboxPassword;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxSpecification))
-            {
-                query["SandboxSpecification"] = request.SandboxSpecification;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxType))
-            {
-                query["SandboxType"] = request.SandboxType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxUser))
-            {
-                query["SandboxUser"] = request.SandboxUser;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
-            {
-                query["VpcId"] = request.VpcId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcSwitchId))
-            {
-                query["VpcSwitchId"] = request.VpcSwitchId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSandboxInstance",
-                Version = "2021-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSandboxInstanceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-          *
-          * @param request CreateSandboxInstanceRequest
-          * @return CreateSandboxInstanceResponse
-         */
-        public CreateSandboxInstanceResponse CreateSandboxInstance(CreateSandboxInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateSandboxInstanceWithOptions(request, runtime);
-        }
-
-        /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-          *
-          * @param request CreateSandboxInstanceRequest
-          * @return CreateSandboxInstanceResponse
-         */
-        public async Task<CreateSandboxInstanceResponse> CreateSandboxInstanceAsync(CreateSandboxInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateSandboxInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -611,6 +471,266 @@ namespace AlibabaCloud.SDK.Dbs20210101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSandboxInstanceWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeBackupDataListResponse DescribeBackupDataListWithOptions(DescribeBackupDataListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMethod))
+            {
+                query["BackupMethod"] = request.BackupMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMode))
+            {
+                query["BackupMode"] = request.BackupMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupScale))
+            {
+                query["BackupScale"] = request.BackupScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStatus))
+            {
+                query["BackupStatus"] = request.BackupStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
+            {
+                query["BackupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIsDeleted))
+            {
+                query["InstanceIsDeleted"] = request.InstanceIsDeleted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceRegion))
+            {
+                query["InstanceRegion"] = request.InstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupDataList",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupDataListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeBackupDataListResponse> DescribeBackupDataListWithOptionsAsync(DescribeBackupDataListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMethod))
+            {
+                query["BackupMethod"] = request.BackupMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMode))
+            {
+                query["BackupMode"] = request.BackupMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupScale))
+            {
+                query["BackupScale"] = request.BackupScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStatus))
+            {
+                query["BackupStatus"] = request.BackupStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
+            {
+                query["BackupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIsDeleted))
+            {
+                query["InstanceIsDeleted"] = request.InstanceIsDeleted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceRegion))
+            {
+                query["InstanceRegion"] = request.InstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupDataList",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupDataListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeBackupDataListResponse DescribeBackupDataList(DescribeBackupDataListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBackupDataListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeBackupDataListResponse> DescribeBackupDataListAsync(DescribeBackupDataListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBackupDataListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBackupPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBackupPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
         public DescribeDBTablesRecoveryBackupSetResponse DescribeDBTablesRecoveryBackupSetWithOptions(DescribeDBTablesRecoveryBackupSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -836,7 +956,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -886,7 +1013,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -936,7 +1070,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @return DescribeDownloadBackupSetStorageInfoResponse
@@ -948,7 +1089,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @return DescribeDownloadBackupSetStorageInfoResponse
@@ -960,7 +1108,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadSupportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -998,7 +1154,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadSupportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1036,7 +1200,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadSupportRequest
           * @return DescribeDownloadSupportResponse
@@ -1048,7 +1220,15 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadSupportRequest
           * @return DescribeDownloadSupportResponse
@@ -1060,7 +1240,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1138,7 +1325,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1216,7 +1410,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadTaskRequest
           * @return DescribeDownloadTaskResponse
@@ -1228,7 +1429,14 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+          * ### [](#)Supported database engines
+          * *   ApsaraDB RDS for MySQL
+          * *   ApsaraDB RDS for PostgreSQL
+          * *   PolarDB for MySQL
+          * ### [](#)References
+          * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+          * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+          * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
           *
           * @param request DescribeDownloadTaskRequest
           * @return DescribeDownloadTaskResponse

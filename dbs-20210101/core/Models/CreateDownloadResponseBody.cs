@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The information about the download task.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
             /// <summary>
             /// The destination path to which the backup set is downloaded.
             /// 
-            /// > This parameter is returned if the TargetType parameter is set to OSS.
+            /// >  This parameter is returned if the value of **TargetType is OSS**.
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]

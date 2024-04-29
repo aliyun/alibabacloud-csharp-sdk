@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
         public string RegionCode { get; set; }
