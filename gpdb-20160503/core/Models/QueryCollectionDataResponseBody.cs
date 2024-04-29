@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
+
     }
 
 }

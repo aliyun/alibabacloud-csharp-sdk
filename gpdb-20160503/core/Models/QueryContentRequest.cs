@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public Dictionary<string, Dictionary<string, object>> HybridSearchArgs { get; set; }
 
+        [NameInMap("IncludeMetadataFields")]
+        [Validation(Required=false)]
+        public string IncludeMetadataFields { get; set; }
+
         [NameInMap("IncludeVector")]
         [Validation(Required=false)]
         public bool? IncludeVector { get; set; }

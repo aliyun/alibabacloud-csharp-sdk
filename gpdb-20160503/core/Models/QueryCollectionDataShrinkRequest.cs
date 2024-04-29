@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string HybridSearchArgsShrink { get; set; }
 
+        [NameInMap("IncludeMetadataFields")]
+        [Validation(Required=false)]
+        public string IncludeMetadataFields { get; set; }
+
         [NameInMap("IncludeValues")]
         [Validation(Required=false)]
         public bool? IncludeValues { get; set; }
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
         public string NamespacePassword { get; set; }
+
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
