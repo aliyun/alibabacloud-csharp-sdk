@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </summary>
         [NameInMap("BackupSetID")]
         [Validation(Required=false)]
-        public int? BackupSetID { get; set; }
+        public long? BackupSetID { get; set; }
 
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.

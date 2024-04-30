@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public int? BackupId { get; set; }
+        public long? BackupId { get; set; }
 
         /// <summary>
         /// The instance ID.

@@ -90,8 +90,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// Default value: **MIX**.
         /// 
-        /// > *   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.
-        /// > *   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.
+        /// > 
+        /// 
+        /// *   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.
+        /// 
+        /// *   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.
         /// </summary>
         [NameInMap("WhitelistNetworkType")]
         [Validation(Required=false)]
