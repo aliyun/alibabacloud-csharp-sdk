@@ -1,3 +1,6 @@
+2024-05-06 Version: 1.0.3
+- Generated csharp 2021-10-25 for searchengine.
+
 2024-03-20 Version: 1.0.2
 - Update API CreateIndex: update param body.
 - Update API GetNodeConfig: update response param.

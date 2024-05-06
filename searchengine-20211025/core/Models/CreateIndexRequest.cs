@@ -17,53 +17,56 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The data source type. Valid values: odps, mns, flink, and streaming. This parameter can be ignored.
+        /// Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.
         /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]
         public string DataSource { get; set; }
 
         /// <summary>
-        /// 数据源相关信息 （向量检索版新版本必填）
+        /// The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.
         /// </summary>
         [NameInMap("dataSourceInfo")]
         [Validation(Required=false)]
         public CreateIndexRequestDataSourceInfo DataSourceInfo { get; set; }
         public class CreateIndexRequestDataSourceInfo : TeaModel {
             /// <summary>
-            /// 是否开启自动全量
+            /// Specifies whether to enable the automatic full indexing feature.
             /// </summary>
             [NameInMap("autoBuildIndex")]
             [Validation(Required=false)]
             public bool? AutoBuildIndex { get; set; }
 
             /// <summary>
-            /// odps相关
+            /// The information about the MaxCompute data source.
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateIndexRequestDataSourceInfoConfig Config { get; set; }
             public class CreateIndexRequestDataSourceInfoConfig : TeaModel {
                 /// <summary>
-                /// odps数据源ak
+                /// The AccessKey ID of the MaxCompute data source.
                 /// </summary>
                 [NameInMap("accessKey")]
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
                 /// <summary>
-                /// odps数据源ak secret
+                /// The AccessKey secret of the MaxCompute data source.
                 /// </summary>
                 [NameInMap("accessSecret")]
                 [Validation(Required=false)]
                 public string AccessSecret { get; set; }
 
+                /// <summary>
+                /// oss bucket
+                /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// odps数据源的endpoint, oss数据源的endpoint
+                /// The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string OssPath { get; set; }
 
                 /// <summary>
-                /// 数据源为odps时必填
+                /// The data partition. This parameter is required if type is set to odps.
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -89,14 +92,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// odps数据源项目名称
+                /// The name of the MaxCompute project that is used as the data source.
                 /// </summary>
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
-                /// 表名称
+                /// The name of the table.
                 /// </summary>
                 [NameInMap("table")]
                 [Validation(Required=false)]
@@ -108,16 +111,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? DataTimeSec { get; set; }
 
+            /// <summary>
+            /// The data center where the data source is deployed.
+            /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// The name of the index.
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// 数据更新资源数
+            /// The number of resources used for data update.
             /// </summary>
             [NameInMap("processPartitionCount")]
             [Validation(Required=false)]
@@ -138,11 +147,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// 数据源类型
-            /// odps
-            /// swift
-            /// saro
-            /// oss
+            /// The type of the data source. Valid values: odps, swift, saro, and oss.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -151,16 +156,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The data center where the data source is deployed.
+        /// The data center in which the data source resides.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// 字段配置的扩展的内容
-        /// key: 向量字段(vector)、
-        /// 需embeding字段(embeding)
+        /// The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.
         /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
@@ -180,9 +183,6 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public int? Partition { get; set; }
 
-        /// <summary>
-        /// 是否dryRun创建（仅校验数据源是否合法）。取值：-true 是 -false 否
-        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

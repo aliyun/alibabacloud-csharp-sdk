@@ -23,9 +23,6 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            /// <summary>
-            /// The value of the specification.
-            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
