@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            [NameInMap("HasSecureMobilePhone")]
+            [Validation(Required=false)]
+            public bool? HasSecureMobilePhone { get; set; }
+
             /// <summary>
             /// The real-name verification information.
             /// </summary>

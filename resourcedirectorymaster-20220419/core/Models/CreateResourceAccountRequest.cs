@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// 
+        /// *   true: performs only a dry run. The system checks whether an identity type can be specified for the member. If the request does not pass the dry run, an error code is returned.
+        /// *   false (default): performs a dry run and performs the actual request.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

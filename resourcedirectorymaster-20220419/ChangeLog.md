@@ -1,3 +1,7 @@
+2024-05-06 Version: 2.0.4
+- Update API GetAccount: update response param.
+
+
 2024-03-14 Version: 2.0.3
 - Update API CreateResourceAccount: add param DryRun.
 - Update API ListAccounts: update response param.

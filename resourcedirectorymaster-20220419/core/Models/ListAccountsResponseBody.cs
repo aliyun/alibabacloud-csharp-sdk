@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListAccountsResponseBody : TeaModel {
         /// <summary>
-        /// The members returned.
+        /// The information about the members.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -34,6 +34,16 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                /// <summary>
+                /// The deletion status of the member. Valid values:
+                /// 
+                /// *   Checking: A deletion check is being performed for the member.
+                /// *   Deleting: The member is being deleted.
+                /// *   CheckFailed: The deletion check for the member fails.
+                /// *   DeleteFailed: The member fails to be deleted.
+                /// 
+                /// >  If deletion is not performed for the member, the value of this parameter is empty.
+                /// </summary>
                 [NameInMap("DeletionStatus")]
                 [Validation(Required=false)]
                 public string DeletionStatus { get; set; }
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 public string ResourceDirectoryId { get; set; }
 
                 /// <summary>
-                /// The path of the member in the resource directory.
+                /// The RDPath of the member.
                 /// </summary>
                 [NameInMap("ResourceDirectoryPath")]
                 [Validation(Required=false)]
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 /// The status of the member. Valid values:
                 /// 
                 /// *   CreateSuccess: The member is created.
-                /// *   PromoteVerifying: The upgrade of the member is being confirmed.
+                /// *   PromoteVerifying: The upgrade of the member is under confirmation.
                 /// *   PromoteFailed: The upgrade of the member fails.
                 /// *   PromoteExpired: The upgrade of the member expires.
                 /// *   PromoteCancelled: The upgrade of the member is canceled.
@@ -117,14 +127,14 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                     public List<ListAccountsResponseBodyAccountsAccountTagsTag> Tag { get; set; }
                     public class ListAccountsResponseBodyAccountsAccountTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

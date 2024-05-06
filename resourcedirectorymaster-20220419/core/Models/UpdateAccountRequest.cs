@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// 
+        /// *   true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.
+        /// *   false (default): performs a dry run and performs the actual request.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

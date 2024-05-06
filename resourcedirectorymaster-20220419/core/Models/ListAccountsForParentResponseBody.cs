@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListAccountsForParentResponseBody : TeaModel {
         /// <summary>
-        /// The information of the members.
+        /// The information about the members.
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -34,6 +34,16 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                /// <summary>
+                /// The deletion status of the member. Valid values:
+                /// 
+                /// *   Checking: A deletion check is being performed for the member.
+                /// *   Deleting: The member is being deleted.
+                /// *   CheckFailed: The deletion check for the member fails.
+                /// *   DeleteFailed: The member fails to be deleted.
+                /// 
+                /// >  If deletion is not performed for the member, the value of this parameter is empty.
+                /// </summary>
                 [NameInMap("DeletionStatus")]
                 [Validation(Required=false)]
                 public string DeletionStatus { get; set; }
@@ -53,7 +63,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// The way in which the member joins the resource directory. Valid values:
+                /// The way in which the member joins the resource directory.
                 /// 
                 /// *   invited: The member is invited to join the resource directory.
                 /// *   created: The member is directly created in the resource directory.
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 /// The status of the member. Valid values:
                 /// 
                 /// *   CreateSuccess: The member is created.
-                /// *   PromoteVerifying: The upgrade of the member is being confirmed.
+                /// *   PromoteVerifying: The upgrade of the member is under confirmation.
                 /// *   PromoteFailed: The upgrade of the member fails.
                 /// *   PromoteExpired: The upgrade of the member expires.
                 /// *   PromoteCancelled: The upgrade of the member is canceled.
