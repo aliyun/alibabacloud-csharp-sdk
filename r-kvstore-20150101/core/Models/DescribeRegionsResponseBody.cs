@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The value of the **RegionIds** parameter is in the array format. Each element in the array contains the **RegionId** and **ZoneIds** parameters.
+        /// The **region IDs**.
         /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// The ID of the region.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The list of zone IDs.
+                /// The zone IDs.
                 /// </summary>
                 [NameInMap("ZoneIdList")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// The IDs of the zones in the region.
                 /// </summary>
                 [NameInMap("ZoneIds")]
                 [Validation(Required=false)]

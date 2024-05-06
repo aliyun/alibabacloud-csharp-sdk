@@ -395,6 +395,52 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         [Validation(Required=false)]
                         public bool? ContractActivity { get; set; }
 
+                        [NameInMap("DepreciateInfo")]
+                        [Validation(Required=false)]
+                        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo DepreciateInfo { get; set; }
+                        public class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo : TeaModel {
+                            [NameInMap("CheapRate")]
+                            [Validation(Required=false)]
+                            public double? CheapRate { get; set; }
+
+                            [NameInMap("CheapStandAmount")]
+                            [Validation(Required=false)]
+                            public double? CheapStandAmount { get; set; }
+
+                            [NameInMap("Differential")]
+                            [Validation(Required=false)]
+                            public double? Differential { get; set; }
+
+                            [NameInMap("DifferentialName")]
+                            [Validation(Required=false)]
+                            public string DifferentialName { get; set; }
+
+                            [NameInMap("IsContractActivity")]
+                            [Validation(Required=false)]
+                            public bool? IsContractActivity { get; set; }
+
+                            [NameInMap("IsShow")]
+                            [Validation(Required=false)]
+                            public bool? IsShow { get; set; }
+
+                            [NameInMap("ListPrice")]
+                            [Validation(Required=false)]
+                            public double? ListPrice { get; set; }
+
+                            [NameInMap("MonthPrice")]
+                            [Validation(Required=false)]
+                            public double? MonthPrice { get; set; }
+
+                            [NameInMap("OriginalStandAmount")]
+                            [Validation(Required=false)]
+                            public double? OriginalStandAmount { get; set; }
+
+                            [NameInMap("StartTime")]
+                            [Validation(Required=false)]
+                            public string StartTime { get; set; }
+
+                        }
+
                         [NameInMap("DiscountFee")]
                         [Validation(Required=false)]
                         public double? DiscountFee { get; set; }

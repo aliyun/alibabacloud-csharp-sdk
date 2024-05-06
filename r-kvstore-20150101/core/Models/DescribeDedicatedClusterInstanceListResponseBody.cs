@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CharacterType { get; set; }
 
             /// <summary>
-            /// The ID of the dedicated cluster.
+            /// The ID of the dedicated cluster to which the instance belongs.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -62,21 +62,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The current bandwidth of the instance, which consists of the default bandwidth and the additional bandwidth. Unit: Mbit/s.
+            /// The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.
             /// </summary>
             [NameInMap("CurrentBandWidth")]
             [Validation(Required=false)]
             public long? CurrentBandWidth { get; set; }
 
             /// <summary>
-            /// The custom ID that is used for instance internal maintenance.
+            /// An internal parameter used for the maintenance and management of instances.
             /// </summary>
             [NameInMap("CustomId")]
             [Validation(Required=false)]
             public string CustomId { get; set; }
 
             /// <summary>
-            /// The database engine of the instance. The return value is **Redis**.
+            /// The database engine. The return value is **redis**.
             /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// The instance type of the instance.
+            /// The instance type.
             /// </summary>
             [NameInMap("InstanceClass")]
             [Validation(Required=false)]
@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// The instance name.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// Details about the nodes.
+            /// The nodes.
             /// </summary>
             [NameInMap("InstanceNodeList")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The node ID.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -192,13 +192,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// *   **Flushing**: The instance is being released.
             /// *   **Released**: The instance is released.
             /// *   **Transforming**: The billing method of the instance is being changed.
-            /// *   **Unavailable**: The instance is suspended.
+            /// *   **Unavailable**: The instance is unavailable.
             /// *   **Error**: The instance failed to be created.
             /// *   **Migrating**: The instance is being migrated.
             /// *   **BackupRecovering**: The instance is being restored from a backup.
             /// *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
             /// *   **NetworkModifying**: The network type of the instance is being changed.
-            /// *   **SSLModifying**: The SSL certificate of the instance is being changed.
+            /// *   **SSLModifying**: The SSL configurations of the instance are being changed.
             /// *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
             /// </summary>
             [NameInMap("InstanceStatus")]
@@ -222,15 +222,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// The number of proxy nodes.
             /// 
-            /// > *   If the return value is **0**, the proxy mode is disabled. If the return value is an integer that is greater than **0**, the proxy mode is enabled. This integer indicates the number of proxy nodes in the instance. For example, a value of **1** indicates that the instance has one proxy node.
-            /// > *   This parameter is returned only when the instance is a [cluster instance](~~52228~~).
+            /// > 
+            /// 
+            /// *   If the return value is **0**, the proxy mode is disabled for the instance. If the return value is an integer greater than **0**, such as **1**, the proxy mode is enabled for the instance.
+            /// 
+            /// *   This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
             /// </summary>
             [NameInMap("ProxyCount")]
             [Validation(Required=false)]
             public int? ProxyCount { get; set; }
 
             /// <summary>
-            /// The region ID of the instance.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -239,7 +242,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// The number of shards.
             /// 
-            /// > This parameter is returned only when the ApsaraDB for Redis instance is a [cluster instance](~~52228~~).
+            /// >  This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
             /// </summary>
             [NameInMap("ShardCount")]
             [Validation(Required=false)]
@@ -253,21 +256,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.
+            /// The VPC ID.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch.
+            /// The vSwitch ID.
             /// </summary>
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// The zone ID of the instance.
+            /// The zone ID.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -283,7 +286,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -297,7 +300,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

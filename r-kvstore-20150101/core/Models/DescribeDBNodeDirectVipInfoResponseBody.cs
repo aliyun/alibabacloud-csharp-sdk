@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDBNodeDirectVipInfoResponseBody : TeaModel {
         /// <summary>
-        /// The VIPs of shards in the cluster instance.
+        /// The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.
         /// </summary>
         [NameInMap("DirectVipInfo")]
         [Validation(Required=false)]

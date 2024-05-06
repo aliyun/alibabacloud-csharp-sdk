@@ -166,6 +166,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string IsNewSSLMode { get; set; }
 
+        [NameInMap("IsOpenNGLB")]
+        [Validation(Required=false)]
+        public string IsOpenNGLB { get; set; }
+
         /// <summary>
         /// Indicates whether the instance supports the new SSL encryption feature.
         /// </summary>

@@ -9,34 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
+        /// <summary>
+        /// The following parameters are no longer used. Ignore the parameters.
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupsResponseBodyAccessDeniedDetail : TeaModel {
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
             public string AuthPrincipalOwnerId { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("AuthPrincipalType")]
             [Validation(Required=false)]
             public string AuthPrincipalType { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
             public string EncodedDiagnosticMessage { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("NoPermissionType")]
             [Validation(Required=false)]
             public string NoPermissionType { get; set; }
 
+            /// <summary>
+            /// This parameter is no longer used. Ignore this parameter.
+            /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
@@ -55,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeBackupsResponseBodyBackupsBackup> Backup { get; set; }
             public class DescribeBackupsResponseBodyBackupsBackup : TeaModel {
                 /// <summary>
-                /// The databases that are backed up. Default value: **all**, which indicates that all databases are backed up.
+                /// The names of the databases that are backed up. The default value is **all**, which indicates that all databases are backed up.
                 /// </summary>
                 [NameInMap("BackupDBNames")]
                 [Validation(Required=false)]
@@ -80,12 +104,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
-                public int? BackupId { get; set; }
+                public long? BackupId { get; set; }
 
                 /// <summary>
                 /// The internal download URL of the backup file.
                 /// 
-                /// >  You can download the backup file by using this URL from the Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance and ApsaraDB for Redis instance must reside in the classic network or the same virtual private cloud (VPC) within the same region.
+                /// >  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.
                 /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
@@ -96,7 +120,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// </summary>
                 [NameInMap("BackupJobID")]
                 [Validation(Required=false)]
-                public int? BackupJobID { get; set; }
+                public long? BackupJobID { get; set; }
 
                 /// <summary>
                 /// The backup method. Valid values:
@@ -133,17 +157,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The state of the backup task. Valid values:
+                /// The status of the backup. Valid values:
                 /// 
-                /// *   **Success**: The task is successful.
-                /// *   **Failed**: The task failed.
+                /// *   **Success**
+                /// *   **Failed**
                 /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The backup type of the backup file. Valid values:
+                /// The backup type. Valid values:
                 /// 
                 /// *   **FullBackup**
                 /// *   **IncrementalBackup**
@@ -153,7 +177,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// The major engine version of the instance.
+                /// The engine version (major version) of the instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -162,7 +186,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The node ID.
                 /// 
-                /// >  If a standard instance is used, the instance ID is returned.
+                /// >  If the instance uses the standard architecture, this parameter returns the instance ID.
                 /// </summary>
                 [NameInMap("NodeInstanceId")]
                 [Validation(Required=false)]
@@ -172,14 +196,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// This parameter does not take effect. Ignore this parameter.
+        /// </summary>
         [NameInMap("FreeSize")]
         [Validation(Required=false)]
         public long? FreeSize { get; set; }
 
+        /// <summary>
+        /// The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.
+        /// 
+        /// >  The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid full backups of the instance.
+        /// </summary>
         [NameInMap("FullStorageSize")]
         [Validation(Required=false)]
         public long? FullStorageSize { get; set; }
 
+        /// <summary>
+        /// The size of the log backup file of the instance. Unit: bytes. This value is valid only when flashback is enabled.
+        /// 
+        /// >  The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid log backups of the instance.
+        /// </summary>
         [NameInMap("LogStorageSize")]
         [Validation(Required=false)]
         public long? LogStorageSize { get; set; }

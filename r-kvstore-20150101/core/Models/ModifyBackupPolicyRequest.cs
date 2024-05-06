@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
+        /// <summary>
+        /// The number of days for which data backup files are retained. Valid values: 7 to 730. Default value: 7.
+        /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public int? BackupRetentionPeriod { get; set; }

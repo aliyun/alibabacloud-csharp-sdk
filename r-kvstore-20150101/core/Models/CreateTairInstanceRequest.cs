@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// The ID of the backup set of the source instance. You can call the [DescribeBackups](~~61081~~) operation to query the ID of the backup set.
+        /// The ID of the backup set of the source instance. If you want to create an instance based on a backup set of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup set that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup sets.
         /// 
-        /// > If you want to create an instance based on the backup set of an existing instance, you must specify this parameter after you specify the **SrcDBInstanceId** parameter. The system creates an instance based on the backup set that is specified by this parameter.
+        /// >  If you want to create an instance based on a backup set of a specified instance, you must specify this parameter after you use the **SrcDBInstanceId** parameter to specify the ID of the source instance. Then, the system creates an instance based on the backup set that is specified by this parameter.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -79,7 +79,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The backup set ID.
+        /// This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.
+        /// 
+        /// *   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.
+        /// 
+        /// <!---->
+        /// 
+        /// *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets in all shards of the source instance, separated by commas (,). Example: "11101,11102".
         /// </summary>
         [NameInMap("ClusterBackupId")]
         [Validation(Required=false)]
@@ -244,6 +250,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RestoreTime")]
+        [Validation(Required=false)]
+        public string RestoreTime { get; set; }
+
         /// <summary>
         /// The ID of the secondary zone. You can call the [DescribeRegions](~~61012~~) operation to query the ID of the secondary zone.
         /// 
@@ -279,6 +289,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ShardType { get; set; }
 
+        /// <summary>
+        /// The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones.
+        /// 
+        /// > To create a read/write splitting instance that is deployed across multiple zones, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
+        /// </summary>
         [NameInMap("SlaveReadOnlyCount")]
         [Validation(Required=false)]
         public int? SlaveReadOnlyCount { get; set; }

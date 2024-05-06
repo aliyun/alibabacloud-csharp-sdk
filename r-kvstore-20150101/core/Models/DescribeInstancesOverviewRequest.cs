@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EditionType { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
+        /// The database engine version of the instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
