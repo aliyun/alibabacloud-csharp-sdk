@@ -91,6 +91,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("EniInstanceIds")]
+        [Validation(Required=false)]
+        public DescribeVpnGatewayResponseBodyEniInstanceIds EniInstanceIds { get; set; }
+        public class DescribeVpnGatewayResponseBodyEniInstanceIds : TeaModel {
+            [NameInMap("EniInstanceId")]
+            [Validation(Required=false)]
+            public List<string> EniInstanceId { get; set; }
+
+        }
+
         /// <summary>
         /// *   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.
         /// 

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry> SnatTableEntry { get; set; }
             public class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry : TeaModel {
+                [NameInMap("EipAffinity")]
+                [Validation(Required=false)]
+                public string EipAffinity { get; set; }
+
                 /// <summary>
                 /// The ID of the NAT gateway to which the SNAT entry belongs.
                 /// </summary>
