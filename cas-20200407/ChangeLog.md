@@ -1,3 +1,6 @@
+2024-05-06 Version: 1.2.1
+- Update SDK.
+
 2024-03-13 Version: 1.2.0
 - Support API CreateDeploymentJob.
 - Support API DeleteDeploymentJob.
