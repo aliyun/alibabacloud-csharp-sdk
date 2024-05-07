@@ -380,6 +380,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public List<int?> Ports { get; set; }
 
+                [NameInMap("ServiceFQDN")]
+                [Validation(Required=false)]
+                public string ServiceFQDN { get; set; }
+
                 /// <summary>
                 /// The name of the service that is registered with the service registry.
                 /// </summary>
