@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EipBindMode { get; set; }
 
+                [NameInMap("EnableSessionLog")]
+                [Validation(Required=false)]
+                public string EnableSessionLog { get; set; }
+
                 /// <summary>
                 /// The time when the NAT gateway expires.
                 /// </summary>

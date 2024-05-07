@@ -109,6 +109,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
+        /// 
+        /// *   **false**
+        /// *   **true**
+        /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]
         public bool? SecurityProtectionEnabled { get; set; }

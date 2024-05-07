@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class ModifyNatGatewayAttributeRequest : TeaModel {
+    public class ModifyNatGatewayAttributeShrinkRequest : TeaModel {
         /// <summary>
         /// The description of the NAT gateway.
         /// 
@@ -50,17 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("LogDelivery")]
         [Validation(Required=false)]
-        public ModifyNatGatewayAttributeRequestLogDelivery LogDelivery { get; set; }
-        public class ModifyNatGatewayAttributeRequestLogDelivery : TeaModel {
-            [NameInMap("LogDeliveryType")]
-            [Validation(Required=false)]
-            public string LogDeliveryType { get; set; }
-
-            [NameInMap("LogDestination")]
-            [Validation(Required=false)]
-            public string LogDestination { get; set; }
-
-        }
+        public string LogDeliveryShrink { get; set; }
 
         /// <summary>
         /// The name of the NAT gateway.

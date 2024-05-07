@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EcsMetricEnabled { get; set; }
 
+        [NameInMap("EnableSessionLog")]
+        [Validation(Required=false)]
+        public bool? EnableSessionLog { get; set; }
+
         /// <summary>
         /// The time when the NAT gateway expires.
         /// </summary>
@@ -199,6 +203,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("UsingStatus")]
             [Validation(Required=false)]
             public string UsingStatus { get; set; }
+
+        }
+
+        [NameInMap("LogDelivery")]
+        [Validation(Required=false)]
+        public GetNatGatewayAttributeResponseBodyLogDelivery LogDelivery { get; set; }
+        public class GetNatGatewayAttributeResponseBodyLogDelivery : TeaModel {
+            [NameInMap("DeliverLogsErrorMessage")]
+            [Validation(Required=false)]
+            public string DeliverLogsErrorMessage { get; set; }
+
+            [NameInMap("DeliveryStatus")]
+            [Validation(Required=false)]
+            public string DeliveryStatus { get; set; }
+
+            [NameInMap("LogDeliveryType")]
+            [Validation(Required=false)]
+            public string LogDeliveryType { get; set; }
+
+            [NameInMap("LogDestination")]
+            [Validation(Required=false)]
+            public string LogDestination { get; set; }
 
         }
 

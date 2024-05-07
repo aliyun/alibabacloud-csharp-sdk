@@ -48328,13 +48328,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * ## [](#)Description
           * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
-          * @param request ModifyNatGatewayAttributeRequest
+          * @param tmpReq ModifyNatGatewayAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return ModifyNatGatewayAttributeResponse
          */
-        public ModifyNatGatewayAttributeResponse ModifyNatGatewayAttributeWithOptions(ModifyNatGatewayAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyNatGatewayAttributeResponse ModifyNatGatewayAttributeWithOptions(ModifyNatGatewayAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LogDelivery))
+            {
+                request.LogDeliveryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LogDelivery, "LogDelivery", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -48344,9 +48350,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EipBindMode"] = request.EipBindMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSessionLog))
+            {
+                query["EnableSessionLog"] = request.EnableSessionLog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDeliveryShrink))
+            {
+                query["LogDelivery"] = request.LogDeliveryShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -48399,13 +48413,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
           * ## [](#)Description
           * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
           *
-          * @param request ModifyNatGatewayAttributeRequest
+          * @param tmpReq ModifyNatGatewayAttributeRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return ModifyNatGatewayAttributeResponse
          */
-        public async Task<ModifyNatGatewayAttributeResponse> ModifyNatGatewayAttributeWithOptionsAsync(ModifyNatGatewayAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyNatGatewayAttributeResponse> ModifyNatGatewayAttributeWithOptionsAsync(ModifyNatGatewayAttributeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LogDelivery))
+            {
+                request.LogDeliveryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LogDelivery, "LogDelivery", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -48415,9 +48435,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EipBindMode"] = request.EipBindMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSessionLog))
+            {
+                query["EnableSessionLog"] = request.EnableSessionLog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDeliveryShrink))
+            {
+                query["LogDelivery"] = request.LogDeliveryShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

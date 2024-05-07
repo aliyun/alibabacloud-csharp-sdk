@@ -1,3 +1,10 @@
+2024-05-07 Version: 6.7.5
+- Update API DescribeNatGateways: update response param.
+- Update API GetNatGatewayAttribute: update response param.
+- Update API ModifyNatGatewayAttribute: add param EnableSessionLog.
+- Update API ModifyNatGatewayAttribute: add param LogDelivery.
+
+
 2024-05-06 Version: 6.7.4
 - Update API DescribeSnatTableEntries: update response param.
 - Update API DescribeVpnGateway: update response param.
