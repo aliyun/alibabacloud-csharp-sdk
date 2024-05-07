@@ -1,3 +1,21 @@
+2024-05-07 Version: 4.8.0
+- Support API UpdatePrometheusInstance.
+- Update API CreateOrUpdateAlertRule: add param AutoAddTargetConfig.
+- Update API CreateOrUpdateAlertRule: add param Product.
+- Update API CreatePrometheusInstance: add param ArchiveDuration.
+- Update API CreatePrometheusInstance: update param Duration.
+- Update API CreateTimingSyntheticTask: update param CommonSetting.
+- Update API DescribeEnvironmentFeature: add param AliyunLang.
+- Update API DescribeEnvironmentFeature: update response param.
+- Update API GetPrometheusInstance: update response param.
+- Update API GetTimingSyntheticTask: update response param.
+- Update API ListEnvironments: add param FeePackage.
+- Update API ListEnvironments: update response param.
+- Update API ListTimingSyntheticTasks: update response param.
+- Update API TagResources: update param ResourceId.
+- Update API UpdateTimingSyntheticTask: update param CommonSetting.
+
+
 2024-04-03 Version: 4.7.4
 - Update API DeleteAppList: update param Pids.
 - Update API InitEnvironment: add param CreateAuthToken.

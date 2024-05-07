@@ -10,7 +10,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh and en. Default value: zh.
+        /// The language. Default value: zh.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   en
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     English
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     .
+        /// 
+        /// *   zh
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     :
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     Chinese
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     .
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
@@ -33,8 +63,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The subtype of the environment. Valid values:
         /// 
-        /// *   CS: Container Service for Kubernetes (ACK)
-        /// *   ECS: Elastic Compute Service (ECS)
+        /// *   CS: ACK
+        /// *   ECS: ECS
         /// *   Cloud: cloud service
         /// </summary>
         [NameInMap("EnvironmentSubType")]
@@ -44,30 +74,36 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The type of the environment. Valid values:
         /// 
-        /// *   CS: Container Service
-        /// *   ECS: Elastic Compute Service
+        /// *   CS: ACK
+        /// *   ECS: ECS
         /// *   Cloud: cloud service
         /// </summary>
         [NameInMap("EnvironmentType")]
         [Validation(Required=false)]
         public string EnvironmentType { get; set; }
 
+        /// <summary>
+        /// Paid packages.
+        /// *  When EnvironmentType is CS: can be specified as CS_Basic (default) or CS_Pro.
+        /// * When EnvironmentType is any other value, enter a null value.
+        /// </summary>
         [NameInMap("FeePackage")]
         [Validation(Required=false)]
         public string FeePackage { get; set; }
 
         /// <summary>
-        /// type of managed: 
-        /// - none: not managed. default value of prometheus for ACK.
-        /// - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
-        /// - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+        /// Specifies whether agents or exporters are managed. Valid values:
+        /// 
+        /// *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+        /// *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+        /// *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
         /// </summary>
         [NameInMap("ManagedType")]
         [Validation(Required=false)]
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// the ID of prometheus instance bound to the environment. If not provided, please call the InitEnvironment interface to complete the initialization of the storage instance.
+        /// Nullable, the prom instance id for the environment binding. if not provided, call the InitEnvironment interface to complete the initialization of the storage instance.
         /// </summary>
         [NameInMap("PrometheusInstanceId")]
         [Validation(Required=false)]

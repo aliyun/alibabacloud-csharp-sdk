@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        /// <summary>
+        /// Whether to create a Token in order to enhance the security of data retrieval.
+        /// </summary>
         [NameInMap("CreateAuthToken")]
         [Validation(Required=false)]
         public bool? CreateAuthToken { get; set; }
@@ -28,10 +31,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// type of managed:
-        /// - none: not managed. default value of prometheus for ACK.
-        /// - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
-        /// - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+        /// Whether agents or exporters are managed. Valid values:
+        /// 
+        /// *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+        /// *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+        /// *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
         /// </summary>
         [NameInMap("ManagedType")]
         [Validation(Required=false)]

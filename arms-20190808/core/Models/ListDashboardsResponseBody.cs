@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string HttpsUrl { get; set; }
 
             /// <summary>
-            /// The information about the Grafana dashboard.
+            /// The information about the Grafana dashboards.
             /// </summary>
             [NameInMap("I18nChild")]
             [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// The timestamp when the Grafana dashboard was created. Unit: seconds.
+            /// The timestamp generated when the Grafana dashboard was created. Unit: seconds
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -311,16 +311,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// The environment ID.
+        /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        /// <summary>
+        /// Whether to enable Grafana service.
+        /// </summary>
         [NameInMap("GrafanaServiceOpened")]
         [Validation(Required=false)]
         public string GrafanaServiceOpened { get; set; }
 
         /// <summary>
-        /// The indicators of whether the Prometheus service has been activated.
+        /// Whether or not to turn on Prometheus service.
         /// </summary>
         [NameInMap("PrometheusServiceOpened")]
         [Validation(Required=false)]

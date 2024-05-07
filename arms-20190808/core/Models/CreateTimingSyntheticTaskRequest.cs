@@ -63,6 +63,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            [NameInMap("CustomPrometheusSetting")]
+            [Validation(Required=false)]
+            public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting CustomPrometheusSetting { get; set; }
+            public class CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting : TeaModel {
+                [NameInMap("PrometheusClusterId")]
+                [Validation(Required=false)]
+                public string PrometheusClusterId { get; set; }
+
+                [NameInMap("PrometheusClusterRegion")]
+                [Validation(Required=false)]
+                public string PrometheusClusterRegion { get; set; }
+
+                [NameInMap("PrometheusLabels")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> PrometheusLabels { get; set; }
+
+            }
+
             [NameInMap("CustomVPCSetting")]
             [Validation(Required=false)]
             public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting CustomVPCSetting { get; set; }

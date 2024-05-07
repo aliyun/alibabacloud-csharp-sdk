@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListInsightsEventsResponseBody : TeaModel {
         /// <summary>
-        /// The event details.
+        /// The details of the event.
         /// </summary>
         [NameInMap("InsightsEvents")]
         [Validation(Required=false)]
         public List<ListInsightsEventsResponseBodyInsightsEvents> InsightsEvents { get; set; }
         public class ListInsightsEventsResponseBodyInsightsEvents : TeaModel {
             /// <summary>
-            /// The time when the event occurred. The value is a timestamp.
+            /// The time at which the event occurred. The value is a timestamp.
             /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
             public long? Date { get; set; }
 
             /// <summary>
-            /// The description of the event.
+            /// The description of the alert event.
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// Problem identification.
+            /// 问题标识。
             /// </summary>
             [NameInMap("ProblemId")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The title of the event.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

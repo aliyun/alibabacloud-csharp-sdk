@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteGrafanaResourceRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The instance name.
+        /// The name of the cluster.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]

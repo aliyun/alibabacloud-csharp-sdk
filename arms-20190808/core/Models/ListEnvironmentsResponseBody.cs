@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public ListEnvironmentsResponseBodyData Data { get; set; }
         public class ListEnvironmentsResponseBodyData : TeaModel {
             /// <summary>
-            /// The queried environments.
+            /// The parameters of the environment instance.
             /// </summary>
             [NameInMap("Environments")]
             [Validation(Required=false)]
             public List<ListEnvironmentsResponseBodyDataEnvironments> Environments { get; set; }
             public class ListEnvironmentsResponseBodyDataEnvironments : TeaModel {
                 /// <summary>
-                /// The queried add-ons.
+                /// The add-ons.
                 /// </summary>
                 [NameInMap("Addons")]
                 [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
+                /// The ID of the resource bound to the environment instance. The resource can be a Kubernetes cluster or a VPC.
                 /// </summary>
                 [NameInMap("BindResourceId")]
                 [Validation(Required=false)]
                 public string BindResourceId { get; set; }
 
                 /// <summary>
-                /// The profile of the resource.
+                /// The profile that is bound to the resource.
                 /// </summary>
                 [NameInMap("BindResourceProfile")]
                 [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string BindVpcCidr { get; set; }
 
                 /// <summary>
-                /// The time when the VPC was created.
+                /// The time when the environment instance was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the user that created the VPC.
+                /// The user ID.
                 /// </summary>
                 [NameInMap("CreatedUserId")]
                 [Validation(Required=false)]
@@ -117,16 +117,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// The name of the environment.
+                /// The name of the environment instance.
                 /// </summary>
                 [NameInMap("EnvironmentName")]
                 [Validation(Required=false)]
                 public string EnvironmentName { get; set; }
 
                 /// <summary>
-                /// The type of the environment. Valid values:
+                /// The type of the environment instance. Valid values:
                 /// 
-                /// *   CS: Container Service for Kubernetes (ACK)
+                /// *   CS: Container Service
                 /// *   ECS: Elastic Compute Service (ECS)
                 /// *   Cloud: cloud service
                 /// </summary>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string EnvironmentType { get; set; }
 
                 /// <summary>
-                /// The features.
+                /// The parameters of the feature.
                 /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The URL of the feature icon.
+                    /// The URL of the icon.
                     /// </summary>
                     [NameInMap("Icon")]
                     [Validation(Required=false)]
@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Name { get; set; }
 
                 }
+
+                [NameInMap("FeePackage")]
+                [Validation(Required=false)]
+                public string FeePackage { get; set; }
 
                 /// <summary>
                 /// The unique ID of the Grafana data source.
@@ -193,24 +197,27 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string GrafanaFolderUid { get; set; }
 
                 /// <summary>
-                /// The time when the add-on was last created.
+                /// The time when the last add-on was created.
                 /// </summary>
                 [NameInMap("LatestReleaseCreateTime")]
                 [Validation(Required=false)]
                 public string LatestReleaseCreateTime { get; set; }
 
                 /// <summary>
-                /// type of managed: 
+                /// type of managed:
+                /// 
                 /// - none: not managed. default value of prometheus for ACK.
-                /// - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
-                /// - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+                /// 
+                /// - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
+                /// 
+                /// - agent-exproter: managed agent and exporter. default of prometheus for Cloud.
                 /// </summary>
                 [NameInMap("ManagedType")]
                 [Validation(Required=false)]
                 public string ManagedType { get; set; }
 
                 /// <summary>
-                /// The ID of the Prometheus service.
+                /// The Prometheus ID.
                 /// </summary>
                 [NameInMap("PrometheusId")]
                 [Validation(Required=false)]

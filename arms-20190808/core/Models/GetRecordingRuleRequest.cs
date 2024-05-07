@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRecordingRuleRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

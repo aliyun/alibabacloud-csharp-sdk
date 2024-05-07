@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAgentDownloadUrlRequest : TeaModel {
         /// <summary>
-        /// The download URL of the ARMS agent.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

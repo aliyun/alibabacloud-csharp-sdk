@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentDashboardsResponseBody : TeaModel {
         /// <summary>
-        /// Status code: 200 indicates success.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// The result of the operation.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListEnvironmentDashboardsResponseBodyData Data { get; set; }
         public class ListEnvironmentDashboardsResponseBodyData : TeaModel {
             /// <summary>
-            /// List of dashboard.
+            /// The dashboards.
             /// </summary>
             [NameInMap("Dashboards")]
             [Validation(Required=false)]
             public List<ListEnvironmentDashboardsResponseBodyDataDashboards> Dashboards { get; set; }
             public class ListEnvironmentDashboardsResponseBodyDataDashboards : TeaModel {
                 /// <summary>
-                /// Dashboard folder UID.
+                /// The UID of the folder.
                 /// </summary>
                 [NameInMap("FolderUid")]
                 [Validation(Required=false)]
@@ -45,28 +45,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// List of tabs on the dashboard.
+                /// The keyword.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<string> Tags { get; set; }
 
                 /// <summary>
-                /// The title on the dashboard.
+                /// The title of the Grafana dashboard.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// The UID on the dashboard.
+                /// The unique identifier of the dashboard.
                 /// </summary>
                 [NameInMap("Uid")]
                 [Validation(Required=false)]
                 public string Uid { get; set; }
 
                 /// <summary>
-                /// The URL on the dashboard.
+                /// The complete URL of the dashboard.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Total of the dashboards.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   `true`: The call was successful.
-        /// *   `false`: The call failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

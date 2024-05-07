@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Name of Release.
+        /// The name of the add-on release.
         /// </summary>
         [NameInMap("ReleaseName")]
         [Validation(Required=false)]

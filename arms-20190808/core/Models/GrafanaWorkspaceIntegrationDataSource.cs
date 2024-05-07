@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ExploreUrl { get; set; }
 
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Extra { get; set; }
+
         [NameInMap("folderUrl")]
         [Validation(Required=false)]
         public string FolderUrl { get; set; }

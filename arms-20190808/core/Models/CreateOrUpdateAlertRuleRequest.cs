@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? AutoAddNewApplication { get; set; }
 
+        [NameInMap("AutoAddTargetConfig")]
+        [Validation(Required=false)]
+        public string AutoAddTargetConfig { get; set; }
+
         /// <summary>
         /// The ID of the monitored cluster.
         /// </summary>
@@ -266,6 +270,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("Pids")]
         [Validation(Required=false)]
         public string Pids { get; set; }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
         /// <summary>
         /// The PromQL statement of the Prometheus alert rule.

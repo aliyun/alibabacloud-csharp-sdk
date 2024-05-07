@@ -17,14 +17,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned information.
+        /// The returned message.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// auth token string.
+            /// The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+            /// </summary>
+            [NameInMap("ArchiveDuration")]
+            [Validation(Required=false)]
+            public int? ArchiveDuration { get; set; }
+
+            /// <summary>
+            /// Authorization token.
             /// </summary>
             [NameInMap("AuthToken")]
             [Validation(Required=false)]
@@ -64,14 +71,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
-            /// http api internet url.
+            /// Http API internet address.
             /// </summary>
             [NameInMap("HttpApiInterUrl")]
             [Validation(Required=false)]
             public string HttpApiInterUrl { get; set; }
 
             /// <summary>
-            /// http api intranet url.
+            /// Http API intranet address.
             /// </summary>
             [NameInMap("HttpApiIntraUrl")]
             [Validation(Required=false)]
@@ -88,14 +95,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// push gateway internet url.
+            /// Push gateway internet address.
             /// </summary>
             [NameInMap("PushGatewayInterUrl")]
             [Validation(Required=false)]
             public string PushGatewayInterUrl { get; set; }
 
             /// <summary>
-            /// push gateway intranet url.
+            /// Push gateway intranet address.
             /// </summary>
             [NameInMap("PushGatewayIntraUrl")]
             [Validation(Required=false)]
@@ -109,28 +116,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// remote read internet url.
+            /// Remote read internet address.
             /// </summary>
             [NameInMap("RemoteReadInterUrl")]
             [Validation(Required=false)]
             public string RemoteReadInterUrl { get; set; }
 
             /// <summary>
-            /// remote read intranet url.
+            /// Remote read intranet address.
             /// </summary>
             [NameInMap("RemoteReadIntraUrl")]
             [Validation(Required=false)]
             public string RemoteReadIntraUrl { get; set; }
 
             /// <summary>
-            /// remote write internet url.
+            /// Remote write internet address.
             /// </summary>
             [NameInMap("RemoteWriteInterUrl")]
             [Validation(Required=false)]
             public string RemoteWriteInterUrl { get; set; }
 
             /// <summary>
-            /// remote write intranet url.
+            /// Remote write intranet address.
             /// </summary>
             [NameInMap("RemoteWriteIntraUrl")]
             [Validation(Required=false)]
@@ -151,11 +158,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The ID of the security group.
+            /// The ID of the security group. This parameter is returned only for Prometheus instances for ECS.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+
+            /// <summary>
+            /// Storage duration (days).
+            /// </summary>
+            [NameInMap("StorageDuration")]
+            [Validation(Required=false)]
+            public int? StorageDuration { get; set; }
 
             /// <summary>
             /// The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
@@ -172,14 +186,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<GetPrometheusInstanceResponseBodyDataTags> Tags { get; set; }
             public class GetPrometheusInstanceResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// The tag key of the instance.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value of the instance.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -195,14 +209,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch.
+            /// The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The virtual private cloud (VPC) where the monitoring object resides.
+            /// The VPC ID. This parameter is returned only for Prometheus instances for ECS.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]

@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreatePrometheusInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The status code that is returned. Valid values:
-        /// 
-        /// *   `2XX: The request is successful.`
-        /// *   `3XX: A redirection message is returned.`
-        /// *   `4XX: The request is invalid.`
-        /// *   `5XX: A server error occurred.`
+        /// The status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -29,14 +24,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The error message that is returned if the request failed.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

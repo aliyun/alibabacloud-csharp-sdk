@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// 绑定的资源ID。
+        /// The ID of the resource.
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("EnvironmentType")]
         [Validation(Required=false)]
         public string EnvironmentType { get; set; }
+
+        [NameInMap("FeePackage")]
+        [Validation(Required=false)]
+        public string FeePackage { get; set; }
 
         /// <summary>
         /// The region ID.

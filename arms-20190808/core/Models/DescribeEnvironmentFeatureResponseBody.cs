@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string LatestVersion { get; set; }
 
+                /// <summary>
+                /// Whether or not it is a managed component.
+                /// </summary>
                 [NameInMap("Managed")]
                 [Validation(Required=false)]
                 public bool? Managed { get; set; }
@@ -113,6 +116,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus FeatureStatus { get; set; }
             public class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus : TeaModel {
+                [NameInMap("BindResourceId")]
+                [Validation(Required=false)]
+                public string BindResourceId { get; set; }
+
                 /// <summary>
                 /// The containers of the feature.
                 /// </summary>
@@ -157,6 +164,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
                 /// <summary>
                 /// The status of the agent. Valid values:
                 /// 
@@ -167,6 +178,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
 
             }
 

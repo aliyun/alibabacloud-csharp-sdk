@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetAgentDownloadUrlResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The download URL of the ARMS agent.
         /// </summary>
         [NameInMap("ArmsAgentDownloadUrl")]
         [Validation(Required=false)]
         public string ArmsAgentDownloadUrl { get; set; }
 
         /// <summary>
-        /// Obtains the download URL of the Application Real-Time Monitoring Service (ARMS) agent.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

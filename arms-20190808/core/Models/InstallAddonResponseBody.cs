@@ -10,77 +10,77 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallAddonResponseBody : TeaModel {
         /// <summary>
-        /// Status code: 200 indicates success.
+        /// The HTTP status code. The status code 200 indicates that the request was successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned struct.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InstallAddonResponseBodyData Data { get; set; }
         public class InstallAddonResponseBodyData : TeaModel {
             /// <summary>
-            /// Addon name.
+            /// The name of the add-on.
             /// </summary>
             [NameInMap("AddonName")]
             [Validation(Required=false)]
             public string AddonName { get; set; }
 
             /// <summary>
-            /// Number of alarm groups.
+            /// The number of alert rules.
             /// </summary>
             [NameInMap("AlertRuleCount")]
             [Validation(Required=false)]
             public long? AlertRuleCount { get; set; }
 
             /// <summary>
-            /// Condition list.
+            /// The installation phase.
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<InstallAddonResponseBodyDataConditions> Conditions { get; set; }
             public class InstallAddonResponseBodyDataConditions : TeaModel {
                 /// <summary>
-                /// First transition time.
+                /// The first transition time.
                 /// </summary>
                 [NameInMap("FirstTransitionTime")]
                 [Validation(Required=false)]
                 public string FirstTransitionTime { get; set; }
 
                 /// <summary>
-                /// Last transition time.
+                /// The last transition time.
                 /// </summary>
                 [NameInMap("LastTransitionTime")]
                 [Validation(Required=false)]
                 public string LastTransitionTime { get; set; }
 
                 /// <summary>
-                /// Details.
+                /// The detailed information.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// Reason of failure.
+                /// The reason for the failure.
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// Condition status.
+                /// The status of the phase.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Condition type.
+                /// The type of the phase.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -89,54 +89,57 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// Created time.
+            /// The time when the add-on was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// Number of dashboard.
+            /// The number of dashboards.
             /// </summary>
             [NameInMap("DashboardCount")]
             [Validation(Required=false)]
             public long? DashboardCount { get; set; }
 
             /// <summary>
-            /// Environment ID.
+            /// The environment ID.
             /// </summary>
             [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// Number of Exporter.
+            /// The number of exporters.
             /// </summary>
             [NameInMap("ExporterCount")]
             [Validation(Required=false)]
             public long? ExporterCount { get; set; }
 
             /// <summary>
-            /// Whether there is configuration.
+            /// Indicates whether the configuration is available.
             /// </summary>
             [NameInMap("HaveConfig")]
             [Validation(Required=false)]
             public bool? HaveConfig { get; set; }
 
             /// <summary>
-            /// User ID of the installation.
+            /// The user ID.
             /// </summary>
             [NameInMap("InstallUserId")]
             [Validation(Required=false)]
             public string InstallUserId { get; set; }
 
             /// <summary>
-            /// Language.
+            /// The language.
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            /// <summary>
+            /// Whether or not it is a managed component.
+            /// </summary>
             [NameInMap("Managed")]
             [Validation(Required=false)]
             public bool? Managed { get; set; }
@@ -149,49 +152,49 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Release ID.
+            /// The release ID after installation.
             /// </summary>
             [NameInMap("ReleaseId")]
             [Validation(Required=false)]
             public string ReleaseId { get; set; }
 
             /// <summary>
-            /// Name of Release.
+            /// The name of the release.
             /// </summary>
             [NameInMap("ReleaseName")]
             [Validation(Required=false)]
             public string ReleaseName { get; set; }
 
             /// <summary>
-            /// Scene.
+            /// The scenario.
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
-            /// Status of Release.
+            /// The status.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// Update time.
+            /// The time when the add-on was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// User ID.
+            /// The user ID.
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
-            /// The version number.
+            /// The version of the add-on.
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -200,24 +203,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
-        /// 
-        /// *   `true`: The call was successful.
-        /// *   `false`: The call failed.
+        /// Indicates whether the request was successful. Valid values: true and false.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

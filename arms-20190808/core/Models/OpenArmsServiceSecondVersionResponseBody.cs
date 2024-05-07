@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class OpenArmsServiceSecondVersionResponseBody : TeaModel {
         /// <summary>
-        /// The service ID that is returned if the service is activated.
+        /// The service ID returned if the service is activated.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

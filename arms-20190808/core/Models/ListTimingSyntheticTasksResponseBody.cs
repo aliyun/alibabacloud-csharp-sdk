@@ -30,6 +30,100 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<ListTimingSyntheticTasksResponseBodyDataItems> Items { get; set; }
             public class ListTimingSyntheticTasksResponseBodyDataItems : TeaModel {
+                [NameInMap("CommonSetting")]
+                [Validation(Required=false)]
+                public ListTimingSyntheticTasksResponseBodyDataItemsCommonSetting CommonSetting { get; set; }
+                public class ListTimingSyntheticTasksResponseBodyDataItemsCommonSetting : TeaModel {
+                    [NameInMap("CustomHost")]
+                    [Validation(Required=false)]
+                    public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHost CustomHost { get; set; }
+                    public class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHost : TeaModel {
+                        [NameInMap("Hosts")]
+                        [Validation(Required=false)]
+                        public List<ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHostHosts> Hosts { get; set; }
+                        public class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHostHosts : TeaModel {
+                            [NameInMap("Domain")]
+                            [Validation(Required=false)]
+                            public string Domain { get; set; }
+
+                            [NameInMap("IpType")]
+                            [Validation(Required=false)]
+                            public int? IpType { get; set; }
+
+                            [NameInMap("Ips")]
+                            [Validation(Required=false)]
+                            public List<string> Ips { get; set; }
+
+                        }
+
+                        [NameInMap("SelectType")]
+                        [Validation(Required=false)]
+                        public int? SelectType { get; set; }
+
+                    }
+
+                    [NameInMap("CustomPrometheusSetting")]
+                    [Validation(Required=false)]
+                    public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomPrometheusSetting CustomPrometheusSetting { get; set; }
+                    public class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomPrometheusSetting : TeaModel {
+                        [NameInMap("PrometheusClusterId")]
+                        [Validation(Required=false)]
+                        public string PrometheusClusterId { get; set; }
+
+                        [NameInMap("PrometheusClusterRegion")]
+                        [Validation(Required=false)]
+                        public string PrometheusClusterRegion { get; set; }
+
+                        [NameInMap("PrometheusLabels")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, string> PrometheusLabels { get; set; }
+
+                    }
+
+                    [NameInMap("CustomVPCSetting")]
+                    [Validation(Required=false)]
+                    public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomVPCSetting CustomVPCSetting { get; set; }
+                    public class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomVPCSetting : TeaModel {
+                        [NameInMap("RegionId")]
+                        [Validation(Required=false)]
+                        public string RegionId { get; set; }
+
+                        [NameInMap("SecureGroupId")]
+                        [Validation(Required=false)]
+                        public string SecureGroupId { get; set; }
+
+                        [NameInMap("VSwitchId")]
+                        [Validation(Required=false)]
+                        public string VSwitchId { get; set; }
+
+                        [NameInMap("VpcId")]
+                        [Validation(Required=false)]
+                        public string VpcId { get; set; }
+
+                    }
+
+                    [NameInMap("IpType")]
+                    [Validation(Required=false)]
+                    public int? IpType { get; set; }
+
+                    [NameInMap("IsOpenTrace")]
+                    [Validation(Required=false)]
+                    public bool? IsOpenTrace { get; set; }
+
+                    [NameInMap("MonitorSamples")]
+                    [Validation(Required=false)]
+                    public int? MonitorSamples { get; set; }
+
+                    [NameInMap("TraceClientType")]
+                    [Validation(Required=false)]
+                    public int? TraceClientType { get; set; }
+
+                    [NameInMap("XtraceRegion")]
+                    [Validation(Required=false)]
+                    public string XtraceRegion { get; set; }
+
+                }
+
                 /// <summary>
                 /// The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
                 /// </summary>

@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InstallAddonRequest : TeaModel {
         /// <summary>
-        /// Version of Addon.
+        /// The version of the add-on.
         /// </summary>
         [NameInMap("AddonVersion")]
         [Validation(Required=false)]
         public string AddonVersion { get; set; }
 
         /// <summary>
-        /// Locale, the default is Chinese zh.
+        /// The language. Valid values: zh and en. Default value: zh.
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// Whether to test run. The default value is false.
+        /// Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Environment ID.
+        /// The environment ID.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// Name of Addon.
+        /// The name of the add-on.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The release name after installation, if not specified, generates the default rule name.
+        /// The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.
         /// </summary>
         [NameInMap("ReleaseName")]
         [Validation(Required=false)]
         public string ReleaseName { get; set; }
 
         /// <summary>
-        /// Config information.
+        /// The metadata.
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
