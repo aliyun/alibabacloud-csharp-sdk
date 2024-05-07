@@ -227,6 +227,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public bool? SupportIpv6 { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceAttributeTags Tags { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceAttributeTags : TeaModel {
+                    [NameInMap("TagInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo> TagInfo { get; set; }
+                    public class DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("UserVpcId")]
                 [Validation(Required=false)]
                 public string UserVpcId { get; set; }

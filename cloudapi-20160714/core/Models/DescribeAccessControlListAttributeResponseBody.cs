@@ -53,13 +53,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AclName { get; set; }
 
         /// <summary>
-        /// Indicates whether the policy was used.
-        /// </summary>
-        [NameInMap("IsUsed")]
-        [Validation(Required=false)]
-        public string IsUsed { get; set; }
-
-        /// <summary>
         /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
