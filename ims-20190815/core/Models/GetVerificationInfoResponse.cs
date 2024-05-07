@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
-    public class RemoveFingerprintFromOIDCProviderResponse : TeaModel {
+    public class GetVerificationInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RemoveFingerprintFromOIDCProviderResponseBody Body { get; set; }
+        public GetVerificationInfoResponseBody Body { get; set; }
 
     }
 

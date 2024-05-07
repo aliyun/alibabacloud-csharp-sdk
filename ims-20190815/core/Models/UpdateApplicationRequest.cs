@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The validity period of the new access token.
+        /// The validity period of the access token.
         /// 
         /// Valid values: 900 to 10800. Unit: seconds.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? NewAccessTokenValidity { get; set; }
 
         /// <summary>
-        /// The new display name of the application.
+        /// The display name.
         /// </summary>
         [NameInMap("NewDisplayName")]
         [Validation(Required=false)]
@@ -43,29 +43,29 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? NewIsMultiTenant { get; set; }
 
         /// <summary>
-        /// The new scope of application permissions.
+        /// The permission that is granted on the application.
         /// 
-        /// For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.
+        /// For more information about the application permission scope, see [OAuth scopes](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to query the permissions that are supported by different types of applications.
         /// 
-        /// Separate multiple permission scopes with semicolons (;).
+        /// If you enter multiple permissions, separate them with semicolons (;).
         /// 
-        /// If you specify a new permission scope, the new permission scope takes effect. For example, if the original permission scope is `/acs/ccc`, and the new permission scope is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission scope, set the new permission scope to `/acs/ccc;/acs/alidns`.
+        /// The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is `/acs/ccc`, and the new value is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission and the `/acs/alidns` permission, set the value to `/acs/ccc;/acs/alidns`.
         /// </summary>
         [NameInMap("NewPredefinedScopes")]
         [Validation(Required=false)]
         public string NewPredefinedScopes { get; set; }
 
         /// <summary>
-        /// The new callback URL.
+        /// The callback URL.
         /// 
-        /// Separate multiple callback URLs with semicolons (;).
+        /// If you enter multiple callback URLs, separate them with semicolons (;).
         /// </summary>
         [NameInMap("NewRedirectUris")]
         [Validation(Required=false)]
         public string NewRedirectUris { get; set; }
 
         /// <summary>
-        /// The validity period of the refreshed token.
+        /// The validity period of the refresh token.
         /// 
         /// Valid values: 7200 to 31536000. Unit: seconds.
         /// </summary>
@@ -73,6 +73,19 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? NewRefreshTokenValidity { get; set; }
 
+        /// <summary>
+        /// The required permission.
+        /// 
+        /// You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.
+        /// 
+        /// If you also specify the `NewPredefinedScopes` parameter, the `NewPredefinedScopes` parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.
+        /// 
+        /// If you enter multiple permissions, separate them with semicolons (;).
+        /// 
+        /// The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.
+        /// 
+        /// >  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.
+        /// </summary>
         [NameInMap("NewRequiredScopes")]
         [Validation(Required=false)]
         public string NewRequiredScopes { get; set; }

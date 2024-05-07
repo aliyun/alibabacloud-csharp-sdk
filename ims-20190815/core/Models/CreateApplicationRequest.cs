@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? AccessTokenValidity { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// The application name.
         /// 
         /// The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
         /// </summary>
@@ -93,6 +93,15 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? RefreshTokenValidity { get; set; }
 
+        /// <summary>
+        /// The required permission.
+        /// 
+        /// You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.
+        /// 
+        /// If you enter multiple permissions, separate them with semicolons (;).
+        /// 
+        /// >  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.
+        /// </summary>
         [NameInMap("RequiredScopes")]
         [Validation(Required=false)]
         public string RequiredScopes { get; set; }

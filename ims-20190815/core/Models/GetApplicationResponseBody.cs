@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The configuration information about the application.
+        /// The information about the application.
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
+                        /// <summary>
+                        /// Indicates whether the permission is automatically selected by default when you install the application. Valid values:
+                        /// 
+                        /// *   true
+                        /// *   false
+                        /// 
+                        /// `openid` is required by default.
+                        /// </summary>
                         [NameInMap("Required")]
                         [Validation(Required=false)]
                         public bool? Required { get; set; }

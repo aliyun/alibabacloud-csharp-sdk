@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The type of the application. Valid values:
+                /// The application type. Valid values:
                 /// 
                 /// *   WebApp: a web application.
                 /// *   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public ListApplicationsResponseBodyApplicationsApplicationDelegatedScope DelegatedScope { get; set; }
                 public class ListApplicationsResponseBodyApplicationsApplicationDelegatedScope : TeaModel {
                     /// <summary>
-                    /// An array consisting of the information about the permissions that are granted on the application.
+                    /// The information about the permissions that are granted on the application.
                     /// </summary>
                     [NameInMap("PredefinedScopes")]
                     [Validation(Required=false)]
@@ -98,6 +98,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
+                            /// <summary>
+                            /// Indicates whether the permission is automatically selected by default when you install the application. Valid values:
+                            /// 
+                            /// *   true
+                            /// *   false
+                            /// 
+                            /// `openid` is required by default.
+                            /// </summary>
                             [NameInMap("Required")]
                             [Validation(Required=false)]
                             public bool? Required { get; set; }
@@ -123,7 +131,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? IsMultiTenant { get; set; }
 
                 /// <summary>
-                /// The callback URL.
+                /// The callback URLs.
                 /// </summary>
                 [NameInMap("RedirectUris")]
                 [Validation(Required=false)]

@@ -37,14 +37,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
-          *
-          * @param request AddClientIdToOIDCProviderRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddClientIdToOIDCProviderResponse
-         */
         public AddClientIdToOIDCProviderResponse AddClientIdToOIDCProviderWithOptions(AddClientIdToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,14 +68,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddClientIdToOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
-          *
-          * @param request AddClientIdToOIDCProviderRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddClientIdToOIDCProviderResponse
-         */
         public async Task<AddClientIdToOIDCProviderResponse> AddClientIdToOIDCProviderWithOptionsAsync(AddClientIdToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,26 +99,12 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddClientIdToOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
-          *
-          * @param request AddClientIdToOIDCProviderRequest
-          * @return AddClientIdToOIDCProviderResponse
-         */
         public AddClientIdToOIDCProviderResponse AddClientIdToOIDCProvider(AddClientIdToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddClientIdToOIDCProviderWithOptions(request, runtime);
         }
 
-        /**
-          * ###
-          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
-          *
-          * @param request AddClientIdToOIDCProviderRequest
-          * @return AddClientIdToOIDCProviderResponse
-         */
         public async Task<AddClientIdToOIDCProviderResponse> AddClientIdToOIDCProviderAsync(AddClientIdToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3303,6 +3273,72 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserSsoSettingsWithOptionsAsync(runtime);
+        }
+
+        public GetVerificationInfoResponse GetVerificationInfoWithOptions(GetVerificationInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVerificationInfo",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVerificationInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetVerificationInfoResponse> GetVerificationInfoWithOptionsAsync(GetVerificationInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVerificationInfo",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVerificationInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetVerificationInfoResponse GetVerificationInfo(GetVerificationInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVerificationInfoWithOptions(request, runtime);
+        }
+
+        public async Task<GetVerificationInfoResponse> GetVerificationInfoAsync(GetVerificationInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVerificationInfoWithOptionsAsync(request, runtime);
         }
 
         public ListAccessKeysResponse ListAccessKeysWithOptions(ListAccessKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

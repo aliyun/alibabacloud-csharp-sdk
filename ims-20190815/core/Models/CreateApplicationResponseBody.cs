@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The information of the application.
+        /// The information about the application.
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The application name.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// The type of the application.
+            /// The application type.
             /// </summary>
             [NameInMap("AppType")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The information of application permissions.
+            /// The information about the permissions that are granted on the application.
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
             public CreateApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
             public class CreateApplicationResponseBodyApplicationDelegatedScope : TeaModel {
                 /// <summary>
-                /// The information of application permissions.
+                /// The information about the permissions that are granted on the application.
                 /// </summary>
                 [NameInMap("PredefinedScopes")]
                 [Validation(Required=false)]
@@ -77,19 +77,27 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                     public List<CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope> PredefinedScope { get; set; }
                     public class CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope : TeaModel {
                         /// <summary>
-                        /// The description of the permission scope.
+                        /// The description of the permission.
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// The name of the scope.
+                        /// The name of the permission.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
+                        /// <summary>
+                        /// Indicates whether the permission is automatically selected by default when you install the application. Valid values:
+                        /// 
+                        /// *   true
+                        /// *   false
+                        /// 
+                        /// `openid` is required by default.
+                        /// </summary>
                         [NameInMap("Required")]
                         [Validation(Required=false)]
                         public bool? Required { get; set; }
@@ -115,7 +123,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? IsMultiTenant { get; set; }
 
             /// <summary>
-            /// The callback URL.
+            /// The callback URLs.
             /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
@@ -128,7 +136,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// The validity period of the refreshed token. Unit: seconds.
+            /// The validity period of the refresh token. Unit: seconds.
             /// </summary>
             [NameInMap("RefreshTokenValidity")]
             [Validation(Required=false)]
@@ -151,7 +159,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

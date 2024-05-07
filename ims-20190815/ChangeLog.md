@@ -1,3 +1,7 @@
+2024-05-07 Version: 2.1.0
+- Support API GetVerificationInfo.
+
+
 2023-12-14 Version: 2.0.4
 - Generated csharp 2019-08-15 for Ims.
 
