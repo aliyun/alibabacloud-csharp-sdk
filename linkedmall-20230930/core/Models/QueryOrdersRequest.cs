@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class QueryOrdersRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public OrderPageQuery Body { get; set; }

@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("productIds")]
         [Validation(Required=false)]
         public List<string> ProductIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]
         public string PurchaserId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuQueryParam : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("productId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("skuId")]
         [Validation(Required=false)]
         public string SkuId { get; set; }

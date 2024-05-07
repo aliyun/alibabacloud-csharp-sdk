@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundRenderCmd : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("bizClaimType")]
         [Validation(Required=false)]
         public int? BizClaimType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("goodsStatus")]
         [Validation(Required=false)]
         public int? GoodsStatus { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("orderLineId")]
         [Validation(Required=false)]
         public string OrderLineId { get; set; }

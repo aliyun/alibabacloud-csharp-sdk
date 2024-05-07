@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class PurchaseOrderRenderQuery : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("buyerId")]
         [Validation(Required=false)]
         public string BuyerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("deliveryAddress")]
         [Validation(Required=false)]
         public AddressInfo DeliveryAddress { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtInfo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("productList")]
         [Validation(Required=false)]
         public List<OrderRenderProductDTO> ProductList { get; set; }

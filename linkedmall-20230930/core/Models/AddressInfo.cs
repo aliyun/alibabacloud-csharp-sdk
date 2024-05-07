@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class AddressInfo : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("addressDetail")]
         [Validation(Required=false)]
         public string AddressDetail { get; set; }
@@ -24,10 +27,16 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("receiver")]
         [Validation(Required=false)]
         public string Receiver { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("receiverPhone")]
         [Validation(Required=false)]
         public string ReceiverPhone { get; set; }

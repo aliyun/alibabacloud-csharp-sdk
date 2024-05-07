@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfoQuery : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("distributorShopId")]
         [Validation(Required=false)]
         public string DistributorShopId { get; set; }
