@@ -9,6 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class UpdateDetectProcessRequest : TeaModel {
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        [NameInMap("Draft")]
+        [Validation(Required=false)]
+        public string Draft { get; set; }
+
+        /// <summary>
+        /// ID
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -16,14 +27,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("Draft")]
-        [Validation(Required=false)]
-        public string Draft { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
     }
 

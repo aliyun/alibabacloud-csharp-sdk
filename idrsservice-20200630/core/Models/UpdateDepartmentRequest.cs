@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// ID
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
@@ -20,10 +27,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
 
     }
 

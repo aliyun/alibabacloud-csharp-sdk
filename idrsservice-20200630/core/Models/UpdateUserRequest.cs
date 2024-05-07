@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [Validation(Required=false)]
         public string Email { get; set; }
 
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
 
     }
 

@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class ListTaskGroupsResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// -
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTaskGroupsResponseBodyData Data { get; set; }
@@ -25,27 +24,64 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
             [Validation(Required=false)]
             public List<ListTaskGroupsResponseBodyDataItems> Items { get; set; }
             public class ListTaskGroupsResponseBodyDataItems : TeaModel {
-                public string Status { get; set; }
+                [NameInMap("CompletedTasks")]
+                [Validation(Required=false)]
                 public int? CompletedTasks { get; set; }
-                public int? TotalTasks { get; set; }
+
+                [NameInMap("CreatedAt")]
+                [Validation(Required=false)]
                 public string CreatedAt { get; set; }
-                public string Name { get; set; }
-                public List<string> TaskIds { get; set; }
+
+                /// <summary>
+                /// ID
+                /// </summary>
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public string RuleId { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("TaskIds")]
+                [Validation(Required=false)]
+                public List<string> TaskIds { get; set; }
+
+                [NameInMap("TotalTasks")]
+                [Validation(Required=false)]
+                public int? TotalTasks { get; set; }
+
             }
-            [NameInMap("TotalPages")]
-            [Validation(Required=false)]
-            public int? TotalPages { get; set; }
+
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
             public long? TotalElements { get; set; }
-        };
 
-        [NameInMap("Code")]
+            [NameInMap("TotalPages")]
+            [Validation(Required=false)]
+            public int? TotalPages { get; set; }
+
+        }
+
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class UpdateRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public UpdateRuleResponseBodyData Data { get; set; }
+        public class UpdateRuleResponseBodyData : TeaModel {
+            [NameInMap("Content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            [NameInMap("CreatedAt")]
+            [Validation(Required=false)]
+            public string CreatedAt { get; set; }
+
+            /// <summary>
+            /// ID
+            /// </summary>
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,28 +45,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public UpdateRuleResponseBodyData Data { get; set; }
-        public class UpdateRuleResponseBodyData : TeaModel {
-            [NameInMap("CreatedAt")]
-            [Validation(Required=false)]
-            public string CreatedAt { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("Content")]
-            [Validation(Required=false)]
-            public string Content { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-        };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

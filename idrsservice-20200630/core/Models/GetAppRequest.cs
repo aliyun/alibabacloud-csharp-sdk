@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class GetAppRequest : TeaModel {
+        [NameInMap("ClientBaseParam")]
+        [Validation(Required=false)]
+        public string ClientBaseParam { get; set; }
+
+        [NameInMap("ClientVersion")]
+        [Validation(Required=false)]
+        public string ClientVersion { get; set; }
+
+        [NameInMap("DeviceId")]
+        [Validation(Required=false)]
+        public string DeviceId { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -16,10 +28,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("PackageName")]
         [Validation(Required=false)]
         public string PackageName { get; set; }
-
-        [NameInMap("DeviceId")]
-        [Validation(Required=false)]
-        public string DeviceId { get; set; }
 
     }
 

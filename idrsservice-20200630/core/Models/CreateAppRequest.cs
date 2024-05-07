@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class CreateAppRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DepartmentId")]
+        [Validation(Required=false)]
+        public string DepartmentId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [NameInMap("PackageName")]
         [Validation(Required=false)]
         public string PackageName { get; set; }
-
-        [NameInMap("DepartmentId")]
-        [Validation(Required=false)]
-        public string DepartmentId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

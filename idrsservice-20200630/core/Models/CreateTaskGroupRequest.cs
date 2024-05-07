@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Day")]
+        [Validation(Required=false)]
+        public List<int?> Day { get; set; }
+
         [NameInMap("ExpireAt")]
         [Validation(Required=false)]
         public string ExpireAt { get; set; }
@@ -37,17 +45,23 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
         [Validation(Required=false)]
         public string TriggerPeriod { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("VideoInfo")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public List<CreateTaskGroupRequestVideoInfo> VideoInfo { get; set; }
+        public class CreateTaskGroupRequestVideoInfo : TeaModel {
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public string RuleId { get; set; }
 
-        [NameInMap("Day")]
-        [Validation(Required=false)]
-        public List<int?> Day { get; set; }
+            [NameInMap("VideoMetaUrl")]
+            [Validation(Required=false)]
+            public string VideoMetaUrl { get; set; }
 
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public List<string> VideoUrl { get; set; }
+            [NameInMap("VideoUrl")]
+            [Validation(Required=false)]
+            public string VideoUrl { get; set; }
+
+        }
 
     }
 

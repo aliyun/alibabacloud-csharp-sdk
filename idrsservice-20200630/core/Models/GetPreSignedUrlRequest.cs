@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class GetPreSignedUrlRequest : TeaModel {
+        [NameInMap("ClientBaseParam")]
+        [Validation(Required=false)]
+        public string ClientBaseParam { get; set; }
+
+        [NameInMap("ClientVersion")]
+        [Validation(Required=false)]
+        public string ClientVersion { get; set; }
+
         [NameInMap("Prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }

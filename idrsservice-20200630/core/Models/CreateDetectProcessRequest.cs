@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class CreateDetectProcessRequest : TeaModel {
-        [NameInMap("Name")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Content { get; set; }
 
         [NameInMap("Draft")]
         [Validation(Required=false)]
         public string Draft { get; set; }
 
-        [NameInMap("Content")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

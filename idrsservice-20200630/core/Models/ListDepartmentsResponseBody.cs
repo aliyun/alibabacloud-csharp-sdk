@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Idrsservice20200630.Models
 {
     public class ListDepartmentsResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -25,28 +21,62 @@ namespace AlibabaCloud.SDK.Idrsservice20200630.Models
             [Validation(Required=false)]
             public List<ListDepartmentsResponseBodyDataItems> Items { get; set; }
             public class ListDepartmentsResponseBodyDataItems : TeaModel {
-                public string Description { get; set; }
+                [NameInMap("Administrators")]
+                [Validation(Required=false)]
                 public List<ListDepartmentsResponseBodyDataItemsAdministrators> Administrators { get; set; }
                 public class ListDepartmentsResponseBodyDataItemsAdministrators : TeaModel {
-                    public string Name { get; set; }
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
                     public string Id { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
                 }
+
+                [NameInMap("CreatedAt")]
+                [Validation(Required=false)]
                 public string CreatedAt { get; set; }
-                public string UpdatedAt { get; set; }
-                public string Name { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// ID
+                /// </summary>
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("UpdatedAt")]
+                [Validation(Required=false)]
+                public string UpdatedAt { get; set; }
+
             }
-            [NameInMap("TotalPages")]
-            [Validation(Required=false)]
-            public int? TotalPages { get; set; }
+
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
             public long? TotalElements { get; set; }
-        };
 
-        [NameInMap("Code")]
+            [NameInMap("TotalPages")]
+            [Validation(Required=false)]
+            public int? TotalPages { get; set; }
+
+        }
+
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

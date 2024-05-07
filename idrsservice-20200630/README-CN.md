@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Idrsservice20200630
+dotnet add package AlibabaCloud.SDK.Idrsservice20200630
 ```
 
 ## 问题
