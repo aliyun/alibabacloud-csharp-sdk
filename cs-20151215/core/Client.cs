@@ -4235,11 +4235,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterNodePoolDetailWithOptionsAsync(ClusterId, NodepoolId, headers, runtime);
         }
 
-        public DescribeClusterNodePoolsResponse DescribeClusterNodePoolsWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeClusterNodePoolsResponse DescribeClusterNodePoolsWithOptions(string ClusterId, DescribeClusterNodePoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolName))
+            {
+                query["NodepoolName"] = request.NodepoolName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4256,11 +4263,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsWithOptionsAsync(string ClusterId, DescribeClusterNodePoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolName))
+            {
+                query["NodepoolName"] = request.NodepoolName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4277,18 +4291,18 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeClusterNodePoolsResponse DescribeClusterNodePools(string ClusterId)
+        public DescribeClusterNodePoolsResponse DescribeClusterNodePools(string ClusterId, DescribeClusterNodePoolsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeClusterNodePoolsWithOptions(ClusterId, headers, runtime);
+            return DescribeClusterNodePoolsWithOptions(ClusterId, request, headers, runtime);
         }
 
-        public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsAsync(string ClusterId)
+        public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsAsync(string ClusterId, DescribeClusterNodePoolsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeClusterNodePoolsWithOptionsAsync(ClusterId, headers, runtime);
+            return await DescribeClusterNodePoolsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
         public DescribeClusterNodesResponse DescribeClusterNodesWithOptions(string ClusterId, DescribeClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

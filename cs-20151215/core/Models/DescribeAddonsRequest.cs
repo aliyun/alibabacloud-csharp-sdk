@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonsRequest : TeaModel {
         /// <summary>
-        /// The type of cluster. Valid values:
+        /// The cluster type. Valid values:
         /// 
         /// *   `Default`: ACK managed cluster
         /// *   `Serverless`: ACK Serverless cluster

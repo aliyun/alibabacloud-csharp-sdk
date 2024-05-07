@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public List<Taint> Taints { get; set; }
 
                 /// <summary>
-                /// 扩容后的节点是否可调度。
+                /// Specifies whether the nodes are schedulable after a scale-out activity is performed.
                 /// </summary>
                 [NameInMap("unschedulable")]
                 [Validation(Required=false)]
@@ -255,14 +255,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoRepair { get; set; }
 
                 /// <summary>
-                /// 自动修复节点策略。
+                /// The auto node repair policy.
                 /// </summary>
                 [NameInMap("auto_repair_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy : TeaModel {
                     /// <summary>
-                    /// 是否允许重启节点。
+                    /// Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:
+                    /// - `true`: yes 
+                    /// - `false`: no
                     /// </summary>
                     [NameInMap("restart_node")]
                     [Validation(Required=false)]
@@ -271,21 +273,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// 是否自动升级。
+                /// Specifies whether to enable auto update. Valid values:
+                /// - `true`: enables auto update. 
+                /// - `false`: disables auto update.
                 /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
                 public bool? AutoUpgrade { get; set; }
 
                 /// <summary>
-                /// 自动升级策略。
+                /// The auto update policy.
                 /// </summary>
                 [NameInMap("auto_upgrade_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy : TeaModel {
                     /// <summary>
-                    /// 是否允许自动升级kubelet。
+                    /// Specifies whether ACK is allowed to automatically update the kubelet. Valid values:
+                    /// - `true`: yes 
+                    /// - `false`: no
                     /// </summary>
                     [NameInMap("auto_upgrade_kubelet")]
                     [Validation(Required=false)]
@@ -294,28 +300,32 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// 是否自动修复CVE。
+                /// Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:
+                /// - `true`: yes 
+                /// - `false`: no
                 /// </summary>
                 [NameInMap("auto_vul_fix")]
                 [Validation(Required=false)]
                 public bool? AutoVulFix { get; set; }
 
                 /// <summary>
-                /// 自动修复CVE策略。
+                /// The auto CVE patching policy.
                 /// </summary>
                 [NameInMap("auto_vul_fix_policy")]
                 [Validation(Required=false)]
                 public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
                 public class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy : TeaModel {
                     /// <summary>
-                    /// 是否允许重启节点。
+                    /// Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:
+                    /// - `true`: yes
+                    /// - `false`: no
                     /// </summary>
                     [NameInMap("restart_node")]
                     [Validation(Required=false)]
                     public bool? RestartNode { get; set; }
 
                     /// <summary>
-                    /// 允许自动修复的漏洞级别，以逗号分隔。
+                    /// The severity levels of vulnerabilities that ACK is allowed to automatically patch. Multiple severity levels are separated by commas (,).
                     /// </summary>
                     [NameInMap("vul_level")]
                     [Validation(Required=false)]
@@ -502,7 +512,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? AutoRenewPeriod { get; set; }
 
                 /// <summary>
-                /// 是否开启CIS加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启CIS加固。
+                /// [This parameter is deprecated]
+                /// 
+                /// Please replace this parameter with security_hardening_os.
                 /// </summary>
                 [NameInMap("cis_enabled")]
                 [Validation(Required=false)]
@@ -548,7 +560,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// 操作系统镜像类型。
+                /// The type of OS image. You must set this parameter or platform. Valid values:
+                /// - AliyunLinux: Alinux2 
+                /// - AliyunLinux3: Alinux3 
+                /// - AliyunLinux3Arm64: Alinux3 ARM 
+                /// - AliyunLinuxUEFI: Alinux2 UEFI 
+                /// - CentOS: CentOS 
+                /// - Windows: Windows 
+                /// - WindowsCore: Windows Core 
+                /// - ContainerOS: ContainerOS
                 /// </summary>
                 [NameInMap("image_type")]
                 [Validation(Required=false)]
@@ -595,7 +615,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string KeyPair { get; set; }
 
                 /// <summary>
-                /// 弹出的ECS实例是否使用以非root用户登陆。
+                /// Specifies whether a non-root user can log on to the ECS instance added to the node pool.
                 /// </summary>
                 [NameInMap("login_as_non_root")]
                 [Validation(Required=false)]
@@ -743,12 +763,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public List<string> SecurityGroupIds { get; set; }
 
+                /// <summary>
+                /// Specifies whether to enable Alibaba Cloud Linux Security Hardening.
+                /// Valid values:
+                /// - `true`: enables Alibaba Cloud Linux Security Hardening.
+                /// - `false`: disables Alibaba Cloud Linux Security Hardening.
+                /// 
+                /// Default value: false
+                /// </summary>
                 [NameInMap("security_hardening_os")]
                 [Validation(Required=false)]
                 public bool? SecurityHardeningOs { get; set; }
 
                 /// <summary>
-                /// 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。
+                /// Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see ACK reinforcement based on classified protection.
+                /// Valid values:
+                /// - `true`: enables reinforcement based on MLPS.
+                /// - `false`: disables reinforcement based on MLPS.
+                /// 
+                /// Default value: false.
                 /// </summary>
                 [NameInMap("soc_enabled")]
                 [Validation(Required=false)]
@@ -810,14 +843,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string SpotStrategy { get; set; }
 
                 /// <summary>
-                /// 节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。
+                /// Specifies whether to enable the burst feature for system disks. Valid values:
+                /// - `true`: enables the burst feature. 
+                /// - `false`: disables the burst feature. 
+                /// 
+                /// This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks. ](~~368372~~)
                 /// </summary>
                 [NameInMap("system_disk_bursting_enabled")]
                 [Validation(Required=false)]
                 public bool? SystemDiskBurstingEnabled { get; set; }
 
                 /// <summary>
-                /// 系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值范围：cloud：普通云盘。cloud_efficiency：高效云盘。cloud_ssd：SSD云盘。cloud_essd：ESSD云盘。
+                /// The type of system disk. When a high -priority disk type cannot be used, automatically try the next priority disk type creation system disk. Valid values: 
+                /// - cloud: basic disk
+                /// - cloud_efficiency: ultra disk
+                /// - cloud_ssd: standard SSD
+                /// - cloud_essd: ESSD
                 /// </summary>
                 [NameInMap("system_disk_categories")]
                 [Validation(Required=false)]
@@ -834,21 +875,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string SystemDiskCategory { get; set; }
 
                 /// <summary>
-                /// 系统盘采用的加密算法。取值范围：aes-256。
+                /// The algorithm that you want to use to encrypt the system disk. Set the value to aes-256.
                 /// </summary>
                 [NameInMap("system_disk_encrypt_algorithm")]
                 [Validation(Required=false)]
                 public string SystemDiskEncryptAlgorithm { get; set; }
 
                 /// <summary>
-                /// 是否加密系统盘。取值范围：true：加密。false：不加密。
+                /// Specifies whether to encrypt the system disk. Valid values: 
+                /// - `true`: encrypts the system disk. 
+                /// - `false`: does not encrypt the system disk.
                 /// </summary>
                 [NameInMap("system_disk_encrypted")]
                 [Validation(Required=false)]
                 public bool? SystemDiskEncrypted { get; set; }
 
                 /// <summary>
-                /// 系统盘使用的KMS密钥ID。
+                /// The ID of the KMS key that you want to use to encrypt the system disk.
                 /// </summary>
                 [NameInMap("system_disk_kms_key_id")]
                 [Validation(Required=false)]
@@ -862,7 +905,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string SystemDiskPerformanceLevel { get; set; }
 
                 /// <summary>
-                /// 节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。
+                /// The predefined IOPS of a system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000} 
+                /// This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
                 /// </summary>
                 [NameInMap("system_disk_provisioned_iops")]
                 [Validation(Required=false)]
