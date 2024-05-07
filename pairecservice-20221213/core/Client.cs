@@ -2225,6 +2225,242 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             return await CreateParamWithOptionsAsync(request, headers, runtime);
         }
 
+        public CreateResourceRuleResponse CreateResourceRuleWithOptions(CreateResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricOperationType))
+            {
+                body["MetricOperationType"] = request.MetricOperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullInfo))
+            {
+                body["MetricPullInfo"] = request.MetricPullInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullPeriod))
+            {
+                body["MetricPullPeriod"] = request.MetricPullPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleComputingDefinition))
+            {
+                body["RuleComputingDefinition"] = request.RuleComputingDefinition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleItems))
+            {
+                body["RuleItems"] = request.RuleItems;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateResourceRuleResponse> CreateResourceRuleWithOptionsAsync(CreateResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricOperationType))
+            {
+                body["MetricOperationType"] = request.MetricOperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullInfo))
+            {
+                body["MetricPullInfo"] = request.MetricPullInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullPeriod))
+            {
+                body["MetricPullPeriod"] = request.MetricPullPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleComputingDefinition))
+            {
+                body["RuleComputingDefinition"] = request.RuleComputingDefinition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleItems))
+            {
+                body["RuleItems"] = request.RuleItems;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateResourceRuleResponse CreateResourceRule(CreateResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateResourceRuleWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateResourceRuleResponse> CreateResourceRuleAsync(CreateResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateResourceRuleWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateResourceRuleItemResponse CreateResourceRuleItemWithOptions(string ResourceRuleId, CreateResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxValue))
+            {
+                body["MaxValue"] = request.MaxValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinValue))
+            {
+                body["MinValue"] = request.MinValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRuleItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateResourceRuleItemResponse> CreateResourceRuleItemWithOptionsAsync(string ResourceRuleId, CreateResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxValue))
+            {
+                body["MaxValue"] = request.MaxValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinValue))
+            {
+                body["MinValue"] = request.MinValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRuleItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateResourceRuleItemResponse CreateResourceRuleItem(string ResourceRuleId, CreateResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateResourceRuleItemWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<CreateResourceRuleItemResponse> CreateResourceRuleItemAsync(string ResourceRuleId, CreateResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateResourceRuleItemWithOptionsAsync(ResourceRuleId, request, headers, runtime);
+        }
+
         public CreateSceneResponse CreateSceneWithOptions(CreateSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2521,6 +2757,104 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateTableMetaWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DebugResourceRuleResponse DebugResourceRuleWithOptions(string ResourceRuleId, DebugResourceRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DebugResourceRuleShrinkRequest request = new DebugResourceRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricInfo))
+            {
+                request.MetricInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricInfo, "MetricInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricInfoShrink))
+            {
+                query["MetricInfo"] = request.MetricInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DebugResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/action/debug",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DebugResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DebugResourceRuleResponse> DebugResourceRuleWithOptionsAsync(string ResourceRuleId, DebugResourceRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DebugResourceRuleShrinkRequest request = new DebugResourceRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricInfo))
+            {
+                request.MetricInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricInfo, "MetricInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricInfoShrink))
+            {
+                query["MetricInfo"] = request.MetricInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DebugResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/action/debug",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DebugResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DebugResourceRuleResponse DebugResourceRule(string ResourceRuleId, DebugResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DebugResourceRuleWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<DebugResourceRuleResponse> DebugResourceRuleAsync(string ResourceRuleId, DebugResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DebugResourceRuleWithOptionsAsync(ResourceRuleId, request, headers, runtime);
         }
 
         public DeleteABMetricResponse DeleteABMetricWithOptions(string ABMetricId, DeleteABMetricRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3137,6 +3471,146 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteParamWithOptionsAsync(ParamId, request, headers, runtime);
+        }
+
+        public DeleteResourceRuleResponse DeleteResourceRuleWithOptions(string ResourceRuleId, DeleteResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteResourceRuleResponse> DeleteResourceRuleWithOptionsAsync(string ResourceRuleId, DeleteResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteResourceRuleResponse DeleteResourceRule(string ResourceRuleId, DeleteResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteResourceRuleWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<DeleteResourceRuleResponse> DeleteResourceRuleAsync(string ResourceRuleId, DeleteResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteResourceRuleWithOptionsAsync(ResourceRuleId, request, headers, runtime);
+        }
+
+        public DeleteResourceRuleItemResponse DeleteResourceRuleItemWithOptions(string ResourceRuleId, string ResourceRuleItemId, DeleteResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleItemId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceRuleItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteResourceRuleItemResponse> DeleteResourceRuleItemWithOptionsAsync(string ResourceRuleId, string ResourceRuleItemId, DeleteResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleItemId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceRuleItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteResourceRuleItemResponse DeleteResourceRuleItem(string ResourceRuleId, string ResourceRuleItemId, DeleteResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteResourceRuleItemWithOptions(ResourceRuleId, ResourceRuleItemId, request, headers, runtime);
+        }
+
+        public async Task<DeleteResourceRuleItemResponse> DeleteResourceRuleItemAsync(string ResourceRuleId, string ResourceRuleItemId, DeleteResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteResourceRuleItemWithOptionsAsync(ResourceRuleId, ResourceRuleItemId, request, headers, runtime);
         }
 
         public DeleteSceneResponse DeleteSceneWithOptions(string SceneId, DeleteSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4145,6 +4619,76 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetLayerWithOptionsAsync(LayerId, request, headers, runtime);
+        }
+
+        public GetResourceRuleResponse GetResourceRuleWithOptions(string ResourceRuleId, GetResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetResourceRuleResponse> GetResourceRuleWithOptionsAsync(string ResourceRuleId, GetResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetResourceRuleResponse GetResourceRule(string ResourceRuleId, GetResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetResourceRuleWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<GetResourceRuleResponse> GetResourceRuleAsync(string ResourceRuleId, GetResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetResourceRuleWithOptionsAsync(ResourceRuleId, request, headers, runtime);
         }
 
         public GetSceneResponse GetSceneWithOptions(string SceneId, GetSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5905,6 +6449,132 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             return await ListParamsWithOptionsAsync(request, headers, runtime);
         }
 
+        public ListResourceRulesResponse ListResourceRulesWithOptions(ListResourceRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRuleId))
+            {
+                query["ResourceRuleId"] = request.ResourceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRuleName))
+            {
+                query["ResourceRuleName"] = request.ResourceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRules",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListResourceRulesResponse> ListResourceRulesWithOptionsAsync(ListResourceRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRuleId))
+            {
+                query["ResourceRuleId"] = request.ResourceRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRuleName))
+            {
+                query["ResourceRuleName"] = request.ResourceRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRules",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListResourceRulesResponse ListResourceRules(ListResourceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListResourceRulesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListResourceRulesResponse> ListResourceRulesAsync(ListResourceRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListResourceRulesWithOptionsAsync(request, headers, runtime);
+        }
+
         public ListScenesResponse ListScenesWithOptions(ListScenesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6651,6 +7321,96 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PushAllExperimentWithOptionsAsync(ExperimentId, request, headers, runtime);
+        }
+
+        public PushResourceRuleResponse PushResourceRuleWithOptions(string ResourceRuleId, PushResourceRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushResourceRuleShrinkRequest request = new PushResourceRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricInfo))
+            {
+                request.MetricInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricInfo, "MetricInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricInfoShrink))
+            {
+                query["MetricInfo"] = request.MetricInfoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/action/push",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PushResourceRuleResponse> PushResourceRuleWithOptionsAsync(string ResourceRuleId, PushResourceRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushResourceRuleShrinkRequest request = new PushResourceRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricInfo))
+            {
+                request.MetricInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricInfo, "MetricInfo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricInfoShrink))
+            {
+                query["MetricInfo"] = request.MetricInfoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/action/push",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PushResourceRuleResponse PushResourceRule(string ResourceRuleId, PushResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PushResourceRuleWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<PushResourceRuleResponse> PushResourceRuleAsync(string ResourceRuleId, PushResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PushResourceRuleWithOptionsAsync(ResourceRuleId, request, headers, runtime);
         }
 
         public ReportABMetricGroupResponse ReportABMetricGroupWithOptions(string ABMetricGroupId, ReportABMetricGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8385,6 +9145,234 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateParamWithOptionsAsync(ParamId, request, headers, runtime);
+        }
+
+        public UpdateResourceRuleResponse UpdateResourceRuleWithOptions(string ResourceRuleId, UpdateResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricOperationType))
+            {
+                body["MetricOperationType"] = request.MetricOperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullInfo))
+            {
+                body["MetricPullInfo"] = request.MetricPullInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullPeriod))
+            {
+                body["MetricPullPeriod"] = request.MetricPullPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleComputingDefinition))
+            {
+                body["RuleComputingDefinition"] = request.RuleComputingDefinition;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateResourceRuleResponse> UpdateResourceRuleWithOptionsAsync(string ResourceRuleId, UpdateResourceRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricOperationType))
+            {
+                body["MetricOperationType"] = request.MetricOperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullInfo))
+            {
+                body["MetricPullInfo"] = request.MetricPullInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricPullPeriod))
+            {
+                body["MetricPullPeriod"] = request.MetricPullPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleComputingDefinition))
+            {
+                body["RuleComputingDefinition"] = request.RuleComputingDefinition;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRule",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateResourceRuleResponse UpdateResourceRule(string ResourceRuleId, UpdateResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateResourceRuleWithOptions(ResourceRuleId, request, headers, runtime);
+        }
+
+        public async Task<UpdateResourceRuleResponse> UpdateResourceRuleAsync(string ResourceRuleId, UpdateResourceRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateResourceRuleWithOptionsAsync(ResourceRuleId, request, headers, runtime);
+        }
+
+        public UpdateResourceRuleItemResponse UpdateResourceRuleItemWithOptions(string ResourceRuleId, string ResourceRuleItemId, UpdateResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxValue))
+            {
+                body["MaxValue"] = request.MaxValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinValue))
+            {
+                body["MinValue"] = request.MinValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleItemId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceRuleItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateResourceRuleItemResponse> UpdateResourceRuleItemWithOptionsAsync(string ResourceRuleId, string ResourceRuleItemId, UpdateResourceRuleItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxValue))
+            {
+                body["MaxValue"] = request.MaxValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinValue))
+            {
+                body["MinValue"] = request.MinValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRuleItem",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resourcerules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceRuleItemId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceRuleItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateResourceRuleItemResponse UpdateResourceRuleItem(string ResourceRuleId, string ResourceRuleItemId, UpdateResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateResourceRuleItemWithOptions(ResourceRuleId, ResourceRuleItemId, request, headers, runtime);
+        }
+
+        public async Task<UpdateResourceRuleItemResponse> UpdateResourceRuleItemAsync(string ResourceRuleId, string ResourceRuleItemId, UpdateResourceRuleItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateResourceRuleItemWithOptionsAsync(ResourceRuleId, ResourceRuleItemId, request, headers, runtime);
         }
 
         public UpdateSceneResponse UpdateSceneWithOptions(string SceneId, UpdateSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
