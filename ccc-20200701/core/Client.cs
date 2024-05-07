@@ -828,6 +828,96 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddUsersToSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        public AnalyzeConversationResponse AnalyzeConversationWithOptions(AnalyzeConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldListJson))
+            {
+                query["FieldListJson"] = request.FieldListJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskListJson))
+            {
+                query["TaskListJson"] = request.TaskListJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeConversation",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AnalyzeConversationResponse> AnalyzeConversationWithOptionsAsync(AnalyzeConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldListJson))
+            {
+                query["FieldListJson"] = request.FieldListJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskListJson))
+            {
+                query["TaskListJson"] = request.TaskListJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeConversation",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AnalyzeConversationResponse AnalyzeConversation(AnalyzeConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AnalyzeConversationWithOptions(request, runtime);
+        }
+
+        public async Task<AnalyzeConversationResponse> AnalyzeConversationAsync(AnalyzeConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AnalyzeConversationWithOptionsAsync(request, runtime);
+        }
+
         public AnswerCallResponse AnswerCallWithOptions(AnswerCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
