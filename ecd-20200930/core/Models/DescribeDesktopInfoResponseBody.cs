@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CurrentAppVersion { get; set; }
 
+            [NameInMap("DesktopGroupId")]
+            [Validation(Required=false)]
+            public string DesktopGroupId { get; set; }
+
             /// <summary>
             /// The cloud computer ID.
             /// </summary>
