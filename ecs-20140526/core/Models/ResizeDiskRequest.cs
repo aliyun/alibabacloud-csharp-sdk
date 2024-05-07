@@ -29,7 +29,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// 32768
+        /// The new disk capacity. Unit: GiB. Valid values:
+        /// 
+        /// *   For a system disk:
+        /// 
+        ///     *   Basic disk (cloud): 20 to 500.
+        ///     *   Other disk categories: 20 to 2048.
+        /// 
+        /// *   For a data disk:
+        /// 
+        ///     *   Ultra disk (cloud_efficiency): 20 to 32768.
+        /// 
+        ///     *   Standard SSD (cloud_ssd): 20 to 32768.
+        /// 
+        ///     *   ESSD (cloud_essd): Valid values depend on the `PerformanceLevel` value. You can call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.
+        /// 
+        ///         *   Valid values when the PerformanceLevel value is PL0: 1 to 32768.
+        ///         *   Valid values when the PerformanceLevel value is PL1: 20 to 32768.
+        ///         *   Valid values when the PerformanceLevel value is PL2: 461 to 32768.
+        ///         *   Valid values when the PerformanceLevel value is PL3: 1261 to 32768.
+        /// 
+        ///     *   Basic disk (cloud): 5 to 2000.
+        /// 
+        ///     *   ESSD AutoPL disk (cloud_auto): 1 to 32768.
+        /// 
+        /// The new disk capacity must be larger than the original disk capacity.
         /// </summary>
         [NameInMap("NewSize")]
         [Validation(Required=false)]
@@ -52,26 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The new disk capacity. Unit: GiB. Valid values:
+        /// The method that you want to use to resize the disk. Valid values:
         /// 
-        /// *   System disk: 20 to 500.
-        /// 
-        /// *   Data disk:
-        /// 
-        ///     *   Ultra disk (cloud_efficiency): 20 to 32768.
-        /// 
-        ///     *   Standard SSD (cloud_ssd): 20 to 32768.
-        /// 
-        ///     *   ESSD (cloud_essd): Valid values when the NewSize parameter is set to cloud_essd depend on the `PerformanceLevel` value. You can call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.
-        /// 
-        ///         *   Valid values when PerformanceLevel is set to PL0: 40 to 32768.
-        ///         *   Valid values when PerformanceLevel is set to PL1: 20 to 32768.
-        ///         *   Valid values when PerformanceLevel is set to PL2: 461 to 32768.
-        ///         *   Valid values when PerformanceLevel is set to PL3: 1261 to 32768.
-        /// 
-        ///     *   Basic disk (cloud): 5 to 2000.
-        /// 
-        /// The new disk capacity must be greater than the original disk capacity.
+        /// *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the ECS console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).
+        /// *   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. You can resize ultra disks, standard SSDs, and ESSDs online.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -12,13 +12,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The CPU architecture. Valid values:
         /// 
-        /// *   X86: x86
-        /// *   ARM: ARM
+        /// *   X86
+        /// *   ARM
         /// </summary>
         [NameInMap("CpuArchitecture")]
         [Validation(Required=false)]
         public string CpuArchitecture { get; set; }
 
+        /// <summary>
+        /// The CPU architectures of instance types. Valid values:
+        /// 
+        /// >  Valid values of N: 1 and 2.
+        /// 
+        /// *   X86
+        /// *   ARM
+        /// </summary>
         [NameInMap("CpuArchitectures")]
         [Validation(Required=false)]
         public List<string> CpuArchitectures { get; set; }
@@ -32,10 +40,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string GPUSpec { get; set; }
 
+        /// <summary>
+        /// The GPU models of instance types. Valid values of N: 1 to 10.
+        /// </summary>
         [NameInMap("GpuSpecs")]
         [Validation(Required=false)]
         public List<string> GpuSpecs { get; set; }
 
+        /// <summary>
+        /// The categories of instance types. Valid values:
+        /// 
+        /// >  Valid values of N: 1 to 10.
+        /// 
+        /// *   General-purpose: general-purpose instance type
+        /// *   Compute-optimized: compute-optimized instance type
+        /// *   Memory-optimized: memory-optimized instance type
+        /// *   Big data: big data instance type
+        /// *   Local SSDs: instance type with local SSDs
+        /// *   High Clock Speed: instance type with high clock speeds
+        /// *   Enhanced: enhanced instance type
+        /// *   Shared: shared instance type
+        /// *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
+        /// *   Visual Compute-optimized: visual compute-optimized instance type
+        /// *   Heterogeneous Service: heterogeneous service instance type
+        /// *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
+        /// *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
+        /// *   ECS Bare Metal: ECS Bare Metal Instance type
+        /// *   Super Computing Cluster: SCC instance type
+        /// *   High Performance Compute: high-performance computing instance type
+        /// </summary>
         [NameInMap("InstanceCategories")]
         [Validation(Required=false)]
         public List<string> InstanceCategories { get; set; }
@@ -58,8 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
         /// *   ECS Bare Metal: ECS Bare Metal Instance type
         /// *   Super Computing Cluster: Super Computing Cluster (SCC) instance type
-        /// - High Performance Compute.
-        /// - Cloud Physical Server.
+        /// *   High Performance Compute: high-performance computing instance type
         /// </summary>
         [NameInMap("InstanceCategory")]
         [Validation(Required=false)]
@@ -76,6 +108,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
+        /// <summary>
+        /// The instance families of instance types that you want to query. Valid values of N: 1 to 10.
+        /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public List<string> InstanceTypeFamilies { get; set; }
@@ -96,6 +131,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
+        /// <summary>
+        /// The categories of local disks. Valid values of N: 1 and 2. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
+        /// 
+        /// *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
+        /// *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
+        /// </summary>
         [NameInMap("LocalStorageCategories")]
         [Validation(Required=false)]
         public List<string> LocalStorageCategories { get; set; }
@@ -103,15 +144,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
         /// 
-        /// *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances
-        /// *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances
+        /// *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.
+        /// *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
+        /// 
+        /// Enumerated values:
+        /// 
+        /// *   local_hdd_pro
+        /// *   local_ssd_pro
         /// </summary>
         [NameInMap("LocalStorageCategory")]
         [Validation(Required=false)]
         public string LocalStorageCategory { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Maximum value: 1600.
+        /// The maximum number of entries per page. Maximum value: 1600.
         /// 
         /// Default value: 1600.
         /// </summary>
@@ -361,8 +407,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:
         /// 
-        /// *   required: The cloud disk can be attached by using the NVMe protocol.
-        /// *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
+        /// *   required: Cloud disks can be attached by using the NVMe protocol.
+        /// *   unsupported: Cloud disks cannot be attached by using the NVMe protocol.
         /// </summary>
         [NameInMap("NvmeSupport")]
         [Validation(Required=false)]
@@ -385,6 +431,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PhysicalProcessorModel { get; set; }
 
+        /// <summary>
+        /// The CPU models of instance types. Valid values of N: 1 to 10.
+        /// </summary>
         [NameInMap("PhysicalProcessorModels")]
         [Validation(Required=false)]
         public List<string> PhysicalProcessorModels { get; set; }

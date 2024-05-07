@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostAutoRenewRequest : TeaModel {
         /// <summary>
-        /// The region ID of the dedicated host.
+        /// The ID of the dedicated host. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).
         /// </summary>
         [NameInMap("DedicatedHostIds")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the region where the dedicated host resides.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

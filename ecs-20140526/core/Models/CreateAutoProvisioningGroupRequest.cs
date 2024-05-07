@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
+                [NameInMap("BurstingEnabled")]
+                [Validation(Required=false)]
+                public bool? BurstingEnabled { get; set; }
+
                 /// <summary>
                 /// The category of data disk N. Valid values of N: 1 to 16. Valid values:
                 /// 
@@ -130,6 +134,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string DiskName { get; set; }
 
+                [NameInMap("EncryptAlgorithm")]
+                [Validation(Required=false)]
+                public string EncryptAlgorithm { get; set; }
+
                 /// <summary>
                 /// Specifies whether to encrypt data disk N. Valid values:
                 /// 
@@ -166,6 +174,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
+
+                [NameInMap("ProvisionedIops")]
+                [Validation(Required=false)]
+                public long? ProvisionedIops { get; set; }
 
                 /// <summary>
                 /// The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
@@ -404,6 +416,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk : TeaModel {
+                [NameInMap("BurstingEnabled")]
+                [Validation(Required=false)]
+                public bool? BurstingEnabled { get; set; }
+
                 /// <summary>
                 /// The algorithm to use to encrypt the system disk. Valid values:
                 /// 
@@ -440,6 +456,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
                 public string KMSKeyId { get; set; }
+
+                [NameInMap("ProvisionedIops")]
+                [Validation(Required=false)]
+                public long? ProvisionedIops { get; set; }
 
             }
 

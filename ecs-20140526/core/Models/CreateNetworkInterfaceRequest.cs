@@ -23,6 +23,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConnectionTrackingConfiguration")]
+        [Validation(Required=false)]
+        public CreateNetworkInterfaceRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
+        public class CreateNetworkInterfaceRequestConnectionTrackingConfiguration : TeaModel {
+            [NameInMap("TcpClosedAndTimeWaitTimeout")]
+            [Validation(Required=false)]
+            public int? TcpClosedAndTimeWaitTimeout { get; set; }
+
+            [NameInMap("TcpEstablishedTimeout")]
+            [Validation(Required=false)]
+            public int? TcpEstablishedTimeout { get; set; }
+
+            [NameInMap("UdpTimeout")]
+            [Validation(Required=false)]
+            public int? UdpTimeout { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to release the ENI when the associated instance is released. Valid values:
         /// 

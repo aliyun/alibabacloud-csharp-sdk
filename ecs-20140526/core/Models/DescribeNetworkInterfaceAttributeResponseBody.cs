@@ -137,6 +137,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("ConnectionTrackingConfiguration")]
+        [Validation(Required=false)]
+        public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration : TeaModel {
+            [NameInMap("TcpClosedAndTimeWaitTimeout")]
+            [Validation(Required=false)]
+            public int? TcpClosedAndTimeWaitTimeout { get; set; }
+
+            [NameInMap("TcpEstablishedTimeout")]
+            [Validation(Required=false)]
+            public int? TcpEstablishedTimeout { get; set; }
+
+            [NameInMap("UdpTimeout")]
+            [Validation(Required=false)]
+            public int? UdpTimeout { get; set; }
+
+        }
+
         /// <summary>
         /// The time when the ENI was created.
         /// </summary>

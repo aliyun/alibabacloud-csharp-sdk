@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+            /// The name of the system disk. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreditSpecification { get; set; }
 
         /// <summary>
-        /// Details of the data disks.
+        /// The data disks.
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   true
             /// *   false
             /// 
-            /// >  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
+            /// >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
             /// </summary>
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The category of data disk N. Valid values:
             /// 
-            /// *   cloud_efficiency: ultra disk
+            /// *   cloud_efficiency: utra disk
             /// *   cloud_ssd: standard SSD
             /// *   cloud_essd: ESSD
             /// *   cloud: basic disk
@@ -489,14 +489,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   1st to 25th data disks: /dev/xvd`[b-z]`.
             /// *   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.
             /// 
-            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
+            /// >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
             public string Device { get; set; }
 
             /// <summary>
-            /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+            /// The name of data disk N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
@@ -531,10 +531,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
             /// 
-            /// *   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.
-            /// *   PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.
-            /// *   PL2: A single ESSD can deliver up to 100000 random read/write IOPS.
-            /// *   PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.
+            /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+            /// *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
+            /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+            /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
             /// 
             /// For information about ESSD performance levels, see [ESSDs](~~122389~~).
             /// </summary>
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
             /// 
-            /// >  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
+            /// >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
             /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
@@ -562,18 +562,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
             /// 
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
             ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
             ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
             ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
             /// 
             /// *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.
+            /// *   Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.
             /// 
             /// *   Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.
             /// 
-            /// The value of this parameter must be greater than or equal to the size of the snapshot specified by the `DataDisk.N.SnapshotId` parameter.
+            /// >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
             /// 
-            /// When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+            /// When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -780,7 +780,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
+        /// The instance name. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
         /// 
         /// When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
         /// </summary>
@@ -999,7 +999,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   You can specify network card indexes only for instances of specific instance types.
             /// *   When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.
-            /// *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see [Overview of instance families](~~25378~~).
+            /// *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see the [Overview of instance families](~~25378~~) topic.
             /// </summary>
             [NameInMap("NetworkCardIndex")]
             [Validation(Required=false)]
@@ -1015,7 +1015,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// The name of ENI N.
+            /// The name of ENI N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
             /// 
             /// Take note of the following items:
             /// 
@@ -1029,8 +1029,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The communication mode of ENI N. Valid values:
             /// 
-            /// *   Standard: uses the TCP communication mode.
-            /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
+            /// *   Standard: The TCP communication mode is used.
+            /// *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
             /// 
             /// Default value: Standard.
             /// 
@@ -1056,7 +1056,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// > 
             /// 
-            /// *   You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
+            /// *   You can attach only a single secondary ENI when you create an ECS instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
             /// 
             /// *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
             /// </summary>
@@ -1386,25 +1386,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? StorageSetPartitionNumber { get; set; }
 
         /// <summary>
-        /// The tags to add to the instance, disks, and primary ENI. You can specify up to 20 tags.
+        /// The tags to add to the instance, disks, and primary ENI.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RunInstancesRequestTag> Tag { get; set; }
         public class RunInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag of the instance, disks, and primary ENI.
-            /// 
-            /// The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag of the instance, disks, and primary ENI.
-            /// 
-            /// The tag value can be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

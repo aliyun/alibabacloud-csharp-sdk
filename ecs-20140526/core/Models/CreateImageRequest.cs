@@ -49,34 +49,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
+        /// The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.
         /// 
-        /// The following items are checked in standard check mode:
-        /// 
-        /// *   Virtio: whether the virtio driver is installed.
-        /// *   Fstab: whether mounting configurations in the fstab file are correct.
-        /// *   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.
-        /// *   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.
-        /// *   CloudInit: whether cloud-init is installed.
-        /// *   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.
-        /// *   Selinux: whether SElinux is enabled.
-        /// *   OnlineResizeFS: whether the root partition can be automatically resized.
-        /// *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
-        /// *   RtcTimeMode: the RTC time mode.
-        /// *   Platform: the platform. Examples: Linux and Windows.
-        /// *   OSVersion: the operating system version. Example: Centos 7.9.
-        /// *   Architecture: the architecture. Examples: ARM and x86\_64.
-        /// *   BootMode: the boot mode. Examples: UEFI and Legacy.
-        /// *   KernelVersion: the kernel version.
-        /// *   CloudAssistant: whether the Cloud Assistant client is installed.
-        /// *   SecurityCenterAgent: whether the Security Center agent is installed.
+        /// >  This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see [Overview of image check](~~439819~~) and [Operating system limits for image check](~~475800~~).
         /// </summary>
         [NameInMap("DetectionStrategy")]
         [Validation(Required=false)]
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// The custom images.
+        /// The information about the custom image.
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
@@ -85,8 +67,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The device name of disk N in the custom image. Valid values:
             /// 
-            /// *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in ascending alphabetical order.
-            /// *   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.
+            /// *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.
+            /// *   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
@@ -95,29 +77,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:
             /// 
-            /// *   system: system disk
-            /// *   data: data disk
+            /// *   system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.
+            /// *   data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.
             /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
             /// <summary>
-            /// The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on the value of DiskDeviceMapping.N.SnapshotId.
+            /// The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.
             /// 
-            /// *   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:
+            /// *   If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:
             /// 
-            ///     *   For basic disks, the valid values are 5 to 2000, and the default value is 5.
-            ///     *   For other types of disk, the valid values are 20 to 32768, and the default value is 20.
+            ///     *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.
+            ///     *   For other disks, the valid values range from 20 to 32768, and the default value is 20.
             /// 
-            /// *   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
+            /// *   If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
             /// <summary>
-            /// The ID of the snapshot that is used to create the custom image.
+            /// The ID of snapshot N to use to create the custom image.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -126,14 +108,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The name of the image family. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。、（:）、（\_）（-）。)
+        /// The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// The image name. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)
+        /// The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
@@ -164,20 +146,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use Platform to specify the distribution of the operating system for the system disk. Valid values:
+        /// The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:
         /// 
+        /// *   Aliyun
+        /// *   Anolis
         /// *   CentOS
         /// *   Ubuntu
-        /// *   SUSE
-        /// *   OpenSUSE
-        /// *   RedHat
-        /// *   Debian
         /// *   CoreOS
-        /// *   Aliyun
-        /// *   Windows Server 2012
-        /// *   Windows 7
+        /// *   SUSE
+        /// *   Debian
+        /// *   OpenSUSE
+        /// *   FreeBSD
+        /// *   RedHat
+        /// *   Kylin
+        /// *   UOS
+        /// *   Fedora
+        /// *   Fedora CoreOS
+        /// *   CentOS Stream
+        /// *   AlmaLinux
+        /// *   Rocky Linux
+        /// *   Gentoo
         /// *   Customized Linux
         /// *   Others Linux
+        /// *   Windows Server 2022
+        /// *   Windows Server 2019
+        /// *   Windows Server 2016
+        /// *   Windows Server 2012
+        /// *   Windows Server 2008
+        /// *   Windows Server 2003
         /// 
         /// Default value: Others Linux.
         /// </summary>
@@ -193,9 +189,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which you want to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.
+        /// The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
         /// 
-        /// > If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and leave `ResourceGroupId` empty, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. Before you call the CreateImage operation again, you must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group.
+        /// >  If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -210,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot that is used to create the custom image.
+        /// The ID of the snapshot that you want to use to create the custom image.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
