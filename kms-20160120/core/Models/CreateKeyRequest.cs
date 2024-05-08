@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        [NameInMap("Policy")]
+        [Validation(Required=false)]
+        public string Policy { get; set; }
+
         /// <summary>
         /// You do not need to specify this parameter. KMS sets a protection level for your key.
         /// 

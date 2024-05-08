@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtendedConfig { get; set; }
 
+        [NameInMap("Policy")]
+        [Validation(Required=false)]
+        public string Policy { get; set; }
+
         /// <summary>
         /// The name of the secret.
         /// </summary>
