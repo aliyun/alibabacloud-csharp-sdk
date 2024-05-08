@@ -45,9 +45,17 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? MessageRetentionPeriod { get; set; }
 
+                [NameInMap("TopicInnerUrl")]
+                [Validation(Required=false)]
+                public string TopicInnerUrl { get; set; }
+
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
+
+                [NameInMap("TopicUrl")]
+                [Validation(Required=false)]
+                public string TopicUrl { get; set; }
 
             }
 
