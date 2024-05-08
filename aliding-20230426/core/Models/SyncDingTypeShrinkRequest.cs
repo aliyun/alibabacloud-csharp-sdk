@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string DingType { get; set; }
 
+        [NameInMap("IsDimission")]
+        [Validation(Required=false)]
+        public string IsDimission { get; set; }
+
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

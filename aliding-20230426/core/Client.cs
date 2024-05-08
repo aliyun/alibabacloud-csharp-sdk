@@ -22433,6 +22433,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["DingType"] = request.DingType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDimission))
+            {
+                body["IsDimission"] = request.IsDimission;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["Source"] = request.Source;
@@ -22493,6 +22497,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DingType))
             {
                 body["DingType"] = request.DingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDimission))
+            {
+                body["IsDimission"] = request.IsDimission;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
