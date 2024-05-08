@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The list of network information about the instance.
+        /// The network information about the instance.
         /// </summary>
         [NameInMap("NetInfoItems")]
         [Validation(Required=false)]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The network type of the endpoint. Valid values:
+                /// The network type of the instance. Valid values:
                 /// 
-                /// *   **0**: the Internet.
-                /// *   **1**: classic network.
-                /// *   **2**: VPC.
+                /// *   **0**: Internet
+                /// *   **1**: classic network
+                /// *   **2**: Virtual Private Cloud (VPC)
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
@@ -51,15 +51,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// Indicates whether the address is a private endpoint. Valid values:
                 /// 
-                /// *   **0**: no.
-                /// *   **1**: yes.
+                /// *   **0**: The address is not a private endpoint.
+                /// *   **1**: The address is a private endpoint.
                 /// </summary>
                 [NameInMap("DirectConnection")]
                 [Validation(Required=false)]
                 public int? DirectConnection { get; set; }
 
                 /// <summary>
-                /// The expiration time of the classic network address of an ApsaraDB for Redis instance. Unit: seconds.
+                /// The expiration time of the classic network endpoint. Unit: seconds.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -75,43 +75,48 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// The network type of the IP address. Valid values:
                 /// 
-                /// *   **Public**: Internet.
-                /// *   **Inner**: classic network.
-                /// *   **Private**: VPC.
+                /// *   **Public**: Internet
+                /// *   **Inner**: classic network
+                /// *   **Private**: VPC
                 /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
+                /// <summary>
+                /// Indicates whether the address is the endpoint for the secondary zone. Valid values: 1 and 0. A value of 1 indicates that the address is the endpoint for the secondary zone.
+                /// 
+                /// >  This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.
+                /// </summary>
                 [NameInMap("IsSlaveProxy")]
                 [Validation(Required=false)]
                 public int? IsSlaveProxy { get; set; }
 
                 /// <summary>
-                /// The service port of the ApsaraDB for Redis instance.
+                /// The service port of the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
                 /// <summary>
-                /// The remaining validity period of the endpoint of the classic network. Unit: seconds.
+                /// The remaining validity period of the classic network endpoint. Unit: seconds.
                 /// 
-                /// >  A value of **0** indicates that the endpoint never expires.
+                /// >  **A value of 0 indicates that the endpoint never expires.
                 /// </summary>
                 [NameInMap("Upgradeable")]
                 [Validation(Required=false)]
                 public string Upgradeable { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC where the instance is deployed.
+                /// The ID of the VPC to which the instance belongs.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("VPCInstanceId")]
                 [Validation(Required=false)]

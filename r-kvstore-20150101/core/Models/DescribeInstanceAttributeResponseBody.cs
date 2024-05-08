@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceClass { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string PackageType { get; set; }
 
                 /// <summary>
-                /// The service port of the ApsaraDB for Redis instance.
+                /// The service port of the instance.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -391,6 +391,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public int? ShardCount { get; set; }
 
+                /// <summary>
+                /// The number of read replicas in the secondary zone. This parameter is returned only after read/write splitting is enabled for the instance across multiple zones.
+                /// </summary>
                 [NameInMap("SlaveReadOnlyCount")]
                 [Validation(Required=false)]
                 public long? SlaveReadOnlyCount { get; set; }
@@ -439,7 +442,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The vSwitch ID.
+                /// The ID of the vSwitch.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

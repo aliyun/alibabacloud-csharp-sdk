@@ -6194,6 +6194,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["NodeId"] = request.NodeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeRole))
+            {
+                query["NodeRole"] = request.NodeRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -6267,6 +6271,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
                 query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeRole))
+            {
+                query["NodeRole"] = request.NodeRole;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -9934,7 +9942,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When you call this operation, make sure that your instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~), and that the instance is deployed in classic mode. For more information, see [Comparison between cloud-native instances and classic instances](~~188068~~).
           * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
           * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
           *
@@ -10026,7 +10033,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When you call this operation, make sure that your instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~), and that the instance is deployed in classic mode. For more information, see [Comparison between cloud-native instances and classic instances](~~188068~~).
           * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
           * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
           *
@@ -10118,7 +10124,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When you call this operation, make sure that your instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~), and that the instance is deployed in classic mode. For more information, see [Comparison between cloud-native instances and classic instances](~~188068~~).
           * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
           * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
           *
@@ -10132,7 +10137,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When you call this operation, make sure that your instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~), and that the instance is deployed in classic mode. For more information, see [Comparison between cloud-native instances and classic instances](~~188068~~).
           * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
           * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
           *

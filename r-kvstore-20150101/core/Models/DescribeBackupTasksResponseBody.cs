@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupTasksResponseBody : TeaModel {
         /// <summary>
-        /// The following parameters are internal parameters. Ignore the parameters.
+        /// The following parameters are no longer used. Ignore the parameters.
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupTasksResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupTasksResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("AuthPrincipalType")]
             [Validation(Required=false)]
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("NoPermissionType")]
             [Validation(Required=false)]
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// An internal parameter. Ignore this parameter.
+            /// This parameter is no longer used. Ignore this parameter.
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]

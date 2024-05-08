@@ -63,12 +63,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The type of the O&M task. Valid values:
+        /// The type of the O\&M task. Valid values:
         /// 
         /// *   **rds_apsaradb_ha**: master-replica switchover
         /// *   **rds_apsaradb_transfer**: instance migration
         /// *   **rds_apsaradb_upgrade**: minor version update
-        /// *   **all**: all types
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// The IP address in the whitelist template.
+        /// The IP addresses in the IP whitelist template.
         /// 
-        /// >  Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.
+        /// >  Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.
         /// </summary>
         [NameInMap("GIpList")]
         [Validation(Required=false)]

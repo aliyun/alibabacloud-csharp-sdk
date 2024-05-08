@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// The number of entries per page. Maximum value: **50**. Default value: **30**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

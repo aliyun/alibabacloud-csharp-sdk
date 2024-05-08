@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
+        [NameInMap("NodeRole")]
+        [Validation(Required=false)]
+        public string NodeRole { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
