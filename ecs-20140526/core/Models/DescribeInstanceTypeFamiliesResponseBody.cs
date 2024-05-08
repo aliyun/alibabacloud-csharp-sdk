@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypeFamiliesResponseBody : TeaModel {
         /// <summary>
-        /// Details about instance families.
+        /// The instance families.
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]

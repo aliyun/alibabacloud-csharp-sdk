@@ -343,6 +343,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
+                [NameInMap("Placement")]
+                [Validation(Required=false)]
+                public DescribeDisksResponseBodyDisksDiskPlacement Placement { get; set; }
+                public class DescribeDisksResponseBodyDisksDiskPlacement : TeaModel {
+                    [NameInMap("ZoneIds")]
+                    [Validation(Required=false)]
+                    public string ZoneIds { get; set; }
+
+                }
+
                 /// <summary>
                 /// Indicates whether the disk is removable.
                 /// </summary>

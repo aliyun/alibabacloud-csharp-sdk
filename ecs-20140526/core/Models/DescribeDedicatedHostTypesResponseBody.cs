@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostTypesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the dedicated host type.
+        /// Details about the dedicated host types.
         /// </summary>
         [NameInMap("DedicatedHostTypes")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> DedicatedHostType { get; set; }
             public class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType : TeaModel {
                 /// <summary>
-                /// The number of cores in a single physical CPU.
+                /// The number of cores per physical CPU.
                 /// </summary>
                 [NameInMap("Cores")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CpuOverCommitRatioRange { get; set; }
 
                 /// <summary>
-                /// The type of the dedicated host. You can submit a ticket to request more dedicated host types.
+                /// The dedicated host type.
                 /// </summary>
                 [NameInMap("DedicatedHostType")]
                 [Validation(Required=false)]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? LocalStorageCapacity { get; set; }
 
                 /// <summary>
-                /// The category of the local disks.
+                /// The category of local disks.
                 /// </summary>
                 [NameInMap("LocalStorageCategory")]
                 [Validation(Required=false)]
                 public string LocalStorageCategory { get; set; }
 
                 /// <summary>
-                /// The size of the memory. Unit: GiB.
+                /// The memory size. Unit: GiB.
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Sockets { get; set; }
 
                 /// <summary>
-                /// Indicates whether the CPU overcommit ratio setting is supported.
+                /// Indicates whether the CPU overcommit ratio settings are supported.
                 /// </summary>
                 [NameInMap("SupportCpuOverCommitRatio")]
                 [Validation(Required=false)]
                 public bool? SupportCpuOverCommitRatio { get; set; }
 
                 /// <summary>
-                /// The ECS instance families supported by the dedicated host.
+                /// The ECS instance families supported by the dedicated host type.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ECS instance types supported by the dedicated host.
+                /// The ECS instance types supported by the dedicated host type.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypesList")]
                 [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

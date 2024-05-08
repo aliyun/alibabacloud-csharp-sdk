@@ -2294,6 +2294,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["DiskId"] = request.DiskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2377,6 +2381,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskId))
             {
                 query["DiskId"] = request.DiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -10588,7 +10596,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+          * ## [](#)Usage notes
+          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
           *
           * @param request CreateLaunchTemplateVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10806,7 +10815,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+          * ## [](#)Usage notes
+          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
           *
           * @param request CreateLaunchTemplateVersionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11024,7 +11034,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+          * ## [](#)Usage notes
+          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
           *
           * @param request CreateLaunchTemplateVersionRequest
           * @return CreateLaunchTemplateVersionResponse
@@ -11036,7 +11047,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+          * ## [](#)Usage notes
+          * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
           *
           * @param request CreateLaunchTemplateVersionRequest
           * @return CreateLaunchTemplateVersionResponse

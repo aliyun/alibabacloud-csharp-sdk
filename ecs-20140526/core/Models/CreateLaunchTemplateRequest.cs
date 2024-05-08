@@ -36,9 +36,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   cloud: basic disk.
             /// *   cloud_efficiency: ultra disk.
             /// *   cloud_ssd: standard SSD.
-            /// *   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk. cloud_auto: ESSD AutoPL disk.
+            /// *   cloud_essd: enhanced SSD (ESSD). You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.
+            /// *   cloud_auto: ESSD AutoPL disk.
+            /// *   cloud_essd_entry: ESSD Entry disk.
             /// 
-            /// For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
+            /// For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -47,8 +49,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// Specifies whether to release the system disk when the instance is released. Valid values:
             /// 
-            /// *   true: releases the system disk when the instance is released.
-            /// *   false: does not release the system disk when the instance is released.
+            /// *   true
+            /// *   false
             /// 
             /// Default value: true.
             /// </summary>
@@ -64,21 +66,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
             public string DiskName { get; set; }
 
             /// <summary>
-            /// 系统盘是否加密。取值范围：
+            /// Specifies whether to encrypt the system disk. Valid values:
             /// 
-            /// - true：加密。
-            /// - false：不加密。
+            /// *   true
+            /// *   false
             /// 
-            /// 默认值：false。
+            /// Default value: false.
             /// 
-            /// >中国香港D可用区、新加坡A可用区暂不支持在创建实例时加密系统盘。
+            /// >  If you create an instance in Hong Kong Zone D or Singapore Zone A, you cannot encrypt the system disk.
             /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
@@ -117,9 +119,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? ProvisionedIops { get; set; }
 
             /// <summary>
-            /// The size of the system disk. Unit: GiB. Valid values: 20 to 500.
+            /// The size of the system disk. Unit: GiB. Valid values:
             /// 
-            /// The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.
+            /// *   Valid values if you set SystemDisk.Category to cloud: 20 to 500.
+            /// *   Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.
+            /// 
+            /// The value of this parameter must be at least 20 and greater than or equal to the size of the image.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -130,9 +135,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
-        /// *   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).
-        /// *   The release time must be at least 30 minutes later than the current time.
-        /// *   The release time must be at most three years from the current time.
+        /// *   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.
+        /// *   The specified time must be at least 30 minutes later than the current time.
+        /// *   The specified time can be at most three years later than the current time.
         /// </summary>
         [NameInMap("AutoReleaseTime")]
         [Validation(Required=false)]
@@ -141,8 +146,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The performance mode of the burstable instance. Valid values:
         /// 
-        /// *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
-        /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+        /// *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).
+        /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).
         /// </summary>
         [NameInMap("CreditSpecification")]
         [Validation(Required=false)]
@@ -178,7 +183,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   cloud: basic disk
             /// *   cloud_efficiency: ultra disk
             /// *   cloud_ssd: standard SSD
-            /// *   cloud_essd: ESSD cloud_auto: ESSD AutoPL disk
+            /// *   cloud_essd: ESSD
+            /// *   cloud_auto: ESSD AutoPL disk
+            /// *   cloud_essd_entry: ESSD Entry disk
             /// 
             /// For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
             /// </summary>
@@ -189,8 +196,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// Specifies whether to release data disk N when the instance is released. Valid values:
             /// 
-            /// *   true: releases data disk N when the instance is released.
-            /// *   false: does not release data disk N when the instance is released.
+            /// *   true
+            /// *   false
             /// 
             /// Default value: true.
             /// </summary>
@@ -206,46 +213,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+            /// >  This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.
             /// </summary>
             [NameInMap("Device")]
             [Validation(Required=false)]
             public string Device { get; set; }
 
             /// <summary>
-            /// The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
             public string DiskName { get; set; }
 
             /// <summary>
-            /// Specifies whether to encrypt the data disk.
+            /// Specifies whether to encrypt data disk N.
             /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:
+            /// The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
             /// 
-            /// *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+            /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+            /// *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
             /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
             /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
             /// 
-            /// For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+            /// For information about ESSD performance levels, see [ESSDs](~~122389~~).
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+            /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
             /// 
-            /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+            /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
             /// 
-            /// > This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+            /// >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
             /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
@@ -254,29 +261,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000
+            /// *   Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768
+            /// *   Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768
+            /// *   Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.
             /// 
-            /// *   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.
+            /// *   Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the value of `DataDisk.N.PerformanceLevel`.
             /// 
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
+            ///     *   Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.
+            ///     *   Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.
+            ///     *   Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.
+            ///     *   Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.
             /// 
-            /// The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.
+            /// *   Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.
+            /// 
+            /// *   Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.
+            /// 
+            /// The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
             /// <summary>
-            /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created based on the size of the specified snapshot.
+            /// The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If you specify `DataDisk.N.SnapshotId`, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.
             /// 
-            /// Use snapshots that were created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+            /// >  Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -285,14 +296,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
+        /// Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
         /// 
-        /// - true
-        /// - false
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// 
-        /// >This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+        /// >  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
@@ -342,10 +353,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The source of the image. Valid values:
         /// 
-        /// *   system: public images provided by Alibaba Cloud
-        /// *   self: custom images that you create.
-        /// *   others: shared images from other Alibaba Cloud accounts.
-        /// *   marketplace: [Alibaba Cloud Marketplace](https://market.aliyun.com/) images. If Alibaba Cloud Marketplace images are found, you can use these images without prior subscription. You must pay attention to the billing details of Alibaba Cloud Marketplace images.
+        /// *   system: public image provided by Alibaba Cloud.
+        /// *   self: custom image that you created.
+        /// *   others: shared image from another Alibaba Cloud account.
+        /// *   marketplace:[Alibaba Cloud Marketplace](https://marketplace.alibabacloud.com/) image. If Alibaba Cloud Marketplace images are available, you can use the images without the need to subscribe to the images. Take note of the billing details of Alibaba Cloud Marketplace images.
         /// </summary>
         [NameInMap("ImageOwnerAlias")]
         [Validation(Required=false)]
@@ -354,7 +365,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance and credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
+        /// *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits.Otherwise, an `InvalidPayMethod` error is returned.
         /// *   PostPaid: pay-as-you-go.
         /// </summary>
         [NameInMap("InstanceChargeType")]
@@ -362,7 +373,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -432,14 +443,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// The name of the launch template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]
         public string LaunchTemplateName { get; set; }
 
         /// <summary>
-        /// The information of the ENI.
+        /// The information of the ENIs.
         /// </summary>
         [NameInMap("NetworkInterface")]
         [Validation(Required=false)]
@@ -453,7 +464,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The instance type of the instance.
+            /// The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   Primary
+            /// *   Secondary
+            /// 
+            /// Default value: Secondary.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -475,7 +493,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The communication mode of the primary ENI. Valid values:
             /// 
             /// *   Standard: uses the TCP communication mode.
-            /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
+            /// *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
             /// </summary>
             [NameInMap("NetworkInterfaceTrafficMode")]
             [Validation(Required=false)]
@@ -491,24 +509,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             ///     *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.
             ///     *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set `NetworkInterface.2.InstanceType` to Secondary to attach a secondary ENI.
             /// 
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress` and you cannot specify `PrivateIpAddress`.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress`. You cannot specify both this parameter and `PrivateIpAddress`.
             /// 
             /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.
             /// 
-            /// > You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
+            /// >  You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
             /// </summary>
             [NameInMap("PrimaryIpAddress")]
             [Validation(Required=false)]
             public string PrimaryIpAddress { get; set; }
 
             /// <summary>
-            /// The ID of the security group to which to assign secondary ENI N.
+            /// The ID of the security group to which to assign ENI N.
             /// 
             /// Take note of the following items:
             /// 
             /// *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
@@ -517,26 +535,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The ID of security group N to which to assign ENI N.
             /// 
-            /// *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you can configure a primary ENI and a secondary ENI.
-            /// *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
+            /// *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
+            /// *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section of the "Limits" topic.
             /// 
             /// Take note of the following items:
             /// 
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch to which to connect to ENI N.
+            /// The ID of the vSwitch to which to connect ENI N.
             /// 
             /// Take note of the following items:
             /// 
             /// *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId` and you cannot specify `VSwitchId`.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the vSwitch to which to connect the instance.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId`. You cannot specify both NetworkInterface.N.VSwitchId and `VSwitchId`.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the VSwitchId value.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -647,13 +665,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
         /// 
-        /// - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance. 
+        /// *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+        /// *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
         /// 
-        /// - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance. 
+        /// Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
         /// 
-        /// Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements. 
-        /// 
-        /// >If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.
+        /// >  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.
         /// </summary>
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]

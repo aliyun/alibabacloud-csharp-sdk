@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         /// <summary>
         /// The ID of the instance to which you want to attach the disk.
         /// </summary>
