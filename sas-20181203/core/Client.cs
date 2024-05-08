@@ -22,38 +22,49 @@ namespace AlibabaCloud.SDK.Sas20181203
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-hangzhou", "tds.aliyuncs.com"},
-                {"cn-qingdao", "tds.aliyuncs.com"},
-                {"cn-beijing", "tds.aliyuncs.com"},
-                {"cn-zhangjiakou", "tds.aliyuncs.com"},
-                {"cn-huhehaote", "tds.aliyuncs.com"},
-                {"cn-wulanchabu", "tds.aliyuncs.com"},
-                {"cn-shanghai", "tds.aliyuncs.com"},
-                {"cn-nanjing", "tds.aliyuncs.com"},
-                {"cn-fuzhou", "tds.aliyuncs.com"},
-                {"cn-shenzhen", "tds.aliyuncs.com"},
-                {"cn-heyuan", "tds.aliyuncs.com"},
-                {"cn-guangzhou", "tds.aliyuncs.com"},
-                {"cn-chengdu", "tds.aliyuncs.com"},
-                {"cn-hongkong", "tds.aliyuncs.com"},
+                {"cn-shanghai", "tds.cn-shanghai.aliyuncs.com"},
                 {"ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-2", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-5", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-6", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-7", "tds.ap-southeast-1.aliyuncs.com"},
-                {"us-east-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"us-west-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"eu-west-1", "tds.ap-southeast-1.aliyuncs.com"},
                 {"eu-central-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"me-east-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"me-central-1", "tds.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou-finance", "tds.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "tds.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "tds.aliyuncs.com"},
-                {"cn-beijing-finance-1", "tds.aliyuncs.com"},
+                {"ap-northeast-2-pop", "sas.aliyuncs.com"},
+                {"ap-south-1", "tds-vpc.ap-south-1.aliyuncs.com"},
+                {"ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"},
+                {"cn-beijing-finance-1", "sas.aliyuncs.com"},
+                {"cn-beijing-finance-pop", "sas.aliyuncs.com"},
+                {"cn-beijing-gov-1", "sas.aliyuncs.com"},
+                {"cn-beijing-nu16-b01", "sas.aliyuncs.com"},
+                {"cn-edge-1", "sas.aliyuncs.com"},
+                {"cn-fujian", "sas.aliyuncs.com"},
+                {"cn-haidian-cm12-c01", "sas.aliyuncs.com"},
+                {"cn-hangzhou-bj-b01", "sas.aliyuncs.com"},
+                {"cn-hangzhou-finance", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-1", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-2", "sas.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-3", "sas.aliyuncs.com"},
+                {"cn-hangzhou-test-306", "sas.aliyuncs.com"},
+                {"cn-hongkong-finance-pop", "sas.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "sas.aliyuncs.com"},
+                {"cn-north-2-gov-1", "sas.aliyuncs.com"},
+                {"cn-qingdao-nebula", "sas.aliyuncs.com"},
+                {"cn-shanghai-et15-b01", "sas.aliyuncs.com"},
+                {"cn-shanghai-et2-b01", "sas.aliyuncs.com"},
+                {"cn-shanghai-inner", "sas.aliyuncs.com"},
+                {"cn-shanghai-internal-test-1", "sas.aliyuncs.com"},
+                {"cn-shenzhen-inner", "sas.aliyuncs.com"},
+                {"cn-shenzhen-st4-d01", "sas.aliyuncs.com"},
+                {"cn-shenzhen-su18-b01", "sas.aliyuncs.com"},
+                {"cn-wuhan", "sas.aliyuncs.com"},
+                {"cn-wulanchabu", "sas.aliyuncs.com"},
+                {"cn-yushanfang", "sas.aliyuncs.com"},
+                {"cn-zhangbei", "sas.aliyuncs.com"},
+                {"cn-zhangbei-na61-b01", "sas.aliyuncs.com"},
+                {"cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"},
+                {"cn-zhengzhou-nebula-1", "sas.aliyuncs.com"},
+                {"eu-west-1-oxs", "sas.aliyuncs.com"},
+                {"me-east-1", "sas.aliyuncs.com"},
+                {"rus-west-1-pop", "sas.aliyuncs.com"},
+                {"us-east-1", "tds-vpc.us-east-1.aliyuncs.com"},
+                {"us-west-1", "tds.us-west-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -13605,6 +13616,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeCloudCenterInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
+          *
+          * @param request DescribeCloudProductFieldStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudProductFieldStatisticsResponse
+         */
+        // Deprecated
         public DescribeCloudProductFieldStatisticsResponse DescribeCloudProductFieldStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -13623,6 +13642,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeCloudProductFieldStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
+          *
+          * @param request DescribeCloudProductFieldStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudProductFieldStatisticsResponse
+         */
+        // Deprecated
         public async Task<DescribeCloudProductFieldStatisticsResponse> DescribeCloudProductFieldStatisticsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -13641,12 +13668,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeCloudProductFieldStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
+          *
+          * @return DescribeCloudProductFieldStatisticsResponse
+         */
+        // Deprecated
         public DescribeCloudProductFieldStatisticsResponse DescribeCloudProductFieldStatistics()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudProductFieldStatisticsWithOptions(runtime);
         }
 
+        /**
+          * @deprecated : DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.
+          *
+          * @return DescribeCloudProductFieldStatisticsResponse
+         */
+        // Deprecated
         public async Task<DescribeCloudProductFieldStatisticsResponse> DescribeCloudProductFieldStatisticsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

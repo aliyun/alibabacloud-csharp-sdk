@@ -1,3 +1,8 @@
+2024-05-08 Version: 2.26.1
+- Update API DescribeAssetDetailByUuid: update response param.
+- Update API ListCheckItemWarningSummary: update response param.
+
+
 2024-04-29 Version: 2.26.0
 - Support API ListCompressFileDetectResult.
 - Update API AddSasModuleTrial: update response param.

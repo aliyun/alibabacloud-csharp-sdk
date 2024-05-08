@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("EnableRisks")]
+            [Validation(Required=false)]
+            public List<string> EnableRisks { get; set; }
+
             /// <summary>
             /// The type of the baseline.
             /// </summary>
