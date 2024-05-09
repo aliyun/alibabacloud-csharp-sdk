@@ -2420,11 +2420,19 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeleteOptions))
+            {
+                request.DeleteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeleteOptions, "delete_options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
             {
                 request.RetainResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetainResources, "retain_resources", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOptionsShrink))
+            {
+                query["delete_options"] = request.DeleteOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepSlb))
             {
                 query["keep_slb"] = request.KeepSlb;
@@ -2462,11 +2470,19 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeleteOptions))
+            {
+                request.DeleteOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeleteOptions, "delete_options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RetainResources))
             {
                 request.RetainResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RetainResources, "retain_resources", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOptionsShrink))
+            {
+                query["delete_options"] = request.DeleteOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepSlb))
             {
                 query["keep_slb"] = request.KeepSlb;

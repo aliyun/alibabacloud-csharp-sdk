@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterShrinkRequest : TeaModel {
+        [NameInMap("delete_options")]
+        [Validation(Required=false)]
+        public string DeleteOptionsShrink { get; set; }
+
         /// <summary>
         /// Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.
         /// 

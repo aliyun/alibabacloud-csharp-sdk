@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterRequest : TeaModel {
+        [NameInMap("delete_options")]
+        [Validation(Required=false)]
+        public List<DeleteClusterRequestDeleteOptions> DeleteOptions { get; set; }
+        public class DeleteClusterRequestDeleteOptions : TeaModel {
+            [NameInMap("delete_mode")]
+            [Validation(Required=false)]
+            public string DeleteMode { get; set; }
+
+            [NameInMap("resource_type")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+        }
+
         /// <summary>
         /// Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.
         /// 
