@@ -5365,6 +5365,64 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDBResourceManagementModeResponse DescribeDBResourceManagementModeWithOptions(DescribeDBResourceManagementModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBResourceManagementMode",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBResourceManagementModeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDBResourceManagementModeResponse> DescribeDBResourceManagementModeWithOptionsAsync(DescribeDBResourceManagementModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBResourceManagementMode",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBResourceManagementModeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDBResourceManagementModeResponse DescribeDBResourceManagementMode(DescribeDBResourceManagementModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBResourceManagementModeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDBResourceManagementModeResponse> DescribeDBResourceManagementModeAsync(DescribeDBResourceManagementModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBResourceManagementModeWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDBVersionInfosResponse DescribeDBVersionInfosWithOptions(DescribeDBVersionInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
