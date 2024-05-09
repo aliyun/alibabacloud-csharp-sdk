@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ProcessStartTime { get; set; }
 
         /// <summary>
-        /// The state of the SQL statement. Valid values:
+        /// The status of the SQL statement. Valid values:
         /// 
         /// *   **running**
         /// *   **finished**

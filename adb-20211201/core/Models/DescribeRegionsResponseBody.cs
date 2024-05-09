@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the regions.
+        /// The queried regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Details of the zones.
+                /// The queried zones.
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -62,15 +62,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         /// <summary>
                         /// Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
                         /// 
-                        /// *   **true**: VPC is supported.
-                        /// *   **false**: VPC is not supported.
+                        /// *   **true**
+                        /// *   **false**
                         /// </summary>
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The ID of the zone.
+                        /// The zone ID.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

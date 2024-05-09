@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The maintenance window of the cluster. It must be in the hh:mmZ-hh:mmZ format.
         /// 
-        /// > The interval must be 1 hour on the hour.
+        /// > The interval must be 1 hour and start and end at the beginning of an hour.
         /// </summary>
         [NameInMap("MaintainTime")]
         [Validation(Required=false)]

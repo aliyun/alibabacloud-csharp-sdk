@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the preemptible instance feature for the resource group. After you enable the preemptible instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the preemptible instance feature only for job resource groups. Valid values:
+        /// 
+        /// *   **True**
+        /// *   **False**
+        /// </summary>
         [NameInMap("EnableSpot")]
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }
@@ -100,18 +106,34 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The job resubmission rules.
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<CreateDBResourceGroupRequestRules> Rules { get; set; }
         public class CreateDBResourceGroupRequestRules : TeaModel {
+            /// <summary>
+            /// The name of the resource group.
+            /// 
+            /// *   The name can be up to 255 characters in length.
+            /// *   The name must start with a letter or digit.
+            /// *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// The execution duration of the query. Unit: milliseconds.
+            /// </summary>
             [NameInMap("QueryTime")]
             [Validation(Required=false)]
             public string QueryTime { get; set; }
 
+            /// <summary>
+            /// The name of the destination resource group.
+            /// </summary>
             [NameInMap("TargetGroupName")]
             [Validation(Required=false)]
             public string TargetGroupName { get; set; }

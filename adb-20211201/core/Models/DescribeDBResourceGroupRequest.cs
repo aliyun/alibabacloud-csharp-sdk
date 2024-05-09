@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        /// <summary>
+        /// The region ID of the cluster.
+        /// 
+        /// >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

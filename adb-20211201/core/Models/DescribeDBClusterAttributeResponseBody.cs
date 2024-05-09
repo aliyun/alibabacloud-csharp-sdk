@@ -140,11 +140,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
-                /// > 
                 /// 
-                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
-                /// 
-                /// *   This parameter is not returned for pay-as-you-go clusters.
+                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
+                /// > - This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
@@ -203,6 +201,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                [NameInMap("ProductForm")]
+                [Validation(Required=false)]
+                public string ProductForm { get; set; }
+
                 /// <summary>
                 /// The region ID of the cluster.
                 /// </summary>
@@ -216,6 +218,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
+
+                [NameInMap("ReservedNodeCount")]
+                [Validation(Required=false)]
+                public int? ReservedNodeCount { get; set; }
+
+                [NameInMap("ReservedNodeSize")]
+                [Validation(Required=false)]
+                public string ReservedNodeSize { get; set; }
 
                 /// <summary>
                 /// The resource group ID.

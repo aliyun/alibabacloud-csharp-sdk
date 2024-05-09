@@ -54,6 +54,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ReservedNodeCount")]
+        [Validation(Required=false)]
+        public int? ReservedNodeCount { get; set; }
+
+        [NameInMap("ReservedNodeSize")]
+        [Validation(Required=false)]
+        public string ReservedNodeSize { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

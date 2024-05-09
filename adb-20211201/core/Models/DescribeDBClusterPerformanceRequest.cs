@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         ///     *   **AnalyticDB_IOPS**: the disk IOPS.
         ///     *   **AnalyticDB_Disk_Usage**: the disk space that is used.
         ///     *   **AnalyticDB_Disk_Usage_Percentage**: the disk usage.
-        ///     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
-        ///     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by hot data.
+        ///     *   **AnalyticDB_Hot_Data_Usage**: the disk space that is used by hot data.
+        ///     *   **AnalyticDB_Cold_Data_Usage**: the disk space that is used by code data.
         /// 
-        /// > This parameter must be specified.
+        /// >  This parameter must be specified.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]

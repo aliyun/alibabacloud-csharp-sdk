@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClustersResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClustersResponseBodyItemsDBCluster : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
                 /// <summary>
                 /// The billing method of the cluster. Valid values:
                 /// 
@@ -105,6 +109,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string DBClusterType { get; set; }
 
+                [NameInMap("DBNodeClass")]
+                [Validation(Required=false)]
+                public string DBNodeClass { get; set; }
+
+                [NameInMap("DBNodeCount")]
+                [Validation(Required=false)]
+                public long? DBNodeCount { get; set; }
+
+                [NameInMap("DBNodeStorage")]
+                [Validation(Required=false)]
+                public long? DBNodeStorage { get; set; }
+
                 /// <summary>
                 /// The version of AnalyticDB for MySQL Data Lakehouse Edition. **5.0** is returned.
                 /// </summary>
@@ -112,12 +128,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
+                [NameInMap("DiskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                [NameInMap("DtsJobId")]
+                [Validation(Required=false)]
+                public string DtsJobId { get; set; }
+
+                [NameInMap("ElasticIOResource")]
+                [Validation(Required=false)]
+                public int? ElasticIOResource { get; set; }
+
                 /// <summary>
                 /// The database engine of the cluster. **AnalyticDB** is returned.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
+
+                [NameInMap("ExecutorCount")]
+                [Validation(Required=false)]
+                public string ExecutorCount { get; set; }
 
                 /// <summary>
                 /// The time when the cluster expired. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
@@ -141,6 +173,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
                 public string Expired { get; set; }
+
+                [NameInMap("InnerIp")]
+                [Validation(Required=false)]
+                public string InnerIp { get; set; }
+
+                [NameInMap("InnerPort")]
+                [Validation(Required=false)]
+                public string InnerPort { get; set; }
 
                 /// <summary>
                 /// The lock state of the cluster. Valid values:
@@ -186,6 +226,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                [NameInMap("ProductForm")]
+                [Validation(Required=false)]
+                public string ProductForm { get; set; }
+
+                [NameInMap("RdsInstanceId")]
+                [Validation(Required=false)]
+                public string RdsInstanceId { get; set; }
+
                 /// <summary>
                 /// The region ID of the cluster.
                 /// </summary>
@@ -199,6 +247,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
+
+                [NameInMap("ReservedNodeCount")]
+                [Validation(Required=false)]
+                public int? ReservedNodeCount { get; set; }
+
+                [NameInMap("ReservedNodeSize")]
+                [Validation(Required=false)]
+                public string ReservedNodeSize { get; set; }
 
                 /// <summary>
                 /// The resource group ID.
@@ -244,6 +300,64 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     }
 
                 }
+
+                [NameInMap("TaskInfo")]
+                [Validation(Required=false)]
+                public DescribeDBClustersResponseBodyItemsDBClusterTaskInfo TaskInfo { get; set; }
+                public class DescribeDBClustersResponseBodyItemsDBClusterTaskInfo : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("StepList")]
+                    [Validation(Required=false)]
+                    public DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepList StepList { get; set; }
+                    public class DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepList : TeaModel {
+                        [NameInMap("StepList")]
+                        [Validation(Required=false)]
+                        public List<DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepListStepList> StepList { get; set; }
+                        public class DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepListStepList : TeaModel {
+                            [NameInMap("EndTime")]
+                            [Validation(Required=false)]
+                            public string EndTime { get; set; }
+
+                            [NameInMap("StartTime")]
+                            [Validation(Required=false)]
+                            public string StartTime { get; set; }
+
+                            [NameInMap("StepDesc")]
+                            [Validation(Required=false)]
+                            public string StepDesc { get; set; }
+
+                            [NameInMap("StepName")]
+                            [Validation(Required=false)]
+                            public string StepName { get; set; }
+
+                            [NameInMap("StepProgress")]
+                            [Validation(Required=false)]
+                            public string StepProgress { get; set; }
+
+                            [NameInMap("StepStatus")]
+                            [Validation(Required=false)]
+                            public string StepStatus { get; set; }
+
+                        }
+
+                    }
+
+                }
+
+                [NameInMap("VPCCloudInstanceId")]
+                [Validation(Required=false)]
+                public string VPCCloudInstanceId { get; set; }
 
                 /// <summary>
                 /// The virtual private cloud (VPC) ID of the cluster.

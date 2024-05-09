@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language used for the region and zone names specified by the LocalName parameter. Default value: zh-CN. Valid values:
+        /// The language that is used for the region and zone names indicated by the LocalName parameter in the response parameters. Valid values:
         /// 
-        /// *   **zh-CN**: simplified Chinese
-        /// *   **en-US**: English
-        /// *   **ja**: Japanese
+        /// *   **zh-CN** (default): simplified Chinese.
+        /// *   **en-US**: English.
+        /// *   **ja**: Japanese.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the preemptible instance feature for the resource group. This feature can be enabled only for job resource groups. Valid values:
+        /// Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:
         /// 
         /// *   **True**
         /// *   **False**
@@ -104,18 +104,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The job resubmission rules.
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ModifyDBResourceGroupRequestRules> Rules { get; set; }
         public class ModifyDBResourceGroupRequestRules : TeaModel {
+            /// <summary>
+            /// The name of the resource group.
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// The execution duration of the query. Unit: milliseconds.
+            /// </summary>
             [NameInMap("QueryTime")]
             [Validation(Required=false)]
             public string QueryTime { get; set; }
 
+            /// <summary>
+            /// The name of the destination resource group.
+            /// </summary>
             [NameInMap("TargetGroupName")]
             [Validation(Required=false)]
             public string TargetGroupName { get; set; }

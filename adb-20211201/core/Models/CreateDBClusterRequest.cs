@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        [NameInMap("ProductForm")]
+        [Validation(Required=false)]
+        public string ProductForm { get; set; }
+
         /// <summary>
         /// The region ID.
         /// 
@@ -91,6 +95,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ReservedNodeCount")]
+        [Validation(Required=false)]
+        public int? ReservedNodeCount { get; set; }
+
+        [NameInMap("ReservedNodeSize")]
+        [Validation(Required=false)]
+        public string ReservedNodeSize { get; set; }
 
         /// <summary>
         /// The resource group ID.

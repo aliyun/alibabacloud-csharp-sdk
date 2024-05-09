@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the data synchronization job.
+        /// </summary>
         [NameInMap("WorkloadId")]
         [Validation(Required=false)]
         public string WorkloadId { get; set; }

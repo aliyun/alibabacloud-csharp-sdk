@@ -10,22 +10,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Details of the scaling plan.
+        /// The queried scaling plan.
         /// </summary>
         [NameInMap("ElasticPlan")]
         [Validation(Required=false)]
         public DescribeElasticPlanAttributeResponseBodyElasticPlan ElasticPlan { get; set; }
         public class DescribeElasticPlanAttributeResponseBodyElasticPlan : TeaModel {
             /// <summary>
-            /// Indicates whether **Proportional Default Scaling for EIUs** is enabled.
+            /// Indicates whether **Default Proportional Scaling for EIUs** is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.
             /// 
-            /// Valid values:
-            /// 
-            /// true: Proportional Default Scaling for EIUs is enabled. If you set this parameter to true, the amount of storage resources scales along with the computing resources.
-            /// 
-            /// false: Proportional Default Scaling for EIUs is not enabled.
-            /// 
-            /// >  You can enable Proportional Default Scaling for EIUs for only a single scaling plan of a cluster.
+            /// >  You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.
             /// </summary>
             [NameInMap("AutoScale")]
             [Validation(Required=false)]
@@ -46,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ElasticPlanName { get; set; }
 
             /// <summary>
-            /// Indicates whether the scaling plan was enabled.
+            /// Indicates whether the scaling plan is enabled.
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -62,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The name of the resource group.
+            /// The name of the resource group used by the scaling plan.
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]
@@ -94,7 +88,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

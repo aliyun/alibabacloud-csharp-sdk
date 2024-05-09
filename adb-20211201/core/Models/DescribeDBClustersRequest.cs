@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterStatus { get; set; }
 
+        [NameInMap("DBClusterVersion")]
+        [Validation(Required=false)]
+        public string DBClusterVersion { get; set; }
+
         /// <summary>
         /// The page number. Pages start from page 1. Default value: **1**.
         /// </summary>
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProductVersion")]
+        [Validation(Required=false)]
+        public string ProductVersion { get; set; }
 
         /// <summary>
         /// The region ID of the cluster.

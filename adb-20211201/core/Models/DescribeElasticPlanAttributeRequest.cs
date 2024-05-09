@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the scaling plan.
         /// 
-        /// >  You can call the [DescribeElasticPlans](~~601334~~) operation to query the name of a scaling plan.
+        /// >  You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
