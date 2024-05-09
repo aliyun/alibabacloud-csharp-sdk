@@ -137,6 +137,52 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("hotel_sale_order_room_infos")]
+            [Validation(Required=false)]
+            public List<HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos> HotelSaleOrderRoomInfos { get; set; }
+            public class HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos : TeaModel {
+                [NameInMap("checkin_date")]
+                [Validation(Required=false)]
+                public string CheckinDate { get; set; }
+
+                [NameInMap("checkout_date")]
+                [Validation(Required=false)]
+                public string CheckoutDate { get; set; }
+
+                [NameInMap("penal_sum")]
+                [Validation(Required=false)]
+                public long? PenalSum { get; set; }
+
+                [NameInMap("real_checkout_date")]
+                [Validation(Required=false)]
+                public string RealCheckoutDate { get; set; }
+
+                [NameInMap("refund_status")]
+                [Validation(Required=false)]
+                public int? RefundStatus { get; set; }
+
+                [NameInMap("room_no")]
+                [Validation(Required=false)]
+                public int? RoomNo { get; set; }
+
+                [NameInMap("room_price")]
+                [Validation(Required=false)]
+                public long? RoomPrice { get; set; }
+
+                [NameInMap("room_refund_price")]
+                [Validation(Required=false)]
+                public long? RoomRefundPrice { get; set; }
+
+                [NameInMap("traveler_id")]
+                [Validation(Required=false)]
+                public string TravelerId { get; set; }
+
+                [NameInMap("traveler_name")]
+                [Validation(Required=false)]
+                public string TravelerName { get; set; }
+
+            }
+
             [NameInMap("invoice_info")]
             [Validation(Required=false)]
             public HotelOrderDetailInfoResponseBodyModuleInvoiceInfo InvoiceInfo { get; set; }

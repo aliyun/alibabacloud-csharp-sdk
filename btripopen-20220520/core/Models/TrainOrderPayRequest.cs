@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class InvoiceSearchRequest : TeaModel {
-        [NameInMap("third_part_id")]
+    public class TrainOrderPayRequest : TeaModel {
+        [NameInMap("order_id")]
         [Validation(Required=false)]
-        public string ThirdPartId { get; set; }
+        public string OrderId { get; set; }
 
-        [NameInMap("title")]
+        [NameInMap("out_order_id")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string OutOrderId { get; set; }
 
-        [NameInMap("user_id")]
+        [NameInMap("pay_amount")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public long? PayAmount { get; set; }
 
     }
 

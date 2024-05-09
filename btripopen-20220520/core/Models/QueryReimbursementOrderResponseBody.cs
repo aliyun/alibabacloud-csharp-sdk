@@ -111,6 +111,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ExpenseTypeCode { get; set; }
 
+                [NameInMap("invoice_infos")]
+                [Validation(Required=false)]
+                public List<QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos> InvoiceInfos { get; set; }
+                public class QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos : TeaModel {
+                    [NameInMap("amount")]
+                    [Validation(Required=false)]
+                    public string Amount { get; set; }
+
+                    [NameInMap("invoice_code")]
+                    [Validation(Required=false)]
+                    public string InvoiceCode { get; set; }
+
+                    [NameInMap("invoice_data")]
+                    [Validation(Required=false)]
+                    public string InvoiceData { get; set; }
+
+                    [NameInMap("invoice_date")]
+                    [Validation(Required=false)]
+                    public string InvoiceDate { get; set; }
+
+                    [NameInMap("invoice_number")]
+                    [Validation(Required=false)]
+                    public string InvoiceNumber { get; set; }
+
+                    [NameInMap("invoice_type")]
+                    [Validation(Required=false)]
+                    public string InvoiceType { get; set; }
+
+                }
+
                 [NameInMap("reimb_expense_id")]
                 [Validation(Required=false)]
                 public long? ReimbExpenseId { get; set; }

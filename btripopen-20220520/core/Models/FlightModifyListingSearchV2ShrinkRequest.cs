@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepDateShrink { get; set; }
 
+        [NameInMap("interface_caller_is_support_retry")]
+        [Validation(Required=false)]
+        public bool? InterfaceCallerIsSupportRetry { get; set; }
+
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("search_mode")]
         [Validation(Required=false)]
         public int? SearchMode { get; set; }
+
+        [NameInMap("search_retry_token")]
+        [Validation(Required=false)]
+        public string SearchRetryToken { get; set; }
 
         [NameInMap("selected_segments")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class GroupCorpTokenResponseBody : TeaModel {
+    public class TrainOrderCreateResponseBody : TeaModel {
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,34 +17,38 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// module
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
-        public GroupCorpTokenResponseBodyModule Module { get; set; }
-        public class GroupCorpTokenResponseBodyModule : TeaModel {
-            [NameInMap("expire")]
+        public TrainOrderCreateResponseBodyModule Module { get; set; }
+        public class TrainOrderCreateResponseBodyModule : TeaModel {
+            [NameInMap("order_id")]
             [Validation(Required=false)]
-            public long? Expire { get; set; }
+            public string OrderId { get; set; }
 
-            [NameInMap("start")]
+            [NameInMap("out_order_id")]
             [Validation(Required=false)]
-            public long? Start { get; set; }
+            public string OutOrderId { get; set; }
 
-            [NameInMap("token")]
+            [NameInMap("pay_status")]
             [Validation(Required=false)]
-            public string Token { get; set; }
+            public string PayStatus { get; set; }
+
+            [NameInMap("service_fee")]
+            [Validation(Required=false)]
+            public long? ServiceFee { get; set; }
 
         }
 
-        /// <summary>
-        /// requestId
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
         /// <summary>
         /// traceId

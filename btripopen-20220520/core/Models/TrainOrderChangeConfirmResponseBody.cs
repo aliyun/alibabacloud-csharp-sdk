@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class GroupCorpTokenResponseBody : TeaModel {
+    public class TrainOrderChangeConfirmResponseBody : TeaModel {
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,34 +17,38 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// module
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
-        public GroupCorpTokenResponseBodyModule Module { get; set; }
-        public class GroupCorpTokenResponseBodyModule : TeaModel {
-            [NameInMap("expire")]
+        public TrainOrderChangeConfirmResponseBodyModule Module { get; set; }
+        public class TrainOrderChangeConfirmResponseBodyModule : TeaModel {
+            [NameInMap("change_order_id")]
             [Validation(Required=false)]
-            public long? Expire { get; set; }
+            public string ChangeOrderId { get; set; }
 
-            [NameInMap("start")]
+            [NameInMap("order_id")]
             [Validation(Required=false)]
-            public long? Start { get; set; }
+            public string OrderId { get; set; }
 
-            [NameInMap("token")]
+            [NameInMap("out_order_id")]
             [Validation(Required=false)]
-            public string Token { get; set; }
+            public string OutOrderId { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public bool? Status { get; set; }
 
         }
 
-        /// <summary>
-        /// requestId
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
         /// <summary>
         /// traceId

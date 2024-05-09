@@ -93,6 +93,38 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyListQueryResponseBodyModuleListExternalTravelerList> ExternalTravelerList { get; set; }
             public class ApplyListQueryResponseBodyModuleListExternalTravelerList : TeaModel {
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("depart_id")]
+                [Validation(Required=false)]
+                public string DepartId { get; set; }
+
+                [NameInMap("invoice_name")]
+                [Validation(Required=false)]
+                public string InvoiceName { get; set; }
+
+                [NameInMap("payment_department_name")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentName { get; set; }
+
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_depart_id")]
+                [Validation(Required=false)]
+                public string ThirdpartDepartId { get; set; }
+
                 [NameInMap("user_name")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
@@ -227,6 +259,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string JobNo { get; set; }
 
+            [NameInMap("payment_department_id")]
+            [Validation(Required=false)]
+            public string PaymentDepartmentId { get; set; }
+
+            [NameInMap("payment_department_name")]
+            [Validation(Required=false)]
+            public string PaymentDepartmentName { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
@@ -247,6 +287,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyListQueryResponseBodyModuleListTravelerList> TravelerList { get; set; }
             public class ApplyListQueryResponseBodyModuleListTravelerList : TeaModel {
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
                 [NameInMap("car_city_set")]
                 [Validation(Required=false)]
                 public List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> CarCitySet { get; set; }
@@ -261,9 +305,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("depart_id")]
+                [Validation(Required=false)]
+                public string DepartId { get; set; }
+
+                [NameInMap("invoice_name")]
+                [Validation(Required=false)]
+                public string InvoiceName { get; set; }
+
                 [NameInMap("job_no")]
                 [Validation(Required=false)]
                 public string JobNo { get; set; }
+
+                [NameInMap("payment_department_name")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentName { get; set; }
+
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
+                [NameInMap("thirdpart_depart_id")]
+                [Validation(Required=false)]
+                public string ThirdpartDepartId { get; set; }
 
                 [NameInMap("user_id")]
                 [Validation(Required=false)]

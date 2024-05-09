@@ -80,6 +80,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? LimitTraveler { get; set; }
 
+        [NameInMap("payment_department_id")]
+        [Validation(Required=false)]
+        public string PaymentDepartmentId { get; set; }
+
+        [NameInMap("payment_department_name")]
+        [Validation(Required=false)]
+        public string PaymentDepartmentName { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

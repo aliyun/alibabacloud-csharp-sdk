@@ -406,6 +406,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("next_req_wait_time")]
+            [Validation(Required=false)]
+            public long? NextReqWaitTime { get; set; }
+
+            [NameInMap("retry")]
+            [Validation(Required=false)]
+            public bool? Retry { get; set; }
+
+            [NameInMap("search_retry_token")]
+            [Validation(Required=false)]
+            public string SearchRetryToken { get; set; }
+
             [NameInMap("session_id")]
             [Validation(Required=false)]
             public string SessionId { get; set; }

@@ -108,9 +108,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyQueryResponseBodyModuleExternalTravelerList> ExternalTravelerList { get; set; }
             public class ApplyQueryResponseBodyModuleExternalTravelerList : TeaModel {
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
                 [NameInMap("business_discount")]
                 [Validation(Required=false)]
                 public int? BusinessDiscount { get; set; }
+
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("depart_id")]
+                [Validation(Required=false)]
+                public string DepartId { get; set; }
 
                 [NameInMap("economy_discount")]
                 [Validation(Required=false)]
@@ -176,13 +188,45 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public long? HotelRuleCode { get; set; }
 
+                [NameInMap("invoice_name")]
+                [Validation(Required=false)]
+                public string InvoiceName { get; set; }
+
+                [NameInMap("payment_department_id")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentId { get; set; }
+
+                [NameInMap("payment_department_name")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentName { get; set; }
+
                 [NameInMap("premium_economy_discount")]
                 [Validation(Required=false)]
                 public int? PremiumEconomyDiscount { get; set; }
 
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]
                 public int? ReserveType { get; set; }
+
+                [NameInMap("third_part_invoice_id")]
+                [Validation(Required=false)]
+                public string ThirdPartInvoiceId { get; set; }
+
+                [NameInMap("thirdpart_cost_center_id")]
+                [Validation(Required=false)]
+                public string ThirdpartCostCenterId { get; set; }
+
+                [NameInMap("thirdpart_depart_id")]
+                [Validation(Required=false)]
+                public string ThirdpartDepartId { get; set; }
 
                 [NameInMap("train_rule_code")]
                 [Validation(Required=false)]
@@ -247,6 +291,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("arr_date")]
                 [Validation(Required=false)]
                 public string ArrDate { get; set; }
+
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
 
                 [NameInMap("cost_center_name")]
                 [Validation(Required=false)]
@@ -316,6 +364,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrDate { get; set; }
 
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
                 [NameInMap("city_code_set")]
                 [Validation(Required=false)]
                 public string CityCodeSet { get; set; }
@@ -372,6 +424,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? LimitTraveler { get; set; }
 
+            [NameInMap("payment_department_id")]
+            [Validation(Required=false)]
+            public string PaymentDepartmentId { get; set; }
+
+            [NameInMap("payment_department_name")]
+            [Validation(Required=false)]
+            public string PaymentDepartmentName { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
@@ -400,6 +460,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyQueryResponseBodyModuleTravelerList> TravelerList { get; set; }
             public class ApplyQueryResponseBodyModuleTravelerList : TeaModel {
+                [NameInMap("attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
                 [NameInMap("business_discount")]
                 [Validation(Required=false)]
                 public int? BusinessDiscount { get; set; }
@@ -417,6 +481,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string CityName { get; set; }
 
                 }
+
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("depart_id")]
+                [Validation(Required=false)]
+                public string DepartId { get; set; }
 
                 [NameInMap("economy_discount")]
                 [Validation(Required=false)]
@@ -482,13 +554,45 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public long? HotelRuleCode { get; set; }
 
+                [NameInMap("invoice_name")]
+                [Validation(Required=false)]
+                public string InvoiceName { get; set; }
+
+                [NameInMap("payment_department_id")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentId { get; set; }
+
+                [NameInMap("payment_department_name")]
+                [Validation(Required=false)]
+                public string PaymentDepartmentName { get; set; }
+
                 [NameInMap("premium_economy_discount")]
                 [Validation(Required=false)]
                 public int? PremiumEconomyDiscount { get; set; }
 
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
                 [NameInMap("reserve_type")]
                 [Validation(Required=false)]
                 public int? ReserveType { get; set; }
+
+                [NameInMap("third_part_invoice_id")]
+                [Validation(Required=false)]
+                public string ThirdPartInvoiceId { get; set; }
+
+                [NameInMap("thirdpart_cost_center_id")]
+                [Validation(Required=false)]
+                public string ThirdpartCostCenterId { get; set; }
+
+                [NameInMap("thirdpart_depart_id")]
+                [Validation(Required=false)]
+                public string ThirdpartDepartId { get; set; }
 
                 [NameInMap("train_rule_code")]
                 [Validation(Required=false)]
