@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The subtype of the environment. Valid values:
         /// 
-        /// *   CS: ACK
+        /// *   CS: ACK, One
         /// *   ECS: ECS
         /// *   Cloud: cloud service
         /// </summary>
@@ -83,9 +83,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentType { get; set; }
 
         /// <summary>
-        /// Paid packages.
-        /// *  When EnvironmentType is CS: can be specified as CS_Basic (default) or CS_Pro.
-        /// * When EnvironmentType is any other value, enter a null value.
+        /// The payable resource plan. Valid values:
+        /// 
+        /// *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+        /// *   Otherwise, leave the parameter empty.
         /// </summary>
         [NameInMap("FeePackage")]
         [Validation(Required=false)]
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// Nullable, the prom instance id for the environment binding. if not provided, call the InitEnvironment interface to complete the initialization of the storage instance.
+        /// The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation to initialize a storage instance.
         /// </summary>
         [NameInMap("PrometheusInstanceId")]
         [Validation(Required=false)]

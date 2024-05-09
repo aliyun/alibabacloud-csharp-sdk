@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
+        [NameInMap("CorpUserId")]
+        [Validation(Required=false)]
+        public string CorpUserId { get; set; }
+
         /// <summary>
         /// The webhook URL of the DingTalk chatbot.
         /// </summary>

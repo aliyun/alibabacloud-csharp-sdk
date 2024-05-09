@@ -1,0 +1,60 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ARMS20190808.Models
+{
+    public class CreateRumAppRequest : TeaModel {
+        [NameInMap("AppGroup")]
+        [Validation(Required=false)]
+        public string AppGroup { get; set; }
+
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("PackageName")]
+        [Validation(Required=false)]
+        public string PackageName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("SiteType")]
+        [Validation(Required=false)]
+        public string SiteType { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateRumAppRequestTag> Tag { get; set; }
+        public class CreateRumAppRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+    }
+
+}
