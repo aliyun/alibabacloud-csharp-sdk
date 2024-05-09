@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        [NameInMap("FormulaEnhancement")]
+        [Validation(Required=false)]
+        public bool? FormulaEnhancement { get; set; }
+
         [NameInMap("StructureType")]
         [Validation(Required=false)]
         public string StructureType { get; set; }

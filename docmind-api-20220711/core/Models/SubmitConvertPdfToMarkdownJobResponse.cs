@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class SubmitDocumentExtractJobResponse : TeaModel {
+    public class SubmitConvertPdfToMarkdownJobResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SubmitDocumentExtractJobResponseBody Body { get; set; }
+        public SubmitConvertPdfToMarkdownJobResponseBody Body { get; set; }
 
     }
 
