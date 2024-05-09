@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("UpstreamRetry")]
+        [Validation(Required=false)]
+        public int? UpstreamRetry { get; set; }
+
     }
 
 }

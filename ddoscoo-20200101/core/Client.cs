@@ -466,6 +466,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamRetry))
+            {
+                query["UpstreamRetry"] = request.UpstreamRetry;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -507,6 +511,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamRetry))
+            {
+                query["UpstreamRetry"] = request.UpstreamRetry;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

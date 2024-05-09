@@ -23,6 +23,30 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public DescribeL7RsPolicyResponseBodyAttributesAttribute Attribute { get; set; }
             public class DescribeL7RsPolicyResponseBodyAttributesAttribute : TeaModel {
+                [NameInMap("ConnectTimeout")]
+                [Validation(Required=false)]
+                public int? ConnectTimeout { get; set; }
+
+                [NameInMap("FailTimeout")]
+                [Validation(Required=false)]
+                public int? FailTimeout { get; set; }
+
+                [NameInMap("MaxFails")]
+                [Validation(Required=false)]
+                public int? MaxFails { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("ReadTimeout")]
+                [Validation(Required=false)]
+                public int? ReadTimeout { get; set; }
+
+                [NameInMap("SendTimeout")]
+                [Validation(Required=false)]
+                public int? SendTimeout { get; set; }
+
                 /// <summary>
                 /// The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.
                 /// 
@@ -70,6 +94,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("UpstreamRetry")]
+        [Validation(Required=false)]
+        public int? UpstreamRetry { get; set; }
 
     }
 
