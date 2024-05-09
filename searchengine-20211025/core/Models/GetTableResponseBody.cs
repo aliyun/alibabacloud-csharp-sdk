@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string RawSchema { get; set; }
 
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             [NameInMap("vectorIndex")]
             [Validation(Required=false)]
             public List<GetTableResponseBodyResultVectorIndex> VectorIndex { get; set; }

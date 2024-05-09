@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetDataSourceDeployResponseBody : TeaModel {
+        /// <summary>
+        /// requestId
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Deploy
+        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetDataSourceDeployResponseBodyResult Result { get; set; }
@@ -89,18 +95,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultStorage Storage { get; set; }
             public class GetDataSourceDeployResponseBodyResultStorage : TeaModel {
+                /// <summary>
+                /// AK
+                /// </summary>
                 [NameInMap("accessKey")]
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
+                /// <summary>
+                /// AS
+                /// </summary>
                 [NameInMap("accessSecret")]
                 [Validation(Required=false)]
                 public string AccessSecret { get; set; }
 
+                /// <summary>
+                /// oss bucket
+                /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                /// <summary>
+                /// odps endpoint
+                /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
@@ -135,10 +153,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultSwift Swift { get; set; }
             public class GetDataSourceDeployResponseBodyResultSwift : TeaModel {
+                /// <summary>
+                /// topic
+                /// </summary>
                 [NameInMap("topic")]
                 [Validation(Required=false)]
                 public string Topic { get; set; }
 
+                /// <summary>
+                /// zk
+                /// </summary>
                 [NameInMap("zk")]
                 [Validation(Required=false)]
                 public string Zk { get; set; }
