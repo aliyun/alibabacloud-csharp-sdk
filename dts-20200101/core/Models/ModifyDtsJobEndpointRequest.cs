@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string EndpointRegionId { get; set; }
 
+        [NameInMap("ModifyAccount")]
+        [Validation(Required=false)]
+        public bool? ModifyAccount { get; set; }
+
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
