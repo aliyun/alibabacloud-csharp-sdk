@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
             public string IntentName { get; set; }
@@ -45,14 +51,23 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 [Validation(Required=false)]
                 public bool? Interactive { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("SlotId")]
                 [Validation(Required=false)]
                 public string SlotId { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -61,6 +76,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IntentId")]
         [Validation(Required=false)]
         public long? IntentId { get; set; }

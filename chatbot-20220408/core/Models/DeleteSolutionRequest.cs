@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]
         public long? SolutionId { get; set; }

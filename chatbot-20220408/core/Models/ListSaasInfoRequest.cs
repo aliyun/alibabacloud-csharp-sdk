@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string SaasGroupCodes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SaasName")]
         [Validation(Required=false)]
         public string SaasName { get; set; }

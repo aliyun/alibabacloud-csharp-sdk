@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class DeleteUserSayRequest : TeaModel {
+    public class ListTongyiChatHistorysRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
@@ -16,23 +16,27 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public int? Limit { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("IntentId")]
+        [NameInMap("RobotInstanceId")]
         [Validation(Required=false)]
-        public long? IntentId { get; set; }
+        public string RobotInstanceId { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("UserSayId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long? UserSayId { get; set; }
+        public string StartTime { get; set; }
 
     }
 
