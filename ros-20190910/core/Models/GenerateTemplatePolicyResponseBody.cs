@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// The objects that the statement covers. An asterisk (\*) indicates all resources.
+                /// The objects that the statement covers. An asterisk (\\*) indicates all resources.
                 /// </summary>
                 [NameInMap("Resource")]
                 [Validation(Required=false)]

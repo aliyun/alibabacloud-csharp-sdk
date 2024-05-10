@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
             /// 
             /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The value of the parameter.
             /// 
             /// > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -37,7 +41,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -88,6 +94,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   TrafficMirror: the traffic mirroring feature
             /// *   VS: Video Surveillance System
             /// *   Xtrace: Managed Service for OpenTelemetry
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]

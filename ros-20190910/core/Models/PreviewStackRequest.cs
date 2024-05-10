@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class PreviewStackRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can be up to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).\
-        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\
+        /// The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).\\
+        /// For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The name of the parameter N. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template. Maximum value of N: 200.
             /// 
             /// > If you specify Parameters, you must specify Parameters.N.ParameterKey.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The value of parameter N. Maximum value of N: 200.
             /// 
             /// > If you specify Parameters, you must specify Parameters.N.ParameterValue.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -79,7 +83,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+        /// The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
         /// 
         /// > You must and can specify only one of StackName and StackId.
         /// </summary>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The scenario ID.
         /// 
-        /// For more information about how to query the scenario ID, see [ListTemplateScratches](~~363050~~).
+        /// For more information about how to query the scenario ID, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).
         /// 
         /// > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
         /// </summary>
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The region ID of the scenario. The default value is the same as the value of RegionId.
         /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("TemplateScratchRegionId")]
         [Validation(Required=false)]

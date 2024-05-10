@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.\
-        /// Pages start from page 1.\
+        /// The page number of the returned page.\\
+        /// Pages start from page 1.\\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.\
-        /// Maximum value: 50.\
+        /// The number of entries returned per page.\\
+        /// Maximum value: 50.\\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]

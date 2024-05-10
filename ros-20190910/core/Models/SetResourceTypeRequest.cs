@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The resource type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

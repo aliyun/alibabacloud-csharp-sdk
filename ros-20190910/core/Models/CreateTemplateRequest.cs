@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.\
-        /// For more information about resource groups, see [Resource groups](~~94475~~).
+        /// The ID of the resource group.\\
+        /// For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The tag key of the template.
             /// 
             /// > Tags is optional. If you need to specify Tags, you must also specify Key.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -54,8 +56,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// The name of the template.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+        /// The name of the template.\\
+        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
     public class GetResourceTypeRequest : TeaModel {
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

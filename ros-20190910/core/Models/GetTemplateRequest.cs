@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string IncludeTags { get; set; }
 
         /// <summary>
-        /// The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateStage { get; set; }
 
         /// <summary>
-        /// The version of the template. This parameter takes effect only if you specify TemplateId.\
-        /// If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](~~194768~~).
+        /// The version of the template. This parameter takes effect only if you specify TemplateId.\\
+        /// If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](https://help.aliyun.com/document_detail/194768.html).
         /// 
         /// Valid values: v1 to v100.
         /// </summary>

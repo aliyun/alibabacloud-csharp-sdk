@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegistrationId { get; set; }
 
         /// <summary>
-        /// The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
+        /// The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\\*). You can use an asterisk (\\*) to perform a fuzzy match.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

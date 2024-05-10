@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\
-        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\
+        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\\
+        /// For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// 
         /// This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.
         /// </summary>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
-        /// If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\
+        /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\\
+        /// If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\\
         /// You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.
         /// </summary>
         [NameInMap("TemplateBody")]

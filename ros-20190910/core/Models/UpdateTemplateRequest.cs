@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The ID of the template. This parameter applies to shared and private templates.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The name of the template.
         /// 
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

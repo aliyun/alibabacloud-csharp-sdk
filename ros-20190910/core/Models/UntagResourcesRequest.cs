@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the tag. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// The IDs of the resource.
         /// 
         /// > If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   stackgroup: stack group
         /// *   template: template
         /// *   templatescratch: scenario
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

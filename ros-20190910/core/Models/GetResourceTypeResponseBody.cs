@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The entity type. Valid values:
         /// 
-        /// *   Resource: regular resource. For more information, see [Resources](~~28863~~).
-        /// *   DataSource: DataSource resource. For more information, see [DataSource resources](~~404753~~).
+        /// *   Resource: regular resource. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).
+        /// *   DataSource: DataSource resource. For more information, see [DataSource resources](https://help.aliyun.com/document_detail/404753.html).
         /// *   module: module.
         /// </summary>
         [NameInMap("EntityType")]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The entity type. Valid values:
         /// 
-        /// *   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).
+        /// *   Resource: resources other than DataSource resources. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).
         /// *   DataSource: DataSource resources.
         /// </summary>
         [NameInMap("SupportScratchDetection")]

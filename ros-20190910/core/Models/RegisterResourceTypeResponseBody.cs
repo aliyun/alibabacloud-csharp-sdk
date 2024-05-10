@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class RegisterResourceTypeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the registration record. You can call the [ListResourceTypeRegistrations](~~2330740~~) operation to query registration records.
+        /// The ID of the registration record. You can call the [ListResourceTypeRegistrations](https://help.aliyun.com/document_detail/2330740.html) operation to query registration records.
         /// </summary>
         [NameInMap("RegistrationId")]
         [Validation(Required=false)]

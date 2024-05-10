@@ -12,9 +12,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The name of the stack group. The name must be unique within a region.
         /// 
-        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
         /// 
         /// >  You must specify one of the StackGroupName and StackGroupId parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.
+        /// The name of change set N. Maximum value of N: 5. You can use an asterisk (\\*) as a wildcard for fuzzy search.
         /// </summary>
         [NameInMap("ChangeSetName")]
         [Validation(Required=false)]
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> ExecutionStatus { get; set; }
 
         /// <summary>
-        /// The page number.\
-        /// Pages start from page 1.\
+        /// The page number.\\
+        /// Pages start from page 1.\\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.\
-        /// Valid values: 1 to 50.\
+        /// The number of entries per page.\\
+        /// Valid values: 1 to 50.\\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -56,7 +56,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the change set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The ID of the stack.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

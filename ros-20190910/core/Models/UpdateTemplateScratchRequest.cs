@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// 
-        /// For more information, see [How to ensure idempotence](~~134212~~).
+        /// For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// 
             /// >- PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.
             /// > - If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -75,6 +77,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.
             /// 
             /// >  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -85,7 +89,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The region ID of the scenario.
         /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -107,6 +113,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public class UpdateTemplateScratchRequestSourceResourceGroup : TeaModel {
             /// <summary>
             /// The ID of the source resource group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -134,6 +142,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public class UpdateTemplateScratchRequestSourceResources : TeaModel {
             /// <summary>
             /// The resource ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -141,6 +151,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             /// <summary>
             /// The resource type.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -161,6 +173,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.
             /// 
             /// If you set TemplateScratchType to ArchitectureDetection, you can add up to five source tags. In other cases, you can add up to 10 source tags.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceTags")]
             [Validation(Required=false)]
@@ -177,6 +191,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The ID of the scenario.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]

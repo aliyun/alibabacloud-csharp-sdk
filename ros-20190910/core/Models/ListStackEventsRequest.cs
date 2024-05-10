@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> LogicalResourceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.\
-        /// Pages start from page 1.\
+        /// The number of the page to return.\\
+        /// Pages start from page 1.\\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.\
-        /// Maximum value: 50.\
+        /// The number of entries to return on each page.\\
+        /// Maximum value: 50.\\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -35,7 +35,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The stack ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

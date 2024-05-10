@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The page number.\
+        /// The page number.\\
         /// Pages start from page 1.
         /// </summary>
         [NameInMap("PageNumber")]

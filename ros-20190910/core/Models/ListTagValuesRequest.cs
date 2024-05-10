@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
         /// The key of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
@@ -24,7 +26,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID of the tag value. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the tag value. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   stackgroup: stack group
         /// *   template: template
         /// *   templatescratch: scenario
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

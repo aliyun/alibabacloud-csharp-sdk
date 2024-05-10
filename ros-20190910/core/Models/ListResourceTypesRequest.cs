@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// The entity type. Valid values:
         /// 
         /// *   All: all types of resources.
-        /// *   Resource (default): regular resources. For more information, see [Resources](~~28863~~).
-        /// *   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).
+        /// *   Resource (default): regular resources. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).
+        /// *   DataSource: DataSource resources. For more information, see [DataSource resources](https://help.aliyun.com/document_detail/404753.html).
         /// *   Module: modules.
         /// </summary>
         [NameInMap("EntityType")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.
+        /// The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\\*). You can use an asterisk (\\*) to perform a fuzzy match.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

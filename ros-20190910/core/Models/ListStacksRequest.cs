@@ -46,15 +46,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ParentStackId { get; set; }
 
         /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.\
-        /// For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+        /// The ID of the resource group.\\
+        /// For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html) topic.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListStacksRequestTag> Tag { get; set; }
         public class ListStacksRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.\
+            /// The key of tag N.\\
             /// Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
@@ -123,7 +125,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.\
+            /// The value of tag N.\\
             /// Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]

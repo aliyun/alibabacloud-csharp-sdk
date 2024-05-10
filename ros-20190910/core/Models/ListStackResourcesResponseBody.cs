@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackId { get; set; }
 
             /// <summary>
-            /// The stack name.\
-            /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+            /// The stack name.\\
+            /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
             /// </summary>
             [NameInMap("StackName")]
             [Validation(Required=false)]

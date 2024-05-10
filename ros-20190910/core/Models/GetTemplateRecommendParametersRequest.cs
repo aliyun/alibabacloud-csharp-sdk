@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

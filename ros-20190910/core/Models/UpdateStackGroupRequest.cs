@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// You can create stacks within all members in the specified folders. If you create stacks in the Root folder, the stacks are created within all members in the resource directory.
         /// 
-        /// >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).
+        /// >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](https://help.aliyun.com/document_detail/111223.html).
         /// </summary>
         [NameInMap("AutoDeployment")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.
             /// 
-            /// >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](~~111624~~).
+            /// >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](https://help.aliyun.com/document_detail/111624.html).
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.
             /// 
-            /// >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](~~111624~~).
+            /// >  To view the member IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the detailed information of a member](https://help.aliyun.com/document_detail/111624.html).
             /// </summary>
             [NameInMap("RetainStacksOnAccountRemoval")]
             [Validation(Required=false)]
@@ -156,6 +156,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   false: deletes the stacks.
             /// 
             /// >  This parameter is required if the Enabled parameter is set to true.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -163,6 +165,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             /// <summary>
             /// The folders in which you want to use service-managed permissions to update stacks.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   If you set only the AccountIds parameter, stacks are deployed within the specified members.
         /// *   If you set both parameters, the accounts specified by AccountIds must be contained in the folders specified by RdFolderIds.
         /// 
-        /// >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).
+        /// >  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](https://help.aliyun.com/document_detail/111223.html).
         /// </summary>
         [NameInMap("PermissionModel")]
         [Validation(Required=false)]
@@ -187,6 +191,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The region IDs of stack instances. You can specify a maximum of 20 region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -201,6 +207,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The region IDs of stack instances. You can specify a maximum of 20 region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
@@ -219,7 +227,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
         /// 
         /// >- If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
-        /// >- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
+        /// >- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](https://help.aliyun.com/document_detail/308253.html) and [Step 2: Enable trusted access](https://help.aliyun.com/document_detail/298229.html).
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

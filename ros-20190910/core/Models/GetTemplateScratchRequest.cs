@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The region ID of the scenario.
         /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.
         /// *   All: displays all data.
         /// 
-        /// For more information about source nodes and new nodes, see [Overview](~~352074~~).
+        /// For more information about source nodes and new nodes, see [Overview](https://help.aliyun.com/document_detail/352074.html).
         /// 
         /// >  If you do not specify this parameter, the node data is not displayed.
         /// </summary>

@@ -12,16 +12,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
         /// 
-        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).
         /// 
-        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The region ID of the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// > If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
         /// 
-        /// You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\
+        /// You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\\
         /// </summary>
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]

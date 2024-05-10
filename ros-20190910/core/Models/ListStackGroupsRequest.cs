@@ -30,7 +30,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.
         /// 
-        /// > To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](~~151181~~).
+        /// > To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The key of the tag that is added to the stack group.
             /// 
             /// > Tags is optional. If you specify Tags, you must specify Tags.N.Key.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

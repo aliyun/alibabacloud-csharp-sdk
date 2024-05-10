@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The physical ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The ID of the stack.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

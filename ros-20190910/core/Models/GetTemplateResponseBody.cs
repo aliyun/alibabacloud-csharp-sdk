@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The version of the template. This parameter is returned only if you specify TemplateId.\
+        /// The version of the template. This parameter is returned only if you specify TemplateId.\\
         /// If TemplateVersion is not specified or does not take effect, the default version is used.
         /// 
         /// If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.

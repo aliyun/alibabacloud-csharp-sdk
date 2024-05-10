@@ -34,7 +34,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The region ID of the scenario.
         /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,6 +71,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The tag key of the scenario.
             /// 
             /// > Tags is optional. If you want to specify Tags, you must specify Key.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

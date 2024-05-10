@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\
-        /// For more information, see [How to ensure idempotence](~~134212~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\
+        /// The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\\
+        /// For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
             /// 
-            /// > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).
+            /// > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](https://help.aliyun.com/document_detail/111223.html).
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// 
             /// You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.
             /// 
-            /// > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).
+            /// > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](https://help.aliyun.com/document_detail/111223.html).
             /// </summary>
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
@@ -117,7 +117,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public Dictionary<string, object> OperationPreferences { get; set; }
 
         /// <summary>
-        /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -125,6 +127,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
@@ -137,14 +141,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// *   true: retains the stacks.
         /// *   false: deletes the stacks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RetainStacks")]
         [Validation(Required=false)]
         public bool? RetainStacks { get; set; }
 
         /// <summary>
-        /// The name of the stack group. The name must be unique within a region.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+        /// The name of the stack group. The name must be unique within a region.\\
+        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]

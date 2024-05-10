@@ -22,15 +22,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OutputOption { get; set; }
 
         /// <summary>
-        /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the stack group. The name must be unique within a region.\
-        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+        /// The name of the stack group. The name must be unique within a region.\\
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
@@ -42,7 +46,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.
         /// *   If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.
         /// 
-        /// > For more information about the destination account, see [Overview](~~154578~~).
+        /// > For more information about the destination account, see [Overview](https://help.aliyun.com/document_detail/154578.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackInstanceAccountId")]
         [Validation(Required=false)]
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The region ID of the stack.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackInstanceRegionId")]
         [Validation(Required=false)]

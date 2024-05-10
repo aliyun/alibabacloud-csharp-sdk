@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             /// <summary>
             /// The description of the stack group.
             /// </summary>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   SELF_MANAGED
             /// *   SERVICE_MANAGED
             /// 
-            /// > For more information about the permission models of stack groups, see [Overview](~~154578~~).
+            /// > For more information about the permission models of stack groups, see [Overview](https://help.aliyun.com/document_detail/154578.html).
             /// </summary>
             [NameInMap("PermissionModel")]
             [Validation(Required=false)]
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 

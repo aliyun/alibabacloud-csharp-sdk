@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource identifier summaries.\
+        /// The resource identifier summaries.\\
         /// A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.
         /// </summary>
         [NameInMap("ResourceIdentifierSummaries")]

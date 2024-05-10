@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string IncludeTags { get; set; }
 
         /// <summary>
-        /// The page number.\
-        /// Pages start from page 1.\
+        /// The page number.\\
+        /// Pages start from page 1.\\
         /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.\
-        /// Valid values: 1 to 50.\
+        /// The number of entries per page.\\
+        /// Valid values: 1 to 50.\\
         /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.\
-        /// For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)
+        /// The ID of the resource group.\\
+        /// For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+        /// The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the tag. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   stackgroup: stack group
         /// *   template: template
         /// *   templatescratch: scenario
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\
+            /// The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\\
             /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Key")]
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\
+            /// The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\\
             /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]

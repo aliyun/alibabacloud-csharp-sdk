@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// The IDs of the members in the resource directory.
                 /// 
-                /// > This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](~~151716~~) operation is called to update stack instances.
+                /// > This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](https://help.aliyun.com/document_detail/151716.html) operation is called to update stack instances.
                 /// </summary>
                 [NameInMap("AccountIds")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The description of the operation.
             /// 
-            /// > This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](~~151338~~) operation is called to create stack instances.
+            /// > This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](https://help.aliyun.com/document_detail/151338.html) operation is called to create stack instances.
             /// </summary>
             [NameInMap("OperationDescription")]
             [Validation(Required=false)]

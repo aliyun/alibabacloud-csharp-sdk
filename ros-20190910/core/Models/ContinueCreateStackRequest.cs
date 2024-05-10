@@ -69,6 +69,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The name of template parameter N that you want to use to override a specific parameter. If you do not specify the name and value of a template parameter, ROS uses the name and value specified in the previous operation that was performed to create the stack. Maximum value of N: 200.
             /// 
             /// > This parameter takes effect only when Mode is set to Recreate.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   The template parameters can be referenced only by resources that ROS continues to create.
             /// 
             /// > This parameter takes effect only when Mode is set to Recreate.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -91,9 +95,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-        /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\
-        /// If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
+        /// The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\\
+        /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\\
+        /// If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\\
         /// The name of the RAM role can be up to 64 bytes in length.
         /// </summary>
         [NameInMap("RamRoleName")]
@@ -117,7 +121,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> RecreatingResources { get; set; }
 
         /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -125,13 +131,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The stack ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
 
         /// <summary>
-        /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
+        /// The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\\
         /// If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
         /// 
         /// A ROS template is subject to the following limits:

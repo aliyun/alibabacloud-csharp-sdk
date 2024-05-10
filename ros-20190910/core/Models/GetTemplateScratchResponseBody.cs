@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> PreferenceParameters { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The parameter name.
+                /// The name of the parameter.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The parameter value.
+                /// The value of the parameter.
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public GetTemplateScratchResponseBodyTemplateScratchStackProvision StackProvision { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchStackProvision : TeaModel {
                 /// <summary>
-                /// Indicates whether the resource is replicated by calling the [CreateStack](~~132086~~) operation. Valid values:
+                /// Indicates whether the resource is replicated by calling the [CreateStack](https://help.aliyun.com/document_detail/132086.html) operation. Valid values:
                 /// 
                 /// *   true
                 /// *   false
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public bool? Creatable { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource is managed by calling the [CreateChangeSet](~~131051~~) operation. Valid values:
+                /// Indicates whether the resource is managed by calling the [CreateChangeSet](https://help.aliyun.com/document_detail/131051.html) operation. Valid values:
                 /// 
                 /// *   true
                 /// *   false

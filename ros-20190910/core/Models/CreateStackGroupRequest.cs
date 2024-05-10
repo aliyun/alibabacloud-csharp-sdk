@@ -63,16 +63,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> Capabilities { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can contain letters, digits, underscores (\_), and hyphens (-) and cannot exceed 64 characters in length.\
-        /// For more information, see [How to ensure idempotence](~~134212~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\
+        /// The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.\\
+        /// For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the stack group.\
+        /// The description of the stack group.\\
         /// The description must be 1 to 256 characters in length.
         /// </summary>
         [NameInMap("Description")]
@@ -101,6 +101,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// Maximum value of N: 200.
             /// 
             /// > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
@@ -112,6 +114,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// Maximum value of N: 200.
             /// 
             /// > Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -127,30 +131,34 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.
         /// *   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
         /// 
-        /// > If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](~~308253~~) and [Enable trusted access](~~298229~~).
+        /// > If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](https://help.aliyun.com/document_detail/308253.html) and [Enable trusted access](https://help.aliyun.com/document_detail/298229.html).
         /// </summary>
         [NameInMap("PermissionModel")]
         [Validation(Required=false)]
         public string PermissionModel { get; set; }
 
         /// <summary>
-        /// The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\
-        /// For more information about resource groups, see [Resource groups](~~94475~~).
+        /// The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\\
+        /// For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the stack group. The name must be unique within a region.\
-        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+        /// The name of the stack group. The name must be unique within a region.\\
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
@@ -167,6 +175,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// The tag key of the stack group.
             /// 
             /// > Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             /// <summary>
             /// The name of the stack group.
             /// </summary>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   SELF_MANAGED: the self-managed permission model
             /// *   SERVICE_MANAGED: the service-managed permission model
             /// 
-            /// >  For more information about the permission models of stack groups, see [Overview](~~154578~~).
+            /// >  For more information about the permission models of stack groups, see [Overview](https://help.aliyun.com/document_detail/154578.html).
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -258,11 +262,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateBody { get; set; }
 
             /// <summary>
-            /// The JSON-formatted structure that contains the template body. For more information, see [Template syntax](~~28857~~).
+            /// The JSON-formatted structure that contains the template body. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).
             /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]
             public string TemplateContent { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 
