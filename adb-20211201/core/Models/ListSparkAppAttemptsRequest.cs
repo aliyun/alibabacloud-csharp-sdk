@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the Spark application.
         /// 
-        /// > You can call the [ListSparkApps](~~455888~~) operation to query all application IDs.
+        /// > You can call the [ListSparkApps](https://help.aliyun.com/document_detail/455888.html) operation to query all application IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The page number. The value must be an integer that is greater than 0. Default value: **1**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

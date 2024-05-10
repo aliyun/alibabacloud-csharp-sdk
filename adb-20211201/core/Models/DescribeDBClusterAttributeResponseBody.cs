@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **false**
                 /// 
                 /// 
-                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
+                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135248.html).
                 /// > - This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// The maintenance window of the cluster. The time is displayed in the `HH:mmZ-HH:mmZ` format in UTC.
                 /// 
-                /// >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
+                /// >  For more information about maintenance windows, see [Configure a maintenance window](https://help.aliyun.com/document_detail/122569.html).
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         /// <summary>
                         /// The tag key.
                         /// 
-                        /// >  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
+                        /// >  You can call the [TagResources](https://help.aliyun.com/document_detail/179253.html) operation to add tags to a cluster.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]

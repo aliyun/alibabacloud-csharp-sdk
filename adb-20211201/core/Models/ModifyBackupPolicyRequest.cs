@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// *   **Sunday**
         /// 
         /// >  To ensure data security, we recommend that you specify at least two values.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -75,6 +79,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.
         /// 
         /// >  The time range must be 1 hour.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]

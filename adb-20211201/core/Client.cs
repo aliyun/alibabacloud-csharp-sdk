@@ -85,11 +85,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request AllocateClusterPublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateClusterPublicConnectionResponse
+         * @summary Applies for a public endpoint for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request AllocateClusterPublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateClusterPublicConnectionResponse
          */
         public AllocateClusterPublicConnectionResponse AllocateClusterPublicConnectionWithOptions(AllocateClusterPublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -123,11 +125,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request AllocateClusterPublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateClusterPublicConnectionResponse
+         * @summary Applies for a public endpoint for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request AllocateClusterPublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateClusterPublicConnectionResponse
          */
         public async Task<AllocateClusterPublicConnectionResponse> AllocateClusterPublicConnectionWithOptionsAsync(AllocateClusterPublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -161,10 +165,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request AllocateClusterPublicConnectionRequest
-          * @return AllocateClusterPublicConnectionResponse
+         * @summary Applies for a public endpoint for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request AllocateClusterPublicConnectionRequest
+         * @return AllocateClusterPublicConnectionResponse
          */
         public AllocateClusterPublicConnectionResponse AllocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request)
         {
@@ -173,10 +179,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request AllocateClusterPublicConnectionRequest
-          * @return AllocateClusterPublicConnectionResponse
+         * @summary Applies for a public endpoint for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request AllocateClusterPublicConnectionRequest
+         * @return AllocateClusterPublicConnectionResponse
          */
         public async Task<AllocateClusterPublicConnectionResponse> AllocateClusterPublicConnectionAsync(AllocateClusterPublicConnectionRequest request)
         {
@@ -185,11 +193,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request AttachUserENIRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachUserENIResponse
+         * @summary Attaches an elastic network interface (ENI) to an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request AttachUserENIRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachUserENIResponse
          */
         public AttachUserENIResponse AttachUserENIWithOptions(AttachUserENIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -219,11 +229,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request AttachUserENIRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AttachUserENIResponse
+         * @summary Attaches an elastic network interface (ENI) to an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request AttachUserENIRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachUserENIResponse
          */
         public async Task<AttachUserENIResponse> AttachUserENIWithOptionsAsync(AttachUserENIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -253,10 +265,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request AttachUserENIRequest
-          * @return AttachUserENIResponse
+         * @summary Attaches an elastic network interface (ENI) to an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request AttachUserENIRequest
+         * @return AttachUserENIResponse
          */
         public AttachUserENIResponse AttachUserENI(AttachUserENIRequest request)
         {
@@ -265,10 +279,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request AttachUserENIRequest
-          * @return AttachUserENIResponse
+         * @summary Attaches an elastic network interface (ENI) to an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request AttachUserENIRequest
+         * @return AttachUserENIResponse
          */
         public async Task<AttachUserENIResponse> AttachUserENIAsync(AttachUserENIRequest request)
         {
@@ -277,11 +293,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BindAccountResponse
+         * @summary Associates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BindAccountResponse
          */
         public BindAccountResponse BindAccountWithOptions(BindAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -319,11 +337,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BindAccountResponse
+         * @summary Associates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BindAccountResponse
          */
         public async Task<BindAccountResponse> BindAccountWithOptionsAsync(BindAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -361,10 +381,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindAccountRequest
-          * @return BindAccountResponse
+         * @summary Associates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindAccountRequest
+         * @return BindAccountResponse
          */
         public BindAccountResponse BindAccount(BindAccountRequest request)
         {
@@ -373,10 +395,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindAccountRequest
-          * @return BindAccountResponse
+         * @summary Associates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindAccountRequest
+         * @return BindAccountResponse
          */
         public async Task<BindAccountResponse> BindAccountAsync(BindAccountRequest request)
         {
@@ -385,11 +409,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindDBResourceGroupWithUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BindDBResourceGroupWithUserResponse
+         * @summary Associates a resource group with a database account.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindDBResourceGroupWithUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BindDBResourceGroupWithUserResponse
          */
         public BindDBResourceGroupWithUserResponse BindDBResourceGroupWithUserWithOptions(BindDBResourceGroupWithUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -427,11 +453,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindDBResourceGroupWithUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BindDBResourceGroupWithUserResponse
+         * @summary Associates a resource group with a database account.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindDBResourceGroupWithUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BindDBResourceGroupWithUserResponse
          */
         public async Task<BindDBResourceGroupWithUserResponse> BindDBResourceGroupWithUserWithOptionsAsync(BindDBResourceGroupWithUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -469,10 +497,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindDBResourceGroupWithUserRequest
-          * @return BindDBResourceGroupWithUserResponse
+         * @summary Associates a resource group with a database account.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindDBResourceGroupWithUserRequest
+         * @return BindDBResourceGroupWithUserResponse
          */
         public BindDBResourceGroupWithUserResponse BindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request)
         {
@@ -481,10 +511,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request BindDBResourceGroupWithUserRequest
-          * @return BindDBResourceGroupWithUserResponse
+         * @summary Associates a resource group with a database account.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request BindDBResourceGroupWithUserRequest
+         * @return BindDBResourceGroupWithUserResponse
          */
         public async Task<BindDBResourceGroupWithUserResponse> BindDBResourceGroupWithUserAsync(BindDBResourceGroupWithUserRequest request)
         {
@@ -493,11 +525,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckBindRamUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckBindRamUserResponse
+         * @summary Queries whether a database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster is associated with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckBindRamUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckBindRamUserResponse
          */
         public CheckBindRamUserResponse CheckBindRamUserWithOptions(CheckBindRamUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -531,11 +565,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckBindRamUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckBindRamUserResponse
+         * @summary Queries whether a database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster is associated with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckBindRamUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckBindRamUserResponse
          */
         public async Task<CheckBindRamUserResponse> CheckBindRamUserWithOptionsAsync(CheckBindRamUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -569,10 +605,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckBindRamUserRequest
-          * @return CheckBindRamUserResponse
+         * @summary Queries whether a database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster is associated with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckBindRamUserRequest
+         * @return CheckBindRamUserResponse
          */
         public CheckBindRamUserResponse CheckBindRamUser(CheckBindRamUserRequest request)
         {
@@ -581,10 +619,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckBindRamUserRequest
-          * @return CheckBindRamUserResponse
+         * @summary Queries whether a database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster is associated with a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckBindRamUserRequest
+         * @return CheckBindRamUserResponse
          */
         public async Task<CheckBindRamUserResponse> CheckBindRamUserAsync(CheckBindRamUserRequest request)
         {
@@ -593,11 +633,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckSampleDataSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckSampleDataSetResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckSampleDataSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckSampleDataSetResponse
          */
         public CheckSampleDataSetResponse CheckSampleDataSetWithOptions(CheckSampleDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -627,11 +667,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckSampleDataSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckSampleDataSetResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckSampleDataSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckSampleDataSetResponse
          */
         public async Task<CheckSampleDataSetResponse> CheckSampleDataSetWithOptionsAsync(CheckSampleDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -661,10 +701,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckSampleDataSetRequest
-          * @return CheckSampleDataSetResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckSampleDataSetRequest
+         * @return CheckSampleDataSetResponse
          */
         public CheckSampleDataSetResponse CheckSampleDataSet(CheckSampleDataSetRequest request)
         {
@@ -673,10 +713,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CheckSampleDataSetRequest
-          * @return CheckSampleDataSetResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CheckSampleDataSetRequest
+         * @return CheckSampleDataSetResponse
          */
         public async Task<CheckSampleDataSetResponse> CheckSampleDataSetAsync(CheckSampleDataSetRequest request)
         {
@@ -685,11 +725,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -735,11 +777,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -785,10 +829,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
@@ -797,10 +843,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
@@ -809,11 +857,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBClusterResponse
+         * @summary Creates an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBClusterResponse
          */
         public CreateDBClusterResponse CreateDBClusterWithOptions(CreateDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -927,11 +977,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBClusterResponse
+         * @summary Creates an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBClusterResponse
          */
         public async Task<CreateDBClusterResponse> CreateDBClusterWithOptionsAsync(CreateDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1045,10 +1097,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBClusterRequest
-          * @return CreateDBClusterResponse
+         * @summary Creates an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBClusterRequest
+         * @return CreateDBClusterResponse
          */
         public CreateDBClusterResponse CreateDBCluster(CreateDBClusterRequest request)
         {
@@ -1057,10 +1111,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBClusterRequest
-          * @return CreateDBClusterResponse
+         * @summary Creates an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBClusterRequest
+         * @return CreateDBClusterResponse
          */
         public async Task<CreateDBClusterResponse> CreateDBClusterAsync(CreateDBClusterRequest request)
         {
@@ -1069,11 +1125,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of the current service, see [Endpoints](~~612373~~).
-          *
-          * @param tmpReq CreateDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBResourceGroupResponse
+         * @summary Creates a resource group for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of the current service, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param tmpReq CreateDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBResourceGroupResponse
          */
         public CreateDBResourceGroupResponse CreateDBResourceGroupWithOptions(CreateDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1153,11 +1211,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of the current service, see [Endpoints](~~612373~~).
-          *
-          * @param tmpReq CreateDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBResourceGroupResponse
+         * @summary Creates a resource group for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of the current service, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param tmpReq CreateDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBResourceGroupResponse
          */
         public async Task<CreateDBResourceGroupResponse> CreateDBResourceGroupWithOptionsAsync(CreateDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1237,10 +1297,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of the current service, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBResourceGroupRequest
-          * @return CreateDBResourceGroupResponse
+         * @summary Creates a resource group for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of the current service, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBResourceGroupRequest
+         * @return CreateDBResourceGroupResponse
          */
         public CreateDBResourceGroupResponse CreateDBResourceGroup(CreateDBResourceGroupRequest request)
         {
@@ -1249,10 +1311,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of the current service, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateDBResourceGroupRequest
-          * @return CreateDBResourceGroupResponse
+         * @summary Creates a resource group for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of the current service, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateDBResourceGroupRequest
+         * @return CreateDBResourceGroupResponse
          */
         public async Task<CreateDBResourceGroupResponse> CreateDBResourceGroupAsync(CreateDBResourceGroupRequest request)
         {
@@ -1261,11 +1325,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateElasticPlanResponse
+         * @summary Creates a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateElasticPlanResponse
          */
         public CreateElasticPlanResponse CreateElasticPlanWithOptions(CreateElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1331,11 +1397,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateElasticPlanResponse
+         * @summary Creates a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateElasticPlanResponse
          */
         public async Task<CreateElasticPlanResponse> CreateElasticPlanWithOptionsAsync(CreateElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1401,10 +1469,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateElasticPlanRequest
-          * @return CreateElasticPlanResponse
+         * @summary Creates a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateElasticPlanRequest
+         * @return CreateElasticPlanResponse
          */
         public CreateElasticPlanResponse CreateElasticPlan(CreateElasticPlanRequest request)
         {
@@ -1413,10 +1483,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request CreateElasticPlanRequest
-          * @return CreateElasticPlanResponse
+         * @summary Creates a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request CreateElasticPlanRequest
+         * @return CreateElasticPlanResponse
          */
         public async Task<CreateElasticPlanResponse> CreateElasticPlanAsync(CreateElasticPlanRequest request)
         {
@@ -1425,13 +1497,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateOssSubDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateOssSubDirectoryResponse
+         * @summary Creates an Object Storage Service (OSS) subdirectory.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateOssSubDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateOssSubDirectoryResponse
          */
         public CreateOssSubDirectoryResponse CreateOssSubDirectoryWithOptions(CreateOssSubDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1465,13 +1539,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateOssSubDirectoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateOssSubDirectoryResponse
+         * @summary Creates an Object Storage Service (OSS) subdirectory.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateOssSubDirectoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateOssSubDirectoryResponse
          */
         public async Task<CreateOssSubDirectoryResponse> CreateOssSubDirectoryWithOptionsAsync(CreateOssSubDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1505,12 +1581,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateOssSubDirectoryRequest
-          * @return CreateOssSubDirectoryResponse
+         * @summary Creates an Object Storage Service (OSS) subdirectory.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateOssSubDirectoryRequest
+         * @return CreateOssSubDirectoryResponse
          */
         public CreateOssSubDirectoryResponse CreateOssSubDirectory(CreateOssSubDirectoryRequest request)
         {
@@ -1519,12 +1597,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateOssSubDirectoryRequest
-          * @return CreateOssSubDirectoryResponse
+         * @summary Creates an Object Storage Service (OSS) subdirectory.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateOssSubDirectoryRequest
+         * @return CreateOssSubDirectoryResponse
          */
         public async Task<CreateOssSubDirectoryResponse> CreateOssSubDirectoryAsync(CreateOssSubDirectoryRequest request)
         {
@@ -1533,13 +1613,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateSparkTemplateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSparkTemplateResponse
+         * @summary Creates a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateSparkTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSparkTemplateResponse
          */
         public CreateSparkTemplateResponse CreateSparkTemplateWithOptions(CreateSparkTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1585,13 +1667,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateSparkTemplateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSparkTemplateResponse
+         * @summary Creates a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateSparkTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSparkTemplateResponse
          */
         public async Task<CreateSparkTemplateResponse> CreateSparkTemplateWithOptionsAsync(CreateSparkTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1637,12 +1721,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateSparkTemplateRequest
-          * @return CreateSparkTemplateResponse
+         * @summary Creates a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateSparkTemplateRequest
+         * @return CreateSparkTemplateResponse
          */
         public CreateSparkTemplateResponse CreateSparkTemplate(CreateSparkTemplateRequest request)
         {
@@ -1651,12 +1737,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request CreateSparkTemplateRequest
-          * @return CreateSparkTemplateResponse
+         * @summary Creates a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request CreateSparkTemplateRequest
+         * @return CreateSparkTemplateResponse
          */
         public async Task<CreateSparkTemplateResponse> CreateSparkTemplateAsync(CreateSparkTemplateRequest request)
         {
@@ -1664,6 +1752,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await CreateSparkTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a database account from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DeleteAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1695,6 +1790,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a database account from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DeleteAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1726,12 +1828,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a database account from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DeleteAccountRequest
+         * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a database account from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DeleteAccountRequest
+         * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1739,13 +1853,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   You can call this operation to delete only subscription clusters.
-          * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBClusterResponse
+         * @summary Deletes an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   You can call this operation to delete only subscription clusters.
+         * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBClusterResponse
          */
         public DeleteDBClusterResponse DeleteDBClusterWithOptions(DeleteDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1775,13 +1891,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   You can call this operation to delete only subscription clusters.
-          * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBClusterResponse
+         * @summary Deletes an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   You can call this operation to delete only subscription clusters.
+         * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBClusterResponse
          */
         public async Task<DeleteDBClusterResponse> DeleteDBClusterWithOptionsAsync(DeleteDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1811,12 +1929,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   You can call this operation to delete only subscription clusters.
-          * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBClusterRequest
-          * @return DeleteDBClusterResponse
+         * @summary Deletes an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   You can call this operation to delete only subscription clusters.
+         * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBClusterRequest
+         * @return DeleteDBClusterResponse
          */
         public DeleteDBClusterResponse DeleteDBCluster(DeleteDBClusterRequest request)
         {
@@ -1825,12 +1945,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   You can call this operation to delete only subscription clusters.
-          * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBClusterRequest
-          * @return DeleteDBClusterResponse
+         * @summary Deletes an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   You can call this operation to delete only subscription clusters.
+         * *   For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBClusterRequest
+         * @return DeleteDBClusterResponse
          */
         public async Task<DeleteDBClusterResponse> DeleteDBClusterAsync(DeleteDBClusterRequest request)
         {
@@ -1839,11 +1961,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBResourceGroupResponse
+         * @summary Deletes a resource group from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBResourceGroupResponse
          */
         public DeleteDBResourceGroupResponse DeleteDBResourceGroupWithOptions(DeleteDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1877,11 +2001,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBResourceGroupResponse
+         * @summary Deletes a resource group from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBResourceGroupResponse
          */
         public async Task<DeleteDBResourceGroupResponse> DeleteDBResourceGroupWithOptionsAsync(DeleteDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1915,10 +2041,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBResourceGroupRequest
-          * @return DeleteDBResourceGroupResponse
+         * @summary Deletes a resource group from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBResourceGroupRequest
+         * @return DeleteDBResourceGroupResponse
          */
         public DeleteDBResourceGroupResponse DeleteDBResourceGroup(DeleteDBResourceGroupRequest request)
         {
@@ -1927,10 +2055,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteDBResourceGroupRequest
-          * @return DeleteDBResourceGroupResponse
+         * @summary Deletes a resource group from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteDBResourceGroupRequest
+         * @return DeleteDBResourceGroupResponse
          */
         public async Task<DeleteDBResourceGroupResponse> DeleteDBResourceGroupAsync(DeleteDBResourceGroupRequest request)
         {
@@ -1939,11 +2069,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteElasticPlanResponse
+         * @summary Deletes a scaling plan from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteElasticPlanResponse
          */
         public DeleteElasticPlanResponse DeleteElasticPlanWithOptions(DeleteElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1977,11 +2109,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteElasticPlanResponse
+         * @summary Deletes a scaling plan from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteElasticPlanResponse
          */
         public async Task<DeleteElasticPlanResponse> DeleteElasticPlanWithOptionsAsync(DeleteElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2015,10 +2149,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteElasticPlanRequest
-          * @return DeleteElasticPlanResponse
+         * @summary Deletes a scaling plan from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteElasticPlanRequest
+         * @return DeleteElasticPlanResponse
          */
         public DeleteElasticPlanResponse DeleteElasticPlan(DeleteElasticPlanRequest request)
         {
@@ -2027,10 +2163,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DeleteElasticPlanRequest
-          * @return DeleteElasticPlanResponse
+         * @summary Deletes a scaling plan from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DeleteElasticPlanRequest
+         * @return DeleteElasticPlanResponse
          */
         public async Task<DeleteElasticPlanResponse> DeleteElasticPlanAsync(DeleteElasticPlanRequest request)
         {
@@ -2039,12 +2177,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DeleteProcessInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteProcessInstanceResponse
+         * @summary Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DeleteProcessInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteProcessInstanceResponse
          */
         public DeleteProcessInstanceResponse DeleteProcessInstanceWithOptions(DeleteProcessInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2086,12 +2226,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DeleteProcessInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteProcessInstanceResponse
+         * @summary Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DeleteProcessInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteProcessInstanceResponse
          */
         public async Task<DeleteProcessInstanceResponse> DeleteProcessInstanceWithOptionsAsync(DeleteProcessInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2133,11 +2275,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DeleteProcessInstanceRequest
-          * @return DeleteProcessInstanceResponse
+         * @summary Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DeleteProcessInstanceRequest
+         * @return DeleteProcessInstanceResponse
          */
         public DeleteProcessInstanceResponse DeleteProcessInstance(DeleteProcessInstanceRequest request)
         {
@@ -2146,11 +2290,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DeleteProcessInstanceRequest
-          * @return DeleteProcessInstanceResponse
+         * @summary Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DeleteProcessInstanceRequest
+         * @return DeleteProcessInstanceResponse
          */
         public async Task<DeleteProcessInstanceResponse> DeleteProcessInstanceAsync(DeleteProcessInstanceRequest request)
         {
@@ -2159,13 +2305,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request DeleteSparkTemplateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSparkTemplateResponse
+         * @summary Deletes Spark template files.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request DeleteSparkTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSparkTemplateResponse
          */
         public DeleteSparkTemplateResponse DeleteSparkTemplateWithOptions(DeleteSparkTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2199,13 +2347,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request DeleteSparkTemplateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSparkTemplateResponse
+         * @summary Deletes Spark template files.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request DeleteSparkTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSparkTemplateResponse
          */
         public async Task<DeleteSparkTemplateResponse> DeleteSparkTemplateWithOptionsAsync(DeleteSparkTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2239,12 +2389,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request DeleteSparkTemplateRequest
-          * @return DeleteSparkTemplateResponse
+         * @summary Deletes Spark template files.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request DeleteSparkTemplateRequest
+         * @return DeleteSparkTemplateResponse
          */
         public DeleteSparkTemplateResponse DeleteSparkTemplate(DeleteSparkTemplateRequest request)
         {
@@ -2253,12 +2405,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request DeleteSparkTemplateRequest
-          * @return DeleteSparkTemplateResponse
+         * @summary Deletes Spark template files.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request DeleteSparkTemplateRequest
+         * @return DeleteSparkTemplateResponse
          */
         public async Task<DeleteSparkTemplateResponse> DeleteSparkTemplateAsync(DeleteSparkTemplateRequest request)
         {
@@ -2266,6 +2420,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DeleteSparkTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes Spark template files.
+         *
+         * @param request DeleteSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSparkTemplateFileResponse
+         */
         public DeleteSparkTemplateFileResponse DeleteSparkTemplateFileWithOptions(DeleteSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2297,6 +2458,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DeleteSparkTemplateFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes Spark template files.
+         *
+         * @param request DeleteSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSparkTemplateFileResponse
+         */
         public async Task<DeleteSparkTemplateFileResponse> DeleteSparkTemplateFileWithOptionsAsync(DeleteSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2328,12 +2496,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DeleteSparkTemplateFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes Spark template files.
+         *
+         * @param request DeleteSparkTemplateFileRequest
+         * @return DeleteSparkTemplateFileResponse
+         */
         public DeleteSparkTemplateFileResponse DeleteSparkTemplateFile(DeleteSparkTemplateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSparkTemplateFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes Spark template files.
+         *
+         * @param request DeleteSparkTemplateFileRequest
+         * @return DeleteSparkTemplateFileResponse
+         */
         public async Task<DeleteSparkTemplateFileResponse> DeleteSparkTemplateFileAsync(DeleteSparkTemplateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2341,11 +2521,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountAllPrivilegesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountAllPrivilegesResponse
+         * @summary Queries the permissions of a database account on all permission levels.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountAllPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountAllPrivilegesResponse
          */
         public DescribeAccountAllPrivilegesResponse DescribeAccountAllPrivilegesWithOptions(DescribeAccountAllPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2387,11 +2569,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountAllPrivilegesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountAllPrivilegesResponse
+         * @summary Queries the permissions of a database account on all permission levels.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountAllPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountAllPrivilegesResponse
          */
         public async Task<DescribeAccountAllPrivilegesResponse> DescribeAccountAllPrivilegesWithOptionsAsync(DescribeAccountAllPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2433,10 +2617,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountAllPrivilegesRequest
-          * @return DescribeAccountAllPrivilegesResponse
+         * @summary Queries the permissions of a database account on all permission levels.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountAllPrivilegesRequest
+         * @return DescribeAccountAllPrivilegesResponse
          */
         public DescribeAccountAllPrivilegesResponse DescribeAccountAllPrivileges(DescribeAccountAllPrivilegesRequest request)
         {
@@ -2445,10 +2631,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountAllPrivilegesRequest
-          * @return DescribeAccountAllPrivilegesResponse
+         * @summary Queries the permissions of a database account on all permission levels.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountAllPrivilegesRequest
+         * @return DescribeAccountAllPrivilegesResponse
          */
         public async Task<DescribeAccountAllPrivilegesResponse> DescribeAccountAllPrivilegesAsync(DescribeAccountAllPrivilegesRequest request)
         {
@@ -2457,11 +2645,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountPrivilegeObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountPrivilegeObjectsResponse
+         * @summary Queries the databases, tables, and columns on which a database account has permissions.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountPrivilegeObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountPrivilegeObjectsResponse
          */
         public DescribeAccountPrivilegeObjectsResponse DescribeAccountPrivilegeObjectsWithOptions(DescribeAccountPrivilegeObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2523,11 +2713,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountPrivilegeObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountPrivilegeObjectsResponse
+         * @summary Queries the databases, tables, and columns on which a database account has permissions.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountPrivilegeObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountPrivilegeObjectsResponse
          */
         public async Task<DescribeAccountPrivilegeObjectsResponse> DescribeAccountPrivilegeObjectsWithOptionsAsync(DescribeAccountPrivilegeObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2589,10 +2781,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountPrivilegeObjectsRequest
-          * @return DescribeAccountPrivilegeObjectsResponse
+         * @summary Queries the databases, tables, and columns on which a database account has permissions.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountPrivilegeObjectsRequest
+         * @return DescribeAccountPrivilegeObjectsResponse
          */
         public DescribeAccountPrivilegeObjectsResponse DescribeAccountPrivilegeObjects(DescribeAccountPrivilegeObjectsRequest request)
         {
@@ -2601,10 +2795,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountPrivilegeObjectsRequest
-          * @return DescribeAccountPrivilegeObjectsResponse
+         * @summary Queries the databases, tables, and columns on which a database account has permissions.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountPrivilegeObjectsRequest
+         * @return DescribeAccountPrivilegeObjectsResponse
          */
         public async Task<DescribeAccountPrivilegeObjectsResponse> DescribeAccountPrivilegeObjectsAsync(DescribeAccountPrivilegeObjectsRequest request)
         {
@@ -2612,6 +2808,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeAccountPrivilegeObjectsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取某一ADB账户的权限
+         *
+         * @param request DescribeAccountPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountPrivilegesResponse
+         */
         public DescribeAccountPrivilegesResponse DescribeAccountPrivilegesWithOptions(DescribeAccountPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2671,6 +2874,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAccountPrivilegesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取某一ADB账户的权限
+         *
+         * @param request DescribeAccountPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountPrivilegesResponse
+         */
         public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesWithOptionsAsync(DescribeAccountPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2730,12 +2940,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAccountPrivilegesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取某一ADB账户的权限
+         *
+         * @param request DescribeAccountPrivilegesRequest
+         * @return DescribeAccountPrivilegesResponse
+         */
         public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountPrivilegesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取某一ADB账户的权限
+         *
+         * @param request DescribeAccountPrivilegesRequest
+         * @return DescribeAccountPrivilegesResponse
+         */
         public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesAsync(DescribeAccountPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2743,11 +2965,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries the database accounts of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2785,11 +3009,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries the database accounts of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2827,10 +3053,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries the database accounts of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
@@ -2839,10 +3067,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries the database accounts of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
@@ -2850,6 +3080,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 用于查询ADB for MySQL实例下某个数据库某个表的列的列表
+         *
+         * @param request DescribeAdbMySqlColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlColumnsResponse
+         */
         public DescribeAdbMySqlColumnsResponse DescribeAdbMySqlColumnsWithOptions(DescribeAdbMySqlColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2889,6 +3126,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlColumnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 用于查询ADB for MySQL实例下某个数据库某个表的列的列表
+         *
+         * @param request DescribeAdbMySqlColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlColumnsResponse
+         */
         public async Task<DescribeAdbMySqlColumnsResponse> DescribeAdbMySqlColumnsWithOptionsAsync(DescribeAdbMySqlColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2928,18 +3172,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlColumnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 用于查询ADB for MySQL实例下某个数据库某个表的列的列表
+         *
+         * @param request DescribeAdbMySqlColumnsRequest
+         * @return DescribeAdbMySqlColumnsResponse
+         */
         public DescribeAdbMySqlColumnsResponse DescribeAdbMySqlColumns(DescribeAdbMySqlColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAdbMySqlColumnsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 用于查询ADB for MySQL实例下某个数据库某个表的列的列表
+         *
+         * @param request DescribeAdbMySqlColumnsRequest
+         * @return DescribeAdbMySqlColumnsResponse
+         */
         public async Task<DescribeAdbMySqlColumnsResponse> DescribeAdbMySqlColumnsAsync(DescribeAdbMySqlColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAdbMySqlColumnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlSchemasRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlSchemasResponse
+         */
         public DescribeAdbMySqlSchemasResponse DescribeAdbMySqlSchemasWithOptions(DescribeAdbMySqlSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2971,6 +3234,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlSchemasResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlSchemasRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlSchemasResponse
+         */
         public async Task<DescribeAdbMySqlSchemasResponse> DescribeAdbMySqlSchemasWithOptionsAsync(DescribeAdbMySqlSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3002,18 +3272,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlSchemasRequest
+         * @return DescribeAdbMySqlSchemasResponse
+         */
         public DescribeAdbMySqlSchemasResponse DescribeAdbMySqlSchemas(DescribeAdbMySqlSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAdbMySqlSchemasWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlSchemasRequest
+         * @return DescribeAdbMySqlSchemasResponse
+         */
         public async Task<DescribeAdbMySqlSchemasResponse> DescribeAdbMySqlSchemasAsync(DescribeAdbMySqlSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAdbMySqlSchemasWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tables for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlTablesResponse
+         */
         public DescribeAdbMySqlTablesResponse DescribeAdbMySqlTablesWithOptions(DescribeAdbMySqlTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3049,6 +3338,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tables for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAdbMySqlTablesResponse
+         */
         public async Task<DescribeAdbMySqlTablesResponse> DescribeAdbMySqlTablesWithOptionsAsync(DescribeAdbMySqlTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3084,18 +3380,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAdbMySqlTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tables for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlTablesRequest
+         * @return DescribeAdbMySqlTablesResponse
+         */
         public DescribeAdbMySqlTablesResponse DescribeAdbMySqlTables(DescribeAdbMySqlTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAdbMySqlTablesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tables for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeAdbMySqlTablesRequest
+         * @return DescribeAdbMySqlTablesResponse
+         */
         public async Task<DescribeAdbMySqlTablesResponse> DescribeAdbMySqlTablesAsync(DescribeAdbMySqlTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAdbMySqlTablesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases, tables, and columns in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeAllDataSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAllDataSourceResponse
+         */
         public DescribeAllDataSourceResponse DescribeAllDataSourceWithOptions(DescribeAllDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3135,6 +3450,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAllDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases, tables, and columns in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeAllDataSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAllDataSourceResponse
+         */
         public async Task<DescribeAllDataSourceResponse> DescribeAllDataSourceWithOptionsAsync(DescribeAllDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3174,18 +3496,35 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeAllDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases, tables, and columns in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeAllDataSourceRequest
+         * @return DescribeAllDataSourceResponse
+         */
         public DescribeAllDataSourceResponse DescribeAllDataSource(DescribeAllDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAllDataSourceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases, tables, and columns in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeAllDataSourceRequest
+         * @return DescribeAllDataSourceResponse
+         */
         public async Task<DescribeAllDataSourceResponse> DescribeAllDataSourceAsync(DescribeAllDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAllDataSourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeApsActionLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApsActionLogsResponse
+         */
         public DescribeApsActionLogsResponse DescribeApsActionLogsWithOptions(DescribeApsActionLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3265,6 +3604,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeApsActionLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeApsActionLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApsActionLogsResponse
+         */
         public async Task<DescribeApsActionLogsResponse> DescribeApsActionLogsWithOptionsAsync(DescribeApsActionLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3344,12 +3688,20 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeApsActionLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeApsActionLogsRequest
+         * @return DescribeApsActionLogsResponse
+         */
         public DescribeApsActionLogsResponse DescribeApsActionLogs(DescribeApsActionLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeApsActionLogsWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeApsActionLogsRequest
+         * @return DescribeApsActionLogsResponse
+         */
         public async Task<DescribeApsActionLogsResponse> DescribeApsActionLogsAsync(DescribeApsActionLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3357,12 +3709,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeApsResourceGroupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeApsResourceGroupsResponse
+         * @summary Queries the information about resource groups of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the resource metrics.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeApsResourceGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApsResourceGroupsResponse
          */
         public DescribeApsResourceGroupsResponse DescribeApsResourceGroupsWithOptions(DescribeApsResourceGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3400,12 +3754,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeApsResourceGroupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeApsResourceGroupsResponse
+         * @summary Queries the information about resource groups of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the resource metrics.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeApsResourceGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApsResourceGroupsResponse
          */
         public async Task<DescribeApsResourceGroupsResponse> DescribeApsResourceGroupsWithOptionsAsync(DescribeApsResourceGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3443,11 +3799,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeApsResourceGroupsRequest
-          * @return DescribeApsResourceGroupsResponse
+         * @summary Queries the information about resource groups of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the resource metrics.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeApsResourceGroupsRequest
+         * @return DescribeApsResourceGroupsResponse
          */
         public DescribeApsResourceGroupsResponse DescribeApsResourceGroups(DescribeApsResourceGroupsRequest request)
         {
@@ -3456,11 +3814,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeApsResourceGroupsRequest
-          * @return DescribeApsResourceGroupsResponse
+         * @summary Queries the information about resource groups of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the resource metrics.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeApsResourceGroupsRequest
+         * @return DescribeApsResourceGroupsResponse
          */
         public async Task<DescribeApsResourceGroupsResponse> DescribeApsResourceGroupsAsync(DescribeApsResourceGroupsRequest request)
         {
@@ -3469,14 +3829,16 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeAuditLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditLogRecordsResponse
+         * @summary Queries the SQL audit logs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeAuditLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditLogRecordsResponse
          */
         public DescribeAuditLogRecordsResponse DescribeAuditLogRecordsWithOptions(DescribeAuditLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3578,14 +3940,16 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeAuditLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditLogRecordsResponse
+         * @summary Queries the SQL audit logs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeAuditLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditLogRecordsResponse
          */
         public async Task<DescribeAuditLogRecordsResponse> DescribeAuditLogRecordsWithOptionsAsync(DescribeAuditLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3687,13 +4051,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeAuditLogRecordsRequest
-          * @return DescribeAuditLogRecordsResponse
+         * @summary Queries the SQL audit logs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeAuditLogRecordsRequest
+         * @return DescribeAuditLogRecordsResponse
          */
         public DescribeAuditLogRecordsResponse DescribeAuditLogRecords(DescribeAuditLogRecordsRequest request)
         {
@@ -3702,13 +4068,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeAuditLogRecordsRequest
-          * @return DescribeAuditLogRecordsResponse
+         * @summary Queries the SQL audit logs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeAuditLogRecordsRequest
+         * @return DescribeAuditLogRecordsResponse
          */
         public async Task<DescribeAuditLogRecordsResponse> DescribeAuditLogRecordsAsync(DescribeAuditLogRecordsRequest request)
         {
@@ -3717,11 +4085,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupPolicyResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
          */
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3767,11 +4135,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupPolicyResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
          */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3817,10 +4185,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @return DescribeBackupPolicyResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
          */
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
@@ -3829,10 +4197,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @return DescribeBackupPolicyResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
          */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
@@ -3841,11 +4209,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupsResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupsResponse
          */
         public DescribeBackupsResponse DescribeBackupsWithOptions(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3911,11 +4279,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupsResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupsResponse
          */
         public async Task<DescribeBackupsResponse> DescribeBackupsWithOptionsAsync(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3981,10 +4349,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupsRequest
-          * @return DescribeBackupsResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupsRequest
+         * @return DescribeBackupsResponse
          */
         public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request)
         {
@@ -3993,10 +4361,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeBackupsRequest
-          * @return DescribeBackupsResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeBackupsRequest
+         * @return DescribeBackupsResponse
          */
         public async Task<DescribeBackupsResponse> DescribeBackupsAsync(DescribeBackupsRequest request)
         {
@@ -4005,11 +4373,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterAccessWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAccessWhiteListResponse
+         * @summary Queries the IP address whitelist of an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterAccessWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAccessWhiteListResponse
          */
         public DescribeClusterAccessWhiteListResponse DescribeClusterAccessWhiteListWithOptions(DescribeClusterAccessWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4043,11 +4413,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterAccessWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAccessWhiteListResponse
+         * @summary Queries the IP address whitelist of an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterAccessWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAccessWhiteListResponse
          */
         public async Task<DescribeClusterAccessWhiteListResponse> DescribeClusterAccessWhiteListWithOptionsAsync(DescribeClusterAccessWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4081,10 +4453,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterAccessWhiteListRequest
-          * @return DescribeClusterAccessWhiteListResponse
+         * @summary Queries the IP address whitelist of an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterAccessWhiteListRequest
+         * @return DescribeClusterAccessWhiteListResponse
          */
         public DescribeClusterAccessWhiteListResponse DescribeClusterAccessWhiteList(DescribeClusterAccessWhiteListRequest request)
         {
@@ -4093,10 +4467,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterAccessWhiteListRequest
-          * @return DescribeClusterAccessWhiteListResponse
+         * @summary Queries the IP address whitelist of an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterAccessWhiteListRequest
+         * @return DescribeClusterAccessWhiteListResponse
          */
         public async Task<DescribeClusterAccessWhiteListResponse> DescribeClusterAccessWhiteListAsync(DescribeClusterAccessWhiteListRequest request)
         {
@@ -4105,11 +4481,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterNetInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterNetInfoResponse
+         * @summary Queries the network information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNetInfoResponse
          */
         public DescribeClusterNetInfoResponse DescribeClusterNetInfoWithOptions(DescribeClusterNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4139,11 +4517,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterNetInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterNetInfoResponse
+         * @summary Queries the network information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNetInfoResponse
          */
         public async Task<DescribeClusterNetInfoResponse> DescribeClusterNetInfoWithOptionsAsync(DescribeClusterNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4173,10 +4553,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterNetInfoRequest
-          * @return DescribeClusterNetInfoResponse
+         * @summary Queries the network information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterNetInfoRequest
+         * @return DescribeClusterNetInfoResponse
          */
         public DescribeClusterNetInfoResponse DescribeClusterNetInfo(DescribeClusterNetInfoRequest request)
         {
@@ -4185,10 +4567,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeClusterNetInfoRequest
-          * @return DescribeClusterNetInfoResponse
+         * @summary Queries the network information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeClusterNetInfoRequest
+         * @return DescribeClusterNetInfoResponse
          */
         public async Task<DescribeClusterNetInfoResponse> DescribeClusterNetInfoAsync(DescribeClusterNetInfoRequest request)
         {
@@ -4196,6 +4580,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeClusterNetInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取集群资源统计
+         *
+         * @param request DescribeClusterResourceDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourceDetailResponse
+         */
         public DescribeClusterResourceDetailResponse DescribeClusterResourceDetailWithOptions(DescribeClusterResourceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4223,6 +4614,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeClusterResourceDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取集群资源统计
+         *
+         * @param request DescribeClusterResourceDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourceDetailResponse
+         */
         public async Task<DescribeClusterResourceDetailResponse> DescribeClusterResourceDetailWithOptionsAsync(DescribeClusterResourceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4250,18 +4648,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeClusterResourceDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取集群资源统计
+         *
+         * @param request DescribeClusterResourceDetailRequest
+         * @return DescribeClusterResourceDetailResponse
+         */
         public DescribeClusterResourceDetailResponse DescribeClusterResourceDetail(DescribeClusterResourceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterResourceDetailWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取集群资源统计
+         *
+         * @param request DescribeClusterResourceDetailRequest
+         * @return DescribeClusterResourceDetailResponse
+         */
         public async Task<DescribeClusterResourceDetailResponse> DescribeClusterResourceDetailAsync(DescribeClusterResourceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterResourceDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取实例资源统计
+         *
+         * @param request DescribeClusterResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourceUsageResponse
+         */
         public DescribeClusterResourceUsageResponse DescribeClusterResourceUsageWithOptions(DescribeClusterResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4285,6 +4702,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeClusterResourceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例资源统计
+         *
+         * @param request DescribeClusterResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourceUsageResponse
+         */
         public async Task<DescribeClusterResourceUsageResponse> DescribeClusterResourceUsageWithOptionsAsync(DescribeClusterResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4308,18 +4732,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeClusterResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例资源统计
+         *
+         * @param request DescribeClusterResourceUsageRequest
+         * @return DescribeClusterResourceUsageResponse
+         */
         public DescribeClusterResourceUsageResponse DescribeClusterResourceUsage(DescribeClusterResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterResourceUsageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取实例资源统计
+         *
+         * @param request DescribeClusterResourceUsageRequest
+         * @return DescribeClusterResourceUsageResponse
+         */
         public async Task<DescribeClusterResourceUsageResponse> DescribeClusterResourceUsageAsync(DescribeClusterResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterResourceUsageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of columns in a table.
+         *
+         * @param request DescribeColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsResponse
+         */
         public DescribeColumnsResponse DescribeColumnsWithOptions(DescribeColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4359,6 +4802,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeColumnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of columns in a table.
+         *
+         * @param request DescribeColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsResponse
+         */
         public async Task<DescribeColumnsResponse> DescribeColumnsWithOptionsAsync(DescribeColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4398,18 +4848,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeColumnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of columns in a table.
+         *
+         * @param request DescribeColumnsRequest
+         * @return DescribeColumnsResponse
+         */
         public DescribeColumnsResponse DescribeColumns(DescribeColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeColumnsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of columns in a table.
+         *
+         * @param request DescribeColumnsRequest
+         * @return DescribeColumnsResponse
+         */
         public async Task<DescribeColumnsResponse> DescribeColumnsAsync(DescribeColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeColumnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取实例计算资源使用统计
+         *
+         * @param request DescribeComputeResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeComputeResourceUsageResponse
+         */
         public DescribeComputeResourceUsageResponse DescribeComputeResourceUsageWithOptions(DescribeComputeResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4449,6 +4918,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeComputeResourceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例计算资源使用统计
+         *
+         * @param request DescribeComputeResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeComputeResourceUsageResponse
+         */
         public async Task<DescribeComputeResourceUsageResponse> DescribeComputeResourceUsageWithOptionsAsync(DescribeComputeResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4488,12 +4964,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeComputeResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例计算资源使用统计
+         *
+         * @param request DescribeComputeResourceUsageRequest
+         * @return DescribeComputeResourceUsageResponse
+         */
         public DescribeComputeResourceUsageResponse DescribeComputeResourceUsage(DescribeComputeResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeComputeResourceUsageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取实例计算资源使用统计
+         *
+         * @param request DescribeComputeResourceUsageRequest
+         * @return DescribeComputeResourceUsageResponse
+         */
         public async Task<DescribeComputeResourceUsageResponse> DescribeComputeResourceUsageAsync(DescribeComputeResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4501,11 +4989,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterAttributeResponse
+         * @summary Queries the information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterAttributeResponse
          */
         public DescribeDBClusterAttributeResponse DescribeDBClusterAttributeWithOptions(DescribeDBClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4535,11 +5025,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterAttributeResponse
+         * @summary Queries the information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterAttributeResponse
          */
         public async Task<DescribeDBClusterAttributeResponse> DescribeDBClusterAttributeWithOptionsAsync(DescribeDBClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4569,10 +5061,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterAttributeRequest
-          * @return DescribeDBClusterAttributeResponse
+         * @summary Queries the information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterAttributeRequest
+         * @return DescribeDBClusterAttributeResponse
          */
         public DescribeDBClusterAttributeResponse DescribeDBClusterAttribute(DescribeDBClusterAttributeRequest request)
         {
@@ -4581,10 +5075,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterAttributeRequest
-          * @return DescribeDBClusterAttributeResponse
+         * @summary Queries the information about an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterAttributeRequest
+         * @return DescribeDBClusterAttributeResponse
          */
         public async Task<DescribeDBClusterAttributeResponse> DescribeDBClusterAttributeAsync(DescribeDBClusterAttributeRequest request)
         {
@@ -4593,11 +5089,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDBClusterHealthStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDBClusterHealthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterHealthStatusResponse
          */
         public DescribeDBClusterHealthStatusResponse DescribeDBClusterHealthStatusWithOptions(DescribeDBClusterHealthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4631,11 +5129,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDBClusterHealthStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDBClusterHealthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterHealthStatusResponse
          */
         public async Task<DescribeDBClusterHealthStatusResponse> DescribeDBClusterHealthStatusWithOptionsAsync(DescribeDBClusterHealthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4669,10 +5169,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDBClusterHealthStatusRequest
-          * @return DescribeDBClusterHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDBClusterHealthStatusRequest
+         * @return DescribeDBClusterHealthStatusResponse
          */
         public DescribeDBClusterHealthStatusResponse DescribeDBClusterHealthStatus(DescribeDBClusterHealthStatusRequest request)
         {
@@ -4681,10 +5183,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDBClusterHealthStatusRequest
-          * @return DescribeDBClusterHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDBClusterHealthStatusRequest
+         * @return DescribeDBClusterHealthStatusResponse
          */
         public async Task<DescribeDBClusterHealthStatusResponse> DescribeDBClusterHealthStatusAsync(DescribeDBClusterHealthStatusRequest request)
         {
@@ -4693,13 +5197,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the performance data of an AnalyticDB for MySQL cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterPerformanceResponse
          */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4749,13 +5255,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the performance data of an AnalyticDB for MySQL cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterPerformanceResponse
          */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceWithOptionsAsync(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4805,12 +5313,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the performance data of an AnalyticDB for MySQL cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @return DescribeDBClusterPerformanceResponse
          */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformance(DescribeDBClusterPerformanceRequest request)
         {
@@ -4819,12 +5329,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the performance data of an AnalyticDB for MySQL cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @return DescribeDBClusterPerformanceResponse
          */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceAsync(DescribeDBClusterPerformanceRequest request)
         {
@@ -4833,11 +5345,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterSpaceSummaryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterSpaceSummaryResponse
+         * @summary Queries the storage overview information of an AnalyticDB for MySQL cluster, such as the total data size, hot data size, cold data size, and data growth.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterSpaceSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterSpaceSummaryResponse
          */
         public DescribeDBClusterSpaceSummaryResponse DescribeDBClusterSpaceSummaryWithOptions(DescribeDBClusterSpaceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4887,11 +5401,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterSpaceSummaryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterSpaceSummaryResponse
+         * @summary Queries the storage overview information of an AnalyticDB for MySQL cluster, such as the total data size, hot data size, cold data size, and data growth.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterSpaceSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterSpaceSummaryResponse
          */
         public async Task<DescribeDBClusterSpaceSummaryResponse> DescribeDBClusterSpaceSummaryWithOptionsAsync(DescribeDBClusterSpaceSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4941,10 +5457,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterSpaceSummaryRequest
-          * @return DescribeDBClusterSpaceSummaryResponse
+         * @summary Queries the storage overview information of an AnalyticDB for MySQL cluster, such as the total data size, hot data size, cold data size, and data growth.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterSpaceSummaryRequest
+         * @return DescribeDBClusterSpaceSummaryResponse
          */
         public DescribeDBClusterSpaceSummaryResponse DescribeDBClusterSpaceSummary(DescribeDBClusterSpaceSummaryRequest request)
         {
@@ -4953,10 +5471,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterSpaceSummaryRequest
-          * @return DescribeDBClusterSpaceSummaryResponse
+         * @summary Queries the storage overview information of an AnalyticDB for MySQL cluster, such as the total data size, hot data size, cold data size, and data growth.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterSpaceSummaryRequest
+         * @return DescribeDBClusterSpaceSummaryResponse
          */
         public async Task<DescribeDBClusterSpaceSummaryResponse> DescribeDBClusterSpaceSummaryAsync(DescribeDBClusterSpaceSummaryRequest request)
         {
@@ -4965,11 +5485,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterStatusResponse
+         * @summary Queries a list of states for AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterStatusResponse
          */
         public DescribeDBClusterStatusResponse DescribeDBClusterStatusWithOptions(DescribeDBClusterStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4999,11 +5521,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterStatusResponse
+         * @summary Queries a list of states for AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterStatusResponse
          */
         public async Task<DescribeDBClusterStatusResponse> DescribeDBClusterStatusWithOptionsAsync(DescribeDBClusterStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5033,10 +5557,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterStatusRequest
-          * @return DescribeDBClusterStatusResponse
+         * @summary Queries a list of states for AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterStatusRequest
+         * @return DescribeDBClusterStatusResponse
          */
         public DescribeDBClusterStatusResponse DescribeDBClusterStatus(DescribeDBClusterStatusRequest request)
         {
@@ -5045,10 +5571,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClusterStatusRequest
-          * @return DescribeDBClusterStatusResponse
+         * @summary Queries a list of states for AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClusterStatusRequest
+         * @return DescribeDBClusterStatusResponse
          */
         public async Task<DescribeDBClusterStatusResponse> DescribeDBClusterStatusAsync(DescribeDBClusterStatusRequest request)
         {
@@ -5057,11 +5585,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClustersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClustersResponse
+         * @summary Queries the information about AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClustersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClustersResponse
          */
         public DescribeDBClustersResponse DescribeDBClustersWithOptions(DescribeDBClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5127,11 +5657,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClustersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClustersResponse
+         * @summary Queries the information about AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClustersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClustersResponse
          */
         public async Task<DescribeDBClustersResponse> DescribeDBClustersWithOptionsAsync(DescribeDBClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5197,10 +5729,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClustersRequest
-          * @return DescribeDBClustersResponse
+         * @summary Queries the information about AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClustersRequest
+         * @return DescribeDBClustersResponse
          */
         public DescribeDBClustersResponse DescribeDBClusters(DescribeDBClustersRequest request)
         {
@@ -5209,10 +5743,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBClustersRequest
-          * @return DescribeDBClustersResponse
+         * @summary Queries the information about AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBClustersRequest
+         * @return DescribeDBClustersResponse
          */
         public async Task<DescribeDBClustersResponse> DescribeDBClustersAsync(DescribeDBClustersRequest request)
         {
@@ -5221,11 +5757,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBResourceGroupResponse
+         * @summary Queries the information about resource groups for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBResourceGroupResponse
          */
         public DescribeDBResourceGroupResponse DescribeDBResourceGroupWithOptions(DescribeDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5271,11 +5809,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBResourceGroupResponse
+         * @summary Queries the information about resource groups for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBResourceGroupResponse
          */
         public async Task<DescribeDBResourceGroupResponse> DescribeDBResourceGroupWithOptionsAsync(DescribeDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5321,10 +5861,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBResourceGroupRequest
-          * @return DescribeDBResourceGroupResponse
+         * @summary Queries the information about resource groups for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBResourceGroupRequest
+         * @return DescribeDBResourceGroupResponse
          */
         public DescribeDBResourceGroupResponse DescribeDBResourceGroup(DescribeDBResourceGroupRequest request)
         {
@@ -5333,10 +5875,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeDBResourceGroupRequest
-          * @return DescribeDBResourceGroupResponse
+         * @summary Queries the information about resource groups for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeDBResourceGroupRequest
+         * @return DescribeDBResourceGroupResponse
          */
         public async Task<DescribeDBResourceGroupResponse> DescribeDBResourceGroupAsync(DescribeDBResourceGroupRequest request)
         {
@@ -5345,13 +5889,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public DescribeDiagnosisDimensionsResponse DescribeDiagnosisDimensionsWithOptions(DescribeDiagnosisDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5401,13 +5947,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public async Task<DescribeDiagnosisDimensionsResponse> DescribeDiagnosisDimensionsWithOptionsAsync(DescribeDiagnosisDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5457,12 +6005,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public DescribeDiagnosisDimensionsResponse DescribeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request)
         {
@@ -5471,12 +6021,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public async Task<DescribeDiagnosisDimensionsResponse> DescribeDiagnosisDimensionsAsync(DescribeDiagnosisDimensionsRequest request)
         {
@@ -5485,11 +6037,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisRecordsResponse
          */
         public DescribeDiagnosisRecordsResponse DescribeDiagnosisRecordsWithOptions(DescribeDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5591,11 +6145,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisRecordsResponse
          */
         public async Task<DescribeDiagnosisRecordsResponse> DescribeDiagnosisRecordsWithOptionsAsync(DescribeDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5697,10 +6253,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @return DescribeDiagnosisRecordsResponse
          */
         public DescribeDiagnosisRecordsResponse DescribeDiagnosisRecords(DescribeDiagnosisRecordsRequest request)
         {
@@ -5709,10 +6267,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @return DescribeDiagnosisRecordsResponse
          */
         public async Task<DescribeDiagnosisRecordsResponse> DescribeDiagnosisRecordsAsync(DescribeDiagnosisRecordsRequest request)
         {
@@ -5721,13 +6281,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public DescribeDiagnosisSQLInfoResponse DescribeDiagnosisSQLInfoWithOptions(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5753,13 +6315,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public async Task<DescribeDiagnosisSQLInfoResponse> DescribeDiagnosisSQLInfoWithOptionsAsync(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5785,12 +6349,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public DescribeDiagnosisSQLInfoResponse DescribeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request)
         {
@@ -5799,12 +6365,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public async Task<DescribeDiagnosisSQLInfoResponse> DescribeDiagnosisSQLInfoAsync(DescribeDiagnosisSQLInfoRequest request)
         {
@@ -5812,6 +6380,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeDiagnosisSQLInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadRecordsResponse
+         */
         public DescribeDownloadRecordsResponse DescribeDownloadRecordsWithOptions(DescribeDownloadRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5847,6 +6422,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeDownloadRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadRecordsResponse
+         */
         public async Task<DescribeDownloadRecordsResponse> DescribeDownloadRecordsWithOptionsAsync(DescribeDownloadRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5882,12 +6464,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeDownloadRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @return DescribeDownloadRecordsResponse
+         */
         public DescribeDownloadRecordsResponse DescribeDownloadRecords(DescribeDownloadRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDownloadRecordsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @return DescribeDownloadRecordsResponse
+         */
         public async Task<DescribeDownloadRecordsResponse> DescribeDownloadRecordsAsync(DescribeDownloadRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5895,11 +6489,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
-          *
-          * @param request DescribeElasticPlanAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticPlanAttributeResponse
+         * @summary Queries the information about a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+         *
+         * @param request DescribeElasticPlanAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanAttributeResponse
          */
         public DescribeElasticPlanAttributeResponse DescribeElasticPlanAttributeWithOptions(DescribeElasticPlanAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5933,11 +6529,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
-          *
-          * @param request DescribeElasticPlanAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticPlanAttributeResponse
+         * @summary Queries the information about a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+         *
+         * @param request DescribeElasticPlanAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanAttributeResponse
          */
         public async Task<DescribeElasticPlanAttributeResponse> DescribeElasticPlanAttributeWithOptionsAsync(DescribeElasticPlanAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5971,10 +6569,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
-          *
-          * @param request DescribeElasticPlanAttributeRequest
-          * @return DescribeElasticPlanAttributeResponse
+         * @summary Queries the information about a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+         *
+         * @param request DescribeElasticPlanAttributeRequest
+         * @return DescribeElasticPlanAttributeResponse
          */
         public DescribeElasticPlanAttributeResponse DescribeElasticPlanAttribute(DescribeElasticPlanAttributeRequest request)
         {
@@ -5983,10 +6583,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
-          *
-          * @param request DescribeElasticPlanAttributeRequest
-          * @return DescribeElasticPlanAttributeResponse
+         * @summary Queries the information about a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+         *
+         * @param request DescribeElasticPlanAttributeRequest
+         * @return DescribeElasticPlanAttributeResponse
          */
         public async Task<DescribeElasticPlanAttributeResponse> DescribeElasticPlanAttributeAsync(DescribeElasticPlanAttributeRequest request)
         {
@@ -5995,11 +6597,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeElasticPlanJobsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticPlanJobsResponse
+         * @summary Queries a list of scaling plan jobs for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeElasticPlanJobsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanJobsResponse
          */
         public DescribeElasticPlanJobsResponse DescribeElasticPlanJobsWithOptions(DescribeElasticPlanJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6053,11 +6657,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeElasticPlanJobsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticPlanJobsResponse
+         * @summary Queries a list of scaling plan jobs for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeElasticPlanJobsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanJobsResponse
          */
         public async Task<DescribeElasticPlanJobsResponse> DescribeElasticPlanJobsWithOptionsAsync(DescribeElasticPlanJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6111,10 +6717,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeElasticPlanJobsRequest
-          * @return DescribeElasticPlanJobsResponse
+         * @summary Queries a list of scaling plan jobs for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeElasticPlanJobsRequest
+         * @return DescribeElasticPlanJobsResponse
          */
         public DescribeElasticPlanJobsResponse DescribeElasticPlanJobs(DescribeElasticPlanJobsRequest request)
         {
@@ -6123,10 +6731,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeElasticPlanJobsRequest
-          * @return DescribeElasticPlanJobsResponse
+         * @summary Queries a list of scaling plan jobs for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeElasticPlanJobsRequest
+         * @return DescribeElasticPlanJobsResponse
          */
         public async Task<DescribeElasticPlanJobsResponse> DescribeElasticPlanJobsAsync(DescribeElasticPlanJobsRequest request)
         {
@@ -6134,6 +6744,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeElasticPlanJobsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the resource specifications that can be scaled for different types of scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlanSpecificationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanSpecificationsResponse
+         */
         public DescribeElasticPlanSpecificationsResponse DescribeElasticPlanSpecificationsWithOptions(DescribeElasticPlanSpecificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6169,6 +6786,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeElasticPlanSpecificationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the resource specifications that can be scaled for different types of scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlanSpecificationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlanSpecificationsResponse
+         */
         public async Task<DescribeElasticPlanSpecificationsResponse> DescribeElasticPlanSpecificationsWithOptionsAsync(DescribeElasticPlanSpecificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6204,18 +6828,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeElasticPlanSpecificationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the resource specifications that can be scaled for different types of scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlanSpecificationsRequest
+         * @return DescribeElasticPlanSpecificationsResponse
+         */
         public DescribeElasticPlanSpecificationsResponse DescribeElasticPlanSpecifications(DescribeElasticPlanSpecificationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeElasticPlanSpecificationsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the resource specifications that can be scaled for different types of scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlanSpecificationsRequest
+         * @return DescribeElasticPlanSpecificationsResponse
+         */
         public async Task<DescribeElasticPlanSpecificationsResponse> DescribeElasticPlanSpecificationsAsync(DescribeElasticPlanSpecificationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeElasticPlanSpecificationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlansRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlansResponse
+         */
         public DescribeElasticPlansResponse DescribeElasticPlansWithOptions(DescribeElasticPlansRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6267,6 +6910,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeElasticPlansResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlansRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticPlansResponse
+         */
         public async Task<DescribeElasticPlansResponse> DescribeElasticPlansWithOptionsAsync(DescribeElasticPlansRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6318,18 +6968,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeElasticPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlansRequest
+         * @return DescribeElasticPlansResponse
+         */
         public DescribeElasticPlansResponse DescribeElasticPlans(DescribeElasticPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeElasticPlansWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries scaling plans of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeElasticPlansRequest
+         * @return DescribeElasticPlansResponse
+         */
         public async Task<DescribeElasticPlansResponse> DescribeElasticPlansAsync(DescribeElasticPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeElasticPlansWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the permission level and permissions supported for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeEnabledPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEnabledPrivilegesResponse
+         */
         public DescribeEnabledPrivilegesResponse DescribeEnabledPrivilegesWithOptions(DescribeEnabledPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6353,6 +7022,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeEnabledPrivilegesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the permission level and permissions supported for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeEnabledPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEnabledPrivilegesResponse
+         */
         public async Task<DescribeEnabledPrivilegesResponse> DescribeEnabledPrivilegesWithOptionsAsync(DescribeEnabledPrivilegesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6376,18 +7052,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeEnabledPrivilegesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the permission level and permissions supported for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeEnabledPrivilegesRequest
+         * @return DescribeEnabledPrivilegesResponse
+         */
         public DescribeEnabledPrivilegesResponse DescribeEnabledPrivileges(DescribeEnabledPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEnabledPrivilegesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the permission level and permissions supported for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeEnabledPrivilegesRequest
+         * @return DescribeEnabledPrivilegesResponse
+         */
         public async Task<DescribeEnabledPrivilegesResponse> DescribeEnabledPrivilegesAsync(DescribeEnabledPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEnabledPrivilegesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取作业资源使用统计
+         *
+         * @param request DescribeJobResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeJobResourceUsageResponse
+         */
         public DescribeJobResourceUsageResponse DescribeJobResourceUsageWithOptions(DescribeJobResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6423,6 +7118,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeJobResourceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取作业资源使用统计
+         *
+         * @param request DescribeJobResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeJobResourceUsageResponse
+         */
         public async Task<DescribeJobResourceUsageResponse> DescribeJobResourceUsageWithOptionsAsync(DescribeJobResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6458,12 +7160,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeJobResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取作业资源使用统计
+         *
+         * @param request DescribeJobResourceUsageRequest
+         * @return DescribeJobResourceUsageResponse
+         */
         public DescribeJobResourceUsageResponse DescribeJobResourceUsage(DescribeJobResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeJobResourceUsageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取作业资源使用统计
+         *
+         * @param request DescribeJobResourceUsageRequest
+         * @return DescribeJobResourceUsageResponse
+         */
         public async Task<DescribeJobResourceUsageResponse> DescribeJobResourceUsageAsync(DescribeJobResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6471,11 +7185,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribePatternPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePatternPerformanceResponse
+         * @summary Queries the information about performance metrics of an SQL pattern such as the query duration and average memory usage for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribePatternPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePatternPerformanceResponse
          */
         public DescribePatternPerformanceResponse DescribePatternPerformanceWithOptions(DescribePatternPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6521,11 +7237,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribePatternPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePatternPerformanceResponse
+         * @summary Queries the information about performance metrics of an SQL pattern such as the query duration and average memory usage for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribePatternPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePatternPerformanceResponse
          */
         public async Task<DescribePatternPerformanceResponse> DescribePatternPerformanceWithOptionsAsync(DescribePatternPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6571,10 +7289,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribePatternPerformanceRequest
-          * @return DescribePatternPerformanceResponse
+         * @summary Queries the information about performance metrics of an SQL pattern such as the query duration and average memory usage for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribePatternPerformanceRequest
+         * @return DescribePatternPerformanceResponse
          */
         public DescribePatternPerformanceResponse DescribePatternPerformance(DescribePatternPerformanceRequest request)
         {
@@ -6583,10 +7303,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribePatternPerformanceRequest
-          * @return DescribePatternPerformanceResponse
+         * @summary Queries the information about performance metrics of an SQL pattern such as the query duration and average memory usage for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribePatternPerformanceRequest
+         * @return DescribePatternPerformanceResponse
          */
         public async Task<DescribePatternPerformanceResponse> DescribePatternPerformanceAsync(DescribePatternPerformanceRequest request)
         {
@@ -6595,11 +7317,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones in which AnalyticDB for MySQL Data Lakehouse Edition (V3.0) is available.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
          */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6645,11 +7369,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones in which AnalyticDB for MySQL Data Lakehouse Edition (V3.0) is available.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
          */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6695,10 +7421,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeRegionsRequest
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones in which AnalyticDB for MySQL Data Lakehouse Edition (V3.0) is available.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
          */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
@@ -6707,10 +7435,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeRegionsRequest
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones in which AnalyticDB for MySQL Data Lakehouse Edition (V3.0) is available.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
          */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
@@ -6718,6 +7448,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @param request DescribeSQLPatternsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLPatternsResponse
+         */
         public DescribeSQLPatternsResponse DescribeSQLPatternsWithOptions(DescribeSQLPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6777,6 +7514,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSQLPatternsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @param request DescribeSQLPatternsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLPatternsResponse
+         */
         public async Task<DescribeSQLPatternsResponse> DescribeSQLPatternsWithOptionsAsync(DescribeSQLPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6836,18 +7580,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSQLPatternsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @param request DescribeSQLPatternsRequest
+         * @return DescribeSQLPatternsResponse
+         */
         public DescribeSQLPatternsResponse DescribeSQLPatterns(DescribeSQLPatternsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLPatternsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @param request DescribeSQLPatternsRequest
+         * @return DescribeSQLPatternsResponse
+         */
         public async Task<DescribeSQLPatternsResponse> DescribeSQLPatternsAsync(DescribeSQLPatternsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSQLPatternsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeSchemasRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSchemasResponse
+         */
         public DescribeSchemasResponse DescribeSchemasWithOptions(DescribeSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6879,6 +7642,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSchemasResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeSchemasRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSchemasResponse
+         */
         public async Task<DescribeSchemasResponse> DescribeSchemasWithOptionsAsync(DescribeSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6910,18 +7680,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of databases in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeSchemasRequest
+         * @return DescribeSchemasResponse
+         */
         public DescribeSchemasResponse DescribeSchemas(DescribeSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSchemasWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of databases in an AnalyticDB for MySQL cluster.
+         *
+         * @param request DescribeSchemasRequest
+         * @return DescribeSchemasResponse
+         */
         public async Task<DescribeSchemasResponse> DescribeSchemasAsync(DescribeSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSchemasWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询Spark code的执行日志
+         *
+         * @param request DescribeSparkCodeLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeLogResponse
+         */
         public DescribeSparkCodeLogResponse DescribeSparkCodeLogWithOptions(DescribeSparkCodeLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6957,6 +7746,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSparkCodeLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询Spark code的执行日志
+         *
+         * @param request DescribeSparkCodeLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeLogResponse
+         */
         public async Task<DescribeSparkCodeLogResponse> DescribeSparkCodeLogWithOptionsAsync(DescribeSparkCodeLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6992,12 +7788,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSparkCodeLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询Spark code的执行日志
+         *
+         * @param request DescribeSparkCodeLogRequest
+         * @return DescribeSparkCodeLogResponse
+         */
         public DescribeSparkCodeLogResponse DescribeSparkCodeLog(DescribeSparkCodeLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSparkCodeLogWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询Spark code的执行日志
+         *
+         * @param request DescribeSparkCodeLogRequest
+         * @return DescribeSparkCodeLogResponse
+         */
         public async Task<DescribeSparkCodeLogResponse> DescribeSparkCodeLogAsync(DescribeSparkCodeLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7005,12 +7813,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeSparkCodeOutputRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSparkCodeOutputResponse
+         * @summary Queries the execution result of Spark code.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeSparkCodeOutputRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeOutputResponse
          */
         public DescribeSparkCodeOutputResponse DescribeSparkCodeOutputWithOptions(DescribeSparkCodeOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7048,12 +7858,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeSparkCodeOutputRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSparkCodeOutputResponse
+         * @summary Queries the execution result of Spark code.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeSparkCodeOutputRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeOutputResponse
          */
         public async Task<DescribeSparkCodeOutputResponse> DescribeSparkCodeOutputWithOptionsAsync(DescribeSparkCodeOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7091,11 +7903,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeSparkCodeOutputRequest
-          * @return DescribeSparkCodeOutputResponse
+         * @summary Queries the execution result of Spark code.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeSparkCodeOutputRequest
+         * @return DescribeSparkCodeOutputResponse
          */
         public DescribeSparkCodeOutputResponse DescribeSparkCodeOutput(DescribeSparkCodeOutputRequest request)
         {
@@ -7104,11 +7918,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeSparkCodeOutputRequest
-          * @return DescribeSparkCodeOutputResponse
+         * @summary Queries the execution result of Spark code.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeSparkCodeOutputRequest
+         * @return DescribeSparkCodeOutputResponse
          */
         public async Task<DescribeSparkCodeOutputResponse> DescribeSparkCodeOutputAsync(DescribeSparkCodeOutputRequest request)
         {
@@ -7116,6 +7932,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeSparkCodeOutputWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @param request DescribeSparkCodeWebUiRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeWebUiResponse
+         */
         public DescribeSparkCodeWebUiResponse DescribeSparkCodeWebUiWithOptions(DescribeSparkCodeWebUiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7151,6 +7974,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSparkCodeWebUiResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @param request DescribeSparkCodeWebUiRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSparkCodeWebUiResponse
+         */
         public async Task<DescribeSparkCodeWebUiResponse> DescribeSparkCodeWebUiWithOptionsAsync(DescribeSparkCodeWebUiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7186,12 +8016,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeSparkCodeWebUiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @param request DescribeSparkCodeWebUiRequest
+         * @return DescribeSparkCodeWebUiResponse
+         */
         public DescribeSparkCodeWebUiResponse DescribeSparkCodeWebUi(DescribeSparkCodeWebUiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSparkCodeWebUiWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @param request DescribeSparkCodeWebUiRequest
+         * @return DescribeSparkCodeWebUiResponse
+         */
         public async Task<DescribeSparkCodeWebUiResponse> DescribeSparkCodeWebUiAsync(DescribeSparkCodeWebUiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7199,11 +8041,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeSqlPatternRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSqlPatternResponse
+         * @summary Queries the information about SQL patterns of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeSqlPatternRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSqlPatternResponse
          */
         public DescribeSqlPatternResponse DescribeSqlPatternWithOptions(DescribeSqlPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7261,11 +8105,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeSqlPatternRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSqlPatternResponse
+         * @summary Queries the information about SQL patterns of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeSqlPatternRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSqlPatternResponse
          */
         public async Task<DescribeSqlPatternResponse> DescribeSqlPatternWithOptionsAsync(DescribeSqlPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7323,10 +8169,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeSqlPatternRequest
-          * @return DescribeSqlPatternResponse
+         * @summary Queries the information about SQL patterns of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeSqlPatternRequest
+         * @return DescribeSqlPatternResponse
          */
         public DescribeSqlPatternResponse DescribeSqlPattern(DescribeSqlPatternRequest request)
         {
@@ -7335,10 +8183,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeSqlPatternRequest
-          * @return DescribeSqlPatternResponse
+         * @summary Queries the information about SQL patterns of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a time range.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeSqlPatternRequest
+         * @return DescribeSqlPatternResponse
          */
         public async Task<DescribeSqlPatternResponse> DescribeSqlPatternAsync(DescribeSqlPatternRequest request)
         {
@@ -7346,6 +8196,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeSqlPatternWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the storage resource usage of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeStorageResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageResourceUsageResponse
+         */
         public DescribeStorageResourceUsageResponse DescribeStorageResourceUsageWithOptions(DescribeStorageResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7381,6 +8238,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeStorageResourceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the storage resource usage of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeStorageResourceUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStorageResourceUsageResponse
+         */
         public async Task<DescribeStorageResourceUsageResponse> DescribeStorageResourceUsageWithOptionsAsync(DescribeStorageResourceUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7416,12 +8280,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeStorageResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the storage resource usage of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeStorageResourceUsageRequest
+         * @return DescribeStorageResourceUsageResponse
+         */
         public DescribeStorageResourceUsageResponse DescribeStorageResourceUsage(DescribeStorageResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeStorageResourceUsageWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the storage resource usage of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request DescribeStorageResourceUsageRequest
+         * @return DescribeStorageResourceUsageResponse
+         */
         public async Task<DescribeStorageResourceUsageResponse> DescribeStorageResourceUsageAsync(DescribeStorageResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7429,13 +8305,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeTableAccessCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTableAccessCountResponse
+         * @summary Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster on a date.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeTableAccessCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTableAccessCountResponse
          */
         public DescribeTableAccessCountResponse DescribeTableAccessCountWithOptions(DescribeTableAccessCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7489,13 +8367,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeTableAccessCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTableAccessCountResponse
+         * @summary Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster on a date.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeTableAccessCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTableAccessCountResponse
          */
         public async Task<DescribeTableAccessCountResponse> DescribeTableAccessCountWithOptionsAsync(DescribeTableAccessCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7549,12 +8429,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeTableAccessCountRequest
-          * @return DescribeTableAccessCountResponse
+         * @summary Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster on a date.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeTableAccessCountRequest
+         * @return DescribeTableAccessCountResponse
          */
         public DescribeTableAccessCountResponse DescribeTableAccessCount(DescribeTableAccessCountRequest request)
         {
@@ -7563,12 +8445,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DescribeTableAccessCountRequest
-          * @return DescribeTableAccessCountResponse
+         * @summary Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster on a date.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DescribeTableAccessCountRequest
+         * @return DescribeTableAccessCountResponse
          */
         public async Task<DescribeTableAccessCountResponse> DescribeTableAccessCountAsync(DescribeTableAccessCountRequest request)
         {
@@ -7576,6 +8460,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeTableAccessCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tables in a database.
+         *
+         * @param request DescribeTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTablesResponse
+         */
         public DescribeTablesResponse DescribeTablesWithOptions(DescribeTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7611,6 +8502,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tables in a database.
+         *
+         * @param request DescribeTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTablesResponse
+         */
         public async Task<DescribeTablesResponse> DescribeTablesWithOptionsAsync(DescribeTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7646,12 +8544,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tables in a database.
+         *
+         * @param request DescribeTablesRequest
+         * @return DescribeTablesResponse
+         */
         public DescribeTablesResponse DescribeTables(DescribeTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTablesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tables in a database.
+         *
+         * @param request DescribeTablesRequest
+         * @return DescribeTablesResponse
+         */
         public async Task<DescribeTablesResponse> DescribeTablesAsync(DescribeTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7659,11 +8569,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeUserQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserQuotaResponse
+         * @summary 查询配额
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeUserQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserQuotaResponse
          */
         public DescribeUserQuotaResponse DescribeUserQuotaWithOptions(DescribeUserQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7689,11 +8601,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeUserQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserQuotaResponse
+         * @summary 查询配额
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeUserQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserQuotaResponse
          */
         public async Task<DescribeUserQuotaResponse> DescribeUserQuotaWithOptionsAsync(DescribeUserQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7719,10 +8633,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeUserQuotaRequest
-          * @return DescribeUserQuotaResponse
+         * @summary 查询配额
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeUserQuotaRequest
+         * @return DescribeUserQuotaResponse
          */
         public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest request)
         {
@@ -7731,10 +8647,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DescribeUserQuotaRequest
-          * @return DescribeUserQuotaResponse
+         * @summary 查询配额
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DescribeUserQuotaRequest
+         * @return DescribeUserQuotaResponse
          */
         public async Task<DescribeUserQuotaResponse> DescribeUserQuotaAsync(DescribeUserQuotaRequest request)
         {
@@ -7743,11 +8661,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DetachUserENIRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachUserENIResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DetachUserENIRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachUserENIResponse
          */
         public DetachUserENIResponse DetachUserENIWithOptions(DetachUserENIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7777,11 +8695,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DetachUserENIRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachUserENIResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DetachUserENIRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachUserENIResponse
          */
         public async Task<DetachUserENIResponse> DetachUserENIWithOptionsAsync(DetachUserENIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7811,10 +8729,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DetachUserENIRequest
-          * @return DetachUserENIResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DetachUserENIRequest
+         * @return DetachUserENIResponse
          */
         public DetachUserENIResponse DetachUserENI(DetachUserENIRequest request)
         {
@@ -7823,10 +8741,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DetachUserENIRequest
-          * @return DetachUserENIResponse
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DetachUserENIRequest
+         * @return DetachUserENIResponse
          */
         public async Task<DetachUserENIResponse> DetachUserENIAsync(DetachUserENIRequest request)
         {
@@ -7835,11 +8753,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DisableElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableElasticPlanResponse
+         * @summary Disables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DisableElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableElasticPlanResponse
          */
         public DisableElasticPlanResponse DisableElasticPlanWithOptions(DisableElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7873,11 +8793,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DisableElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableElasticPlanResponse
+         * @summary Disables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DisableElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableElasticPlanResponse
          */
         public async Task<DisableElasticPlanResponse> DisableElasticPlanWithOptionsAsync(DisableElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7911,10 +8833,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DisableElasticPlanRequest
-          * @return DisableElasticPlanResponse
+         * @summary Disables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DisableElasticPlanRequest
+         * @return DisableElasticPlanResponse
          */
         public DisableElasticPlanResponse DisableElasticPlan(DisableElasticPlanRequest request)
         {
@@ -7923,10 +8847,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request DisableElasticPlanRequest
-          * @return DisableElasticPlanResponse
+         * @summary Disables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request DisableElasticPlanRequest
+         * @return DisableElasticPlanResponse
          */
         public async Task<DisableElasticPlanResponse> DisableElasticPlanAsync(DisableElasticPlanRequest request)
         {
@@ -7935,13 +8861,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadDiagnosisRecordsResponse
          */
         public DownloadDiagnosisRecordsResponse DownloadDiagnosisRecordsWithOptions(DownloadDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8027,13 +8955,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadDiagnosisRecordsResponse
          */
         public async Task<DownloadDiagnosisRecordsResponse> DownloadDiagnosisRecordsWithOptionsAsync(DownloadDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8119,12 +9049,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @return DownloadDiagnosisRecordsResponse
          */
         public DownloadDiagnosisRecordsResponse DownloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request)
         {
@@ -8133,12 +9065,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @return DownloadDiagnosisRecordsResponse
          */
         public async Task<DownloadDiagnosisRecordsResponse> DownloadDiagnosisRecordsAsync(DownloadDiagnosisRecordsRequest request)
         {
@@ -8147,11 +9081,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request EnableElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableElasticPlanResponse
+         * @summary Enables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request EnableElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableElasticPlanResponse
          */
         public EnableElasticPlanResponse EnableElasticPlanWithOptions(EnableElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8185,11 +9121,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request EnableElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableElasticPlanResponse
+         * @summary Enables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request EnableElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableElasticPlanResponse
          */
         public async Task<EnableElasticPlanResponse> EnableElasticPlanWithOptionsAsync(EnableElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8223,10 +9161,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request EnableElasticPlanRequest
-          * @return EnableElasticPlanResponse
+         * @summary Enables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request EnableElasticPlanRequest
+         * @return EnableElasticPlanResponse
          */
         public EnableElasticPlanResponse EnableElasticPlan(EnableElasticPlanRequest request)
         {
@@ -8235,10 +9175,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request EnableElasticPlanRequest
-          * @return EnableElasticPlanResponse
+         * @summary Enables a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request EnableElasticPlanRequest
+         * @return EnableElasticPlanResponse
          */
         public async Task<EnableElasticPlanResponse> EnableElasticPlanAsync(EnableElasticPlanRequest request)
         {
@@ -8246,6 +9188,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await EnableElasticPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries whether a running SQL engine exists.
+         *
+         * @param request ExistRunningSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExistRunningSQLEngineResponse
+         */
         public ExistRunningSQLEngineResponse ExistRunningSQLEngineWithOptions(ExistRunningSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8277,6 +9226,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ExistRunningSQLEngineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether a running SQL engine exists.
+         *
+         * @param request ExistRunningSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExistRunningSQLEngineResponse
+         */
         public async Task<ExistRunningSQLEngineResponse> ExistRunningSQLEngineWithOptionsAsync(ExistRunningSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8308,12 +9264,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ExistRunningSQLEngineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether a running SQL engine exists.
+         *
+         * @param request ExistRunningSQLEngineRequest
+         * @return ExistRunningSQLEngineResponse
+         */
         public ExistRunningSQLEngineResponse ExistRunningSQLEngine(ExistRunningSQLEngineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExistRunningSQLEngineWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries whether a running SQL engine exists.
+         *
+         * @param request ExistRunningSQLEngineRequest
+         * @return ExistRunningSQLEngineResponse
+         */
         public async Task<ExistRunningSQLEngineResponse> ExistRunningSQLEngineAsync(ExistRunningSQLEngineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8321,12 +9289,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetDatabaseObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetDatabaseObjectsResponse
+         * @summary Queries the information about databases.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetDatabaseObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDatabaseObjectsResponse
          */
         public GetDatabaseObjectsResponse GetDatabaseObjectsWithOptions(GetDatabaseObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8380,12 +9350,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetDatabaseObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetDatabaseObjectsResponse
+         * @summary Queries the information about databases.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetDatabaseObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDatabaseObjectsResponse
          */
         public async Task<GetDatabaseObjectsResponse> GetDatabaseObjectsWithOptionsAsync(GetDatabaseObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8439,11 +9411,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetDatabaseObjectsRequest
-          * @return GetDatabaseObjectsResponse
+         * @summary Queries the information about databases.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetDatabaseObjectsRequest
+         * @return GetDatabaseObjectsResponse
          */
         public GetDatabaseObjectsResponse GetDatabaseObjects(GetDatabaseObjectsRequest request)
         {
@@ -8452,11 +9426,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetDatabaseObjectsRequest
-          * @return GetDatabaseObjectsResponse
+         * @summary Queries the information about databases.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetDatabaseObjectsRequest
+         * @return GetDatabaseObjectsResponse
          */
         public async Task<GetDatabaseObjectsResponse> GetDatabaseObjectsAsync(GetDatabaseObjectsRequest request)
         {
@@ -8465,13 +9441,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppAttemptLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppAttemptLogResponse
+         * @summary Queries the information about the retry log of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppAttemptLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppAttemptLogResponse
          */
         public GetSparkAppAttemptLogResponse GetSparkAppAttemptLogWithOptions(GetSparkAppAttemptLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8515,13 +9493,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppAttemptLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppAttemptLogResponse
+         * @summary Queries the information about the retry log of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppAttemptLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppAttemptLogResponse
          */
         public async Task<GetSparkAppAttemptLogResponse> GetSparkAppAttemptLogWithOptionsAsync(GetSparkAppAttemptLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8565,12 +9545,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppAttemptLogRequest
-          * @return GetSparkAppAttemptLogResponse
+         * @summary Queries the information about the retry log of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppAttemptLogRequest
+         * @return GetSparkAppAttemptLogResponse
          */
         public GetSparkAppAttemptLogResponse GetSparkAppAttemptLog(GetSparkAppAttemptLogRequest request)
         {
@@ -8579,12 +9561,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppAttemptLogRequest
-          * @return GetSparkAppAttemptLogResponse
+         * @summary Queries the information about the retry log of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppAttemptLogRequest
+         * @return GetSparkAppAttemptLogResponse
          */
         public async Task<GetSparkAppAttemptLogResponse> GetSparkAppAttemptLogAsync(GetSparkAppAttemptLogRequest request)
         {
@@ -8592,6 +9576,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await GetSparkAppAttemptLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about an Spark application.
+         *
+         * @param request GetSparkAppInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppInfoResponse
+         */
         public GetSparkAppInfoResponse GetSparkAppInfoWithOptions(GetSparkAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8625,6 +9616,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkAppInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about an Spark application.
+         *
+         * @param request GetSparkAppInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppInfoResponse
+         */
         public async Task<GetSparkAppInfoResponse> GetSparkAppInfoWithOptionsAsync(GetSparkAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8658,12 +9656,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkAppInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about an Spark application.
+         *
+         * @param request GetSparkAppInfoRequest
+         * @return GetSparkAppInfoResponse
+         */
         public GetSparkAppInfoResponse GetSparkAppInfo(GetSparkAppInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSparkAppInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about an Spark application.
+         *
+         * @param request GetSparkAppInfoRequest
+         * @return GetSparkAppInfoResponse
+         */
         public async Task<GetSparkAppInfoResponse> GetSparkAppInfoAsync(GetSparkAppInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8671,13 +9681,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppLogResponse
+         * @summary Queries the logs of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppLogResponse
          */
         public GetSparkAppLogResponse GetSparkAppLogWithOptions(GetSparkAppLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8725,13 +9737,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppLogResponse
+         * @summary Queries the logs of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppLogResponse
          */
         public async Task<GetSparkAppLogResponse> GetSparkAppLogWithOptionsAsync(GetSparkAppLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8779,12 +9793,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppLogRequest
-          * @return GetSparkAppLogResponse
+         * @summary Queries the logs of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppLogRequest
+         * @return GetSparkAppLogResponse
          */
         public GetSparkAppLogResponse GetSparkAppLog(GetSparkAppLogRequest request)
         {
@@ -8793,12 +9809,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppLogRequest
-          * @return GetSparkAppLogResponse
+         * @summary Queries the logs of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppLogRequest
+         * @return GetSparkAppLogResponse
          */
         public async Task<GetSparkAppLogResponse> GetSparkAppLogAsync(GetSparkAppLogRequest request)
         {
@@ -8807,13 +9825,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppMetricsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppMetricsResponse
+         * @summary Queries the metrics of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppMetricsResponse
          */
         public GetSparkAppMetricsResponse GetSparkAppMetricsWithOptions(GetSparkAppMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8849,13 +9869,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppMetricsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppMetricsResponse
+         * @summary Queries the metrics of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppMetricsResponse
          */
         public async Task<GetSparkAppMetricsResponse> GetSparkAppMetricsWithOptionsAsync(GetSparkAppMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8891,12 +9913,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppMetricsRequest
-          * @return GetSparkAppMetricsResponse
+         * @summary Queries the metrics of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppMetricsRequest
+         * @return GetSparkAppMetricsResponse
          */
         public GetSparkAppMetricsResponse GetSparkAppMetrics(GetSparkAppMetricsRequest request)
         {
@@ -8905,12 +9929,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppMetricsRequest
-          * @return GetSparkAppMetricsResponse
+         * @summary Queries the metrics of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppMetricsRequest
+         * @return GetSparkAppMetricsResponse
          */
         public async Task<GetSparkAppMetricsResponse> GetSparkAppMetricsAsync(GetSparkAppMetricsRequest request)
         {
@@ -8919,13 +9945,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppStateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppStateResponse
+         * @summary Queries the status of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppStateResponse
          */
         public GetSparkAppStateResponse GetSparkAppStateWithOptions(GetSparkAppStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8961,13 +9989,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppStateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppStateResponse
+         * @summary Queries the status of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppStateResponse
          */
         public async Task<GetSparkAppStateResponse> GetSparkAppStateWithOptionsAsync(GetSparkAppStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9003,12 +10033,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppStateRequest
-          * @return GetSparkAppStateResponse
+         * @summary Queries the status of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppStateRequest
+         * @return GetSparkAppStateResponse
          */
         public GetSparkAppStateResponse GetSparkAppState(GetSparkAppStateRequest request)
         {
@@ -9017,12 +10049,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppStateRequest
-          * @return GetSparkAppStateResponse
+         * @summary Queries the status of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppStateRequest
+         * @return GetSparkAppStateResponse
          */
         public async Task<GetSparkAppStateResponse> GetSparkAppStateAsync(GetSparkAppStateRequest request)
         {
@@ -9031,13 +10065,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppWebUiAddressRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppWebUiAddressResponse
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppWebUiAddressRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppWebUiAddressResponse
          */
         public GetSparkAppWebUiAddressResponse GetSparkAppWebUiAddressWithOptions(GetSparkAppWebUiAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9073,13 +10109,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppWebUiAddressRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkAppWebUiAddressResponse
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppWebUiAddressRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkAppWebUiAddressResponse
          */
         public async Task<GetSparkAppWebUiAddressResponse> GetSparkAppWebUiAddressWithOptionsAsync(GetSparkAppWebUiAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9115,12 +10153,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppWebUiAddressRequest
-          * @return GetSparkAppWebUiAddressResponse
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppWebUiAddressRequest
+         * @return GetSparkAppWebUiAddressResponse
          */
         public GetSparkAppWebUiAddressResponse GetSparkAppWebUiAddress(GetSparkAppWebUiAddressRequest request)
         {
@@ -9129,12 +10169,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkAppWebUiAddressRequest
-          * @return GetSparkAppWebUiAddressResponse
+         * @summary Queries the URL of the web UI for a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkAppWebUiAddressRequest
+         * @return GetSparkAppWebUiAddressResponse
          */
         public async Task<GetSparkAppWebUiAddressResponse> GetSparkAppWebUiAddressAsync(GetSparkAppWebUiAddressRequest request)
         {
@@ -9143,13 +10185,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request GetSparkConfigLogPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkConfigLogPathResponse
+         * @summary Queries the Spark log configuration of an AnalyticDB for MySQL cluster, including the default Spark log path.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request GetSparkConfigLogPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkConfigLogPathResponse
          */
         public GetSparkConfigLogPathResponse GetSparkConfigLogPathWithOptions(GetSparkConfigLogPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9179,13 +10223,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request GetSparkConfigLogPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkConfigLogPathResponse
+         * @summary Queries the Spark log configuration of an AnalyticDB for MySQL cluster, including the default Spark log path.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request GetSparkConfigLogPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkConfigLogPathResponse
          */
         public async Task<GetSparkConfigLogPathResponse> GetSparkConfigLogPathWithOptionsAsync(GetSparkConfigLogPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9215,12 +10261,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request GetSparkConfigLogPathRequest
-          * @return GetSparkConfigLogPathResponse
+         * @summary Queries the Spark log configuration of an AnalyticDB for MySQL cluster, including the default Spark log path.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request GetSparkConfigLogPathRequest
+         * @return GetSparkConfigLogPathResponse
          */
         public GetSparkConfigLogPathResponse GetSparkConfigLogPath(GetSparkConfigLogPathRequest request)
         {
@@ -9229,12 +10277,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request GetSparkConfigLogPathRequest
-          * @return GetSparkConfigLogPathResponse
+         * @summary Queries the Spark log configuration of an AnalyticDB for MySQL cluster, including the default Spark log path.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request GetSparkConfigLogPathRequest
+         * @return GetSparkConfigLogPathResponse
          */
         public async Task<GetSparkConfigLogPathResponse> GetSparkConfigLogPathAsync(GetSparkConfigLogPathRequest request)
         {
@@ -9243,13 +10293,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkDefinitionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkDefinitionsResponse
+         * @summary Queries the common definitions of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkDefinitionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkDefinitionsResponse
          */
         public GetSparkDefinitionsResponse GetSparkDefinitionsWithOptions(GetSparkDefinitionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9279,13 +10331,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkDefinitionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkDefinitionsResponse
+         * @summary Queries the common definitions of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkDefinitionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkDefinitionsResponse
          */
         public async Task<GetSparkDefinitionsResponse> GetSparkDefinitionsWithOptionsAsync(GetSparkDefinitionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9315,12 +10369,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkDefinitionsRequest
-          * @return GetSparkDefinitionsResponse
+         * @summary Queries the common definitions of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkDefinitionsRequest
+         * @return GetSparkDefinitionsResponse
          */
         public GetSparkDefinitionsResponse GetSparkDefinitions(GetSparkDefinitionsRequest request)
         {
@@ -9329,12 +10385,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkDefinitionsRequest
-          * @return GetSparkDefinitionsResponse
+         * @summary Queries the common definitions of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkDefinitionsRequest
+         * @return GetSparkDefinitionsResponse
          */
         public async Task<GetSparkDefinitionsResponse> GetSparkDefinitionsAsync(GetSparkDefinitionsRequest request)
         {
@@ -9343,13 +10401,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkLogAnalyzeTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkLogAnalyzeTaskResponse
+         * @summary Queries the results of a Spark log analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkLogAnalyzeTaskResponse
          */
         public GetSparkLogAnalyzeTaskResponse GetSparkLogAnalyzeTaskWithOptions(GetSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9379,13 +10439,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkLogAnalyzeTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkLogAnalyzeTaskResponse
+         * @summary Queries the results of a Spark log analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkLogAnalyzeTaskResponse
          */
         public async Task<GetSparkLogAnalyzeTaskResponse> GetSparkLogAnalyzeTaskWithOptionsAsync(GetSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9415,12 +10477,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkLogAnalyzeTaskRequest
-          * @return GetSparkLogAnalyzeTaskResponse
+         * @summary Queries the results of a Spark log analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkLogAnalyzeTaskRequest
+         * @return GetSparkLogAnalyzeTaskResponse
          */
         public GetSparkLogAnalyzeTaskResponse GetSparkLogAnalyzeTask(GetSparkLogAnalyzeTaskRequest request)
         {
@@ -9429,12 +10493,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkLogAnalyzeTaskRequest
-          * @return GetSparkLogAnalyzeTaskResponse
+         * @summary Queries the results of a Spark log analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkLogAnalyzeTaskRequest
+         * @return GetSparkLogAnalyzeTaskResponse
          */
         public async Task<GetSparkLogAnalyzeTaskResponse> GetSparkLogAnalyzeTaskAsync(GetSparkLogAnalyzeTaskRequest request)
         {
@@ -9442,6 +10508,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await GetSparkLogAnalyzeTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the state information about the Spark SQL engine.
+         *
+         * @param request GetSparkSQLEngineStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkSQLEngineStateResponse
+         */
         public GetSparkSQLEngineStateResponse GetSparkSQLEngineStateWithOptions(GetSparkSQLEngineStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9473,6 +10546,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkSQLEngineStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the state information about the Spark SQL engine.
+         *
+         * @param request GetSparkSQLEngineStateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkSQLEngineStateResponse
+         */
         public async Task<GetSparkSQLEngineStateResponse> GetSparkSQLEngineStateWithOptionsAsync(GetSparkSQLEngineStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9504,12 +10584,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkSQLEngineStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the state information about the Spark SQL engine.
+         *
+         * @param request GetSparkSQLEngineStateRequest
+         * @return GetSparkSQLEngineStateResponse
+         */
         public GetSparkSQLEngineStateResponse GetSparkSQLEngineState(GetSparkSQLEngineStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSparkSQLEngineStateWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the state information about the Spark SQL engine.
+         *
+         * @param request GetSparkSQLEngineStateRequest
+         * @return GetSparkSQLEngineStateResponse
+         */
         public async Task<GetSparkSQLEngineStateResponse> GetSparkSQLEngineStateAsync(GetSparkSQLEngineStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9517,13 +10609,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFileContentRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFileContentResponse
+         * @summary Queries the content of a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFileContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFileContentResponse
          */
         public GetSparkTemplateFileContentResponse GetSparkTemplateFileContentWithOptions(GetSparkTemplateFileContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9557,13 +10651,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFileContentRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFileContentResponse
+         * @summary Queries the content of a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFileContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFileContentResponse
          */
         public async Task<GetSparkTemplateFileContentResponse> GetSparkTemplateFileContentWithOptionsAsync(GetSparkTemplateFileContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9597,12 +10693,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFileContentRequest
-          * @return GetSparkTemplateFileContentResponse
+         * @summary Queries the content of a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFileContentRequest
+         * @return GetSparkTemplateFileContentResponse
          */
         public GetSparkTemplateFileContentResponse GetSparkTemplateFileContent(GetSparkTemplateFileContentRequest request)
         {
@@ -9611,12 +10709,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFileContentRequest
-          * @return GetSparkTemplateFileContentResponse
+         * @summary Queries the content of a Spark application template.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFileContentRequest
+         * @return GetSparkTemplateFileContentResponse
          */
         public async Task<GetSparkTemplateFileContentResponse> GetSparkTemplateFileContentAsync(GetSparkTemplateFileContentRequest request)
         {
@@ -9625,14 +10725,16 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFolderTreeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFolderTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/612467.html) operation.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFolderTreeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFolderTreeResponse
          */
         public GetSparkTemplateFolderTreeResponse GetSparkTemplateFolderTreeWithOptions(GetSparkTemplateFolderTreeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9662,14 +10764,16 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFolderTreeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFolderTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/612467.html) operation.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFolderTreeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFolderTreeResponse
          */
         public async Task<GetSparkTemplateFolderTreeResponse> GetSparkTemplateFolderTreeWithOptionsAsync(GetSparkTemplateFolderTreeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9699,13 +10803,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFolderTreeRequest
-          * @return GetSparkTemplateFolderTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/612467.html) operation.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFolderTreeRequest
+         * @return GetSparkTemplateFolderTreeResponse
          */
         public GetSparkTemplateFolderTreeResponse GetSparkTemplateFolderTree(GetSparkTemplateFolderTreeRequest request)
         {
@@ -9714,13 +10820,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFolderTreeRequest
-          * @return GetSparkTemplateFolderTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/612467.html) operation.
+         * *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFolderTreeRequest
+         * @return GetSparkTemplateFolderTreeResponse
          */
         public async Task<GetSparkTemplateFolderTreeResponse> GetSparkTemplateFolderTreeAsync(GetSparkTemplateFolderTreeRequest request)
         {
@@ -9729,13 +10837,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFullTreeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFullTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFullTreeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFullTreeResponse
          */
         public GetSparkTemplateFullTreeResponse GetSparkTemplateFullTreeWithOptions(GetSparkTemplateFullTreeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9765,13 +10875,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFullTreeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetSparkTemplateFullTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFullTreeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSparkTemplateFullTreeResponse
          */
         public async Task<GetSparkTemplateFullTreeResponse> GetSparkTemplateFullTreeWithOptionsAsync(GetSparkTemplateFullTreeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9801,12 +10913,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFullTreeRequest
-          * @return GetSparkTemplateFullTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFullTreeRequest
+         * @return GetSparkTemplateFullTreeResponse
          */
         public GetSparkTemplateFullTreeResponse GetSparkTemplateFullTree(GetSparkTemplateFullTreeRequest request)
         {
@@ -9815,12 +10929,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetSparkTemplateFullTreeRequest
-          * @return GetSparkTemplateFullTreeResponse
+         * @summary Queries the directory structure of Spark applications.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetSparkTemplateFullTreeRequest
+         * @return GetSparkTemplateFullTreeResponse
          */
         public async Task<GetSparkTemplateFullTreeResponse> GetSparkTemplateFullTreeAsync(GetSparkTemplateFullTreeRequest request)
         {
@@ -9829,11 +10945,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * @deprecated
-          *
-          * @param request GetTableRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetTableResponse
+         * @deprecated OpenAPI GetTable is deprecated
+         *
+         * @summary 获取表
+         *
+         * @param request GetTableRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableResponse
          */
         // Deprecated
         public GetTableResponse GetTableWithOptions(GetTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9876,11 +10994,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * @deprecated
-          *
-          * @param request GetTableRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetTableResponse
+         * @deprecated OpenAPI GetTable is deprecated
+         *
+         * @summary 获取表
+         *
+         * @param request GetTableRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableResponse
          */
         // Deprecated
         public async Task<GetTableResponse> GetTableWithOptionsAsync(GetTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9923,10 +11043,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * @deprecated
-          *
-          * @param request GetTableRequest
-          * @return GetTableResponse
+         * @deprecated OpenAPI GetTable is deprecated
+         *
+         * @summary 获取表
+         *
+         * @param request GetTableRequest
+         * @return GetTableResponse
          */
         // Deprecated
         public GetTableResponse GetTable(GetTableRequest request)
@@ -9936,10 +11058,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * @deprecated
-          *
-          * @param request GetTableRequest
-          * @return GetTableResponse
+         * @deprecated OpenAPI GetTable is deprecated
+         *
+         * @summary 获取表
+         *
+         * @param request GetTableRequest
+         * @return GetTableResponse
          */
         // Deprecated
         public async Task<GetTableResponse> GetTableAsync(GetTableRequest request)
@@ -9948,6 +11072,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await GetTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about columns.
+         *
+         * @param request GetTableColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableColumnsResponse
+         */
         public GetTableColumnsResponse GetTableColumnsWithOptions(GetTableColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9999,6 +11130,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableColumnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about columns.
+         *
+         * @param request GetTableColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableColumnsResponse
+         */
         public async Task<GetTableColumnsResponse> GetTableColumnsWithOptionsAsync(GetTableColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10050,18 +11188,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableColumnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about columns.
+         *
+         * @param request GetTableColumnsRequest
+         * @return GetTableColumnsResponse
+         */
         public GetTableColumnsResponse GetTableColumns(GetTableColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTableColumnsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about columns.
+         *
+         * @param request GetTableColumnsRequest
+         * @return GetTableColumnsResponse
+         */
         public async Task<GetTableColumnsResponse> GetTableColumnsAsync(GetTableColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTableColumnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the statement that is used to create a table.
+         *
+         * @param request GetTableDDLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableDDLResponse
+         */
         public GetTableDDLResponse GetTableDDLWithOptions(GetTableDDLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10101,6 +11258,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableDDLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statement that is used to create a table.
+         *
+         * @param request GetTableDDLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableDDLResponse
+         */
         public async Task<GetTableDDLResponse> GetTableDDLWithOptionsAsync(GetTableDDLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10140,18 +11304,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableDDLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statement that is used to create a table.
+         *
+         * @param request GetTableDDLRequest
+         * @return GetTableDDLResponse
+         */
         public GetTableDDLResponse GetTableDDL(GetTableDDLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTableDDLWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the statement that is used to create a table.
+         *
+         * @param request GetTableDDLRequest
+         * @return GetTableDDLResponse
+         */
         public async Task<GetTableDDLResponse> GetTableDDLAsync(GetTableDDLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTableDDLWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取table概要信息
+         *
+         * @param request GetTableObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableObjectsResponse
+         */
         public GetTableObjectsResponse GetTableObjectsWithOptions(GetTableObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10215,6 +11398,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableObjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取table概要信息
+         *
+         * @param request GetTableObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableObjectsResponse
+         */
         public async Task<GetTableObjectsResponse> GetTableObjectsWithOptionsAsync(GetTableObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10278,12 +11468,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetTableObjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取table概要信息
+         *
+         * @param request GetTableObjectsRequest
+         * @return GetTableObjectsResponse
+         */
         public GetTableObjectsResponse GetTableObjects(GetTableObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTableObjectsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取table概要信息
+         *
+         * @param request GetTableObjectsRequest
+         * @return GetTableObjectsResponse
+         */
         public async Task<GetTableObjectsResponse> GetTableObjectsAsync(GetTableObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10291,12 +11493,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewDDLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetViewDDLResponse
+         * @summary Queries the statement that is used to create a view.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewDDLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetViewDDLResponse
          */
         public GetViewDDLResponse GetViewDDLWithOptions(GetViewDDLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10338,12 +11542,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewDDLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetViewDDLResponse
+         * @summary Queries the statement that is used to create a view.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewDDLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetViewDDLResponse
          */
         public async Task<GetViewDDLResponse> GetViewDDLWithOptionsAsync(GetViewDDLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10385,11 +11591,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewDDLRequest
-          * @return GetViewDDLResponse
+         * @summary Queries the statement that is used to create a view.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewDDLRequest
+         * @return GetViewDDLResponse
          */
         public GetViewDDLResponse GetViewDDL(GetViewDDLRequest request)
         {
@@ -10398,11 +11606,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewDDLRequest
-          * @return GetViewDDLResponse
+         * @summary Queries the statement that is used to create a view.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewDDLRequest
+         * @return GetViewDDLResponse
          */
         public async Task<GetViewDDLResponse> GetViewDDLAsync(GetViewDDLRequest request)
         {
@@ -10411,12 +11621,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetViewObjectsResponse
+         * @summary Queries the information about views.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetViewObjectsResponse
          */
         public GetViewObjectsResponse GetViewObjectsWithOptions(GetViewObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10478,12 +11690,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetViewObjectsResponse
+         * @summary Queries the information about views.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetViewObjectsResponse
          */
         public async Task<GetViewObjectsResponse> GetViewObjectsWithOptionsAsync(GetViewObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10545,11 +11759,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewObjectsRequest
-          * @return GetViewObjectsResponse
+         * @summary Queries the information about views.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewObjectsRequest
+         * @return GetViewObjectsResponse
          */
         public GetViewObjectsResponse GetViewObjects(GetViewObjectsRequest request)
         {
@@ -10558,11 +11774,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request GetViewObjectsRequest
-          * @return GetViewObjectsResponse
+         * @summary Queries the information about views.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request GetViewObjectsRequest
+         * @return GetViewObjectsResponse
          */
         public async Task<GetViewObjectsResponse> GetViewObjectsAsync(GetViewObjectsRequest request)
         {
@@ -10571,13 +11789,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkAppRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkAppResponse
+         * @summary Terminates a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkAppRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkAppResponse
          */
         public KillSparkAppResponse KillSparkAppWithOptions(KillSparkAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10613,13 +11833,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkAppRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkAppResponse
+         * @summary Terminates a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkAppRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkAppResponse
          */
         public async Task<KillSparkAppResponse> KillSparkAppWithOptionsAsync(KillSparkAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10655,12 +11877,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkAppRequest
-          * @return KillSparkAppResponse
+         * @summary Terminates a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkAppRequest
+         * @return KillSparkAppResponse
          */
         public KillSparkAppResponse KillSparkApp(KillSparkAppRequest request)
         {
@@ -10669,12 +11893,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkAppRequest
-          * @return KillSparkAppResponse
+         * @summary Terminates a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkAppRequest
+         * @return KillSparkAppResponse
          */
         public async Task<KillSparkAppResponse> KillSparkAppAsync(KillSparkAppRequest request)
         {
@@ -10683,13 +11909,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkLogAnalyzeTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkLogAnalyzeTaskResponse
+         * @summary Terminates a Spark log analysis task and queries the information about the analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkLogAnalyzeTaskResponse
          */
         public KillSparkLogAnalyzeTaskResponse KillSparkLogAnalyzeTaskWithOptions(KillSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10719,13 +11947,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkLogAnalyzeTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkLogAnalyzeTaskResponse
+         * @summary Terminates a Spark log analysis task and queries the information about the analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkLogAnalyzeTaskResponse
          */
         public async Task<KillSparkLogAnalyzeTaskResponse> KillSparkLogAnalyzeTaskWithOptionsAsync(KillSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10755,12 +11985,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkLogAnalyzeTaskRequest
-          * @return KillSparkLogAnalyzeTaskResponse
+         * @summary Terminates a Spark log analysis task and queries the information about the analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkLogAnalyzeTaskRequest
+         * @return KillSparkLogAnalyzeTaskResponse
          */
         public KillSparkLogAnalyzeTaskResponse KillSparkLogAnalyzeTask(KillSparkLogAnalyzeTaskRequest request)
         {
@@ -10769,12 +12001,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkLogAnalyzeTaskRequest
-          * @return KillSparkLogAnalyzeTaskResponse
+         * @summary Terminates a Spark log analysis task and queries the information about the analysis task.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkLogAnalyzeTaskRequest
+         * @return KillSparkLogAnalyzeTaskResponse
          */
         public async Task<KillSparkLogAnalyzeTaskResponse> KillSparkLogAnalyzeTaskAsync(KillSparkLogAnalyzeTaskRequest request)
         {
@@ -10783,13 +12017,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkSQLEngineRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkSQLEngineResponse
+         * @summary Shuts down a Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkSQLEngineResponse
          */
         public KillSparkSQLEngineResponse KillSparkSQLEngineWithOptions(KillSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10823,13 +12059,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkSQLEngineRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return KillSparkSQLEngineResponse
+         * @summary Shuts down a Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillSparkSQLEngineResponse
          */
         public async Task<KillSparkSQLEngineResponse> KillSparkSQLEngineWithOptionsAsync(KillSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10863,12 +12101,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkSQLEngineRequest
-          * @return KillSparkSQLEngineResponse
+         * @summary Shuts down a Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkSQLEngineRequest
+         * @return KillSparkSQLEngineResponse
          */
         public KillSparkSQLEngineResponse KillSparkSQLEngine(KillSparkSQLEngineRequest request)
         {
@@ -10877,12 +12117,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request KillSparkSQLEngineRequest
-          * @return KillSparkSQLEngineResponse
+         * @summary Shuts down a Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request KillSparkSQLEngineRequest
+         * @return KillSparkSQLEngineResponse
          */
         public async Task<KillSparkSQLEngineResponse> KillSparkSQLEngineAsync(KillSparkSQLEngineRequest request)
         {
@@ -10891,13 +12133,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkAppAttemptsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkAppAttemptsResponse
+         * @summary Queries the information about retry attempts of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkAppAttemptsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkAppAttemptsResponse
          */
         public ListSparkAppAttemptsResponse ListSparkAppAttemptsWithOptions(ListSparkAppAttemptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10939,13 +12183,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkAppAttemptsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkAppAttemptsResponse
+         * @summary Queries the information about retry attempts of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkAppAttemptsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkAppAttemptsResponse
          */
         public async Task<ListSparkAppAttemptsResponse> ListSparkAppAttemptsWithOptionsAsync(ListSparkAppAttemptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10987,12 +12233,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkAppAttemptsRequest
-          * @return ListSparkAppAttemptsResponse
+         * @summary Queries the information about retry attempts of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkAppAttemptsRequest
+         * @return ListSparkAppAttemptsResponse
          */
         public ListSparkAppAttemptsResponse ListSparkAppAttempts(ListSparkAppAttemptsRequest request)
         {
@@ -11001,12 +12249,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkAppAttemptsRequest
-          * @return ListSparkAppAttemptsResponse
+         * @summary Queries the information about retry attempts of a Spark application.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkAppAttemptsRequest
+         * @return ListSparkAppAttemptsResponse
          */
         public async Task<ListSparkAppAttemptsResponse> ListSparkAppAttemptsAsync(ListSparkAppAttemptsRequest request)
         {
@@ -11014,6 +12264,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await ListSparkAppAttemptsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the Spark applications that run on an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ListSparkAppsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkAppsResponse
+         */
         public ListSparkAppsResponse ListSparkAppsWithOptions(ListSparkAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11053,6 +12310,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ListSparkAppsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Spark applications that run on an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ListSparkAppsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkAppsResponse
+         */
         public async Task<ListSparkAppsResponse> ListSparkAppsWithOptionsAsync(ListSparkAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11092,12 +12356,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ListSparkAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Spark applications that run on an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ListSparkAppsRequest
+         * @return ListSparkAppsResponse
+         */
         public ListSparkAppsResponse ListSparkApps(ListSparkAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSparkAppsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the Spark applications that run on an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ListSparkAppsRequest
+         * @return ListSparkAppsResponse
+         */
         public async Task<ListSparkAppsResponse> ListSparkAppsAsync(ListSparkAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11105,13 +12381,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkLogAnalyzeTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkLogAnalyzeTasksResponse
+         * @summary Queries a list of Spark log analysis tasks.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkLogAnalyzeTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkLogAnalyzeTasksResponse
          */
         public ListSparkLogAnalyzeTasksResponse ListSparkLogAnalyzeTasksWithOptions(ListSparkLogAnalyzeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11149,13 +12427,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkLogAnalyzeTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkLogAnalyzeTasksResponse
+         * @summary Queries a list of Spark log analysis tasks.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkLogAnalyzeTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkLogAnalyzeTasksResponse
          */
         public async Task<ListSparkLogAnalyzeTasksResponse> ListSparkLogAnalyzeTasksWithOptionsAsync(ListSparkLogAnalyzeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11193,12 +12473,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkLogAnalyzeTasksRequest
-          * @return ListSparkLogAnalyzeTasksResponse
+         * @summary Queries a list of Spark log analysis tasks.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkLogAnalyzeTasksRequest
+         * @return ListSparkLogAnalyzeTasksResponse
          */
         public ListSparkLogAnalyzeTasksResponse ListSparkLogAnalyzeTasks(ListSparkLogAnalyzeTasksRequest request)
         {
@@ -11207,12 +12489,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkLogAnalyzeTasksRequest
-          * @return ListSparkLogAnalyzeTasksResponse
+         * @summary Queries a list of Spark log analysis tasks.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkLogAnalyzeTasksRequest
+         * @return ListSparkLogAnalyzeTasksResponse
          */
         public async Task<ListSparkLogAnalyzeTasksResponse> ListSparkLogAnalyzeTasksAsync(ListSparkLogAnalyzeTasksRequest request)
         {
@@ -11221,13 +12505,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkTemplateFileIdsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkTemplateFileIdsResponse
+         * @summary Queries all Spark template file IDs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkTemplateFileIdsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkTemplateFileIdsResponse
          */
         public ListSparkTemplateFileIdsResponse ListSparkTemplateFileIdsWithOptions(ListSparkTemplateFileIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11257,13 +12543,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkTemplateFileIdsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListSparkTemplateFileIdsResponse
+         * @summary Queries all Spark template file IDs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkTemplateFileIdsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListSparkTemplateFileIdsResponse
          */
         public async Task<ListSparkTemplateFileIdsResponse> ListSparkTemplateFileIdsWithOptionsAsync(ListSparkTemplateFileIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11293,12 +12581,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkTemplateFileIdsRequest
-          * @return ListSparkTemplateFileIdsResponse
+         * @summary Queries all Spark template file IDs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkTemplateFileIdsRequest
+         * @return ListSparkTemplateFileIdsResponse
          */
         public ListSparkTemplateFileIdsResponse ListSparkTemplateFileIds(ListSparkTemplateFileIdsRequest request)
         {
@@ -11307,12 +12597,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request ListSparkTemplateFileIdsRequest
-          * @return ListSparkTemplateFileIdsResponse
+         * @summary Queries all Spark template file IDs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request ListSparkTemplateFileIdsRequest
+         * @return ListSparkTemplateFileIdsResponse
          */
         public async Task<ListSparkTemplateFileIdsResponse> ListSparkTemplateFileIdsAsync(ListSparkTemplateFileIdsRequest request)
         {
@@ -11321,11 +12613,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request LoadSampleDataSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LoadSampleDataSetResponse
+         * @summary Loads a built-in dataset.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request LoadSampleDataSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadSampleDataSetResponse
          */
         public LoadSampleDataSetResponse LoadSampleDataSetWithOptions(LoadSampleDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11355,11 +12649,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request LoadSampleDataSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return LoadSampleDataSetResponse
+         * @summary Loads a built-in dataset.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request LoadSampleDataSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadSampleDataSetResponse
          */
         public async Task<LoadSampleDataSetResponse> LoadSampleDataSetWithOptionsAsync(LoadSampleDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11389,10 +12685,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request LoadSampleDataSetRequest
-          * @return LoadSampleDataSetResponse
+         * @summary Loads a built-in dataset.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request LoadSampleDataSetRequest
+         * @return LoadSampleDataSetResponse
          */
         public LoadSampleDataSetResponse LoadSampleDataSet(LoadSampleDataSetRequest request)
         {
@@ -11401,10 +12699,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request LoadSampleDataSetRequest
-          * @return LoadSampleDataSetResponse
+         * @summary Loads a built-in dataset.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request LoadSampleDataSetRequest
+         * @return LoadSampleDataSetResponse
          */
         public async Task<LoadSampleDataSetResponse> LoadSampleDataSetAsync(LoadSampleDataSetRequest request)
         {
@@ -11413,11 +12713,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
          */
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11455,11 +12757,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
          */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11497,10 +12801,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
          */
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
@@ -11509,10 +12815,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
          */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
@@ -11520,6 +12828,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改某一用户的权限
+         *
+         * @param tmpReq ModifyAccountPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountPrivilegesResponse
+         */
         public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesWithOptions(ModifyAccountPrivilegesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11565,6 +12880,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ModifyAccountPrivilegesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改某一用户的权限
+         *
+         * @param tmpReq ModifyAccountPrivilegesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountPrivilegesResponse
+         */
         public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesWithOptionsAsync(ModifyAccountPrivilegesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11610,18 +12932,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ModifyAccountPrivilegesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改某一用户的权限
+         *
+         * @param request ModifyAccountPrivilegesRequest
+         * @return ModifyAccountPrivilegesResponse
+         */
         public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountPrivilegesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改某一用户的权限
+         *
+         * @param request ModifyAccountPrivilegesRequest
+         * @return ModifyAccountPrivilegesResponse
+         */
         public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesAsync(ModifyAccountPrivilegesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountPrivilegesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the SQL audit configuration of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAuditLogConfigResponse
+         */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfigWithOptions(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11673,6 +13014,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ModifyAuditLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the SQL audit configuration of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAuditLogConfigResponse
+         */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigWithOptionsAsync(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11724,12 +13072,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ModifyAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the SQL audit configuration of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @return ModifyAuditLogConfigResponse
+         */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfig(ModifyAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAuditLogConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the SQL audit configuration of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @return ModifyAuditLogConfigResponse
+         */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigAsync(ModifyAuditLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11737,11 +13097,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBackupPolicyResponse
+         * @summary Modifies the backup policy of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
          */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11807,11 +13169,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBackupPolicyResponse
+         * @summary Modifies the backup policy of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
          */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11877,10 +13241,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyBackupPolicyRequest
-          * @return ModifyBackupPolicyResponse
+         * @summary Modifies the backup policy of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
          */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
@@ -11889,10 +13255,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyBackupPolicyRequest
-          * @return ModifyBackupPolicyResponse
+         * @summary Modifies the backup policy of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
          */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
@@ -11901,11 +13269,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterAccessWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterAccessWhiteListResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterAccessWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterAccessWhiteListResponse
          */
         public ModifyClusterAccessWhiteListResponse ModifyClusterAccessWhiteListWithOptions(ModifyClusterAccessWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11951,11 +13321,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterAccessWhiteListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterAccessWhiteListResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterAccessWhiteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterAccessWhiteListResponse
          */
         public async Task<ModifyClusterAccessWhiteListResponse> ModifyClusterAccessWhiteListWithOptionsAsync(ModifyClusterAccessWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12001,10 +13373,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterAccessWhiteListRequest
-          * @return ModifyClusterAccessWhiteListResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterAccessWhiteListRequest
+         * @return ModifyClusterAccessWhiteListResponse
          */
         public ModifyClusterAccessWhiteListResponse ModifyClusterAccessWhiteList(ModifyClusterAccessWhiteListRequest request)
         {
@@ -12013,10 +13387,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterAccessWhiteListRequest
-          * @return ModifyClusterAccessWhiteListResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterAccessWhiteListRequest
+         * @return ModifyClusterAccessWhiteListResponse
          */
         public async Task<ModifyClusterAccessWhiteListResponse> ModifyClusterAccessWhiteListAsync(ModifyClusterAccessWhiteListRequest request)
         {
@@ -12025,11 +13401,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterConnectionStringRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterConnectionStringResponse
+         * @summary Modifies the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterConnectionStringResponse
          */
         public ModifyClusterConnectionStringResponse ModifyClusterConnectionStringWithOptions(ModifyClusterConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12071,11 +13449,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterConnectionStringRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterConnectionStringResponse
+         * @summary Modifies the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterConnectionStringResponse
          */
         public async Task<ModifyClusterConnectionStringResponse> ModifyClusterConnectionStringWithOptionsAsync(ModifyClusterConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12117,10 +13497,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterConnectionStringRequest
-          * @return ModifyClusterConnectionStringResponse
+         * @summary Modifies the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterConnectionStringRequest
+         * @return ModifyClusterConnectionStringResponse
          */
         public ModifyClusterConnectionStringResponse ModifyClusterConnectionString(ModifyClusterConnectionStringRequest request)
         {
@@ -12129,10 +13511,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyClusterConnectionStringRequest
-          * @return ModifyClusterConnectionStringResponse
+         * @summary Modifies the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyClusterConnectionStringRequest
+         * @return ModifyClusterConnectionStringResponse
          */
         public async Task<ModifyClusterConnectionStringResponse> ModifyClusterConnectionStringAsync(ModifyClusterConnectionStringRequest request)
         {
@@ -12141,16 +13525,18 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
-          * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
-          * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
-          * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-          * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
-          *
-          * @param request ModifyDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterResponse
+         * @summary Changes the configurations of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
+         * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
+         * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
+         * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
+         * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+         *
+         * @param request ModifyDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterResponse
          */
         public ModifyDBClusterResponse ModifyDBClusterWithOptions(ModifyDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12216,16 +13602,18 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
-          * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
-          * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
-          * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-          * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
-          *
-          * @param request ModifyDBClusterRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterResponse
+         * @summary Changes the configurations of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
+         * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
+         * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
+         * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
+         * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+         *
+         * @param request ModifyDBClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterResponse
          */
         public async Task<ModifyDBClusterResponse> ModifyDBClusterWithOptionsAsync(ModifyDBClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12291,15 +13679,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
-          * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
-          * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
-          * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-          * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
-          *
-          * @param request ModifyDBClusterRequest
-          * @return ModifyDBClusterResponse
+         * @summary Changes the configurations of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
+         * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
+         * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
+         * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
+         * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+         *
+         * @param request ModifyDBClusterRequest
+         * @return ModifyDBClusterResponse
          */
         public ModifyDBClusterResponse ModifyDBCluster(ModifyDBClusterRequest request)
         {
@@ -12308,15 +13698,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * ### [](#)
-          * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
-          * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
-          * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
-          * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-          * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
-          *
-          * @param request ModifyDBClusterRequest
-          * @return ModifyDBClusterResponse
+         * @summary Changes the configurations of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description ### [](#)
+         * *   During a scaling event, you are not allowed to execute the `SUBMIT JOB` statement to submit asynchronous jobs. If your business requires asynchronous jobs, perform scaling during appropriate periods.
+         * *   When cluster specifications are scaled up or down, data in the cluster is migrated for redistribution. The amount of time that is required for data migration is proportional to the volume of data. During a scaling event, the services provided by the cluster are not interrupted. During a scale-down event, data migration can take up to dozens of hours to complete. Proceed with caution especially when your cluster contains a large amount of data.
+         * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
+         * *   When the scaling process is about to end, your service may encounter transient connections. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
+         * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+         *
+         * @param request ModifyDBClusterRequest
+         * @return ModifyDBClusterResponse
          */
         public async Task<ModifyDBClusterResponse> ModifyDBClusterAsync(ModifyDBClusterRequest request)
         {
@@ -12325,11 +13717,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterDescriptionResponse
+         * @summary Modifies the description of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster to facilitate the maintenance and management of the cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterDescriptionResponse
          */
         public ModifyDBClusterDescriptionResponse ModifyDBClusterDescriptionWithOptions(ModifyDBClusterDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12363,11 +13757,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterDescriptionResponse
+         * @summary Modifies the description of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster to facilitate the maintenance and management of the cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterDescriptionResponse
          */
         public async Task<ModifyDBClusterDescriptionResponse> ModifyDBClusterDescriptionWithOptionsAsync(ModifyDBClusterDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12401,10 +13797,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterDescriptionRequest
-          * @return ModifyDBClusterDescriptionResponse
+         * @summary Modifies the description of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster to facilitate the maintenance and management of the cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterDescriptionRequest
+         * @return ModifyDBClusterDescriptionResponse
          */
         public ModifyDBClusterDescriptionResponse ModifyDBClusterDescription(ModifyDBClusterDescriptionRequest request)
         {
@@ -12413,10 +13811,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterDescriptionRequest
-          * @return ModifyDBClusterDescriptionResponse
+         * @summary Modifies the description of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster to facilitate the maintenance and management of the cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterDescriptionRequest
+         * @return ModifyDBClusterDescriptionResponse
          */
         public async Task<ModifyDBClusterDescriptionResponse> ModifyDBClusterDescriptionAsync(ModifyDBClusterDescriptionRequest request)
         {
@@ -12425,11 +13825,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterMaintainTimeResponse
          */
         public ModifyDBClusterMaintainTimeResponse ModifyDBClusterMaintainTimeWithOptions(ModifyDBClusterMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12463,11 +13865,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBClusterMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBClusterMaintainTimeResponse
          */
         public async Task<ModifyDBClusterMaintainTimeResponse> ModifyDBClusterMaintainTimeWithOptionsAsync(ModifyDBClusterMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12501,10 +13905,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterMaintainTimeRequest
-          * @return ModifyDBClusterMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterMaintainTimeRequest
+         * @return ModifyDBClusterMaintainTimeResponse
          */
         public ModifyDBClusterMaintainTimeResponse ModifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request)
         {
@@ -12513,10 +13919,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBClusterMaintainTimeRequest
-          * @return ModifyDBClusterMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBClusterMaintainTimeRequest
+         * @return ModifyDBClusterMaintainTimeResponse
          */
         public async Task<ModifyDBClusterMaintainTimeResponse> ModifyDBClusterMaintainTimeAsync(ModifyDBClusterMaintainTimeRequest request)
         {
@@ -12525,11 +13933,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param tmpReq ModifyDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBResourceGroupResponse
+         * @summary Modifies the amount of reserved computing resources for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param tmpReq ModifyDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBResourceGroupResponse
          */
         public ModifyDBResourceGroupResponse ModifyDBResourceGroupWithOptions(ModifyDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12609,11 +14019,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param tmpReq ModifyDBResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBResourceGroupResponse
+         * @summary Modifies the amount of reserved computing resources for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param tmpReq ModifyDBResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBResourceGroupResponse
          */
         public async Task<ModifyDBResourceGroupResponse> ModifyDBResourceGroupWithOptionsAsync(ModifyDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12693,10 +14105,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBResourceGroupRequest
-          * @return ModifyDBResourceGroupResponse
+         * @summary Modifies the amount of reserved computing resources for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBResourceGroupRequest
+         * @return ModifyDBResourceGroupResponse
          */
         public ModifyDBResourceGroupResponse ModifyDBResourceGroup(ModifyDBResourceGroupRequest request)
         {
@@ -12705,10 +14119,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyDBResourceGroupRequest
-          * @return ModifyDBResourceGroupResponse
+         * @summary Modifies the amount of reserved computing resources for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyDBResourceGroupRequest
+         * @return ModifyDBResourceGroupResponse
          */
         public async Task<ModifyDBResourceGroupResponse> ModifyDBResourceGroupAsync(ModifyDBResourceGroupRequest request)
         {
@@ -12717,11 +14133,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticPlanResponse
+         * @summary Modifies a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticPlanResponse
          */
         public ModifyElasticPlanResponse ModifyElasticPlanWithOptions(ModifyElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12771,11 +14189,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyElasticPlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticPlanResponse
+         * @summary Modifies a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyElasticPlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticPlanResponse
          */
         public async Task<ModifyElasticPlanResponse> ModifyElasticPlanWithOptionsAsync(ModifyElasticPlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12825,10 +14245,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyElasticPlanRequest
-          * @return ModifyElasticPlanResponse
+         * @summary Modifies a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyElasticPlanRequest
+         * @return ModifyElasticPlanResponse
          */
         public ModifyElasticPlanResponse ModifyElasticPlan(ModifyElasticPlanRequest request)
         {
@@ -12837,10 +14259,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request ModifyElasticPlanRequest
-          * @return ModifyElasticPlanResponse
+         * @summary Modifies a scaling plan for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request ModifyElasticPlanRequest
+         * @return ModifyElasticPlanResponse
          */
         public async Task<ModifyElasticPlanResponse> ModifyElasticPlanAsync(ModifyElasticPlanRequest request)
         {
@@ -12848,6 +14272,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await ModifyElasticPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Preloads metrics for a Spark application.
+         *
+         * @param request PreloadSparkAppMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PreloadSparkAppMetricsResponse
+         */
         public PreloadSparkAppMetricsResponse PreloadSparkAppMetricsWithOptions(PreloadSparkAppMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12881,6 +14312,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<PreloadSparkAppMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Preloads metrics for a Spark application.
+         *
+         * @param request PreloadSparkAppMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PreloadSparkAppMetricsResponse
+         */
         public async Task<PreloadSparkAppMetricsResponse> PreloadSparkAppMetricsWithOptionsAsync(PreloadSparkAppMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12914,18 +14352,35 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<PreloadSparkAppMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Preloads metrics for a Spark application.
+         *
+         * @param request PreloadSparkAppMetricsRequest
+         * @return PreloadSparkAppMetricsResponse
+         */
         public PreloadSparkAppMetricsResponse PreloadSparkAppMetrics(PreloadSparkAppMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PreloadSparkAppMetricsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Preloads metrics for a Spark application.
+         *
+         * @param request PreloadSparkAppMetricsRequest
+         * @return PreloadSparkAppMetricsResponse
+         */
         public async Task<PreloadSparkAppMetricsResponse> PreloadSparkAppMetricsAsync(PreloadSparkAppMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PreloadSparkAppMetricsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request ReleaseClusterPublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseClusterPublicConnectionResponse
+         */
         public ReleaseClusterPublicConnectionResponse ReleaseClusterPublicConnectionWithOptions(ReleaseClusterPublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12953,6 +14408,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ReleaseClusterPublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ReleaseClusterPublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseClusterPublicConnectionResponse
+         */
         public async Task<ReleaseClusterPublicConnectionResponse> ReleaseClusterPublicConnectionWithOptionsAsync(ReleaseClusterPublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12980,18 +14440,33 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ReleaseClusterPublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ReleaseClusterPublicConnectionRequest
+         * @return ReleaseClusterPublicConnectionResponse
+         */
         public ReleaseClusterPublicConnectionResponse ReleaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseClusterPublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ReleaseClusterPublicConnectionRequest
+         * @return ReleaseClusterPublicConnectionResponse
+         */
         public async Task<ReleaseClusterPublicConnectionResponse> ReleaseClusterPublicConnectionAsync(ReleaseClusterPublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseClusterPublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Renames a Spark template file.
+         *
+         * @param request RenameSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameSparkTemplateFileResponse
+         */
         public RenameSparkTemplateFileResponse RenameSparkTemplateFileWithOptions(RenameSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13027,6 +14502,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<RenameSparkTemplateFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Renames a Spark template file.
+         *
+         * @param request RenameSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameSparkTemplateFileResponse
+         */
         public async Task<RenameSparkTemplateFileResponse> RenameSparkTemplateFileWithOptionsAsync(RenameSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13062,18 +14544,37 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<RenameSparkTemplateFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Renames a Spark template file.
+         *
+         * @param request RenameSparkTemplateFileRequest
+         * @return RenameSparkTemplateFileResponse
+         */
         public RenameSparkTemplateFileResponse RenameSparkTemplateFile(RenameSparkTemplateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenameSparkTemplateFileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Renames a Spark template file.
+         *
+         * @param request RenameSparkTemplateFileRequest
+         * @return RenameSparkTemplateFileResponse
+         */
         public async Task<RenameSparkTemplateFileResponse> RenameSparkTemplateFileAsync(RenameSparkTemplateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenameSparkTemplateFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13113,6 +14614,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13152,12 +14660,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13165,13 +14685,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request SetSparkAppLogRootPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetSparkAppLogRootPathResponse
+         * @summary Modifies the Spark log configuration.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request SetSparkAppLogRootPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetSparkAppLogRootPathResponse
          */
         public SetSparkAppLogRootPathResponse SetSparkAppLogRootPathWithOptions(SetSparkAppLogRootPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13209,13 +14731,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request SetSparkAppLogRootPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetSparkAppLogRootPathResponse
+         * @summary Modifies the Spark log configuration.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request SetSparkAppLogRootPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetSparkAppLogRootPathResponse
          */
         public async Task<SetSparkAppLogRootPathResponse> SetSparkAppLogRootPathWithOptionsAsync(SetSparkAppLogRootPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13253,12 +14777,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request SetSparkAppLogRootPathRequest
-          * @return SetSparkAppLogRootPathResponse
+         * @summary Modifies the Spark log configuration.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request SetSparkAppLogRootPathRequest
+         * @return SetSparkAppLogRootPathResponse
          */
         public SetSparkAppLogRootPathResponse SetSparkAppLogRootPath(SetSparkAppLogRootPathRequest request)
         {
@@ -13267,12 +14793,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request SetSparkAppLogRootPathRequest
-          * @return SetSparkAppLogRootPathResponse
+         * @summary Modifies the Spark log configuration.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request SetSparkAppLogRootPathRequest
+         * @return SetSparkAppLogRootPathResponse
          */
         public async Task<SetSparkAppLogRootPathResponse> SetSparkAppLogRootPathAsync(SetSparkAppLogRootPathRequest request)
         {
@@ -13281,13 +14809,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request StartSparkSQLEngineRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartSparkSQLEngineResponse
+         * @summary Starts the Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request StartSparkSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSparkSQLEngineResponse
          */
         public StartSparkSQLEngineResponse StartSparkSQLEngineWithOptions(StartSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13341,13 +14871,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request StartSparkSQLEngineRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartSparkSQLEngineResponse
+         * @summary Starts the Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request StartSparkSQLEngineRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartSparkSQLEngineResponse
          */
         public async Task<StartSparkSQLEngineResponse> StartSparkSQLEngineWithOptionsAsync(StartSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13401,12 +14933,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request StartSparkSQLEngineRequest
-          * @return StartSparkSQLEngineResponse
+         * @summary Starts the Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request StartSparkSQLEngineRequest
+         * @return StartSparkSQLEngineResponse
          */
         public StartSparkSQLEngineResponse StartSparkSQLEngine(StartSparkSQLEngineRequest request)
         {
@@ -13415,12 +14949,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   General endpoint: `adb.aliyuncs.com`.
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          *
-          * @param request StartSparkSQLEngineRequest
-          * @return StartSparkSQLEngineResponse
+         * @summary Starts the Spark SQL engine.
+         *
+         * @description *   General endpoint: `adb.aliyuncs.com`.
+         * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         *
+         * @param request StartSparkSQLEngineRequest
+         * @return StartSparkSQLEngineResponse
          */
         public async Task<StartSparkSQLEngineResponse> StartSparkSQLEngineAsync(StartSparkSQLEngineRequest request)
         {
@@ -13429,13 +14965,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request SubmitSparkAppRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubmitSparkAppResponse
+         * @summary Submits a Spark application.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request SubmitSparkAppRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSparkAppResponse
          */
         public SubmitSparkAppResponse SubmitSparkAppWithOptions(SubmitSparkAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13493,13 +15031,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request SubmitSparkAppRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubmitSparkAppResponse
+         * @summary Submits a Spark application.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request SubmitSparkAppRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSparkAppResponse
          */
         public async Task<SubmitSparkAppResponse> SubmitSparkAppWithOptionsAsync(SubmitSparkAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13557,12 +15097,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request SubmitSparkAppRequest
-          * @return SubmitSparkAppResponse
+         * @summary Submits a Spark application.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request SubmitSparkAppRequest
+         * @return SubmitSparkAppResponse
          */
         public SubmitSparkAppResponse SubmitSparkApp(SubmitSparkAppRequest request)
         {
@@ -13571,12 +15113,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request SubmitSparkAppRequest
-          * @return SubmitSparkAppResponse
+         * @summary Submits a Spark application.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request SubmitSparkAppRequest
+         * @return SubmitSparkAppResponse
          */
         public async Task<SubmitSparkAppResponse> SubmitSparkAppAsync(SubmitSparkAppRequest request)
         {
@@ -13584,6 +15128,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await SubmitSparkAppWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Submits a Spark log analysis task and queries the analysis results.
+         *
+         * @param request SubmitSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSparkLogAnalyzeTaskResponse
+         */
         public SubmitSparkLogAnalyzeTaskResponse SubmitSparkLogAnalyzeTaskWithOptions(SubmitSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13611,6 +15162,13 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<SubmitSparkLogAnalyzeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Submits a Spark log analysis task and queries the analysis results.
+         *
+         * @param request SubmitSparkLogAnalyzeTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitSparkLogAnalyzeTaskResponse
+         */
         public async Task<SubmitSparkLogAnalyzeTaskResponse> SubmitSparkLogAnalyzeTaskWithOptionsAsync(SubmitSparkLogAnalyzeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13638,12 +15196,24 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<SubmitSparkLogAnalyzeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Submits a Spark log analysis task and queries the analysis results.
+         *
+         * @param request SubmitSparkLogAnalyzeTaskRequest
+         * @return SubmitSparkLogAnalyzeTaskResponse
+         */
         public SubmitSparkLogAnalyzeTaskResponse SubmitSparkLogAnalyzeTask(SubmitSparkLogAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitSparkLogAnalyzeTaskWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Submits a Spark log analysis task and queries the analysis results.
+         *
+         * @param request SubmitSparkLogAnalyzeTaskRequest
+         * @return SubmitSparkLogAnalyzeTaskResponse
+         */
         public async Task<SubmitSparkLogAnalyzeTaskResponse> SubmitSparkLogAnalyzeTaskAsync(SubmitSparkLogAnalyzeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13651,11 +15221,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request UnbindAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnbindAccountResponse
+         * @summary Disassociates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster from a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request UnbindAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindAccountResponse
          */
         public UnbindAccountResponse UnbindAccountWithOptions(UnbindAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13689,11 +15261,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request UnbindAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnbindAccountResponse
+         * @summary Disassociates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster from a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request UnbindAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindAccountResponse
          */
         public async Task<UnbindAccountResponse> UnbindAccountWithOptionsAsync(UnbindAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13727,10 +15301,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request UnbindAccountRequest
-          * @return UnbindAccountResponse
+         * @summary Disassociates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster from a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request UnbindAccountRequest
+         * @return UnbindAccountResponse
          */
         public UnbindAccountResponse UnbindAccount(UnbindAccountRequest request)
         {
@@ -13739,10 +15315,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
-          *
-          * @param request UnbindAccountRequest
-          * @return UnbindAccountResponse
+         * @summary Disassociates a standard database account of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster from a Resource Access Management (RAM) user.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+         *
+         * @param request UnbindAccountRequest
+         * @return UnbindAccountResponse
          */
         public async Task<UnbindAccountResponse> UnbindAccountAsync(UnbindAccountRequest request)
         {
@@ -13751,11 +15329,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request UnbindDBResourceGroupWithUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnbindDBResourceGroupWithUserResponse
+         * @summary Disassociates resource groups from database accounts for an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request UnbindDBResourceGroupWithUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindDBResourceGroupWithUserResponse
          */
         public UnbindDBResourceGroupWithUserResponse UnbindDBResourceGroupWithUserWithOptions(UnbindDBResourceGroupWithUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13793,11 +15373,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request UnbindDBResourceGroupWithUserRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnbindDBResourceGroupWithUserResponse
+         * @summary Disassociates resource groups from database accounts for an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request UnbindDBResourceGroupWithUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnbindDBResourceGroupWithUserResponse
          */
         public async Task<UnbindDBResourceGroupWithUserResponse> UnbindDBResourceGroupWithUserWithOptionsAsync(UnbindDBResourceGroupWithUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13835,10 +15417,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request UnbindDBResourceGroupWithUserRequest
-          * @return UnbindDBResourceGroupWithUserResponse
+         * @summary Disassociates resource groups from database accounts for an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request UnbindDBResourceGroupWithUserRequest
+         * @return UnbindDBResourceGroupWithUserResponse
          */
         public UnbindDBResourceGroupWithUserResponse UnbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request)
         {
@@ -13847,10 +15431,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
-          *
-          * @param request UnbindDBResourceGroupWithUserRequest
-          * @return UnbindDBResourceGroupWithUserResponse
+         * @summary Disassociates resource groups from database accounts for an AnalyticDB for MySQL cluster.
+         *
+         * @description For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](https://help.aliyun.com/document_detail/612373.html).
+         *
+         * @param request UnbindDBResourceGroupWithUserRequest
+         * @return UnbindDBResourceGroupWithUserResponse
          */
         public async Task<UnbindDBResourceGroupWithUserResponse> UnbindDBResourceGroupWithUserAsync(UnbindDBResourceGroupWithUserRequest request)
         {
@@ -13859,13 +15445,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request UpdateSparkTemplateFileRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateSparkTemplateFileResponse
+         * @summary Updates a Spark application template.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request UpdateSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSparkTemplateFileResponse
          */
         public UpdateSparkTemplateFileResponse UpdateSparkTemplateFileWithOptions(UpdateSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13907,13 +15495,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request UpdateSparkTemplateFileRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateSparkTemplateFileResponse
+         * @summary Updates a Spark application template.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request UpdateSparkTemplateFileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSparkTemplateFileResponse
          */
         public async Task<UpdateSparkTemplateFileResponse> UpdateSparkTemplateFileWithOptionsAsync(UpdateSparkTemplateFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13955,12 +15545,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request UpdateSparkTemplateFileRequest
-          * @return UpdateSparkTemplateFileResponse
+         * @summary Updates a Spark application template.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request UpdateSparkTemplateFileRequest
+         * @return UpdateSparkTemplateFileResponse
          */
         public UpdateSparkTemplateFileResponse UpdateSparkTemplateFile(UpdateSparkTemplateFileRequest request)
         {
@@ -13969,12 +15561,14 @@ namespace AlibabaCloud.SDK.Adb20211201
         }
 
         /**
-          * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-          * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
-          * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
-          *
-          * @param request UpdateSparkTemplateFileRequest
-          * @return UpdateSparkTemplateFileResponse
+         * @summary Updates a Spark application template.
+         *
+         * @description *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
+         * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+         * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
+         *
+         * @param request UpdateSparkTemplateFileRequest
+         * @return UpdateSparkTemplateFileResponse
          */
         public async Task<UpdateSparkTemplateFileResponse> UpdateSparkTemplateFileAsync(UpdateSparkTemplateFileRequest request)
         {

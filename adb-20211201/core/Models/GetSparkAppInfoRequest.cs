@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The application ID.
         /// 
-        /// >  You can call the [ListSparkApps](~~455888~~) operation to query the Spark application IDs.
+        /// >  You can call the [ListSparkApps](https://help.aliyun.com/document_detail/455888.html) operation to query the Spark application IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class DescribeColumnsRequest : TeaModel {
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

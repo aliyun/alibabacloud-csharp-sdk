@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class ModifyDBClusterMaintainTimeRequest : TeaModel {
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// The maintenance window of the cluster. It must be in the hh:mmZ-hh:mmZ format.
         /// 
         /// > The interval must be 1 hour and start and end at the beginning of an hour.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaintainTime")]
         [Validation(Required=false)]

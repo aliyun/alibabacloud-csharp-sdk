@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~612397~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the resource group.
         /// 
-        /// >  You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of the resource group for a cluster.
+        /// >  You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the name of the resource group for a cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

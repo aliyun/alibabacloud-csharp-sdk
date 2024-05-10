@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The source IP address.
         /// 
-        /// >  You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
+        /// >  You can call the [DescribeDiagnosisDimensions](https://help.aliyun.com/document_detail/308210.html) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
         /// </summary>
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/612397.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the database on which the SQL statements are executed.
         /// 
-        /// >  You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
+        /// >  You can call the [DescribeDiagnosisDimensions](https://help.aliyun.com/document_detail/308210.html) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
         /// </summary>
         [NameInMap("Database")]
         [Validation(Required=false)]
@@ -163,7 +165,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -172,7 +176,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The resource group to which the SQL statements belong.
         /// 
-        /// >  You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
+        /// >  You can call the [DescribeDiagnosisDimensions](https://help.aliyun.com/document_detail/308210.html) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
@@ -188,7 +192,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The username that is used to execute the SQL statements. You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
+        /// The username that is used to execute the SQL statements. You can call the [DescribeDiagnosisDimensions](https://help.aliyun.com/document_detail/308210.html) operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

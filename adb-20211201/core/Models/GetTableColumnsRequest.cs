@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The region ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

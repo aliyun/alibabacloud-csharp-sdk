@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class BindDBResourceGroupWithUserRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The name of the resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The name of the database account. It can be a standard account or a privileged account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupUser")]
         [Validation(Required=false)]

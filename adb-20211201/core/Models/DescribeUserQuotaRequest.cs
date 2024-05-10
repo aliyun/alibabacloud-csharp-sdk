@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class DescribeUserQuotaRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/454314.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

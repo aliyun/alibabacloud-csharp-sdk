@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// The name of the resource group.
             /// 
-            /// > You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a cluster.
+            /// > You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the name of a resource group within a cluster.
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]

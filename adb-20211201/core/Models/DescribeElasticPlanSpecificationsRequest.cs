@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the cluster.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// The name of the resource group.
         /// 
         /// > *   This parameter is required only when you query the resource specifications that can be scaled for an interactive resource group.
-        /// > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+        /// > *   You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the name of a resource group within a specific cluster.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
         /// *   WORKER: EIUs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class DescribeDBResourceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// *   **Interactive**
         /// *   **Job**
         /// 
-        /// > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+        /// > For information about resource groups of Data Lakehouse Edition, see [Resource groups](https://help.aliyun.com/document_detail/428610.html).
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/612393.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

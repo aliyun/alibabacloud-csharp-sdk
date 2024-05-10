@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class GetViewObjectsRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -35,9 +37,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// Valid values:
         /// 
-        /// \-VIRTUAL_VIEW
+        /// \\-VIRTUAL_VIEW
         /// 
-        /// \-MATERIALIZED_VIEW
+        /// \\-MATERIALIZED_VIEW
         /// 
         /// Default value: null.
         /// </summary>
@@ -53,9 +55,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// Valid values for Field: -ViewName
         /// 
-        /// \-CreateTime
+        /// \\-CreateTime
         /// 
-        /// \-UpdateTime
+        /// \\-UpdateTime
         /// 
         /// Default value: {"Type": "Desc","Field": "ViewName"}.
         /// </summary>
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The region ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

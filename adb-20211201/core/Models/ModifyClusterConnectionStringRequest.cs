@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
         /// *   The prefix can be up to 30 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

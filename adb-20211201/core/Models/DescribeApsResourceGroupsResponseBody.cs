@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **Interactive**
                 /// *   **Job**
                 /// 
-                /// >  For more information about resource groups, see [Resource groups](~~428610~~).
+                /// >  For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/428610.html).
                 /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]

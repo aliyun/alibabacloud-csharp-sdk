@@ -44,7 +44,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// 
-        /// > You can call the [DescribeDBClusters](~~454250~~) operation to query cluster IDs.
+        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -53,7 +55,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The data of the application template.
         /// 
-        /// > For information about the application template configuration, see [Spark application configuration guide](~~452402~~).
+        /// > For information about the application template configuration, see [Spark application configuration guide](https://help.aliyun.com/document_detail/452402.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -62,7 +66,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the job resource group.
         /// 
-        /// >  You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the resource group ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// >  You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/612410.html) operation to query the resource group ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the application template.
         /// 
-        /// > You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
+        /// > You can call the [GetSparkTemplateFullTree](https://help.aliyun.com/document_detail/456205.html) operation to query the application template ID.
         /// </summary>
         [NameInMap("TemplateFileId")]
         [Validation(Required=false)]

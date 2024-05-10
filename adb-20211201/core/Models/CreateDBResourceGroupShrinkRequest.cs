@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -45,7 +47,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   The name can be up to 255 characters in length.
         /// *   The name must start with a letter or a digit.
-        /// *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+        /// *   The name can contain letters, digits, hyphens (_), and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -57,7 +61,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// *   **Interactive**
         /// *   **Job**
         /// 
-        /// > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+        /// > For information about resource groups of Data Lakehouse Edition, see [Resource groups](https://help.aliyun.com/document_detail/428610.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/612393.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

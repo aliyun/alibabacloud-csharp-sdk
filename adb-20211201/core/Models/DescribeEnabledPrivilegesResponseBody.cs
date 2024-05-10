@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeEnabledPrivilegesResponseBodyData : TeaModel {
             /// <summary>
             /// The description of the permission level.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// The queried permissions.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Privileges")]
             [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// The permission level.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]

@@ -35,7 +35,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/454250.html) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -44,7 +46,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the scaling plan.
         /// 
-        /// >  The name must be 2 to 30 characters in length and can contain letters, digits, and underscores (\_). The name must start with a letter.
+        /// >  The name must be 2 to 30 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ElasticPlanName")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   true
         /// *   false
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   If you want to create a scaling plan that uses interactive resource groups, you must specify this parameter. If you want to create a scaling plan that uses elastic I/O units (EIUs), you do not need to specify this parameter.
         /// 
-        /// *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name for a cluster.
+        /// *   You can call the [DescribeDBResourceGroup](https://help.aliyun.com/document_detail/459446.html) operation to query the resource group name for a cluster.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   If the scaling plan uses **EIUs** and **Default Proportional Scaling for EIUs** is enabled, you do not need to specify this parameter. In other cases, you must specify this parameter.
         /// 
-        /// *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
+        /// *   You can call the [DescribeElasticPlanSpecifications](https://help.aliyun.com/document_detail/601278.html) operation to query the specifications that are supported for scaling plans.
         /// </summary>
         [NameInMap("TargetSize")]
         [Validation(Required=false)]
@@ -109,6 +115,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
         /// *   WORKER: the EIU type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

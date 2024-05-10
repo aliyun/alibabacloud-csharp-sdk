@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class StartSparkSQLEngineRequest : TeaModel {
         /// <summary>
-        /// The configuration that is required to start the Spark SQL engine. Specify this value in the JSON format. For more information, see [Conf configuration parameters](~~471203~~).
+        /// The configuration that is required to start the Spark SQL engine. Specify this value in the JSON format. For more information, see [Conf configuration parameters](https://help.aliyun.com/document_detail/471203.html).
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The name of the resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

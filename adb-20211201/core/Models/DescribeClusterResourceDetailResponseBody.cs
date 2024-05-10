@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public class DescribeClusterResourceDetailResponseBodyDataResourceGroupList : TeaModel {
                 /// <summary>
                 /// A reserved parameter.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("ClusterMode")]
                 [Validation(Required=false)]

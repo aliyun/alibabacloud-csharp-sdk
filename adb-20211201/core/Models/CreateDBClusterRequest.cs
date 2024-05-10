@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The ID of the backup set that you want to use to restore data.
         /// 
-        /// >  You can call the [DescribeBackups](~~612318~~) operation to query the backup sets of the cluster.
+        /// >  You can call the [DescribeBackups](https://help.aliyun.com/document_detail/612318.html) operation to query the backup sets of the cluster.
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The version of the cluster. Set the value to **5.0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// *   **Postpaid**: pay-as-you-go.
         /// *   **Prepaid**: subscription.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -90,7 +94,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/454314.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -185,6 +191,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The virtual private cloud (VPC) ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -192,6 +200,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// The vSwitch ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -200,7 +210,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The zone ID.
         /// 
-        /// >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent zone list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/454314.html) operation to query the most recent zone list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
