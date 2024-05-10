@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The certificate ID.
         /// 
-        /// >  The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call [ListVpnCertificateAssociations](~~448813~~) to query certificate IDs.
+        /// >  The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call [ListVpnCertificateAssociations](https://help.aliyun.com/document_detail/448813.html) to query certificate IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **Encryption**
         /// *   **Signature**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertificateType")]
         [Validation(Required=false)]
@@ -52,7 +56,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the VPN gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

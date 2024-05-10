@@ -65,8 +65,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// > - The subnet mask of the client CIDR block must be 16 to 29 bits in length.
         /// > - Make sure that the local CIDR block and the client CIDR block do not overlap with each other.
-        /// > - We recommend that you use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or one of their subnets as the client CIDR block. If you want to specify a public CIDR block as the client CIDR block, you must specify the public CIDR block as the user CIDR block of the virtual private cloud (VPC). This way, the VPC can access the public CIDR block. For more information, see [VPC FAQ](~~185311~~).
+        /// > - We recommend that you use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or one of their subnets as the client CIDR block. If you want to specify a public CIDR block as the client CIDR block, you must specify the public CIDR block as the user CIDR block of the virtual private cloud (VPC). This way, the VPC can access the public CIDR block. For more information, see [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).
         /// > - After you create an SSL server, the system automatically adds routes that point to the client CIDR block to the VPC route table, which is not displayed in the console by default. Do not add routes that point to the client CIDR block to the VPC route table again. Otherwise, SSL-VPN connections cannot work as expected.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientIpPool")]
         [Validation(Required=false)]
@@ -106,6 +108,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableMultiFactorAuth { get; set; }
 
+        [NameInMap("IDaaSApplicationId")]
+        [Validation(Required=false)]
+        public string IDaaSApplicationId { get; set; }
+
         /// <summary>
         /// The Identity as a Service (IDaaS) instance ID.
         /// </summary>
@@ -134,6 +140,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   169.254.0.0~169.254.255.255
         /// *   224.0.0.0~239.255.255.255
         /// *   255.0.0.0~255.255.255.255
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalSubnet")]
         [Validation(Required=false)]
@@ -178,7 +186,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the VPN gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -194,6 +204,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

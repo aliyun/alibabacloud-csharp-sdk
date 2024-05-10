@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class SetHighDefinitionMonitorLogStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the instance for which you want to configure fine-grained monitoring.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The name of the Simple Log Service (SLS) project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The name of the Logstore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
@@ -48,7 +54,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the instance.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **ON**
         /// *   **OFF**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

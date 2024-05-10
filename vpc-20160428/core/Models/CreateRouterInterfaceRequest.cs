@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the access point to which the VBR belongs.
         /// 
-        /// You can call the [DescribeAccessPoints](~~36062~~) operation to obtain the IDs of access points.
+        /// You can call the [DescribeAccessPoints](https://help.aliyun.com/document_detail/36062.html) operation to obtain the IDs of access points.
         /// 
         /// >  This parameter is required if the VBR is connected to an Express Connect circuit.
         /// </summary>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the router interface.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -140,6 +140,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the region in which the acceptor is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OppositeRegionId")]
         [Validation(Required=false)]
@@ -197,7 +199,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the router interface belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -206,7 +210,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group.
         /// 
-        /// For more information about resource group, see [What is Resource Management?](~~94475~~)
+        /// For more information about resource group, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -225,6 +229,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **InitiatingSide**: requester
         /// *   **AcceptingSide**: acceptor
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
@@ -232,6 +238,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the router that is associated with the router interface.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
@@ -242,6 +250,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **VRouter**
         /// *   **VBR**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
@@ -264,6 +274,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **Xlarge.1**: 10,000 Mbit/s
         /// 
         /// >  If **Role** is set to **AcceptingSide**, set **Spec** to **Negative**. This indicates that you do not need to specify the specification when you create an acceptor router interface.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

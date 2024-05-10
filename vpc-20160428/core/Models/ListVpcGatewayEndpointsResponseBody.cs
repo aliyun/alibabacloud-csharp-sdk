@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The access policy for the cloud service.
             /// 
-            /// For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
+            /// For more information about the syntax and structure of the access policy, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).
             /// </summary>
             [NameInMap("PolicyDocument")]
             [Validation(Required=false)]

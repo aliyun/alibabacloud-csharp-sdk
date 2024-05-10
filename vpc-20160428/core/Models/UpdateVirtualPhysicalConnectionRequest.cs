@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the hosted connection over Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -42,7 +44,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the hosted connection.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   If the VLAN ID is set to **0**, it indicates that the switch port of the virtual border router (VBR) is a Layer 3 router interface instead of a VLAN interface. When a Layer 3 router interface is used, each Express Connect circuit corresponds to a VBR.
         /// *   If the VLAN ID is set to a value from **1** to **2999**, the switch port of the VBR is a Layer 3 VLAN subinterface. When a Layer 3 VLAN subinterface is used, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit with which the VBR is associated can be used to connect to virtual private clouds (VPCs) that belong to different Alibaba Cloud accounts. VBRs in different VLANs are isolated from each other at Layer 2.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateFullNatEntryRequest : TeaModel {
         /// <summary>
         /// The backend IP address to be modified in FULLNAT address translation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessIp")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The backend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessPort")]
         [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the FULLNAT table to which the FULLNAT entry belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FullNatTableId")]
         [Validation(Required=false)]
@@ -72,6 +78,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **TCP**
         /// *   **UDP**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -79,6 +87,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The NAT IP address that provides address translation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatIp")]
         [Validation(Required=false)]
@@ -86,6 +96,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatIpPort")]
         [Validation(Required=false)]
@@ -93,6 +105,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The elastic network interface (ENI) ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -109,7 +123,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

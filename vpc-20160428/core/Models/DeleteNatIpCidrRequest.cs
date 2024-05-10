@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.
         /// *   The default NAT CIDR block cannot be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatIpCidr")]
         [Validation(Required=false)]
@@ -58,7 +62,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

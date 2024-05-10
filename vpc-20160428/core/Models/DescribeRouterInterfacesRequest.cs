@@ -76,7 +76,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the router interface.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Resource Group ID.
         /// 
-        /// For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)
+        /// For more information about resource groups, please refer to [What is a Resource Group?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
             /// 
-            /// A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".
+            /// A tag key can support up to 128 characters, cannot start with \\"aliyun\\" or \\"acs:\\", and cannot contain \\"http://\\" or \\"https://\\".
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
             /// 
-            /// A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".
+            /// A maximum of 128 characters are supported, it cannot start with \\"aliyun\\" or \\"acs:\\", and it cannot contain \\"http://\\" or \\"https://\\".
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

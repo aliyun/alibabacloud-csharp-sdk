@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class RemoveGlobalAccelerationInstanceIpRequest : TeaModel {
         /// <summary>
         /// The ID of the shared-bandwidth instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the EIP.
         /// 
         /// To query the EIP ID, call DescribeEipAddresses.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpInstanceId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the region where the shared-bandwidth instance is located.
         /// 
         /// To query the region ID, call DescribeRegions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

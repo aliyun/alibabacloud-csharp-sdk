@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// *   The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.
         /// *   The NAT IP address that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExternalIp")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         ///     *   If you set **ExternalPort** to a port range, you must also set **InternalPort** to a port range, and the number of ports specified by these parameters must be the same. For example, if you set **ExternalPort** to `10/20`, you can set **InternalPort** to `80/90`.
         /// 
         /// *   The port that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExternalPort")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the DNAT table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForwardTableId")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         ///     *   The DNAT entry takes effect only if the private IP address is assigned to an ECS instance and the ECS instance is not associated with an EIP.
         /// 
         /// *   The private IP address that uses DNAT when you add a DNAT entry to a VPC NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
@@ -72,6 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// *   The internal port or port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway. Valid values: **1** to **65535**.
         /// *   The port of the destination ECS instance to be mapped when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternalPort")]
         [Validation(Required=false)]
@@ -83,6 +93,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **TCP**
         /// *   **UDP**
         /// *   **Any** If you set **IpProtocol** to **Any**, you must also set **ExternalPort** and **InternalPort** to **Any** to implement DNAT IP mapping.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -111,7 +123,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the NAT gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

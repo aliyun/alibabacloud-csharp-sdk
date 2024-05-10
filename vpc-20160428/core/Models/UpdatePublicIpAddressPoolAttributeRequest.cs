@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the IP address pool.
         /// 
-        /// This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IP address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
@@ -65,6 +67,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the IP address pool that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

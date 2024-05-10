@@ -50,7 +50,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -109,10 +111,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// You must upgrade or release the ECS instance before you can create a custom route table for the VPC.
         /// 
-        /// *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](~~25438~~) and [Change specifications of pay-as-you-go instances](~~60051~~).
-        /// *   For more information about how to release an ECS instance, see [Release an ECS instance](~~25442~~).
+        /// *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](https://help.aliyun.com/document_detail/25438.html) and [Change specifications of pay-as-you-go instances](https://help.aliyun.com/document_detail/60051.html).
+        /// *   For more information about how to release an ECS instance, see [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
         /// 
         /// >  If a custom route table is created for a VPC that contains an ECS instance from one of the preceding instance families, you must upgrade or release the ECS instance. Otherwise, the custom route table cannot work as expected.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

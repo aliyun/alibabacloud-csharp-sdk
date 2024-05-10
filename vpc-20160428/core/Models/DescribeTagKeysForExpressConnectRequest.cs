@@ -44,7 +44,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the resource resides.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

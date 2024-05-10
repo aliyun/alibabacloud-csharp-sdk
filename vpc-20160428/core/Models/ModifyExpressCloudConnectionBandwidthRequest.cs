@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the ECC instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EccId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

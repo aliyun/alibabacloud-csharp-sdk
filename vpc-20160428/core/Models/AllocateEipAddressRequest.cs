@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **BGP** (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.
         /// *   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
         /// 
-        /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](~~32321~~)
+        /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](https://help.aliyun.com/document_detail/32321.html)
         /// 
         /// *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
         /// 
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The EIP name.
         /// 
-        /// The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+        /// The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
         /// 
         /// >  You cannot specify this parameter if you create a subscription EIP.
         /// </summary>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// The EIP is allocated from the IP address pool.
         /// 
-        /// By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](~~108213~~).
+        /// By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](https://help.aliyun.com/document_detail/108213.html).
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
@@ -195,7 +195,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the EIP belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -233,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// When the service type of the IP address pool specified by **PublicIpAddressPoolId** is CloudBox, the default value is the zone of the IP address pool.
         /// 
-        /// For more information, see [ListPublicIpAddressPools](~~429433~~).
+        /// For more information, see [ListPublicIpAddressPools](https://help.aliyun.com/document_detail/429433.html).
         /// </summary>
         [NameInMap("Zone")]
         [Validation(Required=false)]

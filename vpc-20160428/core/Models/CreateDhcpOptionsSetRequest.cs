@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the DHCP options set.
         /// 
-        /// The name must be 1 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 1 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("DhcpOptionsSetName")]
         [Validation(Required=false)]
@@ -102,7 +102,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region to which the DHCP options set belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

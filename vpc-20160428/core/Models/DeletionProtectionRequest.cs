@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the instance for which you want to enable deletion protection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -36,13 +38,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **true**: yes
         /// *   **false**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtectionEnable")]
         [Validation(Required=false)]
         public bool? ProtectionEnable { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,6 +68,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **EIP**: Elastic IP Address (EIP)
         /// *   **CBWP**: EIP bandwidth plan
         /// *   **NATGW**: NAT gateway
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

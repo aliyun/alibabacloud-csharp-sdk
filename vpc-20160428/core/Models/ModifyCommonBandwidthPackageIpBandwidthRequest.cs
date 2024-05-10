@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyCommonBandwidthPackageIpBandwidthRequest : TeaModel {
         /// <summary>
         /// The maximum bandwidth for the EIP. This value cannot be larger than the maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the Internet Shared Bandwidth instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the EIP that is associated with the Internet Shared Bandwidth instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EipId")]
         [Validation(Required=false)]
@@ -39,7 +45,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -54,12 +54,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableMultiFactorAuth { get; set; }
 
+        [NameInMap("IDaaSApplicationId")]
+        [Validation(Required=false)]
+        public string IDaaSApplicationId { get; set; }
+
         /// <summary>
         /// The ID of the IDaaS instance.
         /// </summary>
         [NameInMap("IDaaSInstanceId")]
         [Validation(Required=false)]
         public string IDaaSInstanceId { get; set; }
+
+        [NameInMap("IDaaSInstanceVersion")]
+        [Validation(Required=false)]
+        public string IDaaSInstanceVersion { get; set; }
 
         /// <summary>
         /// The public IP address.
@@ -120,7 +128,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group to which the SSL server belongs.
         /// 
-        /// The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
+        /// The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

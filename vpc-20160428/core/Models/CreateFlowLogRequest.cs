@@ -37,9 +37,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the Logstore that stores the captured traffic data.
         /// 
-        /// *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+        /// *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).
         /// *   The name must start and end with a lowercase letter or a digit.
         /// *   The name must be 3 to 63 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
@@ -59,13 +61,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   The name can contain only lowercase letters, digits, and hyphens (-).
         /// *   The name must start and end with a lowercase letter or a digit.
         /// *   The name must be 3 to 63 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where you want to create the flow log. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the resource whose traffic you want to capture.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -99,6 +107,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **NetworkInterface**: elastic network interface (ENI)
         /// *   **VSwitch**: all ENIs in a vSwitch
         /// *   **VPC**: all ENIs in a virtual private cloud (VPC)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -147,6 +157,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **All**: all traffic
         /// *   **Allow**: traffic that is allowed
         /// *   **Drop**: traffic that is rejected
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficType")]
         [Validation(Required=false)]

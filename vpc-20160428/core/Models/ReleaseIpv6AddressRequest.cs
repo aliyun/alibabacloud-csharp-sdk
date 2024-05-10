@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv6 address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

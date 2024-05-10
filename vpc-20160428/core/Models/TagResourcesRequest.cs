@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the resource.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The resource ID. You can specify at most 20 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **VpnGateway**: a VPN gateway
         /// *   **NATGATEWAY**: a NAT gateway
         /// *   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The tag information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

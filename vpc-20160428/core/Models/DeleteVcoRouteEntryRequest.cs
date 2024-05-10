@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The next hop of the destination-based route that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
@@ -41,7 +43,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region where the IPsec-VPN connection is established.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The destination CIDR block of the destination-based route that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteDest")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPsec-VPN attachment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]
@@ -74,6 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **0**: a low priority
         /// *   **100**: a high priority
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

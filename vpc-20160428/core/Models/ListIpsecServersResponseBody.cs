@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// The ID of the resource group to which the IPsec server belongs.
             /// 
-            /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+            /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]

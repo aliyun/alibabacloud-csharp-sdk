@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateIPv6TranslatorAclListRequest : TeaModel {
         /// <summary>
         /// The ACL name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

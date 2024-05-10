@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
+        /// The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -27,13 +27,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv6 Translation Service instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
         public string Ipv6TranslatorId { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
+        /// The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

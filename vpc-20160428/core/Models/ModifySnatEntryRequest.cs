@@ -35,7 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the NAT gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the SNAT entry that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the SNAT table to which the SNAT entry belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatTableId")]
         [Validation(Required=false)]

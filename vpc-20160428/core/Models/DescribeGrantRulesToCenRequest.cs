@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the network instance that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **VPC**
         /// *   **VBR**
         /// *   **CCN**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the network instance that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

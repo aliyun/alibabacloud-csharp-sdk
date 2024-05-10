@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class GrantInstanceToCenRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance to which you want to grant permissions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The user ID (UID) of the Apsara Stack tenant account to which the CEN instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenOwnerId")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the network instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **VPC**
         /// *   **VBR**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -62,7 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region where the network instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

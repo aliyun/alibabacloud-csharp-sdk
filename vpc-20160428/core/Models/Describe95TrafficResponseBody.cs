@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// The daily peak bandwidth. Unit: Mbit/s.
-            /// <props="china"> For more information, see [Daily peak bandwidth](~~89729~~).</props>
+            /// <props="china"> For more information, see [Daily peak bandwidth](https://help.aliyun.com/document_detail/89729.html).
             /// </summary>
             [NameInMap("FifthPeakBandwidth")]
             [Validation(Required=false)]

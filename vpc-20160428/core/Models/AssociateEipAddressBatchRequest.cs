@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the instance with which you want to associate the EIPs.
         /// 
         /// The instance can be a NAT gateway or a secondary ENI.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindedInstanceId")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **Nat**: NAT gateway
         /// *   **NetworkInterface**: secondary ENI
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindedInstanceType")]
         [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The EIPs to be associated with the instance.
         /// 
         /// You must enter at least one EIP. You can enter up to 50 EIPs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -62,7 +68,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the EIPs belong. You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+        /// The ID of the region to which the EIPs belong. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

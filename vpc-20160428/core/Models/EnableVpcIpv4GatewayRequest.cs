@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv4 gateway that you want to activate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv4GatewayId")]
         [Validation(Required=false)]
@@ -48,7 +50,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the IPv4 gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent list of regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

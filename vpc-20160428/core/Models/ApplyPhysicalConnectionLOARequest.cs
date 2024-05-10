@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The name of the customer company that requires the Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConstructionTime")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **MPLSVPN**: MPLSVPN line
         /// *   **FIBRE**: fiber line
         /// *   **Other**: other types
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineType")]
         [Validation(Required=false)]
@@ -129,7 +137,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Express Connect circuit.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -145,6 +155,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The construction company.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Si")]
         [Validation(Required=false)]

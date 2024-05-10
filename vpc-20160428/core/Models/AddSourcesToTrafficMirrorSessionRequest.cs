@@ -41,9 +41,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the traffic mirror session belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// 
-        /// For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+        /// For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the traffic mirror session.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorSessionId")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorSourceIds")]
         [Validation(Required=false)]

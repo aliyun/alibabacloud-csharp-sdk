@@ -11,15 +11,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AddGlobalAccelerationInstanceIpRequest : TeaModel {
         /// <summary>
         /// The ID of the shared-bandwidth GA instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// The EIP ID. You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.
+        /// The EIP ID. You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.
         /// 
         /// >  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpInstanceId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The region of the shared-bandwidth GA instance.
         /// 
         /// You can call the **DescribeRegions** operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

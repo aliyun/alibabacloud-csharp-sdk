@@ -29,7 +29,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the contiguous EIPs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the contiguous EIPs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the contiguous EIP group to be released.
         /// 
         /// The system releases all EIPs in the group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SegmentInstanceId")]
         [Validation(Required=false)]

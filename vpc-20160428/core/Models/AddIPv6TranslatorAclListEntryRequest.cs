@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The remarks of the ACL entry.
         /// 
-        /// It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("AclEntryComment")]
         [Validation(Required=false)]
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The IPv6 address or IPv6 CIDR block that you want to add to the ACL entry, for example, 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclEntryIp")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the ACL to which you want to add the IP entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

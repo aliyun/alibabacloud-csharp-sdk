@@ -61,13 +61,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The priority of the traffic mirror session. Valid values: **1** to **32766**.
         /// 
         /// A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+        /// The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -117,6 +121,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the filter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorFilterId")]
         [Validation(Required=false)]
@@ -142,6 +148,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorSourceIds")]
         [Validation(Required=false)]
@@ -149,6 +157,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorTargetId")]
         [Validation(Required=false)]
@@ -159,6 +169,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **NetworkInterface**: an ENI
         /// *   **SLB**: an SLB instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMirrorTargetType")]
         [Validation(Required=false)]

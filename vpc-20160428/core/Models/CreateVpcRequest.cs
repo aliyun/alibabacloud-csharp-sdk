@@ -102,7 +102,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the VPC belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group.
         /// 
-        /// For more information about resource groups, see [What is a resource group?](~~94475~~)
+        /// For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -155,7 +157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.
         /// 
-        /// For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](~~185311~~).
+        /// For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).
         /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]

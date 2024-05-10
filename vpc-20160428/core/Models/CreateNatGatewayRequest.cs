@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// Set the value to **PostPaid** (pay-as-you-go), which is the default value.
         /// 
-        /// For more information, see [Internet NAT gateway billing](~~48126~~) and [VPC NAT gateway billing](~~270913~~).
+        /// For more information, see [Internet NAT gateway billing](https://help.aliyun.com/document_detail/48126.html) and [VPC NAT gateway billing](https://help.aliyun.com/document_detail/270913.html).
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the NAT gateway.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// 
         /// If this parameter is not set, the system assigns a default name to the NAT gateway.
         /// </summary>
@@ -132,7 +132,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the NAT gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -149,7 +151,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to enable the firewall feature. Valid values:
         /// 
-        /// *   **false** (default)><notice>This parameter is deprecated.></notice>
+        /// *   **false** (default)>Notice: This parameter is deprecated.
         /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]
@@ -194,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.
         /// *   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.
         /// 
-        /// >  You can call the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](~~35748~~) operation to query idle IP addresses in a vSwitch.
+        /// >  You can call the [ListEnhanhcedNatGatewayAvailableZones](https://help.aliyun.com/document_detail/182292.html) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query idle IP addresses in a vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -202,6 +204,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPC where you want to create the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

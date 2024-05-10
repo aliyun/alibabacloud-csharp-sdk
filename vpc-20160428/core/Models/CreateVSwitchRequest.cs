@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   The subnet mask of the CIDR block must be 16 to 29 bits in length.
         /// *   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.
         /// *   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the vSwitch.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -110,6 +112,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPC where you want to create the vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -125,7 +129,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The zone ID of the vSwitch.
         /// 
-        /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+        /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

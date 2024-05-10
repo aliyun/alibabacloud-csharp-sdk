@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the other VBR in the VBR failover group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerVbrId")]
         [Validation(Required=false)]
@@ -63,6 +65,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the region in which the VBR is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VBR.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VbrId")]
         [Validation(Required=false)]

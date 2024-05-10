@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeIPv6TranslatorAclListAttributesRequest : TeaModel {
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

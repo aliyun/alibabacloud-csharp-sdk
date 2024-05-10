@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The region where the Express Connect circuit is deployed.
         /// 
         /// You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the HAVIP that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HaVipId")]
         [Validation(Required=false)]
@@ -36,7 +38,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the HAVIP is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where the HAVIP is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

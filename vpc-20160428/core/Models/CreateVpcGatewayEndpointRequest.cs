@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The access policy for the cloud service.
         /// 
-        /// For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
+        /// For more information about the syntax and structure of the access policy, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).
         /// </summary>
         [NameInMap("PolicyDocument")]
         [Validation(Required=false)]
@@ -70,7 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the gateway endpoint.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -93,6 +95,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The name of the endpoint service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -129,6 +133,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the virtual private cloud (VPC) where you want to create the gateway endpoint.
         /// 
         /// The VPC and gateway endpoint must be deployed in the same region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

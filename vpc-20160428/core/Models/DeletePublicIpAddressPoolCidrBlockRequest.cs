@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeletePublicIpAddressPoolCidrBlockRequest : TeaModel {
         /// <summary>
         /// The CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IP address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the IP address pool from which you want to delete a CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

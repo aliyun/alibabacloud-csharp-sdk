@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the vSwitch. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// 
         /// >  You must set at least one of **RegionId** and **VpcId**.
         /// </summary>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+        /// The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

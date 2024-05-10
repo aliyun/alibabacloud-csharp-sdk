@@ -69,7 +69,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The resource group ID.
         /// 
-        /// For more information about resource groups, see [What is a resource group?](~~94475~~)
+        /// For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

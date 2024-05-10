@@ -87,6 +87,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// The time when the BGP peer is modified.
+                /// 
+                /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]

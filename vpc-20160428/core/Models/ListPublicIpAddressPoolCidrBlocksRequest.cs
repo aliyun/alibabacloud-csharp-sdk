@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IP address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the CIDR blocks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

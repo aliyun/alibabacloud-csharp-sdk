@@ -50,7 +50,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the SSL server is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where the SSL server is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -82,6 +84,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the SSL server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnSslServerId")]
         [Validation(Required=false)]

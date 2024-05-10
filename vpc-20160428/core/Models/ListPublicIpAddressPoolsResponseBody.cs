@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// *   **BGP**: BGP (Multi-ISP)
             /// *   **BGP_PRO**: BGP (Multi-ISP) Pro
             /// 
-            /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+            /// For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).
             /// 
             /// If you are allowed to use single-ISP bandwidth, one of the following values may be returned:
             /// 

@@ -59,7 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region where you want to create the IPv4 gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -111,6 +113,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the VPC where you want to create the IPv4 gateway.
         /// 
         /// You can create only one IPv4 gateway in a VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

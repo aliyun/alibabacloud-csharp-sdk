@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the VBR.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -133,6 +133,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the Express Connect circuit.
         /// 
         /// You can create a VBR for a dedicated connection or a hosted connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
@@ -141,7 +143,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Express Connect circuit.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The resource group ID.
         /// 
-        /// For more information about resource group, see [What is Resource Management?](~~94475~~)
+        /// For more information about resource group, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -204,6 +208,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The VLAN ID of the VBR. Valid values: **0 to 2999**.
         /// 
         /// >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]

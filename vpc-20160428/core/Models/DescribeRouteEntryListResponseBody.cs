@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// The time when the route was modified. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+                /// 
+                /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]

@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The destination CIDR block of the route entry in the gateway route table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the gateway route table.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -88,6 +90,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **Instance**: Elastic Compute Service (ECS) instance
         /// *   **NetworkInterface**: elastic network interface (ENI)
         /// *   **Local**: local next hop
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextHopType")]
         [Validation(Required=false)]
@@ -104,7 +108,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the gateway route table that you want to modify belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

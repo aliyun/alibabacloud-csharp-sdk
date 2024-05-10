@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group to which the IPsec-VPN connection belongs.
         /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -624,7 +624,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The zone where the tunnel is deployed.
                 /// 
-                /// You can call [DescribeZones](~~36064~~) to query zone IDs.
+                /// You can call [DescribeZones](https://help.aliyun.com/document_detail/36064.html) to query zone IDs.
                 /// </summary>
                 [NameInMap("ZoneNo")]
                 [Validation(Required=false)]
@@ -789,7 +789,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the zone where the IPsec-VPN connection is deployed.
         /// 
-        /// You can call [DescribeZones](~~36064~~) to query zone IDs and mapping between zone IDs and zone names.
+        /// You can call [DescribeZones](https://help.aliyun.com/document_detail/36064.html) to query zone IDs and mapping between zone IDs and zone names.
         /// </summary>
         [NameInMap("ZoneNo")]
         [Validation(Required=false)]

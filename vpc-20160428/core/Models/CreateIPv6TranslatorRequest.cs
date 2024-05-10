@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.
+        /// The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -78,7 +78,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

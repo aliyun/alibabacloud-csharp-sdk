@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <summary>
                         /// The route name.
                         /// 
-                        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+                        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
                         /// </summary>
                         [NameInMap("RouteEntryName")]
                         [Validation(Required=false)]

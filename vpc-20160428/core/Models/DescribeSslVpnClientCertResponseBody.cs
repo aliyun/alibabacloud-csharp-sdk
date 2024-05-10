@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// The SSL client certificate is the same as the resource group of the SSL server associated with it.
         /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+        /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

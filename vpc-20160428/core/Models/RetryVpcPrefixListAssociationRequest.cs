@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the prefix list that you want to re-apply.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
@@ -48,7 +50,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the prefix list that you want to re-apply.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the associated resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **vpcRouteTable**: VPC route table
         /// *   **trRouteTable**: route table of a transit router
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

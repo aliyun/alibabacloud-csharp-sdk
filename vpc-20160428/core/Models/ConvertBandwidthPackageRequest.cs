@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ConvertBandwidthPackageRequest : TeaModel {
         /// <summary>
         /// The ID of the NAT service plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~36569~~).
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/36569.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -28,7 +30,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region where the NAT gateway resides. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region where the NAT gateway resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

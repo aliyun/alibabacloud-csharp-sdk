@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The CIDR block of the virtual private cloud (VPC) or vSwitch that you want to connect to a data center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DstCidrBlock")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the virtual border router (VBR) group.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the router that is associated with the router interface.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]

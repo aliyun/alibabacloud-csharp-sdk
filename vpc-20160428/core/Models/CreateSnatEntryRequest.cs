@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the NAT gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// 
         /// Valid values:
         /// 
@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         ///     <!-- -->
         /// 
         ///     .
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -92,6 +94,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// >  If you specify multiple EIPs in the SNAT IP address pool, the service connection is allocated to multiple EIPs by using the hashing algorithm. The traffic of each EIP may be different. Therefore, we recommend that you associate the EIPs with an Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion.
         /// 
         /// *   When you add SNAT entries for a VPC NAT gateway, this parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]
@@ -99,6 +103,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the SNAT table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatTableId")]
         [Validation(Required=false)]

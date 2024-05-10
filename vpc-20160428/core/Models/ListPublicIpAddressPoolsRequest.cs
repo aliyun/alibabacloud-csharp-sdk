@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **BGP** (default): BGP (Multi-ISP) line
         /// *   **BGP_PRO**: BGP (Multi-ISP) Pro line
         /// 
-        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)
+        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](https://help.aliyun.com/document_detail/32321.html)
         /// 
         /// If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the IP address pool.
         /// 
-        /// If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -88,7 +88,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region in which the IP address pool that you want to query resides.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

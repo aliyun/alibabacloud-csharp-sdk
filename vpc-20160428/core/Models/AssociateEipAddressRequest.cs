@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AssociateEipAddressRequest : TeaModel {
         /// <summary>
         /// The ID of the EIP that you want to associate with an instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the instance with which you want to associate the EIP.
         /// 
         /// You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region to which the EIP belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

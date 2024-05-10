@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The next hop of the VPN gateway route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **true**
         /// *   **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublishVpc")]
         [Validation(Required=false)]
@@ -48,7 +52,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region where the VPN gateway is created.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The destination CIDR block of the VPN gateway route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteDest")]
         [Validation(Required=false)]
@@ -74,6 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **pbr**: policy-based route
         /// *   **dbr**: destination-based route
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]
@@ -81,6 +91,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

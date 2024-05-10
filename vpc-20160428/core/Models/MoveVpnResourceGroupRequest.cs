@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class MoveVpnResourceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the new resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -34,7 +38,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the resource.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **VpnAttachment**: IPsec-VPN connection
         /// 
         ///     An IPsec-VPN connection associated with a transit router or not associate with a resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -60,13 +60,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv6 Translation Service instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region ID of the IPv6 Translation Service instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

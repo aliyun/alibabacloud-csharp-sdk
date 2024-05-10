@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   If you set **InstanceType** to **VBR**, specify a VBR ID.
         /// *   If you set **InstanceType** to **VPC**, specify a VPC ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **VBR**: queries the permissions that are granted to a VBR.
         /// *   **VPC**: queries the permissions that are granted from a VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

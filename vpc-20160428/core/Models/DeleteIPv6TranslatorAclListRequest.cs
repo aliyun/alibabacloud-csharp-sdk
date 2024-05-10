@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteIPv6TranslatorAclListRequest : TeaModel {
         /// <summary>
         /// The ID of the ACL that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the IPv6 translation service instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

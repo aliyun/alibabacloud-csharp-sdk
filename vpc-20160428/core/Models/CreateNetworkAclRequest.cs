@@ -59,7 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the network ACL.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -107,10 +109,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// ecs.c1, ecs.c2, ecs.c4, ecs.c5, ecs.ce4, ecs.cm4, ecs.d1, ecs.e3, ecs.e4, ecs.ga1, ecs.gn4, ecs.gn5, ecs.i1, ecs.m1, ecs.m2, ecs.mn4, ecs.n1, ecs.n2, ecs.n4, ecs.s1, ecs.s2, ecs.s3, ecs.se1, ecs.sn1, ecs.sn2, ecs.t1, and ecs.xn4.
         /// 
-        /// *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](~~25438~~) and [Change the specifications of pay-as-you-go instances](~~60051~~).
-        /// *   For more information about how to release an ECS instance, see [Release an ECS instance](~~25442~~).
+        /// *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](https://help.aliyun.com/document_detail/25438.html) and [Change the specifications of pay-as-you-go instances](https://help.aliyun.com/document_detail/60051.html).
+        /// *   For more information about how to release an ECS instance, see [Release an ECS instance](https://help.aliyun.com/document_detail/25442.html).
         /// 
         /// >  If the VPC contains an ECS instance that does not support network ACLs, upgrade the ECS instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreatePhysicalConnectionSetupOrderRequest : TeaModel {
         /// <summary>
         /// The ID of the access point.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **CO**: other connectivity providers in the Chinese mainland
         /// *   **Equinix**: Equinix
         /// *   **Other**: other connectivity providers outside the Chinese mainland
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineOperator")]
         [Validation(Required=false)]
@@ -86,7 +90,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Express Connect circuit.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

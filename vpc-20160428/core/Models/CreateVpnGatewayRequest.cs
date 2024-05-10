@@ -27,7 +27,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.
         /// *   If you want to create a private VPN gateway, valid values are **200** and **1000**.
         /// 
-        /// >  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](~~65290~~).
+        /// >  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](https://help.aliyun.com/document_detail/65290.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   You need to specify two vSwitches in different zones in the virtual private cloud (VPC) that is associated with the VPN gateway to implement disaster recovery across zones.
         /// *   For a region that supports only one zone, disaster recovery across zones is not supported. We recommend that you specify two vSwitches in the zone to implement high availability. You can specify the same vSwitch.
         /// 
-        /// For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
+        /// For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](https://help.aliyun.com/document_detail/2358946.html).
         /// </summary>
         [NameInMap("DisasterRecoveryVSwitchId")]
         [Validation(Required=false)]
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the VPN gateway. The default value is the ID of the VPN gateway.
         /// 
-        /// The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). Other special characters are not supported.
+        /// The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -119,7 +121,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The region ID of the VPN gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the VPN gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -128,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the resource group to which the VPN gateway belongs.
         /// 
-        /// *   You can call the [ListResourceGroups](~~158855~~) operation to query resource group IDs.
+        /// *   You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource group IDs.
         /// 
         /// *   If you do not specify a resource group ID, the VPN gateway belongs to the default resource group.
         /// 
@@ -167,6 +171,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the virtual private cloud (VPC) where you want to create the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

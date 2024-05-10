@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the BGP group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ASN of the gateway device in the data center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerAsn")]
         [Validation(Required=false)]
@@ -98,7 +100,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the VBR.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -121,6 +125,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VBR.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]

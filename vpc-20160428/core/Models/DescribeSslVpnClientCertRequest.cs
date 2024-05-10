@@ -18,7 +18,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the SSL client certificate. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The region ID of the SSL client certificate. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the SSL client certificate that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]

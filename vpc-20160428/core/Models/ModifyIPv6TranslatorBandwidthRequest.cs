@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The maximum bandwidth of the IPv6 Translation Service instance. Valid values: **1** to **200**. Unit: Mbit/s.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv6 Translation Service instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

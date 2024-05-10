@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
                 /// 
-                /// The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.
                 /// 
-                /// The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+                /// The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

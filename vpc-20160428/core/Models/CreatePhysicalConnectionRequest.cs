@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreatePhysicalConnectionRequest : TeaModel {
         /// <summary>
         /// The access point ID of the Express Connect circuit.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessPointId")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **CO**: other connectivity providers in the Chinese mainland.
         /// *   **Equinix**: Equinix.
         /// *   **Other**: other connectivity providers outside the Chinese mainland.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineOperator")]
         [Validation(Required=false)]
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the Express Connect circuit.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -115,7 +119,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Express Connect circuit.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

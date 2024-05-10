@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// *   **VcoUserInternetIpConnectivity**: Internet connectivity of the customer gateway.
             /// *   **VcoPrivateConnectivity**: private network connectivity.
             /// 
-            /// For more information about the diagnostic items, see [Background information about quick diagnostics](~~190330~~).
+            /// For more information about the diagnostic items, see [Background information about quick diagnostics](https://help.aliyun.com/document_detail/190330.html).
             /// </summary>
             [NameInMap("DiagnoseName")]
             [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// *   **warning**
             /// *   **error**
             /// 
-            /// For more information, see [Background information about quick diagnostics](~~190330~~).
+            /// For more information, see [Background information about quick diagnostics](https://help.aliyun.com/document_detail/190330.html).
             /// </summary>
             [NameInMap("DiagnoseResultLevel")]
             [Validation(Required=false)]

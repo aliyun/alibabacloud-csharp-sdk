@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? EntryBandwidth { get; set; }
 
         /// <summary>
-        /// The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+        /// The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
         /// </summary>
         [NameInMap("EntryDescription")]
         [Validation(Required=false)]
         public string EntryDescription { get; set; }
 
         /// <summary>
-        /// The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+        /// The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
         /// </summary>
         [NameInMap("EntryName")]
         [Validation(Required=false)]
@@ -85,6 +85,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the IPv6 mapping entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ipv6TranslatorEntryId")]
         [Validation(Required=false)]
@@ -100,6 +102,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

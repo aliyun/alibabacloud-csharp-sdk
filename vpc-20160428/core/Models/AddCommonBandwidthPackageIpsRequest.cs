@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AddCommonBandwidthPackageIpsRequest : TeaModel {
         /// <summary>
         /// The ID of the Internet Shared Bandwidth instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.
         /// 
         /// You can specify at most 10 EIP IDs at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpInstanceIds")]
         [Validation(Required=false)]
@@ -54,7 +58,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the Internet Shared Bandwidth instance.
         /// 
-        /// You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/448570.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

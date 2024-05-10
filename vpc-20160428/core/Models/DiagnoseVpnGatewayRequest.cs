@@ -33,7 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the VPN gateway.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the resource to be diagnosed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The type of the resource.
         /// 
         /// Set the value to **Ipsec**, which specifies an IPsec-VPN connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

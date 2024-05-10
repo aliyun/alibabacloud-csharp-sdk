@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **24**: applies for 256 contiguous EIPs in each call.
         /// 
         /// >  Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EipMask")]
         [Validation(Required=false)]
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **BGP** (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.
         /// *   **BGP_PRO**: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
         /// 
-        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see [EIP line types](~~32321~~).
+        /// For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).
         /// 
         /// If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
         /// 
@@ -99,7 +101,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The ID of the region in which the contiguous EIP group resides.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
         /// *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewWeight")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The next hop of the policy-based route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]
@@ -66,7 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -82,6 +88,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The destination CIDR block of the policy-based route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteDest")]
         [Validation(Required=false)]
@@ -89,6 +97,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The source CIDR block of the policy-based route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteSource")]
         [Validation(Required=false)]
@@ -96,6 +106,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the VPN gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
@@ -106,6 +118,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
         /// *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

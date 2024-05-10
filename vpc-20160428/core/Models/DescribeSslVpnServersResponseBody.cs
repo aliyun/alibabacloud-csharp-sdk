@@ -89,12 +89,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public bool? EnableMultiFactorAuth { get; set; }
 
+                [NameInMap("IDaaSApplicationId")]
+                [Validation(Required=false)]
+                public string IDaaSApplicationId { get; set; }
+
                 /// <summary>
                 /// The ID of the IDaaS instance.
                 /// </summary>
                 [NameInMap("IDaaSInstanceId")]
                 [Validation(Required=false)]
                 public string IDaaSInstanceId { get; set; }
+
+                [NameInMap("IDaaSInstanceVersion")]
+                [Validation(Required=false)]
+                public string IDaaSInstanceVersion { get; set; }
 
                 /// <summary>
                 /// The ID of the region where the IDaaS instance is created.
@@ -155,7 +163,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The ID of the resource group to which the SSL server belongs.
                 /// 
-                /// You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]

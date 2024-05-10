@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineLabel { get; set; }
 
             /// <summary>
-            /// The contact information about line O\&M.
+            /// The contact information about line O\\&M.
             /// </summary>
             [NameInMap("LineSPContactInfo")]
             [Validation(Required=false)]

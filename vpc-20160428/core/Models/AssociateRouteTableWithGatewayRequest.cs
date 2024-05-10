@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the IPv4 gateway.
         /// 
         /// The IPv4 gateway must be in the **Activated** state.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GatewayId")]
         [Validation(Required=false)]
@@ -57,7 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the IPv4 gateway with which you want to associate the gateway route table.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -73,6 +77,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the gateway route table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

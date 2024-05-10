@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -37,7 +39,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The region ID of the vSwitch to which the private IP address that you want to query belongs.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The ID of the vSwitch to which the private IP address to be queried belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
