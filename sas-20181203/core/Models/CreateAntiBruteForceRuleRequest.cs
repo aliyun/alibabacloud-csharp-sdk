@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The maximum number of failed logon attempts from an account. Valid values: 2, 3, 4, 5, 10, 50, 80, and 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FailCount")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **1440**: 24 hours
         /// *   **10080**: 7 days
         /// *   **52560000**: permanent
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForbiddenTime")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the defense rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **15**
         /// 
         /// >  To configure a defense rule, you must specify the Span, FailCount, and ForbiddenTime parameters. If the number of failed logon attempts from an account within the minutes specified by Span exceeds the value specified by FailCount, the account cannot be used for logons within the minutes specified by ForbiddenTime.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Span")]
         [Validation(Required=false)]
@@ -81,6 +89,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUIDs of the servers to which you want to apply the defense rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

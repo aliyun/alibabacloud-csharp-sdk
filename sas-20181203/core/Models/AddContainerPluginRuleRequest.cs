@@ -24,13 +24,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: triggers alerts.
         /// *   **2**: blocks escapes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public int? Mode { get; set; }
 
         /// <summary>
-        /// The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). The names of rules that are created for the same user must be unique.
+        /// The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). The names of rules that are created for the same user must be unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleTemplateId")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The check items that are enabled for the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SelectedPolicy")]
         [Validation(Required=false)]

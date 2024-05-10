@@ -11,16 +11,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeAccesskeyLeakListRequest : TeaModel {
         /// <summary>
         /// The number of the page to return. Default value: **1**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.\
+        /// The number of entries to return on each page.\\
         /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
         /// 
         /// > We recommend that you do not leave this parameter empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

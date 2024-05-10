@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).
         /// 
-        /// > You can call the [ListInterceptionRulePage](~~182997~~) operation to query the IDs of rules.
+        /// > You can call the [ListInterceptionRulePage](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of rules.
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

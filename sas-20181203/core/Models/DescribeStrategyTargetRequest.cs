@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeStrategyTargetRequest : TeaModel {
         /// <summary>
         /// The ID of the baseline check policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

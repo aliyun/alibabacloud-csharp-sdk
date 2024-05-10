@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeTraceInfoDetailRequest : TeaModel {
         /// <summary>
         /// The ID of the request source. Set the value to **sas**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the vertex. Set the value to **SAS_INCIDENT**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]

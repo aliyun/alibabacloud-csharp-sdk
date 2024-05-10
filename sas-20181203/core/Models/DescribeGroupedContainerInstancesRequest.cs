@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **appName**
         /// *   **namespace**
         /// *   **clusterId**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupField")]
         [Validation(Required=false)]

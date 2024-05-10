@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The instance ID of the image.
         /// 
         /// >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageInstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The region ID of the image.
         /// 
         /// >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageRegionId")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the image repository.
         /// 
         /// >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of image repositories.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageRepoId")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The tag that is added to the image.
         /// 
         /// >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageTag")]
         [Validation(Required=false)]

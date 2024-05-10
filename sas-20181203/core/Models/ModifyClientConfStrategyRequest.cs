@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ModifyClientConfStrategyRequest : TeaModel {
         /// <summary>
         /// The key of the tag that is added to the agent configuration policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   major
         /// *   advanced
         /// *   basic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The type of archived information. Valid values:
         /// 
         /// *   **suspiciousExport**: alert event
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]

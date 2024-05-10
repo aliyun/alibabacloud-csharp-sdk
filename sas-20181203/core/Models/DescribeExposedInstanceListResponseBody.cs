@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The ID of the region where the server resides.
             /// 
-            /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+            /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

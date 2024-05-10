@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The dimension based on which you want to configure the feature. Valid values:
         /// 
         /// *   **Cluster**: the ID of the cluster
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **containerNetwork**: container network
         /// *   **interceptionSwitch**: cluster microsegmentation
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

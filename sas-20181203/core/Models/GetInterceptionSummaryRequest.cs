@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the cluster.
         /// 
-        /// > You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the IDs of clusters.
+        /// > You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/421736.html) operation to query the IDs of clusters.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **aliscriptengine**: in-depth detection engine
         /// *   **alidetect**: installation scope of local file detection
         /// *   **alidetect-scan-enable**: detection scope of local file detection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

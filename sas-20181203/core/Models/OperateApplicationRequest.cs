@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class OperateApplicationRequest : TeaModel {
         /// <summary>
         /// The container application that is protected from being tampered with.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerWebDefenseApplicationDTOS")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The ID of the cluster to which the container belongs.
             /// 
             /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **add**: applied
             /// *   **del**: not applied
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Flag")]
             [Validation(Required=false)]
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The value of the application tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -53,6 +61,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

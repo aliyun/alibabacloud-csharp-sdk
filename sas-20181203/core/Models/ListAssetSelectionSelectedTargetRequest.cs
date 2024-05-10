@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ListAssetSelectionSelectedTargetRequest : TeaModel {
         /// <summary>
         /// The unique ID of the asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SelectionKey")]
         [Validation(Required=false)]

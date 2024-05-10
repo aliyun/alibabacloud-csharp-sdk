@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The unique ID of the asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SelectionKey")]
         [Validation(Required=false)]

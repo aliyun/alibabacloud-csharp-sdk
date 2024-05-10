@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the anti-ransomware policy.
         /// 
         /// > You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **2.0.0**
         /// 
         /// >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]

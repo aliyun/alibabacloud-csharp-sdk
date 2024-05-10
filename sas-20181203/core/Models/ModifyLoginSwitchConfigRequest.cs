@@ -12,9 +12,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the logon security settings that you want to enable or disable. Valid values:
         /// 
-        /// *   **login\_common_ip**: unapproved logon IP addresses
-        /// *   **login\_common_time**: unapproved logon time ranges
-        /// *   **login\_common_account**: unapproved logon accounts
+        /// *   **login_common_ip**: unapproved logon IP addresses
+        /// *   **login_common_time**: unapproved logon time ranges
+        /// *   **login_common_account**: unapproved logon accounts
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **0**: no
         /// *   **1**: yes
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

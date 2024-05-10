@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class EnableCustomBlockRecordRequest : TeaModel {
         /// <summary>
         /// The IP address that is specified in the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **in**: inbound
         /// *   **out**: outbound
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]

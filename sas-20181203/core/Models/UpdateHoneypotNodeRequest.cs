@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class UpdateHoneypotNodeRequest : TeaModel {
         /// <summary>
         /// The number of available probes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AvailableProbeNum")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the management node.
         /// 
         /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the management node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]

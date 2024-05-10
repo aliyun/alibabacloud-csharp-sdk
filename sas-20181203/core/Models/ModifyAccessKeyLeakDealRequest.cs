@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **manual**: manually handle
         /// *   **disable**: disable
         /// *   **add-whitelist**: add to the whitelist
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

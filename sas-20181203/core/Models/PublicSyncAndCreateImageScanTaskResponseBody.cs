@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The result of the image scan task. Valid values:
             /// 
             /// *   **SUCCESS**: The task is successful.
-            /// *   **TASK\_NOT\_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.
+            /// *   **TASK_NOT_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]

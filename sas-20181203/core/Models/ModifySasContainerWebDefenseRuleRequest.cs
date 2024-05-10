@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **block**
             /// *   **audit**
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DefenseMode")]
             [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The path that is protected.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DefensePath")]
             [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **0**: basic mode (whitelist)
             /// *   **1**: complex mode (blacklist)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("GuardType")]
             [Validation(Required=false)]
@@ -103,6 +109,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

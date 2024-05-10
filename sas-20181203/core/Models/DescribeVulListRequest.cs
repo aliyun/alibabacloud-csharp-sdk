@@ -143,6 +143,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **app**: application vulnerability that is detected by using web scanner
         /// *   **emg**: urgent vulnerability.
         /// *   **sca**: application vulnerability that is detected by using software component analysis
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

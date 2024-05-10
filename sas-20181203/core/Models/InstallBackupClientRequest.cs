@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallBackupClientRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }

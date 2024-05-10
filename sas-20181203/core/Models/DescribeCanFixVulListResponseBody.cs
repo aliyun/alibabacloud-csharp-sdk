@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The name of the instance.
             /// 
-            /// The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+            /// The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]

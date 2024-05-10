@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class GetImageScanNumInPeriodRequest : TeaModel {
         /// <summary>
         /// The number of days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PastDay")]
         [Validation(Required=false)]

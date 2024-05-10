@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The name of the event.
         /// 
         /// >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the alert event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUID of the server to query.
         /// 
         /// >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

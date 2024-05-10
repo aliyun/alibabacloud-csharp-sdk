@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **groupName**: the name of the server group. The value is the new name of the server group. The new name cannot be the same as the original name of the server group.
         /// 
         /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to obtain the values of the groupFlag and groupId parameters. You cannot change the value of the groupFlag or groupId parameter. You can change only the value of the groupName parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

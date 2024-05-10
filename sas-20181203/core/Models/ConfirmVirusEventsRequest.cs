@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: yes
         /// *   **0**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationAll")]
         [Validation(Required=false)]
@@ -24,8 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **default**: performs in-depth detection and removal
         /// *   **ignore**: ignores the alert event
-        /// *   **advance\_mark\_mis_info**: adds the alert events to the whitelist
+        /// *   **advance_mark_mis_info**: adds the alert events to the whitelist
         /// *   **manual_handled**: marks the alert events as manually handled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationCode")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **block**: Interception Mode
         /// *   **audit**: Alert Mode
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefenceMode")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The directory for which you want to enable web tamper proofing.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Dir")]
         [Validation(Required=false)]
@@ -72,6 +76,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the protected directory for which you want to change the status of web tamper proofing.
         /// 
         /// > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -121,11 +127,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The local path to the backup files of the protected directory.\
+        /// The local path to the backup files of the protected directory.\\
         /// The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:
         /// 
         /// *   Linux server: /usr/local/aegis/bak
-        /// *   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak
+        /// *   Windows server: C:\\Program Files (x86)\\Alibaba\\Aegis\\bak
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalBackupDir")]
         [Validation(Required=false)]
@@ -152,6 +160,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUID of the server on which the protected directory is located.
         /// 
         /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

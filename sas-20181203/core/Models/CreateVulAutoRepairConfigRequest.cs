@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The vulnerabilities that can be automatically fixed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VulAutoRepairConfigList")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList : TeaModel {
             /// <summary>
             /// The alias of the vulnerability.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The name of the vulnerability.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the export task.
         /// 
         /// >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]

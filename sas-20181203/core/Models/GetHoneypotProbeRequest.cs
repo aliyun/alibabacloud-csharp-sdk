@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The probe ID.
         /// 
         /// > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]

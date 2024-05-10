@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The namespace.
         /// 
         /// > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the network object.
         /// 
         /// > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetName")]
         [Validation(Required=false)]
@@ -65,6 +71,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The object type. Valid values:
         /// 
         /// *   **IMAGE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.
+        /// >  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The rule status for container tamper-proofing. Valid values:
         /// - **on**
         /// - **off**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

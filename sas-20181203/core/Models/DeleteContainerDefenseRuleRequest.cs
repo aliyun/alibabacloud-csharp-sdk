@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The IDs of the rules that you want to delete.
         /// 
-        /// >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule IDs.
+        /// >  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule IDs.
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

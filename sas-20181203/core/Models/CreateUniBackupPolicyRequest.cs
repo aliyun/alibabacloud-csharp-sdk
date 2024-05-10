@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **MYSQL**
         /// *   **ORACLE**
         /// *   **MSSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseType")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **interval**: the interval of backup tasks.
         /// *   **type**: the unit of the interval.
         /// *   **days**: the days of a week on which a backup task is performed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FullPlan")]
         [Validation(Required=false)]
@@ -63,6 +67,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **interval**: the interval of backup tasks.
         /// *   **type**: the unit of the interval.
         /// *   **days**: the days of a week on which a backup task is performed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IncPlan")]
         [Validation(Required=false)]
@@ -72,6 +78,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the Elastic Compute Service (ECS) instance.
         /// 
         /// >  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the IDs of ECS instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -79,6 +87,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the anti-ransomware policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
@@ -86,6 +96,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The retention period of backup data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Retention")]
         [Validation(Required=false)]
@@ -93,6 +105,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpeedLimiter")]
         [Validation(Required=false)]
@@ -100,6 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The region in which the server resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UniRegionId")]
         [Validation(Required=false)]
@@ -108,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The UUID of the server whose data is backed up based on the anti-ransomware policy.
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+        /// >  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

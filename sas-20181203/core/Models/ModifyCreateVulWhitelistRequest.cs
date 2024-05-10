@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **Tags**: the tag that is added to the vulnerability.
         /// 
         /// >  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to query the information about the vulnerability that you want to add to the whitelist.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Whitelist")]
         [Validation(Required=false)]

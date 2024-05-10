@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the whitelist.
         /// 
         /// >  You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

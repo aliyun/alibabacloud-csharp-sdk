@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **off**: disables web tamper proofing
         /// 
         /// > After you disable web tamper proofing for the specified server, one quota is released.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server for which you want to enable or disable web tamper proofing. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

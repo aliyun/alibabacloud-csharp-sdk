@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public int? StrategyId { get; set; }

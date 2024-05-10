@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

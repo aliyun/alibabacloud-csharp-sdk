@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the anti-ransomware policy.
         /// 
         /// > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

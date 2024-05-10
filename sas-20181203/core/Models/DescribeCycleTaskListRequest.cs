@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The name of the task. Valid values:
         /// 
-        /// *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
+        /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
         /// *   **IMAGE_SCAN**: image scan task
-        /// *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -37,9 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the task. Valid values:
         /// 
-        /// *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
+        /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
         /// *   **IMAGE_SCAN**: image scan task
-        /// *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

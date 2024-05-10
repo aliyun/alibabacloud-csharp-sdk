@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: yes
         /// *   **0**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The first time when the task is performed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FirstDateStr")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The interval of the task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IntervalPeriod")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **day**: days
         /// *   **hour**: hours
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time when the task ends. Unit: hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetEndTime")]
         [Validation(Required=false)]
@@ -66,6 +76,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time when the task is started. Unit: hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetStartTime")]
         [Validation(Required=false)]
@@ -77,6 +89,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
         /// *   **IMAGE_SCAN**: image scan task
         /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -88,6 +102,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
         /// *   **IMAGE_SCAN**: image scan task
         /// *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

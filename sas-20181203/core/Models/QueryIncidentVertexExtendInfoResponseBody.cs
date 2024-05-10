@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AssetList { get; set; }
 
                 /// <summary>
-                /// ATT\&CK
+                /// ATT\\&CK
                 /// </summary>
                 [NameInMap("AttCk")]
                 [Validation(Required=false)]

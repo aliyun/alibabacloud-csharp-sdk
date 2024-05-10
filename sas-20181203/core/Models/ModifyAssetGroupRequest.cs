@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the new server group to which the servers belong.
         /// 
         /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).
         /// 
         /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

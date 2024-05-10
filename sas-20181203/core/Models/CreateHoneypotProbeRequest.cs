@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the management node.
         /// 
         /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ControlNodeId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the probe.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -127,6 +131,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **host_probe**: host probe
         /// *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProbeType")]
         [Validation(Required=false)]

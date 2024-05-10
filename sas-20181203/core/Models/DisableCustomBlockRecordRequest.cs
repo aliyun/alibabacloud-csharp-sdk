@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The IP address that is specified in the policy.
         /// 
         /// > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **in**: inbound
         /// *   **out**: outbound
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]

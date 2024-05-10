@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the management node.
         /// 
         /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

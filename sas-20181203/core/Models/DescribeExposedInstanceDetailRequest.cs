@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The UUID of the server that is exposed on the Internet.
         /// 
-        /// >  You can call the [DescribeExposedInstanceList](~~198153~~) operation to query the UUIDs of servers.
+        /// >  You can call the [DescribeExposedInstanceList](https://help.aliyun.com/document_detail/198153.html) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the asset group. Separate multiple IDs with commas (,).
         /// 
         /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupIdList")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **emg**: urgent vulnerability
         /// *   **app**: vulnerability detected by using a web scanner
         /// *   **sca**: vulnerability detected based on software component analysis
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]

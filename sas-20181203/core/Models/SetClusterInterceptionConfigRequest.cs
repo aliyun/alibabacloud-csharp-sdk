@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the cluster. Separate multiple cluster IDs with commas (,).
         /// 
         /// > You can call the [ListClusterInterceptionConfig](~~ListClusterInterceptionConfig~~) operation to query the IDs of clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: yes
         /// *   **0**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SwitchOn")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **0**: the interception switch
         /// *   **1**: the interception type switch
         /// *   **2**: the interception history switch
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SwitchType")]
         [Validation(Required=false)]

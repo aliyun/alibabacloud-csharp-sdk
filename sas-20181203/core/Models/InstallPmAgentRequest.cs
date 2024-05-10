@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **aliyun_assist**: Cloud Assistant client
         /// *   **aliyun_monitor**: CloudMonitor client
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

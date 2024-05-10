@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeImageLatestScanTaskRequest : TeaModel {
         /// <summary>
         /// The digest value of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]

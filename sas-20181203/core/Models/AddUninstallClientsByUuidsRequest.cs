@@ -40,7 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+        /// >  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

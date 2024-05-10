@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The ID of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.
+                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the ID of the baseline check item.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The name of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.
+                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the name of the baseline check item.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The vulnerability ID.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.
+                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The vulnerability name.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.
+                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
+        /// >  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the rule template.
         /// 
-        /// >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.
+        /// >  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.
         /// </summary>
         [NameInMap("StrategyTemplateId")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The honeypot ID.
         /// 
         /// >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotId")]
         [Validation(Required=false)]

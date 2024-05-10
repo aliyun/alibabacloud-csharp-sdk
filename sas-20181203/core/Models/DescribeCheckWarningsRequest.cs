@@ -105,6 +105,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUID of the server on which the baseline check is performed.
         /// 
         /// > To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the IDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

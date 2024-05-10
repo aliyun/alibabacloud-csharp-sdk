@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
+        /// >  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

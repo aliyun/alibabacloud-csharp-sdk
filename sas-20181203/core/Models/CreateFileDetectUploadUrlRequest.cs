@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **4**: script file
         /// 
         /// > If you do not know the type of the file, set this parameter to **0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

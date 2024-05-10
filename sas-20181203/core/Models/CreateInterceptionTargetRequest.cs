@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The namespace to which the network object belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the object to be blocked.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetName")]
         [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The object type. Valid value:
         /// 
         /// *   **IMAGE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

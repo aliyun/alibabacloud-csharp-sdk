@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **block**: Interception Mode
         /// *   **audit**: Alert Mode
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefenceMode")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The directory that you want to protect.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Dir")]
         [Validation(Required=false)]
@@ -113,6 +117,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The local path to the backup files of the protected directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalBackupDir")]
         [Validation(Required=false)]
@@ -139,6 +145,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUID of the server for which you want to add a directory to protect.
         /// 
         /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

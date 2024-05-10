@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ListClusterPluginInfoRequest : TeaModel {
         /// <summary>
         /// The IDs of the clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

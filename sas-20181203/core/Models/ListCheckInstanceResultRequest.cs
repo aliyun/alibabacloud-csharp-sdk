@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ListCheckInstanceResultRequest : TeaModel {
         /// <summary>
         /// The ID of the check item.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]

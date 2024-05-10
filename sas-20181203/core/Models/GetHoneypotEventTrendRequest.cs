@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The source IP address of the attack.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SrcIp")]
         [Validation(Required=false)]

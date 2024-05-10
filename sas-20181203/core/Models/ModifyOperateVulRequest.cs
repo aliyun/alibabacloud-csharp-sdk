@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         ///     *   **1**: yes
         /// 
         /// >  You can fix multiple vulnerabilities at a time. Separate the details of multiple vulnerabilities with commas (,). You can call the [DescribeVulLIst](~~DescribeVulList~~) operation to query the details of vulnerabilities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Info")]
         [Validation(Required=false)]
@@ -48,8 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **vul_fix**: fixes the vulnerability.
         /// *   **vul_verify**: verifies the vulnerability fix.
         /// *   **vul_ignore**: ignores the vulnerability.
-        /// *   **vul\_undo_ignore**: cancels ignoring the vulnerability.
+        /// *   **vul_undo_ignore**: cancels ignoring the vulnerability.
         /// *   **vul_delete**: deletes the vulnerability.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperateType")]
         [Validation(Required=false)]
@@ -75,6 +79,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **sca**: vulnerability that is detected based on software component analysis
         /// 
         /// >  You cannot fix the urgent vulnerabilities, application vulnerabilities, or vulnerabilities that are detected based on software component analysis.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

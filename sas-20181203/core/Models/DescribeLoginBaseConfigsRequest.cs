@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The logon type of the configuration to query. Valid values:
         /// 
-        /// *   **login\_common_location**: common logon location
-        /// *   **login\_common_ip**: common logon IP address
-        /// *   **login\_common_time**: common logon time range
-        /// *   **login\_common_account**: common logon account
+        /// *   **login_common_location**: common logon location
+        /// *   **login_common_ip**: common logon IP address
+        /// *   **login_common_time**: common logon time range
+        /// *   **login_common_account**: common logon account
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

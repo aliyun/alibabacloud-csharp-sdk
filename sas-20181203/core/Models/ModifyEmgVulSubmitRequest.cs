@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the vulnerability.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **yes**
         /// *   **no**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserAgreement")]
         [Validation(Required=false)]

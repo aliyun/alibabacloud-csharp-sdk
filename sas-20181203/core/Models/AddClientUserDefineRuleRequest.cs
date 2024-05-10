@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **0**: allow
         /// *   **1**: block
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the custom defense rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -138,6 +142,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **5**: Operation on Registry
         /// *   **6**: Dynamic-link Library Loading
         /// *   **7**: File Renaming
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

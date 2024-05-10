@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The names of the tags that you want to manage. Separate multiple tag names with commas (,).
         /// 
         /// >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the names of tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]

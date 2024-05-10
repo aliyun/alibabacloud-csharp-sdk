@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **on**: yes
         /// *   **off**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **sys**: Windows system vulnerability
         /// *   **cms**: Web-CMS vulnerability
         /// *   **emg**: urgent vulnerability
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

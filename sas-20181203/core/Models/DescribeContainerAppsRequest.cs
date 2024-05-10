@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The page number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
         /// 
         /// >  We recommend that you do not leave this parameter empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

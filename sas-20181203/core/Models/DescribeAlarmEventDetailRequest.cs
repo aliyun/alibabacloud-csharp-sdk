@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The unique identifier of the alert event.
         /// 
         /// > To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlarmUniqueInfo")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the request source. Set the value to **sas**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]

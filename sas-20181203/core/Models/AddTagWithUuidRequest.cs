@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class AddTagWithUuidRequest : TeaModel {
         /// <summary>
         /// The name of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

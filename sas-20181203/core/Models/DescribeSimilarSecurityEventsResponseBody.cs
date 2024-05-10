@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   Image Scan
             /// *   Trusted exception
             /// 
-            /// For more information about alert types, see [Overview](~~68388~~).
+            /// For more information about alert types, see [Overview](https://help.aliyun.com/document_detail/68388.html).
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]

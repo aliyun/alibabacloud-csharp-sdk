@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **IMAGE**
         /// *   **CONTAINER**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AssetType")]
         [Validation(Required=false)]

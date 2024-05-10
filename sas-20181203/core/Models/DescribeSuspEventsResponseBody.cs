@@ -484,14 +484,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeSuspEventsResponseBodySuspEventsTacticItems> TacticItems { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsTacticItems : TeaModel {
                 /// <summary>
-                /// The ATT\&CK tactic name.
+                /// The ATT\\&CK tactic name.
                 /// </summary>
                 [NameInMap("TacticDisplayName")]
                 [Validation(Required=false)]
                 public string TacticDisplayName { get; set; }
 
                 /// <summary>
-                /// The ATT\&CK stage information.
+                /// The ATT\\&CK stage information.
                 /// </summary>
                 [NameInMap("TacticId")]
                 [Validation(Required=false)]

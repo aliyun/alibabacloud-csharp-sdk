@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The cause why the plug-in is invalid. Valid values:
             /// 
             /// *   **PLUGIN_OFFLINE**: The plug-in is offline.
-            /// *   **PLUGIN\_NOT_INSTALLED**: The plug-in is not installed.
-            /// *   **PLUGIN\_INVALID_VERSION**: The version of the plug-in is invalid.
+            /// *   **PLUGIN_NOT_INSTALLED**: The plug-in is not installed.
+            /// *   **PLUGIN_INVALID_VERSION**: The version of the plug-in is invalid.
             /// </summary>
             [NameInMap("InvalidType")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DeleteTagWithUuidRequest : TeaModel {
         /// <summary>
         /// The name of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

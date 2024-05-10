@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the node that you want to query.
         /// 
         /// >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **alert**
         /// *   **ip**
         /// *   **domain**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VertexLabel")]
         [Validation(Required=false)]

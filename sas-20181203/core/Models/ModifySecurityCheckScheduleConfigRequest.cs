@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **5**: Friday
         /// *   **6**: Saturday
         /// *   **7**: Sunday
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DaysOfWeek")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **6**: 06:00 to 12:00
         /// *   **12**: 12:00 to 18:00
         /// *   **18**: 18:00 to 24:00
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **6**: 06:00 to 12:00
         /// *   **12**: 12:00 to 18:00
         /// *   **18**: 18:00 to 24:00
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

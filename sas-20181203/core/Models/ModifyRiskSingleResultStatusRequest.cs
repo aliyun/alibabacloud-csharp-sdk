@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ModifyRiskSingleResultStatusRequest : TeaModel {
         /// <summary>
         /// The IDs of the affected assets.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **ignored**: ignores the risk item.
         /// *   **failed**: cancels ignoring the risk item.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the check task to which the affected assets belong.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

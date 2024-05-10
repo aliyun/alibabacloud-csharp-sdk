@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeOnceTaskLeafRecordPageRequest : TeaModel {
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 20
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// Specifies whether extension information is associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RelateInfo")]
         [Validation(Required=false)]
@@ -70,6 +76,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **IMAGE_SCAN**: image scan task
         /// *   **IMAGE_REGISTRY_PULL**: image asset synchronization task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

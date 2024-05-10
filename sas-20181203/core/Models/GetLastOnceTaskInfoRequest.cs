@@ -19,9 +19,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The name of the task. Valid values:
         /// 
-        /// *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
-        /// *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
+        /// *   **CLIENT_PROBLEM_CHECK**: client diagnosis task
+        /// *   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant
         /// *   **ASSETS_COLLECTION**: asset collection task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -30,9 +32,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the task. Valid values:
         /// 
-        /// *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
-        /// *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
-        /// *   **ASSETS\_COLLECTION**: asset collection task
+        /// *   **CLIENT_PROBLEM_CHECK**: client diagnosis task
+        /// *   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant
+        /// *   **ASSETS_COLLECTION**: asset collection task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

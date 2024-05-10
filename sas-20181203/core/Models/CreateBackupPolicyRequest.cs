@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class CreateBackupPolicyRequest : TeaModel {
         /// <summary>
         /// The name of the anti-ransomware policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -22,13 +24,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         ///     *   **1**: recommended policy
         ///     *   **0**: custom policy
         /// 
-        /// *   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to \[].
+        /// *   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].
         /// 
-        /// *   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to \[].
+        /// *   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to [].
         /// 
         /// *   **ExcludeSystemPath**: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to **true**. If you do not want to exclude a directory, leave this field empty.
         /// 
-        /// *   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to \[].
+        /// *   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].
         /// 
         /// *   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:
         /// 
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         ///     *   **false**: no
         /// 
         /// >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The version of the anti-ransomware policy. Set the value to **2.0.0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
@@ -68,6 +74,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUIDs of the servers that you want to protect.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

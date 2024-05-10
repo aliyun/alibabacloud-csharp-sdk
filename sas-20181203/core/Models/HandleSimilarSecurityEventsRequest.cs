@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The operation that you want to perform to handle the alert events.
         /// 
         /// >  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to query the operations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationCode")]
         [Validation(Required=false)]
@@ -28,11 +30,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.
         /// 
-        /// >  If you set **OperationCode** to **kill\_and\_quara**, **block\_ip**, or **virus\_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:
+        /// >  If you set **OperationCode** to **kill_and_quara**, **block_ip**, or **virus_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:
         /// 
         /// > *   **expireTime**: the end time of locking. Unit: milliseconds.
         /// 
-        /// >  If you set **OperationCode** to **kill\_and_quara**, the value of OperationParams must consist of the following fields:
+        /// >  If you set **OperationCode** to **kill_and_quara**, the value of OperationParams must consist of the following fields:
         /// 
         /// > *   **subOperation**: the method of detection and removal. Valid values:
         /// 
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the task that handles the alert events at a time.
         /// 
         /// >  You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

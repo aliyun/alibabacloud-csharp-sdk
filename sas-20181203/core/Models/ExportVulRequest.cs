@@ -133,6 +133,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **cms**: Web-CMS vulnerability
         /// *   **app**: application vulnerability
         /// *   **emg**: urgent vulnerability
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

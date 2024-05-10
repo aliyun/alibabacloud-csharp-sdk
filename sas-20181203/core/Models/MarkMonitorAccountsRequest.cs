@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class MarkMonitorAccountsRequest : TeaModel {
         /// <summary>
         /// The IDs of the members.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]

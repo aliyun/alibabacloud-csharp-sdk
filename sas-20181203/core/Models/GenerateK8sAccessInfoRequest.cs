@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the Kubernetes cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time at which the container ends to be added.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpireDate")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **Azure**
         /// *   **AWS**
         /// *   **Others**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

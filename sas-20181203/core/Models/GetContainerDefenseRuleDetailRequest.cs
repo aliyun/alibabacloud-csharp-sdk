@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.
+        /// >  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

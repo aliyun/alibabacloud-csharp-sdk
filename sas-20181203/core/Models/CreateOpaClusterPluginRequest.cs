@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The cluster IDs.
         /// 
         /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

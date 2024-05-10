@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The condition by which the feature is applied. Valid values:
         /// 
         /// *   **image_repo**: the ID of the image repository
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The type of the feature. Valid values:
         /// 
         /// *   **image_repo**: image repository protection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

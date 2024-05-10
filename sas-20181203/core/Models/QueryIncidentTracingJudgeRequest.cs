@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the event that you want to query.
         /// 
-        /// >  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the event ID.
+        /// >  You can call the [DescribeCloudSiemEvents](https://help.aliyun.com/document_detail/2621307.html) operation to query the event ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IncidentId")]
         [Validation(Required=false)]

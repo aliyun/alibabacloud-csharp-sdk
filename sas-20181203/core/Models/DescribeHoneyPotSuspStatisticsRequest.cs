@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeHoneyPotSuspStatisticsRequest : TeaModel {
         /// <summary>
         /// The source of the request. Set the value to **honeypot**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time range of the data to query. Unit: days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StatisticsDays")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **vpcInstanceId**: VPC
         /// *   **uuid**: server
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StatisticsKeyType")]
         [Validation(Required=false)]

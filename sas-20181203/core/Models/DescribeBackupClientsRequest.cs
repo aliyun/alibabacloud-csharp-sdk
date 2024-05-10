@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The region in which the anti-ransomware feature is supported.
         /// > You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SupportRegionId")]
         [Validation(Required=false)]

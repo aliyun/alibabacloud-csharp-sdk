@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class GenerateOnceTaskRequest : TeaModel {
         /// <summary>
         /// The additional information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
@@ -26,9 +28,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The name of the scan task. Valid values:
         /// 
-        /// *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
-        /// *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-        /// *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+        /// *   **CLIENT_PROBLEM_CHECK**: a client diagnosis task
+        /// *   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant
+        /// *   **ASSET_SECURITY_CHECK**: a task of asset information collection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -37,9 +41,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the scan task. Valid values:
         /// 
-        /// *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
-        /// *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-        /// *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+        /// *   **CLIENT_PROBLEM_CHECK**: a client diagnosis task
+        /// *   **CLIENT_DEV_OPS**: an O\\&M task of Cloud Assistant
+        /// *   **ASSET_SECURITY_CHECK**: a task of asset information collection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

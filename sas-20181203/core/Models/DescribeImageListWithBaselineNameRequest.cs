@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeImageListWithBaselineNameRequest : TeaModel {
         /// <summary>
         /// The name of the image baseline.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BaselineNameKey")]
         [Validation(Required=false)]

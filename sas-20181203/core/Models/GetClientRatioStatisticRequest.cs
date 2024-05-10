@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeEnd")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeStart")]
         [Validation(Required=false)]

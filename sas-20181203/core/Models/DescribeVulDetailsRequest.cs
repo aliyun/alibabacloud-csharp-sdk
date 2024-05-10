@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **zh**: Chinese
         /// *   **en**: English
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The name of the vulnerability.
         /// 
         /// > You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **app**: application vulnerabilitiy
         /// *   **emg**: urgent vulnerability
         /// *   **sca**: vulnerability that is detected based on software component analysis
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

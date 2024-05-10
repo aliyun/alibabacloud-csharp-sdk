@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The region ID of the server that hosts the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UniRegionId")]
         [Validation(Required=false)]

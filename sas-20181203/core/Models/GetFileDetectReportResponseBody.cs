@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// Valid values:
             /// 
-            /// *   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&C servers, webshells, and web attacks.
+            /// *   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\\&C servers, webshells, and web attacks.
             /// </summary>
             [NameInMap("Intelligences")]
             [Validation(Required=false)]

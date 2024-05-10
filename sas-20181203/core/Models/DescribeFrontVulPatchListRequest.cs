@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **name**: the name of the vulnerability.
         /// *   **uuid**: the UUID of the server on which the vulnerability is detected.
         /// *   **tag**: the tag that is added to the vulnerability. Set this field to **system**, which indicates Windows system vulnerabilities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Info")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The operation that you want to perform on the vulnerability. Set the value to **vul_fix**, which indicates vulnerability fixing.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperateType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the vulnerability. Set the value to **sys**, which indicates Windows system vulnerabilities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

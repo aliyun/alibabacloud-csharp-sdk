@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The operations that you want to perform on the files.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileOps")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The paths to the files that you want to monitor. Wildcard characters are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FilePaths")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The paths to the processes that you want to monitor. Wildcard characters are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProcPaths")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   pass: allow
         /// *   alert
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleAction")]
         [Validation(Required=false)]
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

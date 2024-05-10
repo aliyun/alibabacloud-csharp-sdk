@@ -83,6 +83,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The timestamp when the attack stops. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -111,6 +113,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.
         /// 
         /// >  The start time that you specify must be within the previous 40 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -127,6 +131,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **DETAILS**: attack details
         /// 
         /// >  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage and PageSize parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

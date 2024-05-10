@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **MYSQL**
         /// *   **MSSQL**
         /// *   **Oracle**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseType")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUID of the agent that is used to back up the data of the database.
         /// 
         /// > You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceUuid")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The region ID of the server that hosts the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UniRegionId")]
         [Validation(Required=false)]

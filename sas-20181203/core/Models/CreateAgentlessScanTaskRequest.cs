@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUIDs of the assets on which you want to run the detection task.
         /// 
         /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

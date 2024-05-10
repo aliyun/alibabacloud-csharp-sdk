@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the honeypot template.
         /// 
         /// > You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotPresetId")]
         [Validation(Required=false)]

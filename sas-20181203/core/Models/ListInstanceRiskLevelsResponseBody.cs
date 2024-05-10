@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+            /// The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

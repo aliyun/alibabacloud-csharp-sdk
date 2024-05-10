@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeLogstoreStorageRequest : TeaModel {
         /// <summary>
         /// The ID of the request source. Set the value to **sas**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]

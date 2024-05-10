@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the container image.
         /// 
-        /// >  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
+        /// >  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the image repository.
         /// 
-        /// >  You can call the [ListRepository](~~145293~~) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.
+        /// >  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the container image.
         /// 
-        /// >  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
+        /// >  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
         /// </summary>
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]
@@ -230,6 +230,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **cve**: system vulnerability
         /// *   **sca**: application vulnerability
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -66,6 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The name of the chatbot.
         /// 
         /// > The name of a chatbot must be 2 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleActionName")]
         [Validation(Required=false)]
@@ -73,6 +75,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The webhook URL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SendUrl")]
         [Validation(Required=false)]

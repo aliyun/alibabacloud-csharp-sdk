@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class OperateImageBaselineWhitelistRequest : TeaModel {
         /// <summary>
         /// The keys of baseline check items.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BaselineItemKeyList")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **add**: adds the check items to the whitelist
         /// *   **del**: removes the check items from the whitelist
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]

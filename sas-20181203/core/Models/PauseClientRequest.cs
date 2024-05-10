@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class PauseClientRequest : TeaModel {
         /// <summary>
         /// The UUIDs of servers for which you want to enable or disable the Security Center agent.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **0**: disabled
         /// *   **1**: enabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

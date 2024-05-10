@@ -118,6 +118,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **cve**: Linux software vulnerability
         /// *   **sys**: Windows system vulnerability
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -134,6 +136,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// An array that consists of the names of vulnerabilities.
         /// 
         /// >  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to obtain the names of vulnerabilities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VulNames")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The end timestamp of the query. Unit: milliseconds.
         /// 
         /// > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The start timestamp of the query. Unit: milliseconds.
         /// 
         /// > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

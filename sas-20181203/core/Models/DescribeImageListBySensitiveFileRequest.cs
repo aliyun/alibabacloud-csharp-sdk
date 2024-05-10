@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the specified container image.
         /// 
-        /// > You can call the [ListRepository](~~451339~~) operation to obtain the IDs of container images from the value of the **InstanceId** response parameter.
+        /// > You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation to obtain the IDs of container images from the value of the **InstanceId** response parameter.
         /// </summary>
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]

@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("CheckSaleType")]
+            [Validation(Required=false)]
+            public int? CheckSaleType { get; set; }
+
             /// <summary>
             /// The name of the check item.
             /// </summary>

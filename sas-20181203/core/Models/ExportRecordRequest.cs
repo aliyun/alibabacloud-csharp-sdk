@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **baselineCspm**: the list of check results for configuration assessment
         /// *   **attack**: the list of alert events for attack analysis
         /// *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]

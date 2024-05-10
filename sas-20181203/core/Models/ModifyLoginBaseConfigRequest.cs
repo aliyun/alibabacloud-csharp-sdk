@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **account**: the common logon account.
         /// 
         /// > You must specify this field if the Type parameter is set to login_common_account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         ///     *   **del**: removes the server from the configuration.
         ///     *   **add**: adds the server to the configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
@@ -61,10 +65,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The logon type of the configuration to modify. Valid values:
         /// 
-        /// *   **login\_common_location**: common logon location
-        /// *   **login\_common_ip**: common logon IP address
-        /// *   **login\_common_time**: common logon time range
-        /// *   **login\_common_account**: common logon account
+        /// *   **login_common_location**: common logon location
+        /// *   **login_common_ip**: common logon IP address
+        /// *   **login_common_time**: common logon time range
+        /// *   **login_common_account**: common logon account
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

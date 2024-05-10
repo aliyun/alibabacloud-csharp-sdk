@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the check item.
         /// 
-        /// >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+        /// >  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of check items.
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]

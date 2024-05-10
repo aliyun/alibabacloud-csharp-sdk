@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **check**
         /// *   **verify**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

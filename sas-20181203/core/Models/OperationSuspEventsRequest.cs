@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **mark_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.
         /// *   **rm_mark_mis_info**: cancels false positives by removing the alerts from the whitelist.
         /// *   **offline_handled**: marks the alerts as handled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The IDs of alert events.
         /// 
         /// > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SuspiciousEventIds")]
         [Validation(Required=false)]

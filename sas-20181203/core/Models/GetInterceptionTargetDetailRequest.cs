@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the network object.
         /// 
         /// > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]

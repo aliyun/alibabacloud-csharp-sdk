@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1.0.0**
         /// *   **2.0.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiVersion")]
         [Validation(Required=false)]
@@ -61,6 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The names of the buckets.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketNameList")]
         [Validation(Required=false)]
@@ -57,6 +59,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: checks all objects in the bucket.
         /// *   **2**: checks only new objects in the bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScanMode")]
         [Validation(Required=false)]

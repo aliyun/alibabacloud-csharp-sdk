@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class CreateHoneypotPresetRequest : TeaModel {
         /// <summary>
         /// The name of the honeypot image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotImageName")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **portrait_option**: Social Source Tracing
         /// *   **burp**: Burp-specific Defense
         /// *   **trojan_git**: Git-specific Defense
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Meta")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the management node to which you want to deploy honeypots.
         /// 
         /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The custom name of the honeypot template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PresetName")]
         [Validation(Required=false)]

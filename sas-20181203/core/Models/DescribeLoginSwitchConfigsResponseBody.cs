@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the alert that you enabled or disabled. Valid values:
             /// 
-            /// *   **login\_common_ip**: alerts for unapproved logon IP addresses
-            /// *   **login\_common_time**: alerts for unapproved logon time ranges
-            /// *   **login\_common_account**: alerts for unapproved logon accounts
+            /// *   **login_common_ip**: alerts for unapproved logon IP addresses
+            /// *   **login_common_time**: alerts for unapproved logon time ranges
+            /// *   **login_common_account**: alerts for unapproved logon accounts
             /// </summary>
             [NameInMap("Item")]
             [Validation(Required=false)]

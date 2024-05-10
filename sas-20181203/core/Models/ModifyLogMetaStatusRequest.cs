@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The name of the dedicated Logstore in which logs are stored.
         /// 
         /// >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **enabled**
         /// *   **disabled**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

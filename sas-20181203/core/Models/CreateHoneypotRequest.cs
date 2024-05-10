@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the honeypot image.
         /// 
         /// > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotImageId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The name of the honeypot image.
         /// 
         /// > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotImageName")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The custom name of the honeypot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotName")]
         [Validation(Required=false)]
@@ -65,6 +71,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the management node.
         /// 
         /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

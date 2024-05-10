@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The UUIDs of servers. Separate multiple UUIDs with commas (,).
         /// 
-        /// > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+        /// > You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The IDs of the check items. Separate multiple IDs with commas (,).
         /// 
-        /// > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+        /// > You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of check items.
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).
         /// 
         /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

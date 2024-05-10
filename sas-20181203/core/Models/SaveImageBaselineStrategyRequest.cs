@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The baseline check items.
         /// 
         /// > You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BaselineItemList")]
         [Validation(Required=false)]

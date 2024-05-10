@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class GetFileDetectResultRequest : TeaModel {
         /// <summary>
         /// The identifiers of files. Only MD5 hash values are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HashKeyList")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **4**: script file
         /// 
         /// > If you do not know the type of the file, set this parameter to 0.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

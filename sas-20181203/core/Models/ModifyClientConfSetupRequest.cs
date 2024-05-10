@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyTag")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   major
         /// *   advanced
         /// *   basic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyTagValue")]
         [Validation(Required=false)]

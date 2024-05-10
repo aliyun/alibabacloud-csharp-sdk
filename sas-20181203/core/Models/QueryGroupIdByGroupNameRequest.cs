@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class QueryGroupIdByGroupNameRequest : TeaModel {
         /// <summary>
         /// The name of the asset group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

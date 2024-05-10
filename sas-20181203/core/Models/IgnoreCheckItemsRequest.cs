@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The operation that you want to perform on the risk item.Valid values:
         /// *  **1**: adds the risk item to the whitelist
         /// *  **2**: removes the risk item from the whitelist
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

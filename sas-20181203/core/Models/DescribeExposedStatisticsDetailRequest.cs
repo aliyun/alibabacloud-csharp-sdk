@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **exposurePort**: ports
         /// *   **exposureComponent**: system components
         /// *   **exposureIp**: IP addresses
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StatisticsType")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the container cluster.
         /// 
         /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **1**: blocks traffic.
         /// *   **2**: allows traffic and generates alerts.
         /// *   **3**: allows traffic and does not generate alerts.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InterceptType")]
         [Validation(Required=false)]
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderIndex")]
         [Validation(Required=false)]
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the defense rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -65,6 +75,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **0**: disables the rule.
         /// *   **1**: enables the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleSwitch")]
         [Validation(Required=false)]

@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   Trusted exception
         /// *   Others
         /// 
-        /// For more information about alert types, see [Alerts](~~68388~~).
+        /// For more information about alert types, see [Alerts](https://help.aliyun.com/document_detail/68388.html).
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]

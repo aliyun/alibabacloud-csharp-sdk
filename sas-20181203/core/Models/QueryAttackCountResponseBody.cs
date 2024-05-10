@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? EventCount { get; set; }
 
             /// <summary>
-            /// The stage ID of the ATT\&CK attack.
+            /// The stage ID of the ATT\\&CK attack.
             /// </summary>
             [NameInMap("TacticId")]
             [Validation(Required=false)]
             public string TacticId { get; set; }
 
             /// <summary>
-            /// The type of stage of the ATT\&CK attack.
+            /// The type of stage of the ATT\\&CK attack.
             /// </summary>
             [NameInMap("TacticType")]
             [Validation(Required=false)]

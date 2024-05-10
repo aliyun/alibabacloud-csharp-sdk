@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the check item.
         /// 
-        /// >  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of check items.
+        /// >  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of check items.
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).
         /// 
-        /// >  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of alerts that are triggered by check items.
+        /// >  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of alerts that are triggered by check items.
         /// </summary>
         [NameInMap("CheckWarningIds")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the risk item that you want to ignore or cancel ignoring.
         /// 
-        /// >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of risk items.
+        /// >  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of risk items.
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]
@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: ignores a risk item
         /// *   **2**: cancels ignoring a risk item
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

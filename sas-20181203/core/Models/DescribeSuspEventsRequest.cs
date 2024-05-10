@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tactic ID of ATT\&CK.
+        /// The tactic ID of ATT\\&CK.
         /// </summary>
         [NameInMap("TacticId")]
         [Validation(Required=false)]

@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageUuid")]
         [Validation(Required=false)]

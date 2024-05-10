@@ -113,13 +113,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             ///     *   **1**: recommended policy
             ///     *   **0**: custom policy
             /// 
-            /// *   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.
+            /// *   **Include**: the format of the files that are protected. If the value of this field is [], all formats of files are protected.
             /// 
-            /// *   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.
+            /// *   **Source**: the directory that is protected. If the value of this field is [], all directories are protected.
             /// 
             /// *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.
             /// 
-            /// *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].
+            /// *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is [].
             /// 
             /// *   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:
             /// 

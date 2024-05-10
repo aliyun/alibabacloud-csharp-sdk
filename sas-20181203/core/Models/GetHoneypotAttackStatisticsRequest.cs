@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The source IP address of the attack.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SrcIp")]
         [Validation(Required=false)]
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **TOP_ATTACKED_IP**: the top 5 IP addresses that are attacked the most frequently
         /// *   **ATTACK_EVENT_TYPE**: the type of the intrusion event
         /// *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StatisticsType")]
         [Validation(Required=false)]

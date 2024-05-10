@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DeleteStrategyRequest : TeaModel {
         /// <summary>
         /// The ID of the baseline check policy that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

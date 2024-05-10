@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeAttachRecordsRequest : TeaModel {
         /// <summary>
         /// The application group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]

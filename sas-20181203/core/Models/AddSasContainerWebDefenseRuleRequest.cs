@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The path that you want to protect.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DefensePath")]
             [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// 
             /// *   **0**: basic mode (whitelist)
             /// *   **1**: complex mode (blacklist)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("GuardType")]
             [Validation(Required=false)]
@@ -87,6 +91,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The processes that you want to add to the whitelist.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ProcessPathList")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class ListCheckItemWarningMachineRequest : TeaModel {
         /// <summary>
         /// The ID of the check item.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the asset group.
         /// 
-        /// > You can call the [DescribeAllGroups](~~130972~~) operation to query the ID of the asset group.
+        /// > You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the ID of the asset group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

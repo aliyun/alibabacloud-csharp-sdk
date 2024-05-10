@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class SetRegistryScanDayNumRequest : TeaModel {
         /// <summary>
         /// The cycle at which you want to scan your images. Unit: days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScanDayNum")]
         [Validation(Required=false)]

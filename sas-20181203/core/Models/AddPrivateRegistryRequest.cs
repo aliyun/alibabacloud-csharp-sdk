@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class AddPrivateRegistryRequest : TeaModel {
         /// <summary>
         /// The domain name of the image repository.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: Internet
         /// *   **2**: virtual private cloud (VPC)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The password that is used to log on to the image repository.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: HTTP
         /// *   **2**: HTTPS
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The IP address of the image repository.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegistryHostIp")]
         [Validation(Required=false)]
@@ -71,6 +81,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The region ID.
         /// 
         /// >  You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegistryRegionId")]
         [Validation(Required=false)]
@@ -81,6 +93,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **harbor**
         /// *   **quay**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegistryType")]
         [Validation(Required=false)]
@@ -91,6 +105,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **V1**
         /// *   **V2**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegistryVersion")]
         [Validation(Required=false)]
@@ -105,6 +121,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The username that is used to log on to the image repository.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

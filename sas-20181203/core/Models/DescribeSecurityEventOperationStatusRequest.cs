@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The IDs of the alert events.
         /// 
         /// >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the task that handles the alert events.
         /// 
         /// >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

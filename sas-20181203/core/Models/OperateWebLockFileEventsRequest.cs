@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1**: yes
         /// *   **0**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DealAll")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The IDs of alert events.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventIds")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **offline_handled**: marks the alert events as handled offline
         /// *   **whitelist**: adds the alert events to the whitelist
         /// *   **rm_whitelist**: cancels adding the alert events to the whitelist
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationCode")]
         [Validation(Required=false)]

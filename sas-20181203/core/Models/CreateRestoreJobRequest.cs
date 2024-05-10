@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class CreateRestoreJobRequest : TeaModel {
         /// <summary>
         /// The directory in which the files included in the restoration task are located. This parameter is specified when you create the anti-ransomware policy. The value is a directory that requires protection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Includes")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The hash value of the snapshot.
         /// 
         /// > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotHash")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the snapshot that you want to use for restoration.
         /// 
         /// > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The version of the backup data.
         /// 
         /// > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotVersion")]
         [Validation(Required=false)]
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The path to which you want to restore data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server whose data you want to restore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
@@ -71,6 +83,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the backup vault that is used in the restoration task.
         /// 
         /// > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VaultId")]
         [Validation(Required=false)]

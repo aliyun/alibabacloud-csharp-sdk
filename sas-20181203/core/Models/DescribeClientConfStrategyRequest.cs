@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeClientConfStrategyRequest : TeaModel {
         /// <summary>
         /// The tag that is added to the server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   major
         /// *   advanced
         /// *   basic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

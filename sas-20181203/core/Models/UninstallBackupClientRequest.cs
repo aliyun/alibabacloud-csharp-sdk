@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **1.0.0**
         /// *   **2.0.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]

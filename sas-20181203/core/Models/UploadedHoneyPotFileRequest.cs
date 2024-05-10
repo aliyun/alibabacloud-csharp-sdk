@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The file key that you use to upload the file.
         /// 
-        /// >  The key is in the format of HONEYPOT_FILE/{Timestamp}\_{Custom file name}.
+        /// >  The key is in the format of HONEYPOT_FILE/{Timestamp}_{Custom file name}.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileKey")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the file that you want to upload.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The file type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileType")]
         [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the honeypot image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneypotImageName")]
         [Validation(Required=false)]
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The prompt template that corresponds to the file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateExtra")]
         [Validation(Required=false)]

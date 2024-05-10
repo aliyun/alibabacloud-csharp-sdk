@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **process_exec_file:** A process executes a file.
         /// *   **process_connect_ip:** A process connects to an IP address.
         /// *   **domain_trgger_alert:** A domain name triggers an alert.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RelationType")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the node that you want to query.
         /// 
         /// >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VertexId")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **alert**
         /// *   **ip**
         /// *   **domain**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VertexLabel")]
         [Validation(Required=false)]

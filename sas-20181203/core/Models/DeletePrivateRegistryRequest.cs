@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the image repository.
         /// 
         /// > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegistryId")]
         [Validation(Required=false)]

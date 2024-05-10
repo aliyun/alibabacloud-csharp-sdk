@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The domain name or the name of website that you want to query.
         /// 
         /// >  Fuzzy match is not supported. You must enter a complete domain name or a website.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

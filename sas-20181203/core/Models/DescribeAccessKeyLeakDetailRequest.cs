@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeAccessKeyLeakDetailRequest : TeaModel {
         /// <summary>
         /// The ID of the AccessKey pair leak.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

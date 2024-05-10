@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class EnableCustomInstanceBlockRecordRequest : TeaModel {
         /// <summary>
         /// The IP address that you want to block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

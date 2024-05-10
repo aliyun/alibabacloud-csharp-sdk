@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallCloudMonitorRequest : TeaModel {
         /// <summary>
-        /// The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey ID.
+        /// The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey ID.
         /// 
         /// > This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentAccessKey { get; set; }
 
         /// <summary>
-        /// The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey secret.
+        /// The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey secret.
         /// 
         /// > This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
         /// </summary>
@@ -28,7 +28,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentSecretKey { get; set; }
 
         /// <summary>
-        /// The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](~~183431~~).
+        /// The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](https://help.aliyun.com/document_detail/183431.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ArgusVersion")]
         [Validation(Required=false)]

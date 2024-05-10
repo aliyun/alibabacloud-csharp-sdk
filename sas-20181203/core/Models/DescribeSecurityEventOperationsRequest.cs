@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the alert event that you want to handle.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityEventId")]
         [Validation(Required=false)]

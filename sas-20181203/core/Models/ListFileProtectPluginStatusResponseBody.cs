@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// The returned code after you install the Security Center agent. Valid values:
             /// 
             /// 1.  0: The installation is successful.
-            /// 2.  \-2: The kernel does not support the installation.
+            /// 2.  \\-2: The kernel does not support the installation.
             /// </summary>
             [NameInMap("InstallCode")]
             [Validation(Required=false)]

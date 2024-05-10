@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeIpTagsRequest : TeaModel {
         /// <summary>
         /// The IP address in the alert event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the alert event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityEventId")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **custom**: a custom baseline check policy
         /// *   **common**: a standard baseline check policy
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustomType")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **3**: every 4 days
         /// *   **7**: every 8 days
         /// *   **30**: every 31 days
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -61,6 +67,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The new name of the baseline check policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -90,6 +98,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The subtype of the baselines. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RiskSubTypeName")]
         [Validation(Required=false)]
@@ -104,6 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -114,6 +126,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **groupId**: asset groups
         /// *   **uuid**: assets
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

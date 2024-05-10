@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class CreateCustomBlockRecordRequest : TeaModel {
         /// <summary>
         /// The IP address that you want to specify in the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **in**: inbound
         /// *   **out**: outbound
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The expiration time of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

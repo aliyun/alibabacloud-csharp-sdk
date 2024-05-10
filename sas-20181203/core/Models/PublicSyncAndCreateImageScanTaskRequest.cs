@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **CreateTime**: the timestamp when the image was created. Unit: milliseconds.
         /// 
         /// *   **UpdateTime**: the timestamp when the image was updated. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]

@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the anti-ransomware policy.
         /// 
         /// >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The point in time to which you want to restore data.
         /// 
         /// >  You can call the [DescribeRestorePlans](~~DescribeRestorePlans~~) operation to query the point in time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimePoint")]
         [Validation(Required=false)]

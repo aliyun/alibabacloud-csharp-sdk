@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeSuspEventDetailRequest : TeaModel {
         /// <summary>
         /// The data source of the exception. Set the value to sas.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The ID of the exception.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SuspiciousEventId")]
         [Validation(Required=false)]

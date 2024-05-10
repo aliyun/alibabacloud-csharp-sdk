@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **disable**
         /// *   **enable**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HoneyPotAction")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the virtual private cloud (VPC) on which the honeypot is deployed.
         /// 
         /// >  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

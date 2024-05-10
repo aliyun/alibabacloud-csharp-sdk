@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **ACCOUNT_SNAPSHOT**: accounts
         /// *   **SOFTWARE_SNAPSHOT**: software assets
         /// *   **SCA_SNAPSHOT**: middleware
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

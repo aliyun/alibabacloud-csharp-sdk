@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the management node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the alert event to which you want to add remarks.
         /// 
         /// >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID of the alert event from the NoteId parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The remarks that you want to add.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]

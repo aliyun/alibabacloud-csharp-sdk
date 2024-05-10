@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **lkm**: kernel module
         /// *   **autorun**: startup item
         /// *   **web_server**: website
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Biz")]
         [Validation(Required=false)]

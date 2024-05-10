@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **ASSETS_COLLECTION**: asset information collection task
         /// *   **IMAGE_SCAN**: image scan task
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **0**: allow
         /// *   **1**: block
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The ID of the rule.
         /// 
         /// >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) operation to query the IDs of rules.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

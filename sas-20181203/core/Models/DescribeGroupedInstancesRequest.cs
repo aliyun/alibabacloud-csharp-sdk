@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **groupId**: the group to which the assets belong
         /// *   **regionId**: the region in which the assets reside
         /// *   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupField")]
         [Validation(Required=false)]

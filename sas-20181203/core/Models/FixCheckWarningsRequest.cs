@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         ///     *   **value**: specifies whether a fix method is selected. Valid values: **0** and **1**. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.
         ///     *   **ruleId**: the ID of the fix method.
-        ///     *   **paramList**: an array that consists of the details about the fix method.\
-        ///         • **paramName**: the name of the fix method.\
+        ///     *   **paramList**: an array that consists of the details about the fix method.\\
+        ///         • **paramName**: the name of the fix method.\\
         ///         • **value**: the value of the fix method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckParams")]
         [Validation(Required=false)]
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

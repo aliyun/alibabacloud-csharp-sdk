@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **on**: yes
         /// *   **off**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -53,10 +55,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// 
         /// *   **auto_breaking**: Anti-Virus
         /// *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-        /// *   **webshell\_cloud_breaking**: Webshell Protection
+        /// *   **webshell_cloud_breaking**: Webshell Protection
         /// *   **alinet**: Behavior prevention
-        /// *   **k8s\_log_analysis**: K8s Threat Detection
+        /// *   **k8s_log_analysis**: K8s Threat Detection
         /// *   **alisecguard**: Defense mode for Client Protection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

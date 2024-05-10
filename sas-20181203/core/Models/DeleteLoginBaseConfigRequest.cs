@@ -12,21 +12,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:
         /// 
-        /// *   **login\_common_ip**: approved logon IP addresses
+        /// *   **login_common_ip**: approved logon IP addresses
         /// 
         /// Example: {"ip":"10.23.23.23"}.
         /// 
-        /// *   **login\_common_time**: approved logon time ranges
+        /// *   **login_common_time**: approved logon time ranges
         /// 
         /// Example: {"startTime":"06:00:00","endTime":"16:00:00"}.
         /// 
-        /// *   **login\_common_account**: approved logon accounts
+        /// *   **login_common_account**: approved logon accounts
         /// 
-        /// Example: {"account":"test_account\_001"}.
+        /// Example: {"account":"test_account_001"}.
         /// 
-        /// *   **login\_common_location**: approved logon locations
+        /// *   **login_common_location**: approved logon locations
         /// 
         /// Example: {"location":"Shanghai"}.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -44,10 +46,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the logon security settings to delete. Valid values:
         /// 
-        /// *   **login\_common_ip**: approved logon IP addresses
-        /// *   **login\_common_time**: approved logon time ranges
-        /// *   **login\_common_account**: approved logon accounts
-        /// *   **login\_common_location**: approved logon locations
+        /// *   **login_common_ip**: approved logon IP addresses
+        /// *   **login_common_time**: approved logon time ranges
+        /// *   **login_common_account**: approved logon accounts
+        /// *   **login_common_location**: approved logon locations
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
