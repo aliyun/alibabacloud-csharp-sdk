@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? CorpPayPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_sub_order_id")]
         [Validation(Required=false)]
         public string DisSubOrderId { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? PersonalPayPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("total_pay_price")]
         [Validation(Required=false)]
         public long? TotalPayPrice { get; set; }

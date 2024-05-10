@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundPreCalRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
@@ -17,18 +20,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string IsVoluntary { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_segment_info_list")]
         [Validation(Required=false)]
         public List<FlightRefundPreCalRequestPassengerSegmentInfoList> PassengerSegmentInfoList { get; set; }
         public class FlightRefundPreCalRequestPassengerSegmentInfoList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("flight_no")]
             [Validation(Required=false)]
             public string FlightNo { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_name")]
             [Validation(Required=false)]
             public string PassengerName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }

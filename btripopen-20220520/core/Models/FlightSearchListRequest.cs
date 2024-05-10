@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AirlineCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("arr_city_code")]
         [Validation(Required=false)]
         public string ArrCityCode { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string CabinClass { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dep_city_code")]
         [Validation(Required=false)]
         public string DepCityCode { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepCityName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dep_date")]
         [Validation(Required=false)]
         public string DepDate { get; set; }
@@ -61,6 +70,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string TransferLeaveDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]
         public string TripType { get; set; }

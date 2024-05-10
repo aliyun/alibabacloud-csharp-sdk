@@ -13,16 +13,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<EntitySetRequestEntityDOList> EntityDOList { get; set; }
         public class EntitySetRequestEntityDOList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("entity_id")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("entity_type")]
             [Validation(Required=false)]
             public string EntityType { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]
         public string ThirdpartId { get; set; }

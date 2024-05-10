@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepCity { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dep_date")]
         [Validation(Required=false)]
         public string DepDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
@@ -33,10 +39,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<TicketChangingFlightListRequestTravelerInfoList> TravelerInfoList { get; set; }
         public class TicketChangingFlightListRequestTravelerInfoList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_city")]
             [Validation(Required=false)]
             public string ArrCity { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_city")]
             [Validation(Required=false)]
             public string DepCity { get; set; }
@@ -49,6 +61,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }

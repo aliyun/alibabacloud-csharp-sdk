@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }

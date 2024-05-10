@@ -223,6 +223,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<ApplyModifyRequestItineraryList> ItineraryList { get; set; }
         public class ApplyModifyRequestItineraryList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_city")]
             [Validation(Required=false)]
             public string ArrCity { get; set; }
@@ -231,6 +234,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ArrCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_date")]
             [Validation(Required=false)]
             public string ArrDate { get; set; }
@@ -243,6 +249,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_city")]
             [Validation(Required=false)]
             public string DepCity { get; set; }
@@ -251,6 +260,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_date")]
             [Validation(Required=false)]
             public string DepDate { get; set; }
@@ -259,6 +271,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
@@ -297,10 +312,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
             public int? TrafficType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("trip_way")]
             [Validation(Required=false)]
             public int? TripWay { get; set; }
@@ -402,6 +423,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string SubCorpId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("thirdpart_apply_id")]
         [Validation(Required=false)]
         public string ThirdpartApplyId { get; set; }
@@ -488,10 +512,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardCarCitySet> CarCitySet { get; set; }
             public class ApplyModifyRequestTravelerStandardCarCitySet : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
@@ -587,6 +617,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_cause")]
         [Validation(Required=false)]
         public string TripCause { get; set; }
@@ -595,6 +628,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? TripDay { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_title")]
         [Validation(Required=false)]
         public string TripTitle { get; set; }
@@ -603,6 +639,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string UnionNo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }

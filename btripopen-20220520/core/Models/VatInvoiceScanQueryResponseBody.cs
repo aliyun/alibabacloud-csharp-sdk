@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TotalAmountInWords { get; set; }
 
+                [NameInMap("xml_oss_url")]
+                [Validation(Required=false)]
+                public string XmlOssUrl { get; set; }
+
             }
 
             [NameInMap("page_no")]

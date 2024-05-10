@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("cabin_type")]
         [Validation(Required=false)]
         public int? CabinType { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? DirectOnly { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? NeedShareFlight { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("out_wheel_search")]
         [Validation(Required=false)]
         public bool? OutWheelSearch { get; set; }
@@ -45,18 +54,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string QueryRecordId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("search_journeys")]
         [Validation(Required=false)]
         public List<IntlFlightListingSearchRequestSearchJourneys> SearchJourneys { get; set; }
         public class IntlFlightListingSearchRequestSearchJourneys : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_city_code")]
             [Validation(Required=false)]
             public string ArrCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_city_code")]
             [Validation(Required=false)]
             public string DepCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_date")]
             [Validation(Required=false)]
             public string DepDate { get; set; }
@@ -69,6 +90,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrAirportCode { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("arr_city_code")]
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
@@ -81,14 +105,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepAirportCode { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("dep_city_code")]
                 [Validation(Required=false)]
                 public string DepCityCode { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("flight_time")]
                 [Validation(Required=false)]
                 public string FlightTime { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("market_flight_no")]
                 [Validation(Required=false)]
                 public string MarketFlightNo { get; set; }
@@ -101,6 +134,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("search_mode")]
         [Validation(Required=false)]
         public int? SearchMode { get; set; }
@@ -109,18 +145,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<IntlFlightListingSearchRequestSearchPassengerList> SearchPassengerList { get; set; }
         public class IntlFlightListingSearchRequestSearchPassengerList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_no")]
             [Validation(Required=false)]
             public string CertNo { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_type")]
             [Validation(Required=false)]
             public int? CertType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("full_name")]
             [Validation(Required=false)]
             public string FullName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
@@ -135,6 +183,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Token { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]
         public int? TripType { get; set; }

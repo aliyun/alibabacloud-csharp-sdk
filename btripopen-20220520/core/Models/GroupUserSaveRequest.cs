@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string RealNameEn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sub_corp_id_list")]
         [Validation(Required=false)]
         public List<GroupUserSaveRequestSubCorpIdList> SubCorpIdList { get; set; }
@@ -71,6 +74,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("leave_status")]
             [Validation(Required=false)]
             public int? LeaveStatus { get; set; }
@@ -83,16 +89,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string PositionLevel { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("sub_corp_id")]
             [Validation(Required=false)]
             public string SubCorpId { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("user_name")]
         [Validation(Required=false)]
         public string UserName { get; set; }

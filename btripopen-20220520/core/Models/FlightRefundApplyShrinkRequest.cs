@@ -13,14 +13,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? CorpRefundPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_sub_order_id")]
         [Validation(Required=false)]
         public string DisSubOrderId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("display_refund_money")]
         [Validation(Required=false)]
         public string DisplayRefundMoney { get; set; }
@@ -29,10 +38,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ExtraShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("is_voluntary")]
         [Validation(Required=false)]
         public int? IsVoluntary { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("item_unit_ids")]
         [Validation(Required=false)]
         public string ItemUnitIds { get; set; }
@@ -49,6 +64,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ReasonDetail { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("reason_type")]
         [Validation(Required=false)]
         public int? ReasonType { get; set; }
@@ -57,6 +75,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string RefundVoucherInfoShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

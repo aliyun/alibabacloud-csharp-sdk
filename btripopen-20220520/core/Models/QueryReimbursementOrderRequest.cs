@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class QueryReimbursementOrderRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("reimb_order_no")]
         [Validation(Required=false)]
         public string ReimbOrderNo { get; set; }

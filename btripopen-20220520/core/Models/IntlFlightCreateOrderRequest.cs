@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AsyncCreateOrderKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("async_create_order_mode")]
         [Validation(Required=false)]
         public bool? AsyncCreateOrderMode { get; set; }
@@ -21,18 +24,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightCreateOrderRequestContactInfo ContactInfo { get; set; }
         public class IntlFlightCreateOrderRequestContactInfo : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("contact_email")]
             [Validation(Required=false)]
             public string ContactEmail { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("contact_name")]
             [Validation(Required=false)]
             public string ContactName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("contact_phone")]
             [Validation(Required=false)]
             public string ContactPhone { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("send_msg_to_passenger")]
             [Validation(Required=false)]
             public bool? SendMsgToPassenger { get; set; }
@@ -43,10 +58,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightCreateOrderRequestCostCenter CostCenter { get; set; }
         public class IntlFlightCreateOrderRequestCostCenter : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cost_center_name")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cost_center_number")]
             [Validation(Required=false)]
             public string CostCenterNumber { get; set; }
@@ -77,6 +98,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<IntlFlightCreateOrderRequestPassengerList> PassengerList { get; set; }
         public class IntlFlightCreateOrderRequestPassengerList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("birthday")]
             [Validation(Required=false)]
             public string Birthday { get; set; }
@@ -89,6 +113,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CascadeDeptName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_info")]
             [Validation(Required=false)]
             public IntlFlightCreateOrderRequestPassengerListCertInfo CertInfo { get; set; }
@@ -97,10 +124,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertNation { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_no")]
                 [Validation(Required=false)]
                 public string CertNo { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_type")]
                 [Validation(Required=false)]
                 public int? CertType { get; set; }
@@ -109,6 +142,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertValidDate { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -159,10 +195,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string NationalityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_type")]
             [Validation(Required=false)]
             public int? PassengerType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
@@ -183,10 +225,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertNation { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_no")]
                 [Validation(Required=false)]
                 public string CertNo { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_type")]
                 [Validation(Required=false)]
                 public int? CertType { get; set; }
@@ -195,12 +243,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertValidDate { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }

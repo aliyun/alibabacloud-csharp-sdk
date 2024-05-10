@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? OrderPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
         public string OtaItemId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_list")]
         [Validation(Required=false)]
         public string PassengerListShrink { get; set; }

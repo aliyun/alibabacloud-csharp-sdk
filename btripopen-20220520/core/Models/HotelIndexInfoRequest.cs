@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? HotelStatus { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

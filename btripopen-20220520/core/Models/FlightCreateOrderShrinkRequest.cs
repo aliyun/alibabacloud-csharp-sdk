@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ArrAirportCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("arr_city_code")]
         [Validation(Required=false)]
         public string ArrCityCode { get; set; }
@@ -25,10 +28,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("buyer_unique_key")]
         [Validation(Required=false)]
         public string BuyerUniqueKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact_info")]
         [Validation(Required=false)]
         public string ContactInfoShrink { get; set; }
@@ -37,14 +46,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepAirportCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dep_city_code")]
         [Validation(Required=false)]
         public string DepCityCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dep_date")]
         [Validation(Required=false)]
         public string DepDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
@@ -53,14 +71,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string OrderAttrShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("order_params")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
         public string OtaItemId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("price")]
         [Validation(Required=false)]
         public long? Price { get; set; }
@@ -77,10 +104,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ReceiptTitle { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("traveler_info_list")]
         [Validation(Required=false)]
         public string TravelerInfoListShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]
         public int? TripType { get; set; }

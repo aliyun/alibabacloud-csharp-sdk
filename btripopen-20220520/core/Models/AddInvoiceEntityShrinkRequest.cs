@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AddInvoiceEntityShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("entities")]
         [Validation(Required=false)]
         public string EntitiesShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }

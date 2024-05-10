@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("project_name")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ThirdPartCostCenterId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }

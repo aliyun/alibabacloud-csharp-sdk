@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? DirectOnly { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -25,22 +28,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? NeedShareFlight { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("search_journeys")]
         [Validation(Required=false)]
         public List<FlightOtaSearchV2RequestSearchJourneys> SearchJourneys { get; set; }
         public class FlightOtaSearchV2RequestSearchJourneys : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_city_code")]
             [Validation(Required=false)]
             public string ArrCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_city_code")]
             [Validation(Required=false)]
             public string DepCityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_date")]
             [Validation(Required=false)]
             public string DepDate { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("selected_flights")]
             [Validation(Required=false)]
             public List<FlightOtaSearchV2RequestSearchJourneysSelectedFlights> SelectedFlights { get; set; }
@@ -65,6 +83,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FlightTime { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("market_flight_no")]
                 [Validation(Required=false)]
                 public string MarketFlightNo { get; set; }
@@ -77,10 +98,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("search_mode")]
         [Validation(Required=false)]
         public int? SearchMode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]
         public int? TripType { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyExternalNodeStatusUpdateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("node_id")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("process_action_result")]
         [Validation(Required=false)]
         public string ProcessActionResult { get; set; }

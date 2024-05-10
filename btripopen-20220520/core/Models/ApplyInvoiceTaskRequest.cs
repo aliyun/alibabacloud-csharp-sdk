@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyInvoiceTaskRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("bill_date")]
         [Validation(Required=false)]
         public string BillDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("invoice_task_list")]
         [Validation(Required=false)]
         public List<ApplyInvoiceTaskRequestInvoiceTaskList> InvoiceTaskList { get; set; }
@@ -49,6 +55,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InternationalHotelInvoiceFee { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("invoice_third_part_id")]
             [Validation(Required=false)]
             public string InvoiceThirdPartId { get; set; }

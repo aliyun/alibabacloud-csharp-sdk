@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class BtripBillInfoAdjustRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("primary_id")]
         [Validation(Required=false)]
         public long? PrimaryId { get; set; }

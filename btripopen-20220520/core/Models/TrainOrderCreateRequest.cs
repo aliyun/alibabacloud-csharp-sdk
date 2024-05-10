@@ -13,30 +13,51 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AcceptNoSeat { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("book_train_infos")]
         [Validation(Required=false)]
         public List<TrainOrderCreateRequestBookTrainInfos> BookTrainInfos { get; set; }
         public class TrainOrderCreateRequestBookTrainInfos : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("arr_station_code")]
             [Validation(Required=false)]
             public string ArrStationCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("book_ticket_infos")]
             [Validation(Required=false)]
             public List<TrainOrderCreateRequestBookTrainInfosBookTicketInfos> BookTicketInfos { get; set; }
             public class TrainOrderCreateRequestBookTrainInfosBookTicketInfos : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("passenger_id")]
                 [Validation(Required=false)]
                 public string PassengerId { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("seat_type")]
                 [Validation(Required=false)]
                 public string SeatType { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("ticket_price")]
                 [Validation(Required=false)]
                 public long? TicketPrice { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("ticket_type")]
                 [Validation(Required=false)]
                 public string TicketType { get; set; }
@@ -51,24 +72,39 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ChooseSeats { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_station_code")]
             [Validation(Required=false)]
             public string DepStationCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("dep_time")]
             [Validation(Required=false)]
             public string DepTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("train_no")]
             [Validation(Required=false)]
             public string TrainNo { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("btrip_user_name")]
         [Validation(Required=false)]
         public string BtripUserName { get; set; }
@@ -87,18 +123,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact_info")]
         [Validation(Required=false)]
         public TrainOrderCreateRequestContactInfo ContactInfo { get; set; }
         public class TrainOrderCreateRequestContactInfo : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_id")]
             [Validation(Required=false)]
             public string PassengerId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_mobile")]
             [Validation(Required=false)]
             public string PassengerMobile { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_name")]
             [Validation(Required=false)]
             public string PassengerName { get; set; }
@@ -113,10 +161,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? IsPayNow { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_open_info_s")]
         [Validation(Required=false)]
         public List<TrainOrderCreateRequestPassengerOpenInfoS> PassengerOpenInfoS { get; set; }
@@ -171,14 +225,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CountryCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_cert_no")]
             [Validation(Required=false)]
             public string PassengerCertNo { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_cert_type")]
             [Validation(Required=false)]
             public string PassengerCertType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_id")]
             [Validation(Required=false)]
             public string PassengerId { get; set; }
@@ -187,6 +250,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string PassengerMobile { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_name")]
             [Validation(Required=false)]
             public string PassengerName { get; set; }

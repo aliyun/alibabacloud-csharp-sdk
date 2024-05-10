@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AsyncCreateOrderKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("async_create_order_mode")]
         [Validation(Required=false)]
         public bool? AsyncCreateOrderMode { get; set; }

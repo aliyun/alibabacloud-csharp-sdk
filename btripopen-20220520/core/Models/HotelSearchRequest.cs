@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("check_in_date")]
         [Validation(Required=false)]
         public string CheckInDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("check_out_date")]
         [Validation(Required=false)]
         public string CheckOutDate { get; set; }
@@ -69,10 +75,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public double? MinPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("page_no")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -89,6 +101,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<long?> Shids { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sort_code")]
         [Validation(Required=false)]
         public int? SortCode { get; set; }

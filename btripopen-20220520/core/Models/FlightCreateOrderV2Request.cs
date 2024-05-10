@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("contact_info")]
         [Validation(Required=false)]
         public FlightCreateOrderV2RequestContactInfo ContactInfo { get; set; }
@@ -47,14 +50,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
         public string OtaItemId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
@@ -63,10 +75,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? TotalPriceCent { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("travelers")]
         [Validation(Required=false)]
         public List<FlightCreateOrderV2RequestTravelers> Travelers { get; set; }
         public class FlightCreateOrderV2RequestTravelers : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("birthday")]
             [Validation(Required=false)]
             public string Birthday { get; set; }
@@ -75,10 +93,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CertNation { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_no")]
             [Validation(Required=false)]
             public string CertNo { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_type")]
             [Validation(Required=false)]
             public int? CertType { get; set; }
@@ -103,6 +127,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DeptName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("gender")]
             [Validation(Required=false)]
             public int? Gender { get; set; }
@@ -119,14 +146,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string NationalityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_name")]
             [Validation(Required=false)]
             public string PassengerName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_type")]
             [Validation(Required=false)]
             public int? PassengerType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
@@ -139,6 +175,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }

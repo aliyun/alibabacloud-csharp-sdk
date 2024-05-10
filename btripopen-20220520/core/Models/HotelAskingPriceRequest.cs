@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("check_in_date")]
         [Validation(Required=false)]
         public string CheckInDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("check_out_date")]
         [Validation(Required=false)]
         public string CheckOutDate { get; set; }
@@ -49,6 +55,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? PaymentType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("shids")]
         [Validation(Required=false)]
         public List<long?> Shids { get; set; }

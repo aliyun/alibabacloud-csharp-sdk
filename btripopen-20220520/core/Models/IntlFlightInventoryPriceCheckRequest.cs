@@ -21,14 +21,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? OrderPrice { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
         public string OtaItemId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("passenger_list")]
         [Validation(Required=false)]
         public List<IntlFlightInventoryPriceCheckRequestPassengerList> PassengerList { get; set; }
         public class IntlFlightInventoryPriceCheckRequestPassengerList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("birthday")]
             [Validation(Required=false)]
             public string Birthday { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CascadeDeptName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("cert_info")]
             [Validation(Required=false)]
             public IntlFlightInventoryPriceCheckRequestPassengerListCertInfo CertInfo { get; set; }
@@ -49,10 +61,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertNation { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_no")]
                 [Validation(Required=false)]
                 public string CertNo { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("cert_type")]
                 [Validation(Required=false)]
                 public int? CertType { get; set; }
@@ -61,6 +79,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CertValidDate { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -111,10 +132,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string NationalityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("passenger_type")]
             [Validation(Required=false)]
             public int? PassengerType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
@@ -153,6 +180,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }

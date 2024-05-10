@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 换取accessToken接口
+         *
+         * @param request AccessTokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AccessTokenResponse
+         */
         public AccessTokenResponse AccessTokenWithOptions(AccessTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -65,6 +73,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AccessTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取accessToken接口
+         *
+         * @param request AccessTokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AccessTokenResponse
+         */
         public async Task<AccessTokenResponse> AccessTokenWithOptionsAsync(AccessTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -93,6 +109,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AccessTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取accessToken接口
+         *
+         * @param request AccessTokenRequest
+         * @return AccessTokenResponse
+         */
         public AccessTokenResponse AccessToken(AccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -100,6 +122,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AccessTokenWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 换取accessToken接口
+         *
+         * @param request AccessTokenRequest
+         * @return AccessTokenResponse
+         */
         public async Task<AccessTokenResponse> AccessTokenAsync(AccessTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -107,6 +135,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await AccessTokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票抬头适用人员
+         *
+         * @param tmpReq AddInvoiceEntityRequest
+         * @param headers AddInvoiceEntityHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddInvoiceEntityResponse
+         */
         public AddInvoiceEntityResponse AddInvoiceEntityWithOptions(AddInvoiceEntityRequest tmpReq, AddInvoiceEntityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -154,6 +190,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddInvoiceEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票抬头适用人员
+         *
+         * @param tmpReq AddInvoiceEntityRequest
+         * @param headers AddInvoiceEntityHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddInvoiceEntityResponse
+         */
         public async Task<AddInvoiceEntityResponse> AddInvoiceEntityWithOptionsAsync(AddInvoiceEntityRequest tmpReq, AddInvoiceEntityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -201,6 +245,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddInvoiceEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票抬头适用人员
+         *
+         * @param request AddInvoiceEntityRequest
+         * @return AddInvoiceEntityResponse
+         */
         public AddInvoiceEntityResponse AddInvoiceEntity(AddInvoiceEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -208,6 +258,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AddInvoiceEntityWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票抬头适用人员
+         *
+         * @param request AddInvoiceEntityRequest
+         * @return AddInvoiceEntityResponse
+         */
         public async Task<AddInvoiceEntityResponse> AddInvoiceEntityAsync(AddInvoiceEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -215,6 +271,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await AddInvoiceEntityWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 商旅功能页跳转
+         *
+         * @param request AddressGetRequest
+         * @param headers AddressGetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddressGetResponse
+         */
         public AddressGetResponse AddressGetWithOptions(AddressGetRequest request, AddressGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -312,6 +376,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddressGetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 商旅功能页跳转
+         *
+         * @param request AddressGetRequest
+         * @param headers AddressGetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddressGetResponse
+         */
         public async Task<AddressGetResponse> AddressGetWithOptionsAsync(AddressGetRequest request, AddressGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -409,6 +481,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AddressGetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 商旅功能页跳转
+         *
+         * @param request AddressGetRequest
+         * @return AddressGetResponse
+         */
         public AddressGetResponse AddressGet(AddressGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -416,6 +494,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AddressGetWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 商旅功能页跳转
+         *
+         * @param request AddressGetRequest
+         * @return AddressGetResponse
+         */
         public async Task<AddressGetResponse> AddressGetAsync(AddressGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -423,6 +507,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await AddressGetWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机场数据
+         *
+         * @param request AirportSearchRequest
+         * @param headers AirportSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AirportSearchResponse
+         */
         public AirportSearchResponse AirportSearchWithOptions(AirportSearchRequest request, AirportSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -464,6 +556,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AirportSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机场数据
+         *
+         * @param request AirportSearchRequest
+         * @param headers AirportSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AirportSearchResponse
+         */
         public async Task<AirportSearchResponse> AirportSearchWithOptionsAsync(AirportSearchRequest request, AirportSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -505,6 +605,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AirportSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机场数据
+         *
+         * @param request AirportSearchRequest
+         * @return AirportSearchResponse
+         */
         public AirportSearchResponse AirportSearch(AirportSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -512,6 +618,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AirportSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机场数据
+         *
+         * @param request AirportSearchRequest
+         * @return AirportSearchResponse
+         */
         public async Task<AirportSearchResponse> AirportSearchAsync(AirportSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -519,6 +631,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await AirportSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 全量查询商旅城市行政区划编码信息
+         *
+         * @param headers AllBaseCityInfoQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllBaseCityInfoQueryResponse
+         */
         public AllBaseCityInfoQueryResponse AllBaseCityInfoQueryWithOptions(AllBaseCityInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -549,6 +668,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AllBaseCityInfoQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 全量查询商旅城市行政区划编码信息
+         *
+         * @param headers AllBaseCityInfoQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllBaseCityInfoQueryResponse
+         */
         public async Task<AllBaseCityInfoQueryResponse> AllBaseCityInfoQueryWithOptionsAsync(AllBaseCityInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -579,6 +705,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<AllBaseCityInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 全量查询商旅城市行政区划编码信息
+         *
+         * @return AllBaseCityInfoQueryResponse
+         */
         public AllBaseCityInfoQueryResponse AllBaseCityInfoQuery()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -586,6 +717,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return AllBaseCityInfoQueryWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary 全量查询商旅城市行政区划编码信息
+         *
+         * @return AllBaseCityInfoQueryResponse
+         */
         public async Task<AllBaseCityInfoQueryResponse> AllBaseCityInfoQueryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -593,6 +729,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await AllBaseCityInfoQueryWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary 新建出差审批单
+         *
+         * @param tmpReq ApplyAddRequest
+         * @param headers ApplyAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyAddResponse
+         */
         public ApplyAddResponse ApplyAddWithOptions(ApplyAddRequest tmpReq, ApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -804,6 +948,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 新建出差审批单
+         *
+         * @param tmpReq ApplyAddRequest
+         * @param headers ApplyAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyAddResponse
+         */
         public async Task<ApplyAddResponse> ApplyAddWithOptionsAsync(ApplyAddRequest tmpReq, ApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1015,6 +1167,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 新建出差审批单
+         *
+         * @param request ApplyAddRequest
+         * @return ApplyAddResponse
+         */
         public ApplyAddResponse ApplyAdd(ApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1022,6 +1180,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 新建出差审批单
+         *
+         * @param request ApplyAddRequest
+         * @return ApplyAddResponse
+         */
         public async Task<ApplyAddResponse> ApplyAddAsync(ApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1029,6 +1193,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新出差审批单（状态）
+         *
+         * @param request ApplyApproveRequest
+         * @param headers ApplyApproveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyApproveResponse
+         */
         public ApplyApproveResponse ApplyApproveWithOptions(ApplyApproveRequest request, ApplyApproveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1090,6 +1262,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyApproveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新出差审批单（状态）
+         *
+         * @param request ApplyApproveRequest
+         * @param headers ApplyApproveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyApproveResponse
+         */
         public async Task<ApplyApproveResponse> ApplyApproveWithOptionsAsync(ApplyApproveRequest request, ApplyApproveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1151,6 +1331,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyApproveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新出差审批单（状态）
+         *
+         * @param request ApplyApproveRequest
+         * @return ApplyApproveResponse
+         */
         public ApplyApproveResponse ApplyApprove(ApplyApproveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1158,6 +1344,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyApproveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新出差审批单（状态）
+         *
+         * @param request ApplyApproveRequest
+         * @return ApplyApproveResponse
+         */
         public async Task<ApplyApproveResponse> ApplyApproveAsync(ApplyApproveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1165,6 +1357,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyApproveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 外部审批节点状态同步
+         *
+         * @param tmpReq ApplyExternalNodeStatusUpdateRequest
+         * @param headers ApplyExternalNodeStatusUpdateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyExternalNodeStatusUpdateResponse
+         */
         public ApplyExternalNodeStatusUpdateResponse ApplyExternalNodeStatusUpdateWithOptions(ApplyExternalNodeStatusUpdateRequest tmpReq, ApplyExternalNodeStatusUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1216,6 +1416,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyExternalNodeStatusUpdateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 外部审批节点状态同步
+         *
+         * @param tmpReq ApplyExternalNodeStatusUpdateRequest
+         * @param headers ApplyExternalNodeStatusUpdateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyExternalNodeStatusUpdateResponse
+         */
         public async Task<ApplyExternalNodeStatusUpdateResponse> ApplyExternalNodeStatusUpdateWithOptionsAsync(ApplyExternalNodeStatusUpdateRequest tmpReq, ApplyExternalNodeStatusUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1267,6 +1475,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyExternalNodeStatusUpdateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 外部审批节点状态同步
+         *
+         * @param request ApplyExternalNodeStatusUpdateRequest
+         * @return ApplyExternalNodeStatusUpdateResponse
+         */
         public ApplyExternalNodeStatusUpdateResponse ApplyExternalNodeStatusUpdate(ApplyExternalNodeStatusUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1274,6 +1488,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyExternalNodeStatusUpdateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 外部审批节点状态同步
+         *
+         * @param request ApplyExternalNodeStatusUpdateRequest
+         * @return ApplyExternalNodeStatusUpdateResponse
+         */
         public async Task<ApplyExternalNodeStatusUpdateResponse> ApplyExternalNodeStatusUpdateAsync(ApplyExternalNodeStatusUpdateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1281,6 +1501,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyExternalNodeStatusUpdateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 申请发票
+         *
+         * @param tmpReq ApplyInvoiceTaskRequest
+         * @param headers ApplyInvoiceTaskHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyInvoiceTaskResponse
+         */
         public ApplyInvoiceTaskResponse ApplyInvoiceTaskWithOptions(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1328,6 +1556,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyInvoiceTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 申请发票
+         *
+         * @param tmpReq ApplyInvoiceTaskRequest
+         * @param headers ApplyInvoiceTaskHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyInvoiceTaskResponse
+         */
         public async Task<ApplyInvoiceTaskResponse> ApplyInvoiceTaskWithOptionsAsync(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1375,6 +1611,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyInvoiceTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 申请发票
+         *
+         * @param request ApplyInvoiceTaskRequest
+         * @return ApplyInvoiceTaskResponse
+         */
         public ApplyInvoiceTaskResponse ApplyInvoiceTask(ApplyInvoiceTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1382,6 +1624,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyInvoiceTaskWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 申请发票
+         *
+         * @param request ApplyInvoiceTaskRequest
+         * @return ApplyInvoiceTaskResponse
+         */
         public async Task<ApplyInvoiceTaskResponse> ApplyInvoiceTaskAsync(ApplyInvoiceTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1389,6 +1637,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyInvoiceTaskWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询出差审批单列表
+         *
+         * @param request ApplyListQueryRequest
+         * @param headers ApplyListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyListQueryResponse
+         */
         public ApplyListQueryResponse ApplyListQueryWithOptions(ApplyListQueryRequest request, ApplyListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1470,6 +1726,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询出差审批单列表
+         *
+         * @param request ApplyListQueryRequest
+         * @param headers ApplyListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyListQueryResponse
+         */
         public async Task<ApplyListQueryResponse> ApplyListQueryWithOptionsAsync(ApplyListQueryRequest request, ApplyListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1551,6 +1815,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询出差审批单列表
+         *
+         * @param request ApplyListQueryRequest
+         * @return ApplyListQueryResponse
+         */
         public ApplyListQueryResponse ApplyListQuery(ApplyListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1558,6 +1828,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询出差审批单列表
+         *
+         * @param request ApplyListQueryRequest
+         * @return ApplyListQueryResponse
+         */
         public async Task<ApplyListQueryResponse> ApplyListQueryAsync(ApplyListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1565,6 +1841,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新出差审批单
+         *
+         * @param tmpReq ApplyModifyRequest
+         * @param headers ApplyModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyModifyResponse
+         */
         public ApplyModifyResponse ApplyModifyWithOptions(ApplyModifyRequest tmpReq, ApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1768,6 +2052,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyModifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新出差审批单
+         *
+         * @param tmpReq ApplyModifyRequest
+         * @param headers ApplyModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyModifyResponse
+         */
         public async Task<ApplyModifyResponse> ApplyModifyWithOptionsAsync(ApplyModifyRequest tmpReq, ApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1971,6 +2263,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyModifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新出差审批单
+         *
+         * @param request ApplyModifyRequest
+         * @return ApplyModifyResponse
+         */
         public ApplyModifyResponse ApplyModify(ApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1978,6 +2276,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyModifyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新出差审批单
+         *
+         * @param request ApplyModifyRequest
+         * @return ApplyModifyResponse
+         */
         public async Task<ApplyModifyResponse> ApplyModifyAsync(ApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1985,6 +2289,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询出差审批单详情
+         *
+         * @param request ApplyQueryRequest
+         * @param headers ApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyQueryResponse
+         */
         public ApplyQueryResponse ApplyQueryWithOptions(ApplyQueryRequest request, ApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2038,6 +2350,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询出差审批单详情
+         *
+         * @param request ApplyQueryRequest
+         * @param headers ApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ApplyQueryResponse
+         */
         public async Task<ApplyQueryResponse> ApplyQueryWithOptionsAsync(ApplyQueryRequest request, ApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2091,6 +2411,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询出差审批单详情
+         *
+         * @param request ApplyQueryRequest
+         * @return ApplyQueryResponse
+         */
         public ApplyQueryResponse ApplyQuery(ApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2098,6 +2424,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询出差审批单详情
+         *
+         * @param request ApplyQueryRequest
+         * @return ApplyQueryResponse
+         */
         public async Task<ApplyQueryResponse> ApplyQueryAsync(ApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2105,6 +2437,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 搜索国内/国际（港澳台）城市基础行政区划数据
+         *
+         * @param request BaseCityInfoSearchRequest
+         * @param headers BaseCityInfoSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BaseCityInfoSearchResponse
+         */
         public BaseCityInfoSearchResponse BaseCityInfoSearchWithOptions(BaseCityInfoSearchRequest request, BaseCityInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2146,6 +2486,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<BaseCityInfoSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 搜索国内/国际（港澳台）城市基础行政区划数据
+         *
+         * @param request BaseCityInfoSearchRequest
+         * @param headers BaseCityInfoSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BaseCityInfoSearchResponse
+         */
         public async Task<BaseCityInfoSearchResponse> BaseCityInfoSearchWithOptionsAsync(BaseCityInfoSearchRequest request, BaseCityInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2187,6 +2535,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<BaseCityInfoSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 搜索国内/国际（港澳台）城市基础行政区划数据
+         *
+         * @param request BaseCityInfoSearchRequest
+         * @return BaseCityInfoSearchResponse
+         */
         public BaseCityInfoSearchResponse BaseCityInfoSearch(BaseCityInfoSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2194,6 +2548,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return BaseCityInfoSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 搜索国内/国际（港澳台）城市基础行政区划数据
+         *
+         * @param request BaseCityInfoSearchRequest
+         * @return BaseCityInfoSearchResponse
+         */
         public async Task<BaseCityInfoSearchResponse> BaseCityInfoSearchAsync(BaseCityInfoSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2201,6 +2561,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await BaseCityInfoSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 商旅账单内容修改
+         *
+         * @param request BtripBillInfoAdjustRequest
+         * @param headers BtripBillInfoAdjustHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BtripBillInfoAdjustResponse
+         */
         public BtripBillInfoAdjustResponse BtripBillInfoAdjustWithOptions(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2258,6 +2626,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<BtripBillInfoAdjustResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 商旅账单内容修改
+         *
+         * @param request BtripBillInfoAdjustRequest
+         * @param headers BtripBillInfoAdjustHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BtripBillInfoAdjustResponse
+         */
         public async Task<BtripBillInfoAdjustResponse> BtripBillInfoAdjustWithOptionsAsync(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2315,6 +2691,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<BtripBillInfoAdjustResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 商旅账单内容修改
+         *
+         * @param request BtripBillInfoAdjustRequest
+         * @return BtripBillInfoAdjustResponse
+         */
         public BtripBillInfoAdjustResponse BtripBillInfoAdjust(BtripBillInfoAdjustRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2322,6 +2704,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return BtripBillInfoAdjustWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 商旅账单内容修改
+         *
+         * @param request BtripBillInfoAdjustRequest
+         * @return BtripBillInfoAdjustResponse
+         */
         public async Task<BtripBillInfoAdjustResponse> BtripBillInfoAdjustAsync(BtripBillInfoAdjustRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2329,6 +2717,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await BtripBillInfoAdjustWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步市内用车审批单
+         *
+         * @param tmpReq CarApplyAddRequest
+         * @param headers CarApplyAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyAddResponse
+         */
         public CarApplyAddResponse CarApplyAddWithOptions(CarApplyAddRequest tmpReq, CarApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2436,6 +2832,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步市内用车审批单
+         *
+         * @param tmpReq CarApplyAddRequest
+         * @param headers CarApplyAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyAddResponse
+         */
         public async Task<CarApplyAddResponse> CarApplyAddWithOptionsAsync(CarApplyAddRequest tmpReq, CarApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2543,6 +2947,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步市内用车审批单
+         *
+         * @param request CarApplyAddRequest
+         * @return CarApplyAddResponse
+         */
         public CarApplyAddResponse CarApplyAdd(CarApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2550,6 +2960,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarApplyAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步市内用车审批单
+         *
+         * @param request CarApplyAddRequest
+         * @return CarApplyAddResponse
+         */
         public async Task<CarApplyAddResponse> CarApplyAddAsync(CarApplyAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2557,6 +2973,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarApplyAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新市内用车审批单
+         *
+         * @param request CarApplyModifyRequest
+         * @param headers CarApplyModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyModifyResponse
+         */
         public CarApplyModifyResponse CarApplyModifyWithOptions(CarApplyModifyRequest request, CarApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2610,6 +3034,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyModifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新市内用车审批单
+         *
+         * @param request CarApplyModifyRequest
+         * @param headers CarApplyModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyModifyResponse
+         */
         public async Task<CarApplyModifyResponse> CarApplyModifyWithOptionsAsync(CarApplyModifyRequest request, CarApplyModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2663,6 +3095,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyModifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新市内用车审批单
+         *
+         * @param request CarApplyModifyRequest
+         * @return CarApplyModifyResponse
+         */
         public CarApplyModifyResponse CarApplyModify(CarApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2670,6 +3108,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarApplyModifyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新市内用车审批单
+         *
+         * @param request CarApplyModifyRequest
+         * @return CarApplyModifyResponse
+         */
         public async Task<CarApplyModifyResponse> CarApplyModifyAsync(CarApplyModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2677,6 +3121,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarApplyModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询市内用车审批单
+         *
+         * @param request CarApplyQueryRequest
+         * @param headers CarApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyQueryResponse
+         */
         public CarApplyQueryResponse CarApplyQueryWithOptions(CarApplyQueryRequest request, CarApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2734,6 +3186,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询市内用车审批单
+         *
+         * @param request CarApplyQueryRequest
+         * @param headers CarApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarApplyQueryResponse
+         */
         public async Task<CarApplyQueryResponse> CarApplyQueryWithOptionsAsync(CarApplyQueryRequest request, CarApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2791,6 +3251,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询市内用车审批单
+         *
+         * @param request CarApplyQueryRequest
+         * @return CarApplyQueryResponse
+         */
         public CarApplyQueryResponse CarApplyQuery(CarApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2798,6 +3264,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询市内用车审批单
+         *
+         * @param request CarApplyQueryRequest
+         * @return CarApplyQueryResponse
+         */
         public async Task<CarApplyQueryResponse> CarApplyQueryAsync(CarApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2805,6 +3277,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询用车记账数据
+         *
+         * @param request CarBillSettlementQueryRequest
+         * @param headers CarBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarBillSettlementQueryResponse
+         */
         public CarBillSettlementQueryResponse CarBillSettlementQueryWithOptions(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2854,6 +3334,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询用车记账数据
+         *
+         * @param request CarBillSettlementQueryRequest
+         * @param headers CarBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarBillSettlementQueryResponse
+         */
         public async Task<CarBillSettlementQueryResponse> CarBillSettlementQueryWithOptionsAsync(CarBillSettlementQueryRequest request, CarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2903,6 +3391,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询用车记账数据
+         *
+         * @param request CarBillSettlementQueryRequest
+         * @return CarBillSettlementQueryResponse
+         */
         public CarBillSettlementQueryResponse CarBillSettlementQuery(CarBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2910,6 +3404,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询用车记账数据
+         *
+         * @param request CarBillSettlementQueryRequest
+         * @return CarBillSettlementQueryResponse
+         */
         public async Task<CarBillSettlementQueryResponse> CarBillSettlementQueryAsync(CarBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2917,6 +3417,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询用车订单列表
+         *
+         * @param request CarOrderListQueryRequest
+         * @param headers CarOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarOrderListQueryResponse
+         */
         public CarOrderListQueryResponse CarOrderListQueryWithOptions(CarOrderListQueryRequest request, CarOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2994,6 +3502,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询用车订单列表
+         *
+         * @param request CarOrderListQueryRequest
+         * @param headers CarOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarOrderListQueryResponse
+         */
         public async Task<CarOrderListQueryResponse> CarOrderListQueryWithOptionsAsync(CarOrderListQueryRequest request, CarOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3071,6 +3587,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询用车订单列表
+         *
+         * @param request CarOrderListQueryRequest
+         * @return CarOrderListQueryResponse
+         */
         public CarOrderListQueryResponse CarOrderListQuery(CarOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3078,6 +3600,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarOrderListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询用车订单列表
+         *
+         * @param request CarOrderListQueryRequest
+         * @return CarOrderListQueryResponse
+         */
         public async Task<CarOrderListQueryResponse> CarOrderListQueryAsync(CarOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3085,6 +3613,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 用车订单查询
+         *
+         * @param request CarOrderQueryRequest
+         * @param headers CarOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarOrderQueryResponse
+         */
         public CarOrderQueryResponse CarOrderQueryWithOptions(CarOrderQueryRequest request, CarOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3126,6 +3662,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 用车订单查询
+         *
+         * @param request CarOrderQueryRequest
+         * @param headers CarOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarOrderQueryResponse
+         */
         public async Task<CarOrderQueryResponse> CarOrderQueryWithOptionsAsync(CarOrderQueryRequest request, CarOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3167,6 +3711,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarOrderQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 用车订单查询
+         *
+         * @param request CarOrderQueryRequest
+         * @return CarOrderQueryResponse
+         */
         public CarOrderQueryResponse CarOrderQuery(CarOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3174,6 +3724,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarOrderQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 用车订单查询
+         *
+         * @param request CarOrderQueryRequest
+         * @return CarOrderQueryResponse
+         */
         public async Task<CarOrderQueryResponse> CarOrderQueryAsync(CarOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3181,6 +3737,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询企业用车场景
+         *
+         * @param headers CarSceneQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarSceneQueryResponse
+         */
         public CarSceneQueryResponse CarSceneQueryWithOptions(CarSceneQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -3211,6 +3774,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarSceneQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询企业用车场景
+         *
+         * @param headers CarSceneQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CarSceneQueryResponse
+         */
         public async Task<CarSceneQueryResponse> CarSceneQueryWithOptionsAsync(CarSceneQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -3241,6 +3811,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CarSceneQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询企业用车场景
+         *
+         * @return CarSceneQueryResponse
+         */
         public CarSceneQueryResponse CarSceneQuery()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3248,6 +3823,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CarSceneQueryWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary 查询企业用车场景
+         *
+         * @return CarSceneQueryResponse
+         */
         public async Task<CarSceneQueryResponse> CarSceneQueryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3255,6 +3835,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CarSceneQueryWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary 查询行政区划（市，区）基础数据
+         *
+         * @param request CitySearchRequest
+         * @param headers CitySearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CitySearchResponse
+         */
         public CitySearchResponse CitySearchWithOptions(CitySearchRequest request, CitySearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3292,6 +3880,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CitySearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询行政区划（市，区）基础数据
+         *
+         * @param request CitySearchRequest
+         * @param headers CitySearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CitySearchResponse
+         */
         public async Task<CitySearchResponse> CitySearchWithOptionsAsync(CitySearchRequest request, CitySearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3329,6 +3925,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CitySearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询行政区划（市，区）基础数据
+         *
+         * @param request CitySearchRequest
+         * @return CitySearchResponse
+         */
         public CitySearchResponse CitySearch(CitySearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3336,6 +3938,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CitySearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询行政区划（市，区）基础数据
+         *
+         * @param request CitySearchRequest
+         * @return CitySearchResponse
+         */
         public async Task<CitySearchResponse> CitySearchAsync(CitySearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3343,6 +3951,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CitySearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询退改审批信息
+         *
+         * @param request CommonApplyQueryRequest
+         * @param headers CommonApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CommonApplyQueryResponse
+         */
         public CommonApplyQueryResponse CommonApplyQueryWithOptions(CommonApplyQueryRequest request, CommonApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3388,6 +4004,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询退改审批信息
+         *
+         * @param request CommonApplyQueryRequest
+         * @param headers CommonApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CommonApplyQueryResponse
+         */
         public async Task<CommonApplyQueryResponse> CommonApplyQueryWithOptionsAsync(CommonApplyQueryRequest request, CommonApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3433,6 +4057,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询退改审批信息
+         *
+         * @param request CommonApplyQueryRequest
+         * @return CommonApplyQueryResponse
+         */
         public CommonApplyQueryResponse CommonApplyQuery(CommonApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3440,6 +4070,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CommonApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询退改审批信息
+         *
+         * @param request CommonApplyQueryRequest
+         * @return CommonApplyQueryResponse
+         */
         public async Task<CommonApplyQueryResponse> CommonApplyQueryAsync(CommonApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3447,6 +4083,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CommonApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 退改审批结果同步
+         *
+         * @param request CommonApplySyncRequest
+         * @param headers CommonApplySyncHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CommonApplySyncResponse
+         */
         public CommonApplySyncResponse CommonApplySyncWithOptions(CommonApplySyncRequest request, CommonApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3504,6 +4148,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplySyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 退改审批结果同步
+         *
+         * @param request CommonApplySyncRequest
+         * @param headers CommonApplySyncHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CommonApplySyncResponse
+         */
         public async Task<CommonApplySyncResponse> CommonApplySyncWithOptionsAsync(CommonApplySyncRequest request, CommonApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3561,6 +4213,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CommonApplySyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 退改审批结果同步
+         *
+         * @param request CommonApplySyncRequest
+         * @return CommonApplySyncResponse
+         */
         public CommonApplySyncResponse CommonApplySync(CommonApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3568,6 +4226,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CommonApplySyncWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 退改审批结果同步
+         *
+         * @param request CommonApplySyncRequest
+         * @return CommonApplySyncResponse
+         */
         public async Task<CommonApplySyncResponse> CommonApplySyncAsync(CommonApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3575,6 +4239,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CommonApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询服务商机票记账数据
+         *
+         * @param request CooperatorFlightBillSettlementQueryRequest
+         * @param headers CooperatorFlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CooperatorFlightBillSettlementQueryResponse
+         */
         public CooperatorFlightBillSettlementQueryResponse CooperatorFlightBillSettlementQueryWithOptions(CooperatorFlightBillSettlementQueryRequest request, CooperatorFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3628,6 +4300,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CooperatorFlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务商机票记账数据
+         *
+         * @param request CooperatorFlightBillSettlementQueryRequest
+         * @param headers CooperatorFlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CooperatorFlightBillSettlementQueryResponse
+         */
         public async Task<CooperatorFlightBillSettlementQueryResponse> CooperatorFlightBillSettlementQueryWithOptionsAsync(CooperatorFlightBillSettlementQueryRequest request, CooperatorFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3681,6 +4361,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CooperatorFlightBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务商机票记账数据
+         *
+         * @param request CooperatorFlightBillSettlementQueryRequest
+         * @return CooperatorFlightBillSettlementQueryResponse
+         */
         public CooperatorFlightBillSettlementQueryResponse CooperatorFlightBillSettlementQuery(CooperatorFlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3688,6 +4374,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CooperatorFlightBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询服务商机票记账数据
+         *
+         * @param request CooperatorFlightBillSettlementQueryRequest
+         * @return CooperatorFlightBillSettlementQueryResponse
+         */
         public async Task<CooperatorFlightBillSettlementQueryResponse> CooperatorFlightBillSettlementQueryAsync(CooperatorFlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3695,6 +4387,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CooperatorFlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询服务商酒店记账数据
+         *
+         * @param request CooperatorHotelBillSettlementQueryRequest
+         * @param headers CooperatorHotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CooperatorHotelBillSettlementQueryResponse
+         */
         public CooperatorHotelBillSettlementQueryResponse CooperatorHotelBillSettlementQueryWithOptions(CooperatorHotelBillSettlementQueryRequest request, CooperatorHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3748,6 +4448,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CooperatorHotelBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务商酒店记账数据
+         *
+         * @param request CooperatorHotelBillSettlementQueryRequest
+         * @param headers CooperatorHotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CooperatorHotelBillSettlementQueryResponse
+         */
         public async Task<CooperatorHotelBillSettlementQueryResponse> CooperatorHotelBillSettlementQueryWithOptionsAsync(CooperatorHotelBillSettlementQueryRequest request, CooperatorHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3801,6 +4509,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CooperatorHotelBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务商酒店记账数据
+         *
+         * @param request CooperatorHotelBillSettlementQueryRequest
+         * @return CooperatorHotelBillSettlementQueryResponse
+         */
         public CooperatorHotelBillSettlementQueryResponse CooperatorHotelBillSettlementQuery(CooperatorHotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3808,6 +4522,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CooperatorHotelBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询服务商酒店记账数据
+         *
+         * @param request CooperatorHotelBillSettlementQueryRequest
+         * @return CooperatorHotelBillSettlementQueryResponse
+         */
         public async Task<CooperatorHotelBillSettlementQueryResponse> CooperatorHotelBillSettlementQueryAsync(CooperatorHotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3815,6 +4535,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CooperatorHotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取关联可调用企业接口
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CorpAuthLinkInfoQueryResponse
+         */
         public CorpAuthLinkInfoQueryResponse CorpAuthLinkInfoQueryWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3836,6 +4563,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CorpAuthLinkInfoQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取关联可调用企业接口
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CorpAuthLinkInfoQueryResponse
+         */
         public async Task<CorpAuthLinkInfoQueryResponse> CorpAuthLinkInfoQueryWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3857,6 +4591,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CorpAuthLinkInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取关联可调用企业接口
+         *
+         * @return CorpAuthLinkInfoQueryResponse
+         */
         public CorpAuthLinkInfoQueryResponse CorpAuthLinkInfoQuery()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3864,6 +4603,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CorpAuthLinkInfoQueryWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary 获取关联可调用企业接口
+         *
+         * @return CorpAuthLinkInfoQueryResponse
+         */
         public async Task<CorpAuthLinkInfoQueryResponse> CorpAuthLinkInfoQueryAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3871,6 +4615,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CorpAuthLinkInfoQueryWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary 换取CorpToken接口
+         *
+         * @param request CorpTokenRequest
+         * @param headers CorpTokenHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CorpTokenResponse
+         */
         public CorpTokenResponse CorpTokenWithOptions(CorpTokenRequest request, CorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3916,6 +4668,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CorpTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取CorpToken接口
+         *
+         * @param request CorpTokenRequest
+         * @param headers CorpTokenHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CorpTokenResponse
+         */
         public async Task<CorpTokenResponse> CorpTokenWithOptionsAsync(CorpTokenRequest request, CorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3961,6 +4721,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CorpTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取CorpToken接口
+         *
+         * @param request CorpTokenRequest
+         * @return CorpTokenResponse
+         */
         public CorpTokenResponse CorpToken(CorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3968,6 +4734,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CorpTokenWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 换取CorpToken接口
+         *
+         * @param request CorpTokenRequest
+         * @return CorpTokenResponse
+         */
         public async Task<CorpTokenResponse> CorpTokenAsync(CorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3975,6 +4747,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CorpTokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除成本中心
+         *
+         * @param request CostCenterDeleteRequest
+         * @param headers CostCenterDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterDeleteResponse
+         */
         public CostCenterDeleteResponse CostCenterDeleteWithOptions(CostCenterDeleteRequest request, CostCenterDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4012,6 +4792,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterDeleteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除成本中心
+         *
+         * @param request CostCenterDeleteRequest
+         * @param headers CostCenterDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterDeleteResponse
+         */
         public async Task<CostCenterDeleteResponse> CostCenterDeleteWithOptionsAsync(CostCenterDeleteRequest request, CostCenterDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4049,6 +4837,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterDeleteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除成本中心
+         *
+         * @param request CostCenterDeleteRequest
+         * @return CostCenterDeleteResponse
+         */
         public CostCenterDeleteResponse CostCenterDelete(CostCenterDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4056,6 +4850,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CostCenterDeleteWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除成本中心
+         *
+         * @param request CostCenterDeleteRequest
+         * @return CostCenterDeleteResponse
+         */
         public async Task<CostCenterDeleteResponse> CostCenterDeleteAsync(CostCenterDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4063,6 +4863,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CostCenterDeleteWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 修改成本中心
+         *
+         * @param request CostCenterModifyRequest
+         * @param headers CostCenterModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterModifyResponse
+         */
         public CostCenterModifyResponse CostCenterModifyWithOptions(CostCenterModifyRequest request, CostCenterModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4120,6 +4928,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterModifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改成本中心
+         *
+         * @param request CostCenterModifyRequest
+         * @param headers CostCenterModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterModifyResponse
+         */
         public async Task<CostCenterModifyResponse> CostCenterModifyWithOptionsAsync(CostCenterModifyRequest request, CostCenterModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4177,6 +4993,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterModifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改成本中心
+         *
+         * @param request CostCenterModifyRequest
+         * @return CostCenterModifyResponse
+         */
         public CostCenterModifyResponse CostCenterModify(CostCenterModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4184,6 +5006,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CostCenterModifyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 修改成本中心
+         *
+         * @param request CostCenterModifyRequest
+         * @return CostCenterModifyResponse
+         */
         public async Task<CostCenterModifyResponse> CostCenterModifyAsync(CostCenterModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4191,6 +5019,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CostCenterModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查看成本中心
+         *
+         * @param request CostCenterQueryRequest
+         * @param headers CostCenterQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterQueryResponse
+         */
         public CostCenterQueryResponse CostCenterQueryWithOptions(CostCenterQueryRequest request, CostCenterQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4244,6 +5080,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看成本中心
+         *
+         * @param request CostCenterQueryRequest
+         * @param headers CostCenterQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterQueryResponse
+         */
         public async Task<CostCenterQueryResponse> CostCenterQueryWithOptionsAsync(CostCenterQueryRequest request, CostCenterQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4297,6 +5141,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看成本中心
+         *
+         * @param request CostCenterQueryRequest
+         * @return CostCenterQueryResponse
+         */
         public CostCenterQueryResponse CostCenterQuery(CostCenterQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4304,6 +5154,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CostCenterQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查看成本中心
+         *
+         * @param request CostCenterQueryRequest
+         * @return CostCenterQueryResponse
+         */
         public async Task<CostCenterQueryResponse> CostCenterQueryAsync(CostCenterQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4311,6 +5167,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CostCenterQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保存成本中心
+         *
+         * @param request CostCenterSaveRequest
+         * @param headers CostCenterSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterSaveResponse
+         */
         public CostCenterSaveResponse CostCenterSaveWithOptions(CostCenterSaveRequest request, CostCenterSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4368,6 +5232,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保存成本中心
+         *
+         * @param request CostCenterSaveRequest
+         * @param headers CostCenterSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CostCenterSaveResponse
+         */
         public async Task<CostCenterSaveResponse> CostCenterSaveWithOptionsAsync(CostCenterSaveRequest request, CostCenterSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4425,6 +5297,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CostCenterSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保存成本中心
+         *
+         * @param request CostCenterSaveRequest
+         * @return CostCenterSaveResponse
+         */
         public CostCenterSaveResponse CostCenterSave(CostCenterSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4432,6 +5310,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CostCenterSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 保存成本中心
+         *
+         * @param request CostCenterSaveRequest
+         * @return CostCenterSaveResponse
+         */
         public async Task<CostCenterSaveResponse> CostCenterSaveAsync(CostCenterSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4439,6 +5323,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CostCenterSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 创建子企业
+         *
+         * @param request CreateSubCorpRequest
+         * @param headers CreateSubCorpHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSubCorpResponse
+         */
         public CreateSubCorpResponse CreateSubCorpWithOptions(CreateSubCorpRequest request, CreateSubCorpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4484,6 +5376,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CreateSubCorpResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建子企业
+         *
+         * @param request CreateSubCorpRequest
+         * @param headers CreateSubCorpHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSubCorpResponse
+         */
         public async Task<CreateSubCorpResponse> CreateSubCorpWithOptionsAsync(CreateSubCorpRequest request, CreateSubCorpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4529,6 +5429,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<CreateSubCorpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建子企业
+         *
+         * @param request CreateSubCorpRequest
+         * @return CreateSubCorpResponse
+         */
         public CreateSubCorpResponse CreateSubCorp(CreateSubCorpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4536,6 +5442,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return CreateSubCorpWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 创建子企业
+         *
+         * @param request CreateSubCorpRequest
+         * @return CreateSubCorpResponse
+         */
         public async Task<CreateSubCorpResponse> CreateSubCorpAsync(CreateSubCorpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4543,6 +5455,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CreateSubCorpWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头适用人员
+         *
+         * @param tmpReq DeleteInvoiceEntityRequest
+         * @param headers DeleteInvoiceEntityHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInvoiceEntityResponse
+         */
         public DeleteInvoiceEntityResponse DeleteInvoiceEntityWithOptions(DeleteInvoiceEntityRequest tmpReq, DeleteInvoiceEntityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4594,6 +5514,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<DeleteInvoiceEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头适用人员
+         *
+         * @param tmpReq DeleteInvoiceEntityRequest
+         * @param headers DeleteInvoiceEntityHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInvoiceEntityResponse
+         */
         public async Task<DeleteInvoiceEntityResponse> DeleteInvoiceEntityWithOptionsAsync(DeleteInvoiceEntityRequest tmpReq, DeleteInvoiceEntityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4645,6 +5573,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<DeleteInvoiceEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头适用人员
+         *
+         * @param request DeleteInvoiceEntityRequest
+         * @return DeleteInvoiceEntityResponse
+         */
         public DeleteInvoiceEntityResponse DeleteInvoiceEntity(DeleteInvoiceEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4652,6 +5586,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return DeleteInvoiceEntityWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头适用人员
+         *
+         * @param request DeleteInvoiceEntityRequest
+         * @return DeleteInvoiceEntityResponse
+         */
         public async Task<DeleteInvoiceEntityResponse> DeleteInvoiceEntityAsync(DeleteInvoiceEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4659,6 +5599,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await DeleteInvoiceEntityWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步外部平台部门信息至商旅内部
+         *
+         * @param tmpReq DepartmentSaveRequest
+         * @param headers DepartmentSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DepartmentSaveResponse
+         */
         public DepartmentSaveResponse DepartmentSaveWithOptions(DepartmentSaveRequest tmpReq, DepartmentSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4702,6 +5650,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<DepartmentSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步外部平台部门信息至商旅内部
+         *
+         * @param tmpReq DepartmentSaveRequest
+         * @param headers DepartmentSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DepartmentSaveResponse
+         */
         public async Task<DepartmentSaveResponse> DepartmentSaveWithOptionsAsync(DepartmentSaveRequest tmpReq, DepartmentSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4745,6 +5701,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<DepartmentSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步外部平台部门信息至商旅内部
+         *
+         * @param request DepartmentSaveRequest
+         * @return DepartmentSaveResponse
+         */
         public DepartmentSaveResponse DepartmentSave(DepartmentSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4752,6 +5714,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return DepartmentSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步外部平台部门信息至商旅内部
+         *
+         * @param request DepartmentSaveRequest
+         * @return DepartmentSaveResponse
+         */
         public async Task<DepartmentSaveResponse> DepartmentSaveAsync(DepartmentSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4759,6 +5727,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await DepartmentSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 增加成本中心人员信息
+         *
+         * @param tmpReq EntityAddRequest
+         * @param headers EntityAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntityAddResponse
+         */
         public EntityAddResponse EntityAddWithOptions(EntityAddRequest tmpReq, EntityAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4806,6 +5782,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 增加成本中心人员信息
+         *
+         * @param tmpReq EntityAddRequest
+         * @param headers EntityAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntityAddResponse
+         */
         public async Task<EntityAddResponse> EntityAddWithOptionsAsync(EntityAddRequest tmpReq, EntityAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4853,6 +5837,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 增加成本中心人员信息
+         *
+         * @param request EntityAddRequest
+         * @return EntityAddResponse
+         */
         public EntityAddResponse EntityAdd(EntityAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4860,6 +5850,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return EntityAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 增加成本中心人员信息
+         *
+         * @param request EntityAddRequest
+         * @return EntityAddResponse
+         */
         public async Task<EntityAddResponse> EntityAddAsync(EntityAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4867,6 +5863,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await EntityAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除成本中心人员信息
+         *
+         * @param tmpReq EntityDeleteRequest
+         * @param headers EntityDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntityDeleteResponse
+         */
         public EntityDeleteResponse EntityDeleteWithOptions(EntityDeleteRequest tmpReq, EntityDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4920,6 +5924,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityDeleteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除成本中心人员信息
+         *
+         * @param tmpReq EntityDeleteRequest
+         * @param headers EntityDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntityDeleteResponse
+         */
         public async Task<EntityDeleteResponse> EntityDeleteWithOptionsAsync(EntityDeleteRequest tmpReq, EntityDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4973,6 +5985,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntityDeleteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除成本中心人员信息
+         *
+         * @param request EntityDeleteRequest
+         * @return EntityDeleteResponse
+         */
         public EntityDeleteResponse EntityDelete(EntityDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4980,6 +5998,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return EntityDeleteWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除成本中心人员信息
+         *
+         * @param request EntityDeleteRequest
+         * @return EntityDeleteResponse
+         */
         public async Task<EntityDeleteResponse> EntityDeleteAsync(EntityDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4987,6 +6011,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await EntityDeleteWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 设置成本中心人员信息
+         *
+         * @param tmpReq EntitySetRequest
+         * @param headers EntitySetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntitySetResponse
+         */
         public EntitySetResponse EntitySetWithOptions(EntitySetRequest tmpReq, EntitySetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5034,6 +6066,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntitySetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 设置成本中心人员信息
+         *
+         * @param tmpReq EntitySetRequest
+         * @param headers EntitySetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EntitySetResponse
+         */
         public async Task<EntitySetResponse> EntitySetWithOptionsAsync(EntitySetRequest tmpReq, EntitySetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5081,6 +6121,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EntitySetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 设置成本中心人员信息
+         *
+         * @param request EntitySetRequest
+         * @return EntitySetResponse
+         */
         public EntitySetResponse EntitySet(EntitySetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5088,6 +6134,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return EntitySetWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 设置成本中心人员信息
+         *
+         * @param request EntitySetRequest
+         * @return EntitySetResponse
+         */
         public async Task<EntitySetResponse> EntitySetAsync(EntitySetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5095,6 +6147,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await EntitySetWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 预估价格查询
+         *
+         * @param request EstimatedPriceQueryRequest
+         * @param headers EstimatedPriceQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EstimatedPriceQueryResponse
+         */
         public EstimatedPriceQueryResponse EstimatedPriceQueryWithOptions(EstimatedPriceQueryRequest request, EstimatedPriceQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5160,6 +6220,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EstimatedPriceQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 预估价格查询
+         *
+         * @param request EstimatedPriceQueryRequest
+         * @param headers EstimatedPriceQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EstimatedPriceQueryResponse
+         */
         public async Task<EstimatedPriceQueryResponse> EstimatedPriceQueryWithOptionsAsync(EstimatedPriceQueryRequest request, EstimatedPriceQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5225,6 +6293,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<EstimatedPriceQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 预估价格查询
+         *
+         * @param request EstimatedPriceQueryRequest
+         * @return EstimatedPriceQueryResponse
+         */
         public EstimatedPriceQueryResponse EstimatedPriceQuery(EstimatedPriceQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5232,6 +6306,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return EstimatedPriceQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 预估价格查询
+         *
+         * @param request EstimatedPriceQueryRequest
+         * @return EstimatedPriceQueryResponse
+         */
         public async Task<EstimatedPriceQueryResponse> EstimatedPriceQueryAsync(EstimatedPriceQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5239,6 +6319,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await EstimatedPriceQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 超标审批结果同步
+         *
+         * @param request ExceedApplySyncRequest
+         * @param headers ExceedApplySyncHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExceedApplySyncResponse
+         */
         public ExceedApplySyncResponse ExceedApplySyncWithOptions(ExceedApplySyncRequest request, ExceedApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5296,6 +6384,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ExceedApplySyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 超标审批结果同步
+         *
+         * @param request ExceedApplySyncRequest
+         * @param headers ExceedApplySyncHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExceedApplySyncResponse
+         */
         public async Task<ExceedApplySyncResponse> ExceedApplySyncWithOptionsAsync(ExceedApplySyncRequest request, ExceedApplySyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5353,6 +6449,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ExceedApplySyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 超标审批结果同步
+         *
+         * @param request ExceedApplySyncRequest
+         * @return ExceedApplySyncResponse
+         */
         public ExceedApplySyncResponse ExceedApplySync(ExceedApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5360,6 +6462,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ExceedApplySyncWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 超标审批结果同步
+         *
+         * @param request ExceedApplySyncRequest
+         * @return ExceedApplySyncResponse
+         */
         public async Task<ExceedApplySyncResponse> ExceedApplySyncAsync(ExceedApplySyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5367,6 +6475,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ExceedApplySyncWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票记账数据
+         *
+         * @param request FlightBillSettlementQueryRequest
+         * @param headers FlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightBillSettlementQueryResponse
+         */
         public FlightBillSettlementQueryResponse FlightBillSettlementQueryWithOptions(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5416,6 +6532,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票记账数据
+         *
+         * @param request FlightBillSettlementQueryRequest
+         * @param headers FlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightBillSettlementQueryResponse
+         */
         public async Task<FlightBillSettlementQueryResponse> FlightBillSettlementQueryWithOptionsAsync(FlightBillSettlementQueryRequest request, FlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5465,6 +6589,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票记账数据
+         *
+         * @param request FlightBillSettlementQueryRequest
+         * @return FlightBillSettlementQueryResponse
+         */
         public FlightBillSettlementQueryResponse FlightBillSettlementQuery(FlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5472,6 +6602,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票记账数据
+         *
+         * @param request FlightBillSettlementQueryRequest
+         * @return FlightBillSettlementQueryResponse
+         */
         public async Task<FlightBillSettlementQueryResponse> FlightBillSettlementQueryAsync(FlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5479,6 +6615,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单取消
+         *
+         * @param request FlightCancelOrderRequest
+         * @param headers FlightCancelOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCancelOrderResponse
+         */
         public FlightCancelOrderResponse FlightCancelOrderWithOptions(FlightCancelOrderRequest request, FlightCancelOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5516,6 +6660,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCancelOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单取消
+         *
+         * @param request FlightCancelOrderRequest
+         * @param headers FlightCancelOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCancelOrderResponse
+         */
         public async Task<FlightCancelOrderResponse> FlightCancelOrderWithOptionsAsync(FlightCancelOrderRequest request, FlightCancelOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5553,6 +6705,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCancelOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单取消
+         *
+         * @param request FlightCancelOrderRequest
+         * @return FlightCancelOrderResponse
+         */
         public FlightCancelOrderResponse FlightCancelOrder(FlightCancelOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5560,6 +6718,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightCancelOrderWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单取消
+         *
+         * @param request FlightCancelOrderRequest
+         * @return FlightCancelOrderResponse
+         */
         public async Task<FlightCancelOrderResponse> FlightCancelOrderAsync(FlightCancelOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5567,6 +6731,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightCancelOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单取消
+         *
+         * @param request FlightCancelOrderV2Request
+         * @param headers FlightCancelOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCancelOrderV2Response
+         */
         public FlightCancelOrderV2Response FlightCancelOrderV2WithOptions(FlightCancelOrderV2Request request, FlightCancelOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5612,6 +6784,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCancelOrderV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单取消
+         *
+         * @param request FlightCancelOrderV2Request
+         * @param headers FlightCancelOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCancelOrderV2Response
+         */
         public async Task<FlightCancelOrderV2Response> FlightCancelOrderV2WithOptionsAsync(FlightCancelOrderV2Request request, FlightCancelOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5657,6 +6837,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCancelOrderV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单取消
+         *
+         * @param request FlightCancelOrderV2Request
+         * @return FlightCancelOrderV2Response
+         */
         public FlightCancelOrderV2Response FlightCancelOrderV2(FlightCancelOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5664,6 +6850,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightCancelOrderV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单取消
+         *
+         * @param request FlightCancelOrderV2Request
+         * @return FlightCancelOrderV2Response
+         */
         public async Task<FlightCancelOrderV2Response> FlightCancelOrderV2Async(FlightCancelOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5671,6 +6863,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightCancelOrderV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单创建
+         *
+         * @param tmpReq FlightCreateOrderRequest
+         * @param headers FlightCreateOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCreateOrderResponse
+         */
         public FlightCreateOrderResponse FlightCreateOrderWithOptions(FlightCreateOrderRequest tmpReq, FlightCreateOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5794,6 +6994,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCreateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单创建
+         *
+         * @param tmpReq FlightCreateOrderRequest
+         * @param headers FlightCreateOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCreateOrderResponse
+         */
         public async Task<FlightCreateOrderResponse> FlightCreateOrderWithOptionsAsync(FlightCreateOrderRequest tmpReq, FlightCreateOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5917,6 +7125,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCreateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单创建
+         *
+         * @param request FlightCreateOrderRequest
+         * @return FlightCreateOrderResponse
+         */
         public FlightCreateOrderResponse FlightCreateOrder(FlightCreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5924,6 +7138,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightCreateOrderWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单创建
+         *
+         * @param request FlightCreateOrderRequest
+         * @return FlightCreateOrderResponse
+         */
         public async Task<FlightCreateOrderResponse> FlightCreateOrderAsync(FlightCreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5931,6 +7151,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightCreateOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单创建
+         *
+         * @param tmpReq FlightCreateOrderV2Request
+         * @param headers FlightCreateOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCreateOrderV2Response
+         */
         public FlightCreateOrderV2Response FlightCreateOrderV2WithOptions(FlightCreateOrderV2Request tmpReq, FlightCreateOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6014,6 +7242,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCreateOrderV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单创建
+         *
+         * @param tmpReq FlightCreateOrderV2Request
+         * @param headers FlightCreateOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightCreateOrderV2Response
+         */
         public async Task<FlightCreateOrderV2Response> FlightCreateOrderV2WithOptionsAsync(FlightCreateOrderV2Request tmpReq, FlightCreateOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6097,6 +7333,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightCreateOrderV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单创建
+         *
+         * @param request FlightCreateOrderV2Request
+         * @return FlightCreateOrderV2Response
+         */
         public FlightCreateOrderV2Response FlightCreateOrderV2(FlightCreateOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6104,6 +7346,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightCreateOrderV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单创建
+         *
+         * @param request FlightCreateOrderV2Request
+         * @return FlightCreateOrderV2Response
+         */
         public async Task<FlightCreateOrderV2Response> FlightCreateOrderV2Async(FlightCreateOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6111,6 +7359,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightCreateOrderV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询飞机超标审批详情
+         *
+         * @param request FlightExceedApplyQueryRequest
+         * @param headers FlightExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightExceedApplyQueryResponse
+         */
         public FlightExceedApplyQueryResponse FlightExceedApplyQueryWithOptions(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6148,6 +7404,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询飞机超标审批详情
+         *
+         * @param request FlightExceedApplyQueryRequest
+         * @param headers FlightExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightExceedApplyQueryResponse
+         */
         public async Task<FlightExceedApplyQueryResponse> FlightExceedApplyQueryWithOptionsAsync(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6185,6 +7449,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightExceedApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询飞机超标审批详情
+         *
+         * @param request FlightExceedApplyQueryRequest
+         * @return FlightExceedApplyQueryResponse
+         */
         public FlightExceedApplyQueryResponse FlightExceedApplyQuery(FlightExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6192,6 +7462,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询飞机超标审批详情
+         *
+         * @param request FlightExceedApplyQueryRequest
+         * @return FlightExceedApplyQueryResponse
+         */
         public async Task<FlightExceedApplyQueryResponse> FlightExceedApplyQueryAsync(FlightExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6199,6 +7475,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票行程单扫描件
+         *
+         * @param request FlightItineraryScanQueryRequest
+         * @param headers FlightItineraryScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightItineraryScanQueryResponse
+         */
         public FlightItineraryScanQueryResponse FlightItineraryScanQueryWithOptions(FlightItineraryScanQueryRequest request, FlightItineraryScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6260,6 +7544,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightItineraryScanQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票行程单扫描件
+         *
+         * @param request FlightItineraryScanQueryRequest
+         * @param headers FlightItineraryScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightItineraryScanQueryResponse
+         */
         public async Task<FlightItineraryScanQueryResponse> FlightItineraryScanQueryWithOptionsAsync(FlightItineraryScanQueryRequest request, FlightItineraryScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6321,6 +7613,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightItineraryScanQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票行程单扫描件
+         *
+         * @param request FlightItineraryScanQueryRequest
+         * @return FlightItineraryScanQueryResponse
+         */
         public FlightItineraryScanQueryResponse FlightItineraryScanQuery(FlightItineraryScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6328,6 +7626,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightItineraryScanQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票行程单扫描件
+         *
+         * @param request FlightItineraryScanQueryRequest
+         * @return FlightItineraryScanQueryResponse
+         */
         public async Task<FlightItineraryScanQueryResponse> FlightItineraryScanQueryAsync(FlightItineraryScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6335,6 +7639,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightItineraryScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchRequest
+         * @param headers FlightListingSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightListingSearchResponse
+         */
         public FlightListingSearchResponse FlightListingSearchWithOptions(FlightListingSearchRequest request, FlightListingSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6388,6 +7700,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightListingSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchRequest
+         * @param headers FlightListingSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightListingSearchResponse
+         */
         public async Task<FlightListingSearchResponse> FlightListingSearchWithOptionsAsync(FlightListingSearchRequest request, FlightListingSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6441,6 +7761,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightListingSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchRequest
+         * @return FlightListingSearchResponse
+         */
         public FlightListingSearchResponse FlightListingSearch(FlightListingSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6448,6 +7774,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightListingSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchRequest
+         * @return FlightListingSearchResponse
+         */
         public async Task<FlightListingSearchResponse> FlightListingSearchAsync(FlightListingSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6455,6 +7787,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightListingSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param tmpReq FlightListingSearchV2Request
+         * @param headers FlightListingSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightListingSearchV2Response
+         */
         public FlightListingSearchV2Response FlightListingSearchV2WithOptions(FlightListingSearchV2Request tmpReq, FlightListingSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6542,6 +7882,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightListingSearchV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param tmpReq FlightListingSearchV2Request
+         * @param headers FlightListingSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightListingSearchV2Response
+         */
         public async Task<FlightListingSearchV2Response> FlightListingSearchV2WithOptionsAsync(FlightListingSearchV2Request tmpReq, FlightListingSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6629,6 +7977,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightListingSearchV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchV2Request
+         * @return FlightListingSearchV2Response
+         */
         public FlightListingSearchV2Response FlightListingSearchV2(FlightListingSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6636,6 +7990,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightListingSearchV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightListingSearchV2Request
+         * @return FlightListingSearchV2Response
+         */
         public async Task<FlightListingSearchV2Response> FlightListingSearchV2Async(FlightListingSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6643,6 +8003,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightListingSearchV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param tmpReq FlightModifyApplyV2Request
+         * @param headers FlightModifyApplyV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyApplyV2Response
+         */
         public FlightModifyApplyV2Response FlightModifyApplyV2WithOptions(FlightModifyApplyV2Request tmpReq, FlightModifyApplyV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6726,6 +8094,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyApplyV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param tmpReq FlightModifyApplyV2Request
+         * @param headers FlightModifyApplyV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyApplyV2Response
+         */
         public async Task<FlightModifyApplyV2Response> FlightModifyApplyV2WithOptionsAsync(FlightModifyApplyV2Request tmpReq, FlightModifyApplyV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6809,6 +8185,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyApplyV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param request FlightModifyApplyV2Request
+         * @return FlightModifyApplyV2Response
+         */
         public FlightModifyApplyV2Response FlightModifyApplyV2(FlightModifyApplyV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6816,6 +8198,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyApplyV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param request FlightModifyApplyV2Request
+         * @return FlightModifyApplyV2Response
+         */
         public async Task<FlightModifyApplyV2Response> FlightModifyApplyV2Async(FlightModifyApplyV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6823,6 +8211,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyApplyV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request FlightModifyCancelV2Request
+         * @param headers FlightModifyCancelV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyCancelV2Response
+         */
         public FlightModifyCancelV2Response FlightModifyCancelV2WithOptions(FlightModifyCancelV2Request request, FlightModifyCancelV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6876,6 +8272,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyCancelV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request FlightModifyCancelV2Request
+         * @param headers FlightModifyCancelV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyCancelV2Response
+         */
         public async Task<FlightModifyCancelV2Response> FlightModifyCancelV2WithOptionsAsync(FlightModifyCancelV2Request request, FlightModifyCancelV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6929,6 +8333,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyCancelV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request FlightModifyCancelV2Request
+         * @return FlightModifyCancelV2Response
+         */
         public FlightModifyCancelV2Response FlightModifyCancelV2(FlightModifyCancelV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6936,6 +8346,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyCancelV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request FlightModifyCancelV2Request
+         * @return FlightModifyCancelV2Response
+         */
         public async Task<FlightModifyCancelV2Response> FlightModifyCancelV2Async(FlightModifyCancelV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6943,6 +8359,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyCancelV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签列表搜索
+         *
+         * @param tmpReq FlightModifyListingSearchV2Request
+         * @param headers FlightModifyListingSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyListingSearchV2Response
+         */
         public FlightModifyListingSearchV2Response FlightModifyListingSearchV2WithOptions(FlightModifyListingSearchV2Request tmpReq, FlightModifyListingSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7042,6 +8466,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyListingSearchV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签列表搜索
+         *
+         * @param tmpReq FlightModifyListingSearchV2Request
+         * @param headers FlightModifyListingSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyListingSearchV2Response
+         */
         public async Task<FlightModifyListingSearchV2Response> FlightModifyListingSearchV2WithOptionsAsync(FlightModifyListingSearchV2Request tmpReq, FlightModifyListingSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7141,6 +8573,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyListingSearchV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签列表搜索
+         *
+         * @param request FlightModifyListingSearchV2Request
+         * @return FlightModifyListingSearchV2Response
+         */
         public FlightModifyListingSearchV2Response FlightModifyListingSearchV2(FlightModifyListingSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7148,6 +8586,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyListingSearchV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签列表搜索
+         *
+         * @param request FlightModifyListingSearchV2Request
+         * @return FlightModifyListingSearchV2Response
+         */
         public async Task<FlightModifyListingSearchV2Response> FlightModifyListingSearchV2Async(FlightModifyListingSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7155,6 +8599,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyListingSearchV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request FlightModifyOrderDetailV2Request
+         * @param headers FlightModifyOrderDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyOrderDetailV2Response
+         */
         public FlightModifyOrderDetailV2Response FlightModifyOrderDetailV2WithOptions(FlightModifyOrderDetailV2Request request, FlightModifyOrderDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7204,6 +8656,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyOrderDetailV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request FlightModifyOrderDetailV2Request
+         * @param headers FlightModifyOrderDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyOrderDetailV2Response
+         */
         public async Task<FlightModifyOrderDetailV2Response> FlightModifyOrderDetailV2WithOptionsAsync(FlightModifyOrderDetailV2Request request, FlightModifyOrderDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7253,6 +8713,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyOrderDetailV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request FlightModifyOrderDetailV2Request
+         * @return FlightModifyOrderDetailV2Response
+         */
         public FlightModifyOrderDetailV2Response FlightModifyOrderDetailV2(FlightModifyOrderDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7260,6 +8726,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyOrderDetailV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request FlightModifyOrderDetailV2Request
+         * @return FlightModifyOrderDetailV2Response
+         */
         public async Task<FlightModifyOrderDetailV2Response> FlightModifyOrderDetailV2Async(FlightModifyOrderDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7267,6 +8739,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyOrderDetailV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签报价搜索
+         *
+         * @param tmpReq FlightModifyOtaSearchV2Request
+         * @param headers FlightModifyOtaSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyOtaSearchV2Response
+         */
         public FlightModifyOtaSearchV2Response FlightModifyOtaSearchV2WithOptions(FlightModifyOtaSearchV2Request tmpReq, FlightModifyOtaSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7354,6 +8834,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyOtaSearchV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签报价搜索
+         *
+         * @param tmpReq FlightModifyOtaSearchV2Request
+         * @param headers FlightModifyOtaSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyOtaSearchV2Response
+         */
         public async Task<FlightModifyOtaSearchV2Response> FlightModifyOtaSearchV2WithOptionsAsync(FlightModifyOtaSearchV2Request tmpReq, FlightModifyOtaSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7441,6 +8929,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyOtaSearchV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签报价搜索
+         *
+         * @param request FlightModifyOtaSearchV2Request
+         * @return FlightModifyOtaSearchV2Response
+         */
         public FlightModifyOtaSearchV2Response FlightModifyOtaSearchV2(FlightModifyOtaSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7448,6 +8942,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyOtaSearchV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签报价搜索
+         *
+         * @param request FlightModifyOtaSearchV2Request
+         * @return FlightModifyOtaSearchV2Response
+         */
         public async Task<FlightModifyOtaSearchV2Response> FlightModifyOtaSearchV2Async(FlightModifyOtaSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7455,6 +8955,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyOtaSearchV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签支付
+         *
+         * @param tmpReq FlightModifyPayV2Request
+         * @param headers FlightModifyPayV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyPayV2Response
+         */
         public FlightModifyPayV2Response FlightModifyPayV2WithOptions(FlightModifyPayV2Request tmpReq, FlightModifyPayV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7522,6 +9030,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyPayV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签支付
+         *
+         * @param tmpReq FlightModifyPayV2Request
+         * @param headers FlightModifyPayV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightModifyPayV2Response
+         */
         public async Task<FlightModifyPayV2Response> FlightModifyPayV2WithOptionsAsync(FlightModifyPayV2Request tmpReq, FlightModifyPayV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7589,6 +9105,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightModifyPayV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签支付
+         *
+         * @param request FlightModifyPayV2Request
+         * @return FlightModifyPayV2Response
+         */
         public FlightModifyPayV2Response FlightModifyPayV2(FlightModifyPayV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7596,6 +9118,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightModifyPayV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签支付
+         *
+         * @param request FlightModifyPayV2Request
+         * @return FlightModifyPayV2Response
+         */
         public async Task<FlightModifyPayV2Response> FlightModifyPayV2Async(FlightModifyPayV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7603,6 +9131,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightModifyPayV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单明细信息
+         *
+         * @param request FlightOrderDetailInfoRequest
+         * @param headers FlightOrderDetailInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderDetailInfoResponse
+         */
         public FlightOrderDetailInfoResponse FlightOrderDetailInfoWithOptions(FlightOrderDetailInfoRequest request, FlightOrderDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7640,6 +9176,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderDetailInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单明细信息
+         *
+         * @param request FlightOrderDetailInfoRequest
+         * @param headers FlightOrderDetailInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderDetailInfoResponse
+         */
         public async Task<FlightOrderDetailInfoResponse> FlightOrderDetailInfoWithOptionsAsync(FlightOrderDetailInfoRequest request, FlightOrderDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7677,6 +9221,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单明细信息
+         *
+         * @param request FlightOrderDetailInfoRequest
+         * @return FlightOrderDetailInfoResponse
+         */
         public FlightOrderDetailInfoResponse FlightOrderDetailInfo(FlightOrderDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7684,6 +9234,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOrderDetailInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单明细信息
+         *
+         * @param request FlightOrderDetailInfoRequest
+         * @return FlightOrderDetailInfoResponse
+         */
         public async Task<FlightOrderDetailInfoResponse> FlightOrderDetailInfoAsync(FlightOrderDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7691,6 +9247,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOrderDetailInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单详情
+         *
+         * @param request FlightOrderDetailV2Request
+         * @param headers FlightOrderDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderDetailV2Response
+         */
         public FlightOrderDetailV2Response FlightOrderDetailV2WithOptions(FlightOrderDetailV2Request request, FlightOrderDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7736,6 +9300,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderDetailV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单详情
+         *
+         * @param request FlightOrderDetailV2Request
+         * @param headers FlightOrderDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderDetailV2Response
+         */
         public async Task<FlightOrderDetailV2Response> FlightOrderDetailV2WithOptionsAsync(FlightOrderDetailV2Request request, FlightOrderDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7781,6 +9353,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderDetailV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单详情
+         *
+         * @param request FlightOrderDetailV2Request
+         * @return FlightOrderDetailV2Response
+         */
         public FlightOrderDetailV2Response FlightOrderDetailV2(FlightOrderDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7788,6 +9366,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOrderDetailV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单详情
+         *
+         * @param request FlightOrderDetailV2Request
+         * @return FlightOrderDetailV2Response
+         */
         public async Task<FlightOrderDetailV2Response> FlightOrderDetailV2Async(FlightOrderDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7795,6 +9379,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOrderDetailV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票订单列表
+         *
+         * @param request FlightOrderListQueryRequest
+         * @param headers FlightOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderListQueryResponse
+         */
         public FlightOrderListQueryResponse FlightOrderListQueryWithOptions(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7872,6 +9464,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票订单列表
+         *
+         * @param request FlightOrderListQueryRequest
+         * @param headers FlightOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderListQueryResponse
+         */
         public async Task<FlightOrderListQueryResponse> FlightOrderListQueryWithOptionsAsync(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7949,6 +9549,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票订单列表
+         *
+         * @param request FlightOrderListQueryRequest
+         * @return FlightOrderListQueryResponse
+         */
         public FlightOrderListQueryResponse FlightOrderListQuery(FlightOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7956,6 +9562,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOrderListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票订单列表
+         *
+         * @param request FlightOrderListQueryRequest
+         * @return FlightOrderListQueryResponse
+         */
         public async Task<FlightOrderListQueryResponse> FlightOrderListQueryAsync(FlightOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7963,6 +9575,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票订单详情（含票信息）
+         *
+         * @param request FlightOrderQueryRequest
+         * @param headers FlightOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderQueryResponse
+         */
         public FlightOrderQueryResponse FlightOrderQueryWithOptions(FlightOrderQueryRequest request, FlightOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8004,6 +9624,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票订单详情（含票信息）
+         *
+         * @param request FlightOrderQueryRequest
+         * @param headers FlightOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOrderQueryResponse
+         */
         public async Task<FlightOrderQueryResponse> FlightOrderQueryWithOptionsAsync(FlightOrderQueryRequest request, FlightOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8045,6 +9673,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOrderQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询机票订单详情（含票信息）
+         *
+         * @param request FlightOrderQueryRequest
+         * @return FlightOrderQueryResponse
+         */
         public FlightOrderQueryResponse FlightOrderQuery(FlightOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8052,6 +9686,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOrderQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询机票订单详情（含票信息）
+         *
+         * @param request FlightOrderQueryRequest
+         * @return FlightOrderQueryResponse
+         */
         public async Task<FlightOrderQueryResponse> FlightOrderQueryAsync(FlightOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8059,6 +9699,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询退改规则行李额
+         *
+         * @param request FlightOtaItemDetailRequest
+         * @param headers FlightOtaItemDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaItemDetailResponse
+         */
         public FlightOtaItemDetailResponse FlightOtaItemDetailWithOptions(FlightOtaItemDetailRequest request, FlightOtaItemDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8100,6 +9748,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaItemDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询退改规则行李额
+         *
+         * @param request FlightOtaItemDetailRequest
+         * @param headers FlightOtaItemDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaItemDetailResponse
+         */
         public async Task<FlightOtaItemDetailResponse> FlightOtaItemDetailWithOptionsAsync(FlightOtaItemDetailRequest request, FlightOtaItemDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8141,6 +9797,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaItemDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询退改规则行李额
+         *
+         * @param request FlightOtaItemDetailRequest
+         * @return FlightOtaItemDetailResponse
+         */
         public FlightOtaItemDetailResponse FlightOtaItemDetail(FlightOtaItemDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8148,6 +9810,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOtaItemDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询退改规则行李额
+         *
+         * @param request FlightOtaItemDetailRequest
+         * @return FlightOtaItemDetailResponse
+         */
         public async Task<FlightOtaItemDetailResponse> FlightOtaItemDetailAsync(FlightOtaItemDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8155,6 +9823,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOtaItemDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班最低价搜索
+         *
+         * @param request FlightOtaSearchRequest
+         * @param headers FlightOtaSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaSearchResponse
+         */
         public FlightOtaSearchResponse FlightOtaSearchWithOptions(FlightOtaSearchRequest request, FlightOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8216,6 +9892,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班最低价搜索
+         *
+         * @param request FlightOtaSearchRequest
+         * @param headers FlightOtaSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaSearchResponse
+         */
         public async Task<FlightOtaSearchResponse> FlightOtaSearchWithOptionsAsync(FlightOtaSearchRequest request, FlightOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8277,6 +9961,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班最低价搜索
+         *
+         * @param request FlightOtaSearchRequest
+         * @return FlightOtaSearchResponse
+         */
         public FlightOtaSearchResponse FlightOtaSearch(FlightOtaSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8284,6 +9974,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOtaSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班最低价搜索
+         *
+         * @param request FlightOtaSearchRequest
+         * @return FlightOtaSearchResponse
+         */
         public async Task<FlightOtaSearchResponse> FlightOtaSearchAsync(FlightOtaSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8291,6 +9987,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOtaSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 单航班报价搜索
+         *
+         * @param tmpReq FlightOtaSearchV2Request
+         * @param headers FlightOtaSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaSearchV2Response
+         */
         public FlightOtaSearchV2Response FlightOtaSearchV2WithOptions(FlightOtaSearchV2Request tmpReq, FlightOtaSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8362,6 +10066,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaSearchV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 单航班报价搜索
+         *
+         * @param tmpReq FlightOtaSearchV2Request
+         * @param headers FlightOtaSearchV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightOtaSearchV2Response
+         */
         public async Task<FlightOtaSearchV2Response> FlightOtaSearchV2WithOptionsAsync(FlightOtaSearchV2Request tmpReq, FlightOtaSearchV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8433,6 +10145,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightOtaSearchV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 单航班报价搜索
+         *
+         * @param request FlightOtaSearchV2Request
+         * @return FlightOtaSearchV2Response
+         */
         public FlightOtaSearchV2Response FlightOtaSearchV2(FlightOtaSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8440,6 +10158,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightOtaSearchV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 单航班报价搜索
+         *
+         * @param request FlightOtaSearchV2Request
+         * @return FlightOtaSearchV2Response
+         */
         public async Task<FlightOtaSearchV2Response> FlightOtaSearchV2Async(FlightOtaSearchV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8447,6 +10171,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightOtaSearchV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单支付
+         *
+         * @param tmpReq FlightPayOrderRequest
+         * @param headers FlightPayOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightPayOrderResponse
+         */
         public FlightPayOrderResponse FlightPayOrderWithOptions(FlightPayOrderRequest tmpReq, FlightPayOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8506,6 +10238,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightPayOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单支付
+         *
+         * @param tmpReq FlightPayOrderRequest
+         * @param headers FlightPayOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightPayOrderResponse
+         */
         public async Task<FlightPayOrderResponse> FlightPayOrderWithOptionsAsync(FlightPayOrderRequest tmpReq, FlightPayOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8565,6 +10305,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightPayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班订单支付
+         *
+         * @param request FlightPayOrderRequest
+         * @return FlightPayOrderResponse
+         */
         public FlightPayOrderResponse FlightPayOrder(FlightPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8572,6 +10318,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightPayOrderWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班订单支付
+         *
+         * @param request FlightPayOrderRequest
+         * @return FlightPayOrderResponse
+         */
         public async Task<FlightPayOrderResponse> FlightPayOrderAsync(FlightPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8579,6 +10331,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightPayOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单支付
+         *
+         * @param request FlightPayOrderV2Request
+         * @param headers FlightPayOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightPayOrderV2Response
+         */
         public FlightPayOrderV2Response FlightPayOrderV2WithOptions(FlightPayOrderV2Request request, FlightPayOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8632,6 +10392,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightPayOrderV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单支付
+         *
+         * @param request FlightPayOrderV2Request
+         * @param headers FlightPayOrderV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightPayOrderV2Response
+         */
         public async Task<FlightPayOrderV2Response> FlightPayOrderV2WithOptionsAsync(FlightPayOrderV2Request request, FlightPayOrderV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8685,6 +10453,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightPayOrderV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票订单支付
+         *
+         * @param request FlightPayOrderV2Request
+         * @return FlightPayOrderV2Response
+         */
         public FlightPayOrderV2Response FlightPayOrderV2(FlightPayOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8692,6 +10466,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightPayOrderV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票订单支付
+         *
+         * @param request FlightPayOrderV2Request
+         * @return FlightPayOrderV2Response
+         */
         public async Task<FlightPayOrderV2Response> FlightPayOrderV2Async(FlightPayOrderV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8699,6 +10479,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightPayOrderV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班退票申请
+         *
+         * @param tmpReq FlightRefundApplyRequest
+         * @param headers FlightRefundApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundApplyResponse
+         */
         public FlightRefundApplyResponse FlightRefundApplyWithOptions(FlightRefundApplyRequest tmpReq, FlightRefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8802,6 +10590,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundApplyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班退票申请
+         *
+         * @param tmpReq FlightRefundApplyRequest
+         * @param headers FlightRefundApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundApplyResponse
+         */
         public async Task<FlightRefundApplyResponse> FlightRefundApplyWithOptionsAsync(FlightRefundApplyRequest tmpReq, FlightRefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8905,6 +10701,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班退票申请
+         *
+         * @param request FlightRefundApplyRequest
+         * @return FlightRefundApplyResponse
+         */
         public FlightRefundApplyResponse FlightRefundApply(FlightRefundApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8912,6 +10714,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundApplyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班退票申请
+         *
+         * @param request FlightRefundApplyRequest
+         * @return FlightRefundApplyResponse
+         */
         public async Task<FlightRefundApplyResponse> FlightRefundApplyAsync(FlightRefundApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8919,6 +10727,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundApplyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票申请
+         *
+         * @param tmpReq FlightRefundApplyV2Request
+         * @param headers FlightRefundApplyV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundApplyV2Response
+         */
         public FlightRefundApplyV2Response FlightRefundApplyV2WithOptions(FlightRefundApplyV2Request tmpReq, FlightRefundApplyV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9010,6 +10826,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundApplyV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票申请
+         *
+         * @param tmpReq FlightRefundApplyV2Request
+         * @param headers FlightRefundApplyV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundApplyV2Response
+         */
         public async Task<FlightRefundApplyV2Response> FlightRefundApplyV2WithOptionsAsync(FlightRefundApplyV2Request tmpReq, FlightRefundApplyV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9101,6 +10925,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundApplyV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票申请
+         *
+         * @param request FlightRefundApplyV2Request
+         * @return FlightRefundApplyV2Response
+         */
         public FlightRefundApplyV2Response FlightRefundApplyV2(FlightRefundApplyV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9108,6 +10938,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundApplyV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票申请
+         *
+         * @param request FlightRefundApplyV2Request
+         * @return FlightRefundApplyV2Response
+         */
         public async Task<FlightRefundApplyV2Response> FlightRefundApplyV2Async(FlightRefundApplyV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9115,6 +10951,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundApplyV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班退票详情
+         *
+         * @param request FlightRefundDetailRequest
+         * @param headers FlightRefundDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundDetailResponse
+         */
         public FlightRefundDetailResponse FlightRefundDetailWithOptions(FlightRefundDetailRequest request, FlightRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9156,6 +11000,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班退票详情
+         *
+         * @param request FlightRefundDetailRequest
+         * @param headers FlightRefundDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundDetailResponse
+         */
         public async Task<FlightRefundDetailResponse> FlightRefundDetailWithOptionsAsync(FlightRefundDetailRequest request, FlightRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9197,6 +11049,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班退票详情
+         *
+         * @param request FlightRefundDetailRequest
+         * @return FlightRefundDetailResponse
+         */
         public FlightRefundDetailResponse FlightRefundDetail(FlightRefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9204,6 +11062,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班退票详情
+         *
+         * @param request FlightRefundDetailRequest
+         * @return FlightRefundDetailResponse
+         */
         public async Task<FlightRefundDetailResponse> FlightRefundDetailAsync(FlightRefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9211,6 +11075,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票详情
+         *
+         * @param request FlightRefundDetailV2Request
+         * @param headers FlightRefundDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundDetailV2Response
+         */
         public FlightRefundDetailV2Response FlightRefundDetailV2WithOptions(FlightRefundDetailV2Request request, FlightRefundDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9256,6 +11128,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundDetailV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票详情
+         *
+         * @param request FlightRefundDetailV2Request
+         * @param headers FlightRefundDetailV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundDetailV2Response
+         */
         public async Task<FlightRefundDetailV2Response> FlightRefundDetailV2WithOptionsAsync(FlightRefundDetailV2Request request, FlightRefundDetailV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9301,6 +11181,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundDetailV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票详情
+         *
+         * @param request FlightRefundDetailV2Request
+         * @return FlightRefundDetailV2Response
+         */
         public FlightRefundDetailV2Response FlightRefundDetailV2(FlightRefundDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9308,6 +11194,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundDetailV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票详情
+         *
+         * @param request FlightRefundDetailV2Request
+         * @return FlightRefundDetailV2Response
+         */
         public async Task<FlightRefundDetailV2Response> FlightRefundDetailV2Async(FlightRefundDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9315,6 +11207,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundDetailV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票预计算
+         *
+         * @param tmpReq FlightRefundPreCalRequest
+         * @param headers FlightRefundPreCalHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundPreCalResponse
+         */
         public FlightRefundPreCalResponse FlightRefundPreCalWithOptions(FlightRefundPreCalRequest tmpReq, FlightRefundPreCalHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9366,6 +11266,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundPreCalResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票预计算
+         *
+         * @param tmpReq FlightRefundPreCalRequest
+         * @param headers FlightRefundPreCalHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundPreCalResponse
+         */
         public async Task<FlightRefundPreCalResponse> FlightRefundPreCalWithOptionsAsync(FlightRefundPreCalRequest tmpReq, FlightRefundPreCalHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9417,6 +11325,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundPreCalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票预计算
+         *
+         * @param request FlightRefundPreCalRequest
+         * @return FlightRefundPreCalResponse
+         */
         public FlightRefundPreCalResponse FlightRefundPreCal(FlightRefundPreCalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9424,6 +11338,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundPreCalWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票预计算
+         *
+         * @param request FlightRefundPreCalRequest
+         * @return FlightRefundPreCalResponse
+         */
         public async Task<FlightRefundPreCalResponse> FlightRefundPreCalAsync(FlightRefundPreCalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9431,6 +11351,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundPreCalWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票费用预计算
+         *
+         * @param tmpReq FlightRefundPreCalV2Request
+         * @param headers FlightRefundPreCalV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundPreCalV2Response
+         */
         public FlightRefundPreCalV2Response FlightRefundPreCalV2WithOptions(FlightRefundPreCalV2Request tmpReq, FlightRefundPreCalV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9502,6 +11430,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundPreCalV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票费用预计算
+         *
+         * @param tmpReq FlightRefundPreCalV2Request
+         * @param headers FlightRefundPreCalV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightRefundPreCalV2Response
+         */
         public async Task<FlightRefundPreCalV2Response> FlightRefundPreCalV2WithOptionsAsync(FlightRefundPreCalV2Request tmpReq, FlightRefundPreCalV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9573,6 +11509,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightRefundPreCalV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票退票费用预计算
+         *
+         * @param request FlightRefundPreCalV2Request
+         * @return FlightRefundPreCalV2Response
+         */
         public FlightRefundPreCalV2Response FlightRefundPreCalV2(FlightRefundPreCalV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9580,6 +11522,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightRefundPreCalV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票退票费用预计算
+         *
+         * @param request FlightRefundPreCalV2Request
+         * @return FlightRefundPreCalV2Response
+         */
         public async Task<FlightRefundPreCalV2Response> FlightRefundPreCalV2Async(FlightRefundPreCalV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9587,6 +11535,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightRefundPreCalV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightSearchListRequest
+         * @param headers FlightSearchListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightSearchListResponse
+         */
         public FlightSearchListResponse FlightSearchListWithOptions(FlightSearchListRequest request, FlightSearchListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9676,6 +11632,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightSearchListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightSearchListRequest
+         * @param headers FlightSearchListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlightSearchListResponse
+         */
         public async Task<FlightSearchListResponse> FlightSearchListWithOptionsAsync(FlightSearchListRequest request, FlightSearchListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9765,6 +11729,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<FlightSearchListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightSearchListRequest
+         * @return FlightSearchListResponse
+         */
         public FlightSearchListResponse FlightSearchList(FlightSearchListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9772,6 +11742,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return FlightSearchListWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 航班列表搜索
+         *
+         * @param request FlightSearchListRequest
+         * @return FlightSearchListResponse
+         */
         public async Task<FlightSearchListResponse> FlightSearchListAsync(FlightSearchListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9779,6 +11755,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightSearchListWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 换取GroupCorpToken接口
+         *
+         * @param request GroupCorpTokenRequest
+         * @param headers GroupCorpTokenHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupCorpTokenResponse
+         */
         public GroupCorpTokenResponse GroupCorpTokenWithOptions(GroupCorpTokenRequest request, GroupCorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9824,6 +11808,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupCorpTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取GroupCorpToken接口
+         *
+         * @param request GroupCorpTokenRequest
+         * @param headers GroupCorpTokenHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupCorpTokenResponse
+         */
         public async Task<GroupCorpTokenResponse> GroupCorpTokenWithOptionsAsync(GroupCorpTokenRequest request, GroupCorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9869,6 +11861,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupCorpTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 换取GroupCorpToken接口
+         *
+         * @param request GroupCorpTokenRequest
+         * @return GroupCorpTokenResponse
+         */
         public GroupCorpTokenResponse GroupCorpToken(GroupCorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9876,6 +11874,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return GroupCorpTokenWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 换取GroupCorpToken接口
+         *
+         * @param request GroupCorpTokenRequest
+         * @return GroupCorpTokenResponse
+         */
         public async Task<GroupCorpTokenResponse> GroupCorpTokenAsync(GroupCorpTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9883,6 +11887,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await GroupCorpTokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 集团部门同步
+         *
+         * @param tmpReq GroupDepartSaveRequest
+         * @param headers GroupDepartSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupDepartSaveResponse
+         */
         public GroupDepartSaveResponse GroupDepartSaveWithOptions(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9950,6 +11962,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupDepartSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 集团部门同步
+         *
+         * @param tmpReq GroupDepartSaveRequest
+         * @param headers GroupDepartSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupDepartSaveResponse
+         */
         public async Task<GroupDepartSaveResponse> GroupDepartSaveWithOptionsAsync(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10017,6 +12037,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupDepartSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 集团部门同步
+         *
+         * @param request GroupDepartSaveRequest
+         * @return GroupDepartSaveResponse
+         */
         public GroupDepartSaveResponse GroupDepartSave(GroupDepartSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10024,6 +12050,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return GroupDepartSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 集团部门同步
+         *
+         * @param request GroupDepartSaveRequest
+         * @return GroupDepartSaveResponse
+         */
         public async Task<GroupDepartSaveResponse> GroupDepartSaveAsync(GroupDepartSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10031,6 +12063,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await GroupDepartSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 集团人员同步
+         *
+         * @param tmpReq GroupUserSaveRequest
+         * @param headers GroupUserSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupUserSaveResponse
+         */
         public GroupUserSaveResponse GroupUserSaveWithOptions(GroupUserSaveRequest tmpReq, GroupUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10114,6 +12154,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupUserSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 集团人员同步
+         *
+         * @param tmpReq GroupUserSaveRequest
+         * @param headers GroupUserSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GroupUserSaveResponse
+         */
         public async Task<GroupUserSaveResponse> GroupUserSaveWithOptionsAsync(GroupUserSaveRequest tmpReq, GroupUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10197,6 +12245,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<GroupUserSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 集团人员同步
+         *
+         * @param request GroupUserSaveRequest
+         * @return GroupUserSaveResponse
+         */
         public GroupUserSaveResponse GroupUserSave(GroupUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10204,6 +12258,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return GroupUserSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 集团人员同步
+         *
+         * @param request GroupUserSaveRequest
+         * @return GroupUserSaveResponse
+         */
         public async Task<GroupUserSaveResponse> GroupUserSaveAsync(GroupUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10211,6 +12271,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await GroupUserSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店起价
+         *
+         * @param tmpReq HotelAskingPriceRequest
+         * @param headers HotelAskingPriceHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelAskingPriceResponse
+         */
         public HotelAskingPriceResponse HotelAskingPriceWithOptions(HotelAskingPriceRequest tmpReq, HotelAskingPriceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10298,6 +12366,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelAskingPriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店起价
+         *
+         * @param tmpReq HotelAskingPriceRequest
+         * @param headers HotelAskingPriceHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelAskingPriceResponse
+         */
         public async Task<HotelAskingPriceResponse> HotelAskingPriceWithOptionsAsync(HotelAskingPriceRequest tmpReq, HotelAskingPriceHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10385,6 +12461,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelAskingPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店起价
+         *
+         * @param request HotelAskingPriceRequest
+         * @return HotelAskingPriceResponse
+         */
         public HotelAskingPriceResponse HotelAskingPrice(HotelAskingPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10392,6 +12474,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelAskingPriceWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店起价
+         *
+         * @param request HotelAskingPriceRequest
+         * @return HotelAskingPriceResponse
+         */
         public async Task<HotelAskingPriceResponse> HotelAskingPriceAsync(HotelAskingPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10399,6 +12487,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelAskingPriceWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店记账数据
+         *
+         * @param request HotelBillSettlementQueryRequest
+         * @param headers HotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelBillSettlementQueryResponse
+         */
         public HotelBillSettlementQueryResponse HotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10448,6 +12544,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店记账数据
+         *
+         * @param request HotelBillSettlementQueryRequest
+         * @param headers HotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelBillSettlementQueryResponse
+         */
         public async Task<HotelBillSettlementQueryResponse> HotelBillSettlementQueryWithOptionsAsync(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10497,6 +12601,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店记账数据
+         *
+         * @param request HotelBillSettlementQueryRequest
+         * @return HotelBillSettlementQueryResponse
+         */
         public HotelBillSettlementQueryResponse HotelBillSettlementQuery(HotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10504,6 +12614,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店记账数据
+         *
+         * @param request HotelBillSettlementQueryRequest
+         * @return HotelBillSettlementQueryResponse
+         */
         public async Task<HotelBillSettlementQueryResponse> HotelBillSettlementQueryAsync(HotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10511,6 +12627,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店城市列表
+         *
+         * @param request HotelCityCodeListRequest
+         * @param headers HotelCityCodeListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelCityCodeListResponse
+         */
         public HotelCityCodeListResponse HotelCityCodeListWithOptions(HotelCityCodeListRequest request, HotelCityCodeListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10548,6 +12672,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelCityCodeListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店城市列表
+         *
+         * @param request HotelCityCodeListRequest
+         * @param headers HotelCityCodeListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelCityCodeListResponse
+         */
         public async Task<HotelCityCodeListResponse> HotelCityCodeListWithOptionsAsync(HotelCityCodeListRequest request, HotelCityCodeListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10585,6 +12717,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelCityCodeListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店城市列表
+         *
+         * @param request HotelCityCodeListRequest
+         * @return HotelCityCodeListResponse
+         */
         public HotelCityCodeListResponse HotelCityCodeList(HotelCityCodeListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10592,6 +12730,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelCityCodeListWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店城市列表
+         *
+         * @param request HotelCityCodeListRequest
+         * @return HotelCityCodeListResponse
+         */
         public async Task<HotelCityCodeListResponse> HotelCityCodeListAsync(HotelCityCodeListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10599,6 +12743,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelCityCodeListWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店超标审批详情
+         *
+         * @param request HotelExceedApplyQueryRequest
+         * @param headers HotelExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelExceedApplyQueryResponse
+         */
         public HotelExceedApplyQueryResponse HotelExceedApplyQueryWithOptions(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10636,6 +12788,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店超标审批详情
+         *
+         * @param request HotelExceedApplyQueryRequest
+         * @param headers HotelExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelExceedApplyQueryResponse
+         */
         public async Task<HotelExceedApplyQueryResponse> HotelExceedApplyQueryWithOptionsAsync(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10673,6 +12833,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelExceedApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店超标审批详情
+         *
+         * @param request HotelExceedApplyQueryRequest
+         * @return HotelExceedApplyQueryResponse
+         */
         public HotelExceedApplyQueryResponse HotelExceedApplyQuery(HotelExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10680,6 +12846,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店超标审批详情
+         *
+         * @param request HotelExceedApplyQueryRequest
+         * @return HotelExceedApplyQueryResponse
+         */
         public async Task<HotelExceedApplyQueryResponse> HotelExceedApplyQueryAsync(HotelExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10687,6 +12859,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店详情页报价接口(直连)
+         *
+         * @param request HotelGoodsQueryRequest
+         * @param headers HotelGoodsQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelGoodsQueryResponse
+         */
         public HotelGoodsQueryResponse HotelGoodsQueryWithOptions(HotelGoodsQueryRequest request, HotelGoodsQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10768,6 +12948,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelGoodsQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店详情页报价接口(直连)
+         *
+         * @param request HotelGoodsQueryRequest
+         * @param headers HotelGoodsQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelGoodsQueryResponse
+         */
         public async Task<HotelGoodsQueryResponse> HotelGoodsQueryWithOptionsAsync(HotelGoodsQueryRequest request, HotelGoodsQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10849,6 +13037,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelGoodsQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店详情页报价接口(直连)
+         *
+         * @param request HotelGoodsQueryRequest
+         * @return HotelGoodsQueryResponse
+         */
         public HotelGoodsQueryResponse HotelGoodsQuery(HotelGoodsQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10856,6 +13050,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelGoodsQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店详情页报价接口(直连)
+         *
+         * @param request HotelGoodsQueryRequest
+         * @return HotelGoodsQueryResponse
+         */
         public async Task<HotelGoodsQueryResponse> HotelGoodsQueryAsync(HotelGoodsQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10863,6 +13063,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelGoodsQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取酒店清单
+         *
+         * @param request HotelIndexInfoRequest
+         * @param headers HotelIndexInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelIndexInfoResponse
+         */
         public HotelIndexInfoResponse HotelIndexInfoWithOptions(HotelIndexInfoRequest request, HotelIndexInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10912,6 +13120,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelIndexInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取酒店清单
+         *
+         * @param request HotelIndexInfoRequest
+         * @param headers HotelIndexInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelIndexInfoResponse
+         */
         public async Task<HotelIndexInfoResponse> HotelIndexInfoWithOptionsAsync(HotelIndexInfoRequest request, HotelIndexInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10961,6 +13177,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelIndexInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取酒店清单
+         *
+         * @param request HotelIndexInfoRequest
+         * @return HotelIndexInfoResponse
+         */
         public HotelIndexInfoResponse HotelIndexInfo(HotelIndexInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10968,6 +13190,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelIndexInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取酒店清单
+         *
+         * @param request HotelIndexInfoRequest
+         * @return HotelIndexInfoResponse
+         */
         public async Task<HotelIndexInfoResponse> HotelIndexInfoAsync(HotelIndexInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10975,6 +13203,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelIndexInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单取消
+         *
+         * @param request HotelOrderCancelRequest
+         * @param headers HotelOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderCancelResponse
+         */
         public HotelOrderCancelResponse HotelOrderCancelWithOptions(HotelOrderCancelRequest request, HotelOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11016,6 +13252,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderCancelResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单取消
+         *
+         * @param request HotelOrderCancelRequest
+         * @param headers HotelOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderCancelResponse
+         */
         public async Task<HotelOrderCancelResponse> HotelOrderCancelWithOptionsAsync(HotelOrderCancelRequest request, HotelOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11057,6 +13301,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单取消
+         *
+         * @param request HotelOrderCancelRequest
+         * @return HotelOrderCancelResponse
+         */
         public HotelOrderCancelResponse HotelOrderCancel(HotelOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11064,6 +13314,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderCancelWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单取消
+         *
+         * @param request HotelOrderCancelRequest
+         * @return HotelOrderCancelResponse
+         */
         public async Task<HotelOrderCancelResponse> HotelOrderCancelAsync(HotelOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11071,6 +13327,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderCancelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单创建
+         *
+         * @param tmpReq HotelOrderCreateRequest
+         * @param headers HotelOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderCreateResponse
+         */
         public HotelOrderCreateResponse HotelOrderCreateWithOptions(HotelOrderCreateRequest tmpReq, HotelOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11206,6 +13470,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderCreateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单创建
+         *
+         * @param tmpReq HotelOrderCreateRequest
+         * @param headers HotelOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderCreateResponse
+         */
         public async Task<HotelOrderCreateResponse> HotelOrderCreateWithOptionsAsync(HotelOrderCreateRequest tmpReq, HotelOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11341,6 +13613,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderCreateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单创建
+         *
+         * @param request HotelOrderCreateRequest
+         * @return HotelOrderCreateResponse
+         */
         public HotelOrderCreateResponse HotelOrderCreate(HotelOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11348,6 +13626,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderCreateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单创建
+         *
+         * @param request HotelOrderCreateRequest
+         * @return HotelOrderCreateResponse
+         */
         public async Task<HotelOrderCreateResponse> HotelOrderCreateAsync(HotelOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11355,6 +13639,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderCreateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单明细信息
+         *
+         * @param request HotelOrderDetailInfoRequest
+         * @param headers HotelOrderDetailInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderDetailInfoResponse
+         */
         public HotelOrderDetailInfoResponse HotelOrderDetailInfoWithOptions(HotelOrderDetailInfoRequest request, HotelOrderDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11396,6 +13688,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderDetailInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单明细信息
+         *
+         * @param request HotelOrderDetailInfoRequest
+         * @param headers HotelOrderDetailInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderDetailInfoResponse
+         */
         public async Task<HotelOrderDetailInfoResponse> HotelOrderDetailInfoWithOptionsAsync(HotelOrderDetailInfoRequest request, HotelOrderDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11437,6 +13737,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单明细信息
+         *
+         * @param request HotelOrderDetailInfoRequest
+         * @return HotelOrderDetailInfoResponse
+         */
         public HotelOrderDetailInfoResponse HotelOrderDetailInfo(HotelOrderDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11444,6 +13750,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderDetailInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单明细信息
+         *
+         * @param request HotelOrderDetailInfoRequest
+         * @return HotelOrderDetailInfoResponse
+         */
         public async Task<HotelOrderDetailInfoResponse> HotelOrderDetailInfoAsync(HotelOrderDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11451,6 +13763,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderDetailInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店订单列表
+         *
+         * @param request HotelOrderListQueryRequest
+         * @param headers HotelOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderListQueryResponse
+         */
         public HotelOrderListQueryResponse HotelOrderListQueryWithOptions(HotelOrderListQueryRequest request, HotelOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11528,6 +13848,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店订单列表
+         *
+         * @param request HotelOrderListQueryRequest
+         * @param headers HotelOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderListQueryResponse
+         */
         public async Task<HotelOrderListQueryResponse> HotelOrderListQueryWithOptionsAsync(HotelOrderListQueryRequest request, HotelOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11605,6 +13933,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店订单列表
+         *
+         * @param request HotelOrderListQueryRequest
+         * @return HotelOrderListQueryResponse
+         */
         public HotelOrderListQueryResponse HotelOrderListQuery(HotelOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11612,6 +13946,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店订单列表
+         *
+         * @param request HotelOrderListQueryRequest
+         * @return HotelOrderListQueryResponse
+         */
         public async Task<HotelOrderListQueryResponse> HotelOrderListQueryAsync(HotelOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11619,6 +13959,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单支付
+         *
+         * @param request HotelOrderPayRequest
+         * @param headers HotelOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderPayResponse
+         */
         public HotelOrderPayResponse HotelOrderPayWithOptions(HotelOrderPayRequest request, HotelOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11680,6 +14028,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderPayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单支付
+         *
+         * @param request HotelOrderPayRequest
+         * @param headers HotelOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderPayResponse
+         */
         public async Task<HotelOrderPayResponse> HotelOrderPayWithOptionsAsync(HotelOrderPayRequest request, HotelOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11741,6 +14097,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderPayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单支付
+         *
+         * @param request HotelOrderPayRequest
+         * @return HotelOrderPayResponse
+         */
         public HotelOrderPayResponse HotelOrderPay(HotelOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11748,6 +14110,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderPayWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单支付
+         *
+         * @param request HotelOrderPayRequest
+         * @return HotelOrderPayResponse
+         */
         public async Task<HotelOrderPayResponse> HotelOrderPayAsync(HotelOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11755,6 +14123,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderPayWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店下单前校验
+         *
+         * @param tmpReq HotelOrderPreValidateRequest
+         * @param headers HotelOrderPreValidateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderPreValidateResponse
+         */
         public HotelOrderPreValidateResponse HotelOrderPreValidateWithOptions(HotelOrderPreValidateRequest tmpReq, HotelOrderPreValidateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11850,6 +14226,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderPreValidateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店下单前校验
+         *
+         * @param tmpReq HotelOrderPreValidateRequest
+         * @param headers HotelOrderPreValidateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderPreValidateResponse
+         */
         public async Task<HotelOrderPreValidateResponse> HotelOrderPreValidateWithOptionsAsync(HotelOrderPreValidateRequest tmpReq, HotelOrderPreValidateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11945,6 +14329,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderPreValidateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店下单前校验
+         *
+         * @param request HotelOrderPreValidateRequest
+         * @return HotelOrderPreValidateResponse
+         */
         public HotelOrderPreValidateResponse HotelOrderPreValidate(HotelOrderPreValidateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11952,6 +14342,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderPreValidateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店下单前校验
+         *
+         * @param request HotelOrderPreValidateRequest
+         * @return HotelOrderPreValidateResponse
+         */
         public async Task<HotelOrderPreValidateResponse> HotelOrderPreValidateAsync(HotelOrderPreValidateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11959,6 +14355,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderPreValidateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单查询
+         *
+         * @param request HotelOrderQueryRequest
+         * @param headers HotelOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderQueryResponse
+         */
         public HotelOrderQueryResponse HotelOrderQueryWithOptions(HotelOrderQueryRequest request, HotelOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11996,6 +14400,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单查询
+         *
+         * @param request HotelOrderQueryRequest
+         * @param headers HotelOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelOrderQueryResponse
+         */
         public async Task<HotelOrderQueryResponse> HotelOrderQueryWithOptionsAsync(HotelOrderQueryRequest request, HotelOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12033,6 +14445,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelOrderQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店订单查询
+         *
+         * @param request HotelOrderQueryRequest
+         * @return HotelOrderQueryResponse
+         */
         public HotelOrderQueryResponse HotelOrderQuery(HotelOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12040,6 +14458,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelOrderQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店订单查询
+         *
+         * @param request HotelOrderQueryRequest
+         * @return HotelOrderQueryResponse
+         */
         public async Task<HotelOrderQueryResponse> HotelOrderQueryAsync(HotelOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12047,6 +14471,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店拉动态拉取价格接口(落地)
+         *
+         * @param tmpReq HotelPricePullRequest
+         * @param headers HotelPricePullHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelPricePullResponse
+         */
         public HotelPricePullResponse HotelPricePullWithOptions(HotelPricePullRequest tmpReq, HotelPricePullHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12110,6 +14542,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelPricePullResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店拉动态拉取价格接口(落地)
+         *
+         * @param tmpReq HotelPricePullRequest
+         * @param headers HotelPricePullHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelPricePullResponse
+         */
         public async Task<HotelPricePullResponse> HotelPricePullWithOptionsAsync(HotelPricePullRequest tmpReq, HotelPricePullHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12173,6 +14613,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelPricePullResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店拉动态拉取价格接口(落地)
+         *
+         * @param request HotelPricePullRequest
+         * @return HotelPricePullResponse
+         */
         public HotelPricePullResponse HotelPricePull(HotelPricePullRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12180,6 +14626,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelPricePullWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店拉动态拉取价格接口(落地)
+         *
+         * @param request HotelPricePullRequest
+         * @return HotelPricePullResponse
+         */
         public async Task<HotelPricePullResponse> HotelPricePullAsync(HotelPricePullRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12187,6 +14639,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelPricePullWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取酒店静态房型详情
+         *
+         * @param tmpReq HotelRoomInfoRequest
+         * @param headers HotelRoomInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelRoomInfoResponse
+         */
         public HotelRoomInfoResponse HotelRoomInfoWithOptions(HotelRoomInfoRequest tmpReq, HotelRoomInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12230,6 +14690,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelRoomInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取酒店静态房型详情
+         *
+         * @param tmpReq HotelRoomInfoRequest
+         * @param headers HotelRoomInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelRoomInfoResponse
+         */
         public async Task<HotelRoomInfoResponse> HotelRoomInfoWithOptionsAsync(HotelRoomInfoRequest tmpReq, HotelRoomInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12273,6 +14741,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelRoomInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取酒店静态房型详情
+         *
+         * @param request HotelRoomInfoRequest
+         * @return HotelRoomInfoResponse
+         */
         public HotelRoomInfoResponse HotelRoomInfo(HotelRoomInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12280,6 +14754,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelRoomInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取酒店静态房型详情
+         *
+         * @param request HotelRoomInfoRequest
+         * @return HotelRoomInfoResponse
+         */
         public async Task<HotelRoomInfoResponse> HotelRoomInfoAsync(HotelRoomInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12287,6 +14767,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelRoomInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店列表搜索接口(直连)
+         *
+         * @param tmpReq HotelSearchRequest
+         * @param headers HotelSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelSearchResponse
+         */
         public HotelSearchResponse HotelSearchWithOptions(HotelSearchRequest tmpReq, HotelSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12418,6 +14906,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店列表搜索接口(直连)
+         *
+         * @param tmpReq HotelSearchRequest
+         * @param headers HotelSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelSearchResponse
+         */
         public async Task<HotelSearchResponse> HotelSearchWithOptionsAsync(HotelSearchRequest tmpReq, HotelSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12549,6 +15045,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 酒店列表搜索接口(直连)
+         *
+         * @param request HotelSearchRequest
+         * @return HotelSearchResponse
+         */
         public HotelSearchResponse HotelSearch(HotelSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12556,6 +15058,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 酒店列表搜索接口(直连)
+         *
+         * @param request HotelSearchRequest
+         * @return HotelSearchResponse
+         */
         public async Task<HotelSearchResponse> HotelSearchAsync(HotelSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12563,6 +15071,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店静态详情
+         *
+         * @param tmpReq HotelStaticInfoRequest
+         * @param headers HotelStaticInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelStaticInfoResponse
+         */
         public HotelStaticInfoResponse HotelStaticInfoWithOptions(HotelStaticInfoRequest tmpReq, HotelStaticInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12606,6 +15122,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelStaticInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店静态详情
+         *
+         * @param tmpReq HotelStaticInfoRequest
+         * @param headers HotelStaticInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelStaticInfoResponse
+         */
         public async Task<HotelStaticInfoResponse> HotelStaticInfoWithOptionsAsync(HotelStaticInfoRequest tmpReq, HotelStaticInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12649,6 +15173,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<HotelStaticInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询酒店静态详情
+         *
+         * @param request HotelStaticInfoRequest
+         * @return HotelStaticInfoResponse
+         */
         public HotelStaticInfoResponse HotelStaticInfo(HotelStaticInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12656,6 +15186,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return HotelStaticInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询酒店静态详情
+         *
+         * @param request HotelStaticInfoRequest
+         * @return HotelStaticInfoResponse
+         */
         public async Task<HotelStaticInfoResponse> HotelStaticInfoAsync(HotelStaticInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12663,6 +15199,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelStaticInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询国际机票记账数据
+         *
+         * @param request IeFlightBillSettlementQueryRequest
+         * @param headers IeFlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IeFlightBillSettlementQueryResponse
+         */
         public IeFlightBillSettlementQueryResponse IeFlightBillSettlementQueryWithOptions(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12712,6 +15256,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IeFlightBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询国际机票记账数据
+         *
+         * @param request IeFlightBillSettlementQueryRequest
+         * @param headers IeFlightBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IeFlightBillSettlementQueryResponse
+         */
         public async Task<IeFlightBillSettlementQueryResponse> IeFlightBillSettlementQueryWithOptionsAsync(IeFlightBillSettlementQueryRequest request, IeFlightBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12761,6 +15313,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IeFlightBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询国际机票记账数据
+         *
+         * @param request IeFlightBillSettlementQueryRequest
+         * @return IeFlightBillSettlementQueryResponse
+         */
         public IeFlightBillSettlementQueryResponse IeFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12768,6 +15326,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IeFlightBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询国际机票记账数据
+         *
+         * @param request IeFlightBillSettlementQueryRequest
+         * @return IeFlightBillSettlementQueryResponse
+         */
         public async Task<IeFlightBillSettlementQueryResponse> IeFlightBillSettlementQueryAsync(IeFlightBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12775,6 +15339,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IeFlightBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询国际/中国港澳台酒店记账数据
+         *
+         * @param request IeHotelBillSettlementQueryRequest
+         * @param headers IeHotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IeHotelBillSettlementQueryResponse
+         */
         public IeHotelBillSettlementQueryResponse IeHotelBillSettlementQueryWithOptions(IeHotelBillSettlementQueryRequest request, IeHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12828,6 +15400,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IeHotelBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询国际/中国港澳台酒店记账数据
+         *
+         * @param request IeHotelBillSettlementQueryRequest
+         * @param headers IeHotelBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IeHotelBillSettlementQueryResponse
+         */
         public async Task<IeHotelBillSettlementQueryResponse> IeHotelBillSettlementQueryWithOptionsAsync(IeHotelBillSettlementQueryRequest request, IeHotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12881,6 +15461,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IeHotelBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询国际/中国港澳台酒店记账数据
+         *
+         * @param request IeHotelBillSettlementQueryRequest
+         * @return IeHotelBillSettlementQueryResponse
+         */
         public IeHotelBillSettlementQueryResponse IeHotelBillSettlementQuery(IeHotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12888,6 +15474,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IeHotelBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询国际/中国港澳台酒店记账数据
+         *
+         * @param request IeHotelBillSettlementQueryRequest
+         * @return IeHotelBillSettlementQueryResponse
+         */
         public async Task<IeHotelBillSettlementQueryResponse> IeHotelBillSettlementQueryAsync(IeHotelBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12895,6 +15487,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IeHotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询保险电子发票
+         *
+         * @param request InsInvoiceScanQueryRequest
+         * @param headers InsInvoiceScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsInvoiceScanQueryResponse
+         */
         public InsInvoiceScanQueryResponse InsInvoiceScanQueryWithOptions(InsInvoiceScanQueryRequest request, InsInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12948,6 +15548,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsInvoiceScanQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询保险电子发票
+         *
+         * @param request InsInvoiceScanQueryRequest
+         * @param headers InsInvoiceScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsInvoiceScanQueryResponse
+         */
         public async Task<InsInvoiceScanQueryResponse> InsInvoiceScanQueryWithOptionsAsync(InsInvoiceScanQueryRequest request, InsInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13001,6 +15609,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsInvoiceScanQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询保险电子发票
+         *
+         * @param request InsInvoiceScanQueryRequest
+         * @return InsInvoiceScanQueryResponse
+         */
         public InsInvoiceScanQueryResponse InsInvoiceScanQuery(InsInvoiceScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13008,6 +15622,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsInvoiceScanQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询保险电子发票
+         *
+         * @param request InsInvoiceScanQueryRequest
+         * @return InsInvoiceScanQueryResponse
+         */
         public async Task<InsInvoiceScanQueryResponse> InsInvoiceScanQueryAsync(InsInvoiceScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13015,6 +15635,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsInvoiceScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单申请
+         *
+         * @param request InsureOrderApplyRequest
+         * @param headers InsureOrderApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderApplyResponse
+         */
         public InsureOrderApplyResponse InsureOrderApplyWithOptions(InsureOrderApplyRequest request, InsureOrderApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13076,6 +15704,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderApplyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单申请
+         *
+         * @param request InsureOrderApplyRequest
+         * @param headers InsureOrderApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderApplyResponse
+         */
         public async Task<InsureOrderApplyResponse> InsureOrderApplyWithOptionsAsync(InsureOrderApplyRequest request, InsureOrderApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13137,6 +15773,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单申请
+         *
+         * @param request InsureOrderApplyRequest
+         * @return InsureOrderApplyResponse
+         */
         public InsureOrderApplyResponse InsureOrderApply(InsureOrderApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13144,6 +15786,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderApplyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单申请
+         *
+         * @param request InsureOrderApplyRequest
+         * @return InsureOrderApplyResponse
+         */
         public async Task<InsureOrderApplyResponse> InsureOrderApplyAsync(InsureOrderApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13151,6 +15799,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderApplyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单取消
+         *
+         * @param request InsureOrderCancelRequest
+         * @param headers InsureOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderCancelResponse
+         */
         public InsureOrderCancelResponse InsureOrderCancelWithOptions(string insOrderId, InsureOrderCancelRequest request, InsureOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13200,6 +15856,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderCancelResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单取消
+         *
+         * @param request InsureOrderCancelRequest
+         * @param headers InsureOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderCancelResponse
+         */
         public async Task<InsureOrderCancelResponse> InsureOrderCancelWithOptionsAsync(string insOrderId, InsureOrderCancelRequest request, InsureOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13249,6 +15913,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单取消
+         *
+         * @param request InsureOrderCancelRequest
+         * @return InsureOrderCancelResponse
+         */
         public InsureOrderCancelResponse InsureOrderCancel(string insOrderId, InsureOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13256,6 +15926,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderCancelWithOptions(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单取消
+         *
+         * @param request InsureOrderCancelRequest
+         * @return InsureOrderCancelResponse
+         */
         public async Task<InsureOrderCancelResponse> InsureOrderCancelAsync(string insOrderId, InsureOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13263,6 +15939,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderCancelWithOptionsAsync(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单创建
+         *
+         * @param tmpReq InsureOrderCreateRequest
+         * @param headers InsureOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderCreateResponse
+         */
         public InsureOrderCreateResponse InsureOrderCreateWithOptions(InsureOrderCreateRequest tmpReq, InsureOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13342,6 +16026,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderCreateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单创建
+         *
+         * @param tmpReq InsureOrderCreateRequest
+         * @param headers InsureOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderCreateResponse
+         */
         public async Task<InsureOrderCreateResponse> InsureOrderCreateWithOptionsAsync(InsureOrderCreateRequest tmpReq, InsureOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13421,6 +16113,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderCreateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单创建
+         *
+         * @param request InsureOrderCreateRequest
+         * @return InsureOrderCreateResponse
+         */
         public InsureOrderCreateResponse InsureOrderCreate(InsureOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13428,6 +16126,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderCreateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单创建
+         *
+         * @param request InsureOrderCreateRequest
+         * @return InsureOrderCreateResponse
+         */
         public async Task<InsureOrderCreateResponse> InsureOrderCreateAsync(InsureOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13435,6 +16139,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderCreateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单查询
+         *
+         * @param request InsureOrderDetailRequest
+         * @param headers InsureOrderDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderDetailResponse
+         */
         public InsureOrderDetailResponse InsureOrderDetailWithOptions(InsureOrderDetailRequest request, InsureOrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13488,6 +16200,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单查询
+         *
+         * @param request InsureOrderDetailRequest
+         * @param headers InsureOrderDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderDetailResponse
+         */
         public async Task<InsureOrderDetailResponse> InsureOrderDetailWithOptionsAsync(InsureOrderDetailRequest request, InsureOrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13541,6 +16261,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单查询
+         *
+         * @param request InsureOrderDetailRequest
+         * @return InsureOrderDetailResponse
+         */
         public InsureOrderDetailResponse InsureOrderDetail(InsureOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13548,6 +16274,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单查询
+         *
+         * @param request InsureOrderDetailRequest
+         * @return InsureOrderDetailResponse
+         */
         public async Task<InsureOrderDetailResponse> InsureOrderDetailAsync(InsureOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13555,6 +16287,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单支付
+         *
+         * @param request InsureOrderPayRequest
+         * @param headers InsureOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderPayResponse
+         */
         public InsureOrderPayResponse InsureOrderPayWithOptions(string insOrderId, InsureOrderPayRequest request, InsureOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13616,6 +16356,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderPayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单支付
+         *
+         * @param request InsureOrderPayRequest
+         * @param headers InsureOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderPayResponse
+         */
         public async Task<InsureOrderPayResponse> InsureOrderPayWithOptionsAsync(string insOrderId, InsureOrderPayRequest request, InsureOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13677,6 +16425,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderPayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单支付
+         *
+         * @param request InsureOrderPayRequest
+         * @return InsureOrderPayResponse
+         */
         public InsureOrderPayResponse InsureOrderPay(string insOrderId, InsureOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13684,6 +16438,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderPayWithOptions(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单支付
+         *
+         * @param request InsureOrderPayRequest
+         * @return InsureOrderPayResponse
+         */
         public async Task<InsureOrderPayResponse> InsureOrderPayAsync(string insOrderId, InsureOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13691,6 +16451,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderPayWithOptionsAsync(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单退保
+         *
+         * @param tmpReq InsureOrderRefundRequest
+         * @param headers InsureOrderRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderRefundResponse
+         */
         public InsureOrderRefundResponse InsureOrderRefundWithOptions(string insOrderId, InsureOrderRefundRequest tmpReq, InsureOrderRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13762,6 +16530,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderRefundResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单退保
+         *
+         * @param tmpReq InsureOrderRefundRequest
+         * @param headers InsureOrderRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderRefundResponse
+         */
         public async Task<InsureOrderRefundResponse> InsureOrderRefundWithOptionsAsync(string insOrderId, InsureOrderRefundRequest tmpReq, InsureOrderRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13833,6 +16609,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderRefundResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保险订单退保
+         *
+         * @param request InsureOrderRefundRequest
+         * @return InsureOrderRefundResponse
+         */
         public InsureOrderRefundResponse InsureOrderRefund(string insOrderId, InsureOrderRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13840,6 +16622,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderRefundWithOptions(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 保险订单退保
+         *
+         * @param request InsureOrderRefundRequest
+         * @return InsureOrderRefundResponse
+         */
         public async Task<InsureOrderRefundResponse> InsureOrderRefundAsync(string insOrderId, InsureOrderRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13847,6 +16635,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderRefundWithOptionsAsync(insOrderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 查询保单详情链接
+         *
+         * @param headers InsureOrderUrlDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderUrlDetailResponse
+         */
         public InsureOrderUrlDetailResponse InsureOrderUrlDetailWithOptions(string insOrderId, InsureOrderUrlDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -13877,6 +16672,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderUrlDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询保单详情链接
+         *
+         * @param headers InsureOrderUrlDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureOrderUrlDetailResponse
+         */
         public async Task<InsureOrderUrlDetailResponse> InsureOrderUrlDetailWithOptionsAsync(string insOrderId, InsureOrderUrlDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -13907,6 +16709,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureOrderUrlDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询保单详情链接
+         *
+         * @return InsureOrderUrlDetailResponse
+         */
         public InsureOrderUrlDetailResponse InsureOrderUrlDetail(string insOrderId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13914,6 +16721,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureOrderUrlDetailWithOptions(insOrderId, headers, runtime);
         }
 
+        /**
+         * @summary 查询保单详情链接
+         *
+         * @return InsureOrderUrlDetailResponse
+         */
         public async Task<InsureOrderUrlDetailResponse> InsureOrderUrlDetailAsync(string insOrderId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13921,6 +16733,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureOrderUrlDetailWithOptionsAsync(insOrderId, headers, runtime);
         }
 
+        /**
+         * @summary 退保详情查询
+         *
+         * @param request InsureRefundDetailRequest
+         * @param headers InsureRefundDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureRefundDetailResponse
+         */
         public InsureRefundDetailResponse InsureRefundDetailWithOptions(InsureRefundDetailRequest request, InsureRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13982,6 +16802,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureRefundDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 退保详情查询
+         *
+         * @param request InsureRefundDetailRequest
+         * @param headers InsureRefundDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InsureRefundDetailResponse
+         */
         public async Task<InsureRefundDetailResponse> InsureRefundDetailWithOptionsAsync(InsureRefundDetailRequest request, InsureRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14043,6 +16871,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InsureRefundDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 退保详情查询
+         *
+         * @param request InsureRefundDetailRequest
+         * @return InsureRefundDetailResponse
+         */
         public InsureRefundDetailResponse InsureRefundDetail(InsureRefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14050,6 +16884,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InsureRefundDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 退保详情查询
+         *
+         * @param request InsureRefundDetailRequest
+         * @return InsureRefundDetailResponse
+         */
         public async Task<InsureRefundDetailResponse> InsureRefundDetailAsync(InsureRefundDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14057,6 +16897,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InsureRefundDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票创建订单
+         *
+         * @param tmpReq IntlFlightCreateOrderRequest
+         * @param headers IntlFlightCreateOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightCreateOrderResponse
+         */
         public IntlFlightCreateOrderResponse IntlFlightCreateOrderWithOptions(IntlFlightCreateOrderRequest tmpReq, IntlFlightCreateOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14164,6 +17012,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightCreateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票创建订单
+         *
+         * @param tmpReq IntlFlightCreateOrderRequest
+         * @param headers IntlFlightCreateOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightCreateOrderResponse
+         */
         public async Task<IntlFlightCreateOrderResponse> IntlFlightCreateOrderWithOptionsAsync(IntlFlightCreateOrderRequest tmpReq, IntlFlightCreateOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14271,6 +17127,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightCreateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票创建订单
+         *
+         * @param request IntlFlightCreateOrderRequest
+         * @return IntlFlightCreateOrderResponse
+         */
         public IntlFlightCreateOrderResponse IntlFlightCreateOrder(IntlFlightCreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14278,6 +17140,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightCreateOrderWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票创建订单
+         *
+         * @param request IntlFlightCreateOrderRequest
+         * @return IntlFlightCreateOrderResponse
+         */
         public async Task<IntlFlightCreateOrderResponse> IntlFlightCreateOrderAsync(IntlFlightCreateOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14285,6 +17153,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightCreateOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票验舱验价
+         *
+         * @param tmpReq IntlFlightInventoryPriceCheckRequest
+         * @param headers IntlFlightInventoryPriceCheckHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightInventoryPriceCheckResponse
+         */
         public IntlFlightInventoryPriceCheckResponse IntlFlightInventoryPriceCheckWithOptions(IntlFlightInventoryPriceCheckRequest tmpReq, IntlFlightInventoryPriceCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14352,6 +17228,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightInventoryPriceCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票验舱验价
+         *
+         * @param tmpReq IntlFlightInventoryPriceCheckRequest
+         * @param headers IntlFlightInventoryPriceCheckHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightInventoryPriceCheckResponse
+         */
         public async Task<IntlFlightInventoryPriceCheckResponse> IntlFlightInventoryPriceCheckWithOptionsAsync(IntlFlightInventoryPriceCheckRequest tmpReq, IntlFlightInventoryPriceCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14419,6 +17303,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightInventoryPriceCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票验舱验价
+         *
+         * @param request IntlFlightInventoryPriceCheckRequest
+         * @return IntlFlightInventoryPriceCheckResponse
+         */
         public IntlFlightInventoryPriceCheckResponse IntlFlightInventoryPriceCheck(IntlFlightInventoryPriceCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14426,6 +17316,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightInventoryPriceCheckWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票验舱验价
+         *
+         * @param request IntlFlightInventoryPriceCheckRequest
+         * @return IntlFlightInventoryPriceCheckResponse
+         */
         public async Task<IntlFlightInventoryPriceCheckResponse> IntlFlightInventoryPriceCheckAsync(IntlFlightInventoryPriceCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14433,6 +17329,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightInventoryPriceCheckWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班搜索
+         *
+         * @param tmpReq IntlFlightListingSearchRequest
+         * @param headers IntlFlightListingSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightListingSearchResponse
+         */
         public IntlFlightListingSearchResponse IntlFlightListingSearchWithOptions(IntlFlightListingSearchRequest tmpReq, IntlFlightListingSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14536,6 +17440,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightListingSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班搜索
+         *
+         * @param tmpReq IntlFlightListingSearchRequest
+         * @param headers IntlFlightListingSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightListingSearchResponse
+         */
         public async Task<IntlFlightListingSearchResponse> IntlFlightListingSearchWithOptionsAsync(IntlFlightListingSearchRequest tmpReq, IntlFlightListingSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14639,6 +17551,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightListingSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班搜索
+         *
+         * @param request IntlFlightListingSearchRequest
+         * @return IntlFlightListingSearchResponse
+         */
         public IntlFlightListingSearchResponse IntlFlightListingSearch(IntlFlightListingSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14646,6 +17564,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightListingSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班搜索
+         *
+         * @param request IntlFlightListingSearchRequest
+         * @return IntlFlightListingSearchResponse
+         */
         public async Task<IntlFlightListingSearchResponse> IntlFlightListingSearchAsync(IntlFlightListingSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14653,6 +17577,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightListingSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单取消
+         *
+         * @param request IntlFlightOrderCancelRequest
+         * @param headers IntlFlightOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderCancelResponse
+         */
         public IntlFlightOrderCancelResponse IntlFlightOrderCancelWithOptions(IntlFlightOrderCancelRequest request, IntlFlightOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14702,6 +17634,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderCancelResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单取消
+         *
+         * @param request IntlFlightOrderCancelRequest
+         * @param headers IntlFlightOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderCancelResponse
+         */
         public async Task<IntlFlightOrderCancelResponse> IntlFlightOrderCancelWithOptionsAsync(IntlFlightOrderCancelRequest request, IntlFlightOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14751,6 +17691,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单取消
+         *
+         * @param request IntlFlightOrderCancelRequest
+         * @return IntlFlightOrderCancelResponse
+         */
         public IntlFlightOrderCancelResponse IntlFlightOrderCancel(IntlFlightOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14758,6 +17704,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOrderCancelWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单取消
+         *
+         * @param request IntlFlightOrderCancelRequest
+         * @return IntlFlightOrderCancelResponse
+         */
         public async Task<IntlFlightOrderCancelResponse> IntlFlightOrderCancelAsync(IntlFlightOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14765,6 +17717,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOrderCancelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单详情
+         *
+         * @param request IntlFlightOrderDetailRequest
+         * @param headers IntlFlightOrderDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderDetailResponse
+         */
         public IntlFlightOrderDetailResponse IntlFlightOrderDetailWithOptions(IntlFlightOrderDetailRequest request, IntlFlightOrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14810,6 +17770,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单详情
+         *
+         * @param request IntlFlightOrderDetailRequest
+         * @param headers IntlFlightOrderDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderDetailResponse
+         */
         public async Task<IntlFlightOrderDetailResponse> IntlFlightOrderDetailWithOptionsAsync(IntlFlightOrderDetailRequest request, IntlFlightOrderDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14855,6 +17823,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单详情
+         *
+         * @param request IntlFlightOrderDetailRequest
+         * @return IntlFlightOrderDetailResponse
+         */
         public IntlFlightOrderDetailResponse IntlFlightOrderDetail(IntlFlightOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14862,6 +17836,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOrderDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单详情
+         *
+         * @param request IntlFlightOrderDetailRequest
+         * @return IntlFlightOrderDetailResponse
+         */
         public async Task<IntlFlightOrderDetailResponse> IntlFlightOrderDetailAsync(IntlFlightOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14869,6 +17849,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOrderDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单支付
+         *
+         * @param tmpReq IntlFlightOrderPayRequest
+         * @param headers IntlFlightOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderPayResponse
+         */
         public IntlFlightOrderPayResponse IntlFlightOrderPayWithOptions(IntlFlightOrderPayRequest tmpReq, IntlFlightOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14928,6 +17916,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderPayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单支付
+         *
+         * @param tmpReq IntlFlightOrderPayRequest
+         * @param headers IntlFlightOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderPayResponse
+         */
         public async Task<IntlFlightOrderPayResponse> IntlFlightOrderPayWithOptionsAsync(IntlFlightOrderPayRequest tmpReq, IntlFlightOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14987,6 +17983,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderPayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单支付
+         *
+         * @param request IntlFlightOrderPayRequest
+         * @return IntlFlightOrderPayResponse
+         */
         public IntlFlightOrderPayResponse IntlFlightOrderPay(IntlFlightOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14994,6 +17996,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOrderPayWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单支付
+         *
+         * @param request IntlFlightOrderPayRequest
+         * @return IntlFlightOrderPayResponse
+         */
         public async Task<IntlFlightOrderPayResponse> IntlFlightOrderPayAsync(IntlFlightOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15001,6 +18009,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOrderPayWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单支付前校验
+         *
+         * @param request IntlFlightOrderPayCheckRequest
+         * @param headers IntlFlightOrderPayCheckHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderPayCheckResponse
+         */
         public IntlFlightOrderPayCheckResponse IntlFlightOrderPayCheckWithOptions(IntlFlightOrderPayCheckRequest request, IntlFlightOrderPayCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15046,6 +18062,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderPayCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单支付前校验
+         *
+         * @param request IntlFlightOrderPayCheckRequest
+         * @param headers IntlFlightOrderPayCheckHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOrderPayCheckResponse
+         */
         public async Task<IntlFlightOrderPayCheckResponse> IntlFlightOrderPayCheckWithOptionsAsync(IntlFlightOrderPayCheckRequest request, IntlFlightOrderPayCheckHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15091,6 +18115,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOrderPayCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票订单支付前校验
+         *
+         * @param request IntlFlightOrderPayCheckRequest
+         * @return IntlFlightOrderPayCheckResponse
+         */
         public IntlFlightOrderPayCheckResponse IntlFlightOrderPayCheck(IntlFlightOrderPayCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15098,6 +18128,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOrderPayCheckWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票订单支付前校验
+         *
+         * @param request IntlFlightOrderPayCheckRequest
+         * @return IntlFlightOrderPayCheckResponse
+         */
         public async Task<IntlFlightOrderPayCheckResponse> IntlFlightOrderPayCheckAsync(IntlFlightOrderPayCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15105,6 +18141,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOrderPayCheckWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票报价商品详情
+         *
+         * @param request IntlFlightOtaItemDetailRequest
+         * @param headers IntlFlightOtaItemDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOtaItemDetailResponse
+         */
         public IntlFlightOtaItemDetailResponse IntlFlightOtaItemDetailWithOptions(string otaItemId, IntlFlightOtaItemDetailRequest request, IntlFlightOtaItemDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15158,6 +18202,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOtaItemDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票报价商品详情
+         *
+         * @param request IntlFlightOtaItemDetailRequest
+         * @param headers IntlFlightOtaItemDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOtaItemDetailResponse
+         */
         public async Task<IntlFlightOtaItemDetailResponse> IntlFlightOtaItemDetailWithOptionsAsync(string otaItemId, IntlFlightOtaItemDetailRequest request, IntlFlightOtaItemDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15211,6 +18263,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOtaItemDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票报价商品详情
+         *
+         * @param request IntlFlightOtaItemDetailRequest
+         * @return IntlFlightOtaItemDetailResponse
+         */
         public IntlFlightOtaItemDetailResponse IntlFlightOtaItemDetail(string otaItemId, IntlFlightOtaItemDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15218,6 +18276,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOtaItemDetailWithOptions(otaItemId, request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票报价商品详情
+         *
+         * @param request IntlFlightOtaItemDetailRequest
+         * @return IntlFlightOtaItemDetailResponse
+         */
         public async Task<IntlFlightOtaItemDetailResponse> IntlFlightOtaItemDetailAsync(string otaItemId, IntlFlightOtaItemDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15225,6 +18289,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOtaItemDetailWithOptionsAsync(otaItemId, request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班报价查询
+         *
+         * @param tmpReq IntlFlightOtaSearchRequest
+         * @param headers IntlFlightOtaSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOtaSearchResponse
+         */
         public IntlFlightOtaSearchResponse IntlFlightOtaSearchWithOptions(IntlFlightOtaSearchRequest tmpReq, IntlFlightOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15312,6 +18384,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOtaSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班报价查询
+         *
+         * @param tmpReq IntlFlightOtaSearchRequest
+         * @param headers IntlFlightOtaSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightOtaSearchResponse
+         */
         public async Task<IntlFlightOtaSearchResponse> IntlFlightOtaSearchWithOptionsAsync(IntlFlightOtaSearchRequest tmpReq, IntlFlightOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15399,6 +18479,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightOtaSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班报价查询
+         *
+         * @param request IntlFlightOtaSearchRequest
+         * @return IntlFlightOtaSearchResponse
+         */
         public IntlFlightOtaSearchResponse IntlFlightOtaSearch(IntlFlightOtaSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15406,6 +18492,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightOtaSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班报价查询
+         *
+         * @param request IntlFlightOtaSearchRequest
+         * @return IntlFlightOtaSearchResponse
+         */
         public async Task<IntlFlightOtaSearchResponse> IntlFlightOtaSearchAsync(IntlFlightOtaSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15413,6 +18505,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightOtaSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班可用证件查询
+         *
+         * @param request IntlFlightSegmentAvailableCertRequest
+         * @param headers IntlFlightSegmentAvailableCertHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightSegmentAvailableCertResponse
+         */
         public IntlFlightSegmentAvailableCertResponse IntlFlightSegmentAvailableCertWithOptions(string otaItemId, IntlFlightSegmentAvailableCertRequest request, IntlFlightSegmentAvailableCertHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15462,6 +18562,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightSegmentAvailableCertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班可用证件查询
+         *
+         * @param request IntlFlightSegmentAvailableCertRequest
+         * @param headers IntlFlightSegmentAvailableCertHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IntlFlightSegmentAvailableCertResponse
+         */
         public async Task<IntlFlightSegmentAvailableCertResponse> IntlFlightSegmentAvailableCertWithOptionsAsync(string otaItemId, IntlFlightSegmentAvailableCertRequest request, IntlFlightSegmentAvailableCertHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15511,6 +18619,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IntlFlightSegmentAvailableCertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 国际机票航班可用证件查询
+         *
+         * @param request IntlFlightSegmentAvailableCertRequest
+         * @return IntlFlightSegmentAvailableCertResponse
+         */
         public IntlFlightSegmentAvailableCertResponse IntlFlightSegmentAvailableCert(string otaItemId, IntlFlightSegmentAvailableCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15518,6 +18632,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IntlFlightSegmentAvailableCertWithOptions(otaItemId, request, headers, runtime);
         }
 
+        /**
+         * @summary 国际机票航班可用证件查询
+         *
+         * @param request IntlFlightSegmentAvailableCertRequest
+         * @return IntlFlightSegmentAvailableCertResponse
+         */
         public async Task<IntlFlightSegmentAvailableCertResponse> IntlFlightSegmentAvailableCertAsync(string otaItemId, IntlFlightSegmentAvailableCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15525,6 +18645,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IntlFlightSegmentAvailableCertWithOptionsAsync(otaItemId, request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票配置
+         *
+         * @param request InvoiceAddRequest
+         * @param headers InvoiceAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceAddResponse
+         */
         public InvoiceAddResponse InvoiceAddWithOptions(InvoiceAddRequest request, InvoiceAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15594,6 +18722,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票配置
+         *
+         * @param request InvoiceAddRequest
+         * @param headers InvoiceAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceAddResponse
+         */
         public async Task<InvoiceAddResponse> InvoiceAddWithOptionsAsync(InvoiceAddRequest request, InvoiceAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15663,6 +18799,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票配置
+         *
+         * @param request InvoiceAddRequest
+         * @return InvoiceAddResponse
+         */
         public InvoiceAddResponse InvoiceAdd(InvoiceAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15670,6 +18812,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票配置
+         *
+         * @param request InvoiceAddRequest
+         * @return InvoiceAddResponse
+         */
         public async Task<InvoiceAddResponse> InvoiceAddAsync(InvoiceAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15677,6 +18825,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头
+         *
+         * @param request InvoiceDeleteRequest
+         * @param headers InvoiceDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceDeleteResponse
+         */
         public InvoiceDeleteResponse InvoiceDeleteWithOptions(InvoiceDeleteRequest request, InvoiceDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15714,6 +18870,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceDeleteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头
+         *
+         * @param request InvoiceDeleteRequest
+         * @param headers InvoiceDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceDeleteResponse
+         */
         public async Task<InvoiceDeleteResponse> InvoiceDeleteWithOptionsAsync(InvoiceDeleteRequest request, InvoiceDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15751,6 +18915,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceDeleteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头
+         *
+         * @param request InvoiceDeleteRequest
+         * @return InvoiceDeleteResponse
+         */
         public InvoiceDeleteResponse InvoiceDelete(InvoiceDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15758,6 +18928,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceDeleteWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头
+         *
+         * @param request InvoiceDeleteRequest
+         * @return InvoiceDeleteResponse
+         */
         public async Task<InvoiceDeleteResponse> InvoiceDeleteAsync(InvoiceDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15765,6 +18941,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceDeleteWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 修改发票配置
+         *
+         * @param request InvoiceModifyRequest
+         * @param headers InvoiceModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceModifyResponse
+         */
         public InvoiceModifyResponse InvoiceModifyWithOptions(InvoiceModifyRequest request, InvoiceModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15834,6 +19018,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceModifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改发票配置
+         *
+         * @param request InvoiceModifyRequest
+         * @param headers InvoiceModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceModifyResponse
+         */
         public async Task<InvoiceModifyResponse> InvoiceModifyWithOptionsAsync(InvoiceModifyRequest request, InvoiceModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15903,6 +19095,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceModifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改发票配置
+         *
+         * @param request InvoiceModifyRequest
+         * @return InvoiceModifyResponse
+         */
         public InvoiceModifyResponse InvoiceModify(InvoiceModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15910,6 +19108,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceModifyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 修改发票配置
+         *
+         * @param request InvoiceModifyRequest
+         * @return InvoiceModifyResponse
+         */
         public async Task<InvoiceModifyResponse> InvoiceModifyAsync(InvoiceModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15917,6 +19121,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票抬头可用员工
+         *
+         * @param tmpReq InvoiceRuleAddRequest
+         * @param headers InvoiceRuleAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleAddResponse
+         */
         public InvoiceRuleAddResponse InvoiceRuleAddWithOptions(InvoiceRuleAddRequest tmpReq, InvoiceRuleAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15964,6 +19176,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票抬头可用员工
+         *
+         * @param tmpReq InvoiceRuleAddRequest
+         * @param headers InvoiceRuleAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleAddResponse
+         */
         public async Task<InvoiceRuleAddResponse> InvoiceRuleAddWithOptionsAsync(InvoiceRuleAddRequest tmpReq, InvoiceRuleAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16011,6 +19231,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 新增发票抬头可用员工
+         *
+         * @param request InvoiceRuleAddRequest
+         * @return InvoiceRuleAddResponse
+         */
         public InvoiceRuleAddResponse InvoiceRuleAdd(InvoiceRuleAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16018,6 +19244,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceRuleAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 新增发票抬头可用员工
+         *
+         * @param request InvoiceRuleAddRequest
+         * @return InvoiceRuleAddResponse
+         */
         public async Task<InvoiceRuleAddResponse> InvoiceRuleAddAsync(InvoiceRuleAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16025,6 +19257,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceRuleAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头可用员工
+         *
+         * @param tmpReq InvoiceRuleDeleteRequest
+         * @param headers InvoiceRuleDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleDeleteResponse
+         */
         public InvoiceRuleDeleteResponse InvoiceRuleDeleteWithOptions(InvoiceRuleDeleteRequest tmpReq, InvoiceRuleDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16076,6 +19316,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleDeleteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头可用员工
+         *
+         * @param tmpReq InvoiceRuleDeleteRequest
+         * @param headers InvoiceRuleDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleDeleteResponse
+         */
         public async Task<InvoiceRuleDeleteResponse> InvoiceRuleDeleteWithOptionsAsync(InvoiceRuleDeleteRequest tmpReq, InvoiceRuleDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16127,6 +19375,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleDeleteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除发票抬头可用员工
+         *
+         * @param request InvoiceRuleDeleteRequest
+         * @return InvoiceRuleDeleteResponse
+         */
         public InvoiceRuleDeleteResponse InvoiceRuleDelete(InvoiceRuleDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16134,6 +19388,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceRuleDeleteWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除发票抬头可用员工
+         *
+         * @param request InvoiceRuleDeleteRequest
+         * @return InvoiceRuleDeleteResponse
+         */
         public async Task<InvoiceRuleDeleteResponse> InvoiceRuleDeleteAsync(InvoiceRuleDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16141,6 +19401,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceRuleDeleteWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 保存发票规则
+         *
+         * @param tmpReq InvoiceRuleSaveRequest
+         * @param headers InvoiceRuleSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleSaveResponse
+         */
         public InvoiceRuleSaveResponse InvoiceRuleSaveWithOptions(InvoiceRuleSaveRequest tmpReq, InvoiceRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16196,6 +19464,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 保存发票规则
+         *
+         * @param tmpReq InvoiceRuleSaveRequest
+         * @param headers InvoiceRuleSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceRuleSaveResponse
+         */
         public async Task<InvoiceRuleSaveResponse> InvoiceRuleSaveWithOptionsAsync(InvoiceRuleSaveRequest tmpReq, InvoiceRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16251,6 +19527,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceRuleSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 保存发票规则
+         *
+         * @param request InvoiceRuleSaveRequest
+         * @return InvoiceRuleSaveResponse
+         */
         public InvoiceRuleSaveResponse InvoiceRuleSave(InvoiceRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16258,6 +19540,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceRuleSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 保存发票规则
+         *
+         * @param request InvoiceRuleSaveRequest
+         * @return InvoiceRuleSaveResponse
+         */
         public async Task<InvoiceRuleSaveResponse> InvoiceRuleSaveAsync(InvoiceRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16265,6 +19553,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceRuleSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 搜索用户可用发票抬头
+         *
+         * @param request InvoiceSearchRequest
+         * @param headers InvoiceSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceSearchResponse
+         */
         public InvoiceSearchResponse InvoiceSearchWithOptions(InvoiceSearchRequest request, InvoiceSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16310,6 +19606,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 搜索用户可用发票抬头
+         *
+         * @param request InvoiceSearchRequest
+         * @param headers InvoiceSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InvoiceSearchResponse
+         */
         public async Task<InvoiceSearchResponse> InvoiceSearchWithOptionsAsync(InvoiceSearchRequest request, InvoiceSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16355,6 +19659,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<InvoiceSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 搜索用户可用发票抬头
+         *
+         * @param request InvoiceSearchRequest
+         * @return InvoiceSearchResponse
+         */
         public InvoiceSearchResponse InvoiceSearch(InvoiceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16362,6 +19672,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return InvoiceSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 搜索用户可用发票抬头
+         *
+         * @param request InvoiceSearchRequest
+         * @return InvoiceSearchResponse
+         */
         public async Task<InvoiceSearchResponse> InvoiceSearchAsync(InvoiceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16369,6 +19685,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 员工特殊角色修改
+         *
+         * @param tmpReq IsvRuleSaveRequest
+         * @param headers IsvRuleSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IsvRuleSaveResponse
+         */
         public IsvRuleSaveResponse IsvRuleSaveWithOptions(IsvRuleSaveRequest tmpReq, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16432,6 +19756,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvRuleSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 员工特殊角色修改
+         *
+         * @param tmpReq IsvRuleSaveRequest
+         * @param headers IsvRuleSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IsvRuleSaveResponse
+         */
         public async Task<IsvRuleSaveResponse> IsvRuleSaveWithOptionsAsync(IsvRuleSaveRequest tmpReq, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16495,6 +19827,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvRuleSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 员工特殊角色修改
+         *
+         * @param request IsvRuleSaveRequest
+         * @return IsvRuleSaveResponse
+         */
         public IsvRuleSaveResponse IsvRuleSave(IsvRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16502,6 +19840,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IsvRuleSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 员工特殊角色修改
+         *
+         * @param request IsvRuleSaveRequest
+         * @return IsvRuleSaveResponse
+         */
         public async Task<IsvRuleSaveResponse> IsvRuleSaveAsync(IsvRuleSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16509,6 +19853,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IsvRuleSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 用户同步
+         *
+         * @param tmpReq IsvUserSaveRequest
+         * @param headers IsvUserSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IsvUserSaveResponse
+         */
         public IsvUserSaveResponse IsvUserSaveWithOptions(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16552,6 +19904,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvUserSaveResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 用户同步
+         *
+         * @param tmpReq IsvUserSaveRequest
+         * @param headers IsvUserSaveHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return IsvUserSaveResponse
+         */
         public async Task<IsvUserSaveResponse> IsvUserSaveWithOptionsAsync(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -16595,6 +19955,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvUserSaveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 用户同步
+         *
+         * @param request IsvUserSaveRequest
+         * @return IsvUserSaveResponse
+         */
         public IsvUserSaveResponse IsvUserSave(IsvUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16602,6 +19968,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return IsvUserSaveWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 用户同步
+         *
+         * @param request IsvUserSaveRequest
+         * @return IsvUserSaveResponse
+         */
         public async Task<IsvUserSaveResponse> IsvUserSaveAsync(IsvUserSaveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16609,6 +19981,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await IsvUserSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询因公用餐记账数据
+         *
+         * @param request MealBillSettlementQueryRequest
+         * @param headers MealBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealBillSettlementQueryResponse
+         */
         public MealBillSettlementQueryResponse MealBillSettlementQueryWithOptions(MealBillSettlementQueryRequest request, MealBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16658,6 +20038,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询因公用餐记账数据
+         *
+         * @param request MealBillSettlementQueryRequest
+         * @param headers MealBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealBillSettlementQueryResponse
+         */
         public async Task<MealBillSettlementQueryResponse> MealBillSettlementQueryWithOptionsAsync(MealBillSettlementQueryRequest request, MealBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16707,6 +20095,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询因公用餐记账数据
+         *
+         * @param request MealBillSettlementQueryRequest
+         * @return MealBillSettlementQueryResponse
+         */
         public MealBillSettlementQueryResponse MealBillSettlementQuery(MealBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16714,6 +20108,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return MealBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询因公用餐记账数据
+         *
+         * @param request MealBillSettlementQueryRequest
+         * @return MealBillSettlementQueryResponse
+         */
         public async Task<MealBillSettlementQueryResponse> MealBillSettlementQueryAsync(MealBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16721,6 +20121,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await MealBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取用餐订单详情
+         *
+         * @param request MealOrderDetailQueryRequest
+         * @param headers MealOrderDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealOrderDetailQueryResponse
+         */
         public MealOrderDetailQueryResponse MealOrderDetailQueryWithOptions(string orderId, MealOrderDetailQueryRequest request, MealOrderDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16758,6 +20166,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealOrderDetailQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取用餐订单详情
+         *
+         * @param request MealOrderDetailQueryRequest
+         * @param headers MealOrderDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealOrderDetailQueryResponse
+         */
         public async Task<MealOrderDetailQueryResponse> MealOrderDetailQueryWithOptionsAsync(string orderId, MealOrderDetailQueryRequest request, MealOrderDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16795,6 +20211,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealOrderDetailQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取用餐订单详情
+         *
+         * @param request MealOrderDetailQueryRequest
+         * @return MealOrderDetailQueryResponse
+         */
         public MealOrderDetailQueryResponse MealOrderDetailQuery(string orderId, MealOrderDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16802,6 +20224,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return MealOrderDetailQueryWithOptions(orderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取用餐订单详情
+         *
+         * @param request MealOrderDetailQueryRequest
+         * @return MealOrderDetailQueryResponse
+         */
         public async Task<MealOrderDetailQueryResponse> MealOrderDetailQueryAsync(string orderId, MealOrderDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16809,6 +20237,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await MealOrderDetailQueryWithOptionsAsync(orderId, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取用餐订单列表
+         *
+         * @param request MealOrderListQueryRequest
+         * @param headers MealOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealOrderListQueryResponse
+         */
         public MealOrderListQueryResponse MealOrderListQueryWithOptions(MealOrderListQueryRequest request, MealOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16846,6 +20282,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取用餐订单列表
+         *
+         * @param request MealOrderListQueryRequest
+         * @param headers MealOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MealOrderListQueryResponse
+         */
         public async Task<MealOrderListQueryResponse> MealOrderListQueryWithOptionsAsync(MealOrderListQueryRequest request, MealOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16883,6 +20327,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MealOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取用餐订单列表
+         *
+         * @param request MealOrderListQueryRequest
+         * @return MealOrderListQueryResponse
+         */
         public MealOrderListQueryResponse MealOrderListQuery(MealOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16890,6 +20340,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return MealOrderListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取用餐订单列表
+         *
+         * @param request MealOrderListQueryRequest
+         * @return MealOrderListQueryResponse
+         */
         public async Task<MealOrderListQueryResponse> MealOrderListQueryAsync(MealOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16897,6 +20353,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await MealOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 月账单确认
+         *
+         * @param request MonthBillConfirmRequest
+         * @param headers MonthBillConfirmHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MonthBillConfirmResponse
+         */
         public MonthBillConfirmResponse MonthBillConfirmWithOptions(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16938,6 +20402,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MonthBillConfirmResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 月账单确认
+         *
+         * @param request MonthBillConfirmRequest
+         * @param headers MonthBillConfirmHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MonthBillConfirmResponse
+         */
         public async Task<MonthBillConfirmResponse> MonthBillConfirmWithOptionsAsync(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16979,6 +20451,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MonthBillConfirmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 月账单确认
+         *
+         * @param request MonthBillConfirmRequest
+         * @return MonthBillConfirmResponse
+         */
         public MonthBillConfirmResponse MonthBillConfirm(MonthBillConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16986,6 +20464,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return MonthBillConfirmWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 月账单确认
+         *
+         * @param request MonthBillConfirmRequest
+         * @return MonthBillConfirmResponse
+         */
         public async Task<MonthBillConfirmResponse> MonthBillConfirmAsync(MonthBillConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16993,6 +20477,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await MonthBillConfirmWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询企业月账单
+         *
+         * @param request MonthBillGetRequest
+         * @param headers MonthBillGetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MonthBillGetResponse
+         */
         public MonthBillGetResponse MonthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17030,6 +20522,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MonthBillGetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询企业月账单
+         *
+         * @param request MonthBillGetRequest
+         * @param headers MonthBillGetHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MonthBillGetResponse
+         */
         public async Task<MonthBillGetResponse> MonthBillGetWithOptionsAsync(MonthBillGetRequest request, MonthBillGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17067,6 +20567,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<MonthBillGetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询企业月账单
+         *
+         * @param request MonthBillGetRequest
+         * @return MonthBillGetResponse
+         */
         public MonthBillGetResponse MonthBillGet(MonthBillGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17074,6 +20580,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return MonthBillGetWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询企业月账单
+         *
+         * @param request MonthBillGetRequest
+         * @return MonthBillGetResponse
+         */
         public async Task<MonthBillGetResponse> MonthBillGetAsync(MonthBillGetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17081,6 +20593,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await MonthBillGetWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 添加项目
+         *
+         * @param request ProjectAddRequest
+         * @param headers ProjectAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectAddResponse
+         */
         public ProjectAddResponse ProjectAddWithOptions(ProjectAddRequest request, ProjectAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17134,6 +20654,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectAddResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加项目
+         *
+         * @param request ProjectAddRequest
+         * @param headers ProjectAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectAddResponse
+         */
         public async Task<ProjectAddResponse> ProjectAddWithOptionsAsync(ProjectAddRequest request, ProjectAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17187,6 +20715,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectAddResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 添加项目
+         *
+         * @param request ProjectAddRequest
+         * @return ProjectAddResponse
+         */
         public ProjectAddResponse ProjectAdd(ProjectAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17194,6 +20728,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ProjectAddWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 添加项目
+         *
+         * @param request ProjectAddRequest
+         * @return ProjectAddResponse
+         */
         public async Task<ProjectAddResponse> ProjectAddAsync(ProjectAddRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17201,6 +20741,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ProjectAddWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除项目
+         *
+         * @param request ProjectDeleteRequest
+         * @param headers ProjectDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectDeleteResponse
+         */
         public ProjectDeleteResponse ProjectDeleteWithOptions(ProjectDeleteRequest request, ProjectDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17238,6 +20786,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectDeleteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除项目
+         *
+         * @param request ProjectDeleteRequest
+         * @param headers ProjectDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectDeleteResponse
+         */
         public async Task<ProjectDeleteResponse> ProjectDeleteWithOptionsAsync(ProjectDeleteRequest request, ProjectDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17275,6 +20831,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectDeleteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除项目
+         *
+         * @param request ProjectDeleteRequest
+         * @return ProjectDeleteResponse
+         */
         public ProjectDeleteResponse ProjectDelete(ProjectDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17282,6 +20844,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ProjectDeleteWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 删除项目
+         *
+         * @param request ProjectDeleteRequest
+         * @return ProjectDeleteResponse
+         */
         public async Task<ProjectDeleteResponse> ProjectDeleteAsync(ProjectDeleteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17289,6 +20857,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ProjectDeleteWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 变更项目
+         *
+         * @param request ProjectModifyRequest
+         * @param headers ProjectModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectModifyResponse
+         */
         public ProjectModifyResponse ProjectModifyWithOptions(ProjectModifyRequest request, ProjectModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17342,6 +20918,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectModifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 变更项目
+         *
+         * @param request ProjectModifyRequest
+         * @param headers ProjectModifyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ProjectModifyResponse
+         */
         public async Task<ProjectModifyResponse> ProjectModifyWithOptionsAsync(ProjectModifyRequest request, ProjectModifyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17395,6 +20979,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<ProjectModifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 变更项目
+         *
+         * @param request ProjectModifyRequest
+         * @return ProjectModifyResponse
+         */
         public ProjectModifyResponse ProjectModify(ProjectModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17402,6 +20992,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return ProjectModifyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 变更项目
+         *
+         * @param request ProjectModifyRequest
+         * @return ProjectModifyResponse
+         */
         public async Task<ProjectModifyResponse> ProjectModifyAsync(ProjectModifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17409,6 +21005,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ProjectModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 报销单查询
+         *
+         * @param request QueryReimbursementOrderRequest
+         * @param headers QueryReimbursementOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryReimbursementOrderResponse
+         */
         public QueryReimbursementOrderResponse QueryReimbursementOrderWithOptions(QueryReimbursementOrderRequest request, QueryReimbursementOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17450,6 +21054,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<QueryReimbursementOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 报销单查询
+         *
+         * @param request QueryReimbursementOrderRequest
+         * @param headers QueryReimbursementOrderHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryReimbursementOrderResponse
+         */
         public async Task<QueryReimbursementOrderResponse> QueryReimbursementOrderWithOptionsAsync(QueryReimbursementOrderRequest request, QueryReimbursementOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17491,6 +21103,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<QueryReimbursementOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 报销单查询
+         *
+         * @param request QueryReimbursementOrderRequest
+         * @return QueryReimbursementOrderResponse
+         */
         public QueryReimbursementOrderResponse QueryReimbursementOrder(QueryReimbursementOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17498,6 +21116,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return QueryReimbursementOrderWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 报销单查询
+         *
+         * @param request QueryReimbursementOrderRequest
+         * @return QueryReimbursementOrderResponse
+         */
         public async Task<QueryReimbursementOrderResponse> QueryReimbursementOrderAsync(QueryReimbursementOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17505,6 +21129,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await QueryReimbursementOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 单个人员同步
+         *
+         * @param tmpReq SyncSingleUserRequest
+         * @param headers SyncSingleUserHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncSingleUserResponse
+         */
         public SyncSingleUserResponse SyncSingleUserWithOptions(SyncSingleUserRequest tmpReq, SyncSingleUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -17588,6 +21220,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<SyncSingleUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 单个人员同步
+         *
+         * @param tmpReq SyncSingleUserRequest
+         * @param headers SyncSingleUserHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncSingleUserResponse
+         */
         public async Task<SyncSingleUserResponse> SyncSingleUserWithOptionsAsync(SyncSingleUserRequest tmpReq, SyncSingleUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -17671,6 +21311,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<SyncSingleUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 单个人员同步
+         *
+         * @param request SyncSingleUserRequest
+         * @return SyncSingleUserResponse
+         */
         public SyncSingleUserResponse SyncSingleUser(SyncSingleUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17678,6 +21324,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return SyncSingleUserWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 单个人员同步
+         *
+         * @param request SyncSingleUserRequest
+         * @return SyncSingleUserResponse
+         */
         public async Task<SyncSingleUserResponse> SyncSingleUserAsync(SyncSingleUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17685,6 +21337,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await SyncSingleUserWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步三方用户映射关系
+         *
+         * @param request SyncThirdUserMappingRequest
+         * @param headers SyncThirdUserMappingHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncThirdUserMappingResponse
+         */
         public SyncThirdUserMappingResponse SyncThirdUserMappingWithOptions(SyncThirdUserMappingRequest request, SyncThirdUserMappingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17734,6 +21394,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<SyncThirdUserMappingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步三方用户映射关系
+         *
+         * @param request SyncThirdUserMappingRequest
+         * @param headers SyncThirdUserMappingHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncThirdUserMappingResponse
+         */
         public async Task<SyncThirdUserMappingResponse> SyncThirdUserMappingWithOptionsAsync(SyncThirdUserMappingRequest request, SyncThirdUserMappingHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17783,6 +21451,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<SyncThirdUserMappingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 同步三方用户映射关系
+         *
+         * @param request SyncThirdUserMappingRequest
+         * @return SyncThirdUserMappingResponse
+         */
         public SyncThirdUserMappingResponse SyncThirdUserMapping(SyncThirdUserMappingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17790,6 +21464,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return SyncThirdUserMappingWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 同步三方用户映射关系
+         *
+         * @param request SyncThirdUserMappingRequest
+         * @return SyncThirdUserMappingResponse
+         */
         public async Task<SyncThirdUserMappingResponse> SyncThirdUserMappingAsync(SyncThirdUserMappingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17797,6 +21477,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await SyncThirdUserMappingWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询淘宝账号信息
+         *
+         * @param headers TBAccountInfoQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TBAccountInfoQueryResponse
+         */
         public TBAccountInfoQueryResponse TBAccountInfoQueryWithOptions(string userId, TBAccountInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -17827,6 +21514,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TBAccountInfoQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询淘宝账号信息
+         *
+         * @param headers TBAccountInfoQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TBAccountInfoQueryResponse
+         */
         public async Task<TBAccountInfoQueryResponse> TBAccountInfoQueryWithOptionsAsync(string userId, TBAccountInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -17857,6 +21551,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TBAccountInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询淘宝账号信息
+         *
+         * @return TBAccountInfoQueryResponse
+         */
         public TBAccountInfoQueryResponse TBAccountInfoQuery(string userId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17864,6 +21563,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TBAccountInfoQueryWithOptions(userId, headers, runtime);
         }
 
+        /**
+         * @summary 查询淘宝账号信息
+         *
+         * @return TBAccountInfoQueryResponse
+         */
         public async Task<TBAccountInfoQueryResponse> TBAccountInfoQueryAsync(string userId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17871,6 +21575,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TBAccountInfoQueryWithOptionsAsync(userId, headers, runtime);
         }
 
+        /**
+         * @summary 解绑淘宝账号
+         *
+         * @param headers TBAccountUnbindHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TBAccountUnbindResponse
+         */
         public TBAccountUnbindResponse TBAccountUnbindWithOptions(string userId, TBAccountUnbindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -17901,6 +21612,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TBAccountUnbindResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 解绑淘宝账号
+         *
+         * @param headers TBAccountUnbindHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TBAccountUnbindResponse
+         */
         public async Task<TBAccountUnbindResponse> TBAccountUnbindWithOptionsAsync(string userId, TBAccountUnbindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -17931,6 +21649,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TBAccountUnbindResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 解绑淘宝账号
+         *
+         * @return TBAccountUnbindResponse
+         */
         public TBAccountUnbindResponse TBAccountUnbind(string userId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17938,6 +21661,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TBAccountUnbindWithOptions(userId, headers, runtime);
         }
 
+        /**
+         * @summary 解绑淘宝账号
+         *
+         * @return TBAccountUnbindResponse
+         */
         public async Task<TBAccountUnbindResponse> TBAccountUnbindAsync(string userId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17945,6 +21673,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TBAccountUnbindWithOptionsAsync(userId, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param tmpReq TicketChangingApplyRequest
+         * @param headers TicketChangingApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingApplyResponse
+         */
         public TicketChangingApplyResponse TicketChangingApplyWithOptions(TicketChangingApplyRequest tmpReq, TicketChangingApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18016,6 +21752,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingApplyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param tmpReq TicketChangingApplyRequest
+         * @param headers TicketChangingApplyHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingApplyResponse
+         */
         public async Task<TicketChangingApplyResponse> TicketChangingApplyWithOptionsAsync(TicketChangingApplyRequest tmpReq, TicketChangingApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18087,6 +21831,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingApplyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param request TicketChangingApplyRequest
+         * @return TicketChangingApplyResponse
+         */
         public TicketChangingApplyResponse TicketChangingApply(TicketChangingApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18094,6 +21844,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingApplyWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签申请
+         *
+         * @param request TicketChangingApplyRequest
+         * @return TicketChangingApplyResponse
+         */
         public async Task<TicketChangingApplyResponse> TicketChangingApplyAsync(TicketChangingApplyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18101,6 +21857,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingApplyWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request TicketChangingCancelRequest
+         * @param headers TicketChangingCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingCancelResponse
+         */
         public TicketChangingCancelResponse TicketChangingCancelWithOptions(TicketChangingCancelRequest request, TicketChangingCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18142,6 +21906,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingCancelResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request TicketChangingCancelRequest
+         * @param headers TicketChangingCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingCancelResponse
+         */
         public async Task<TicketChangingCancelResponse> TicketChangingCancelWithOptionsAsync(TicketChangingCancelRequest request, TicketChangingCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18183,6 +21955,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request TicketChangingCancelRequest
+         * @return TicketChangingCancelResponse
+         */
         public TicketChangingCancelResponse TicketChangingCancel(TicketChangingCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18190,6 +21968,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingCancelWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签取消
+         *
+         * @param request TicketChangingCancelRequest
+         * @return TicketChangingCancelResponse
+         */
         public async Task<TicketChangingCancelResponse> TicketChangingCancelAsync(TicketChangingCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18197,6 +21981,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingCancelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request TicketChangingDetailRequest
+         * @param headers TicketChangingDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingDetailResponse
+         */
         public TicketChangingDetailResponse TicketChangingDetailWithOptions(TicketChangingDetailRequest request, TicketChangingDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18238,6 +22030,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request TicketChangingDetailRequest
+         * @param headers TicketChangingDetailHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingDetailResponse
+         */
         public async Task<TicketChangingDetailResponse> TicketChangingDetailWithOptionsAsync(TicketChangingDetailRequest request, TicketChangingDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18279,6 +22079,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request TicketChangingDetailRequest
+         * @return TicketChangingDetailResponse
+         */
         public TicketChangingDetailResponse TicketChangingDetail(TicketChangingDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18286,6 +22092,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签详情
+         *
+         * @param request TicketChangingDetailRequest
+         * @return TicketChangingDetailResponse
+         */
         public async Task<TicketChangingDetailResponse> TicketChangingDetailAsync(TicketChangingDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18293,6 +22105,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签询价
+         *
+         * @param request TicketChangingEnquiryRequest
+         * @param headers TicketChangingEnquiryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingEnquiryResponse
+         */
         public TicketChangingEnquiryResponse TicketChangingEnquiryWithOptions(TicketChangingEnquiryRequest request, TicketChangingEnquiryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18354,6 +22174,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingEnquiryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签询价
+         *
+         * @param request TicketChangingEnquiryRequest
+         * @param headers TicketChangingEnquiryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingEnquiryResponse
+         */
         public async Task<TicketChangingEnquiryResponse> TicketChangingEnquiryWithOptionsAsync(TicketChangingEnquiryRequest request, TicketChangingEnquiryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18415,6 +22243,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingEnquiryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签询价
+         *
+         * @param request TicketChangingEnquiryRequest
+         * @return TicketChangingEnquiryResponse
+         */
         public TicketChangingEnquiryResponse TicketChangingEnquiry(TicketChangingEnquiryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18422,6 +22256,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingEnquiryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签询价
+         *
+         * @param request TicketChangingEnquiryRequest
+         * @return TicketChangingEnquiryResponse
+         */
         public async Task<TicketChangingEnquiryResponse> TicketChangingEnquiryAsync(TicketChangingEnquiryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18429,6 +22269,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingEnquiryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签可改签航班列表
+         *
+         * @param tmpReq TicketChangingFlightListRequest
+         * @param headers TicketChangingFlightListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingFlightListResponse
+         */
         public TicketChangingFlightListResponse TicketChangingFlightListWithOptions(TicketChangingFlightListRequest tmpReq, TicketChangingFlightListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18492,6 +22340,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingFlightListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签可改签航班列表
+         *
+         * @param tmpReq TicketChangingFlightListRequest
+         * @param headers TicketChangingFlightListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingFlightListResponse
+         */
         public async Task<TicketChangingFlightListResponse> TicketChangingFlightListWithOptionsAsync(TicketChangingFlightListRequest tmpReq, TicketChangingFlightListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18555,6 +22411,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingFlightListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签可改签航班列表
+         *
+         * @param request TicketChangingFlightListRequest
+         * @return TicketChangingFlightListResponse
+         */
         public TicketChangingFlightListResponse TicketChangingFlightList(TicketChangingFlightListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18562,6 +22424,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingFlightListWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签可改签航班列表
+         *
+         * @param request TicketChangingFlightListRequest
+         * @return TicketChangingFlightListResponse
+         */
         public async Task<TicketChangingFlightListResponse> TicketChangingFlightListAsync(TicketChangingFlightListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18569,6 +22437,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingFlightListWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签航班支付
+         *
+         * @param tmpReq TicketChangingPayRequest
+         * @param headers TicketChangingPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingPayResponse
+         */
         public TicketChangingPayResponse TicketChangingPayWithOptions(TicketChangingPayRequest tmpReq, TicketChangingPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18632,6 +22508,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingPayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签航班支付
+         *
+         * @param tmpReq TicketChangingPayRequest
+         * @param headers TicketChangingPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TicketChangingPayResponse
+         */
         public async Task<TicketChangingPayResponse> TicketChangingPayWithOptionsAsync(TicketChangingPayRequest tmpReq, TicketChangingPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18695,6 +22579,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TicketChangingPayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 机票改签航班支付
+         *
+         * @param request TicketChangingPayRequest
+         * @return TicketChangingPayResponse
+         */
         public TicketChangingPayResponse TicketChangingPay(TicketChangingPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18702,6 +22592,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TicketChangingPayWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 机票改签航班支付
+         *
+         * @param request TicketChangingPayRequest
+         * @return TicketChangingPayResponse
+         */
         public async Task<TicketChangingPayResponse> TicketChangingPayAsync(TicketChangingPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18709,6 +22605,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TicketChangingPayWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签申请
+         *
+         * @param tmpReq TrainApplyChangeRequest
+         * @param headers TrainApplyChangeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainApplyChangeResponse
+         */
         public TrainApplyChangeResponse TrainApplyChangeWithOptions(TrainApplyChangeRequest tmpReq, TrainApplyChangeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18778,6 +22682,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainApplyChangeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签申请
+         *
+         * @param tmpReq TrainApplyChangeRequest
+         * @param headers TrainApplyChangeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainApplyChangeResponse
+         */
         public async Task<TrainApplyChangeResponse> TrainApplyChangeWithOptionsAsync(TrainApplyChangeRequest tmpReq, TrainApplyChangeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18847,6 +22759,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainApplyChangeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签申请
+         *
+         * @param request TrainApplyChangeRequest
+         * @return TrainApplyChangeResponse
+         */
         public TrainApplyChangeResponse TrainApplyChange(TrainApplyChangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18854,6 +22772,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainApplyChangeWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签申请
+         *
+         * @param request TrainApplyChangeRequest
+         * @return TrainApplyChangeResponse
+         */
         public async Task<TrainApplyChangeResponse> TrainApplyChangeAsync(TrainApplyChangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18861,6 +22785,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainApplyChangeWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票退票申请
+         *
+         * @param tmpReq TrainApplyRefundRequest
+         * @param headers TrainApplyRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainApplyRefundResponse
+         */
         public TrainApplyRefundResponse TrainApplyRefundWithOptions(TrainApplyRefundRequest tmpReq, TrainApplyRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18916,6 +22848,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainApplyRefundResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票退票申请
+         *
+         * @param tmpReq TrainApplyRefundRequest
+         * @param headers TrainApplyRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainApplyRefundResponse
+         */
         public async Task<TrainApplyRefundResponse> TrainApplyRefundWithOptionsAsync(TrainApplyRefundRequest tmpReq, TrainApplyRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -18971,6 +22911,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainApplyRefundResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票退票申请
+         *
+         * @param request TrainApplyRefundRequest
+         * @return TrainApplyRefundResponse
+         */
         public TrainApplyRefundResponse TrainApplyRefund(TrainApplyRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18978,6 +22924,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainApplyRefundWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票退票申请
+         *
+         * @param request TrainApplyRefundRequest
+         * @return TrainApplyRefundResponse
+         */
         public async Task<TrainApplyRefundResponse> TrainApplyRefundAsync(TrainApplyRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18985,6 +22937,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainApplyRefundWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票记账数据
+         *
+         * @param request TrainBillSettlementQueryRequest
+         * @param headers TrainBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainBillSettlementQueryResponse
+         */
         public TrainBillSettlementQueryResponse TrainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19034,6 +22994,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainBillSettlementQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票记账数据
+         *
+         * @param request TrainBillSettlementQueryRequest
+         * @param headers TrainBillSettlementQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainBillSettlementQueryResponse
+         */
         public async Task<TrainBillSettlementQueryResponse> TrainBillSettlementQueryWithOptionsAsync(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19083,6 +23051,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票记账数据
+         *
+         * @param request TrainBillSettlementQueryRequest
+         * @return TrainBillSettlementQueryResponse
+         */
         public TrainBillSettlementQueryResponse TrainBillSettlementQuery(TrainBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19090,6 +23064,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainBillSettlementQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票记账数据
+         *
+         * @param request TrainBillSettlementQueryRequest
+         * @return TrainBillSettlementQueryResponse
+         */
         public async Task<TrainBillSettlementQueryResponse> TrainBillSettlementQueryAsync(TrainBillSettlementQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19097,6 +23077,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车超标审批详情
+         *
+         * @param request TrainExceedApplyQueryRequest
+         * @param headers TrainExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainExceedApplyQueryResponse
+         */
         public TrainExceedApplyQueryResponse TrainExceedApplyQueryWithOptions(TrainExceedApplyQueryRequest request, TrainExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19134,6 +23122,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainExceedApplyQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车超标审批详情
+         *
+         * @param request TrainExceedApplyQueryRequest
+         * @param headers TrainExceedApplyQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainExceedApplyQueryResponse
+         */
         public async Task<TrainExceedApplyQueryResponse> TrainExceedApplyQueryWithOptionsAsync(TrainExceedApplyQueryRequest request, TrainExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19171,6 +23167,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainExceedApplyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车超标审批详情
+         *
+         * @param request TrainExceedApplyQueryRequest
+         * @return TrainExceedApplyQueryResponse
+         */
         public TrainExceedApplyQueryResponse TrainExceedApplyQuery(TrainExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19178,6 +23180,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainExceedApplyQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车超标审批详情
+         *
+         * @param request TrainExceedApplyQueryRequest
+         * @return TrainExceedApplyQueryResponse
+         */
         public async Task<TrainExceedApplyQueryResponse> TrainExceedApplyQueryAsync(TrainExceedApplyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19185,6 +23193,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainExceedApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签费用预估
+         *
+         * @param tmpReq TrainFeeCalculateChangeRequest
+         * @param headers TrainFeeCalculateChangeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainFeeCalculateChangeResponse
+         */
         public TrainFeeCalculateChangeResponse TrainFeeCalculateChangeWithOptions(TrainFeeCalculateChangeRequest tmpReq, TrainFeeCalculateChangeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19236,6 +23252,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainFeeCalculateChangeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签费用预估
+         *
+         * @param tmpReq TrainFeeCalculateChangeRequest
+         * @param headers TrainFeeCalculateChangeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainFeeCalculateChangeResponse
+         */
         public async Task<TrainFeeCalculateChangeResponse> TrainFeeCalculateChangeWithOptionsAsync(TrainFeeCalculateChangeRequest tmpReq, TrainFeeCalculateChangeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19287,6 +23311,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainFeeCalculateChangeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签费用预估
+         *
+         * @param request TrainFeeCalculateChangeRequest
+         * @return TrainFeeCalculateChangeResponse
+         */
         public TrainFeeCalculateChangeResponse TrainFeeCalculateChange(TrainFeeCalculateChangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19294,6 +23324,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainFeeCalculateChangeWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签费用预估
+         *
+         * @param request TrainFeeCalculateChangeRequest
+         * @return TrainFeeCalculateChangeResponse
+         */
         public async Task<TrainFeeCalculateChangeResponse> TrainFeeCalculateChangeAsync(TrainFeeCalculateChangeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19301,6 +23337,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainFeeCalculateChangeWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票退票费用预估
+         *
+         * @param tmpReq TrainFeeCalculateRefundRequest
+         * @param headers TrainFeeCalculateRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainFeeCalculateRefundResponse
+         */
         public TrainFeeCalculateRefundResponse TrainFeeCalculateRefundWithOptions(TrainFeeCalculateRefundRequest tmpReq, TrainFeeCalculateRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19352,6 +23396,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainFeeCalculateRefundResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票退票费用预估
+         *
+         * @param tmpReq TrainFeeCalculateRefundRequest
+         * @param headers TrainFeeCalculateRefundHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainFeeCalculateRefundResponse
+         */
         public async Task<TrainFeeCalculateRefundResponse> TrainFeeCalculateRefundWithOptionsAsync(TrainFeeCalculateRefundRequest tmpReq, TrainFeeCalculateRefundHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19403,6 +23455,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainFeeCalculateRefundResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票退票费用预估
+         *
+         * @param request TrainFeeCalculateRefundRequest
+         * @return TrainFeeCalculateRefundResponse
+         */
         public TrainFeeCalculateRefundResponse TrainFeeCalculateRefund(TrainFeeCalculateRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19410,6 +23468,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainFeeCalculateRefundWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票退票费用预估
+         *
+         * @param request TrainFeeCalculateRefundRequest
+         * @return TrainFeeCalculateRefundResponse
+         */
         public async Task<TrainFeeCalculateRefundResponse> TrainFeeCalculateRefundAsync(TrainFeeCalculateRefundRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19417,6 +23481,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainFeeCalculateRefundWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票车次详情查询
+         *
+         * @param request TrainNoInfoSearchRequest
+         * @param headers TrainNoInfoSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainNoInfoSearchResponse
+         */
         public TrainNoInfoSearchResponse TrainNoInfoSearchWithOptions(TrainNoInfoSearchRequest request, TrainNoInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19482,6 +23554,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainNoInfoSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票车次详情查询
+         *
+         * @param request TrainNoInfoSearchRequest
+         * @param headers TrainNoInfoSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainNoInfoSearchResponse
+         */
         public async Task<TrainNoInfoSearchResponse> TrainNoInfoSearchWithOptionsAsync(TrainNoInfoSearchRequest request, TrainNoInfoSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19547,6 +23627,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainNoInfoSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票车次详情查询
+         *
+         * @param request TrainNoInfoSearchRequest
+         * @return TrainNoInfoSearchResponse
+         */
         public TrainNoInfoSearchResponse TrainNoInfoSearch(TrainNoInfoSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19554,6 +23640,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainNoInfoSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票车次详情查询
+         *
+         * @param request TrainNoInfoSearchRequest
+         * @return TrainNoInfoSearchResponse
+         */
         public async Task<TrainNoInfoSearchResponse> TrainNoInfoSearchAsync(TrainNoInfoSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19561,6 +23653,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainNoInfoSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票车次列表查询
+         *
+         * @param tmpReq TrainNoListSearchRequest
+         * @param headers TrainNoListSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainNoListSearchResponse
+         */
         public TrainNoListSearchResponse TrainNoListSearchWithOptions(TrainNoListSearchRequest tmpReq, TrainNoListSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19620,6 +23720,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainNoListSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票车次列表查询
+         *
+         * @param tmpReq TrainNoListSearchRequest
+         * @param headers TrainNoListSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainNoListSearchResponse
+         */
         public async Task<TrainNoListSearchResponse> TrainNoListSearchWithOptionsAsync(TrainNoListSearchRequest tmpReq, TrainNoListSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -19679,6 +23787,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainNoListSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票车次列表查询
+         *
+         * @param request TrainNoListSearchRequest
+         * @return TrainNoListSearchResponse
+         */
         public TrainNoListSearchResponse TrainNoListSearch(TrainNoListSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19686,6 +23800,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainNoListSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票车次列表查询
+         *
+         * @param request TrainNoListSearchRequest
+         * @return TrainNoListSearchResponse
+         */
         public async Task<TrainNoListSearchResponse> TrainNoListSearchAsync(TrainNoListSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19693,6 +23813,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainNoListSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单取消
+         *
+         * @param request TrainOrderCancelRequest
+         * @param headers TrainOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderCancelResponse
+         */
         public TrainOrderCancelResponse TrainOrderCancelWithOptions(TrainOrderCancelRequest request, TrainOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19742,6 +23870,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderCancelResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单取消
+         *
+         * @param request TrainOrderCancelRequest
+         * @param headers TrainOrderCancelHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderCancelResponse
+         */
         public async Task<TrainOrderCancelResponse> TrainOrderCancelWithOptionsAsync(TrainOrderCancelRequest request, TrainOrderCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19791,6 +23927,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderCancelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单取消
+         *
+         * @param request TrainOrderCancelRequest
+         * @return TrainOrderCancelResponse
+         */
         public TrainOrderCancelResponse TrainOrderCancel(TrainOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19798,6 +23940,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderCancelWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单取消
+         *
+         * @param request TrainOrderCancelRequest
+         * @return TrainOrderCancelResponse
+         */
         public async Task<TrainOrderCancelResponse> TrainOrderCancelAsync(TrainOrderCancelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19805,6 +23953,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderCancelWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签确认
+         *
+         * @param request TrainOrderChangeConfirmRequest
+         * @param headers TrainOrderChangeConfirmHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderChangeConfirmResponse
+         */
         public TrainOrderChangeConfirmResponse TrainOrderChangeConfirmWithOptions(TrainOrderChangeConfirmRequest request, TrainOrderChangeConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19858,6 +24014,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderChangeConfirmResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签确认
+         *
+         * @param request TrainOrderChangeConfirmRequest
+         * @param headers TrainOrderChangeConfirmHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderChangeConfirmResponse
+         */
         public async Task<TrainOrderChangeConfirmResponse> TrainOrderChangeConfirmWithOptionsAsync(TrainOrderChangeConfirmRequest request, TrainOrderChangeConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19911,6 +24075,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderChangeConfirmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票改签确认
+         *
+         * @param request TrainOrderChangeConfirmRequest
+         * @return TrainOrderChangeConfirmResponse
+         */
         public TrainOrderChangeConfirmResponse TrainOrderChangeConfirm(TrainOrderChangeConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19918,6 +24088,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderChangeConfirmWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票改签确认
+         *
+         * @param request TrainOrderChangeConfirmRequest
+         * @return TrainOrderChangeConfirmResponse
+         */
         public async Task<TrainOrderChangeConfirmResponse> TrainOrderChangeConfirmAsync(TrainOrderChangeConfirmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19925,6 +24101,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderChangeConfirmWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票正向预订
+         *
+         * @param tmpReq TrainOrderCreateRequest
+         * @param headers TrainOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderCreateResponse
+         */
         public TrainOrderCreateResponse TrainOrderCreateWithOptions(TrainOrderCreateRequest tmpReq, TrainOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -20016,6 +24200,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderCreateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票正向预订
+         *
+         * @param tmpReq TrainOrderCreateRequest
+         * @param headers TrainOrderCreateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderCreateResponse
+         */
         public async Task<TrainOrderCreateResponse> TrainOrderCreateWithOptionsAsync(TrainOrderCreateRequest tmpReq, TrainOrderCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -20107,6 +24299,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderCreateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票正向预订
+         *
+         * @param request TrainOrderCreateRequest
+         * @return TrainOrderCreateResponse
+         */
         public TrainOrderCreateResponse TrainOrderCreate(TrainOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20114,6 +24312,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderCreateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票正向预订
+         *
+         * @param request TrainOrderCreateRequest
+         * @return TrainOrderCreateResponse
+         */
         public async Task<TrainOrderCreateResponse> TrainOrderCreateAsync(TrainOrderCreateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20121,6 +24325,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderCreateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单详情
+         *
+         * @param request TrainOrderDetailQueryRequest
+         * @param headers TrainOrderDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderDetailQueryResponse
+         */
         public TrainOrderDetailQueryResponse TrainOrderDetailQueryWithOptions(TrainOrderDetailQueryRequest request, TrainOrderDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20162,6 +24374,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderDetailQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单详情
+         *
+         * @param request TrainOrderDetailQueryRequest
+         * @param headers TrainOrderDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderDetailQueryResponse
+         */
         public async Task<TrainOrderDetailQueryResponse> TrainOrderDetailQueryWithOptionsAsync(TrainOrderDetailQueryRequest request, TrainOrderDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20203,6 +24423,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderDetailQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单详情
+         *
+         * @param request TrainOrderDetailQueryRequest
+         * @return TrainOrderDetailQueryResponse
+         */
         public TrainOrderDetailQueryResponse TrainOrderDetailQuery(TrainOrderDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20210,6 +24436,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderDetailQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单详情
+         *
+         * @param request TrainOrderDetailQueryRequest
+         * @return TrainOrderDetailQueryResponse
+         */
         public async Task<TrainOrderDetailQueryResponse> TrainOrderDetailQueryAsync(TrainOrderDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20217,6 +24449,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderDetailQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票订单列表
+         *
+         * @param request TrainOrderListQueryRequest
+         * @param headers TrainOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderListQueryResponse
+         */
         public TrainOrderListQueryResponse TrainOrderListQueryWithOptions(TrainOrderListQueryRequest request, TrainOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20294,6 +24534,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票订单列表
+         *
+         * @param request TrainOrderListQueryRequest
+         * @param headers TrainOrderListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderListQueryResponse
+         */
         public async Task<TrainOrderListQueryResponse> TrainOrderListQueryWithOptionsAsync(TrainOrderListQueryRequest request, TrainOrderListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20371,6 +24619,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票订单列表
+         *
+         * @param request TrainOrderListQueryRequest
+         * @return TrainOrderListQueryResponse
+         */
         public TrainOrderListQueryResponse TrainOrderListQuery(TrainOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20378,6 +24632,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票订单列表
+         *
+         * @param request TrainOrderListQueryRequest
+         * @return TrainOrderListQueryResponse
+         */
         public async Task<TrainOrderListQueryResponse> TrainOrderListQueryAsync(TrainOrderListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20385,6 +24645,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单支付
+         *
+         * @param request TrainOrderPayRequest
+         * @param headers TrainOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderPayResponse
+         */
         public TrainOrderPayResponse TrainOrderPayWithOptions(TrainOrderPayRequest request, TrainOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20430,6 +24698,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderPayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单支付
+         *
+         * @param request TrainOrderPayRequest
+         * @param headers TrainOrderPayHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderPayResponse
+         */
         public async Task<TrainOrderPayResponse> TrainOrderPayWithOptionsAsync(TrainOrderPayRequest request, TrainOrderPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20475,6 +24751,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderPayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单支付
+         *
+         * @param request TrainOrderPayRequest
+         * @return TrainOrderPayResponse
+         */
         public TrainOrderPayResponse TrainOrderPay(TrainOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20482,6 +24764,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderPayWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单支付
+         *
+         * @param request TrainOrderPayRequest
+         * @return TrainOrderPayResponse
+         */
         public async Task<TrainOrderPayResponse> TrainOrderPayAsync(TrainOrderPayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20489,6 +24777,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderPayWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票订单详情（含票信息）
+         *
+         * @param request TrainOrderQueryRequest
+         * @param headers TrainOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderQueryResponse
+         */
         public TrainOrderQueryResponse TrainOrderQueryWithOptions(TrainOrderQueryRequest request, TrainOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20530,6 +24826,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票订单详情（含票信息）
+         *
+         * @param request TrainOrderQueryRequest
+         * @param headers TrainOrderQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderQueryResponse
+         */
         public async Task<TrainOrderQueryResponse> TrainOrderQueryWithOptionsAsync(TrainOrderQueryRequest request, TrainOrderQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20571,6 +24875,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票订单详情（含票信息）
+         *
+         * @param request TrainOrderQueryRequest
+         * @return TrainOrderQueryResponse
+         */
         public TrainOrderQueryResponse TrainOrderQuery(TrainOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20578,6 +24888,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票订单详情（含票信息）
+         *
+         * @param request TrainOrderQueryRequest
+         * @return TrainOrderQueryResponse
+         */
         public async Task<TrainOrderQueryResponse> TrainOrderQueryAsync(TrainOrderQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20585,6 +24901,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单查询V2
+         *
+         * @param request TrainOrderQueryV2Request
+         * @param headers TrainOrderQueryV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderQueryV2Response
+         */
         public TrainOrderQueryV2Response TrainOrderQueryV2WithOptions(TrainOrderQueryV2Request request, TrainOrderQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20626,6 +24950,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单查询V2
+         *
+         * @param request TrainOrderQueryV2Request
+         * @param headers TrainOrderQueryV2Headers
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainOrderQueryV2Response
+         */
         public async Task<TrainOrderQueryV2Response> TrainOrderQueryV2WithOptionsAsync(TrainOrderQueryV2Request request, TrainOrderQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20667,6 +24999,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainOrderQueryV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票订单查询V2
+         *
+         * @param request TrainOrderQueryV2Request
+         * @return TrainOrderQueryV2Response
+         */
         public TrainOrderQueryV2Response TrainOrderQueryV2(TrainOrderQueryV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20674,6 +25012,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainOrderQueryV2WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票订单查询V2
+         *
+         * @param request TrainOrderQueryV2Request
+         * @return TrainOrderQueryV2Response
+         */
         public async Task<TrainOrderQueryV2Response> TrainOrderQueryV2Async(TrainOrderQueryV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20681,6 +25025,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderQueryV2WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车站数据
+         *
+         * @param request TrainStationSearchRequest
+         * @param headers TrainStationSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainStationSearchResponse
+         */
         public TrainStationSearchResponse TrainStationSearchWithOptions(TrainStationSearchRequest request, TrainStationSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20718,6 +25070,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainStationSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车站数据
+         *
+         * @param request TrainStationSearchRequest
+         * @param headers TrainStationSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainStationSearchResponse
+         */
         public async Task<TrainStationSearchResponse> TrainStationSearchWithOptionsAsync(TrainStationSearchRequest request, TrainStationSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20755,6 +25115,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainStationSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车站数据
+         *
+         * @param request TrainStationSearchRequest
+         * @return TrainStationSearchResponse
+         */
         public TrainStationSearchResponse TrainStationSearch(TrainStationSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20762,6 +25128,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainStationSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车站数据
+         *
+         * @param request TrainStationSearchRequest
+         * @return TrainStationSearchResponse
+         */
         public async Task<TrainStationSearchResponse> TrainStationSearchAsync(TrainStationSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20769,6 +25141,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainStationSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票经停站查询
+         *
+         * @param request TrainStopoverSearchRequest
+         * @param headers TrainStopoverSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainStopoverSearchResponse
+         */
         public TrainStopoverSearchResponse TrainStopoverSearchWithOptions(TrainStopoverSearchRequest request, TrainStopoverSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20818,6 +25198,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainStopoverSearchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票经停站查询
+         *
+         * @param request TrainStopoverSearchRequest
+         * @param headers TrainStopoverSearchHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainStopoverSearchResponse
+         */
         public async Task<TrainStopoverSearchResponse> TrainStopoverSearchWithOptionsAsync(TrainStopoverSearchRequest request, TrainStopoverSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20867,6 +25255,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainStopoverSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 火车票经停站查询
+         *
+         * @param request TrainStopoverSearchRequest
+         * @return TrainStopoverSearchResponse
+         */
         public TrainStopoverSearchResponse TrainStopoverSearch(TrainStopoverSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20874,6 +25268,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainStopoverSearchWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 火车票经停站查询
+         *
+         * @param request TrainStopoverSearchRequest
+         * @return TrainStopoverSearchResponse
+         */
         public async Task<TrainStopoverSearchResponse> TrainStopoverSearchAsync(TrainStopoverSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20881,6 +25281,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainStopoverSearchWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票凭证扫描件
+         *
+         * @param request TrainTicketScanQueryRequest
+         * @param headers TrainTicketScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainTicketScanQueryResponse
+         */
         public TrainTicketScanQueryResponse TrainTicketScanQueryWithOptions(TrainTicketScanQueryRequest request, TrainTicketScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20942,6 +25350,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainTicketScanQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票凭证扫描件
+         *
+         * @param request TrainTicketScanQueryRequest
+         * @param headers TrainTicketScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TrainTicketScanQueryResponse
+         */
         public async Task<TrainTicketScanQueryResponse> TrainTicketScanQueryWithOptionsAsync(TrainTicketScanQueryRequest request, TrainTicketScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21003,6 +25419,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TrainTicketScanQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询火车票凭证扫描件
+         *
+         * @param request TrainTicketScanQueryRequest
+         * @return TrainTicketScanQueryResponse
+         */
         public TrainTicketScanQueryResponse TrainTicketScanQuery(TrainTicketScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21010,6 +25432,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TrainTicketScanQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询火车票凭证扫描件
+         *
+         * @param request TrainTicketScanQueryRequest
+         * @return TrainTicketScanQueryResponse
+         */
         public async Task<TrainTicketScanQueryResponse> TrainTicketScanQueryAsync(TrainTicketScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21017,6 +25445,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainTicketScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询差标列表
+         *
+         * @param request TravelStandardListQueryRequest
+         * @param headers TravelStandardListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TravelStandardListQueryResponse
+         */
         public TravelStandardListQueryResponse TravelStandardListQueryWithOptions(TravelStandardListQueryRequest request, TravelStandardListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21066,6 +25502,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TravelStandardListQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询差标列表
+         *
+         * @param request TravelStandardListQueryRequest
+         * @param headers TravelStandardListQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TravelStandardListQueryResponse
+         */
         public async Task<TravelStandardListQueryResponse> TravelStandardListQueryWithOptionsAsync(TravelStandardListQueryRequest request, TravelStandardListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21115,6 +25559,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TravelStandardListQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询差标列表
+         *
+         * @param request TravelStandardListQueryRequest
+         * @return TravelStandardListQueryResponse
+         */
         public TravelStandardListQueryResponse TravelStandardListQuery(TravelStandardListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21122,6 +25572,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TravelStandardListQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询差标列表
+         *
+         * @param request TravelStandardListQueryRequest
+         * @return TravelStandardListQueryResponse
+         */
         public async Task<TravelStandardListQueryResponse> TravelStandardListQueryAsync(TravelStandardListQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21129,6 +25585,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TravelStandardListQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询差标详情
+         *
+         * @param tmpReq TravelStandardQueryRequest
+         * @param headers TravelStandardQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TravelStandardQueryResponse
+         */
         public TravelStandardQueryResponse TravelStandardQueryWithOptions(TravelStandardQueryRequest tmpReq, TravelStandardQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -21180,6 +25644,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TravelStandardQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询差标详情
+         *
+         * @param tmpReq TravelStandardQueryRequest
+         * @param headers TravelStandardQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TravelStandardQueryResponse
+         */
         public async Task<TravelStandardQueryResponse> TravelStandardQueryWithOptionsAsync(TravelStandardQueryRequest tmpReq, TravelStandardQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -21231,6 +25703,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<TravelStandardQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询差标详情
+         *
+         * @param request TravelStandardQueryRequest
+         * @return TravelStandardQueryResponse
+         */
         public TravelStandardQueryResponse TravelStandardQuery(TravelStandardQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21238,6 +25716,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TravelStandardQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询差标详情
+         *
+         * @param request TravelStandardQueryRequest
+         * @return TravelStandardQueryResponse
+         */
         public async Task<TravelStandardQueryResponse> TravelStandardQueryAsync(TravelStandardQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21245,6 +25729,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TravelStandardQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 人员查询
+         *
+         * @param request UserQueryRequest
+         * @param headers UserQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UserQueryResponse
+         */
         public UserQueryResponse UserQueryWithOptions(UserQueryRequest request, UserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21294,6 +25786,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<UserQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 人员查询
+         *
+         * @param request UserQueryRequest
+         * @param headers UserQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UserQueryResponse
+         */
         public async Task<UserQueryResponse> UserQueryWithOptionsAsync(UserQueryRequest request, UserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21343,6 +25843,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<UserQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 人员查询
+         *
+         * @param request UserQueryRequest
+         * @return UserQueryResponse
+         */
         public UserQueryResponse UserQuery(UserQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21350,6 +25856,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return UserQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 人员查询
+         *
+         * @param request UserQueryRequest
+         * @return UserQueryResponse
+         */
         public async Task<UserQueryResponse> UserQueryAsync(UserQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21357,6 +25869,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await UserQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询增值税发票扫描件
+         *
+         * @param request VatInvoiceScanQueryRequest
+         * @param headers VatInvoiceScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VatInvoiceScanQueryResponse
+         */
         public VatInvoiceScanQueryResponse VatInvoiceScanQueryWithOptions(VatInvoiceScanQueryRequest request, VatInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21410,6 +25930,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<VatInvoiceScanQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询增值税发票扫描件
+         *
+         * @param request VatInvoiceScanQueryRequest
+         * @param headers VatInvoiceScanQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VatInvoiceScanQueryResponse
+         */
         public async Task<VatInvoiceScanQueryResponse> VatInvoiceScanQueryWithOptionsAsync(VatInvoiceScanQueryRequest request, VatInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21463,6 +25991,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<VatInvoiceScanQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询增值税发票扫描件
+         *
+         * @param request VatInvoiceScanQueryRequest
+         * @return VatInvoiceScanQueryResponse
+         */
         public VatInvoiceScanQueryResponse VatInvoiceScanQuery(VatInvoiceScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21470,6 +26004,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return VatInvoiceScanQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询增值税发票扫描件
+         *
+         * @param request VatInvoiceScanQueryRequest
+         * @return VatInvoiceScanQueryResponse
+         */
         public async Task<VatInvoiceScanQueryResponse> VatInvoiceScanQueryAsync(VatInvoiceScanQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21477,6 +26017,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await VatInvoiceScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询账期待申请的发票数据
+         *
+         * @param request WaitApplyInvoiceTaskDetailQueryRequest
+         * @param headers WaitApplyInvoiceTaskDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WaitApplyInvoiceTaskDetailQueryResponse
+         */
         public WaitApplyInvoiceTaskDetailQueryResponse WaitApplyInvoiceTaskDetailQueryWithOptions(WaitApplyInvoiceTaskDetailQueryRequest request, WaitApplyInvoiceTaskDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21514,6 +26062,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<WaitApplyInvoiceTaskDetailQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询账期待申请的发票数据
+         *
+         * @param request WaitApplyInvoiceTaskDetailQueryRequest
+         * @param headers WaitApplyInvoiceTaskDetailQueryHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return WaitApplyInvoiceTaskDetailQueryResponse
+         */
         public async Task<WaitApplyInvoiceTaskDetailQueryResponse> WaitApplyInvoiceTaskDetailQueryWithOptionsAsync(WaitApplyInvoiceTaskDetailQueryRequest request, WaitApplyInvoiceTaskDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21551,6 +26107,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<WaitApplyInvoiceTaskDetailQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询账期待申请的发票数据
+         *
+         * @param request WaitApplyInvoiceTaskDetailQueryRequest
+         * @return WaitApplyInvoiceTaskDetailQueryResponse
+         */
         public WaitApplyInvoiceTaskDetailQueryResponse WaitApplyInvoiceTaskDetailQuery(WaitApplyInvoiceTaskDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21558,6 +26120,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return WaitApplyInvoiceTaskDetailQueryWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查询账期待申请的发票数据
+         *
+         * @param request WaitApplyInvoiceTaskDetailQueryRequest
+         * @return WaitApplyInvoiceTaskDetailQueryResponse
+         */
         public async Task<WaitApplyInvoiceTaskDetailQueryResponse> WaitApplyInvoiceTaskDetailQueryAsync(WaitApplyInvoiceTaskDetailQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
