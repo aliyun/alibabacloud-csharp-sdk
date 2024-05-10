@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Aggregators { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("flushers")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Flushers { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Global { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("inputs")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Inputs { get; set; }

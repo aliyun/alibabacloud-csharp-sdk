@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? LastModifyTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }
@@ -57,6 +60,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
@@ -65,6 +71,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string TelemetryType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]
         public int? Ttl { get; set; }

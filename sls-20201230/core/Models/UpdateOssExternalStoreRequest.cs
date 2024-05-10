@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class UpdateOssExternalStoreRequest : TeaModel {
         /// <summary>
         /// The name of the external store.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The parameters that are configured for the external store.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class UpdateOssExternalStoreRequestParameter : TeaModel {
             /// <summary>
             /// The AccessKey ID of your account.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("accessid")]
             [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The AccessKey secret of your account.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("accesskey")]
             [Validation(Required=false)]
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The name of the OSS bucket.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The fields that are associated to the external store.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
@@ -53,6 +65,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public class UpdateOssExternalStoreRequestParameterColumns : TeaModel {
                 /// <summary>
                 /// The name of the field.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
                 /// <summary>
                 /// The type of the field.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -69,6 +85,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The Object Storage Service (OSS) endpoint.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The names of the OSS objects that are associated to the external store.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("objects")]
             [Validation(Required=false)]
@@ -85,6 +105,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The type of the external store. Set the value to oss.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]

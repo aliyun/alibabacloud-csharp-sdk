@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class EtlJob : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("etlJobName")]
         [Validation(Required=false)]
         public string EtlJobName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("functionConfig")]
         [Validation(Required=false)]
         public EtlJobFunctionConfig FunctionConfig { get; set; }
@@ -33,6 +42,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("functionProvider")]
             [Validation(Required=false)]
             public string FunctionProvider { get; set; }
@@ -51,46 +63,76 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("functionParameter")]
         [Validation(Required=false)]
         public Dictionary<string, object> FunctionParameter { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("logConfig")]
         [Validation(Required=false)]
         public EtlJobLogConfig LogConfig { get; set; }
         public class EtlJobLogConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("logstoreName")]
             [Validation(Required=false)]
             public string LogstoreName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("projectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sourceConfig")]
         [Validation(Required=false)]
         public EtlJobSourceConfig SourceConfig { get; set; }
         public class EtlJobSourceConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("logstoreName")]
             [Validation(Required=false)]
             public string LogstoreName { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
         public EtlJobTriggerConfig TriggerConfig { get; set; }
         public class EtlJobTriggerConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("maxRetryTime")]
             [Validation(Required=false)]
             public int? MaxRetryTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("roleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
@@ -103,6 +145,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public long? StartingUnixtime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("triggerInterval")]
             [Validation(Required=false)]
             public int? TriggerInterval { get; set; }

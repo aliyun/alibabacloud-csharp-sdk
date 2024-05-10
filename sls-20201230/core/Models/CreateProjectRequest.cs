@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The description of the project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// *   It can contain only lowercase letters, digits, and hyphens (-).
         /// *   It must start and end with a lowercase letter or a digit.
         /// *   It must be 3 to 63 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("projectName")]
         [Validation(Required=false)]

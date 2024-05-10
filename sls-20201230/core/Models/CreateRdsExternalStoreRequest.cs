@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class CreateRdsExternalStoreRequest : TeaModel {
         /// <summary>
         /// The name of the external store. The name must be unique in a project and must be different from Logstore names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The parameter struct.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class CreateRdsExternalStoreRequestParameter : TeaModel {
             /// <summary>
             /// The name of the database in the ApsaraDB RDS for MySQL instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("db")]
             [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The password that is used to log on to the ApsaraDB RDS for MySQL instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("password")]
             [Validation(Required=false)]
@@ -53,6 +61,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The internal or public port of the ApsaraDB RDS for MySQL instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("port")]
             [Validation(Required=false)]
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("region")]
             [Validation(Required=false)]
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The name of the database table in the ApsaraDB RDS for MySQL instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("table")]
             [Validation(Required=false)]
@@ -74,6 +88,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The username that is used to log on to the ApsaraDB RDS for MySQL instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("username")]
             [Validation(Required=false)]
@@ -90,6 +106,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]

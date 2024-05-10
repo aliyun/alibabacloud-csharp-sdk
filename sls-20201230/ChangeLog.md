@@ -1,3 +1,10 @@
+2024-05-10 Version: 5.3.0
+- Support API EnableScheduledSQL.
+- Update API DisableScheduledSQL: update response param.
+- Update API GetLogStoreMeteringMode: update response param.
+- Update API GetMetricStoreMeteringMode: update response param.
+
+
 2024-04-23 Version: 5.2.0
 - Support API ConsumerGroupUpdateCheckPoint.
 - Support API CreateStoreView.

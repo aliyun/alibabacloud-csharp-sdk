@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The type of the resource. Set the value to project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class ListTagResourcesRequestTags : TeaModel {
             /// <summary>
             /// The key of the tag that you want to use to filter resources. For example, if you set the key to `"test-key"`, only resources to which the key is added are returned.``
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]

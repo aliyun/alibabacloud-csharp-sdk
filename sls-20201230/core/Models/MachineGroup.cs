@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
@@ -31,10 +34,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
         public string MachineIdentifyType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]
         public List<string> MachineList { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class CreateDashboardRequest : TeaModel {
         /// <summary>
         /// The data structure of the dashboard.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

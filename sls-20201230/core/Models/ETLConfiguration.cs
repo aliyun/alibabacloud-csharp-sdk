@@ -19,10 +19,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public string AccessKeySecret { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("fromTime")]
         [Validation(Required=false)]
         public long? FromTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
@@ -31,18 +37,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("script")]
         [Validation(Required=false)]
         public string Script { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sinks")]
         [Validation(Required=false)]
         public List<ETLConfigurationSink> Sinks { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("toTime")]
         [Validation(Required=false)]
         public long? ToTime { get; set; }

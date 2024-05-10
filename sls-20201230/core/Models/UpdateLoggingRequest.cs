@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class UpdateLoggingRequest : TeaModel {
         /// <summary>
         /// The configurations of service logs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("loggingDetails")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class UpdateLoggingRequestLoggingDetails : TeaModel {
             /// <summary>
             /// The name of the Logstore to which you want to save service logs.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// *   logtail_status: the status logs of Logtail.
             /// *   scheduledsqlalert: the operational logs of Scheduled SQL jobs.
             /// *   etl_alert: the operational logs of data transformation jobs.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The name of the project to which you want to save service logs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("loggingProject")]
         [Validation(Required=false)]

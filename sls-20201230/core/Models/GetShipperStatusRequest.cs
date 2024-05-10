@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class GetShipperStatusRequest : TeaModel {
         /// <summary>
         /// The start time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("from")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The end time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("to")]
         [Validation(Required=false)]

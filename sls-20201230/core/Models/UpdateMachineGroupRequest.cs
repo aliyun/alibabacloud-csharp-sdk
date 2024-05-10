@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The name of the machine group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// 
         /// *   ip: The machine group uses IP addresses as identifiers.
         /// *   userdefined: The machine group uses custom identifiers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// 
         /// *   If you set machineIdentifyType to ip, enter the IP addresses of the machines.
         /// *   If you set machineIdentifyType to userdefined, enter a custom identifier.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]

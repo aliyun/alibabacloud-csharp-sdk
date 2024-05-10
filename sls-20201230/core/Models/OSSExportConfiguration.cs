@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public OSSExportConfigurationSink Sink { get; set; }
         public class OSSExportConfigurationSink : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
@@ -51,16 +54,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             [NameInMap("delaySec")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? DelaySec { get; set; }
 
+            [NameInMap("delaySeconds")]
+            [Validation(Required=false)]
+            public long? DelaySeconds { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("pathFormat")]
             [Validation(Required=false)]
             public string PathFormat { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("pathFormatType")]
             [Validation(Required=false)]
             public string PathFormatType { get; set; }
@@ -69,6 +86,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string Prefix { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("roleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetProjectLogsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](~~223777~~). Valid values:
+        /// Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](https://help.aliyun.com/document_detail/223777.html). Valid values:
         /// 
         /// *   true
         /// *   false (default): enables the Standard SQL feature.
@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The standard SQL statement. In this example, the SQL statement queries the number of page views (PVs) from 2022-03-01 10:41:40 to 2022-03-01 10:56:40 in a Logstore whose name is nginx-moni.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

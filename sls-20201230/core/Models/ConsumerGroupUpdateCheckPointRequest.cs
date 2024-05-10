@@ -16,12 +16,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<ConsumerGroupUpdateCheckPointRequestBody> Body { get; set; }
         public class ConsumerGroupUpdateCheckPointRequestBody : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("checkpoint")]
             [Validation(Required=false)]
             public string Checkpoint { get; set; }
 
             /// <summary>
             /// Shard ID。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("shard")]
             [Validation(Required=false)]
@@ -29,6 +34,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("consumer")]
         [Validation(Required=false)]
         public string Consumer { get; set; }

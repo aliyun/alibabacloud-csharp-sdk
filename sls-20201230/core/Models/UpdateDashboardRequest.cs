@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The charts on the dashboard.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("charts")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The name of the dashboard.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("dashboardName")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The display name of the dashboard.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

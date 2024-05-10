@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSIngestionConfigurationSource : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("compressionCodec")]
         [Validation(Required=false)]
         public string CompressionCodec { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("encoding")]
         [Validation(Required=false)]
         public string Encoding { get; set; }
@@ -25,14 +34,23 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("format")]
         [Validation(Required=false)]
         public Dictionary<string, object> Format { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
@@ -73,6 +91,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string TimeZone { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("useMetaIndex")]
         [Validation(Required=false)]
         public bool? UseMetaIndex { get; set; }

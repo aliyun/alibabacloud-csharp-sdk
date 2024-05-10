@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public List<string> IncludeKeys { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]
             public List<string> Token { get; set; }
@@ -59,6 +62,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? MaxTextLen { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]
         public int? Ttl { get; set; }

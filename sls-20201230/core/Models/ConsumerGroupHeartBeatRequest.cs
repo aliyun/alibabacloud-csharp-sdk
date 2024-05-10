@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class ConsumerGroupHeartBeatRequest : TeaModel {
         /// <summary>
         /// The IDs of shards whose data is being consumed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The consumer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("consumer")]
         [Validation(Required=false)]

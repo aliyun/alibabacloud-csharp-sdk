@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MaxComputeExportConfigurationSink : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("fields")]
         [Validation(Required=false)]
         public List<string> Fields { get; set; }
@@ -23,10 +26,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public string OdpsAccessSecret { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("odpsEndpoint")]
         [Validation(Required=false)]
         public string OdpsEndpoint { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("odpsProject")]
         [Validation(Required=false)]
         public string OdpsProject { get; set; }
@@ -35,22 +44,37 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string OdpsRolearn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("odpsTable")]
         [Validation(Required=false)]
         public string OdpsTable { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("odpsTunnelEndpoint")]
         [Validation(Required=false)]
         public string OdpsTunnelEndpoint { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("partitionColumn")]
         [Validation(Required=false)]
         public List<string> PartitionColumn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("partitionTimeFormat")]
         [Validation(Required=false)]
         public string PartitionTimeFormat { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("timeZone")]
         [Validation(Required=false)]
         public string TimeZone { get; set; }

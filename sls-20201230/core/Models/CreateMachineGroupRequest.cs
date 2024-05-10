@@ -36,9 +36,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// The name of the machine group. The name must meet the following requirements:
         /// 
         /// *   The name of each machine group in a project must be unique.
-        /// *   It can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+        /// *   It can contain only lowercase letters, digits, hyphens (-), and underscores (_).
         /// *   It must start and end with a lowercase letter or a digit.
         /// *   It must be 3 to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// 
         /// *   ip: The machine group uses IP addresses as identifiers.
         /// *   userdefined: The machine group uses custom identifiers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// 
         /// *   If you set machineIdentifyType to ip, enter the IP address of the machine.
         /// *   If you set machineIdentifyType to userdefined, enter a custom identifier.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]

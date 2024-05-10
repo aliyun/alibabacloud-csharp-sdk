@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]

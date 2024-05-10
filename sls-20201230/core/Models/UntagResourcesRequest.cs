@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }

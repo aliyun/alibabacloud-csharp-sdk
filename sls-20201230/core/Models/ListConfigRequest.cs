@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The name of the Logstore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The line from which the query starts. Default value: 0.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The number of entries per page. Maximum value: 500.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// 
             /// *   true
             /// *   false
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("caseSensitive")]
             [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// 
             /// *   true
             /// *   false
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("chn")]
             [Validation(Required=false)]
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The delimiters that are used to split text.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]
@@ -96,6 +102,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The retention period of data. Unit: days. Valid values: 7, 30, and 90.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]

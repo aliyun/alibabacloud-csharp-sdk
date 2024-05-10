@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<AlertTag> Annotations { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("autoAnnotation")]
         [Validation(Required=false)]
         public bool? AutoAnnotation { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Dashboard { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("groupConfiguration")]
         [Validation(Required=false)]
         public GroupConfiguration GroupConfiguration { get; set; }
@@ -41,6 +47,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? MuteUntil { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("noDataFire")]
         [Validation(Required=false)]
         public bool? NoDataFire { get; set; }
@@ -53,14 +62,23 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public PolicyConfiguration PolicyConfiguration { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("queryList")]
         [Validation(Required=false)]
         public List<AlertQuery> QueryList { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sendResolved")]
         [Validation(Required=false)]
         public bool? SendResolved { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("severityConfigurations")]
         [Validation(Required=false)]
         public List<SeverityConfiguration> SeverityConfigurations { get; set; }
@@ -85,6 +103,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public TemplateConfiguration TemplateConfiguration { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]
         public int? Threshold { get; set; }
@@ -93,6 +114,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }

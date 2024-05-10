@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The data type of the field value. Valid values: text, json, double, and long.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

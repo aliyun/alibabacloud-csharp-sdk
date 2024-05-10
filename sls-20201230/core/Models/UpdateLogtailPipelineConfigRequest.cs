@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The name of the configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The data output plug-ins.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("flushers")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The data source plug-ins.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("inputs")]
         [Validation(Required=false)]

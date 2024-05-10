@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The compression method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Accept-Encoding")]
         [Validation(Required=false)]

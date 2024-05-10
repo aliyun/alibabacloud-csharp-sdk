@@ -59,6 +59,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// The delimiters. You can specify a delimiter to delimit the content of a field value. For more information about delimiters, see Example.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]

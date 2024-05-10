@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The type of the resource. Set the value to project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]

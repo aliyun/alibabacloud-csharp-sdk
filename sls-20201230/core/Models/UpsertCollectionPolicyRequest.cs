@@ -49,14 +49,23 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? CentralizeEnabled { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataCode")]
         [Validation(Required=false)]
         public string DataCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("policyConfig")]
         [Validation(Required=false)]
         public UpsertCollectionPolicyRequestPolicyConfig PolicyConfig { get; set; }
@@ -69,6 +78,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public List<string> Regions { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("resourceMode")]
             [Validation(Required=false)]
             public string ResourceMode { get; set; }
@@ -79,10 +91,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("policyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("productCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }

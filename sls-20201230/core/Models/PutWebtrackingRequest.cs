@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// The logs. Each element is a JSON object that indicates a log.
         /// 
-        /// >  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the \__time\_\_ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.
+        /// >  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the __time__ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("__logs__")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// The source of the logs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("__source__")]
         [Validation(Required=false)]

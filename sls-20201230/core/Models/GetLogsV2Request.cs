@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// The beginning of the time range to query. The value is the log time that is specified when log data is written.
         /// 
         /// The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("from")]
         [Validation(Required=false)]
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// The search statement or the query statement. For more information, see the "Log search overview" and "Log analysis overview" topics.
         /// 
-        /// If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to \* | set session parallel_sql=true; select count(\*) as pv.
+        /// If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to \\* | set session parallel_sql=true; select count(\\*) as pv.
         /// 
         /// Note: If you specify an analytic statement in the query parameter, the line and offset parameters do not take effect in this operation. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to limit the number of logs to return on each page. For more information, see the "Perform paged queries" topic.
         /// </summary>
@@ -81,6 +83,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// The end of the time range to query. The value is the log time that is specified when log data is written.
         /// 
         /// The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("to")]
         [Validation(Required=false)]

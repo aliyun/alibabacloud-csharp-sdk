@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string DashboardId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("end")]
         [Validation(Required=false)]
         public string End { get; set; }
@@ -25,14 +28,23 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string PowerSqlMode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("project")]
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
@@ -41,18 +53,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("start")]
         [Validation(Required=false)]
         public string Start { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("store")]
         [Validation(Required=false)]
         public string Store { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]
         public string StoreType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("timeSpanType")]
         [Validation(Required=false)]
         public string TimeSpanType { get; set; }
