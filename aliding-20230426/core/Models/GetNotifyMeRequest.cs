@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string AppTypes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CorpId")]
         [Validation(Required=false)]
         public string CorpId { get; set; }
@@ -53,6 +56,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ProcessCodes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }

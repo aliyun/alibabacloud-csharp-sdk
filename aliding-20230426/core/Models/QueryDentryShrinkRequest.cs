@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class QueryDentryShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DentryId")]
         [Validation(Required=false)]
         public string DentryId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public bool? IncludeSpace { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }

@@ -99,6 +99,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }

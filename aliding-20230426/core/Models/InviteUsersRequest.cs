@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<InviteUsersRequestInviteeList> InviteeList { get; set; }
         public class InviteUsersRequestInviteeList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Nick")]
             [Validation(Required=false)]
             public string Nick { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("conferenceId")]
         [Validation(Required=false)]
         public string ConferenceId { get; set; }

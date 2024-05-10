@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<string> Managers { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SubscribeScope")]
         [Validation(Required=false)]
         public CreateSubscribedCalendarRequestSubscribeScope SubscribeScope { get; set; }

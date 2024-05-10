@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string AttendeesShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]
         public string CalendarId { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string EndShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public string EventId { get; set; }

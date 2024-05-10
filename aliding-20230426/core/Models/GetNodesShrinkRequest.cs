@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetNodesShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public string NodeIdsShrink { get; set; }

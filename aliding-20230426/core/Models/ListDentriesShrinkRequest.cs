@@ -25,10 +25,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }

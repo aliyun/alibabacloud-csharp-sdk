@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateSheetRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -23,6 +26,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkbookId")]
         [Validation(Required=false)]
         public string WorkbookId { get; set; }

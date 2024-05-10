@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetNodesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }

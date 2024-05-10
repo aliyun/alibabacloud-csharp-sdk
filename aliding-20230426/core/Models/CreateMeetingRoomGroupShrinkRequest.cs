@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ParentGroupId")]
         [Validation(Required=false)]
         public long? ParentGroupId { get; set; }

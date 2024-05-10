@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public QueryCloudRecordVideoHeadersAccountContext AccountContext { get; set; }
         public class QueryCloudRecordVideoHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }

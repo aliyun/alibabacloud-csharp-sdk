@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class ExpandGroupCapacityShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]
         public string OpenConversationId { get; set; }

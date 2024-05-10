@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetOpenUrlRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]
         public string SystemToken { get; set; }

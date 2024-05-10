@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string NumberFormat { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RangeAddress")]
         [Validation(Required=false)]
         public string RangeAddress { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SheetId")]
         [Validation(Required=false)]
         public string SheetId { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ValuesShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkbookId")]
         [Validation(Required=false)]
         public string WorkbookId { get; set; }

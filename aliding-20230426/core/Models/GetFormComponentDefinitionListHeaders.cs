@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetFormComponentDefinitionListHeadersAccountContext AccountContext { get; set; }
         public class GetFormComponentDefinitionListHeadersAccountContext : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }

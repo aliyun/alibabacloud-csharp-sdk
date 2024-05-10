@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class RemoveMeetingRoomsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]
         public string CalendarId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public string EventId { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<RemoveMeetingRoomsRequestMeetingRoomsToRemove> MeetingRoomsToRemove { get; set; }
         public class RemoveMeetingRoomsRequestMeetingRoomsToRemove : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RoomId")]
             [Validation(Required=false)]
             public string RoomId { get; set; }

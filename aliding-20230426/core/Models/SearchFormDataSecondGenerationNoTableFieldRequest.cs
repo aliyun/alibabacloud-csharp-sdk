@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class SearchFormDataSecondGenerationNoTableFieldRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string CreateToTimeGMT { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FormUuid")]
         [Validation(Required=false)]
         public string FormUuid { get; set; }
@@ -53,6 +59,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string SearchCondition { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]
         public string SystemToken { get; set; }

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class SaveFormDataRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FormDataJson")]
         [Validation(Required=false)]
         public string FormDataJson { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FormUuid")]
         [Validation(Required=false)]
         public string FormUuid { get; set; }
@@ -25,6 +34,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]
         public string SystemToken { get; set; }

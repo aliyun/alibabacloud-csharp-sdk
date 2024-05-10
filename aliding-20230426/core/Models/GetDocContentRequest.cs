@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetDocContentRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("userToken")]
         [Validation(Required=false)]
         public string UserToken { get; set; }

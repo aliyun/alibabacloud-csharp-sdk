@@ -19,14 +19,23 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("honorId")]
         [Validation(Required=false)]
         public string HonorId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
         public long? OrgId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

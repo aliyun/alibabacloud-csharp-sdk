@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RichTextDescriptionShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }
@@ -57,10 +60,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string UiConfigsShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("calendarId")]
         [Validation(Required=false)]
         public string CalendarId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("start")]
         [Validation(Required=false)]
         public string StartShrink { get; set; }

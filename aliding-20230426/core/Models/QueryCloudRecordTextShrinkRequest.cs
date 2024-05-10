@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string TenantContextShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("conferenceId")]
         [Validation(Required=false)]
         public string ConferenceId { get; set; }

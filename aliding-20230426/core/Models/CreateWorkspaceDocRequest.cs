@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateWorkspaceDocRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -39,6 +45,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

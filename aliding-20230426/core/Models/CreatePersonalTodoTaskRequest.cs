@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? DueTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ExecutorIds")]
         [Validation(Required=false)]
         public List<string> ExecutorIds { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<string> ParticipantIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }

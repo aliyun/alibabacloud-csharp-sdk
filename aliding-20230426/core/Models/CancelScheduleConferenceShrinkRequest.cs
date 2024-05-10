@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CancelScheduleConferenceShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScheduleConferenceId")]
         [Validation(Required=false)]
         public string ScheduleConferenceId { get; set; }

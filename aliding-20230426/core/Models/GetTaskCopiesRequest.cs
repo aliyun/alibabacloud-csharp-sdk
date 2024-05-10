@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ProcessCodes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SystemToken")]
         [Validation(Required=false)]
         public string SystemToken { get; set; }

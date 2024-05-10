@@ -17,14 +17,23 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? ExpirationTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("grantReason")]
         [Validation(Required=false)]
         public string GrantReason { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("granterName")]
         [Validation(Required=false)]
         public string GranterName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("honorId")]
         [Validation(Required=false)]
         public string HonorId { get; set; }
@@ -41,14 +50,23 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string OpenConversationIdsShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
         public long? OrgId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("receiverUserIds")]
         [Validation(Required=false)]
         public string ReceiverUserIdsShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("senderUserId")]
         [Validation(Required=false)]
         public string SenderUserId { get; set; }

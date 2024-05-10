@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("conferenceId")]
         [Validation(Required=false)]
         public string ConferenceId { get; set; }

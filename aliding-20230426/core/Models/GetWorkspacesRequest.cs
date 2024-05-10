@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]
         public List<string> WorkspaceIds { get; set; }

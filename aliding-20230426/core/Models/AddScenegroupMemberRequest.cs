@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class AddScenegroupMemberRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]
         public string OpenConversationId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]
         public string UserIds { get; set; }
