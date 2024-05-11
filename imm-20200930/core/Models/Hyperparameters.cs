@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? DataLoaderWorkers { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Evaluator")]
         [Validation(Required=false)]
         public CustomParams Evaluator { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputSize")]
         [Validation(Required=false)]
         public List<long?> InputSize { get; set; }

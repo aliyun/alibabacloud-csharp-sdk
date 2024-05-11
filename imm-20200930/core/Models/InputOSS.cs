@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class InputOSS : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }

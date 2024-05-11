@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public string Detail { get; set; }
-
         [NameInMap("Phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]

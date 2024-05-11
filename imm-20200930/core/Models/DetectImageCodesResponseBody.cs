@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageCodesResponseBody : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Codes")]
         [Validation(Required=false)]
         public List<Codes> Codes { get; set; }

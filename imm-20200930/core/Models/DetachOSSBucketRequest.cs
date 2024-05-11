@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetachOSSBucketRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]
         public string OSSBucket { get; set; }

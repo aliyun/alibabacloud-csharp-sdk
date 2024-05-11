@@ -24,10 +24,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestSources> Sources { get; set; }
@@ -68,6 +74,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestTargets> Targets { get; set; }

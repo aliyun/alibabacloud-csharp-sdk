@@ -65,6 +65,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ServiceRole { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<ProjectTags> Tags { get; set; }
+        public class ProjectTags : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

@@ -89,10 +89,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Token { get; set; }
 
-        [NameInMap("URI")]
-        [Validation(Required=false)]
-        public string URI { get; set; }
-
         /// <summary>
         /// 转码文件列表。
         /// </summary>

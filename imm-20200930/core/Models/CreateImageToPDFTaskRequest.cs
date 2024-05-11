@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public List<CreateImageToPDFTaskRequestSources> Sources { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public long? Rotate { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }
@@ -39,6 +48,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetURI")]
         [Validation(Required=false)]
         public string TargetURI { get; set; }

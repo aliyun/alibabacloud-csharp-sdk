@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<TargetImageAnimations> Animations { get; set; }
         public class TargetImageAnimations : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public double? StartTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }
@@ -55,6 +61,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<TargetImageSnapshots> Snapshots { get; set; }
         public class TargetImageSnapshots : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
@@ -79,6 +88,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public double? StartTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }
@@ -93,6 +105,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<TargetImageSprites> Sprites { get; set; }
         public class TargetImageSprites : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
@@ -137,6 +152,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public int? TileWidth { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }

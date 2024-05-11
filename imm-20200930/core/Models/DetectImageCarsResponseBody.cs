@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageCarsResponseBody : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Cars")]
         [Validation(Required=false)]
         public List<Car> Cars { get; set; }

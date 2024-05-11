@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBatchRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Actions")]
         [Validation(Required=false)]
         public List<CreateBatchRequestActions> Actions { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public FastFailPolicy FastFailPolicy { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -27,6 +33,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public Input Input { get; set; }
@@ -41,10 +50,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceRole")]
         [Validation(Required=false)]
         public string ServiceRole { get; set; }
