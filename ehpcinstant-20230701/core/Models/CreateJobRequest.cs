@@ -33,10 +33,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string JobDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
         public string JobName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<CreateJobRequestTasks> Tasks { get; set; }
@@ -105,6 +111,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TaskExecutor")]
                 [Validation(Required=false)]
                 public List<CreateJobRequestTasksTaskSpecTaskExecutor> TaskExecutor { get; set; }
@@ -131,6 +140,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                         }
 
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("Image")]
                         [Validation(Required=false)]
                         public string Image { get; set; }
@@ -145,6 +157,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorVM VM { get; set; }
                     public class CreateJobRequestTasksTaskSpecTaskExecutorVM : TeaModel {
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("Image")]
                         [Validation(Required=false)]
                         public string Image { get; set; }

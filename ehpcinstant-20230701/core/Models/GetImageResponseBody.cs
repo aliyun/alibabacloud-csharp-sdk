@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
             public string ImageType { get; set; }

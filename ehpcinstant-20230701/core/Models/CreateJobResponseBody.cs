@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Tasks")]
+        [Validation(Required=false)]
+        public List<CreateJobResponseBodyTasks> Tasks { get; set; }
+        public class CreateJobResponseBodyTasks : TeaModel {
+            [NameInMap("ExecutorIds")]
+            [Validation(Required=false)]
+            public List<string> ExecutorIds { get; set; }
+
+            [NameInMap("TaskName")]
+            [Validation(Required=false)]
+            public string TaskName { get; set; }
+
+        }
+
     }
 
 }
