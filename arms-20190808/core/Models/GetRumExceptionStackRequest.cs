@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ExceptionThreadId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }

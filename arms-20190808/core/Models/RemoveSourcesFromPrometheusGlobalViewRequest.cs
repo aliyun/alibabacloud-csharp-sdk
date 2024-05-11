@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class RemoveSourcesFromPrometheusGlobalViewRequest : TeaModel {
         /// <summary>
         /// The ID of the global aggregation instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalViewClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the global aggregation instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The list of custom data sources. You can specify multiple data sources and separate them with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceNames")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class AddIntegrationRequest : TeaModel {
         /// <summary>
         /// The ID of an Alibaba Cloud Container Service for Kubernetes cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Integration")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

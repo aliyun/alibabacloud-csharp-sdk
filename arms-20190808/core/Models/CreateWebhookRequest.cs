@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class CreateWebhookRequest : TeaModel {
         /// <summary>
         /// The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   `Get`
         /// *   `Post`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Method")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -63,6 +71,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The URL of the request **method**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

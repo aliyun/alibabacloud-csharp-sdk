@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class StopAlertRequest : TeaModel {
         /// <summary>
         /// The ID of the alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

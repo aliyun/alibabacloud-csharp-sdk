@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// *   18: SOFARPC provision
                 /// *   11: Distributed Service Framework (DSF) call
                 /// *   12: DSF provision
-                /// *   \-1: unknown call
+                /// *   \\-1: unknown call
                 /// </summary>
                 [NameInMap("RpcType")]
                 [Validation(Required=false)]

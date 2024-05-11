@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// The ID of the alert contact group to which the alert rule belongs. Valid values:
                 /// 
-                /// *   \-1: custom PromQL
+                /// *   \\-1: custom PromQL
                 /// *   1: Kubernetes load
                 /// *   15: Kubernetes node
                 /// </summary>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// <summary>
                         /// The logical operator of the filter condition. Valid values:
                         /// 
-                        /// *   \=: equal to
+                        /// *   \\=: equal to
                         /// *   not: not equal to
                         /// </summary>
                         [NameInMap("Opt")]

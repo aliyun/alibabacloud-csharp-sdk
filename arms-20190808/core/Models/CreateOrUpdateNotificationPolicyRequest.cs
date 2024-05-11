@@ -86,6 +86,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the notification policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -108,6 +110,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         ///                     "tts"
         ///                 ],
         ///      }]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotifyRule")]
         [Validation(Required=false)]

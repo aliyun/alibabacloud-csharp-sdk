@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
@@ -55,6 +57,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the environment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   CS: ACK, One
         /// *   ECS: ECS
         /// *   Cloud: cloud service
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentSubType")]
         [Validation(Required=false)]
@@ -77,6 +83,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   CS: ACK
         /// *   ECS: ECS
         /// *   Cloud: cloud service
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentType")]
         [Validation(Required=false)]
@@ -112,6 +120,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

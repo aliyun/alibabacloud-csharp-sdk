@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryReleaseMetricRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string MetricType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
@@ -29,10 +35,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ProxyUserId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReleaseEndTime")]
         [Validation(Required=false)]
         public long? ReleaseEndTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReleaseStartTime")]
         [Validation(Required=false)]
         public long? ReleaseStartTime { get; set; }

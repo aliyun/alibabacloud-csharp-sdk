@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the business monitoring job. You can obtain the ID by calling the ListScenario operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScenarioId")]
         [Validation(Required=false)]

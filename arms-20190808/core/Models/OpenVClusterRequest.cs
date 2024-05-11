@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class OpenVClusterRequest : TeaModel {
         /// <summary>
         /// The type of the cluster. For cloud services, set this parameter to `cloud-product-prometheus`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -127,6 +127,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
+                [NameInMap("NotificationPolicies")]
+                [Validation(Required=false)]
+                public List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> NotificationPolicies { get; set; }
+                public class ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies : TeaModel {
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 /// <summary>
                 /// The time when the alert event was received.
                 /// </summary>
@@ -164,6 +178,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TriggerCount")]
+                [Validation(Required=false)]
+                public long? TriggerCount { get; set; }
 
             }
 

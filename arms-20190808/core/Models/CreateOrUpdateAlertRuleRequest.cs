@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The alert contact group ID of the Prometheus alert rule. Valid values:
         /// 
-        /// *   \-1: custom PromQL
+        /// *   \\-1: custom PromQL
         /// *   1: Kubernetes load
         /// *   15: Kubernetes node
         /// </summary>
@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertName")]
         [Validation(Required=false)]
@@ -102,6 +104,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   prometheus monitoring alert
         /// *   application monitoring alert
         /// *   browser monitoring alert
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertType")]
         [Validation(Required=false)]
@@ -284,6 +288,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

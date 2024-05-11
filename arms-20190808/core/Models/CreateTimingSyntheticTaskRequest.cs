@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public List<CreateTimingSyntheticTaskRequestAvailableAssertions> AvailableAssertions { get; set; }
         public class CreateTimingSyntheticTaskRequestAvailableAssertions : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Expect")]
             [Validation(Required=false)]
             public string Expect { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Target { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -39,24 +48,39 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public CreateTimingSyntheticTaskRequestCommonSettingCustomHost CustomHost { get; set; }
             public class CreateTimingSyntheticTaskRequestCommonSettingCustomHost : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Hosts")]
                 [Validation(Required=false)]
                 public List<CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts> Hosts { get; set; }
                 public class CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts : TeaModel {
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("Domain")]
                     [Validation(Required=false)]
                     public string Domain { get; set; }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("IpType")]
                     [Validation(Required=false)]
                     public int? IpType { get; set; }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("Ips")]
                     [Validation(Required=false)]
                     public List<string> Ips { get; set; }
 
                 }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("SelectType")]
                 [Validation(Required=false)]
                 public int? SelectType { get; set; }
@@ -129,24 +153,39 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public CreateTimingSyntheticTaskRequestCustomPeriod CustomPeriod { get; set; }
         public class CreateTimingSyntheticTaskRequestCustomPeriod : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("EndHour")]
             [Validation(Required=false)]
             public int? EndHour { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("StartHour")]
             [Validation(Required=false)]
             public int? StartHour { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Frequency")]
         [Validation(Required=false)]
         public string Frequency { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MonitorCategory")]
         [Validation(Required=false)]
         public int? MonitorCategory { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MonitorConf")]
         [Validation(Required=false)]
         public CreateTimingSyntheticTaskRequestMonitorConf MonitorConf { get; set; }
@@ -189,6 +228,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> RequestHeaders { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -255,6 +297,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public int? Redirection { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -293,6 +338,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public int? QueryMethod { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -323,6 +371,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public bool? SplitPackage { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -357,6 +408,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -477,6 +531,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public long? SlowElementThreshold { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("TargetUrl")]
                 [Validation(Required=false)]
                 public string TargetUrl { get; set; }
@@ -497,28 +554,46 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Monitors")]
         [Validation(Required=false)]
         public List<CreateTimingSyntheticTaskRequestMonitors> Monitors { get; set; }
         public class CreateTimingSyntheticTaskRequestMonitors : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public string CityCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("ClientType")]
             [Validation(Required=false)]
             public int? ClientType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("OperatorCode")]
             [Validation(Required=false)]
             public string OperatorCode { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -541,6 +616,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public int? TaskType { get; set; }

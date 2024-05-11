@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class SendTTSVerifyLinkRequest : TeaModel {
         /// <summary>
         /// The ID of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The mobile number of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]

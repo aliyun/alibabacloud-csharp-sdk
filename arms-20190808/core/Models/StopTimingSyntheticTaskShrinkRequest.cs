@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The task IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

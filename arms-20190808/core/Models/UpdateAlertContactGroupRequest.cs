@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class UpdateAlertContactGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the alert contact group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the alert contact group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

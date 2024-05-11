@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// * cloud-product(Not supported): Prometheus instance for Alibaba Cloud services outside China.
         /// * global-view: Prometheus instance for GlobalView.
         /// * aliyun-cs(Not supported): Prometheus instance for Container Service for Kubernetes (ACK).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

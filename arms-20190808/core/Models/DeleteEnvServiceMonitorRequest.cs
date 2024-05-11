@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class DeleteEnvServiceMonitorRequest : TeaModel {
         /// <summary>
         /// Environment instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// ServiceMonitor name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceMonitorName")]
         [Validation(Required=false)]

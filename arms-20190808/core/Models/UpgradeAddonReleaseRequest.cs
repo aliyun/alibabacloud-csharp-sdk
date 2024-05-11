@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class UpgradeAddonReleaseRequest : TeaModel {
         /// <summary>
         /// Version of Addon.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddonVersion")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// Environment ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of Release.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReleaseName")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// Metadata information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

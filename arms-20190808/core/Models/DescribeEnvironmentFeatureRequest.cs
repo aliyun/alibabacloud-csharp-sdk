@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The environment ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FeatureName")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   `true`: The alert rule was deleted.
         /// *   `false`: The alert rule failed to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]

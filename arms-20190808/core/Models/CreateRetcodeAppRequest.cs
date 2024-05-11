@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class CreateRetcodeAppRequest : TeaModel {
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the application that is monitored by Browser Monitoring.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RetcodeAppName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The site type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RetcodeAppType")]
         [Validation(Required=false)]

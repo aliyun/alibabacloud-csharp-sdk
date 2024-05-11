@@ -17,14 +17,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("GrafanaVersion")]
         [Validation(Required=false)]
         public string GrafanaVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("GrafanaWorkspaceEdition")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceEdition { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("GrafanaWorkspaceName")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceName { get; set; }
@@ -33,6 +42,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

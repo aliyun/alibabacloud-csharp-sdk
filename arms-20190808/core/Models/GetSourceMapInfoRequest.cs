@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Edition { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ID")]
         [Validation(Required=false)]
         public string ID { get; set; }

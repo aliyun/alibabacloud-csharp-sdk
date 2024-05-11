@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The number of alert contacts displayed on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class DeleteAddonReleaseRequest : TeaModel {
         /// <summary>
         /// Environment ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// Name of Release.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReleaseName")]
         [Validation(Required=false)]

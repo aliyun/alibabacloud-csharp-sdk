@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the **GetTrace** operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RpcID")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the **Trace Query** page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TraceID")]
         [Validation(Required=false)]

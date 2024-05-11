@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class GetManagedPrometheusStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The type of the monitoring object. Valid values: ask , acs , one and ecs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

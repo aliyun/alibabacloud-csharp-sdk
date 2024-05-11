@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class ListPrometheusInstanceByTagAndResourceGroupIdRequest : TeaModel {
         /// <summary>
         /// The region ID of the Prometheus instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

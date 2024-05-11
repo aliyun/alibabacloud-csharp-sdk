@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string IntegrationName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IntegrationProductType")]
         [Validation(Required=false)]
         public string IntegrationProductType { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? IsDetail { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
         public long? Size { get; set; }

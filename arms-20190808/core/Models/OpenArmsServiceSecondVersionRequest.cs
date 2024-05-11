@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class OpenArmsServiceSecondVersionRequest : TeaModel {
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   `arms_web`: Browser Monitoring
         /// *   `prometheus_monitor`: Managed Service for Prometheus
         /// *   `synthetic_post`: Synthetic Monitoring
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class DeleteContactRequest : TeaModel {
         /// <summary>
         /// The operation that you want to perform. Set the value to **DeleteContact**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]

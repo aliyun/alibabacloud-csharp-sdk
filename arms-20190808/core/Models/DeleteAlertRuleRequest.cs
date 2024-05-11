@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   `true`: The specified data is deleted.
         /// *   `false`: The specified data fails to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]

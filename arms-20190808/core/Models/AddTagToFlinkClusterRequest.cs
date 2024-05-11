@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddTagToFlinkClusterRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FlinkWorkSpaceId")]
         [Validation(Required=false)]
         public string FlinkWorkSpaceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FlinkWorkSpaceName")]
         [Validation(Required=false)]
         public string FlinkWorkSpaceName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +41,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public string TargetUserId { get; set; }

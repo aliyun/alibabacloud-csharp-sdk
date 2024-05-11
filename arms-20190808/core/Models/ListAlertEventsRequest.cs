@@ -32,13 +32,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
+        [NameInMap("ShowNotificationPolicies")]
+        [Validation(Required=false)]
+        public bool? ShowNotificationPolicies { get; set; }
+
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

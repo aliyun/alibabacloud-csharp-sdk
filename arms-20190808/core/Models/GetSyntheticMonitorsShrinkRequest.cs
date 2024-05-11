@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class GetSyntheticMonitorsShrinkRequest : TeaModel {
         /// <summary>
         /// The query conditions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

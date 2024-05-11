@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The resource IDs. You can specify a maximum of 50 resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   ALERTRULE: Application Monitoring alert rule
         /// *   PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule
         /// *   XTRACEAPP: Managed Service for OpenTelemetry
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

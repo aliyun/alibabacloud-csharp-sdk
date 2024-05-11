@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string BizParams { get; set; }
 
         /// <summary>
-        /// The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).\\
+        /// The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](https://help.aliyun.com/document_detail/251834.html).\\\\
         /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
@@ -35,13 +35,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   Post
         /// *   Get
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Method")]
         [Validation(Required=false)]
         public string Method { get; set; }
 
         /// <summary>
-        /// The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).
+        /// The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](https://help.aliyun.com/document_detail/251834.html).
         /// </summary>
         [NameInMap("RecoverBody")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The URL of the HTTP request **method**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the webhook alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WebhookName")]
         [Validation(Required=false)]

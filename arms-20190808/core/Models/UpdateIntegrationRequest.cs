@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The ID of the alert integration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IntegrationId")]
         [Validation(Required=false)]
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the alert integration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IntegrationName")]
         [Validation(Required=false)]
@@ -84,6 +88,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   CLOUD_MONITOR: CloudMonitor
         /// *   LOG_SERVICE: Log Service
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IntegrationProductType")]
         [Validation(Required=false)]

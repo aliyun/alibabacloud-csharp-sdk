@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class DeleteIMRobotRequest : TeaModel {
         /// <summary>
         /// The ID of the IM chatbot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RobotId")]
         [Validation(Required=false)]

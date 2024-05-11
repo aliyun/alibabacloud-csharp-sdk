@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The webhook URL of the IM chatbot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RobotAddress")]
         [Validation(Required=false)]
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the IM chatbot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RobotName")]
         [Validation(Required=false)]

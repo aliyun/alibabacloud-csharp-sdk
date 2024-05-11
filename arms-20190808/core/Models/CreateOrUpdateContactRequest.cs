@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the alert contact.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]

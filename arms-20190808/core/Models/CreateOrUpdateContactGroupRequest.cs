@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the alert contact group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

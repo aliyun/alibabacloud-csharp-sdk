@@ -77,11 +77,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// *   `_aliyun_arms_alert_rule_id`: alert rule ID
         /// *   `_aliyun_arms_alert_type`: alert type
         /// *   `_aliyun_arms_alert_level`: alert severity
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DispatchRule")]
         [Validation(Required=false)]
         public string DispatchRule { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

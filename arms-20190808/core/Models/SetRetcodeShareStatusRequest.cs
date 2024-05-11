@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   `true`: Turn on the switch.
         /// *   `false`: Turn off the switch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

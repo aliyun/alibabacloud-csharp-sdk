@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
     public class UpdatePrometheusMonitoringRequest : TeaModel {
         /// <summary>
         /// The ID of the Prometheus instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The monitoring configuration. Specify a YAML string.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigYaml")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The name of the monitoring configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitoringName")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,6 +49,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// The type of the monitoring configuration. 
         /// Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
         /// Valid values for a Prometheus instance for ECS: customJob and probe.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
